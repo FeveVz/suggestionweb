@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Send, CheckCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, Loader2 } from 'lucide-react';
 
 const RorschachCTA = ({ className, color = '#FF8C00' }: { className?: string; color?: string }) => (
   <svg viewBox="0 0 400 300" className={className} xmlns="http://www.w3.org/2000/svg" fill={color}>
@@ -40,21 +40,22 @@ export default function CTASection() {
 
   return (
     <section id="contacto" className="bg-black relative overflow-hidden" ref={ref}>
-      {/* Rorschach decorativo — derecha */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[360px] h-[300px] opacity-[0.06] pointer-events-none">
-        <RorschachCTA color="#FF8C00" className="w-full h-full" />
-      </div>
 
-      {/* Línea superior decorativa */}
+      {/* Línea superior */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{ background: 'linear-gradient(90deg, transparent, #FF8C00 40%, #00BFFF 60%, transparent)' }}
       />
 
+      {/* Rorschach decorativo */}
+      <div className="absolute right-0 bottom-0 w-[400px] h-[340px] opacity-[0.07] pointer-events-none">
+        <RorschachCTA color="#FF8C00" className="w-full h-full" />
+      </div>
+
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 py-16 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start" ref={ref}>
 
-          {/* Columna izquierda — texto */}
+          {/* Columna izquierda — headline con metáfora */}
           <div>
             <motion.div
               className="flex items-center gap-4 mb-6"
@@ -63,20 +64,25 @@ export default function CTASection() {
               transition={{ duration: 0.5 }}
             >
               <div className="h-px w-12 bg-white/20" />
-              <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+              <span
+                className="text-xs tracking-[0.25em] uppercase font-medium text-white/30"
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
+              >
                 Contacto
               </span>
             </motion.div>
 
+            {/* Headline ALL-CAPS metáfora visual */}
             <motion.h2
-              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-white mb-8"
+              className="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.82] tracking-tight text-white uppercase mb-8"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Hablemos de tu{' '}
-              <span style={{ color: '#FF8C00' }}>proyecto.</span>
+              TU NEGOCIO<br />
+              ESTÁ<br />
+              <span style={{ color: '#FF8C00' }}>LLAMANDO.</span>
             </motion.h2>
 
             <motion.p
@@ -84,17 +90,17 @@ export default function CTASection() {
               style={{ fontFamily: 'var(--font-dm-sans)' }}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.35 }}
             >
-              ¿Listo para transformar tu presencia digital? Cuéntanos sobre tu negocio.
+              Necesita marketing que genere resultados. No dejes que tu marca pase desapercibida.
             </motion.p>
 
-            {/* Beneficios — lista limpia */}
+            {/* Beneficios */}
             <motion.div
               className="space-y-4 mb-12"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.45 }}
             >
               {[
                 { label: 'Consultoría gratuita de 30 min', accent: '#FF8C00' },
@@ -102,8 +108,14 @@ export default function CTASection() {
                 { label: 'Sin compromiso de permanencia', accent: '#FF8C00' },
               ].map((b) => (
                 <div key={b.label} className="flex items-center gap-3">
-                  <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: b.accent }} />
-                  <span className="text-sm text-white/50" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  <div
+                    className="w-2 h-2 flex-shrink-0"
+                    style={{ backgroundColor: b.accent }}
+                  />
+                  <span
+                    className="text-sm text-white/50"
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
+                  >
                     {b.label}
                   </span>
                 </div>
@@ -115,21 +127,27 @@ export default function CTASection() {
               className="flex items-center gap-4"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.55 }}
             >
               <div className="flex -space-x-2">
                 {['MG', 'CR', 'AM', '+'].map((l, i) => (
                   <div
                     key={i}
                     className="w-8 h-8 flex items-center justify-center text-[10px] font-bold text-white border border-black"
-                    style={{ backgroundColor: i === 3 ? '#FF8C00' : '#333', fontFamily: 'var(--font-space-grotesk)' }}
+                    style={{
+                      backgroundColor: i === 3 ? '#FF8C00' : '#222',
+                      fontFamily: 'var(--font-space-grotesk)',
+                    }}
                   >
                     {l}
                   </div>
                 ))}
               </div>
-              <span className="text-xs text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                +150 clientes satisfechos
+              <span
+                className="text-xs text-white/30"
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
+              >
+                +150 marcas que crecieron con nosotros
               </span>
             </motion.div>
           </div>
@@ -148,20 +166,23 @@ export default function CTASection() {
               >
                 <CheckCircle className="w-12 h-12 mb-6" style={{ color: '#FF8C00' }} />
                 <h3
-                  className="text-2xl font-bold text-white mb-3"
+                  className="text-2xl font-black text-white mb-3 uppercase"
                   style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
-                  ¡Mensaje enviado!
+                  ¡MENSAJE ENVIADO!
                 </h3>
                 <p className="text-sm text-white/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  Nos pondremos en contacto contigo muy pronto.
+                  Te contactaremos muy pronto.
                 </p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs text-white/30 mb-2 tracking-wider uppercase" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                    <label
+                      className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
+                    >
                       Nombre *
                     </label>
                     <Input
@@ -175,7 +196,10 @@ export default function CTASection() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-white/30 mb-2 tracking-wider uppercase" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                    <label
+                      className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
+                    >
                       Email *
                     </label>
                     <Input
@@ -192,7 +216,10 @@ export default function CTASection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs text-white/30 mb-2 tracking-wider uppercase" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  <label
+                    className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
+                  >
                     Empresa
                   </label>
                   <Input
@@ -206,7 +233,10 @@ export default function CTASection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs text-white/30 mb-2 tracking-wider uppercase" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  <label
+                    className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
+                  >
                     Mensaje *
                   </label>
                   <Textarea
@@ -224,21 +254,18 @@ export default function CTASection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-3 py-4 text-sm font-semibold text-black transition-all disabled:opacity-60 hover:opacity-90"
-                  style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
+                  className="w-full flex items-center justify-center gap-3 py-4 text-sm font-black text-black uppercase tracking-widest transition-all disabled:opacity-60 hover:opacity-90"
+                  style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   {isSubmitting ? (
                     <>
                       <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}>
                         <Loader2 className="w-4 h-4" />
                       </motion.div>
-                      Enviando...
+                      ENVIANDO...
                     </>
                   ) : (
-                    <>
-                      Enviar mensaje
-                      <Send className="w-4 h-4" />
-                    </>
+                    'ENVIAR MENSAJE →'
                   )}
                 </button>
               </form>

@@ -56,14 +56,14 @@ export default function BlogSection() {
             </motion.div>
 
             <motion.h2
-              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-white"
+              className="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.82] tracking-tight text-white uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Ideas que{' '}
-              <span style={{ color: '#00BFFF' }}>inspiran.</span>
+              IDEAS QUE<br />
+              <span style={{ color: '#00BFFF' }}>MUEVEN.</span>
             </motion.h2>
           </div>
 

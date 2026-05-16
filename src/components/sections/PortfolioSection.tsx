@@ -65,14 +65,15 @@ export default function PortfolioSection() {
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <motion.h2
-              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-black max-w-xl"
+              className="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.82] tracking-tight text-black uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Resultados que{' '}
-              <span style={{ color: '#FF8C00' }}>hablan.</span>
+              NÚMEROS<br />
+              QUE{' '}
+              <span style={{ color: '#FF8C00' }}>HABLAN.</span>
             </motion.h2>
 
             <motion.div

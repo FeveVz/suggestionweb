@@ -22,7 +22,7 @@ const RorschachMini = ({ className, color = '#FF8C00' }: { className?: string; c
 
 const serviciosPrincipales = [
   { icon: TrendingUp, title: 'Marketing Digital', description: 'Estrategias que transforman presencia en resultados.', href: '/servicios/marketing-digital' },
-  { icon: Share2, title: 'Redes Sociales', description: 'Conexión auténtica con tu audiencia.', href: '/servicios/marketing-redes-sociales' },
+  { icon: Share2, title: 'Redes Sociales', description: 'Conexión auténtica con tu audiencia objetivo.', href: '/servicios/marketing-redes-sociales' },
   { icon: Target, title: 'Publicidad Digital', description: 'Campañas con ROI medible y optimización continua.', href: '/servicios/publicidad-digital' },
   { icon: Search, title: 'SEO', description: 'Visibilidad orgánica cuando te buscan.', href: '/servicios/seo-posicionamiento' },
   { icon: Palette, title: 'Branding', description: 'Identidad que deja huella en tu audiencia.', href: '/servicios/branding-diseno' },
@@ -48,48 +48,72 @@ export default function ServicesSection() {
 
   return (
     <section id="servicios" className="bg-white relative overflow-hidden" ref={ref}>
-      {/* Rorschach decorativo — esquina derecha */}
-      <div className="absolute right-0 top-0 w-[320px] h-[260px] opacity-[0.04] pointer-events-none">
+
+      {/* Bloque naranja lateral — izquierdo */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-1.5"
+        style={{ backgroundColor: '#FF8C00' }}
+      />
+
+      {/* Rorschach decorativo — opaco, esquina derecha */}
+      <div className="absolute right-0 bottom-0 w-[340px] h-[280px] opacity-[0.04] pointer-events-none">
         <RorschachMini color="#000000" className="w-full h-full" />
       </div>
 
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 py-16 sm:py-20 lg:py-28">
-        {/* Header editorial */}
-        <div className="mb-14 sm:mb-20">
-          <motion.div
-            className="flex items-center gap-4 mb-6"
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="h-px w-12 bg-black" />
-            <span className="text-xs tracking-[0.25em] uppercase font-medium text-black/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-              Nuestros Servicios
-            </span>
-          </motion.div>
 
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+        {/* Header — 2 columnas: headline vs copy */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-16 sm:mb-20 items-end">
+
+          <div>
+            <motion.div
+              className="flex items-center gap-4 mb-6"
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="h-px w-12 bg-black" />
+              <span
+                className="text-xs tracking-[0.25em] uppercase font-medium text-black/40"
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
+              >
+                Nuestros Servicios
+              </span>
+            </motion.div>
+
+            {/* Headline ALL-CAPS con metáfora */}
             <motion.h2
-              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-black max-w-2xl"
+              className="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.85] tracking-tight text-black uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Soluciones que{' '}
-              <span style={{ color: '#FF8C00' }}>transforman.</span>
+              ESTRATEGIAS<br />
+              FUERA<br />
+              <span style={{ color: '#FF8C00' }}>DE LA CAJA.</span>
             </motion.h2>
-
-            <motion.p
-              className="text-base text-black/50 max-w-xs leading-relaxed"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Un ecosistema completo de marketing digital diseñado para impulsar tu negocio.
-            </motion.p>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            <p
+              className="text-base text-black/50 leading-relaxed mb-8"
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
+            >
+              No vendemos servicios genéricos. Construimos ecosistemas digitales diseñados para hacer crecer tu negocio de forma sostenible y medible.
+            </p>
+            <Link
+              href="#contacto"
+              className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition-all hover:bg-[#FF8C00] hover:text-black"
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
+            >
+              CONSULTORÍA GRATUITA →
+            </Link>
+          </motion.div>
         </div>
 
         {/* Grid servicios principales */}
@@ -100,18 +124,14 @@ export default function ServicesSection() {
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.04 }}
               >
                 <Link href={service.href} className="block group bg-white hover:bg-black transition-colors duration-300 p-6 h-full">
-                  <div className="flex flex-col h-full min-h-[160px]">
-                    {/* Número editorial */}
-                    <span
-                      className="text-[10px] tracking-[0.2em] text-black/20 group-hover:text-white/20 transition-colors mb-4 font-mono"
-                    >
+                  <div className="flex flex-col h-full min-h-[180px]">
+                    <span className="text-[10px] tracking-[0.2em] text-black/20 group-hover:text-white/20 transition-colors mb-4 font-mono">
                       {String(index + 1).padStart(2, '0')}
                     </span>
 
-                    {/* Icon */}
                     <div className="mb-4">
                       <service.icon
                         className="w-6 h-6 transition-colors duration-300"
@@ -119,10 +139,9 @@ export default function ServicesSection() {
                       />
                     </div>
 
-                    {/* Texto */}
                     <div className="mt-auto">
                       <h3
-                        className="text-sm font-bold text-black group-hover:text-white transition-colors mb-2 leading-tight"
+                        className="text-sm font-bold text-black group-hover:text-white transition-colors mb-2 leading-tight uppercase tracking-wide"
                         style={{ fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {service.title}
@@ -141,34 +160,39 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* Separador con label */}
+        {/* Complementarios */}
         <motion.div
-          className="flex items-center gap-4 mb-10"
+          className="flex items-center gap-4 mb-8"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
         >
           <div className="h-px flex-1 bg-black/10" />
-          <span className="text-[10px] tracking-[0.2em] uppercase text-black/30 font-medium" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+          <span
+            className="text-[10px] tracking-[0.2em] uppercase text-black/30 font-medium"
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
+          >
             Servicios Complementarios
           </span>
           <div className="h-px flex-1 bg-black/10" />
         </motion.div>
 
-        {/* Servicios complementarios — lista horizontal */}
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.7 }}
         >
-          {serviciosComplementarios.map((service, index) => (
+          {serviciosComplementarios.map((service) => (
             <Link
               key={service.title}
               href={service.href}
-              className="flex items-center gap-2.5 p-3 border border-black/8 hover:border-black/30 hover:bg-black/2 transition-all group"
+              className="flex items-center gap-2.5 p-3 border border-black/8 hover:border-[#FF8C00] hover:bg-black/2 transition-all group"
             >
-              <service.icon className="w-4 h-4 text-black/30 group-hover:text-black/60 transition-colors flex-shrink-0" />
+              <service.icon
+                className="w-4 h-4 flex-shrink-0 transition-colors"
+                style={{ color: '#FF8C00' }}
+              />
               <span
                 className="text-xs font-medium text-black/50 group-hover:text-black transition-colors"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
@@ -177,31 +201,6 @@ export default function ServicesSection() {
               </span>
             </Link>
           ))}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          className="mt-14 pt-10 border-t border-black/8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.8 }}
-        >
-          <p className="text-sm text-black/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-            ¿No sabes qué necesitas? Hablemos.
-          </p>
-          <Link
-            href="#contacto"
-            className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-sm font-semibold transition-all hover:bg-[#FF8C00] group"
-            style={{ fontFamily: 'var(--font-dm-sans)' }}
-          >
-            Consultoría gratuita
-            <motion.span
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              →
-            </motion.span>
-          </Link>
         </motion.div>
       </div>
     </section>

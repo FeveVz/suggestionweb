@@ -79,14 +79,14 @@ export default function TestimonialsSection() {
             </motion.div>
 
             <motion.h2
-              className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[0.95] tracking-tight text-white mb-10"
+              className="text-[clamp(2.2rem,5vw,4rem)] font-black leading-[0.82] tracking-tight text-white mb-10 uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Lo que dicen{' '}
-              <span style={{ color: '#00BFFF' }}>nuestros clientes.</span>
+              MARCAS QUE<br />
+              <span style={{ color: '#00BFFF' }}>CRECIERON.</span>
             </motion.h2>
 
             {/* Navegación */}

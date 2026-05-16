@@ -64,14 +64,15 @@ export default function ValuePropositionSection() {
           </motion.div>
 
           <motion.h2
-            className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-white max-w-3xl"
+            className="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.82] tracking-tight text-white uppercase"
             style={{ fontFamily: 'var(--font-space-grotesk)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
           >
-            Diferentes por{' '}
-            <span style={{ color: '#FF8C00' }}>decisión.</span>
+            DIFERENTES<br />
+            POR{' '}
+            <span style={{ color: '#FF8C00' }}>DECISIÓN.</span>
           </motion.h2>
         </div>
 
