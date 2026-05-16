@@ -3,364 +3,205 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import { Card, CardContent } from '@/components/ui/card';
-import { 
-  TrendingUp, 
-  Share2, 
-  Target, 
-  Search, 
-  Palette, 
-  Code,
-  Lightbulb,
-  Zap,
-  Video,
-  BarChart3,
-  ShoppingBag,
-  Printer,
-  PanelTop,
-  Truck,
-  Sparkles,
-  Package
+import {
+  TrendingUp, Share2, Target, Search, Palette, Code,
+  Lightbulb, Zap, Video, BarChart3,
+  ShoppingBag, Printer, PanelTop, Truck, Sparkles, Package
 } from 'lucide-react';
 
+const RorschachMini = ({ className, color = '#FF8C00' }: { className?: string; color?: string }) => (
+  <svg viewBox="0 0 400 300" className={className} xmlns="http://www.w3.org/2000/svg" fill={color}>
+    <path d="M200 40 C185 50, 160 55, 145 75 C130 95, 125 120, 130 145 C135 170, 150 185, 140 205 C130 225, 110 230, 105 250 C100 265, 115 275, 130 270 C145 265, 155 250, 165 240 C175 230, 185 225, 195 230 C198 231, 199 235, 200 238"/>
+    <path d="M200 40 C215 50, 240 55, 255 75 C270 95, 275 120, 270 145 C265 170, 250 185, 260 205 C270 225, 290 230, 295 250 C300 265, 285 275, 270 270 C255 265, 245 250, 235 240 C225 230, 215 225, 205 230 C202 231, 201 235, 200 238"/>
+    <ellipse cx="200" cy="155" rx="18" ry="35"/>
+    <path d="M200 70 C190 60, 170 58, 158 65 C148 72, 145 85, 150 95 C155 105, 168 108, 178 105 C188 102, 195 92, 200 85"/>
+    <path d="M200 70 C210 60, 230 58, 242 65 C252 72, 255 85, 250 95 C245 105, 232 108, 222 105 C212 102, 205 92, 200 85"/>
+    <circle cx="170" cy="200" r="8"/><circle cx="230" cy="200" r="8"/>
+  </svg>
+);
+
 const serviciosPrincipales = [
-  {
-    icon: TrendingUp,
-    title: 'Marketing Digital',
-    description: 'Estrategias integrales que transforman tu presencia digital en resultados medibles y sostenibles.',
-    color: '#FF8C00',
-    href: '/servicios/marketing-digital',
-  },
-  {
-    icon: Share2,
-    title: 'Redes Sociales',
-    description: 'Gestión profesional de comunidades y contenido que conecta con tu audiencia de forma auténtica.',
-    color: '#00BFFF',
-    href: '/servicios/marketing-redes-sociales',
-  },
-  {
-    icon: Target,
-    title: 'Publicidad Digital',
-    description: 'Campañas en Meta Ads, Google Ads y más con ROI medible y optimización continua.',
-    color: '#FF8C00',
-    href: '/servicios/publicidad-digital',
-  },
-  {
-    icon: Search,
-    title: 'SEO',
-    description: 'Posicionamiento orgánico que te hace visible cuando tus clientes te buscan.',
-    color: '#00BFFF',
-    href: '/servicios/seo-posicionamiento',
-  },
-  {
-    icon: Palette,
-    title: 'Branding',
-    description: 'Identidad visual y estratégica que deja huella en la mente de tu audiencia.',
-    color: '#FF8C00',
-    href: '/servicios/branding-diseno',
-  },
-  {
-    icon: Code,
-    title: 'Desarrollo Web',
-    description: 'Sitios web optimizados, rápidos y diseñados para convertir visitantes en clientes.',
-    color: '#00BFFF',
-    href: '/servicios/desarrollo-web',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Consultoría',
-    description: 'Asesoría estratégica personalizada para potenciar tu marketing digital.',
-    color: '#FF8C00',
-    href: '/servicios/consultoria-marketing',
-  },
-  {
-    icon: Zap,
-    title: 'CRM y Automatización',
-    description: 'Automatiza procesos y escala tu negocio con herramientas inteligentes.',
-    color: '#00BFFF',
-    href: '/servicios/crm-automatizacion',
-  },
-  {
-    icon: Video,
-    title: 'Producción Audiovisual',
-    description: 'Contenido visual de alto impacto que cuenta tu historia de manera memorable.',
-    color: '#FF8C00',
-    href: '/servicios/produccion-audiovisual',
-  },
-  {
-    icon: BarChart3,
-    title: 'Investigación de Mercado',
-    description: 'Datos e insights que guían decisiones estratégicas informadas.',
-    color: '#00BFFF',
-    href: '/servicios/investigacion-mercado',
-  },
+  { icon: TrendingUp, title: 'Marketing Digital', description: 'Estrategias que transforman presencia en resultados.', href: '/servicios/marketing-digital' },
+  { icon: Share2, title: 'Redes Sociales', description: 'Conexión auténtica con tu audiencia.', href: '/servicios/marketing-redes-sociales' },
+  { icon: Target, title: 'Publicidad Digital', description: 'Campañas con ROI medible y optimización continua.', href: '/servicios/publicidad-digital' },
+  { icon: Search, title: 'SEO', description: 'Visibilidad orgánica cuando te buscan.', href: '/servicios/seo-posicionamiento' },
+  { icon: Palette, title: 'Branding', description: 'Identidad que deja huella en tu audiencia.', href: '/servicios/branding-diseno' },
+  { icon: Code, title: 'Desarrollo Web', description: 'Sitios que convierten visitantes en clientes.', href: '/servicios/desarrollo-web' },
+  { icon: Lightbulb, title: 'Consultoría', description: 'Asesoría estratégica personalizada.', href: '/servicios/consultoria-marketing' },
+  { icon: Zap, title: 'CRM y Automatización', description: 'Automatiza y escala tu negocio.', href: '/servicios/crm-automatizacion' },
+  { icon: Video, title: 'Producción Audiovisual', description: 'Contenido visual de alto impacto.', href: '/servicios/produccion-audiovisual' },
+  { icon: BarChart3, title: 'Investigación de Mercado', description: 'Datos que guían decisiones clave.', href: '/servicios/investigacion-mercado' },
 ];
 
 const serviciosComplementarios = [
-  { icon: ShoppingBag, title: 'Merchandising', color: '#FF8C00', href: '/servicios/merchandising' },
-  { icon: Printer, title: 'Imprenta Corporativa', color: '#00BFFF', href: '/servicios/imprenta-corporativa' },
-  { icon: PanelTop, title: 'Estructuras', color: '#FF8C00', href: '/servicios/estructuras-publicitarias' },
-  { icon: Truck, title: 'Publicidad Móvil', color: '#00BFFF', href: '/servicios/publicidad-movil' },
-  { icon: Sparkles, title: 'BTL y Activaciones', color: '#FF8C00', href: '/servicios/btl-activaciones' },
-  { icon: Package, title: 'Material POP', color: '#00BFFF', href: '/servicios/material-pop' },
+  { icon: ShoppingBag, title: 'Merchandising', href: '/servicios/merchandising' },
+  { icon: Printer, title: 'Imprenta Corporativa', href: '/servicios/imprenta-corporativa' },
+  { icon: PanelTop, title: 'Estructuras Publicitarias', href: '/servicios/estructuras-publicitarias' },
+  { icon: Truck, title: 'Publicidad Móvil', href: '/servicios/publicidad-movil' },
+  { icon: Sparkles, title: 'BTL y Activaciones', href: '/servicios/btl-activaciones' },
+  { icon: Package, title: 'Material POP', href: '/servicios/material-pop' },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-    }
-  }
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94]
-    }
-  }
-};
 
 export default function ServicesSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="servicios" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute -top-40 -right-40 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}
-          animate={{ 
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-        />
-        <motion.div
-          className="absolute -bottom-40 -left-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}
-          animate={{ 
-            scale: [1.2, 1, 1.2],
-            rotate: [360, 180, 0]
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-        />
+    <section id="servicios" className="bg-white relative overflow-hidden" ref={ref}>
+      {/* Rorschach decorativo — esquina derecha */}
+      <div className="absolute right-0 top-0 w-[320px] h-[260px] opacity-[0.04] pointer-events-none">
+        <RorschachMini color="#000000" className="w-full h-full" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
-        {/* Section Header */}
-        <motion.div 
-          className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 py-16 sm:py-20 lg:py-28">
+        {/* Header editorial */}
+        <div className="mb-14 sm:mb-20">
+          <motion.div
+            className="flex items-center gap-4 mb-6"
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="h-px w-12 bg-black" />
+            <span className="text-xs tracking-[0.25em] uppercase font-medium text-black/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+              Nuestros Servicios
+            </span>
+          </motion.div>
+
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+            <motion.h2
+              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-black max-w-2xl"
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              Soluciones que{' '}
+              <span style={{ color: '#FF8C00' }}>transforman.</span>
+            </motion.h2>
+
+            <motion.p
+              className="text-base text-black/50 max-w-xs leading-relaxed"
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              Un ecosistema completo de marketing digital diseñado para impulsar tu negocio.
+            </motion.p>
+          </div>
+        </div>
+
+        {/* Grid servicios principales */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-black/8">
+            {serviciosPrincipales.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+              >
+                <Link href={service.href} className="block group bg-white hover:bg-black transition-colors duration-300 p-6 h-full">
+                  <div className="flex flex-col h-full min-h-[160px]">
+                    {/* Número editorial */}
+                    <span
+                      className="text-[10px] tracking-[0.2em] text-black/20 group-hover:text-white/20 transition-colors mb-4 font-mono"
+                    >
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+
+                    {/* Icon */}
+                    <div className="mb-4">
+                      <service.icon
+                        className="w-6 h-6 transition-colors duration-300"
+                        style={{ color: index % 2 === 0 ? '#FF8C00' : '#00BFFF' }}
+                      />
+                    </div>
+
+                    {/* Texto */}
+                    <div className="mt-auto">
+                      <h3
+                        className="text-sm font-bold text-black group-hover:text-white transition-colors mb-2 leading-tight"
+                        style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                      >
+                        {service.title}
+                      </h3>
+                      <p
+                        className="text-xs text-black/50 group-hover:text-white/50 transition-colors leading-relaxed"
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
+                      >
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Separador con label */}
+        <motion.div
+          className="flex items-center gap-4 mb-10"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6 }}
         >
-          <motion.span 
-            className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-            style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.2 }}
-          >
-            Nuestros Servicios
-          </motion.span>
-          <motion.h2 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6"
-            style={{ fontFamily: 'var(--font-space-grotesk)' }}
-          >
-            Soluciones que{' '}
-            <span className="text-gradient">Transforman</span>
-          </motion.h2>
-          <motion.p 
-            className="text-base sm:text-lg text-gray-600 px-4"
-            style={{ fontFamily: 'var(--font-dm-sans)' }}
-          >
-            Ofrecemos un ecosistema completo de servicios de marketing digital 
-            diseñados para impulsar tu negocio al siguiente nivel.
-          </motion.p>
+          <div className="h-px flex-1 bg-black/10" />
+          <span className="text-[10px] tracking-[0.2em] uppercase text-black/30 font-medium" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+            Servicios Complementarios
+          </span>
+          <div className="h-px flex-1 bg-black/10" />
         </motion.div>
 
-        {/* Servicios Principales */}
-        <div className="mb-10 sm:mb-12 md:mb-16">
-          <motion.div 
-            className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8"
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.3 }}
-          >
-            <div className="h-px flex-1 bg-black" />
-            <h3 
-              className="text-xs sm:text-sm font-bold uppercase tracking-wider text-black whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-space-grotesk)' }}
+        {/* Servicios complementarios — lista horizontal */}
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"
+          initial={{ opacity: 0, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.7 }}
+        >
+          {serviciosComplementarios.map((service, index) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="flex items-center gap-2.5 p-3 border border-black/8 hover:border-black/30 hover:bg-black/2 transition-all group"
             >
-              Servicios Principales
-            </h3>
-            <div className="h-px flex-1 bg-black" />
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 md:gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            {serviciosPrincipales.map((service, index) => (
-              <motion.div key={index} variants={cardVariants}>
-                <Link href={service.href} className="block h-full">
-                  <motion.div
-                    whileHover={{ y: -8, scale: 1.02 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                    className="h-full"
-                  >
-                    <Card className="group bg-gray-50 border-none hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden h-full">
-                      <CardContent className="p-4 sm:p-5 md:p-6 relative">
-                        {/* Animated background on hover */}
-                        <motion.div 
-                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                          style={{ background: `linear-gradient(135deg, ${service.color}05, ${service.color}10)` }}
-                        />
-                        
-                        {/* Icon */}
-                        <motion.div 
-                          className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3 sm:mb-4 md:mb-5 relative z-10 bg-black"
-                          whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          <service.icon 
-                            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white"
-                          />
-                        </motion.div>
-                        
-                        {/* Title */}
-                        <h3 
-                          className="text-base sm:text-lg font-bold text-black mb-2 sm:mb-3 relative z-10 group-hover:text-gray-900 transition-colors"
-                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                        >
-                          {service.title}
-                        </h3>
-                        
-                        {/* Description */}
-                        <p 
-                          className="text-xs sm:text-sm text-gray-600 leading-relaxed relative z-10"
-                          style={{ fontFamily: 'var(--font-dm-sans)' }}
-                        >
-                          {service.description}
-                        </p>
-
-                        {/* Arrow indicator */}
-                        <motion.div 
-                          className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                          whileHover={{ x: 5 }}
-                        >
-                          <svg className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: service.color }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </motion.div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Servicios Complementarios */}
-        <div>
-          <motion.div 
-            className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8"
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.5 }}
-          >
-            <div className="h-px flex-1 bg-black" />
-            <h3 
-              className="text-xs sm:text-sm font-bold uppercase tracking-wider text-black whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-space-grotesk)' }}
-            >
-              Servicios Complementarios
-            </h3>
-            <div className="h-px flex-1 bg-black" />
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            {serviciosComplementarios.map((service, index) => (
-              <motion.div 
-                key={index} 
-                variants={cardVariants}
-                custom={index}
+              <service.icon className="w-4 h-4 text-black/30 group-hover:text-black/60 transition-colors flex-shrink-0" />
+              <span
+                className="text-xs font-medium text-black/50 group-hover:text-black transition-colors"
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
-                <Link href={service.href} className="block">
-                  <motion.div
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    transition={{ type: 'spring', stiffness: 400 }}
-                  >
-                    <Card className="group bg-black border-none shadow hover:shadow-lg transition-all duration-300 cursor-pointer min-h-[80px] sm:min-h-[100px]">
-                      <CardContent className="p-3 sm:p-4 text-center">
-                        {/* Icon */}
-                        <motion.div 
-                          className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3"
-                          style={{ backgroundColor: `${service.color}20` }}
-                          whileHover={{ rotate: 360 }}
-                          transition={{ duration: 0.6 }}
-                        >
-                          <service.icon 
-                            className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                            style={{ color: service.color }}
-                          />
-                        </motion.div>
-                        
-                        {/* Title */}
-                        <h3 
-                          className="text-xs sm:text-sm font-bold text-white group-hover:text-gray-200 transition-colors leading-tight"
-                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                        >
-                          {service.title}
-                        </h3>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+                {service.title}
+              </span>
+            </Link>
+          ))}
+        </motion.div>
 
         {/* CTA */}
-        <motion.div 
-          className="text-center mt-10 sm:mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+        <motion.div
+          className="mt-14 pt-10 border-t border-black/8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <motion.a
+          <p className="text-sm text-black/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+            ¿No sabes qué necesitas? Hablemos.
+          </p>
+          <Link
             href="#contacto"
-            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-800 transition-all duration-300 min-h-[44px]"
+            className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-sm font-semibold transition-all hover:bg-[#FF8C00] group"
             style={{ fontFamily: 'var(--font-dm-sans)' }}
-            whileHover={{ scale: 1.05 }}
           >
-            Descubre cómo podemos ayudarte
+            Consultoría gratuita
             <motion.span
-              animate={{ x: [0, 5, 0] }}
-              transition={{ duration: 1, repeat: Infinity }}
+              animate={{ x: [0, 4, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
             >
               →
             </motion.span>
-          </motion.a>
+          </Link>
         </motion.div>
       </div>
     </section>

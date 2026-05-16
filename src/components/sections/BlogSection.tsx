@@ -3,8 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 
 const posts = [
   {
@@ -13,7 +12,7 @@ const posts = [
     category: 'Tendencias',
     date: '15 Mar 2026',
     readTime: '8 min',
-    color: '#FF8C00',
+    accent: '#FF8C00',
   },
   {
     title: 'Cómo Crear una Estrategia de SEO que Funcione',
@@ -21,193 +20,154 @@ const posts = [
     category: 'SEO',
     date: '10 Mar 2026',
     readTime: '12 min',
-    color: '#00BFFF',
+    accent: '#00BFFF',
   },
   {
     title: 'El Poder del Storytelling en Redes Sociales',
-    excerpt: 'Aprende a conectar con tu audiencia a través de historias que generan engagement.',
+    excerpt: 'Aprende a conectar con tu audiencia a través de historias que generan engagement real.',
     category: 'Redes Sociales',
     date: '5 Mar 2026',
     readTime: '6 min',
-    color: '#FF8C00',
+    accent: '#FF8C00',
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    }
-  }
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94]
-    }
-  }
-};
-
 export default function BlogSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="blog" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-black relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute bottom-0 right-0 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px]"
-          style={{
-            background: 'radial-gradient(circle, rgba(0, 191, 255, 0.05) 0%, transparent 60%)',
-          }}
-          animate={{ 
-            scale: [1, 1.2, 1],
-            x: [0, 50, 0],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      </div>
+    <section id="blog" className="bg-black relative overflow-hidden" ref={ref}>
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 py-16 sm:py-20 lg:py-28">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
-        {/* Section Header */}
-        <motion.div 
-          className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="max-w-2xl mb-4 sm:mb-0">
-            <motion.span 
-              className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.2 }}
+        {/* Header editorial */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-16 sm:mb-20 gap-8">
+          <div>
+            <motion.div
+              className="flex items-center gap-4 mb-6"
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5 }}
             >
-              Blog
-            </motion.span>
-            <motion.h2 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white"
+              <div className="h-px w-12 bg-white/20" />
+              <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                Blog
+              </span>
+            </motion.div>
+
+            <motion.h2
+              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-white"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
               Ideas que{' '}
-              <span className="text-gradient">Inspiran</span>
+              <span style={{ color: '#00BFFF' }}>inspiran.</span>
             </motion.h2>
           </div>
+
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
           >
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-100 transition-all duration-300 min-h-[44px]"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/30 hover:text-white transition-colors group"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Ver todos los artículos
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
-        </motion.div>
+        </div>
 
-        {/* Blog Grid - Horizontal Cards for better flow */}
-        <motion.div 
-          className="space-y-4 sm:space-y-6"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
+        {/* Posts — lista editorial */}
+        <div className="space-y-0">
           {posts.map((post, index) => (
-            <motion.div key={index} variants={cardVariants}>
-              <motion.div
-                whileHover={{ x: 10 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                <Card 
-                  className="group bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 cursor-pointer overflow-hidden backdrop-blur-sm"
-                >
-                  <CardContent className="p-0">
-                    <div className="flex flex-col sm:flex-row">
-                      {/* Image Section */}
-                      <motion.div 
-                        className="sm:w-40 md:w-48 lg:w-56 flex-shrink-0 h-32 sm:h-auto relative overflow-hidden"
-                        style={{ 
-                          background: `linear-gradient(135deg, ${post.color}15, ${post.color}30)` 
-                        }}
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.4 }}
+            <motion.div
+              key={post.title}
+              className="group border-b border-white/8 last:border-b-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Link href="/blog" className="flex items-start gap-0 py-8 sm:py-10 hover:bg-white/2 transition-colors">
+                {/* Número */}
+                <div className="flex-shrink-0 w-16 sm:w-20">
+                  <span
+                    className="text-[10px] tracking-[0.2em] font-mono"
+                    style={{ color: post.accent }}
+                  >
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+
+                {/* Contenido */}
+                <div className="flex-1 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-6 items-start">
+                  <div>
+                    {/* Category + date */}
+                    <div className="flex items-center gap-4 mb-3">
+                      <span
+                        className="text-[10px] tracking-wider uppercase font-medium"
+                        style={{ color: post.accent, fontFamily: 'var(--font-dm-sans)' }}
                       >
-                        {/* Category Badge */}
-                        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 z-10">
-                          <span 
-                            className="text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1 rounded-full text-white"
-                            style={{ backgroundColor: post.color, fontFamily: 'var(--font-dm-sans)' }}
-                          >
-                            {post.category}
-                          </span>
-                        </div>
-                        
-                        {/* Icon decoration */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <BookOpen className="w-10 h-10 sm:w-12 sm:h-12" style={{ color: `${post.color}30` }} />
-                        </div>
-                      </motion.div>
-
-                      {/* Content Section */}
-                      <div className="flex-1 p-4 sm:p-5 md:p-6">
-                        {/* Date & Read Time */}
-                        <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
-                          <div className="flex items-center gap-1.5 text-gray-400">
-                            <Calendar className="w-3.5 h-3.5" />
-                            <span className="text-[10px] sm:text-xs" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                              {post.date}
-                            </span>
-                          </div>
-                          <span className="text-[10px] sm:text-xs text-gray-500" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                            {post.readTime} lectura
-                          </span>
-                        </div>
-
-                        {/* Title */}
-                        <h3 
-                          className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-gray-100 transition-colors line-clamp-2"
-                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
-                        >
-                          {post.title}
-                        </h3>
-
-                        {/* Excerpt */}
-                        <p 
-                          className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-3 sm:mb-4 line-clamp-2"
-                          style={{ fontFamily: 'var(--font-dm-sans)' }}
-                        >
-                          {post.excerpt}
-                        </p>
-
-                        {/* Read More */}
-                        <motion.div 
-                          className="flex items-center gap-2 font-medium group-hover:gap-3 transition-all duration-300"
-                          style={{ color: post.color, fontFamily: 'var(--font-dm-sans)' }}
-                          whileHover={{ x: 5 }}
-                        >
-                          <span className="text-xs sm:text-sm font-semibold">Leer más</span>
-                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                        </motion.div>
+                        {post.category}
+                      </span>
+                      <div className="flex items-center gap-1.5 text-white/20">
+                        <Calendar className="w-3 h-3" />
+                        <span className="text-[10px]" style={{ fontFamily: 'var(--font-dm-sans)' }}>{post.date}</span>
                       </div>
+                      <span className="text-[10px] text-white/20" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                        {post.readTime}
+                      </span>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+
+                    <h3
+                      className="text-lg sm:text-xl font-bold text-white group-hover:text-white/80 transition-colors mb-2 leading-tight"
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                    >
+                      {post.title}
+                    </h3>
+                    <p
+                      className="text-sm text-white/30 leading-relaxed"
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
+                    >
+                      {post.excerpt}
+                    </p>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="hidden sm:flex items-center self-center">
+                    <span
+                      className="text-white/20 group-hover:text-white/60 transition-colors group-hover:translate-x-1 inline-block transition-transform"
+                      style={{ color: post.accent }}
+                    >
+                      →
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          className="mt-14 pt-10 border-t border-white/8"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6 }}
+        >
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-3 border border-white/20 text-white px-8 py-4 text-sm font-semibold transition-all hover:bg-white hover:text-black"
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
+          >
+            Ver todos los artículos
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </motion.div>
       </div>
     </section>
