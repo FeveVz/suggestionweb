@@ -21,7 +21,7 @@ export default function PublicidadDigitalPage() {
     description: 'Diseñamos y gestionamos campañas de publicidad digital que generan retorno. Cada peso invertido se optimiza para máximo rendimiento.',
     cta: 'Empieza a Convertir',
     iconName: 'Target',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

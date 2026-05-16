@@ -21,7 +21,7 @@ export default function MaterialPOPPage() {
     description: 'Diseñamos y producimos materiales POP que capturan la atención en el momento decisivo. Displays, exhibidores y más para que tu producto sea el elegido.',
     cta: 'Solicitar Propuesta',
     iconName: 'Package',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

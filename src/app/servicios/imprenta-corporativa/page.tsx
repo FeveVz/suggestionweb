@@ -21,7 +21,7 @@ export default function ImprentaCorporativaPage() {
     description: 'Producción de materiales impresos con la calidad que tu marca merece. Desde tarjetas hasta catálogos completos, con acabados que impresionan.',
     cta: 'Solicitar Cotización',
     iconName: 'Printer',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

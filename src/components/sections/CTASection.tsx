@@ -107,19 +107,19 @@ export default function CTASection() {
           <motion.div className="text-white px-2 sm:px-0" variants={itemVariants}>
             <motion.span 
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Contacto
             </motion.span>
             <motion.h2 
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Hablemos de tu{' '}
               <span 
                 className="inline-block"
                 style={{
-                  background: 'linear-gradient(90deg, #FF6600, #00BFFF)',
+                  background: 'linear-gradient(90deg, #FF8C00, #00BFFF)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                 }}
@@ -129,7 +129,7 @@ export default function CTASection() {
             </motion.h2>
             <motion.p 
               className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               ¿Listo para transformar tu presencia digital? Cuéntanos sobre tu negocio 
               y descubre cómo podemos ayudarte.
@@ -159,7 +159,7 @@ export default function CTASection() {
                   </motion.div>
                   <span 
                     className="text-sm sm:text-base text-gray-300"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {benefit}
                   </span>
@@ -181,9 +181,9 @@ export default function CTASection() {
                       key={i}
                       className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold border-2 border-black"
                       style={{ 
-                        backgroundColor: i === 3 ? '#FF6600' : '#333',
+                        backgroundColor: i === 3 ? '#FF8C00' : '#333',
                         color: 'white',
-                        fontFamily: 'var(--font-montserrat)'
+                        fontFamily: 'var(--font-space-grotesk)'
                       }}
                       whileHover={{ scale: 1.1, zIndex: 10 }}
                     >
@@ -191,7 +191,7 @@ export default function CTASection() {
                     </motion.div>
                   ))}
                 </div>
-                <span className="text-xs sm:text-sm text-gray-500" style={{ fontFamily: 'var(--font-inter)' }}>
+                <span className="text-xs sm:text-sm text-gray-500" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   +150 clientes satisfechos
                 </span>
               </div>
@@ -206,7 +206,7 @@ export default function CTASection() {
                 <motion.div
                   className="absolute inset-0 rounded-xl pointer-events-none"
                   style={{
-                    background: 'linear-gradient(90deg, #FF6600, #00BFFF, #FF6600)',
+                    background: 'linear-gradient(90deg, #FF8C00, #00BFFF, #FF8C00)',
                     backgroundSize: '200% 100%',
                     opacity: 0.3,
                   }}
@@ -240,13 +240,13 @@ export default function CTASection() {
                     </motion.div>
                     <motion.h3 
                       className="text-xl sm:text-2xl font-bold text-white mb-2"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       ¡Mensaje Enviado!
                     </motion.h3>
                     <motion.p 
                       className="text-sm sm:text-base text-gray-400"
-                      style={{ fontFamily: 'var(--font-inter)' }}
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       Nos pondremos en contacto contigo muy pronto.
                     </motion.p>
@@ -261,7 +261,7 @@ export default function CTASection() {
                       >
                         <label 
                           className="block text-xs sm:text-sm text-gray-400 mb-2"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           Nombre *
                         </label>
@@ -271,7 +271,7 @@ export default function CTASection() {
                           onChange={handleChange}
                           placeholder="Tu nombre"
                           required
-                          className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF6600] focus:ring-[#FF6600] transition-all duration-300 min-h-[44px]"
+                          className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF8C00] focus:ring-[#FF8C00] transition-all duration-300 min-h-[44px]"
                         />
                       </motion.div>
                       <motion.div
@@ -281,7 +281,7 @@ export default function CTASection() {
                       >
                         <label 
                           className="block text-xs sm:text-sm text-gray-400 mb-2"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           Email *
                         </label>
@@ -292,7 +292,7 @@ export default function CTASection() {
                           onChange={handleChange}
                           placeholder="tu@email.com"
                           required
-                          className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF6600] focus:ring-[#FF6600] transition-all duration-300 min-h-[44px]"
+                          className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF8C00] focus:ring-[#FF8C00] transition-all duration-300 min-h-[44px]"
                         />
                       </motion.div>
                     </div>
@@ -304,7 +304,7 @@ export default function CTASection() {
                     >
                       <label 
                         className="block text-xs sm:text-sm text-gray-400 mb-2"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         Empresa
                       </label>
@@ -313,7 +313,7 @@ export default function CTASection() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Nombre de tu empresa"
-                        className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF6600] focus:ring-[#FF6600] transition-all duration-300 min-h-[44px]"
+                        className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF8C00] focus:ring-[#FF8C00] transition-all duration-300 min-h-[44px]"
                       />
                     </motion.div>
 
@@ -324,7 +324,7 @@ export default function CTASection() {
                     >
                       <label 
                         className="block text-xs sm:text-sm text-gray-400 mb-2"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         Mensaje *
                       </label>
@@ -335,7 +335,7 @@ export default function CTASection() {
                         placeholder="Cuéntanos sobre tu proyecto..."
                         required
                         rows={4}
-                        className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF6600] focus:ring-[#FF6600] resize-none transition-all duration-300"
+                        className="bg-white/5 border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:border-[#FF8C00] focus:ring-[#FF8C00] resize-none transition-all duration-300"
                       />
                     </motion.div>
 
@@ -348,7 +348,7 @@ export default function CTASection() {
                         type="submit"
                         disabled={isSubmitting}
                         className="w-full text-white font-semibold py-5 sm:py-6 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg disabled:opacity-70 relative overflow-hidden group text-sm sm:text-base min-h-[52px]"
-                        style={{ backgroundColor: '#FF6600' }}
+                        style={{ backgroundColor: '#FF8C00' }}
                       >
                         <span className="relative z-10 flex items-center justify-center gap-2">
                           {isSubmitting ? (

@@ -191,7 +191,7 @@ export default function ServicePageTemplate({
             <motion.span
               variants={itemVariants}
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: heroData.color, fontFamily: 'var(--font-inter)' }}
+              style={{ color: heroData.color, fontFamily: 'var(--font-dm-sans)' }}
             >
               {heroData.badge}
             </motion.span>
@@ -199,7 +199,7 @@ export default function ServicePageTemplate({
             <motion.h1
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               {heroData.title}{' '}
               <span className="text-gradient">{heroData.highlightedWord}</span>
@@ -208,7 +208,7 @@ export default function ServicePageTemplate({
             <motion.p
               variants={itemVariants}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               {heroData.description}
             </motion.p>
@@ -255,11 +255,11 @@ export default function ServicePageTemplate({
               >
                 <div
                   className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2"
-                  style={{ color: heroData.color, fontFamily: 'var(--font-montserrat)' }}
+                  style={{ color: heroData.color, fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-400 leading-tight" style={{ fontFamily: 'var(--font-inter)' }}>
+                <div className="text-xs sm:text-sm text-gray-400 leading-tight" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   {stat.label}
                 </div>
               </motion.div>
@@ -279,11 +279,11 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Por qué elegir nuestro servicio?
             </h2>
-            <p className="text-base sm:text-lg text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-base sm:text-lg text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Combinamos estrategia, creatividad y datos para entregarte resultados reales y medibles.
             </p>
           </motion.div>
@@ -312,11 +312,11 @@ export default function ServicePageTemplate({
                         <div className="text-center sm:text-left">
                           <h3
                             className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                            style={{ fontFamily: 'var(--font-space-grotesk)' }}
                           >
                             {benefit.title}
                           </h3>
-                          <p className="text-sm sm:text-base text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                          <p className="text-sm sm:text-base text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                             {benefit.description}
                           </p>
                         </div>
@@ -341,7 +341,7 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Qué incluye nuestro servicio
             </h2>
@@ -367,11 +367,11 @@ export default function ServicePageTemplate({
                     </motion.div>
                     <h3
                       className="text-base sm:text-lg font-bold text-black mb-2"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                    <p className="text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                       {feature.description}
                     </p>
                   </CardContent>
@@ -393,11 +393,11 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Nuestro Proceso
             </h2>
-            <p className="text-base sm:text-lg text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-base sm:text-lg text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Una metodología probada que garantiza resultados.
             </p>
           </motion.div>
@@ -415,23 +415,23 @@ export default function ServicePageTemplate({
                   <CardContent className="p-4 sm:p-6 md:p-8">
                     <div
                       className="text-4xl sm:text-5xl font-bold opacity-10 absolute top-4 right-4"
-                      style={{ color: heroData.color, fontFamily: 'var(--font-montserrat)' }}
+                      style={{ color: heroData.color, fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {step.step}
                     </div>
                     <div
                       className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4"
-                      style={{ color: heroData.color, fontFamily: 'var(--font-montserrat)' }}
+                      style={{ color: heroData.color, fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {step.step}
                     </div>
                     <h3
                       className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {step.title}
                     </h3>
-                    <p className="text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                    <p className="text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                       {step.description}
                     </p>
                   </CardContent>
@@ -453,7 +453,7 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Lo que dicen nuestros clientes
             </h2>
@@ -472,15 +472,15 @@ export default function ServicePageTemplate({
                   <CardContent className="p-4 sm:p-6 md:p-8">
                     <p
                       className="text-sm sm:text-base text-gray-700 italic mb-4 sm:mb-6"
-                      style={{ fontFamily: 'var(--font-inter)' }}
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       &ldquo;{testimonial.quote}&rdquo;
                     </p>
                     <div>
-                      <div className="font-bold text-black text-sm sm:text-base" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                      <div className="font-bold text-black text-sm sm:text-base" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                         {testimonial.author}
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                      <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                         {testimonial.role}
                       </div>
                     </div>
@@ -503,7 +503,7 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Preguntas Frecuentes
             </h2>
@@ -522,11 +522,11 @@ export default function ServicePageTemplate({
                   <CardContent className="p-4 sm:p-6">
                     <h3
                       className="text-base sm:text-lg font-bold text-black mb-2 sm:mb-3"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {faq.question}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                    <p className="text-sm sm:text-base text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                       {faq.answer}
                     </p>
                   </CardContent>
@@ -557,11 +557,11 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Listo para empezar?
             </h2>
-            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una consultoría gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
@@ -592,7 +592,7 @@ export default function ServicePageTemplate({
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Servicios Relacionados
             </h2>
@@ -621,7 +621,7 @@ export default function ServicePageTemplate({
                         </motion.div>
                         <h3
                           className="text-xs sm:text-sm md:text-base font-bold text-black group-hover:text-gray-700 transition-colors"
-                          style={{ fontFamily: 'var(--font-montserrat)' }}
+                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {service.title}
                         </h3>

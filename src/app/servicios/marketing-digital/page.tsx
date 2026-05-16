@@ -21,7 +21,7 @@ export default function MarketingDigitalPage() {
     description: 'Transformamos tu presencia digital en resultados medibles. Estrategias personalizadas que conectan con tu audiencia y generan crecimiento sostenible.',
     cta: 'Comienza tu Transformación',
     iconName: 'TrendingUp',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

@@ -21,7 +21,7 @@ export default function BrandingPage() {
     description: 'Diseñamos identidades visuales que conectan emocionalmente con tu audiencia. Tu marca no solo se ve bien, se recuerda.',
     cta: 'Crea tu Identidad',
     iconName: 'Palette',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

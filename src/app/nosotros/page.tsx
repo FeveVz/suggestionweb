@@ -5,11 +5,11 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Users, Target, Lightbulb, Heart, Award, 
-  Globe, TrendingUp, Shield, Zap, CheckCircle,
-  ArrowRight, Star, Clock, Briefcase, Sparkles,
-  Award2, Rocket, Eye
+import {
+  Users, Target, Lightbulb, Heart,
+  Shield, Zap,
+  ArrowRight, Clock, Briefcase,
+  Rocket, Eye
 } from 'lucide-react';
 
 const values = [
@@ -98,7 +98,7 @@ const infoCards = [
     icon: Target,
     title: 'Nuestra Misión',
     description: 'Transformar la presencia digital de nuestros clientes en resultados medibles y sostenibles, mediante estrategias personalizadas que combinan creatividad, tecnología y datos.',
-    color: '#FF6600'
+    color: '#FF8C00'
   },
   {
     icon: Eye,
@@ -110,7 +110,7 @@ const infoCards = [
     icon: Rocket,
     title: 'Nuestro Compromiso',
     description: 'Construir relaciones a largo plazo con nuestros clientes basadas en confianza, transparencia y éxito mutuo en cada proyecto.',
-    color: '#FF6600'
+    color: '#FF8C00'
   },
 ];
 
@@ -149,7 +149,7 @@ export default function NosotrosPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute -top-40 -right-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
-            style={{ backgroundColor: '#FF660015' }}
+            style={{ backgroundColor: '#FF8C0015' }}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -171,7 +171,7 @@ export default function NosotrosPage() {
             <motion.span
               variants={itemVariants}
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Sobre Nosotros
             </motion.span>
@@ -179,7 +179,7 @@ export default function NosotrosPage() {
             <motion.h1
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Transformando marcas en{' '}
               <span className="text-gradient">historias de éxito</span>
@@ -188,7 +188,7 @@ export default function NosotrosPage() {
             <motion.p
               variants={itemVariants}
               className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Somos una agencia de marketing digital apasionada por crear estrategias 
               que generan resultados reales y sostenibles para nuestros clientes.
@@ -198,7 +198,7 @@ export default function NosotrosPage() {
               <Button
                 size="lg"
                 className="text-white font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full shadow-lg w-full sm:w-auto min-h-[52px]"
-                style={{ backgroundColor: '#FF6600' }}
+                style={{ backgroundColor: '#FF8C00' }}
                 asChild
               >
                 <Link href="/#contacto">
@@ -227,11 +227,11 @@ export default function NosotrosPage() {
                 <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 mx-auto mb-2 sm:mb-3 text-black" />
                 <div
                   className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-black"
-                  style={{ fontFamily: 'var(--font-montserrat)' }}
+                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-600 leading-tight" style={{ fontFamily: 'var(--font-inter)' }}>
+                <div className="text-xs sm:text-sm text-gray-600 leading-tight" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   {stat.label}
                 </div>
               </motion.div>
@@ -252,13 +252,13 @@ export default function NosotrosPage() {
           >
             <span 
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Quiénes Somos
             </span>
             <h2 
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Construyendo el futuro digital
             </h2>
@@ -288,13 +288,13 @@ export default function NosotrosPage() {
                       <div className="flex-1 p-6 sm:p-8">
                         <h3 
                           className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3"
-                          style={{ fontFamily: 'var(--font-montserrat)' }}
+                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {card.title}
                         </h3>
                         <p 
                           className="text-sm sm:text-base text-gray-600 leading-relaxed"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {card.description}
                         </p>
@@ -319,19 +319,19 @@ export default function NosotrosPage() {
           >
             <span 
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Lo que nos define
             </span>
             <h2 
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Nuestros Valores
             </h2>
             <p 
               className="text-base sm:text-lg text-gray-600"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Los principios que guían cada decisión y cada proyecto.
             </p>
@@ -349,20 +349,20 @@ export default function NosotrosPage() {
                   <CardContent className="p-5 sm:p-6">
                     <motion.div 
                       className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4"
-                      style={{ backgroundColor: '#FF660015' }}
+                      style={{ backgroundColor: '#FF8C0015' }}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                     >
-                      <value.icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: '#FF6600' }} />
+                      <value.icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: '#FF8C00' }} />
                     </motion.div>
                     <h3 
                       className="text-base sm:text-lg font-bold text-black mb-2 sm:mb-3"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {value.title}
                     </h3>
                     <p 
                       className="text-xs sm:text-sm text-gray-600 leading-relaxed"
-                      style={{ fontFamily: 'var(--font-inter)' }}
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {value.description}
                     </p>
@@ -385,19 +385,19 @@ export default function NosotrosPage() {
           >
             <span 
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               El equipo
             </span>
             <h2 
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Las mentes detrás de Suggestion
             </h2>
             <p 
               className="text-base sm:text-lg text-gray-400"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Profesionales apasionados con experiencia comprobada.
             </p>
@@ -417,7 +417,7 @@ export default function NosotrosPage() {
                       {/* Avatar */}
                       <div 
                         className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold flex-shrink-0"
-                        style={{ backgroundColor: index % 2 === 0 ? '#FF6600' : '#00BFFF', fontFamily: 'var(--font-montserrat)' }}
+                        style={{ backgroundColor: index % 2 === 0 ? '#FF8C00' : '#00BFFF', fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {member.initials}
                       </div>
@@ -425,19 +425,19 @@ export default function NosotrosPage() {
                       <div className="flex-1 text-center sm:text-left">
                         <h3 
                           className="text-lg sm:text-xl font-bold text-white mb-1"
-                          style={{ fontFamily: 'var(--font-montserrat)' }}
+                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {member.name}
                         </h3>
                         <p 
                           className="text-sm mb-2 sm:mb-3"
-                          style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+                          style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {member.role}
                         </p>
                         <p 
                           className="text-sm text-gray-400 leading-relaxed"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {member.description}
                         </p>
@@ -467,13 +467,13 @@ export default function NosotrosPage() {
           >
             <span 
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Nuestra historia
             </span>
             <h2 
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Un camino de crecimiento
             </h2>
@@ -495,19 +495,19 @@ export default function NosotrosPage() {
                     <CardContent className="p-5 sm:p-6">
                       <div 
                         className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mb-4"
-                        style={{ backgroundColor: '#FF6600', fontFamily: 'var(--font-montserrat)' }}
+                        style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {milestone.year}
                       </div>
                       <h3 
                         className="text-base sm:text-lg font-bold text-black mb-2"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                        style={{ fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {milestone.title}
                       </h3>
                       <p 
                         className="text-xs sm:text-sm text-gray-600"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         {milestone.description}
                       </p>
@@ -525,7 +525,7 @@ export default function NosotrosPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute -top-20 -right-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
-            style={{ backgroundColor: '#FF660015' }}
+            style={{ backgroundColor: '#FF8C0015' }}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -540,18 +540,18 @@ export default function NosotrosPage() {
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Listo para conocernos?
             </h2>
-            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una llamada y descubre cómo podemos ayudarte a alcanzar tus objetivos.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button
                 size="lg"
                 className="text-white font-semibold px-6 sm:px-10 py-5 sm:py-6 rounded-full text-base sm:text-lg shadow-xl min-h-[52px]"
-                style={{ backgroundColor: '#FF6600' }}
+                style={{ backgroundColor: '#FF8C00' }}
                 asChild
               >
                 <Link href="/#contacto">

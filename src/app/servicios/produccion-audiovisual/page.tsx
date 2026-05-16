@@ -21,7 +21,7 @@ export default function ProduccionAudiovisualPage() {
     description: 'Creamos contenido audiovisual que conecta emocionalmente. Videos que informan, entretienen y convierten. Fotografía que detiene el scroll.',
     cta: 'Crea tu Contenido',
     iconName: 'Video',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

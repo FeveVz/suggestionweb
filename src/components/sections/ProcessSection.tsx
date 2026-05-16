@@ -10,7 +10,7 @@ const steps = [
     icon: Search,
     title: 'Descubrimiento',
     description: 'Analizamos tu negocio, competencia y mercado. Identificamos oportunidades y definimos objetivos claros.',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
   {
     number: '02',
@@ -24,7 +24,7 @@ const steps = [
     icon: Rocket,
     title: 'Ejecución',
     description: 'Implementamos la estrategia con agilidad y comunicación transparente.',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
   {
     number: '04',
@@ -96,7 +96,7 @@ export default function ProcessSection() {
         >
           <motion.span 
             className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-            style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+            style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             initial={{ opacity: 0, y: -10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
@@ -105,14 +105,14 @@ export default function ProcessSection() {
           </motion.span>
           <motion.h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6"
-            style={{ fontFamily: 'var(--font-montserrat)' }}
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             De la Idea al{' '}
             <span className="text-gradient">Resultado</span>
           </motion.h2>
           <motion.p 
             className="text-base sm:text-lg text-gray-600 px-4"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             Una metodología probada que transforma ideas en resultados medibles.
           </motion.p>
@@ -150,7 +150,7 @@ export default function ProcessSection() {
                   {/* Number Background */}
                   <motion.div 
                     className="absolute top-2 right-2 sm:top-4 sm:right-4 text-4xl sm:text-5xl lg:text-6xl font-bold opacity-5 text-black"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     animate={{ 
                       opacity: [0.05, 0.1, 0.05],
                       scale: [1, 1.1, 1]
@@ -163,7 +163,7 @@ export default function ProcessSection() {
                   {/* Number */}
                   <motion.div 
                     className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4"
-                    style={{ color: step.color, fontFamily: 'var(--font-montserrat)' }}
+                    style={{ color: step.color, fontFamily: 'var(--font-space-grotesk)' }}
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.3 + index * 0.1, type: 'spring' }}
@@ -185,7 +185,7 @@ export default function ProcessSection() {
                   {/* Title */}
                   <h3 
                     className="text-base sm:text-lg lg:text-xl font-bold text-black mb-2 sm:mb-3 group-hover:text-gray-900 transition-colors"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     {step.title}
                   </h3>
@@ -193,7 +193,7 @@ export default function ProcessSection() {
                   {/* Description */}
                   <p 
                     className="text-xs sm:text-sm text-gray-600 leading-relaxed"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {step.description}
                   </p>

@@ -60,7 +60,7 @@ export default function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <footer className="bg-black text-white relative overflow-hidden" style={{ fontFamily: 'var(--font-inter)' }}>
+    <footer className="bg-black text-white relative overflow-hidden" style={{ fontFamily: 'var(--font-dm-sans)' }}>
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -102,7 +102,7 @@ export default function Footer() {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <Link href="/" className="inline-flex items-center mb-4 sm:mb-6">
-                <span className="text-lg sm:text-xl font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                <span className="text-lg sm:text-xl font-bold" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                   <span className="text-white">Suggest</span>
                   <span className="relative inline-block align-top">
                     <span className="text-white">i</span>
@@ -138,7 +138,7 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="col-span-1">
             <motion.h3 
               className="text-base sm:text-lg font-bold mb-3 sm:mb-4"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
               whileHover={{ x: 5 }}
             >
               Servicios
@@ -169,7 +169,7 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="col-span-1">
             <motion.h3 
               className="text-base sm:text-lg font-bold mb-3 sm:mb-4"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
               whileHover={{ x: 5 }}
             >
               Empresa
@@ -200,7 +200,7 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="col-span-2 sm:col-span-2 md:col-span-3 lg:col-span-1">
             <motion.h3 
               className="text-base sm:text-lg font-bold mb-3 sm:mb-4"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
               whileHover={{ x: 5 }}
             >
               Contacto

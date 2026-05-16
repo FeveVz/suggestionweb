@@ -21,7 +21,7 @@ export default function ConsultoriaPage() {
     description: 'Asesoría personalizada de profesionales con experiencia real. Auditorías, planes de acción y acompañamiento para maximizar tu inversión en marketing.',
     cta: 'Agenda Consultoría',
     iconName: 'Lightbulb',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

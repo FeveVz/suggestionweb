@@ -32,7 +32,7 @@ const projects = [
     ],
     description: 'Estrategia de inbound marketing y automatización que transformó su funnel de ventas, reduciendo costos de adquisición y multiplicando los leads cualificados.',
     tags: ['SEO', 'Lead Generation', 'Marketing Automation'],
-    color: '#FF6600',
+    color: '#FF8C00',
     services: ['Marketing Digital', 'SEO', 'Automatización'],
     duration: '6 meses',
   },
@@ -62,7 +62,7 @@ const projects = [
     ],
     description: 'Estrategia de redes sociales y publicidad local que llenó su agenda de citas y construyó una comunidad comprometida.',
     tags: ['Social Media', 'Local SEO', 'Publicidad'],
-    color: '#FF6600',
+    color: '#FF8C00',
     services: ['Redes Sociales', 'Publicidad Digital'],
     duration: '4 meses',
   },
@@ -92,7 +92,7 @@ const projects = [
     ],
     description: 'Growth marketing que llevó a una startup desde lanzamiento hasta 50K usuarios activos en tiempo récord.',
     tags: ['Growth Marketing', 'Paid Media', 'CRO'],
-    color: '#FF6600',
+    color: '#FF8C00',
     services: ['Marketing Digital', 'Publicidad Digital', 'CRM'],
     duration: '12 meses',
   },
@@ -122,7 +122,7 @@ const projects = [
     ],
     description: 'Posicionamiento SEO y marketing de contenidos que estableció al estudio como referente en su especialidad legal.',
     tags: ['SEO', 'Content Marketing', 'Branding'],
-    color: '#FF6600',
+    color: '#FF8C00',
     services: ['SEO', 'Branding', 'Consultoría'],
     duration: '8 meses',
   },
@@ -192,7 +192,7 @@ export default function PortafolioPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute -top-40 -right-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
-            style={{ backgroundColor: '#FF660015' }}
+            style={{ backgroundColor: '#FF8C0015' }}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -213,14 +213,14 @@ export default function PortafolioPage() {
           >
             <motion.span
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Nuestro Trabajo
             </motion.span>
 
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Resultados que{' '}
               <span className="text-gradient">Hablan</span>
@@ -228,7 +228,7 @@ export default function PortafolioPage() {
 
             <motion.p
               className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Explora nuestros casos de éxito y descubre cómo hemos ayudado 
               a marcas a alcanzar sus objetivos digitales.
@@ -241,7 +241,7 @@ export default function PortafolioPage() {
               <Button
                 size="lg"
                 className="text-white font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full shadow-lg min-h-[52px]"
-                style={{ backgroundColor: '#FF6600' }}
+                style={{ backgroundColor: '#FF8C00' }}
                 onClick={scrollToProjects}
               >
                 Ver Proyectos
@@ -257,20 +257,20 @@ export default function PortafolioPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-montserrat)' }}>500+</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>Proyectos</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>500+</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Proyectos</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-montserrat)' }}>150+</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>Clientes</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>150+</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Clientes</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-montserrat)' }}>95%</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>Retención</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>95%</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Retención</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-montserrat)' }}>10+</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>Años</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>10+</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Años</div>
             </div>
           </div>
         </div>
@@ -296,8 +296,8 @@ export default function PortafolioPage() {
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
                 style={{
-                  backgroundColor: activeCategory === category.id ? '#FF6600' : undefined,
-                  fontFamily: 'var(--font-inter)'
+                  backgroundColor: activeCategory === category.id ? '#FF8C00' : undefined,
+                  fontFamily: 'var(--font-dm-sans)'
                 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -315,7 +315,7 @@ export default function PortafolioPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <p className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Mostrando <span className="font-semibold text-black">{filteredProjects.length}</span> proyectos
             </p>
             <div className="flex gap-1 sm:gap-2">
@@ -393,13 +393,13 @@ export default function PortafolioPage() {
                         <div className="flex items-center justify-between mb-2 sm:mb-3">
                           <h3 
                             className="text-base sm:text-lg font-bold text-black group-hover:text-gray-900 transition-colors"
-                            style={{ fontFamily: 'var(--font-montserrat)' }}
+                            style={{ fontFamily: 'var(--font-space-grotesk)' }}
                           >
                             {project.title}
                           </h3>
                           <span 
                             className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full text-white hidden sm:block"
-                            style={{ backgroundColor: project.color, fontFamily: 'var(--font-inter)' }}
+                            style={{ backgroundColor: project.color, fontFamily: 'var(--font-dm-sans)' }}
                           >
                             {project.industry}
                           </span>
@@ -411,11 +411,11 @@ export default function PortafolioPage() {
                             <div key={rIndex} className="p-2 sm:p-3 rounded-lg bg-gray-50">
                               <div 
                                 className="text-lg sm:text-xl font-bold"
-                                style={{ color: project.color, fontFamily: 'var(--font-montserrat)' }}
+                                style={{ color: project.color, fontFamily: 'var(--font-space-grotesk)' }}
                               >
                                 {result.metric}
                               </div>
-                              <div className="text-[10px] sm:text-xs text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                              <div className="text-[10px] sm:text-xs text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                                 {result.label}
                               </div>
                             </div>
@@ -426,7 +426,7 @@ export default function PortafolioPage() {
                           <>
                             <p 
                               className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2"
-                              style={{ fontFamily: 'var(--font-inter)' }}
+                              style={{ fontFamily: 'var(--font-dm-sans)' }}
                             >
                               {project.description}
                             </p>
@@ -436,7 +436,7 @@ export default function PortafolioPage() {
                                 <span
                                   key={tIndex}
                                   className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full bg-black text-white"
-                                  style={{ fontFamily: 'var(--font-inter)' }}
+                                  style={{ fontFamily: 'var(--font-dm-sans)' }}
                                 >
                                   {tag}
                                 </span>
@@ -448,7 +448,7 @@ export default function PortafolioPage() {
 
                       {viewMode === 'list' && (
                         <div className="hidden md:flex flex-col items-end gap-2">
-                          <span className="text-xs text-gray-500" style={{ fontFamily: 'var(--font-inter)' }}>
+                          <span className="text-xs text-gray-500" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                             {project.duration}
                           </span>
                           <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors" />
@@ -519,26 +519,26 @@ export default function PortafolioPage() {
                   <div>
                     <span 
                       className="text-xs px-3 py-1 rounded-full text-white"
-                      style={{ backgroundColor: selectedProject.color, fontFamily: 'var(--font-inter)' }}
+                      style={{ backgroundColor: selectedProject.color, fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {selectedProject.industry}
                     </span>
                   </div>
-                  <span className="text-xs sm:text-sm text-gray-500" style={{ fontFamily: 'var(--font-inter)' }}>
+                  <span className="text-xs sm:text-sm text-gray-500" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                     Duración: {selectedProject.duration}
                   </span>
                 </div>
 
                 <h2 
                   className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-4 sm:mb-6"
-                  style={{ fontFamily: 'var(--font-montserrat)' }}
+                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   {selectedProject.title}
                 </h2>
 
                 <p 
                   className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 leading-relaxed"
-                  style={{ fontFamily: 'var(--font-inter)' }}
+                  style={{ fontFamily: 'var(--font-dm-sans)' }}
                 >
                   {selectedProject.description}
                 </p>
@@ -549,11 +549,11 @@ export default function PortafolioPage() {
                     <div key={index} className="p-4 sm:p-5 rounded-xl bg-black text-center">
                       <div 
                         className="text-2xl sm:text-3xl font-bold mb-1"
-                        style={{ color: selectedProject.color, fontFamily: 'var(--font-montserrat)' }}
+                        style={{ color: selectedProject.color, fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {result.metric}
                       </div>
-                      <div className="text-xs sm:text-sm text-gray-400" style={{ fontFamily: 'var(--font-inter)' }}>
+                      <div className="text-xs sm:text-sm text-gray-400" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                         {result.label}
                       </div>
                     </div>
@@ -564,7 +564,7 @@ export default function PortafolioPage() {
                 <div className="mb-6 sm:mb-8">
                   <h3 
                     className="text-base sm:text-lg font-bold text-black mb-3 sm:mb-4"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     Servicios Implementados
                   </h3>
@@ -573,7 +573,7 @@ export default function PortafolioPage() {
                       <span
                         key={index}
                         className="text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full bg-gray-100 text-gray-700"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         {service}
                       </span>
@@ -587,7 +587,7 @@ export default function PortafolioPage() {
                     <span
                       key={index}
                       className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full bg-black text-white"
-                      style={{ fontFamily: 'var(--font-inter)' }}
+                      style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {tag}
                     </span>
@@ -596,7 +596,7 @@ export default function PortafolioPage() {
 
                 <Button
                   className="w-full text-white font-semibold py-5 sm:py-6 rounded-full min-h-[52px]"
-                  style={{ backgroundColor: '#FF6600' }}
+                  style={{ backgroundColor: '#FF8C00' }}
                   asChild
                 >
                   <Link href="/#contacto">
@@ -615,7 +615,7 @@ export default function PortafolioPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute -top-20 -right-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
-            style={{ backgroundColor: '#FF660015' }}
+            style={{ backgroundColor: '#FF8C0015' }}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -630,18 +630,18 @@ export default function PortafolioPage() {
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Listo para tu historia de éxito?
             </h2>
-            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una consultoría gratuita y descubre cómo podemos ayudarte.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button
                 size="lg"
                 className="text-white font-semibold px-6 sm:px-10 py-5 sm:py-6 rounded-full text-base sm:text-lg shadow-xl min-h-[52px]"
-                style={{ backgroundColor: '#FF6600' }}
+                style={{ backgroundColor: '#FF8C00' }}
                 asChild
               >
                 <Link href="/#contacto">

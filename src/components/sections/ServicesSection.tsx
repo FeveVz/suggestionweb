@@ -28,7 +28,7 @@ const serviciosPrincipales = [
     icon: TrendingUp,
     title: 'Marketing Digital',
     description: 'Estrategias integrales que transforman tu presencia digital en resultados medibles y sostenibles.',
-    color: '#FF6600',
+    color: '#FF8C00',
     href: '/servicios/marketing-digital',
   },
   {
@@ -42,7 +42,7 @@ const serviciosPrincipales = [
     icon: Target,
     title: 'Publicidad Digital',
     description: 'Campañas en Meta Ads, Google Ads y más con ROI medible y optimización continua.',
-    color: '#FF6600',
+    color: '#FF8C00',
     href: '/servicios/publicidad-digital',
   },
   {
@@ -56,7 +56,7 @@ const serviciosPrincipales = [
     icon: Palette,
     title: 'Branding',
     description: 'Identidad visual y estratégica que deja huella en la mente de tu audiencia.',
-    color: '#FF6600',
+    color: '#FF8C00',
     href: '/servicios/branding-diseno',
   },
   {
@@ -70,7 +70,7 @@ const serviciosPrincipales = [
     icon: Lightbulb,
     title: 'Consultoría',
     description: 'Asesoría estratégica personalizada para potenciar tu marketing digital.',
-    color: '#FF6600',
+    color: '#FF8C00',
     href: '/servicios/consultoria-marketing',
   },
   {
@@ -84,7 +84,7 @@ const serviciosPrincipales = [
     icon: Video,
     title: 'Producción Audiovisual',
     description: 'Contenido visual de alto impacto que cuenta tu historia de manera memorable.',
-    color: '#FF6600',
+    color: '#FF8C00',
     href: '/servicios/produccion-audiovisual',
   },
   {
@@ -97,11 +97,11 @@ const serviciosPrincipales = [
 ];
 
 const serviciosComplementarios = [
-  { icon: ShoppingBag, title: 'Merchandising', color: '#FF6600', href: '/servicios/merchandising' },
+  { icon: ShoppingBag, title: 'Merchandising', color: '#FF8C00', href: '/servicios/merchandising' },
   { icon: Printer, title: 'Imprenta Corporativa', color: '#00BFFF', href: '/servicios/imprenta-corporativa' },
-  { icon: PanelTop, title: 'Estructuras', color: '#FF6600', href: '/servicios/estructuras-publicitarias' },
+  { icon: PanelTop, title: 'Estructuras', color: '#FF8C00', href: '/servicios/estructuras-publicitarias' },
   { icon: Truck, title: 'Publicidad Móvil', color: '#00BFFF', href: '/servicios/publicidad-movil' },
-  { icon: Sparkles, title: 'BTL y Activaciones', color: '#FF6600', href: '/servicios/btl-activaciones' },
+  { icon: Sparkles, title: 'BTL y Activaciones', color: '#FF8C00', href: '/servicios/btl-activaciones' },
   { icon: Package, title: 'Material POP', color: '#00BFFF', href: '/servicios/material-pop' },
 ];
 
@@ -166,7 +166,7 @@ export default function ServicesSection() {
         >
           <motion.span 
             className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-            style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+            style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2 }}
@@ -175,14 +175,14 @@ export default function ServicesSection() {
           </motion.span>
           <motion.h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6"
-            style={{ fontFamily: 'var(--font-montserrat)' }}
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Soluciones que{' '}
             <span className="text-gradient">Transforman</span>
           </motion.h2>
           <motion.p 
             className="text-base sm:text-lg text-gray-600 px-4"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             Ofrecemos un ecosistema completo de servicios de marketing digital 
             diseñados para impulsar tu negocio al siguiente nivel.
@@ -200,7 +200,7 @@ export default function ServicesSection() {
             <div className="h-px flex-1 bg-black" />
             <h3 
               className="text-xs sm:text-sm font-bold uppercase tracking-wider text-black whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Servicios Principales
             </h3>
@@ -243,7 +243,7 @@ export default function ServicesSection() {
                         {/* Title */}
                         <h3 
                           className="text-base sm:text-lg font-bold text-black mb-2 sm:mb-3 relative z-10 group-hover:text-gray-900 transition-colors"
-                          style={{ fontFamily: 'var(--font-montserrat)' }}
+                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {service.title}
                         </h3>
@@ -251,7 +251,7 @@ export default function ServicesSection() {
                         {/* Description */}
                         <p 
                           className="text-xs sm:text-sm text-gray-600 leading-relaxed relative z-10"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {service.description}
                         </p>
@@ -285,7 +285,7 @@ export default function ServicesSection() {
             <div className="h-px flex-1 bg-black" />
             <h3 
               className="text-xs sm:text-sm font-bold uppercase tracking-wider text-black whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Servicios Complementarios
             </h3>
@@ -327,7 +327,7 @@ export default function ServicesSection() {
                         {/* Title */}
                         <h3 
                           className="text-xs sm:text-sm font-bold text-white group-hover:text-gray-200 transition-colors leading-tight"
-                          style={{ fontFamily: 'var(--font-montserrat)' }}
+                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {service.title}
                         </h3>
@@ -350,7 +350,7 @@ export default function ServicesSection() {
           <motion.a
             href="#contacto"
             className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-800 transition-all duration-300 min-h-[44px]"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
             whileHover={{ scale: 1.05 }}
           >
             Descubre cómo podemos ayudarte

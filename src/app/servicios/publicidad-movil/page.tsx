@@ -21,7 +21,7 @@ export default function PublicidadMovilPage() {
     description: 'Publicidad que va donde está tu audiencia. Vehículos, pantallas LED móviles y más formatos que recorren la ciudad generando impacto.',
     cta: 'Planifica tu Ruta',
     iconName: 'Truck',
-    color: '#FF6600',
+    color: '#FF8C00',
   };
 
   const benefits = [

@@ -12,11 +12,11 @@ import {
 } from 'lucide-react';
 
 const serviciosPrincipales = [
-  { name: 'Marketing Digital', href: '/servicios/marketing-digital', icon: TrendingUp, color: '#FF6600' },
+  { name: 'Marketing Digital', href: '/servicios/marketing-digital', icon: TrendingUp, color: '#FF8C00' },
   { name: 'Redes Sociales', href: '/servicios/marketing-redes-sociales', icon: Share2, color: '#00BFFF' },
-  { name: 'Publicidad Digital', href: '/servicios/publicidad-digital', icon: Target, color: '#FF6600' },
+  { name: 'Publicidad Digital', href: '/servicios/publicidad-digital', icon: Target, color: '#FF8C00' },
   { name: 'SEO', href: '/servicios/seo-posicionamiento', icon: Search, color: '#00BFFF' },
-  { name: 'Branding', href: '/servicios/branding-diseno', icon: Palette, color: '#FF6600' },
+  { name: 'Branding', href: '/servicios/branding-diseno', icon: Palette, color: '#FF8C00' },
   { name: 'Desarrollo Web', href: '/servicios/desarrollo-web', icon: Code, color: '#00BFFF' },
 ];
 
@@ -153,7 +153,7 @@ export default function FloatingMenuButton() {
                 <Link 
                   href="/" 
                   className="text-base font-bold"
-                  style={{ fontFamily: 'var(--font-montserrat)' }}
+                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="text-white">Suggest</span>
@@ -179,7 +179,7 @@ export default function FloatingMenuButton() {
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-[11px] text-white/80 hover:text-white"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     <item.icon className="w-3 h-3" />
                     <span>{item.name}</span>
@@ -193,10 +193,10 @@ export default function FloatingMenuButton() {
               {/* Featured Services Section */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: '#FF6600' }}>
+                  <div className="w-5 h-5 rounded-full flex items-center justify-center" style={{ backgroundColor: '#FF8C00' }}>
                     <Sparkles className="w-3 h-3 text-white" />
                   </div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-white/60" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-white/60" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                     Servicios Destacados
                   </h3>
                 </div>
@@ -222,7 +222,7 @@ export default function FloatingMenuButton() {
                         </div>
                         <span 
                           className="text-[11px] text-white/80 group-hover:text-white text-center leading-tight font-medium"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {service.name}
                         </span>
@@ -234,7 +234,7 @@ export default function FloatingMenuButton() {
 
               {/* Additional Services - Horizontal Scroll */}
               <div className="mb-4">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 px-1" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 px-1" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                   Más Servicios
                 </h3>
                 <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-hide">
@@ -246,7 +246,7 @@ export default function FloatingMenuButton() {
                       className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 transition-all flex-shrink-0"
                     >
                       <service.icon className="w-4 h-4 text-white/60" />
-                      <span className="text-xs text-white/70 whitespace-nowrap" style={{ fontFamily: 'var(--font-inter)' }}>
+                      <span className="text-xs text-white/70 whitespace-nowrap" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                         {service.name}
                       </span>
                     </Link>
@@ -256,7 +256,7 @@ export default function FloatingMenuButton() {
 
               {/* Complementary Services - Compact Grid */}
               <div className="mb-4">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 px-1" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-white/40 mb-2 px-1" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                   Complementarios
                 </h3>
                 <div className="grid grid-cols-3 gap-1.5">
@@ -268,7 +268,7 @@ export default function FloatingMenuButton() {
                       className="flex flex-col items-center gap-1 p-2 rounded-lg hover:bg-white/5 transition-colors"
                     >
                       <service.icon className="w-4 h-4 text-white/50" />
-                      <span className="text-[10px] text-white/60 text-center leading-tight" style={{ fontFamily: 'var(--font-inter)' }}>
+                      <span className="text-[10px] text-white/60 text-center leading-tight" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                         {service.name}
                       </span>
                     </Link>
@@ -283,7 +283,7 @@ export default function FloatingMenuButton() {
                 href="#contacto"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-white font-semibold text-sm transition-all hover:opacity-90"
-                style={{ backgroundColor: '#FF6600', fontFamily: 'var(--font-inter)' }}
+                style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
               >
                 Hablemos
                 <ArrowRight className="w-4 h-4" />
@@ -294,7 +294,7 @@ export default function FloatingMenuButton() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-full text-white/90 font-medium text-sm bg-[#25D366] hover:bg-[#20BD5A] transition-all"
-                style={{ fontFamily: 'var(--font-inter)' }}
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
@@ -334,7 +334,7 @@ export default function FloatingMenuButton() {
             <motion.button
               onClick={() => setIsMenuOpen(true)}
               className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg min-h-[56px]"
-              style={{ backgroundColor: '#FF6600' }}
+              style={{ backgroundColor: '#FF8C00' }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >

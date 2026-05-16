@@ -47,7 +47,7 @@ const blogPosts = [
     date: '2026-03-15',
     readTime: '8 min',
     featured: true,
-    color: '#FF6600',
+    color: '#FF8C00',
     author: 'María González',
   },
   {
@@ -75,7 +75,7 @@ const blogPosts = [
     date: '2026-03-05',
     readTime: '10 min',
     featured: false,
-    color: '#FF6600',
+    color: '#FF8C00',
     author: 'Ana Martínez',
   },
   {
@@ -103,7 +103,7 @@ const blogPosts = [
     date: '2026-02-28',
     readTime: '6 min',
     featured: false,
-    color: '#FF6600',
+    color: '#FF8C00',
     author: 'María González',
   },
   {
@@ -131,7 +131,7 @@ const blogPosts = [
     date: '2026-02-20',
     readTime: '8 min',
     featured: false,
-    color: '#FF6600',
+    color: '#FF8C00',
     author: 'Ana Martínez',
   },
   {
@@ -207,7 +207,7 @@ export default function BlogPage() {
           />
           <motion.div
             className="absolute -bottom-40 -left-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
-            style={{ backgroundColor: '#FF660010' }}
+            style={{ backgroundColor: '#FF8C0010' }}
             animate={{ scale: [1.2, 1, 1.2] }}
             transition={{ duration: 10, repeat: Infinity }}
           />
@@ -222,21 +222,21 @@ export default function BlogPage() {
           >
             <motion.span
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             >
               Blog & Recursos
             </motion.span>
 
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               <span className="text-gradient">Insights</span> que Transforman
             </motion.h1>
 
             <motion.p
               className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Estrategias, tendencias y guías prácticas para llevar tu marketing digital al siguiente nivel.
             </motion.p>
@@ -255,7 +255,7 @@ export default function BlogPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 sm:py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm sm:text-base min-h-[52px]"
-                style={{ fontFamily: 'var(--font-inter)' }}
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
               />
             </motion.div>
           </motion.div>
@@ -272,10 +272,10 @@ export default function BlogPage() {
               transition={{ delay: 0.2 }}
             >
               <div className="flex items-center gap-2 mb-6 sm:mb-8">
-                <Sparkles className="w-5 h-5" style={{ color: '#FF6600' }} />
+                <Sparkles className="w-5 h-5" style={{ color: '#FF8C00' }} />
                 <h2 
                   className="text-xl sm:text-2xl font-bold text-black"
-                  style={{ fontFamily: 'var(--font-montserrat)' }}
+                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
                   Artículos Destacados
                 </h2>
@@ -300,7 +300,7 @@ export default function BlogPage() {
                             <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10">
                               <span 
                                 className="text-[10px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-white shadow-lg"
-                                style={{ backgroundColor: post.color, fontFamily: 'var(--font-inter)' }}
+                                style={{ backgroundColor: post.color, fontFamily: 'var(--font-dm-sans)' }}
                               >
                                 {post.categoryName}
                               </span>
@@ -328,13 +328,13 @@ export default function BlogPage() {
                             </div>
                             <h3 
                               className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3 group-hover:text-gray-700 transition-colors"
-                              style={{ fontFamily: 'var(--font-montserrat)' }}
+                              style={{ fontFamily: 'var(--font-space-grotesk)' }}
                             >
                               {post.title}
                             </h3>
                             <p 
                               className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6"
-                              style={{ fontFamily: 'var(--font-inter)' }}
+                              style={{ fontFamily: 'var(--font-dm-sans)' }}
                             >
                               {post.excerpt}
                             </p>
@@ -344,7 +344,7 @@ export default function BlogPage() {
                                   <span
                                     key={tIndex}
                                     className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full bg-black text-white"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
+                                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                                   >
                                     {tag}
                                   </span>
@@ -352,7 +352,7 @@ export default function BlogPage() {
                               </div>
                               <motion.span 
                                 className="flex items-center gap-1 text-xs sm:text-sm font-semibold"
-                                style={{ color: post.color, fontFamily: 'var(--font-inter)' }}
+                                style={{ color: post.color, fontFamily: 'var(--font-dm-sans)' }}
                                 whileHover={{ x: 5 }}
                               >
                                 Leer más
@@ -387,7 +387,7 @@ export default function BlogPage() {
                 >
                   <h3 
                     className="text-base sm:text-lg font-bold text-black mb-3 sm:mb-4"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     Categorías
                   </h3>
@@ -407,7 +407,7 @@ export default function BlogPage() {
                       >
                         <div className="flex items-center gap-2 sm:gap-3">
                           <category.icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span className="text-xs sm:text-sm font-medium" style={{ fontFamily: 'var(--font-inter)' }}>
+                          <span className="text-xs sm:text-sm font-medium" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                             {category.name}
                           </span>
                         </div>
@@ -430,7 +430,7 @@ export default function BlogPage() {
                 >
                   <h3 
                     className="text-base sm:text-lg font-bold text-black mb-3 sm:mb-4"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     Tags Populares
                   </h3>
@@ -445,8 +445,8 @@ export default function BlogPage() {
                             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                         }`}
                         style={{ 
-                          backgroundColor: selectedTag === tag.slug ? '#FF6600' : undefined,
-                          fontFamily: 'var(--font-inter)'
+                          backgroundColor: selectedTag === tag.slug ? '#FF8C00' : undefined,
+                          fontFamily: 'var(--font-dm-sans)'
                         }}
                       >
                         {tag.name}
@@ -462,22 +462,22 @@ export default function BlogPage() {
                   transition={{ delay: 0.4 }}
                   className="p-4 sm:p-5 rounded-xl bg-black text-white"
                 >
-                  <Award className="w-8 h-8 mb-3" style={{ color: '#FF6600' }} />
+                  <Award className="w-8 h-8 mb-3" style={{ color: '#FF8C00' }} />
                   <h3 
                     className="text-base sm:text-lg font-bold mb-2"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     Newsletter
                   </h3>
                   <p 
                     className="text-xs sm:text-sm text-gray-400 mb-4"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     Recibe las últimas tendencias en marketing digital directamente en tu correo.
                   </p>
                   <Button
                     className="w-full text-white font-semibold rounded-full min-h-[44px]"
-                    style={{ backgroundColor: '#FF6600' }}
+                    style={{ backgroundColor: '#FF8C00' }}
                     asChild
                   >
                     <Link href="/#contacto">
@@ -496,7 +496,7 @@ export default function BlogPage() {
                   {activeCategory !== 'all' && (
                     <span 
                       className="flex items-center gap-1.5 text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-white"
-                      style={{ backgroundColor: '#FF6600', fontFamily: 'var(--font-inter)' }}
+                      style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {categories.find(c => c.id === activeCategory)?.name}
                       <button 
@@ -510,7 +510,7 @@ export default function BlogPage() {
                   {selectedTag && (
                     <span 
                       className="flex items-center gap-1.5 text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-white"
-                      style={{ backgroundColor: '#00BFFF', fontFamily: 'var(--font-inter)' }}
+                      style={{ backgroundColor: '#00BFFF', fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {popularTags.find(t => t.slug === selectedTag)?.name}
                       <button 
@@ -544,7 +544,7 @@ export default function BlogPage() {
 
               {/* Results Count */}
               <div className="mb-4 sm:mb-6">
-                <p className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-inter)' }}>
+                <p className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   {filteredPosts.length} {filteredPosts.length === 1 ? 'artículo encontrado' : 'artículos encontrados'}
                 </p>
               </div>
@@ -580,7 +580,7 @@ export default function BlogPage() {
                                 <div className="absolute top-2 left-2 z-10">
                                   <span 
                                     className="text-[10px] sm:text-xs font-semibold px-2 py-0.5 sm:py-1 rounded-full text-white"
-                                    style={{ backgroundColor: post.color, fontFamily: 'var(--font-inter)' }}
+                                    style={{ backgroundColor: post.color, fontFamily: 'var(--font-dm-sans)' }}
                                   >
                                     {post.categoryName}
                                   </span>
@@ -600,13 +600,13 @@ export default function BlogPage() {
                                 </div>
                                 <h3 
                                   className="text-sm sm:text-base font-bold text-black mb-1.5 sm:mb-2 group-hover:text-gray-700 transition-colors"
-                                  style={{ fontFamily: 'var(--font-montserrat)' }}
+                                  style={{ fontFamily: 'var(--font-space-grotesk)' }}
                                 >
                                   {post.title}
                                 </h3>
                                 <p 
                                   className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3 line-clamp-2"
-                                  style={{ fontFamily: 'var(--font-inter)' }}
+                                  style={{ fontFamily: 'var(--font-dm-sans)' }}
                                 >
                                   {post.excerpt}
                                 </p>
@@ -616,7 +616,7 @@ export default function BlogPage() {
                                       <span
                                         key={tIndex}
                                         className="text-[10px] px-2 py-0.5 rounded-full bg-black text-white"
-                                        style={{ fontFamily: 'var(--font-inter)' }}
+                                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                                       >
                                         {tag}
                                       </span>
@@ -624,7 +624,7 @@ export default function BlogPage() {
                                   </div>
                                   <motion.span 
                                     className="flex items-center gap-1 text-[10px] sm:text-xs font-semibold"
-                                    style={{ color: post.color, fontFamily: 'var(--font-inter)' }}
+                                    style={{ color: post.color, fontFamily: 'var(--font-dm-sans)' }}
                                     whileHover={{ x: 3 }}
                                   >
                                     Leer
@@ -644,7 +644,7 @@ export default function BlogPage() {
                               <div className="absolute top-3 left-3 z-10">
                                 <span 
                                   className="text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1 rounded-full text-white shadow-lg"
-                                  style={{ backgroundColor: post.color, fontFamily: 'var(--font-inter)' }}
+                                  style={{ backgroundColor: post.color, fontFamily: 'var(--font-dm-sans)' }}
                                 >
                                   {post.categoryName}
                                 </span>
@@ -668,14 +668,14 @@ export default function BlogPage() {
 
                               <h3 
                                 className="text-sm sm:text-base font-bold text-black mb-1.5 sm:mb-2 group-hover:text-gray-700 transition-colors line-clamp-2"
-                                style={{ fontFamily: 'var(--font-montserrat)' }}
+                                style={{ fontFamily: 'var(--font-space-grotesk)' }}
                               >
                                 {post.title}
                               </h3>
 
                               <p 
                                 className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-2"
-                                style={{ fontFamily: 'var(--font-inter)' }}
+                                style={{ fontFamily: 'var(--font-dm-sans)' }}
                               >
                                 {post.excerpt}
                               </p>
@@ -685,7 +685,7 @@ export default function BlogPage() {
                                   <span
                                     key={tIndex}
                                     className="text-[10px] sm:text-xs px-2 py-0.5 sm:py-1 rounded-full bg-black text-white"
-                                    style={{ fontFamily: 'var(--font-inter)' }}
+                                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                                   >
                                     {tag}
                                   </span>
@@ -693,12 +693,12 @@ export default function BlogPage() {
                               </div>
 
                               <div className="flex items-center justify-between">
-                                <span className="text-[10px] sm:text-xs text-gray-500" style={{ fontFamily: 'var(--font-inter)' }}>
+                                <span className="text-[10px] sm:text-xs text-gray-500" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                                   {post.author}
                                 </span>
                                 <motion.span 
                                   className="flex items-center gap-1 text-[10px] sm:text-xs font-semibold"
-                                  style={{ color: post.color, fontFamily: 'var(--font-inter)' }}
+                                  style={{ color: post.color, fontFamily: 'var(--font-dm-sans)' }}
                                   whileHover={{ x: 5 }}
                                 >
                                   Leer
@@ -723,13 +723,13 @@ export default function BlogPage() {
                   <Search className="w-12 h-12 sm:w-16 sm:h-16 text-gray-300 mx-auto mb-4" />
                   <h3 
                     className="text-lg sm:text-xl font-bold text-black mb-2"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     No encontramos resultados
                   </h3>
                   <p 
                     className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     Intenta con otros términos o categoría.
                   </p>
@@ -771,18 +771,18 @@ export default function BlogPage() {
           >
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Tienes un proyecto en mente?
             </h2>
-            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-inter)' }}>
+            <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una consultoría gratuita y conversemos sobre cómo podemos ayudarte.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Button
                 size="lg"
                 className="text-white font-semibold px-6 sm:px-10 py-5 sm:py-6 rounded-full text-base sm:text-lg shadow-xl min-h-[52px]"
-                style={{ backgroundColor: '#FF6600' }}
+                style={{ backgroundColor: '#FF8C00' }}
                 asChild
               >
                 <Link href="/#contacto">

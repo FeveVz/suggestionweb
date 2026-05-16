@@ -96,7 +96,7 @@ export default function ValuePropositionSection() {
         >
           <motion.span 
             className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-            style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+            style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             initial={{ opacity: 0, y: -10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
@@ -105,14 +105,14 @@ export default function ValuePropositionSection() {
           </motion.span>
           <motion.h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
-            style={{ fontFamily: 'var(--font-montserrat)' }}
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Diferentes por{' '}
             <span className="text-gradient">Decisión</span>
           </motion.h2>
           <motion.p 
             className="text-base sm:text-lg text-gray-400"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             No somos otra agencia de marketing. Somos socios estratégicos 
             comprometidos con tu crecimiento real y sostenible.
@@ -145,7 +145,7 @@ export default function ValuePropositionSection() {
                     >
                       <div 
                         className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mx-auto sm:mx-0"
-                        style={{ backgroundColor: index % 2 === 0 ? '#FF6600' : '#00BFFF' }}
+                        style={{ backgroundColor: index % 2 === 0 ? '#FF8C00' : '#00BFFF' }}
                       >
                         <value.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
@@ -155,13 +155,13 @@ export default function ValuePropositionSection() {
                     <div className="flex-1 text-center sm:text-left">
                       <h3 
                         className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-gray-100 transition-colors"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                        style={{ fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {value.title}
                       </h3>
                       <p 
                         className="text-sm sm:text-base text-gray-400 leading-relaxed"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         {value.description}
                       </p>
@@ -211,7 +211,7 @@ export default function ValuePropositionSection() {
               >
                 <motion.div 
                   className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2"
-                  style={{ color: '#FF6600', fontFamily: 'var(--font-montserrat)' }}
+                  style={{ color: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                 >
@@ -219,7 +219,7 @@ export default function ValuePropositionSection() {
                 </motion.div>
                 <div 
                   className="text-xs sm:text-sm text-gray-400 leading-tight"
-                  style={{ fontFamily: 'var(--font-inter)' }}
+                  style={{ fontFamily: 'var(--font-dm-sans)' }}
                 >
                   {stat.label}
                 </div>
@@ -238,7 +238,7 @@ export default function ValuePropositionSection() {
           <Link 
             href="/nosotros"
             className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-100 transition-all duration-300 min-h-[44px]"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             Conoce más sobre nosotros
             <ArrowRight className="w-4 h-4" />

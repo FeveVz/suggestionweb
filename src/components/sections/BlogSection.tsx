@@ -13,7 +13,7 @@ const posts = [
     category: 'Tendencias',
     date: '15 Mar 2026',
     readTime: '8 min',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
   {
     title: 'Cómo Crear una Estrategia de SEO que Funcione',
@@ -29,7 +29,7 @@ const posts = [
     category: 'Redes Sociales',
     date: '5 Mar 2026',
     readTime: '6 min',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
 ];
 
@@ -87,7 +87,7 @@ export default function BlogSection() {
           <div className="max-w-2xl mb-4 sm:mb-0">
             <motion.span 
               className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-              style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+              style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2 }}
@@ -96,7 +96,7 @@ export default function BlogSection() {
             </motion.span>
             <motion.h2 
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white"
-              style={{ fontFamily: 'var(--font-montserrat)' }}
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Ideas que{' '}
               <span className="text-gradient">Inspiran</span>
@@ -110,7 +110,7 @@ export default function BlogSection() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-100 transition-all duration-300 min-h-[44px]"
-              style={{ fontFamily: 'var(--font-inter)' }}
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Ver todos los artículos
               <ArrowRight className="w-4 h-4" />
@@ -149,7 +149,7 @@ export default function BlogSection() {
                         <div className="absolute top-2 left-2 sm:top-3 sm:left-3 z-10">
                           <span 
                             className="text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1 rounded-full text-white"
-                            style={{ backgroundColor: post.color, fontFamily: 'var(--font-inter)' }}
+                            style={{ backgroundColor: post.color, fontFamily: 'var(--font-dm-sans)' }}
                           >
                             {post.category}
                           </span>
@@ -167,11 +167,11 @@ export default function BlogSection() {
                         <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
                           <div className="flex items-center gap-1.5 text-gray-400">
                             <Calendar className="w-3.5 h-3.5" />
-                            <span className="text-[10px] sm:text-xs" style={{ fontFamily: 'var(--font-inter)' }}>
+                            <span className="text-[10px] sm:text-xs" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                               {post.date}
                             </span>
                           </div>
-                          <span className="text-[10px] sm:text-xs text-gray-500" style={{ fontFamily: 'var(--font-inter)' }}>
+                          <span className="text-[10px] sm:text-xs text-gray-500" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                             {post.readTime} lectura
                           </span>
                         </div>
@@ -179,7 +179,7 @@ export default function BlogSection() {
                         {/* Title */}
                         <h3 
                           className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-gray-100 transition-colors line-clamp-2"
-                          style={{ fontFamily: 'var(--font-montserrat)' }}
+                          style={{ fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {post.title}
                         </h3>
@@ -187,7 +187,7 @@ export default function BlogSection() {
                         {/* Excerpt */}
                         <p 
                           className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-3 sm:mb-4 line-clamp-2"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {post.excerpt}
                         </p>
@@ -195,7 +195,7 @@ export default function BlogSection() {
                         {/* Read More */}
                         <motion.div 
                           className="flex items-center gap-2 font-medium group-hover:gap-3 transition-all duration-300"
-                          style={{ color: post.color, fontFamily: 'var(--font-inter)' }}
+                          style={{ color: post.color, fontFamily: 'var(--font-dm-sans)' }}
                           whileHover={{ x: 5 }}
                         >
                           <span className="text-xs sm:text-sm font-semibold">Leer más</span>

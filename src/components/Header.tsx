@@ -147,8 +147,8 @@ export default function Header() {
                                       className="flex items-center gap-3 p-2 sm:p-3 rounded-lg hover:bg-gray-50 transition-colors group min-h-[44px]"
                                       onClick={() => setIsDropdownOpen(false)}
                                     >
-                                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#FF660015' }}>
-                                        <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#FF6600' }} />
+                                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#FF8C0015' }}>
+                                        <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#FF8C00' }} />
                                       </div>
                                       <div className="min-w-0">
                                         <div className="text-sm font-medium text-gray-800 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
@@ -176,8 +176,8 @@ export default function Header() {
                                       className="flex items-center gap-3 p-2 sm:p-3 rounded-lg hover:bg-gray-50 transition-colors group min-h-[44px]"
                                       onClick={() => setIsDropdownOpen(false)}
                                     >
-                                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#FF660015' }}>
-                                        <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#FF6600' }} />
+                                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#FF8C0015' }}>
+                                        <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#FF8C00' }} />
                                       </div>
                                       <div className="min-w-0">
                                         <div className="text-sm font-medium text-gray-800 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
@@ -233,7 +233,7 @@ export default function Header() {
                               <Link
                                 href="#contacto"
                                 className="text-sm font-semibold px-4 py-2.5 sm:py-2 rounded-full transition-all hover:opacity-90 min-h-[44px] flex items-center"
-                                style={{ backgroundColor: '#FF6600', color: 'white', fontFamily: 'var(--font-dm-sans)' }}
+                                style={{ backgroundColor: '#FF8C00', color: 'white', fontFamily: 'var(--font-dm-sans)' }}
                                 onClick={() => setIsDropdownOpen(false)}
                               >
                                 Agendar
@@ -260,7 +260,7 @@ export default function Header() {
               {/* CTA Button */}
               <Button
                 className="text-white font-semibold px-4 sm:px-5 py-2 text-sm rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg min-h-[44px]"
-                style={{ backgroundColor: '#FF6600' }}
+                style={{ backgroundColor: '#FF8C00' }}
                 asChild
               >
                 <Link href="#contacto">Hablemos</Link>

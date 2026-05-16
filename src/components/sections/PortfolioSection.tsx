@@ -16,7 +16,7 @@ const cases = [
     ],
     description: 'Estrategia de inbound marketing y automatización que transformó su funnel de ventas.',
     tags: ['SEO', 'Lead Generation', 'Marketing Automation'],
-    color: '#FF6600',
+    color: '#FF8C00',
   },
   {
     client: 'Verde Orgánico',
@@ -38,7 +38,7 @@ const cases = [
     ],
     description: 'Estrategia de redes sociales y publicidad local que llenó su agenda de citas.',
     tags: ['Social Media', 'Local SEO', 'Publicidad'],
-    color: '#FF6600',
+    color: '#FF8C00',
   },
 ];
 
@@ -103,7 +103,7 @@ export default function PortfolioSection() {
         >
           <motion.span 
             className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-            style={{ color: '#FF6600', fontFamily: 'var(--font-inter)' }}
+            style={{ color: '#FF8C00', fontFamily: 'var(--font-dm-sans)' }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
@@ -112,14 +112,14 @@ export default function PortfolioSection() {
           </motion.span>
           <motion.h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6"
-            style={{ fontFamily: 'var(--font-montserrat)' }}
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Resultados que{' '}
             <span className="text-gradient">Hablan</span>
           </motion.h2>
           <motion.p 
             className="text-base sm:text-lg text-gray-600 px-4"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             Historias reales de transformación digital.
           </motion.p>
@@ -182,13 +182,13 @@ export default function PortfolioSection() {
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <h3 
                       className="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-gray-100 transition-colors"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {caseItem.client}
                     </h3>
                     <span 
                       className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full text-white"
-                      style={{ backgroundColor: caseItem.color, fontFamily: 'var(--font-inter)' }}
+                      style={{ backgroundColor: caseItem.color, fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {caseItem.industry}
                     </span>
@@ -204,13 +204,13 @@ export default function PortfolioSection() {
                       >
                         <motion.div 
                           className="text-lg sm:text-xl lg:text-2xl font-bold"
-                          style={{ color: caseItem.color, fontFamily: 'var(--font-montserrat)' }}
+                          style={{ color: caseItem.color, fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {result.metric}
                         </motion.div>
                         <div 
                           className="text-[10px] sm:text-xs text-gray-400"
-                          style={{ fontFamily: 'var(--font-inter)' }}
+                          style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {result.label}
                         </div>
@@ -221,7 +221,7 @@ export default function PortfolioSection() {
                   {/* Description */}
                   <p 
                     className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 line-clamp-2"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {caseItem.description}
                   </p>
@@ -232,7 +232,7 @@ export default function PortfolioSection() {
                       <motion.span 
                         key={tIndex}
                         className="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full bg-white/10 text-gray-300"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                         whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
                       >
                         {tag}
@@ -256,7 +256,7 @@ export default function PortfolioSection() {
           <Link
             href="/portafolio"
             className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-800 transition-all duration-300 min-h-[44px]"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             Ver más casos de éxito
             <ArrowRight className="w-4 h-4" />

@@ -13,7 +13,7 @@ const testimonials = [
     company: 'TechFlow Solutions',
     content: 'Suggestion transformó completamente nuestra estrategia digital. En 6 meses triplicamos nuestros leads cualificados y redujimos el costo de adquisición a la mitad.',
     initials: 'MG',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
   {
     name: 'Carlos Ramírez',
@@ -29,7 +29,7 @@ const testimonials = [
     company: 'Clínica Belleza',
     content: 'Dudábamos en invertir en marketing digital, pero los resultados nos convencieron. Hoy nuestra agenda está llena y nuestra comunidad crece cada día.',
     initials: 'AM',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
   {
     name: 'Roberto Sánchez',
@@ -45,7 +45,7 @@ const testimonials = [
     company: 'StartUp Innovation',
     content: 'Como startup, necesitábamos resultados rápidos con presupuesto limitado. Suggestion optimizó cada peso y nos posicionó como líderes.',
     initials: 'LV',
-    color: '#FF6600',
+    color: '#FF8C00',
   },
 ];
 
@@ -89,20 +89,20 @@ export default function TestimonialsSection() {
         >
           <motion.span 
             className="inline-block text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4"
-            style={{ color: '#00BFFF', fontFamily: 'var(--font-inter)' }}
+            style={{ color: '#00BFFF', fontFamily: 'var(--font-dm-sans)' }}
           >
             Testimonios
           </motion.span>
           <motion.h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
-            style={{ fontFamily: 'var(--font-montserrat)' }}
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
             Lo que dicen{' '}
             <span className="text-gradient">Nuestros Clientes</span>
           </motion.h2>
           <motion.p 
             className="text-base sm:text-lg text-gray-400 px-4"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             La mejor prueba de nuestro compromiso son los resultados.
           </motion.p>
@@ -126,7 +126,7 @@ export default function TestimonialsSection() {
               >
                 <Quote 
                   className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 opacity-30"
-                  style={{ color: '#FF6600' }}
+                  style={{ color: '#FF8C00' }}
                 />
               </motion.div>
 
@@ -141,7 +141,7 @@ export default function TestimonialsSection() {
                 >
                   <blockquote 
                     className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-6 sm:mb-8"
-                    style={{ fontFamily: 'var(--font-inter)' }}
+                    style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     &ldquo;{testimonials[currentIndex].content}&rdquo;
                   </blockquote>
@@ -160,7 +160,7 @@ export default function TestimonialsSection() {
                       <Avatar className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14">
                         <AvatarFallback 
                           className="text-white font-bold text-sm sm:text-base lg:text-lg"
-                          style={{ backgroundColor: testimonials[currentIndex].color, fontFamily: 'var(--font-montserrat)' }}
+                          style={{ backgroundColor: testimonials[currentIndex].color, fontFamily: 'var(--font-space-grotesk)' }}
                         >
                           {testimonials[currentIndex].initials}
                         </AvatarFallback>
@@ -169,13 +169,13 @@ export default function TestimonialsSection() {
                     <div>
                       <div 
                         className="font-bold text-white text-sm sm:text-base"
-                        style={{ fontFamily: 'var(--font-montserrat)' }}
+                        style={{ fontFamily: 'var(--font-space-grotesk)' }}
                       >
                         {testimonials[currentIndex].name}
                       </div>
                       <div 
                         className="text-xs sm:text-sm text-gray-400"
-                        style={{ fontFamily: 'var(--font-inter)' }}
+                        style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         {testimonials[currentIndex].role} - {testimonials[currentIndex].company}
                       </div>
