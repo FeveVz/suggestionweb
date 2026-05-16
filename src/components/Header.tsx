@@ -90,12 +90,12 @@ export default function Header() {
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">
-              <span className="text-base sm:text-lg md:text-xl font-bold" style={{ fontFamily: 'var(--font-montserrat)' }}>
+              <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                 <span className="text-black">Suggest</span>
-                <span className="relative inline-block align-top">
+                <span className="relative inline-block">
                   <span className="text-black">i</span>
-                  <span 
-                    className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-1 md:w-1.5 md:h-1.5 rounded-full"
+                  <span
+                    className="absolute -top-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
                     style={{ backgroundColor: '#00BFFF' }}
                   />
                 </span>
@@ -116,7 +116,7 @@ export default function Header() {
                   >
                     <button
                       className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black transition-colors py-4 min-h-[44px]"
-                      style={{ fontFamily: 'var(--font-montserrat)' }}
+                      style={{ fontFamily: 'var(--font-space-grotesk)' }}
                     >
                       {item.name}
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -136,7 +136,7 @@ export default function Header() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
                               {/* Servicios Principales */}
                               <div>
-                                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                   Servicios Principales
                                 </h3>
                                 <div className="space-y-1">
@@ -151,10 +151,10 @@ export default function Header() {
                                         <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#FF6600' }} />
                                       </div>
                                       <div className="min-w-0">
-                                        <div className="text-sm font-medium text-gray-800 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                        <div className="text-sm font-medium text-gray-800 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                           {service.name}
                                         </div>
-                                        <div className="text-xs text-gray-500 truncate hidden sm:block" style={{ fontFamily: 'var(--font-inter)' }}>
+                                        <div className="text-xs text-gray-500 truncate hidden sm:block" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                                           {service.description}
                                         </div>
                                       </div>
@@ -165,7 +165,7 @@ export default function Header() {
 
                               {/* Segunda columna de servicios principales */}
                               <div>
-                                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 hidden sm:block" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 hidden sm:block" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                   &nbsp;
                                 </h3>
                                 <div className="space-y-1">
@@ -180,10 +180,10 @@ export default function Header() {
                                         <service.icon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#FF6600' }} />
                                       </div>
                                       <div className="min-w-0">
-                                        <div className="text-sm font-medium text-gray-800 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                        <div className="text-sm font-medium text-gray-800 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                           {service.name}
                                         </div>
-                                        <div className="text-xs text-gray-500 truncate hidden sm:block" style={{ fontFamily: 'var(--font-inter)' }}>
+                                        <div className="text-xs text-gray-500 truncate hidden sm:block" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                                           {service.description}
                                         </div>
                                       </div>
@@ -198,7 +198,7 @@ export default function Header() {
 
                             {/* Servicios Complementarios */}
                             <div>
-                              <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                              <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                 Servicios Complementarios
                               </h3>
                               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -212,7 +212,7 @@ export default function Header() {
                                     <div className="w-6 h-6 sm:w-8 sm:h-8 rounded flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#00BFFF15' }}>
                                       <service.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" style={{ color: '#00BFFF' }} />
                                     </div>
-                                    <span className="text-xs sm:text-sm font-medium text-gray-700 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                    <span className="text-xs sm:text-sm font-medium text-gray-700 group-hover:text-black truncate" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                       {service.name}
                                     </span>
                                   </Link>
@@ -223,17 +223,17 @@ export default function Header() {
                             {/* CTA Card */}
                             <div className="mt-4 p-4 rounded-xl bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
                               <div className="text-center sm:text-left">
-                                <h4 className="text-white font-bold text-sm" style={{ fontFamily: 'var(--font-montserrat)' }}>
+                                <h4 className="text-white font-bold text-sm" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                   ¿No estás seguro qué necesitas?
                                 </h4>
-                                <p className="text-gray-400 text-xs mt-1" style={{ fontFamily: 'var(--font-inter)' }}>
+                                <p className="text-gray-400 text-xs mt-1" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                                   Agenda una consultoría gratuita
                                 </p>
                               </div>
                               <Link
                                 href="#contacto"
                                 className="text-sm font-semibold px-4 py-2.5 sm:py-2 rounded-full transition-all hover:opacity-90 min-h-[44px] flex items-center"
-                                style={{ backgroundColor: '#FF6600', color: 'white', fontFamily: 'var(--font-inter)' }}
+                                style={{ backgroundColor: '#FF6600', color: 'white', fontFamily: 'var(--font-dm-sans)' }}
                                 onClick={() => setIsDropdownOpen(false)}
                               >
                                 Agendar
@@ -249,7 +249,7 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     className="text-sm font-medium text-gray-700 hover:text-black transition-colors relative group min-h-[44px] flex items-center"
-                    style={{ fontFamily: 'var(--font-montserrat)' }}
+                    style={{ fontFamily: 'var(--font-space-grotesk)' }}
                   >
                     {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full group-hover:w-full transition-all duration-300" style={{ backgroundColor: '#00BFFF' }} />

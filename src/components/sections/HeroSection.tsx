@@ -3,285 +3,175 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, MousePointer2 } from 'lucide-react';
 
-// Rorschach-inspired decorative shapes
-const RorschachShape = ({ className, delay = 0 }: { className: string; delay?: number }) => (
-  <motion.svg
-    viewBox="0 0 200 200"
-    className={className}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 0.08, scale: 1 }}
-    transition={{ duration: 1, delay }}
-  >
-    <motion.path
-      d="M100 20 C120 30, 140 50, 150 80 C160 110, 150 140, 130 160 C110 180, 80 180, 60 160 C40 140, 30 110, 40 80 C50 50, 70 30, 100 20 Z"
-      fill="currentColor"
-      animate={{ 
-        d: [
-          "M100 20 C120 30, 140 50, 150 80 C160 110, 150 140, 130 160 C110 180, 80 180, 60 160 C40 140, 30 110, 40 80 C50 50, 70 30, 100 20 Z",
-          "M100 25 C125 35, 145 55, 155 85 C165 115, 155 145, 135 165 C115 185, 75 185, 55 165 C35 145, 25 115, 35 85 C45 55, 65 35, 100 25 Z",
-          "M100 20 C120 30, 140 50, 150 80 C160 110, 150 140, 130 160 C110 180, 80 180, 60 160 C40 140, 30 110, 40 80 C50 50, 70 30, 100 20 Z"
-        ]
-      }}
-      transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-    />
-    <motion.path
-      d="M100 20 C80 30, 60 50, 50 80 C40 110, 50 140, 70 160 C90 180, 120 180, 140 160 C160 140, 170 110, 160 80 C150 50, 130 30, 100 20 Z"
-      fill="currentColor"
-      animate={{ 
-        d: [
-          "M100 20 C80 30, 60 50, 50 80 C40 110, 50 140, 70 160 C90 180, 120 180, 140 160 C160 140, 170 110, 160 80 C150 50, 130 30, 100 20 Z",
-          "M100 25 C75 35, 55 55, 45 85 C35 115, 45 145, 65 165 C85 185, 125 185, 145 165 C165 145, 175 115, 165 85 C155 55, 135 35, 100 25 Z",
-          "M100 20 C80 30, 60 50, 50 80 C40 110, 50 140, 70 160 C90 180, 120 180, 140 160 C160 140, 170 110, 160 80 C150 50, 130 30, 100 20 Z"
-        ]
-      }}
-      transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-    />
-  </motion.svg>
+const RorschachBlot = ({ className, color = '#FF8C00' }: { className?: string; color?: string }) => (
+  <svg viewBox="0 0 400 300" className={className} xmlns="http://www.w3.org/2000/svg" fill={color}>
+    {/* Left side — mirrored to right */}
+    <path d="M200 40 C185 50, 160 55, 145 75 C130 95, 125 120, 130 145 C135 170, 150 185, 140 205 C130 225, 110 230, 105 250 C100 265, 115 275, 130 270 C145 265, 155 250, 165 240 C175 230, 185 225, 195 230 C198 231, 199 235, 200 238"/>
+    <path d="M200 40 C215 50, 240 55, 255 75 C270 95, 275 120, 270 145 C265 170, 250 185, 260 205 C270 225, 290 230, 295 250 C300 265, 285 275, 270 270 C255 265, 245 250, 235 240 C225 230, 215 225, 205 230 C202 231, 201 235, 200 238"/>
+    {/* Center body */}
+    <ellipse cx="200" cy="155" rx="18" ry="35"/>
+    {/* Upper wings */}
+    <path d="M200 70 C190 60, 170 58, 158 65 C148 72, 145 85, 150 95 C155 105, 168 108, 178 105 C188 102, 195 92, 200 85"/>
+    <path d="M200 70 C210 60, 230 58, 242 65 C252 72, 255 85, 250 95 C245 105, 232 108, 222 105 C212 102, 205 92, 200 85"/>
+    {/* Small dots */}
+    <circle cx="170" cy="200" r="8"/>
+    <circle cx="230" cy="200" r="8"/>
+    <circle cx="155" cy="245" r="5"/>
+    <circle cx="245" cy="245" r="5"/>
+    {/* Upper spots */}
+    <ellipse cx="178" cy="52" rx="7" ry="5" transform="rotate(-20 178 52)"/>
+    <ellipse cx="222" cy="52" rx="7" ry="5" transform="rotate(20 222 52)"/>
+  </svg>
 );
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
-
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
-    }
-  }
+    transition: { duration: 0.7, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }
+  })
 };
-
-const stats = [
-  { value: '150+', label: 'Clientes Satisfechos' },
-  { value: '500+', label: 'Proyectos Completados' },
-  { value: '95%', label: 'Tasa de Retención' },
-  { value: '10+', label: 'Años de Experiencia' },
-];
 
 export default function HeroSection() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <RorschachShape 
-          className="absolute -top-10 -right-10 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 text-white" 
-          delay={0}
-        />
-        <RorschachShape 
-          className="absolute bottom-10 -left-10 w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 text-white" 
-          delay={0.3}
-        />
-        
-        {/* Floating orbs */}
-        <motion.div 
-          className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full blur-3xl"
-          style={{ backgroundColor: 'rgba(255, 102, 0, 0.08)' }}
-          animate={{ 
-            scale: [1, 1.2, 1],
-            x: [0, 30, 0],
-            y: [0, -20, 0]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/4 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full blur-3xl"
-          style={{ backgroundColor: 'rgba(0, 191, 255, 0.06)' }}
-          animate={{ 
-            scale: [1, 1.3, 1],
-            x: [0, -20, 0],
-            y: [0, 30, 0]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-        />
+    <section id="inicio" className="relative min-h-screen bg-black overflow-hidden flex flex-col justify-center">
 
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:60px_60px]" />
-      </div>
+      {/* Rorschach shapes — decorativos en naranja */}
+      <motion.div
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-[420px] h-[360px] md:w-[560px] md:h-[480px] opacity-90 pointer-events-none"
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 0.9, x: 0 }}
+        transition={{ duration: 1.2, delay: 0.4, ease: 'easeOut' }}
+      >
+        <RorschachBlot color="#FF8C00" className="w-full h-full" />
+      </motion.div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 sm:pt-20">
-        <motion.div 
-          className="max-w-4xl mx-auto text-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+      <motion.div
+        className="absolute -left-16 top-8 w-[200px] h-[170px] opacity-20 pointer-events-none rotate-45"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.2 }}
+        transition={{ duration: 1.4, delay: 0.8 }}
+      >
+        <RorschachBlot color="#00BFFF" className="w-full h-full" />
+      </motion.div>
+
+      {/* Tagline vertical — lateral izquierdo */}
+      <motion.div
+        className="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-3"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+      >
+        <span
+          className="text-[10px] tracking-[0.25em] uppercase text-white/40 rotate-[-90deg] whitespace-nowrap"
+          style={{ fontFamily: 'var(--font-dm-sans)' }}
         >
-          {/* Badge */}
-          <motion.div 
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 border border-white/10 mb-4 sm:mb-6"
-          >
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
-            >
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" style={{ color: '#FF6600' }} />
-            </motion.div>
-            <span className="text-xs sm:text-sm font-medium text-gray-300" style={{ fontFamily: 'var(--font-inter)' }}>
-              Agencia de Marketing Digital
-            </span>
-          </motion.div>
+          No todo es lo que ves
+        </span>
+      </motion.div>
 
-          {/* Main Headline */}
-          <motion.h1 
-            variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight px-2"
-            style={{ fontFamily: 'var(--font-montserrat)' }}
-          >
-            <span className="text-white">Consigue lo </span>
-            <span className="relative inline-block">
-              <span className="text-gradient">Posible</span>
-              <motion.span 
-                className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 rounded-full"
-                style={{ backgroundColor: '#FF6600' }}
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 1, duration: 0.8 }}
-              />
-            </span>
-            <br />
-            <span className="text-white">Haciendo lo </span>
-            <motion.span 
-              className="text-gradient inline-block"
-              animate={{ 
-                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-              }}
-              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-              style={{ 
-                background: 'linear-gradient(90deg, #FF6600, #00BFFF, #FF6600)',
-                backgroundSize: '200% auto',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Imposible
-            </motion.span>
-          </motion.h1>
+      {/* Content — alineado a la izquierda, editorial */}
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 relative z-10 pt-24 pb-16">
+        <div className="max-w-3xl">
 
-          {/* Subheadline */}
-          <motion.p 
+          {/* Label */}
+          <motion.p
+            custom={0}
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
-            style={{ fontFamily: 'var(--font-inter)' }}
+            initial="hidden"
+            animate="visible"
+            className="text-xs sm:text-sm tracking-[0.2em] uppercase text-[#00BFFF] mb-6 font-medium"
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
-            Somos una agencia de marketing digital que transforma tu presencia en resultados. 
-            SEO, redes sociales, publicidad digital y más.
+            Agencia de Marketing Digital
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div 
+          {/* Headline protagonista */}
+          <motion.h1
+            custom={1}
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
+            initial="hidden"
+            animate="visible"
+            className="text-[clamp(3rem,9vw,8rem)] font-bold leading-[0.9] tracking-tight text-white mb-2"
+            style={{ fontFamily: 'var(--font-space-grotesk)' }}
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto"
-            >
-              <Button
-                size="lg"
-                className="text-white font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full text-base sm:text-lg shadow-lg hover:shadow-xl group relative overflow-hidden w-full sm:w-auto min-h-[52px]"
-                style={{ backgroundColor: '#FF6600' }}
-                asChild
-              >
-                <Link href="#contacto">
-                  <span className="relative z-10 flex items-center justify-center">
-                    Empieza tu Proyecto
-                    <motion.span
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                    </motion.span>
-                  </span>
-                  <motion.span 
-                    className="absolute inset-0 bg-white"
-                    initial={{ x: '-100%' }}
-                    whileHover={{ x: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </Link>
-              </Button>
-            </motion.div>
+            No es lo
+          </motion.h1>
+          <motion.h1
+            custom={2}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-[clamp(3rem,9vw,8rem)] font-bold leading-[0.9] tracking-tight mb-8"
+            style={{ fontFamily: 'var(--font-space-grotesk)', color: '#FF8C00' }}
+          >
+            que ves.
+          </motion.h1>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto"
+          {/* Tagline secundaria */}
+          <motion.p
+            custom={3}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-lg sm:text-xl md:text-2xl text-white/60 font-light max-w-xl mb-10 leading-relaxed"
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
+          >
+            Consigue lo <strong className="text-white font-semibold">posible</strong> haciendo lo <strong className="text-white font-semibold">imposible.</strong>
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            custom={4}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-col sm:flex-row gap-4 items-start"
+          >
+            <Button
+              size="lg"
+              className="text-black font-bold px-8 py-5 text-base rounded-none hover:scale-105 transition-transform"
+              style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
+              asChild
             >
-              <Button
-                size="lg"
-                className="bg-white text-black font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full text-base sm:text-lg hover:bg-gray-100 hover:text-black transition-all duration-300 w-full sm:w-auto min-h-[52px] border-2 border-white"
-                asChild
-              >
-                <Link href="#servicios">
-                  Ver Servicios
-                </Link>
-              </Button>
-            </motion.div>
+              <Link href="#contacto">Hablemos</Link>
+            </Button>
+
+            <Button
+              size="lg"
+              variant="ghost"
+              className="text-white font-medium px-8 py-5 text-base rounded-none border border-white/20 hover:border-white/60 hover:bg-transparent transition-all"
+              style={{ fontFamily: 'var(--font-dm-sans)' }}
+              asChild
+            >
+              <Link href="#servicios">Ver servicios →</Link>
+            </Button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div 
+          {/* Manifiesto */}
+          <motion.p
+            custom={6}
             variants={itemVariants}
-            className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 px-2"
+            initial="hidden"
+            animate="visible"
+            className="mt-14 text-xs text-white/25 max-w-xs leading-relaxed"
+            style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={index} 
-                className="text-center p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10"
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                <motion.div 
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2"
-                  style={{ fontFamily: 'var(--font-montserrat)' }}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-                >
-                  {stat.value}
-                </motion.div>
-                <div className="text-xs sm:text-sm text-gray-400" style={{ fontFamily: 'var(--font-inter)' }}>
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+            "Todos los días, en todos los sentidos,<br />me va cada vez mejor."
+          </motion.p>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.5 }}
-      >
-        <motion.div 
-          className="flex flex-col items-center gap-1 sm:gap-2 cursor-pointer"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <span className="text-xs text-gray-500" style={{ fontFamily: 'var(--font-inter)' }}>Scroll</span>
-          <MousePointer2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-500" />
-        </motion.div>
-      </motion.div>
+      {/* Línea inferior decorativa */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, #FF8C00 40%, #00BFFF 60%, transparent)' }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ delay: 1.8, duration: 1.2, ease: 'easeOut' }}
+      />
     </section>
   );
 }
