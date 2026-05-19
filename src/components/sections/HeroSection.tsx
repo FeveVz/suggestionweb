@@ -39,28 +39,27 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* Headline masivo ALL-CAPS */}
+        {/* H1 — keyword principal + impacto visual */}
         <motion.h1
-          className="text-[clamp(3rem,8.5vw,8.5rem)] font-black leading-[0.82] tracking-tight text-white uppercase"
+          className="text-[clamp(2.8rem,8vw,8rem)] font-black leading-[0.82] tracking-tight text-white uppercase"
           style={{ fontFamily: 'var(--font-space-grotesk)' }}
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          HACEMOS<br />
-          <span style={{ color: '#FF8C00' }}>LO</span><br />
-          IMPOSIBLE<br />
-          POSIBLE.
+          AGENCIA DE<br />
+          <span style={{ color: '#FF8C00' }}>MARKETING</span><br />
+          DIGITAL.
         </motion.h1>
 
         <motion.p
-          className="text-base text-white/50 mt-8 max-w-sm leading-relaxed"
+          className="text-base sm:text-lg text-white/60 mt-8 max-w-sm leading-relaxed"
           style={{ fontFamily: 'var(--font-dm-sans)' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          Estrategias digitales que transforman tu presencia en resultados reales para tu negocio.
+          Gestionamos tus redes sociales, diseñamos campañas publicitarias y posicionamos tu negocio en Google. <strong className="text-white font-semibold">Resultados reales, no promesas.</strong>
         </motion.p>
 
         <motion.div

@@ -81,7 +81,7 @@ export default function ServicesSection() {
               </span>
             </motion.div>
 
-            {/* Headline ALL-CAPS con metáfora */}
+            {/* H2 — keyword secundaria + impacto visual */}
             <motion.h2
               className="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.85] tracking-tight text-black uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
@@ -89,9 +89,9 @@ export default function ServicesSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              ESTRATEGIAS<br />
-              FUERA<br />
-              <span style={{ color: '#FF8C00' }}>DE LA CAJA.</span>
+              GESTIÓN DE<br />
+              <span style={{ color: '#FF8C00' }}>REDES SOCIALES</span><br />
+              Y MUCHO MÁS.
             </motion.h2>
           </div>
 

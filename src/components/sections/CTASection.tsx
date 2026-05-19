@@ -92,7 +92,7 @@ export default function CTASection() {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.35 }}
             >
-              Necesita marketing que genere resultados. No dejes que tu marca pase desapercibida.
+              Cuéntanos sobre tu negocio y te preparamos una estrategia de marketing digital personalizada. Sin costo, sin compromiso.
             </motion.p>
 
             {/* Beneficios */}

@@ -158,20 +158,20 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-white/20 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-white/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  hola@suggestion.com
-                </span>
+                <a href="mailto:hola@suggestion.pe" className="text-sm text-white/40 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  hola@suggestion.pe
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-white/20 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-white/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  +1 (555) 123-4567
-                </span>
+                <a href="tel:+51937770159" className="text-sm text-white/40 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  +51 937 770 159
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-white/20 flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-white/40 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  123 Marketing St<br />New York, NY 10001
+                  Lima, Perú
                 </span>
               </li>
             </ul>
