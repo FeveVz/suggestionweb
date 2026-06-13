@@ -2,12 +2,13 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Material POP - Punto de Venta | Suggestion',
-  description: 'Material POP para puntos de venta. Displays, exhibidores, cartelería, mostradores y materiales que destacan tu producto en el punto de compra.',
-  keywords: ['material POP', 'punto de venta', 'display', 'exhibidor', 'publicidad en tienda', 'material PDV'],
+  title: 'Material POP y Publicidad en Punto de Venta',
+  description: 'Material POP en Ica y Perú: displays, exhibidores y piezas para el punto de venta que captan la atención del comprador y aumentan tus ventas.',
+  keywords: ['material POP en Perú', 'publicidad punto de venta Perú', 'displays y exhibidores', 'material POP Ica', 'POP personalizado', 'material POP para punto de venta en Perú', 'exhibidores publicitarios personalizados'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/material-pop` },
   openGraph: {
-    title: 'Material POP - Punto de Venta | Suggestion',
-    description: 'Materiales que destacan tu producto en el punto de compra.',
+    title: 'Material POP y Publicidad en Punto de Venta | Suggestion',
+    description: 'Material POP en Ica y Perú: displays, exhibidores y piezas para el punto de venta que captan la atención del comprador y aumentan tus ventas.',
     type: 'website',
   },
 };
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
 export default function MaterialPOPPage() {
   const heroData = {
     badge: 'Material POP',
-    title: 'Destaca en el Punto de',
-    highlightedWord: 'Venta',
-    subtitle: 'El último paso antes de la compra',
-    description: 'Diseñamos y producimos materiales POP que capturan la atención en el momento decisivo. Displays, exhibidores y más para que tu producto sea el elegido.',
+    title: 'Material POP que',
+    highlightedWord: 'impulsa la compra',
+    subtitle: 'Gana la batalla en el punto de venta',
+    description: 'Creamos material POP que destaca en el punto de venta: displays, exhibidores y piezas que captan la atención del comprador en el momento de decidir.',
     cta: 'Solicitar Propuesta',
     iconName: 'Package',
     color: '#FF8C00',

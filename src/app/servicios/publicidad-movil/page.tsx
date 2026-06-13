@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Publicidad Móvil | Suggestion',
-  description: 'Publicidad móvil y en movimiento. Vehículos publicitarios, wraps, pantallas LED móviles y más para llevar tu mensaje por toda la ciudad.',
-  keywords: ['publicidad móvil', 'vehículo publicitario', 'wrap vehicular', 'pantalla LED móvil', 'publicidad en movimiento'],
+  title: 'Publicidad Móvil y en Vehículos en Perú',
+  description: 'Publicidad móvil en Ica y Perú: rotulación vehicular y campañas itinerantes que llevan tu marca a más lugares. Visibilidad que se mueve con tu mercado.',
+  keywords: ['publicidad móvil en Perú', 'publicidad en vehículos Perú', 'rotulación vehicular', 'publicidad itinerante', 'publicidad móvil Ica', 'publicidad en buses y vehículos en Perú', 'rotulado de vehículos para empresas'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/publicidad-movil` },
   openGraph: {
-    title: 'Publicidad Móvil | Suggestion',
-    description: 'Tu marca en movimiento, llegando a más lugares.',
+    title: 'Publicidad Móvil y en Vehículos en Perú | Suggestion',
+    description: 'Publicidad móvil en Ica y Perú: rotulación vehicular y campañas itinerantes que llevan tu marca a más lugares. Visibilidad que se mueve con tu mercado.',
     type: 'website',
   },
 };
 
 export default function PublicidadMovilPage() {
   const heroData = {
-    badge: 'Publicidad Móvil',
-    title: 'Tu Marca en',
-    highlightedWord: 'Movimiento',
-    subtitle: 'Lleva tu mensaje más lejos',
-    description: 'Publicidad que va donde está tu audiencia. Vehículos, pantallas LED móviles y más formatos que recorren la ciudad generando impacto.',
+    badge: 'Publicidad móvil',
+    title: 'Publicidad que',
+    highlightedWord: 'llega más lejos',
+    subtitle: 'Tu marca recorre la ciudad',
+    description: 'Llevamos tu marca a la calle con publicidad móvil y rotulación vehicular: campañas itinerantes con alta cobertura y recordación en tu zona de interés.',
     cta: 'Planifica tu Ruta',
     iconName: 'Truck',
     color: '#FF8C00',

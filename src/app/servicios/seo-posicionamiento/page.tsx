@@ -2,12 +2,13 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'SEO - Posicionamiento Web Orgánico | Suggestion',
-  description: 'Posicionamiento SEO que te hace visible cuando tus clientes te buscan. SEO técnico, contenido y link building para primeros lugares.',
-  keywords: ['SEO', 'posicionamiento web', 'posicionamiento SEO', 'optimización buscadores', 'SEO técnico', 'link building'],
+  title: 'Posicionamiento Web SEO en Perú',
+  description: 'Agencia SEO en Perú. Posicionamiento web orgánico para aparecer primero en Google: SEO técnico, contenido y SEO local en Ica. Más tráfico que convierte en ventas.',
+  keywords: ['posicionamiento web SEO en Perú', 'agencia SEO Perú', 'posicionamiento en Google', 'SEO local Ica', 'SEO técnico', 'consultoría SEO', 'cómo aparecer primero en Google en Perú', 'agencia de posicionamiento web en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/seo-posicionamiento` },
   openGraph: {
-    title: 'SEO - Posicionamiento Web Orgánico | Suggestion',
-    description: 'Posicionamiento SEO que te hace visible cuando tus clientes te buscan.',
+    title: 'Posicionamiento Web SEO en Perú | Suggestion',
+    description: 'Agencia SEO en Perú. Posicionamiento web orgánico para aparecer primero en Google: SEO técnico, contenido y SEO local en Ica. Más tráfico que convierte en ventas.',
     type: 'website',
   },
 };
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
 export default function SEOPage() {
   const heroData = {
     badge: 'SEO',
-    title: 'Posicionamiento que te Hace',
-    highlightedWord: 'Visible',
-    subtitle: 'Cuando te buscan, te encuentran',
-    description: 'Posicionamos tu sitio web en los primeros resultados de Google. Tráfico orgánico de alta calidad que genera leads y ventas de forma sostenida.',
+    title: 'SEO que te pone',
+    highlightedWord: 'primero en Google',
+    subtitle: 'Tráfico orgánico que genera ventas',
+    description: 'Posicionamos tu sitio en los primeros resultados de Google con SEO técnico, contenido y SEO local. Tráfico de alta intención que se convierte en clientes.',
     cta: 'Mejora tu Posición',
     iconName: 'Search',
     color: '#00BFFF',

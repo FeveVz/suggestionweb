@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Estructuras Publicitarias | Suggestion',
-  description: 'Estructuras publicitarias y publicidad exterior. Billboards, espectaculares, mupis, pantallas LED y más en ubicaciones estratégicas.',
-  keywords: ['estructuras publicitarias', 'billboard', 'espectacular', 'publicidad exterior', 'mupi', 'pantalla LED'],
+  title: 'Estructuras y Paneles Publicitarios en Perú',
+  description: 'Estructuras publicitarias en Ica y Perú: paneles, vallas, tótems y rótulos. Publicidad exterior que da visibilidad y posiciona tu marca en la calle.',
+  keywords: ['estructuras publicitarias en Perú', 'paneles publicitarios Perú', 'publicidad exterior', 'vallas y tótems', 'rótulos luminosos Ica', 'fabricación de paneles publicitarios en Perú', 'publicidad exterior para mi negocio'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/estructuras-publicitarias` },
   openGraph: {
-    title: 'Estructuras Publicitarias | Suggestion',
-    description: 'Publicidad exterior de gran impacto visual.',
+    title: 'Estructuras y Paneles Publicitarios en Perú | Suggestion',
+    description: 'Estructuras publicitarias en Ica y Perú: paneles, vallas, tótems y rótulos. Publicidad exterior que da visibilidad y posiciona tu marca en la calle.',
     type: 'website',
   },
 };
 
 export default function EstructurasPublicitariasPage() {
   const heroData = {
-    badge: 'Estructuras Publicitarias',
-    title: 'Publicidad de Gran',
-    highlightedWord: 'Impacto',
-    subtitle: 'Tu mensaje, imposible de ignorar',
-    description: 'Gestionamos publicidad exterior en las mejores ubicaciones. Billboards, espectaculares, mupis y pantallas LED que capturan la atención de tu audiencia.',
+    badge: 'Estructuras publicitarias',
+    title: 'Publicidad exterior que',
+    highlightedWord: 'da visibilidad',
+    subtitle: 'Tu marca, imposible de ignorar',
+    description: 'Diseñamos y fabricamos estructuras de publicidad exterior —paneles, vallas, tótems y rótulos— que dan visibilidad y posicionan tu marca donde está tu público.',
     cta: 'Ver Disponibilidad',
     iconName: 'PanelTop',
     color: '#00BFFF',

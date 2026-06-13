@@ -101,12 +101,12 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
   const usWins = pct < 45;
 
   return (
-    <figure className="hk-hero-art" style={{ margin: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20, width: '100%' }}>
+    <figure className="hk-hero-art" style={{ margin: 0, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20, width: '100%' }}>
       <div
         ref={ref}
         onMouseDown={start}
         onTouchStart={start}
-        style={{ position: 'relative', width: size, maxWidth: '100%', aspectRatio: '1.35', cursor: 'ew-resize', touchAction: 'none', userSelect: 'none' }}
+        style={{ position: 'relative', width: '100%', maxWidth: size, aspectRatio: '1.35', cursor: 'ew-resize', touchAction: 'none', userSelect: 'none' }}
       >
         <img src={BLOT(shape, 'orange')} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
         <img src={BLOT(shape, 'cyan')} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', clipPath: `inset(0 0 0 ${pct}%)` }} />

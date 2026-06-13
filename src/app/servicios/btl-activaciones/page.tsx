@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'BTL y Activaciones | Suggestion',
-  description: 'BTL y activaciones de marca. Experiencias presenciales, eventos, sampling, roadshows y activaciones que generan conexión emocional.',
-  keywords: ['BTL', 'activaciones', 'marketing experiencial', 'eventos de marca', 'sampling', 'roadshow'],
+  title: 'BTL y Activaciones de Marca en Perú',
+  description: 'Marketing BTL y activaciones de marca en Ica y Perú: experiencias, sampling y eventos que conectan con tu público y generan recordación y ventas.',
+  keywords: ['BTL y activaciones de marca en Perú', 'marketing BTL Perú', 'activaciones de marca', 'sampling y eventos', 'activaciones Ica', 'agencia BTL para activaciones en Perú', 'activación de marca en punto de venta'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/btl-activaciones` },
   openGraph: {
-    title: 'BTL y Activaciones | Suggestion',
-    description: 'Experiencias de marca que generan conexión emocional.',
+    title: 'BTL y Activaciones de Marca en Perú | Suggestion',
+    description: 'Marketing BTL y activaciones de marca en Ica y Perú: experiencias, sampling y eventos que conectan con tu público y generan recordación y ventas.',
     type: 'website',
   },
 };
 
 export default function BTLActivacionesPage() {
   const heroData = {
-    badge: 'BTL y Activaciones',
-    title: 'Experiencias que',
-    highlightedWord: 'Conectan',
-    subtitle: 'Tu marca, en vivo y en directo',
-    description: 'Creamos experiencias presenciales que dejan huella. Activaciones, sampling, roadshows y eventos que generan conexión emocional real con tu audiencia.',
+    badge: 'BTL & activaciones',
+    title: 'Activaciones que',
+    highlightedWord: 'conectan y venden',
+    subtitle: 'Experiencias que dejan huella',
+    description: 'Diseñamos y ejecutamos activaciones BTL y experiencias de marca: sampling, eventos y dinámicas en punto de venta que generan interacción, datos y ventas.',
     cta: 'Planifica tu Activación',
     iconName: 'Sparkles',
     color: '#00BFFF',

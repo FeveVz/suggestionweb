@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Marketing Digital que Transforma | Suggestion',
-  description: 'Estrategias integrales de marketing digital que transforman tu presencia online en resultados medibles. SEO, publicidad, redes sociales y más.',
-  keywords: ['marketing digital', 'agencia de marketing', 'estrategia digital', 'marketing online', 'posicionamiento digital'],
+  title: 'Agencia de Marketing Digital en Perú',
+  description: 'Agencia de marketing digital en Ica y todo el Perú. Estrategias de performance que convierten atención en ventas: más leads, citas y cierres medibles.',
+  keywords: ['agencia de marketing digital en Perú', 'marketing digital Perú', 'agencia de marketing digital Ica', 'marketing de performance', 'estrategia de marketing digital', 'agencia de marketing digital para pymes en Perú', 'cuánto cuesta una agencia de marketing digital en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/marketing-digital` },
   openGraph: {
-    title: 'Marketing Digital que Transforma | Suggestion',
-    description: 'Estrategias integrales de marketing digital que transforman tu presencia online en resultados medibles.',
+    title: 'Agencia de Marketing Digital en Perú | Suggestion',
+    description: 'Agencia de marketing digital en Ica y todo el Perú. Estrategias de performance que convierten atención en ventas: más leads, citas y cierres medibles.',
     type: 'website',
   },
 };
 
 export default function MarketingDigitalPage() {
   const heroData = {
-    badge: 'Marketing Digital',
-    title: 'Marketing Digital que',
-    highlightedWord: 'Transforma',
-    subtitle: 'Estrategias integrales para tu negocio',
-    description: 'Transformamos tu presencia digital en resultados medibles. Estrategias personalizadas que conectan con tu audiencia y generan crecimiento sostenible.',
+    badge: 'Marketing digital',
+    title: 'Marketing digital que',
+    highlightedWord: 'genera ventas',
+    subtitle: 'Estrategia de performance para tu negocio',
+    description: 'Diseñamos y ejecutamos estrategias de marketing digital orientadas a resultados: más leads calificados, más citas y más ventas para tu negocio en Perú.',
     cta: 'Comienza tu Transformación',
     iconName: 'TrendingUp',
     color: '#FF8C00',

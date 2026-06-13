@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Imprenta Corporativa | Suggestion',
-  description: 'Imprenta corporativa para empresas. Tarjetas de presentación, papelería, folletos, catálogos y materiales impresos de alta calidad.',
-  keywords: ['imprenta corporativa', 'impresión', 'tarjetas de presentación', 'papelería corporativa', 'folletos', 'catálogos'],
+  title: 'Imprenta Corporativa e Impresión en Perú',
+  description: 'Imprenta corporativa en Ica y Perú: tarjetas, brochures, papelería y gran formato. Impresión de calidad para tu marca, a tiempo y con acabado profesional.',
+  keywords: ['imprenta corporativa en Perú', 'servicios de impresión Perú', 'imprenta Ica', 'impresión gran formato', 'papelería corporativa', 'imprenta para empresas en Perú', 'impresión de tarjetas y brochures en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/imprenta-corporativa` },
   openGraph: {
-    title: 'Imprenta Corporativa | Suggestion',
-    description: 'Material impreso de alta calidad para tu negocio.',
+    title: 'Imprenta Corporativa e Impresión en Perú | Suggestion',
+    description: 'Imprenta corporativa en Ica y Perú: tarjetas, brochures, papelería y gran formato. Impresión de calidad para tu marca, a tiempo y con acabado profesional.',
     type: 'website',
   },
 };
 
 export default function ImprentaCorporativaPage() {
   const heroData = {
-    badge: 'Imprenta Corporativa',
-    title: 'Material Impreso de',
-    highlightedWord: 'Calidad',
-    subtitle: 'Tu marca en las mejores manos',
-    description: 'Producción de materiales impresos con la calidad que tu marca merece. Desde tarjetas hasta catálogos completos, con acabados que impresionan.',
+    badge: 'Imprenta corporativa',
+    title: 'Impresión que',
+    highlightedWord: 'representa tu marca',
+    subtitle: 'Calidad y acabado profesional',
+    description: 'Servicio de imprenta corporativa de principio a fin: tarjetas, brochures, papelería, etiquetas y gran formato, con calidad consistente y entrega puntual.',
     cta: 'Solicitar Cotización',
     iconName: 'Printer',
     color: '#FF8C00',

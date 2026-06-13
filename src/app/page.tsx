@@ -59,8 +59,8 @@ export default function Home() {
 
       {/* HERO */}
       <section id="top" style={{ background: 'var(--white)', position: 'relative', overflow: 'hidden' }}>
-        <div className="hk-hero" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'clamp(3rem,7vw,6rem) var(--gutter) clamp(3rem,6vw,5rem)', display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(2rem,5vw,4rem)', alignItems: 'center' }}>
-          <div>
+        <div className="hk-hero" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'clamp(3rem,7vw,6rem) var(--gutter) clamp(3rem,6vw,5rem)', display: 'grid', gridTemplateColumns: 'minmax(0,1.05fr) minmax(0,0.95fr)', gap: 'clamp(2rem,5vw,4rem)', alignItems: 'center' }}>
+          <div style={{ minWidth: 0 }}>
             <Label>Agencia de performance · Ica, Perú</Label>
             <h1 style={{ font: 'var(--fw-bold) var(--fs-5xl)/0.98 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--text-strong)', margin: '20px 0 0' }}>
               No es lo<br />que ves<Dot size="0.42em" style={{ marginLeft: 6, verticalAlign: 'baseline' }} />
@@ -257,10 +257,8 @@ export default function Home() {
       </Section>
 
       {/* CTA FINAL */}
-      <section id="contacto" style={{ background: 'var(--black)', color: 'var(--white)', position: 'relative', overflow: 'hidden' }}>
-        <div aria-hidden style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/assets/textures/particles.png)', backgroundSize: '620px', opacity: 0.5, zIndex: 'var(--z-art)', pointerEvents: 'none' }} />
-        <Blot shape={4} tint="orange" size={520} style={{ position: 'absolute', left: '-160px', bottom: '-160px', opacity: 0.12, zIndex: 'var(--z-art)', pointerEvents: 'none' }} />
-        <div className="hk-cta" style={{ position: 'relative', maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--section-y) var(--gutter)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
+      <section id="contacto" style={{ background: 'var(--black)', color: 'var(--white)', borderTop: '1px solid var(--hairline-inverse)' }}>
+        <div className="hk-cta" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--section-y) var(--gutter)', display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
           <div>
             <Label tone="onDark">Agenda una llamada</Label>
             <h2 style={{ font: 'var(--fw-bold) var(--fs-4xl)/0.98 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '16px 0 0', maxWidth: '14ch' }}>

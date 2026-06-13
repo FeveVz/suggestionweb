@@ -2,12 +2,13 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Consultoría de Marketing Digital | Suggestion',
-  description: 'Consultoría estratégica de marketing digital. Análisis, planes de acción, auditorías y acompañamiento para potenciar tu estrategia.',
-  keywords: ['consultoría marketing digital', 'asesoría marketing', 'consultor digital', 'estrategia digital', 'auditoría marketing'],
+  title: 'Consultoría de Marketing Digital en Perú',
+  description: 'Consultoría de marketing digital en Perú. Auditamos tu funnel y diseñamos una estrategia de performance con KPIs claros: leads, citas y cierres.',
+  keywords: ['consultoría de marketing digital en Perú', 'consultor de marketing Perú', 'asesoría de marketing', 'auditoría de marketing', 'estrategia comercial', 'consultoría de marketing para pymes en Perú', 'asesor de marketing digital en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/consultoria-marketing` },
   openGraph: {
-    title: 'Consultoría de Marketing Digital | Suggestion',
-    description: 'Consultoría estratégica de marketing digital para potenciar tu estrategia.',
+    title: 'Consultoría de Marketing Digital en Perú | Suggestion',
+    description: 'Consultoría de marketing digital en Perú. Auditamos tu funnel y diseñamos una estrategia de performance con KPIs claros: leads, citas y cierres.',
     type: 'website',
   },
 };
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
 export default function ConsultoriaPage() {
   const heroData = {
     badge: 'Consultoría',
-    title: 'Consultoría',
-    highlightedWord: 'Estratégica',
-    subtitle: 'Conocimiento que transforma',
-    description: 'Asesoría personalizada de profesionales con experiencia real. Auditorías, planes de acción y acompañamiento para maximizar tu inversión en marketing.',
+    title: 'Consultoría que',
+    highlightedWord: 'ordena tu crecimiento',
+    subtitle: 'Estrategia con números, no opiniones',
+    description: 'Analizamos tu mercado, tu competencia y tu embudo de ventas para entregarte una hoja de ruta clara, con prioridades y métricas que sí mueven el negocio.',
     cta: 'Agenda Consultoría',
     iconName: 'Lightbulb',
     color: '#FF8C00',

@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Producción Audiovisual | Suggestion',
-  description: 'Producción audiovisual profesional. Videos corporativos, publicidad, contenido para redes sociales, fotografía comercial y más.',
-  keywords: ['producción audiovisual', 'video corporativo', 'producción de video', 'fotografía comercial', 'video marketing'],
+  title: 'Producción Audiovisual y de Video en Perú',
+  description: 'Producción audiovisual en Ica y Perú: spots, video marketing y contenido para redes y campañas. Piezas que captan la atención y mueven a la acción.',
+  keywords: ['producción audiovisual en Perú', 'producción de video Perú', 'video marketing', 'spots publicitarios', 'productora audiovisual Ica', 'producción de video para redes sociales en Perú', 'cuánto cuesta un video publicitario en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/produccion-audiovisual` },
   openGraph: {
-    title: 'Producción Audiovisual | Suggestion',
-    description: 'Contenido visual de alto impacto que cuenta tu historia.',
+    title: 'Producción Audiovisual y de Video en Perú | Suggestion',
+    description: 'Producción audiovisual en Ica y Perú: spots, video marketing y contenido para redes y campañas. Piezas que captan la atención y mueven a la acción.',
     type: 'website',
   },
 };
 
 export default function ProduccionAudiovisualPage() {
   const heroData = {
-    badge: 'Producción Audiovisual',
-    title: 'Contenido Visual de',
-    highlightedWord: 'Impacto',
-    subtitle: 'Tu historia en movimiento',
-    description: 'Creamos contenido audiovisual que conecta emocionalmente. Videos que informan, entretienen y convierten. Fotografía que detiene el scroll.',
+    badge: 'Producción audiovisual',
+    title: 'Video que',
+    highlightedWord: 'mueve a la acción',
+    subtitle: 'Contenido audiovisual con foco en venta',
+    description: 'Producimos video y contenido audiovisual de alto impacto para campañas y redes: desde la idea y el guion hasta la grabación, edición y post.',
     cta: 'Crea tu Contenido',
     iconName: 'Video',
     color: '#FF8C00',

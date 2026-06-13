@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Branding y Diseño - Marcas que Dejan Huella | Suggestion',
-  description: 'Creamos identidades visuales que dejan huella. Branding estratégico, diseño de marca, logotipos y manuales de identidad corporativa.',
-  keywords: ['branding', 'diseño de marca', 'identidad corporativa', 'logotipo', 'diseño gráfico', 'branding agency'],
+  title: 'Branding y Diseño de Marca en Perú',
+  description: 'Branding y diseño de identidad de marca en Ica y Perú. Creamos marcas memorables: logotipo, identidad visual y manual de marca que conectan y venden.',
+  keywords: ['branding y diseño de marca en Perú', 'diseño de logotipo Perú', 'identidad visual', 'manual de marca', 'agencia de branding Ica', 'cuánto cuesta el diseño de una marca en Perú', 'agencia de branding para empresas en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/branding-diseno` },
   openGraph: {
-    title: 'Branding y Diseño - Marcas que Dejan Huella | Suggestion',
-    description: 'Creamos identidades visuales que dejan huella en la mente de tu audiencia.',
+    title: 'Branding y Diseño de Marca en Perú | Suggestion',
+    description: 'Branding y diseño de identidad de marca en Ica y Perú. Creamos marcas memorables: logotipo, identidad visual y manual de marca que conectan y venden.',
     type: 'website',
   },
 };
 
 export default function BrandingPage() {
   const heroData = {
-    badge: 'Branding',
-    title: 'Marcas que Dejan',
-    highlightedWord: 'Huella',
-    subtitle: 'Identidad que perdura',
-    description: 'Diseñamos identidades visuales que conectan emocionalmente con tu audiencia. Tu marca no solo se ve bien, se recuerda.',
+    badge: 'Branding & diseño',
+    title: 'Branding que',
+    highlightedWord: 'deja huella',
+    subtitle: 'Identidad que tu cliente recuerda',
+    description: 'Construimos marcas con estrategia: naming, logotipo, identidad visual y manual de marca. Una imagen coherente que genera confianza y diferencia tu negocio.',
     cta: 'Crea tu Identidad',
     iconName: 'Palette',
     color: '#FF8C00',

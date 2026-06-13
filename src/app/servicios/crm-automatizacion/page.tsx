@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'CRM y Automatización de Marketing | Suggestion',
-  description: 'Implementamos CRMs y automatizamos procesos de marketing. HubSpot, Salesforce, automatización de emails, leads y workflows.',
-  keywords: ['CRM', 'automatización marketing', 'marketing automation', 'HubSpot', 'Salesforce', 'automatización leads'],
+  title: 'CRM y Automatización de Marketing en Perú',
+  description: 'Implementamos CRM y automatización de marketing en Perú: del lead a la cita al cierre con seguimiento automático. Escala tus ventas sin perder oportunidades.',
+  keywords: ['CRM y automatización de marketing en Perú', 'automatización de marketing Perú', 'implementación de CRM', 'embudos de venta', 'email marketing automatizado', 'cómo automatizar el seguimiento de leads en Perú', 'implementar un CRM para mi empresa'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/crm-automatizacion` },
   openGraph: {
-    title: 'CRM y Automatización de Marketing | Suggestion',
-    description: 'Automatiza procesos y escala tu negocio con herramientas inteligentes.',
+    title: 'CRM y Automatización de Marketing en Perú | Suggestion',
+    description: 'Implementamos CRM y automatización de marketing en Perú: del lead a la cita al cierre con seguimiento automático. Escala tus ventas sin perder oportunidades.',
     type: 'website',
   },
 };
 
 export default function CRMAutomatizacionPage() {
   const heroData = {
-    badge: 'CRM & Automatización',
-    title: 'Automatiza y',
-    highlightedWord: 'Escala',
-    subtitle: 'Menos trabajo manual, más resultados',
-    description: 'Implementamos sistemas CRM y automatizaciones que trabajan 24/7. Tu equipo se enfoca en cerrar ventas mientras el sistema genera y nutre leads.',
+    badge: 'CRM & automatización',
+    title: 'Automatización que',
+    highlightedWord: 'escala tus ventas',
+    subtitle: 'Del lead al cierre, sin fugas',
+    description: 'Conectamos y automatizamos tu funnel con CRM: captación, seguimiento y nutrición de leads hasta el cierre. Más ventas con el mismo equipo comercial.',
     cta: 'Automatiza Ahora',
     iconName: 'Zap',
     color: '#00BFFF',

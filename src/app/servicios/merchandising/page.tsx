@@ -2,12 +2,13 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Merchandising Corporativo | Suggestion',
-  description: 'Merchandising corporativo y productos promocionales. Artículos personalizados que refuerzan tu marca y generan recordación.',
-  keywords: ['merchandising', 'artículos promocionales', 'regalos corporativos', 'productos personalizados', 'merch'],
+  title: 'Merchandising Publicitario en Perú',
+  description: 'Merchandising publicitario en Ica y Perú: artículos promocionales y regalos corporativos personalizados con tu marca. Presencia que se queda con tu cliente.',
+  keywords: ['merchandising publicitario en Perú', 'artículos promocionales Perú', 'regalos corporativos', 'merchandising personalizado', 'merchandising Ica', 'regalos corporativos personalizados en Perú', 'artículos publicitarios con logo en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/merchandising` },
   openGraph: {
-    title: 'Merchandising Corporativo | Suggestion',
-    description: 'Productos promocionales que refuerzan tu marca.',
+    title: 'Merchandising Publicitario en Perú | Suggestion',
+    description: 'Merchandising publicitario en Ica y Perú: artículos promocionales y regalos corporativos personalizados con tu marca. Presencia que se queda con tu cliente.',
     type: 'website',
   },
 };
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
 export default function MerchandisingPage() {
   const heroData = {
     badge: 'Merchandising',
-    title: 'Productos que Refuerzan tu',
-    highlightedWord: 'Marca',
-    subtitle: 'Merch que se usa, no se guarda',
-    description: 'Creamos y producimos artículos promocionales que la gente realmente quiere usar. Merchandising que genera recordación y fidelidad.',
+    title: 'Merchandising que',
+    highlightedWord: 'prolonga tu marca',
+    subtitle: 'Tu marca, en manos de tu cliente',
+    description: 'Producimos artículos promocionales y regalos corporativos personalizados con tu marca: piezas útiles y memorables que mantienen tu negocio presente.',
     cta: 'Solicitar Catálogo',
     iconName: 'ShoppingBag',
     color: '#00BFFF',

@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Desarrollo Web - Sitios que Convierten | Suggestion',
-  description: 'Desarrollamos sitios web optimizados, rápidos y diseñados para convertir. Landing pages, e-commerce, sitios corporativos y aplicaciones web.',
-  keywords: ['desarrollo web', 'diseño web', 'página web', 'sitio web', 'e-commerce', 'landing page', 'aplicación web'],
+  title: 'Diseño y Desarrollo Web en Perú',
+  description: 'Diseño y desarrollo web en Perú: páginas web rápidas, optimizadas para SEO y orientadas a conversión (CRO). Sitios que convierten visitantes en clientes.',
+  keywords: ['diseño y desarrollo web en Perú', 'diseño de páginas web Perú', 'creación de sitios web', 'desarrollo web Ica', 'landing pages', 'CRO', 'cuánto cuesta una página web en Perú', 'diseño de páginas web que convierten'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/desarrollo-web` },
   openGraph: {
-    title: 'Desarrollo Web - Sitios que Convierten | Suggestion',
-    description: 'Desarrollamos sitios web optimizados, rápidos y diseñados para convertir visitantes en clientes.',
+    title: 'Diseño y Desarrollo Web en Perú | Suggestion',
+    description: 'Diseño y desarrollo web en Perú: páginas web rápidas, optimizadas para SEO y orientadas a conversión (CRO). Sitios que convierten visitantes en clientes.',
     type: 'website',
   },
 };
 
 export default function DesarrolloWebPage() {
   const heroData = {
-    badge: 'Desarrollo Web',
-    title: 'Sitios Web que',
-    highlightedWord: 'Convierten',
-    subtitle: 'Rápidos, optimizados, efectivos',
-    description: 'Desarrollamos sitios web que no solo se ven bien, sino que funcionan. Optimizados para SEO, velocidad y conversión.',
+    badge: 'Desarrollo web',
+    title: 'Páginas web que',
+    highlightedWord: 'convierten',
+    subtitle: 'Sitios rápidos, SEO y orientados a venta',
+    description: 'Diseñamos y desarrollamos sitios web veloces, optimizados para buscadores y pensados para convertir: cada página guía al visitante hacia la acción.',
     cta: 'Crea tu Sitio Web',
     iconName: 'Code',
     color: '#00BFFF',

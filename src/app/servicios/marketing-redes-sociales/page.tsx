@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Redes Sociales que Conectan | Suggestion',
-  description: 'Gestión profesional de redes sociales que conecta con tu audiencia. Community management, contenido estratégico y campañas que generan engagement.',
-  keywords: ['redes sociales', 'community manager', 'gestión redes sociales', 'marketing redes sociales', 'social media'],
+  title: 'Gestión de Redes Sociales en Perú',
+  description: 'Gestión profesional de redes sociales en Ica y Perú: contenido, community management y pauta en Instagram, Facebook y TikTok que genera clientes, no solo likes.',
+  keywords: ['gestión de redes sociales en Perú', 'community manager Perú', 'agencia de redes sociales Ica', 'manejo de redes sociales', 'publicidad en Instagram y Facebook', 'cuánto cobra un community manager en Perú', 'agencia para manejar redes sociales de mi empresa'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/marketing-redes-sociales` },
   openGraph: {
-    title: 'Redes Sociales que Conectan | Suggestion',
-    description: 'Gestión profesional de redes sociales que conecta con tu audiencia.',
+    title: 'Gestión de Redes Sociales en Perú | Suggestion',
+    description: 'Gestión profesional de redes sociales en Ica y Perú: contenido, community management y pauta en Instagram, Facebook y TikTok que genera clientes, no solo likes.',
     type: 'website',
   },
 };
 
 export default function RedesSocialesPage() {
   const heroData = {
-    badge: 'Redes Sociales',
-    title: 'Redes Sociales que',
-    highlightedWord: 'Conectan',
-    subtitle: 'Conexión auténtica con tu audiencia',
-    description: 'Transformamos tu presencia en redes sociales en una comunidad activa y comprometida. Contenido estratégico que genera conversación y conversión.',
+    badge: 'Redes sociales',
+    title: 'Redes sociales que',
+    highlightedWord: 'venden',
+    subtitle: 'Comunidad que se convierte en clientes',
+    description: 'Manejamos tus redes sociales con foco en negocio: contenido, community management y publicidad que conecta con tu audiencia y genera ventas reales.',
     cta: 'Impulsa tus Redes',
     iconName: 'Share2',
     color: '#00BFFF',

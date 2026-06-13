@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Investigación de Mercado | Suggestion',
-  description: 'Investigación de mercado profesional para decisiones estratégicas. Análisis de competencia, estudios de mercado, consumer insights.',
-  keywords: ['investigación de mercado', 'estudios de mercado', 'análisis competencia', 'consumer insights', 'market research'],
+  title: 'Investigación y Estudio de Mercado en Perú',
+  description: 'Estudios de mercado en Perú: datos sobre tu cliente, competencia y demanda para decidir con certeza. Investigación que guía tu inversión y reduce el riesgo.',
+  keywords: ['investigación de mercado en Perú', 'estudio de mercado Perú', 'análisis de mercado', 'investigación de mercado Ica', 'análisis de competencia', 'cómo hacer un estudio de mercado en Perú', 'empresa de estudios de mercado en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/investigacion-mercado` },
   openGraph: {
-    title: 'Investigación de Mercado | Suggestion',
-    description: 'Datos e insights que guían decisiones estratégicas informadas.',
+    title: 'Investigación y Estudio de Mercado en Perú | Suggestion',
+    description: 'Estudios de mercado en Perú: datos sobre tu cliente, competencia y demanda para decidir con certeza. Investigación que guía tu inversión y reduce el riesgo.',
     type: 'website',
   },
 };
 
 export default function InvestigacionMercadoPage() {
   const heroData = {
-    badge: 'Investigación de Mercado',
-    title: 'Datos que Impulsan',
-    highlightedWord: 'Decisiones',
-    subtitle: 'Información que transforma',
-    description: 'Investigamos tu mercado, competencia y consumidores para darte insights accionables. Decisiones basadas en datos, no suposiciones.',
+    badge: 'Investigación de mercado',
+    title: 'Datos que',
+    highlightedWord: 'guían tus decisiones',
+    subtitle: 'Investiga antes de invertir',
+    description: 'Investigamos tu mercado, tu audiencia y tu competencia con metodología clara. Insights accionables para tomar decisiones de negocio con datos, no corazonadas.',
     cta: 'Investiga tu Mercado',
     iconName: 'BarChart3',
     color: '#00BFFF',

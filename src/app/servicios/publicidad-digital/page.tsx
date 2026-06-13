@@ -2,23 +2,24 @@ import { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Publicidad Digital con ROI Medible | Suggestion',
-  description: 'Campañas de publicidad digital en Google Ads, Meta Ads, TikTok Ads con ROI medible. Optimización continua para maximizar resultados.',
-  keywords: ['publicidad digital', 'google ads', 'meta ads', 'facebook ads', 'instagram ads', 'publicidad online', 'SEM'],
+  title: 'Publicidad Digital: Meta y Google Ads en Perú',
+  description: 'Campañas de publicidad digital en Meta Ads, Google Ads y TikTok Ads para el Perú. Performance medible: bajo costo por lead y más ventas. Pauta orientada a resultados.',
+  keywords: ['publicidad digital en Perú', 'Meta Ads Perú', 'Google Ads Perú', 'TikTok Ads', 'campañas de performance', 'agencia de publicidad digital', 'agencia de Google Ads y Meta Ads en Perú', 'cuánto invertir en publicidad digital en Perú'],
+  alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe'}/servicios/publicidad-digital` },
   openGraph: {
-    title: 'Publicidad Digital con ROI Medible | Suggestion',
-    description: 'Campañas de publicidad digital con ROI medible y optimización continua.',
+    title: 'Publicidad Digital: Meta y Google Ads en Perú | Suggestion',
+    description: 'Campañas de publicidad digital en Meta Ads, Google Ads y TikTok Ads para el Perú. Performance medible: bajo costo por lead y más ventas. Pauta orientada a resultados.',
     type: 'website',
   },
 };
 
 export default function PublicidadDigitalPage() {
   const heroData = {
-    badge: 'Publicidad Digital',
-    title: 'Publicidad con',
-    highlightedWord: 'ROI Medible',
-    subtitle: 'Campañas que pagan',
-    description: 'Diseñamos y gestionamos campañas de publicidad digital que generan retorno. Cada peso invertido se optimiza para máximo rendimiento.',
+    badge: 'Publicidad digital',
+    title: 'Publicidad digital que',
+    highlightedWord: 'convierte',
+    subtitle: 'Pauta con ROI medible, no alcance vacío',
+    description: 'Creamos y optimizamos campañas en Meta, Google y TikTok orientadas a lead y venta. Cada sol invertido se mide en leads, citas y cierres, no en likes.',
     cta: 'Empieza a Convertir',
     iconName: 'Target',
     color: '#FF8C00',
