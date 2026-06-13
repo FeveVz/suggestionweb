@@ -1,211 +1,56 @@
-'use client';
-
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 import Link from 'next/link';
-import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { MapPin, Instagram, Facebook } from 'lucide-react';
+import { Dot } from '@/components/brand/parts';
 
-const servicios = [
-  { name: 'Marketing Digital', href: '/servicios/marketing-digital' },
-  { name: 'Redes Sociales', href: '/servicios/marketing-redes-sociales' },
-  { name: 'Publicidad Digital', href: '/servicios/publicidad-digital' },
-  { name: 'SEO', href: '/servicios/seo-posicionamiento' },
-  { name: 'Branding', href: '/servicios/branding-diseno' },
-  { name: 'Desarrollo Web', href: '/servicios/desarrollo-web' },
+const cols: [string, [string, string][]][] = [
+  ['Agencia', [['Sectores', '/#sectores'], ['Casos', '/#casos'], ['Método', '/#metodo'], ['Servicios', '/#servicios']]],
+  ['Sectores', [['Inmobiliario', '/#sectores'], ['Automotriz', '/#sectores'], ['Turismo', '/#sectores'], ['Marcas & consumo', '/#sectores']]],
+  ['Contacto', [['hola@suggestion.pe', 'mailto:hola@suggestion.pe'], ['+51 937 770 159', 'https://wa.me/51937770159'], ['Agenda una llamada', '/#contacto']]],
 ];
 
-const empresa = [
-  { name: 'Nosotros', href: '/nosotros' },
-  { name: 'Portafolio', href: '/portafolio' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contacto', href: '#contacto' },
-];
-
-const socialLinks = [
-  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/suggestion.mkt/' },
-  { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/Suggestion.mk' },
+const socials: [string, typeof Instagram, string][] = [
+  ['Instagram', Instagram, 'https://www.instagram.com/suggestion.mkt/'],
+  ['Facebook', Facebook, 'https://www.facebook.com/Suggestion.mk'],
 ];
 
 export default function Footer() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
   return (
-    <footer className="bg-black text-white relative overflow-hidden" ref={ref}>
-      {/* Línea superior */}
-      <div
-        className="h-px w-full"
-        style={{ background: 'linear-gradient(90deg, transparent, #FF8C00 40%, #00BFFF 60%, transparent)' }}
-      />
-
-      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
-        {/* Main content */}
-        <div className="py-14 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 lg:gap-16">
-
-          {/* Brand */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <Link href="/" className="inline-block mb-6">
-              <span className="text-xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-                <span className="text-white">Suggest</span>
-                <span className="relative inline-block">
-                  <span className="text-white">i</span>
-                  <span
-                    className="absolute -top-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-                    style={{ backgroundColor: '#00BFFF' }}
-                  />
-                </span>
-                <span className="text-white">on</span>
-              </span>
-            </Link>
-
-            <p
-              className="text-sm text-white/55 leading-relaxed max-w-xs mb-8"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-            >
-              Agencia de marketing digital que transforma tu presencia en resultados. Consigue lo posible haciendo lo imposible.
+    <footer style={{ background: 'var(--black)', color: 'var(--white)', borderTop: '1px solid var(--hairline-inverse)' }}>
+      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--section-y-tight) var(--gutter)' }}>
+        <div className="hk-foot" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: 'var(--space-6)' }}>
+          <div>
+            <img src="/assets/logos/suggestion-logo-white.png" alt="Suggestion" style={{ height: 24, width: 'auto' }} />
+            <p style={{ font: 'var(--fw-light) var(--fs-sm)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', marginTop: 18, maxWidth: '30ch' }}>
+              Agencia de marketing de performance. Convertimos atención en ventas.
             </p>
-
-            {/* Social links */}
-            <div className="flex gap-3">
-              {socialLinks.map((s) => (
-                <motion.a
-                  key={s.name}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-white/60 hover:text-white hover:bg-white/5 transition-all"
-                  whileHover={{ scale: 1.05 }}
-                  aria-label={s.name}
-                >
-                  <s.icon className="w-3.5 h-3.5" />
-                </motion.a>
+            <p style={{ display: 'flex', alignItems: 'flex-start', gap: 10, font: 'var(--fw-light) var(--fs-sm)/1.5 var(--font-body)', color: 'var(--text-on-inverse-mut)', marginTop: 18 }}>
+              <MapPin size={16} style={{ color: 'var(--cyan)', marginTop: 2, flexShrink: 0 }} />
+              <span>Ica, Perú · Atención a todo el país</span>
+            </p>
+            <div style={{ display: 'flex', gap: 12, marginTop: 18 }}>
+              {socials.map(([name, Icon, href]) => (
+                <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={name}
+                  style={{ width: 38, height: 38, display: 'grid', placeItems: 'center', border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-sm)', color: 'var(--white)' }}>
+                  <Icon size={16} />
+                </a>
               ))}
             </div>
-          </motion.div>
-
-          {/* Servicios */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h4
-              className="text-[10px] tracking-[0.25em] uppercase text-white/45 mb-5 font-medium"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-            >
-              Servicios
-            </h4>
-            <ul className="space-y-3">
-              {servicios.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/65 hover:text-white transition-colors"
-                    style={{ fontFamily: 'var(--font-dm-sans)' }}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Empresa */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.15 }}
-          >
-            <h4
-              className="text-[10px] tracking-[0.25em] uppercase text-white/45 mb-5 font-medium"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-            >
-              Empresa
-            </h4>
-            <ul className="space-y-3">
-              {empresa.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/65 hover:text-white transition-colors"
-                    style={{ fontFamily: 'var(--font-dm-sans)' }}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Contacto */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h4
-              className="text-[10px] tracking-[0.25em] uppercase text-white/45 mb-5 font-medium"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-            >
-              Contacto
-            </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#FF8C00]/70 flex-shrink-0 mt-0.5" />
-                <a href="mailto:hola@suggestion.pe" className="text-sm text-white/40 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  hola@suggestion.pe
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#FF8C00]/70 flex-shrink-0 mt-0.5" />
-                <a href="tel:+51937770159" className="text-sm text-white/40 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  +51 937 770 159
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#FF8C00]/70 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-white/65 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  Lima, Perú
-                </span>
-              </li>
-            </ul>
-          </motion.div>
-        </div>
-
-        {/* Bottom bar */}
-        <motion.div
-          className="border-t border-white/5 py-6 flex flex-col sm:flex-row justify-between items-center gap-4"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5 }}
-        >
-          <p
-            className="text-xs text-white/45 text-center sm:text-left"
-            style={{ fontFamily: 'var(--font-dm-sans)' }}
-          >
-            © {new Date().getFullYear()} Suggestion. Todos los derechos reservados.
-          </p>
-          <div className="flex gap-6">
-            <Link
-              href="#"
-              className="text-xs text-white/50 hover:text-white transition-colors"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-            >
-              Privacidad
-            </Link>
-            <Link
-              href="#"
-              className="text-xs text-white/50 hover:text-white transition-colors"
-              style={{ fontFamily: 'var(--font-dm-sans)' }}
-            >
-              Términos
-            </Link>
           </div>
-        </motion.div>
+          {cols.map(([h, items]) => (
+            <nav key={h} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <span style={{ font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--text-on-inverse-mut)' }}>{h}</span>
+              {items.map(([t, href]) => (
+                <Link key={t} href={href} style={{ font: 'var(--fw-light) var(--fs-sm)/1.3 var(--font-body)', color: 'var(--white)' }}>{t}</Link>
+              ))}
+            </nav>
+          ))}
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, marginTop: 48, paddingTop: 24, borderTop: '1px solid var(--hairline-inverse)', flexWrap: 'wrap' }}>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10, font: 'var(--fw-light) var(--fs-xs)/1 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>
+            <Dot size={6} /> No es lo que ves.
+          </span>
+          <span style={{ font: 'var(--fw-light) var(--fs-xs)/1 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>© {new Date().getFullYear()} Suggestion · Marketing de performance en Ica, Perú</span>
+        </div>
       </div>
     </footer>
   );

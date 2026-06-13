@@ -386,7 +386,7 @@ export default function NosotrosPage() {
               El equipo
             </span>
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Las áreas detrás de Suggestion

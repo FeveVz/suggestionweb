@@ -1,46 +1,33 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Suggestion | Agencia de Marketing Digital y Redes Sociales en Perú',
-    template: '%s | Suggestion — Agencia de Marketing Digital',
+    default: 'Suggestion | Agencia de marketing de performance en Ica, Perú',
+    template: '%s | Suggestion',
   },
   description:
-    'Agencia de marketing digital especializada en gestión de redes sociales, publicidad digital, SEO y branding. Potenciamos marcas con estrategias que generan clientes reales. Consultoría gratuita.',
+    'Convertimos atención en ventas. Agencia de marketing de performance en Ica: leads, citas y cierres medibles para inmobiliarias, automotrices, turismo y consumo. No vendemos likes, vendemos resultados.',
   keywords: [
-    'agencia de marketing digital',
-    'agencia de marketing digital peru',
-    'gestión de redes sociales',
-    'community manager peru',
-    'publicidad digital',
-    'google ads peru',
+    'agencia de marketing de performance',
+    'marketing de performance peru',
+    'agencia de marketing ica',
     'meta ads peru',
-    'seo posicionamiento web',
-    'diseño web peru',
-    'branding peru',
-    'marketing digital lima',
-    'agencia digital peru',
+    'google ads peru',
+    'generación de leads',
+    'campañas de performance',
+    'publicidad digital ica',
+    'embudos de venta',
+    'CRO landing pages',
+    'marketing inmobiliario',
+    'marketing automotriz',
   ],
   authors: [{ name: 'Suggestion' }],
   creator: 'Suggestion',
@@ -57,15 +44,15 @@ export const metadata: Metadata = {
     locale: 'es_PE',
     url: siteUrl,
     siteName: 'Suggestion',
-    title: 'Suggestion | Agencia de Marketing Digital y Redes Sociales en Perú',
+    title: 'Suggestion | Convertimos atención en ventas',
     description:
-      'Potenciamos marcas con estrategias de marketing digital, gestión de redes sociales y publicidad digital. Resultados reales, clientes reales.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Suggestion — Marketing digital que genera clientes' }],
+      'Agencia de marketing de performance en Ica, Perú. Leads, citas y cierres medibles — no métricas de vanidad.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Suggestion — Convertimos atención en ventas' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Suggestion | Agencia de Marketing Digital',
-    description: 'Gestión de redes sociales, publicidad digital y SEO en Perú. Consultoría gratuita.',
+    title: 'Suggestion | Convertimos atención en ventas',
+    description: 'Marketing de performance en Ica, Perú. Leads, citas y cierres medibles.',
     creator: '@suggestion',
     images: ['/og-image.png'],
   },
@@ -78,9 +65,15 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   description:
-    'Agencia de marketing digital especializada en gestión de redes sociales, publicidad digital, SEO y branding en Perú.',
+    'Agencia de marketing de performance en Ica, Perú. Convertimos atención en ventas: leads, citas y cierres medibles.',
+  slogan: 'Convertimos atención en ventas',
   telephone: '+51937770159',
   email: 'hola@suggestion.pe',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Ica',
+    addressCountry: 'PE',
+  },
   areaServed: { '@type': 'Country', name: 'Perú' },
   priceRange: '$$',
   sameAs: [
@@ -89,14 +82,14 @@ const jsonLd = {
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Servicios de Marketing Digital',
+    name: 'Servicios de marketing de performance',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Marketing Digital' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gestión de Redes Sociales' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Publicidad Digital' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO y Posicionamiento Web' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding y Diseño' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Desarrollo Web' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Performance ads (Meta, Google, TikTok)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Landing pages & CRO' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Embudos & CRM' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Citas calificadas' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Creatividad de conversión' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medición & reporting' } },
     ],
   },
 };
@@ -108,19 +101,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body
-        className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased bg-background text-foreground`}
-      >
+      <body className="antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <MotionProvider>
-          <div className="flex min-h-screen flex-col">
+          <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
             <Header />
-            <div className="flex-1">
-              {children}
-            </div>
+            <div style={{ flex: 1 }}>{children}</div>
             <Footer />
           </div>
         </MotionProvider>

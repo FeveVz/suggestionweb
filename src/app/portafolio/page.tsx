@@ -543,7 +543,7 @@ export default function PortafolioPage() {
             className="max-w-3xl mx-auto"
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Listo para tu <span style={{ color: '#FF8C00' }}>historia de éxito?</span>

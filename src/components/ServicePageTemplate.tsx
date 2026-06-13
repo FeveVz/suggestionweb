@@ -274,7 +274,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Por qué elegir nuestro servicio?
@@ -335,7 +335,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Qué incluye nuestro servicio
@@ -386,7 +386,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Nuestro Proceso
@@ -446,7 +446,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Lo que dicen nuestros clientes
@@ -496,7 +496,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Preguntas Frecuentes
@@ -548,7 +548,7 @@ export default function ServicePageTemplate({
             className="max-w-3xl mx-auto"
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Listo para <span style={{ color: heroData.color }}>empezar?</span>
@@ -581,7 +581,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Servicios Relacionados
