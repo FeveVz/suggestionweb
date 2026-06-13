@@ -50,18 +50,7 @@ export default function EstructurasPublicitariasPage() {
     { step: '04', title: 'Instalación', description: 'Colocación y monitoreo durante la campaña.' },
   ];
 
-  const stats = [
-    { value: '5,000+', label: 'Ubicaciones disponibles' },
-    { value: '200+', label: 'Ciudades cubiertas' },
-    { value: '50M+', label: 'Impresiones diarias' },
-    { value: '1,000+', label: 'Campañas ejecutadas' },
-  ];
 
-  const testimonials = [
-    { quote: 'El billboard en Periférico nos dio notoriedad inmediata. La gente lo mencionaba en redes.', author: 'Alberto Ramírez', role: 'Brand Manager' },
-    { quote: 'Excelente asesoría en ubicaciones. No solo venden, recomiendan lo que funciona.', author: 'Sandra López', role: 'Directora de Marketing' },
-    { quote: 'Producción e instalación impecables. Cero problemas, máxima visibilidad.', author: 'Diego Torres', role: 'CEO' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto cuesta un billboard?', answer: 'Los precios varían según ubicación, tamaño y temporada. Desde $5,000 USD mensuales en secundarias hasta $50,000+ en primarias.' },
@@ -83,8 +72,6 @@ export default function EstructurasPublicitariasPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

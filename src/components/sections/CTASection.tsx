@@ -4,7 +4,9 @@ import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { CheckCircle, Loader2 } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+
+const WHATSAPP_NUMBER = '51937770159';
 
 const RorschachCTA = ({ className, color = '#FF8C00' }: { className?: string; color?: string }) => (
   <svg viewBox="0 0 400 300" className={className} xmlns="http://www.w3.org/2000/svg" fill={color}>
@@ -19,18 +21,26 @@ const RorschachCTA = ({ className, color = '#FF8C00' }: { className?: string; co
 );
 
 export default function CTASection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
+    const lines = [
+      `Hola, soy ${formData.name}.`,
+      formData.company ? `Empresa: ${formData.company}` : null,
+      `Email: ${formData.email}`,
+      '',
+      formData.message,
+    ].filter((l) => l !== null);
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
     setIsSubmitted(true);
   };
 
@@ -65,7 +75,7 @@ export default function CTASection() {
             >
               <div className="h-px w-12 bg-white/20" />
               <span
-                className="text-xs tracking-[0.25em] uppercase font-medium text-white/30"
+                className="text-xs tracking-[0.25em] uppercase font-medium text-white/50"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 Contacto
@@ -86,7 +96,7 @@ export default function CTASection() {
             </motion.h2>
 
             <motion.p
-              className="text-base text-white/40 mb-10 leading-relaxed max-w-sm"
+              className="text-base text-white/65 mb-10 leading-relaxed max-w-sm"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
@@ -113,7 +123,7 @@ export default function CTASection() {
                     style={{ backgroundColor: b.accent }}
                   />
                   <span
-                    className="text-sm text-white/50"
+                    className="text-sm text-white/75"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {b.label}
@@ -130,7 +140,7 @@ export default function CTASection() {
               transition={{ delay: 0.55 }}
             >
               <div className="flex -space-x-2">
-                {['MG', 'CR', 'AM', '+'].map((l, i) => (
+                {['RC', 'JS', 'RL', '+'].map((l, i) => (
                   <div
                     key={i}
                     className="w-8 h-8 flex items-center justify-center text-[10px] font-bold text-white border border-black"
@@ -144,10 +154,10 @@ export default function CTASection() {
                 ))}
               </div>
               <span
-                className="text-xs text-white/30"
+                className="text-xs text-white/55"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
-                +150 marcas que crecieron con nosotros
+                +50 marcas que crecieron con nosotros
               </span>
             </motion.div>
           </div>
@@ -169,18 +179,25 @@ export default function CTASection() {
                   className="text-2xl font-black text-white mb-3 uppercase"
                   style={{ fontFamily: 'var(--font-space-grotesk)' }}
                 >
-                  ¡MENSAJE ENVIADO!
+                  ¡CASI LISTO!
                 </h3>
-                <p className="text-sm text-white/40" style={{ fontFamily: 'var(--font-dm-sans)' }}>
-                  Te contactaremos muy pronto.
+                <p className="text-sm text-white/60" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  Abrimos WhatsApp con tu mensaje — solo dale enviar y te respondemos en menos de 24 h.
                 </p>
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-6 text-xs text-white/40 hover:text-white underline underline-offset-4 transition-colors"
+                  style={{ fontFamily: 'var(--font-dm-sans)' }}
+                >
+                  Volver al formulario
+                </button>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label
-                      className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                      className="block text-xs text-white/55 mb-2 tracking-wider uppercase"
                       style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       Nombre *
@@ -191,13 +208,13 @@ export default function CTASection() {
                       onChange={handleChange}
                       placeholder="Tu nombre"
                       required
-                      className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#FF8C00] focus:ring-0 rounded-none h-12"
+                      className="bg-white/5 border-white/15 text-white placeholder:text-white/40 focus:border-[#FF8C00] focus:ring-0 rounded-none h-12"
                       style={{ fontFamily: 'var(--font-dm-sans)' }}
                     />
                   </div>
                   <div>
                     <label
-                      className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                      className="block text-xs text-white/55 mb-2 tracking-wider uppercase"
                       style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       Email *
@@ -209,7 +226,7 @@ export default function CTASection() {
                       onChange={handleChange}
                       placeholder="tu@email.com"
                       required
-                      className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#FF8C00] focus:ring-0 rounded-none h-12"
+                      className="bg-white/5 border-white/15 text-white placeholder:text-white/40 focus:border-[#FF8C00] focus:ring-0 rounded-none h-12"
                       style={{ fontFamily: 'var(--font-dm-sans)' }}
                     />
                   </div>
@@ -217,7 +234,7 @@ export default function CTASection() {
 
                 <div>
                   <label
-                    className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                    className="block text-xs text-white/55 mb-2 tracking-wider uppercase"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     Empresa
@@ -227,14 +244,14 @@ export default function CTASection() {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Nombre de tu empresa"
-                    className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#FF8C00] focus:ring-0 rounded-none h-12"
+                    className="bg-white/5 border-white/15 text-white placeholder:text-white/40 focus:border-[#FF8C00] focus:ring-0 rounded-none h-12"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   />
                 </div>
 
                 <div>
                   <label
-                    className="block text-xs text-white/30 mb-2 tracking-wider uppercase"
+                    className="block text-xs text-white/55 mb-2 tracking-wider uppercase"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     Mensaje *
@@ -246,28 +263,21 @@ export default function CTASection() {
                     placeholder="Cuéntanos sobre tu proyecto..."
                     required
                     rows={5}
-                    className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#FF8C00] focus:ring-0 rounded-none resize-none"
+                    className="bg-white/5 border-white/15 text-white placeholder:text-white/40 focus:border-[#FF8C00] focus:ring-0 rounded-none resize-none"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-3 py-4 text-sm font-black text-black uppercase tracking-widest transition-all disabled:opacity-60 hover:opacity-90"
+                  className="w-full flex items-center justify-center gap-3 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:opacity-90"
                   style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}>
-                        <Loader2 className="w-4 h-4" />
-                      </motion.div>
-                      ENVIANDO...
-                    </>
-                  ) : (
-                    'ENVIAR MENSAJE →'
-                  )}
+                  ENVIAR POR WHATSAPP →
                 </button>
+                <p className="text-[11px] text-white/40 text-center" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                  Se abre WhatsApp con tu mensaje listo. También puedes escribirnos a hola@suggestion.pe
+                </p>
               </form>
             )}
           </motion.div>

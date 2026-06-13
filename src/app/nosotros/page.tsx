@@ -45,51 +45,51 @@ const values = [
   },
 ];
 
+// TODO: reemplazar por el equipo real (nombre, cargo, bio y foto) cuando el cliente lo envíe.
 const team = [
   {
-    name: 'María González',
-    role: 'CEO & Founder',
-    description: '15+ años de experiencia en marketing digital. Anteriormente lideró equipos en empresas Fortune 500.',
+    name: 'Estrategia & Performance',
+    role: 'Pauta en Meta y Google',
+    description: 'Planificamos y ejecutamos campañas orientadas a resultados medibles: leads, ventas y contratos.',
     image: null,
-    initials: 'MG'
+    initials: 'SP'
   },
   {
-    name: 'Carlos Ramírez',
-    role: 'Director de Estrategia',
-    description: 'Especialista en growth marketing y optimización de conversiones. Certificado en Google y Meta.',
+    name: 'Creatividad & Contenido',
+    role: 'Diseño y comunicación',
+    description: 'Creamos las piezas, el copy y la identidad visual que conectan con tu audiencia.',
     image: null,
-    initials: 'CR'
+    initials: 'CC'
   },
   {
-    name: 'Ana Martínez',
-    role: 'Directora Creativa',
-    description: 'Diseñadora y creativa premiada. Experta en branding y comunicación visual.',
+    name: 'Medios & Optimización',
+    role: 'Gestión de inversión',
+    description: 'Administramos el presupuesto publicitario y optimizamos cada campaña para maximizar el retorno.',
     image: null,
-    initials: 'AM'
+    initials: 'MO'
   },
   {
-    name: 'Roberto Sánchez',
-    role: 'Director de Tecnología',
-    description: 'Desarrollador full-stack con enfoque en performance y UX. Líder técnico del equipo.',
+    name: 'Cuentas & Soporte',
+    role: 'Atención al cliente',
+    description: 'Tu punto de contacto: comunicación transparente y reportes claros en cada etapa.',
     image: null,
-    initials: 'RS'
+    initials: 'CS'
   },
 ];
 
 const milestones = [
-  { year: '2015', title: 'Fundación', description: 'Nacimos con la misión de transformar el marketing digital.' },
-  { year: '2017', title: 'Primeros 50 Clientes', description: 'Alcanzamos nuestra primera meta significativa de clientes.' },
-  { year: '2019', title: 'Expansión Regional', description: 'Abrimos oficinas en 3 países de Latinoamérica.' },
-  { year: '2021', title: 'Certificación Google Partner', description: 'Reconocidos como partners certificados de Google.' },
-  { year: '2023', title: '150+ Clientes Activos', description: 'Crecimiento sostenido con alta tasa de retención.' },
-  { year: '2025', title: 'Innovación en IA', description: 'Integramos inteligencia artificial en nuestros procesos.' },
+  { year: '2018', title: 'Fundación', description: 'Nacimos con la misión de transformar el marketing digital de las marcas peruanas.' },
+  { year: '2020', title: 'Especialización en performance', description: 'Consolidamos nuestra propuesta en Meta Ads y Google enfocada en resultados medibles.' },
+  { year: '2022', title: 'Crecimiento sostenido', description: 'Ampliamos nuestra cartera de clientes en sectores como inmobiliaria, hotelería y agroindustria.' },
+  { year: '2024', title: '+50 marcas acompañadas', description: 'Campañas que generan leads, ventas y contratos reales para nuestros clientes.' },
+  { year: '2025', title: 'Marketing impulsado por datos', description: 'Optimización continua basada en datos para maximizar el retorno de cada campaña.' },
 ];
 
 const stats = [
-  { value: '150+', label: 'Clientes Satisfechos', icon: Users },
-  { value: '500+', label: 'Proyectos Completados', icon: Briefcase },
-  { value: '95%', label: 'Tasa de Retención', icon: Heart },
-  { value: '10+', label: 'Años de Experiencia', icon: Clock },
+  { value: '+50', label: 'Clientes que confían en nosotros', icon: Users },
+  { value: '7', label: 'Años de experiencia', icon: Clock },
+  { value: '+350', label: 'Leads en una sola campaña', icon: Briefcase },
+  { value: 'S/350K', label: 'En ventas generadas', icon: Heart },
 ];
 
 // Horizontal info cards for better flow
@@ -127,7 +127,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }
+    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }
   }
 };
 
@@ -147,17 +147,13 @@ export default function NosotrosPage() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-black">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-40 -right-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#FF8C0015' }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
-          <motion.div
+          <div
             className="absolute -bottom-40 -left-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#00BFFF10' }}
-            animate={{ scale: [1.2, 1, 1.2] }}
-            transition={{ duration: 10, repeat: Infinity }}
           />
         </div>
 
@@ -178,11 +174,11 @@ export default function NosotrosPage() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+              className="text-[clamp(2.2rem,6vw,4.5rem)] font-black text-white mb-4 sm:mb-6 leading-[0.95] tracking-tight uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Transformando marcas en{' '}
-              <span className="text-gradient">historias de éxito</span>
+              Transformamos marcas en{' '}
+              <span style={{ color: '#FF8C00' }}>historias de éxito</span>
             </motion.h1>
 
             <motion.p
@@ -197,8 +193,8 @@ export default function NosotrosPage() {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <Button
                 size="lg"
-                className="text-white font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full shadow-lg w-full sm:w-auto min-h-[52px]"
-                style={{ backgroundColor: '#FF8C00' }}
+                className="text-black font-black uppercase tracking-widest px-6 sm:px-8 py-4 sm:py-5 rounded-none w-full sm:w-auto min-h-[52px] text-xs sm:text-sm hover:opacity-90"
+                style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                 asChild
               >
                 <Link href="/#contacto">
@@ -389,17 +385,17 @@ export default function NosotrosPage() {
             >
               El equipo
             </span>
-            <h2 
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6"
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              Las mentes detrás de Suggestion
+              Las áreas detrás de Suggestion
             </h2>
-            <p 
+            <p
               className="text-base sm:text-lg text-gray-400"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
-              Profesionales apasionados con experiencia comprobada.
+              Un equipo multidisciplinario trabajando como extensión del tuyo.
             </p>
           </motion.div>
 

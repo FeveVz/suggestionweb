@@ -132,7 +132,7 @@ export default function Header() {
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
                         >
-                          <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 sm:p-6 w-[90vw] max-w-[800px]">
+                          <div className="bg-white rounded-lg shadow-2xl border border-gray-100 p-4 sm:p-6 w-[90vw] max-w-[800px]">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
                               {/* Servicios Principales */}
                               <div>
@@ -221,7 +221,7 @@ export default function Header() {
                             </div>
 
                             {/* CTA Card */}
-                            <div className="mt-4 p-4 rounded-xl bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div className="mt-4 p-4 rounded-lg bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
                               <div className="text-center sm:text-left">
                                 <h4 className="text-white font-bold text-sm" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                                   ¿No estás seguro qué necesitas?
@@ -232,8 +232,8 @@ export default function Header() {
                               </div>
                               <Link
                                 href="#contacto"
-                                className="text-sm font-semibold px-4 py-2.5 sm:py-2 rounded-full transition-all hover:opacity-90 min-h-[44px] flex items-center"
-                                style={{ backgroundColor: '#FF8C00', color: 'white', fontFamily: 'var(--font-dm-sans)' }}
+                                className="text-xs font-bold uppercase tracking-wider px-5 py-2.5 sm:py-2 rounded-none transition-all hover:opacity-90 min-h-[44px] flex items-center"
+                                style={{ backgroundColor: '#FF8C00', color: 'black', fontFamily: 'var(--font-space-grotesk)' }}
                                 onClick={() => setIsDropdownOpen(false)}
                               >
                                 Agendar
@@ -259,8 +259,8 @@ export default function Header() {
               
               {/* CTA Button */}
               <Button
-                className="text-white font-semibold px-4 sm:px-5 py-2 text-sm rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg min-h-[44px]"
-                style={{ backgroundColor: '#FF8C00' }}
+                className="text-black font-bold uppercase tracking-wider px-5 sm:px-6 py-2 text-xs rounded-none transition-all duration-300 hover:opacity-90 min-h-[44px]"
+                style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                 asChild
               >
                 <Link href="#contacto">Hablemos</Link>

@@ -50,7 +50,7 @@ export default function BlogSection() {
               transition={{ duration: 0.5 }}
             >
               <div className="h-px w-12 bg-white/20" />
-              <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+              <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/50" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                 Blog
               </span>
             </motion.div>
@@ -74,7 +74,7 @@ export default function BlogSection() {
           >
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white/30 hover:text-white transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white transition-colors group"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Ver todos los artículos
@@ -115,11 +115,11 @@ export default function BlogSection() {
                       >
                         {post.category}
                       </span>
-                      <div className="flex items-center gap-1.5 text-white/20">
+                      <div className="flex items-center gap-1.5 text-white/45">
                         <Calendar className="w-3 h-3" />
                         <span className="text-[10px]" style={{ fontFamily: 'var(--font-dm-sans)' }}>{post.date}</span>
                       </div>
-                      <span className="text-[10px] text-white/20" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                      <span className="text-[10px] text-white/45" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                         {post.readTime}
                       </span>
                     </div>
@@ -131,7 +131,7 @@ export default function BlogSection() {
                       {post.title}
                     </h3>
                     <p
-                      className="text-sm text-white/30 leading-relaxed"
+                      className="text-sm text-white/60 leading-relaxed"
                       style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {post.excerpt}

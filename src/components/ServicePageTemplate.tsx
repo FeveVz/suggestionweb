@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteTestimonials, siteStats } from '@/lib/site-content';
 import { 
   ArrowRight, 
   CheckCircle,
@@ -99,11 +100,13 @@ interface ServicePageProps {
     title: string;
     description: string;
   }>;
-  stats: Array<{
+  /** Ignorado: el sitio usa cifras reales compartidas (siteStats). Se mantiene opcional por compatibilidad. */
+  stats?: Array<{
     value: string;
     label: string;
   }>;
-  testimonials: Array<{
+  /** Ignorado: el sitio usa testimonios reales compartidos (siteTestimonials). Se mantiene opcional por compatibilidad. */
+  testimonials?: Array<{
     quote: string;
     author: string;
     role: string;
@@ -132,7 +135,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }
+    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }
   }
 };
 
@@ -141,11 +144,11 @@ export default function ServicePageTemplate({
   benefits,
   features,
   process,
-  stats,
-  testimonials,
   faqs,
   relatedServices
 }: ServicePageProps) {
+  const stats = siteStats;
+  const testimonials = siteTestimonials;
   const IconComponent = iconMap[heroData.iconName] || TrendingUp;
 
   return (
@@ -153,17 +156,13 @@ export default function ServicePageTemplate({
       {/* Hero Section */}
       <section className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-white">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-40 -right-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: `${heroData.color}08` }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
-          <motion.div
+          <div
             className="absolute -bottom-40 -left-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#00BFFF08' }}
-            animate={{ scale: [1.2, 1, 1.2] }}
-            transition={{ duration: 10, repeat: Infinity }}
           />
         </div>
 
@@ -178,14 +177,12 @@ export default function ServicePageTemplate({
               variants={itemVariants}
               className="flex justify-center mb-4 sm:mb-6"
             >
-              <motion.div
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center"
+              <div
+                className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center"
                 style={{ backgroundColor: `${heroData.color}15` }}
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
               >
                 <IconComponent className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: heroData.color }} />
-              </motion.div>
+              </div>
             </motion.div>
 
             <motion.span
@@ -198,11 +195,11 @@ export default function ServicePageTemplate({
 
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6 leading-tight"
+              className="text-[clamp(2.2rem,6vw,4.5rem)] font-black text-black mb-4 sm:mb-6 leading-[0.95] tracking-tight uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               {heroData.title}{' '}
-              <span className="text-gradient">{heroData.highlightedWord}</span>
+              <span style={{ color: heroData.color }}>{heroData.highlightedWord}</span>
             </motion.h1>
 
             <motion.p
@@ -214,23 +211,22 @@ export default function ServicePageTemplate({
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="text-white font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full shadow-lg w-full sm:w-auto min-h-[52px] text-sm sm:text-base"
-                  style={{ backgroundColor: heroData.color }}
-                  asChild
-                >
-                  <Link href="#contacto">
-                    {heroData.cta}
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                  </Link>
-                </Button>
-              </motion.div>
+              <Button
+                size="lg"
+                className="text-black font-black uppercase tracking-widest px-6 sm:px-8 py-4 sm:py-5 rounded-none w-full sm:w-auto min-h-[52px] text-xs sm:text-sm hover:opacity-90"
+                style={{ backgroundColor: heroData.color, fontFamily: 'var(--font-space-grotesk)' }}
+                asChild
+              >
+                <Link href="#contacto">
+                  {heroData.cta}
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                </Link>
+              </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-black text-black font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full w-full sm:w-auto min-h-[52px] text-sm sm:text-base"
+                className="border border-black/30 text-black font-semibold uppercase tracking-wider px-6 sm:px-8 py-4 sm:py-5 rounded-none w-full sm:w-auto min-h-[52px] text-xs sm:text-sm hover:border-black"
+                style={{ fontFamily: 'var(--font-dm-sans)' }}
                 asChild
               >
                 <Link href="#proceso">Ver Proceso</Link>
@@ -278,7 +274,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               ¿Por qué elegir nuestro servicio?
@@ -302,13 +298,12 @@ export default function ServicePageTemplate({
                   <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                     <CardContent className="p-4 sm:p-6 md:p-8">
                       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                        <motion.div
-                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0"
+                        <div
+                          className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0"
                           style={{ backgroundColor: `${heroData.color}15` }}
-                          whileHover={{ scale: 1.1, rotate: 5 }}
                         >
                           <BenefitIcon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: heroData.color }} />
-                        </motion.div>
+                        </div>
                         <div className="text-center sm:text-left">
                           <h3
                             className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3"
@@ -340,7 +335,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Qué incluye nuestro servicio
@@ -358,13 +353,12 @@ export default function ServicePageTemplate({
               >
                 <Card className="bg-gray-50 border-none hover:bg-white hover:shadow-lg transition-all duration-300 h-full">
                   <CardContent className="p-4 sm:p-6">
-                    <motion.div
-                      className="w-10 h-10 rounded-full flex items-center justify-center mb-3 sm:mb-4"
+                    <div
+                      className="w-10 h-10 flex items-center justify-center mb-3 sm:mb-4"
                       style={{ backgroundColor: heroData.color }}
-                      whileHover={{ scale: 1.1 }}
                     >
                       <CheckCircle className="w-5 h-5 text-white" />
-                    </motion.div>
+                    </div>
                     <h3
                       className="text-base sm:text-lg font-bold text-black mb-2"
                       style={{ fontFamily: 'var(--font-space-grotesk)' }}
@@ -392,7 +386,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Nuestro Proceso
@@ -452,7 +446,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Lo que dicen nuestros clientes
@@ -502,7 +496,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Preguntas Frecuentes
@@ -540,11 +534,9 @@ export default function ServicePageTemplate({
       {/* CTA Section */}
       <section id="contacto" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-black relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-20 -right-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: `${heroData.color}15` }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
         </div>
 
@@ -556,27 +548,25 @@ export default function ServicePageTemplate({
             className="max-w-3xl mx-auto"
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              ¿Listo para empezar?
+              ¿Listo para <span style={{ color: heroData.color }}>empezar?</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una consultoría gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                size="lg"
-                className="text-white font-semibold px-6 sm:px-10 py-5 sm:py-6 rounded-full text-base sm:text-lg shadow-xl min-h-[52px]"
-                style={{ backgroundColor: heroData.color }}
-                asChild
-              >
-                <Link href="/#contacto">
-                  Solicitar Consultoría Gratuita
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                </Link>
-              </Button>
-            </motion.div>
+            <Button
+              size="lg"
+              className="text-black font-black uppercase tracking-widest px-6 sm:px-10 py-5 sm:py-6 rounded-none text-sm sm:text-base min-h-[52px] hover:opacity-90"
+              style={{ backgroundColor: heroData.color, fontFamily: 'var(--font-space-grotesk)' }}
+              asChild
+            >
+              <Link href="/#contacto">
+                Solicitar Consultoría Gratuita
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -591,7 +581,7 @@ export default function ServicePageTemplate({
             viewport={{ once: true }}
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Servicios Relacionados
@@ -612,13 +602,12 @@ export default function ServicePageTemplate({
                   <Link href={service.href}>
                     <Card className="bg-gray-50 border-none hover:shadow-lg transition-all duration-300 h-full group min-h-[120px] sm:min-h-[140px]">
                       <CardContent className="p-4 sm:p-6 text-center">
-                        <motion.div
-                          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-4"
+                        <div
+                          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center mx-auto mb-2 sm:mb-4"
                           style={{ backgroundColor: `${heroData.color}15` }}
-                          whileHover={{ scale: 1.1, rotate: 5 }}
                         >
                           <ServiceIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" style={{ color: heroData.color }} />
-                        </motion.div>
+                        </div>
                         <h3
                           className="text-xs sm:text-sm md:text-base font-bold text-black group-hover:text-gray-700 transition-colors"
                           style={{ fontFamily: 'var(--font-space-grotesk)' }}

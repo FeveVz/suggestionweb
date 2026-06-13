@@ -50,18 +50,7 @@ export default function MaterialPOPPage() {
     { step: '04', title: 'Instalación', description: 'Logística y colocación en tiendas.' },
   ];
 
-  const stats = [
-    { value: '25%', label: 'Incremento promedio en ventas' },
-    { value: '10,000+', label: 'Displays producidos' },
-    { value: '50+', label: 'Cadenas atendidas' },
-    { value: '100%', label: 'Personalizable' },
-  ];
 
-  const testimonials = [
-    { quote: 'El display triplicó la rotación del producto en las primeras 2 semanas.', author: 'Luis Fernando Morales', role: 'Trade Marketing Manager' },
-    { quote: 'Calidad de producción que aguanta el ritmo de una tienda ocupada.', author: 'Claudia Ramírez', role: 'Gerente de Cuenta' },
-    { quote: 'El diseño destacaba entre 50 productos similares. Mision cumplida.', author: 'Roberto Ángel Gómez', role: 'Product Manager' },
-  ];
 
   const faqs = [
     { question: '¿Qué materiales utilizan?', answer: 'Corrugado, plástico, metal, madera, acrílico según durabilidad y presupuesto requerido.' },
@@ -83,8 +72,6 @@ export default function MaterialPOPPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

@@ -50,18 +50,7 @@ export default function ProduccionAudiovisualPage() {
     { step: '04', title: 'Post-producción', description: 'Edición, color, audio, motion graphics, entregables.' },
   ];
 
-  const stats = [
-    { value: '500+', label: 'Videos producidos' },
-    { value: '50M+', label: 'Views generados' },
-    { value: '100+', label: 'Campañas' },
-    { value: '98%', label: 'Satisfacción' },
-  ];
 
-  const testimonials = [
-    { quote: 'El video corporativo que crearon superó nuestras expectativas. Lo usamos en todo.', author: 'Andrés Molina', role: 'Director de Marca' },
-    { quote: 'Entendieron el concepto desde la primera reunión. El resultado fue exacto y más.', author: 'María José López', role: 'Marketing Manager' },
-    { quote: 'Calidad de producción de nivel internacional a precios competitivos.', author: 'Carlos Eduardo Ruiz', role: 'CEO' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto cuesta un video?', answer: 'Un video simple puede empezar en $2,000. Producciones complejas con locación, talento y postproducción avanzada varían significativamente.' },
@@ -83,8 +72,6 @@ export default function ProduccionAudiovisualPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

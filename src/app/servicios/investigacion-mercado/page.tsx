@@ -50,18 +50,7 @@ export default function InvestigacionMercadoPage() {
     { step: '04', title: 'Insights', description: 'Entregamos hallazgos con recomendaciones accionables.' },
   ];
 
-  const stats = [
-    { value: '300+', label: 'Estudios realizados' },
-    { value: '15+', label: 'Industrias cubiertas' },
-    { value: '50K+', label: 'Encuestas procesadas' },
-    { value: '98%', label: 'Precisión metodológica' },
-  ];
 
-  const testimonials = [
-    { quote: 'La investigación nos reveló oportunidades que no habíamos visto. Cambió nuestra estrategia completamente.', author: 'Patricia Sánchez', role: 'Directora de Estrategia' },
-    { quote: 'Datos sólidos que usamos para convencer a la junta directiva. ROI de la investigación: infinito.', author: 'Roberto Mendoza', role: 'CEO' },
-    { quote: 'Profesionales que saben traducir datos en decisiones de negocio.', author: 'Carolina Jiménez', role: 'Marketing Director' },
-  ];
 
   const faqs = [
     { question: '¿Qué métodos de investigación utilizan?', answer: 'Combinamos métodos cuantitativos (encuestas, análisis de datos) y cualitativos (entrevistas, focus groups) según los objetivos.' },
@@ -83,8 +72,6 @@ export default function InvestigacionMercadoPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

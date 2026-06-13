@@ -50,18 +50,7 @@ export default function ImprentaCorporativaPage() {
     { step: '04', title: 'Entrega', description: 'Empacado y logística de envío.' },
   ];
 
-  const stats = [
-    { value: '1M+', label: 'Piezas impresas mensuales' },
-    { value: '500+', label: 'Clientes activos' },
-    { value: '50+', label: 'Tipos de papel' },
-    { value: '24h', label: 'Entrega express disponible' },
-  ];
 
-  const testimonials = [
-    { quote: 'La calidad de impresión superó nuestras expectativas. Muy profesionales.', author: 'María Elena Vargas', role: 'Gerente de Compras' },
-    { quote: 'Liberaron el archivo el martes, viernes tenían las tarjetas en mi oficina.', author: 'Roberto Díaz', role: 'Director General' },
-    { quote: 'El equipo siempre encuentra la mejor solución técnico-económica.', author: 'Patricia Luna', role: 'Marketing Manager' },
-  ];
 
   const faqs = [
     { question: '¿Qué formatos de archivo aceptan?', answer: 'PDF, AI, PSD, INDD. Preferimos PDF de alta resolución con sangría incluida.' },
@@ -83,8 +72,6 @@ export default function ImprentaCorporativaPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

@@ -50,18 +50,7 @@ export default function DesarrolloWebPage() {
     { step: '04', title: 'Lanzamiento', description: 'Testing, optimización y puesta en producción con soporte.' },
   ];
 
-  const stats = [
-    { value: '< 3s', label: 'Tiempo de carga' },
-    { value: '99.9%', label: 'Uptime garantizado' },
-    { value: '300+', label: 'Sitios desarrollados' },
-    { value: '100%', label: 'Responsive' },
-  ];
 
-  const testimonials = [
-    { quote: 'Nuestro nuevo sitio cargó 4x más rápido y las conversiones subieron un 45%.', author: 'Patricia Soto', role: 'E-commerce Manager' },
-    { quote: 'El equipo entendió exactamente qué necesitábamos y lo entregó antes de tiempo.', author: 'Miguel Ángel Torres', role: 'CEO' },
-    { quote: 'Profesionales que saben que un sitio web es una herramienta de ventas, no solo un cartel digital.', author: 'Lucía Mendoza', role: 'Marketing Director' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto cuesta un sitio web?', answer: 'Depende del alcance. Una landing page puede empezar desde $1,500, un sitio corporativo desde $3,000, y un e-commerce desde $5,000.' },
@@ -83,8 +72,6 @@ export default function DesarrolloWebPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

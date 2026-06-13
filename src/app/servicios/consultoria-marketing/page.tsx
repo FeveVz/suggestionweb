@@ -50,18 +50,7 @@ export default function ConsultoriaPage() {
     { step: '04', title: 'Implementación', description: 'Acompañamiento en la ejecución de recomendaciones.' },
   ];
 
-  const stats = [
-    { value: '500+', label: 'Consultorías realizadas' },
-    { value: '85%', label: 'Implementan recomendaciones' },
-    { value: '3x', label: 'Mejora promedio en ROI' },
-    { value: '10+', label: 'Años de experiencia' },
-  ];
 
-  const testimonials = [
-    { quote: 'En una sesión identificaron problemas que llevábamos 2 años sin ver. El plan de acción fue claro y ejecutable.', author: 'Roberto Jiménez', role: 'CEO' },
-    { quote: 'La consultoría nos ahorró meses de prueba y error. Inversión de tiempo bien valiosa.', author: 'Carmen Elena Ruiz', role: 'Directora Comercial' },
-    { quote: 'Profesionales que hablan el lenguaje de los negocios, no solo el de marketing.', author: 'Fernando Delgado', role: 'Socio Director' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto dura una consultoría?', answer: 'Una consultoría puntual puede ser de 2-4 horas. Un proyecto completo de auditoría y plan estratégico toma 2-4 semanas.' },
@@ -83,8 +72,6 @@ export default function ConsultoriaPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

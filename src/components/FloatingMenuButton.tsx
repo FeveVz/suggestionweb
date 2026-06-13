@@ -106,7 +106,7 @@ export default function FloatingMenuButton() {
     };
   }, [isMenuOpen]);
 
-  const whatsappNumber = '15551234567';
+  const whatsappNumber = '51937770159';
   const whatsappMessage = encodeURIComponent('Hola, me gustaría obtener más información sobre sus servicios.');
 
   return (

@@ -50,18 +50,7 @@ export default function MerchandisingPage() {
     { step: '04', title: 'Entrega', description: 'Producción y logística hasta tu puerta.' },
   ];
 
-  const stats = [
-    { value: '5,000+', label: 'Productos disponibles' },
-    { value: '500+', label: 'Clientes activos' },
-    { value: '100K+', label: 'Artículos entregados' },
-    { value: '2-4', label: 'Semanas de entrega' },
-  ];
 
-  const testimonials = [
-    { quote: 'El merch de nuestra campaña fue un hit. La gente lo pedía.', author: 'Luis Hernández', role: 'Brand Manager' },
-    { quote: 'Calidad superior a otros proveedores. Los kits de bienvenida son un diferenciador.', author: 'Ana María Torres', role: 'HR Director' },
-    { quote: 'Resolverón nuestra urgencia de navidad con calidad y a tiempo.', author: 'Fernando García', role: 'Compras' },
-  ];
 
   const faqs = [
     { question: '¿Cuál es el pedido mínimo?', answer: 'Varía por producto, desde 50 unidades para artículos básicos hasta 500 para productos personalizados.' },
@@ -83,8 +72,6 @@ export default function MerchandisingPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

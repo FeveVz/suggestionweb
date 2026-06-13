@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import { Instagram, Linkedin, Facebook, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 
 const servicios = [
   { name: 'Marketing Digital', href: '/servicios/marketing-digital' },
@@ -22,10 +22,8 @@ const empresa = [
 ];
 
 const socialLinks = [
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/suggestion.mkt/' },
+  { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/Suggestion.mk' },
 ];
 
 export default function Footer() {
@@ -65,7 +63,7 @@ export default function Footer() {
             </Link>
 
             <p
-              className="text-sm text-white/30 leading-relaxed max-w-xs mb-8"
+              className="text-sm text-white/55 leading-relaxed max-w-xs mb-8"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Agencia de marketing digital que transforma tu presencia en resultados. Consigue lo posible haciendo lo imposible.
@@ -79,7 +77,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 border border-white/10 flex items-center justify-center text-white/30 hover:border-white/40 hover:text-white transition-all"
+                  className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-white/60 hover:text-white hover:bg-white/5 transition-all"
                   whileHover={{ scale: 1.05 }}
                   aria-label={s.name}
                 >
@@ -96,7 +94,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h4
-              className="text-[10px] tracking-[0.25em] uppercase text-white/20 mb-5 font-medium"
+              className="text-[10px] tracking-[0.25em] uppercase text-white/45 mb-5 font-medium"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Servicios
@@ -106,7 +104,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 hover:text-white transition-colors"
+                    className="text-sm text-white/65 hover:text-white transition-colors"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {link.name}
@@ -123,7 +121,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <h4
-              className="text-[10px] tracking-[0.25em] uppercase text-white/20 mb-5 font-medium"
+              className="text-[10px] tracking-[0.25em] uppercase text-white/45 mb-5 font-medium"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Empresa
@@ -133,7 +131,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 hover:text-white transition-colors"
+                    className="text-sm text-white/65 hover:text-white transition-colors"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {link.name}
@@ -150,27 +148,27 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4
-              className="text-[10px] tracking-[0.25em] uppercase text-white/20 mb-5 font-medium"
+              className="text-[10px] tracking-[0.25em] uppercase text-white/45 mb-5 font-medium"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Contacto
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-white/20 flex-shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#FF8C00]/70 flex-shrink-0 mt-0.5" />
                 <a href="mailto:hola@suggestion.pe" className="text-sm text-white/40 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   hola@suggestion.pe
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-white/20 flex-shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#FF8C00]/70 flex-shrink-0 mt-0.5" />
                 <a href="tel:+51937770159" className="text-sm text-white/40 hover:text-white transition-colors" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   +51 937 770 159
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-white/20 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-white/40 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+                <MapPin className="w-4 h-4 text-[#FF8C00]/70 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-white/65 leading-relaxed" style={{ fontFamily: 'var(--font-dm-sans)' }}>
                   Lima, Perú
                 </span>
               </li>
@@ -186,7 +184,7 @@ export default function Footer() {
           transition={{ delay: 0.5 }}
         >
           <p
-            className="text-xs text-white/20 text-center sm:text-left"
+            className="text-xs text-white/45 text-center sm:text-left"
             style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             © {new Date().getFullYear()} Suggestion. Todos los derechos reservados.
@@ -194,14 +192,14 @@ export default function Footer() {
           <div className="flex gap-6">
             <Link
               href="#"
-              className="text-xs text-white/20 hover:text-white/50 transition-colors"
+              className="text-xs text-white/50 hover:text-white transition-colors"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Privacidad
             </Link>
             <Link
               href="#"
-              className="text-xs text-white/20 hover:text-white/50 transition-colors"
+              className="text-xs text-white/50 hover:text-white transition-colors"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               Términos

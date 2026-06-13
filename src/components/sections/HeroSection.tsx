@@ -39,7 +39,7 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* H1 — keyword principal + impacto visual */}
+        {/* H1 — keyword principal + beneficio (SEO + conversión) */}
         <motion.h1
           className="text-[clamp(2.8rem,8vw,8rem)] font-black leading-[0.82] tracking-tight text-white uppercase"
           style={{ fontFamily: 'var(--font-space-grotesk)' }}
@@ -47,17 +47,17 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          AGENCIA DE<br />
-          <span style={{ color: '#FF8C00' }}>MARKETING</span><br />
-          DIGITAL.
+          MARKETING<br />
+          DIGITAL QUE<br />
+          GENERA <span style={{ color: '#FF8C00' }}>CLIENTES.</span>
         </motion.h1>
 
         <motion.p
-          className="text-base sm:text-lg text-white/60 mt-8 max-w-sm leading-relaxed"
+          className="text-base sm:text-lg text-white/70 mt-8 max-w-md leading-relaxed"
           style={{ fontFamily: 'var(--font-dm-sans)' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.7 }}
         >
           Gestionamos tus redes sociales, diseñamos campañas publicitarias y posicionamos tu negocio en Google. <strong className="text-white font-semibold">Resultados reales, no promesas.</strong>
         </motion.p>
@@ -66,7 +66,7 @@ export default function HeroSection() {
           className="flex flex-wrap gap-4 mt-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 0.85 }}
         >
           <Link
             href="#contacto"
@@ -84,17 +84,33 @@ export default function HeroSection() {
           </Link>
         </motion.div>
 
+        {/* Micro-señales de confianza */}
+        <motion.div
+          className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-6 text-xs text-white/45"
+          style={{ fontFamily: 'var(--font-dm-sans)' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.0 }}
+        >
+          {['Consultoría gratuita', 'Respuesta en 24 h', 'Sin permanencia'].map((item, i) => (
+            <span key={item} className="flex items-center gap-2">
+              {i > 0 && <span className="w-1 h-1 rounded-full bg-white/25" />}
+              {item}
+            </span>
+          ))}
+        </motion.div>
+
         {/* Stats */}
         <motion.div
           className="flex gap-10 mt-16 pt-10 border-t border-white/8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: 1.15 }}
         >
           {[
-            { value: '+150', label: 'Clientes' },
-            { value: '8+', label: 'Años' },
-            { value: '3×', label: 'ROI prom.' },
+            { value: '+50', label: 'Clientes' },
+            { value: '7', label: 'Años' },
+            { value: '+350', label: 'Leads' },
           ].map((s) => (
             <div key={s.label}>
               <div
@@ -104,7 +120,7 @@ export default function HeroSection() {
                 {s.value}
               </div>
               <div
-                className="text-[10px] text-white/30 uppercase tracking-wider mt-1"
+                className="text-[10px] text-white/50 uppercase tracking-wider mt-1"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 {s.label}

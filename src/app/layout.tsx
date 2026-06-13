@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -59,12 +60,14 @@ export const metadata: Metadata = {
     title: 'Suggestion | Agencia de Marketing Digital y Redes Sociales en Perú',
     description:
       'Potenciamos marcas con estrategias de marketing digital, gestión de redes sociales y publicidad digital. Resultados reales, clientes reales.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Suggestion — Marketing digital que genera clientes' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Suggestion | Agencia de Marketing Digital',
     description: 'Gestión de redes sociales, publicidad digital y SEO en Perú. Consultoría gratuita.',
     creator: '@suggestion',
+    images: ['/og-image.png'],
   },
 };
 
@@ -81,9 +84,8 @@ const jsonLd = {
   areaServed: { '@type': 'Country', name: 'Perú' },
   priceRange: '$$',
   sameAs: [
-    'https://instagram.com/suggestion',
-    'https://linkedin.com/company/suggestion',
-    'https://facebook.com/suggestion',
+    'https://www.instagram.com/suggestion.mkt/',
+    'https://www.facebook.com/Suggestion.mk',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -113,13 +115,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <div className="flex-1">
-            {children}
+        <MotionProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <div className="flex-1">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </MotionProvider>
         <Toaster />
       </body>
     </html>

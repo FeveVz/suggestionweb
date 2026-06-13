@@ -5,141 +5,61 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  ArrowRight, ArrowUpRight, Filter, X, TrendingUp, 
-  ShoppingBag, Users, Building2, Heart, Search, Grid3X3, LayoutList,
+import {
+  ArrowRight, ArrowUpRight, X, TrendingUp,
+  ShoppingBag, Users, Heart, Grid3X3, LayoutList,
   ChevronLeft, ChevronRight
 } from 'lucide-react';
 
 const categories = [
   { id: 'all', name: 'Todos', icon: Grid3X3 },
-  { id: 'ecommerce', name: 'E-commerce', icon: ShoppingBag },
-  { id: 'saas', name: 'SaaS B2B', icon: Building2 },
-  { id: 'health', name: 'Salud', icon: Heart },
-  { id: 'tech', name: 'Tecnología', icon: TrendingUp },
   { id: 'services', name: 'Servicios', icon: Users },
 ];
 
 const projects = [
   {
     id: 1,
-    title: 'TechFlow Solutions',
-    category: 'saas',
-    industry: 'SaaS B2B',
-    results: [
-      { metric: '+320%', label: 'Leads' },
-      { metric: '-45%', label: 'Costo/lead' },
-    ],
-    description: 'Estrategia de inbound marketing y automatización que transformó su funnel de ventas, reduciendo costos de adquisición y multiplicando los leads cualificados.',
-    tags: ['SEO', 'Lead Generation', 'Marketing Automation'],
-    color: '#FF8C00',
-    services: ['Marketing Digital', 'SEO', 'Automatización'],
-    duration: '6 meses',
-  },
-  {
-    id: 2,
-    title: 'Verde Orgánico',
-    category: 'ecommerce',
-    industry: 'E-commerce',
-    results: [
-      { metric: '4.5x', label: 'ROAS' },
-      { metric: '+180%', label: 'Ventas' },
-    ],
-    description: 'Campañas de performance marketing que escalaron su e-commerce de manera rentable, optimizando cada euro invertido en publicidad.',
-    tags: ['Meta Ads', 'Google Ads', 'E-commerce'],
-    color: '#00BFFF',
-    services: ['Publicidad Digital', 'E-commerce'],
-    duration: '8 meses',
-  },
-  {
-    id: 3,
-    title: 'Clínica Belleza',
-    category: 'health',
-    industry: 'Salud y Belleza',
-    results: [
-      { metric: '+250%', label: 'Citas' },
-      { metric: '12K', label: 'Seguidores' },
-    ],
-    description: 'Estrategia de redes sociales y publicidad local que llenó su agenda de citas y construyó una comunidad comprometida.',
-    tags: ['Social Media', 'Local SEO', 'Publicidad'],
-    color: '#FF8C00',
-    services: ['Redes Sociales', 'Publicidad Digital'],
-    duration: '4 meses',
-  },
-  {
-    id: 4,
-    title: 'Inmobiliaria Premium',
+    title: 'Inmobiliaria Ceinys',
     category: 'services',
     industry: 'Inmobiliaria',
     results: [
-      { metric: '+200%', label: 'Consultas' },
-      { metric: '85%', label: 'Ocupación' },
+      { metric: 'S/350K', label: 'En ventas' },
+      { metric: '8', label: 'Lotes vendidos' },
     ],
-    description: 'Estrategia 360° que posicionó a la inmobiliaria como líder en su zona, generando leads de alta calidad y maximizando la ocupación.',
-    tags: ['SEO Local', 'Google Ads', 'Branding'],
-    color: '#00BFFF',
-    services: ['Marketing Digital', 'Branding', 'SEO'],
-    duration: '10 meses',
-  },
-  {
-    id: 5,
-    title: 'StartUp Innovation',
-    category: 'tech',
-    industry: 'Tecnología',
-    results: [
-      { metric: '5x', label: 'Usuarios' },
-      { metric: '+400%', label: 'Conversiones' },
-    ],
-    description: 'Growth marketing que llevó a una startup desde lanzamiento hasta 50K usuarios activos en tiempo récord.',
-    tags: ['Growth Marketing', 'Paid Media', 'CRO'],
+    description: 'Campaña de Meta Ads con S/3,000 de inversión: 350 leads captados, 20 visitas a proyectos y 8 lotes vendidos por S/350,000.',
+    tags: ['Meta Ads', 'Lead Generation', 'Inmobiliaria'],
     color: '#FF8C00',
-    services: ['Marketing Digital', 'Publicidad Digital', 'CRM'],
-    duration: '12 meses',
+    services: ['Publicidad Digital', 'Redes Sociales'],
+    duration: 'Campaña',
   },
   {
-    id: 6,
-    title: 'Café Artesanal',
-    category: 'ecommerce',
-    industry: 'Food & Beverage',
-    results: [
-      { metric: '+300%', label: 'Pedidos Online' },
-      { metric: '25K', label: 'Community' },
-    ],
-    description: 'Estrategia de e-commerce y comunidad que transformó una cafetería local en una marca con presencia nacional.',
-    tags: ['E-commerce', 'Social Media', 'Email Marketing'],
-    color: '#00BFFF',
-    services: ['Desarrollo Web', 'Redes Sociales'],
-    duration: '6 meses',
-  },
-  {
-    id: 7,
-    title: 'Estudio Jurídico García',
+    id: 2,
+    title: 'Granjas Bonanza',
     category: 'services',
-    industry: 'Servicios Profesionales',
+    industry: 'Agroindustria',
     results: [
-      { metric: '+150%', label: 'Consultas' },
-      { metric: '#1', label: 'Google' },
+      { metric: '15', label: 'Contratos' },
+      { metric: 'S/2.5K', label: 'Inversión' },
     ],
-    description: 'Posicionamiento SEO y marketing de contenidos que estableció al estudio como referente en su especialidad legal.',
-    tags: ['SEO', 'Content Marketing', 'Branding'],
-    color: '#FF8C00',
-    services: ['SEO', 'Branding', 'Consultoría'],
-    duration: '8 meses',
+    description: 'Campaña de Meta Ads enfocada en captación que convirtió S/2,500 de inversión en 15 contratos cerrados.',
+    tags: ['Meta Ads', 'Conversión', 'Agroindustria'],
+    color: '#00BFFF',
+    services: ['Publicidad Digital'],
+    duration: 'Campaña',
   },
   {
-    id: 8,
-    title: 'Fitness Pro',
-    category: 'health',
-    industry: 'Fitness',
+    id: 3,
+    title: 'Hoteles Señor de Luren',
+    category: 'services',
+    industry: 'Hotelería',
     results: [
-      { metric: '+500%', label: 'Membresías' },
-      { metric: '50K', label: 'Alcance Mensual' },
+      { metric: '75', label: 'Reservas' },
     ],
-    description: 'Campaña de lanzamiento y retención que llenó el gimnasio y creó una comunidad digital activa.',
-    tags: ['Social Media', 'Paid Ads', 'Influencer Marketing'],
-    color: '#00BFFF',
-    services: ['Redes Sociales', 'Publicidad Digital'],
-    duration: '5 meses',
+    description: 'Estrategia de campañas publicitarias en redes que generó 75 reservas para la cadena hotelera.',
+    tags: ['Meta Ads', 'Reservas', 'Hotelería'],
+    color: '#FF8C00',
+    services: ['Publicidad Digital', 'Redes Sociales'],
+    duration: 'Campaña',
   },
 ];
 
@@ -156,7 +76,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }
+    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }
   }
 };
 
@@ -190,17 +110,13 @@ export default function PortafolioPage() {
       {/* Hero Section */}
       <section className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-black">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-40 -right-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#FF8C0015' }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
-          <motion.div
+          <div
             className="absolute -bottom-40 -left-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#00BFFF10' }}
-            animate={{ scale: [1.2, 1, 1.2] }}
-            transition={{ duration: 10, repeat: Infinity }}
           />
         </div>
 
@@ -219,11 +135,11 @@ export default function PortafolioPage() {
             </motion.span>
 
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+              className="text-[clamp(2.2rem,6vw,4.5rem)] font-black text-white mb-4 sm:mb-6 leading-[0.95] tracking-tight uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
               Resultados que{' '}
-              <span className="text-gradient">Hablan</span>
+              <span style={{ color: '#FF8C00' }}>Hablan</span>
             </motion.h1>
 
             <motion.p
@@ -240,8 +156,8 @@ export default function PortafolioPage() {
             >
               <Button
                 size="lg"
-                className="text-white font-semibold px-6 sm:px-8 py-4 sm:py-5 rounded-full shadow-lg min-h-[52px]"
-                style={{ backgroundColor: '#FF8C00' }}
+                className="text-black font-black uppercase tracking-widest px-6 sm:px-8 py-4 sm:py-5 rounded-none min-h-[52px] text-xs sm:text-sm hover:opacity-90"
+                style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
                 onClick={scrollToProjects}
               >
                 Ver Proyectos
@@ -257,20 +173,20 @@ export default function PortafolioPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>500+</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Proyectos</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>150+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>+50</div>
               <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Clientes</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>95%</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Retención</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>7</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Años</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>10+</div>
-              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Años</div>
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>+350</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>Leads / campaña</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>S/350K</div>
+              <div className="text-xs sm:text-sm text-gray-600" style={{ fontFamily: 'var(--font-dm-sans)' }}>En ventas</div>
             </div>
           </div>
         </div>
@@ -613,11 +529,9 @@ export default function PortafolioPage() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-black relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-20 -right-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#FF8C0015' }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
         </div>
 
@@ -629,27 +543,25 @@ export default function PortafolioPage() {
             className="max-w-3xl mx-auto"
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              ¿Listo para tu historia de éxito?
+              ¿Listo para tu <span style={{ color: '#FF8C00' }}>historia de éxito?</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una consultoría gratuita y descubre cómo podemos ayudarte.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                size="lg"
-                className="text-white font-semibold px-6 sm:px-10 py-5 sm:py-6 rounded-full text-base sm:text-lg shadow-xl min-h-[52px]"
-                style={{ backgroundColor: '#FF8C00' }}
-                asChild
-              >
-                <Link href="/#contacto">
-                  Comenzar Mi Proyecto
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                </Link>
-              </Button>
-            </motion.div>
+            <Button
+              size="lg"
+              className="text-black font-black uppercase tracking-widest px-6 sm:px-10 py-5 sm:py-6 rounded-none text-sm sm:text-base min-h-[52px] hover:opacity-90"
+              style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
+              asChild
+            >
+              <Link href="/#contacto">
+                Comenzar Mi Proyecto
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>

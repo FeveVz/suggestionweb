@@ -50,18 +50,7 @@ export default function BTLActivacionesPage() {
     { step: '04', title: 'Informe', description: 'Métricas, fotos, videos y learnings.' },
   ];
 
-  const stats = [
-    { value: '500+', label: 'Activaciones realizadas' },
-    { value: '2M+', label: 'Personas impactadas' },
-    { value: '95%', label: 'Satisfacción' },
-    { value: '50+', label: 'Ciudades' },
-  ];
 
-  const testimonials = [
-    { quote: 'La activación generó más UGC que toda nuestra campaña digital del trimestre.', author: 'Rosa María Pérez', role: 'Social Media Manager' },
-    { quote: 'Profesionales que entienden que BTL no es solo regalar cosas, es crear experiencias.', author: 'Jorge Luis Herrera', role: 'Brand Manager' },
-    { quote: 'La logística fue impecable. Cero contratiempos en un evento de 3 días.', author: 'María Fernanda López', role: 'Events Director' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto tiempo antes debo planificar?', answer: 'Mínimo 4 semanas para activaciones simples. Eventos grandes requieren 8-12 semanas.' },
@@ -83,8 +72,6 @@ export default function BTLActivacionesPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

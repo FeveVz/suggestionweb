@@ -50,18 +50,7 @@ export default function SEOPage() {
     { step: '04', title: 'Escalamiento', description: 'Medimos resultados y escalamos lo que funciona.' },
   ];
 
-  const stats = [
-    { value: 'Top 3', label: 'Posiciones alcanzadas' },
-    { value: '300%', label: 'Incremento tráfico orgánico' },
-    { value: '1M+', label: 'Keywords posicionadas' },
-    { value: '95%', label: 'Clientes en primera página' },
-  ];
 
-  const testimonials = [
-    { quote: 'Pasamos de la página 5 al top 3 en 6 meses. El tráfico orgánico ahora es nuestra principal fuente de leads.', author: 'Roberto García', role: 'Director Comercial' },
-    { quote: 'El ROI del SEO superó todas nuestras expectativas. Leads cualificados a costo cero.', author: 'Ana Luisa Mendoza', role: 'CEO' },
-    { quote: 'Profesionales que entienden que SEO no es magia, es estrategia y ejecución constante.', author: 'Fernando López', role: 'Marketing Director' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto tiempo toma ver resultados en SEO?', answer: 'Los primeros resultados suelen verse entre 3-6 meses. El SEO es una inversión a mediano-largo plazo que genera retornos sostenibles.' },
@@ -83,8 +72,6 @@ export default function SEOPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

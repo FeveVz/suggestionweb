@@ -66,18 +66,7 @@ export default function PublicidadDigitalPage() {
     { step: '04', title: 'Escala', description: 'Optimizamos y escalamos lo que funciona, eliminamos lo que no.' },
   ];
 
-  const stats = [
-    { value: '4.5x', label: 'ROAS promedio' },
-    { value: '-40%', label: 'Reducción en CPA' },
-    { value: '10M+', label: 'Inversión gestionada' },
-    { value: '500+', label: 'Campañas activas' },
-  ];
 
-  const testimonials = [
-    { quote: 'Pasamos de gastar sin rumbo a tener un ROAS de 6x. Cada dólar trabaja.', author: 'Diego Torres', role: 'E-commerce Director' },
-    { quote: 'Por primera vez entiendo qué pasa con mi presupuesto de publicidad. Total transparencia.', author: 'Sofía Hernández', role: 'CEO' },
-    { quote: 'El equipo redujo nuestro costo por lead en un 60% en solo dos meses.', author: 'Miguel Ángel Ruiz', role: 'Marketing Manager' },
-  ];
 
   const faqs = [
     { question: '¿Cuál es el presupuesto mínimo recomendado?', answer: 'Depende del canal y objetivo, pero recomendamos mínimo $500-1000 USD mensuales para ver resultados significativos en la mayoría de industrias.' },
@@ -99,8 +88,6 @@ export default function PublicidadDigitalPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

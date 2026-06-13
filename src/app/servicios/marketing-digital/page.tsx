@@ -66,18 +66,7 @@ export default function MarketingDigitalPage() {
     { step: '04', title: 'Optimización', description: 'Medimos resultados y optimizamos continuamente para maximizar el ROI.' },
   ];
 
-  const stats = [
-    { value: '250%', label: 'Incremento promedio en tráfico' },
-    { value: '3x', label: 'ROI promedio' },
-    { value: '150+', label: 'Clientes satisfechos' },
-    { value: '95%', label: 'Tasa de retención' },
-  ];
 
-  const testimonials = [
-    { quote: 'En 6 meses triplicamos nuestros leads cualificados y redujimos el costo de adquisición a la mitad.', author: 'María González', role: 'CEO, TechFlow Solutions' },
-    { quote: 'El equipo de Suggestion entiende que el marketing no es gasto, es inversión con retorno medible.', author: 'Carlos Ramírez', role: 'Director de Marketing' },
-    { quote: 'La transparencia en los reportes y la comunicación constante nos dio confianza desde el día uno.', author: 'Ana Martínez', role: 'Fundadora' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto tiempo toma ver resultados?', answer: 'Los primeros resultados suelen verse entre 3-6 meses, dependiendo del tipo de estrategia y tu mercado. El SEO orgánico requiere más tiempo, mientras que la publicidad pagada puede generar resultados inmediatos.' },
@@ -99,8 +88,6 @@ export default function MarketingDigitalPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

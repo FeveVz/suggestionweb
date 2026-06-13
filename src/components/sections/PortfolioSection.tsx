@@ -7,36 +7,35 @@ import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 const cases = [
   {
-    client: 'TechFlow Solutions',
-    industry: 'SaaS B2B',
+    client: 'Inmobiliaria Ceinys',
+    industry: 'Inmobiliaria',
     results: [
-      { metric: '+320%', label: 'Leads' },
-      { metric: '-45%', label: 'Costo/lead' },
+      { metric: 'S/350K', label: 'En ventas' },
+      { metric: '8', label: 'Lotes vendidos' },
     ],
-    description: 'Estrategia de inbound marketing y automatización que transformó su funnel de ventas.',
-    tags: ['SEO', 'Lead Generation', 'Automatización'],
+    description: 'Campaña de Meta Ads con S/3,000 de inversión: 350 leads captados, 20 visitas a proyectos y 8 lotes vendidos.',
+    tags: ['Meta Ads', 'Inmobiliaria', 'Lead Generation'],
     accent: '#FF8C00',
   },
   {
-    client: 'Verde Orgánico',
-    industry: 'E-commerce',
+    client: 'Granjas Bonanza',
+    industry: 'Agroindustria',
     results: [
-      { metric: '4.5×', label: 'ROAS' },
-      { metric: '+180%', label: 'Ventas' },
+      { metric: '15', label: 'Contratos' },
+      { metric: 'S/2.5K', label: 'Inversión' },
     ],
-    description: 'Performance marketing que escaló su e-commerce de manera rentable con cada euro invertido.',
-    tags: ['Meta Ads', 'Google Ads', 'E-commerce'],
+    description: 'Campaña de Meta Ads enfocada en captación que convirtió S/2,500 de inversión en 15 contratos cerrados.',
+    tags: ['Meta Ads', 'Agroindustria', 'Conversión'],
     accent: '#00BFFF',
   },
   {
-    client: 'Clínica Belleza',
-    industry: 'Salud y Belleza',
+    client: 'Hoteles Señor de Luren',
+    industry: 'Hotelería',
     results: [
-      { metric: '+250%', label: 'Citas' },
-      { metric: '12K', label: 'Seguidores' },
+      { metric: '75', label: 'Reservas' },
     ],
-    description: 'Redes sociales y publicidad local que llenó la agenda de citas y construyó comunidad.',
-    tags: ['Social Media', 'Local SEO', 'Publicidad'],
+    description: 'Estrategia de campañas publicitarias que generó 75 reservas para la cadena hotelera.',
+    tags: ['Meta Ads', 'Hotelería', 'Reservas'],
     accent: '#FF8C00',
   },
 ];
@@ -83,7 +82,7 @@ export default function PortfolioSection() {
             >
               <Link
                 href="/portafolio"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-black/40 hover:text-black transition-colors group"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-black/60 hover:text-black transition-colors group"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 Ver todos los proyectos
@@ -133,7 +132,7 @@ export default function PortfolioSection() {
                       </span>
                     </div>
                     <p
-                      className="text-sm text-black/40 leading-relaxed mb-4 max-w-md"
+                      className="text-sm text-black/65 leading-relaxed mb-4 max-w-md"
                       style={{ fontFamily: 'var(--font-dm-sans)' }}
                     >
                       {c.description}
@@ -143,7 +142,7 @@ export default function PortfolioSection() {
                       {c.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[10px] tracking-wider uppercase px-3 py-1 border border-black/10 text-black/40"
+                          className="text-[10px] tracking-wider uppercase px-3 py-1 border border-black/15 text-black/60"
                           style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {tag}
@@ -163,7 +162,7 @@ export default function PortfolioSection() {
                           {r.metric}
                         </div>
                         <div
-                          className="text-[10px] tracking-wider uppercase text-black/30"
+                          className="text-[10px] tracking-wider uppercase text-black/55"
                           style={{ fontFamily: 'var(--font-dm-sans)' }}
                         >
                           {r.label}

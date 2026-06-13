@@ -33,10 +33,10 @@ const values = [
 ];
 
 const stats = [
-  { value: '250%', label: 'Incremento promedio\nen conversiones', accent: '#FF8C00' },
-  { value: '3×', label: 'ROI promedio\nen campañas', accent: '#00BFFF' },
-  { value: '40%', label: 'Reducción en costo\nde adquisición', accent: '#FF8C00' },
-  { value: '150+', label: 'Clientes\nsatisfechos', accent: '#00BFFF' },
+  { value: 'S/350K', label: 'En ventas\n(Inmobiliaria Ceinys)', accent: '#FF8C00' },
+  { value: '8', label: 'Lotes vendidos\nen una campaña', accent: '#00BFFF' },
+  { value: '15', label: 'Contratos cerrados\n(Granjas Bonanza)', accent: '#FF8C00' },
+  { value: '+50', label: 'Clientes\nque confían en nosotros', accent: '#00BFFF' },
 ];
 
 export default function ValuePropositionSection() {
@@ -58,7 +58,7 @@ export default function ValuePropositionSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="h-px w-12 bg-white/20" />
-            <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+            <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/50" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               ¿Por qué Suggestion?
             </span>
           </motion.div>
@@ -101,7 +101,7 @@ export default function ValuePropositionSection() {
                     {value.title}
                   </h3>
                   <p
-                    className="text-sm text-white/40 leading-relaxed"
+                    className="text-sm text-white/65 leading-relaxed"
                     style={{ fontFamily: 'var(--font-dm-sans)' }}
                   >
                     {value.description}
@@ -121,7 +121,7 @@ export default function ValuePropositionSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="h-px w-12 bg-white/20" />
-            <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+            <span className="text-xs tracking-[0.25em] uppercase font-medium text-white/50" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Resultados reales
             </span>
           </motion.div>
@@ -142,7 +142,7 @@ export default function ValuePropositionSection() {
                   {stat.value}
                 </div>
                 <p
-                  className="text-xs text-white/30 leading-relaxed whitespace-pre-line"
+                  className="text-xs text-white/55 leading-relaxed whitespace-pre-line"
                   style={{ fontFamily: 'var(--font-dm-sans)' }}
                 >
                   {stat.label}
@@ -159,7 +159,7 @@ export default function ValuePropositionSection() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <p className="text-sm text-white/30" style={{ fontFamily: 'var(--font-dm-sans)' }}>
+          <p className="text-sm text-white/55" style={{ fontFamily: 'var(--font-dm-sans)' }}>
             Somos socios, no proveedores.
           </p>
           <Link

@@ -50,18 +50,7 @@ export default function PublicidadMovilPage() {
     { step: '04', title: 'Operación', description: 'Ejecución de rutas con tracking y reportes.' },
   ];
 
-  const stats = [
-    { value: '100K+', label: 'Impresiones diarias' },
-    { value: '50+', label: 'Vehículos activos' },
-    { value: '10+', label: 'Ciudades operadas' },
-    { value: '95%', label: 'Recuerdo de marca' },
-  ];
 
-  const testimonials = [
-    { quote: 'El truck LED en el centro generó más engagement que cualquier otro medio.', author: 'Carlos Mendez', role: 'Marketing Director' },
-    { quote: 'Nuestra flota de delivery ahora es publicidad móvil. ROI inmediato.', author: 'Andrea Solís', role: 'Dueña de negocio' },
-    { quote: 'Cobertura de zonas que con billboard fijo sería imposible o muy costoso.', author: 'Fernando Ríos', role: 'Brand Manager' },
-  ];
 
   const faqs = [
     { question: '¿Qué ciudades cubren?', answer: 'Principales ciudades del país: CDMX, Monterrey, Guadalajara, Puebla, Querétaro y más.' },
@@ -83,8 +72,6 @@ export default function PublicidadMovilPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

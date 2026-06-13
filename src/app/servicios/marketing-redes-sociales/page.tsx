@@ -66,18 +66,7 @@ export default function RedesSocialesPage() {
     { step: '04', title: 'Optimización', description: 'Medimos resultados y ajustamos para máximo impacto.' },
   ];
 
-  const stats = [
-    { value: '500K+', label: 'Seguidores generados' },
-    { value: '8%', label: 'Engagement rate promedio' },
-    { value: '200+', label: 'Cuentas gestionadas' },
-    { value: '24/7', label: 'Monitoreo activo' },
-  ];
 
-  const testimonials = [
-    { quote: 'En 3 meses duplicamos nuestros seguidores y las ventas por Instagram se dispararon un 180%.', author: 'Laura Vega', role: 'E-commerce Manager' },
-    { quote: 'El equipo entiende nuestra voz de marca y la comunidad lo nota. Cada vez que publican, enganchan.', author: 'Roberto Sánchez', role: 'CMO' },
-    { quote: 'Profesionales que realmente saben de social media. Los resultados hablan por sí solos.', author: 'Patricia Mendez', role: 'Dueña de negocio' },
-  ];
 
   const faqs = [
     { question: '¿Qué redes sociales gestionan?', answer: 'Gestionamos Instagram, Facebook, TikTok, LinkedIn, Twitter/X, YouTube y Pinterest según donde esté tu audiencia.' },
@@ -99,8 +88,6 @@ export default function RedesSocialesPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

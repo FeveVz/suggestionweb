@@ -66,7 +66,7 @@ export default function ProcessSection() {
             </motion.h2>
 
             <motion.p
-              className="text-sm text-black/40 max-w-xs leading-relaxed"
+              className="text-sm text-black/60 max-w-xs leading-relaxed"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
@@ -112,7 +112,7 @@ export default function ProcessSection() {
                         {step.title}
                       </h3>
                       <p
-                        className="text-sm text-black/50 leading-relaxed"
+                        className="text-sm text-black/70 leading-relaxed"
                         style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         {step.description}

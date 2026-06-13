@@ -101,7 +101,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             <p
-              className="text-base text-black/50 leading-relaxed mb-8"
+              className="text-base text-black/70 leading-relaxed mb-8"
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >
               No vendemos servicios genéricos. Construimos ecosistemas digitales diseñados para hacer crecer tu negocio de forma sostenible y medible.
@@ -147,7 +147,7 @@ export default function ServicesSection() {
                         {service.title}
                       </h3>
                       <p
-                        className="text-xs text-black/50 group-hover:text-white/50 transition-colors leading-relaxed"
+                        className="text-xs text-black/60 group-hover:text-white/70 transition-colors leading-relaxed"
                         style={{ fontFamily: 'var(--font-dm-sans)' }}
                       >
                         {service.description}
@@ -194,7 +194,7 @@ export default function ServicesSection() {
                 style={{ color: '#FF8C00' }}
               />
               <span
-                className="text-xs font-medium text-black/50 group-hover:text-black transition-colors"
+                className="text-xs font-medium text-black/70 group-hover:text-black transition-colors"
                 style={{ fontFamily: 'var(--font-dm-sans)' }}
               >
                 {service.title}

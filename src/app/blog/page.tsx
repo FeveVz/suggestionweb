@@ -14,13 +14,13 @@ import {
 
 // SEO-optimized categories
 const categories = [
-  { id: 'all', name: 'Todos', slug: 'todos', icon: Grid3X3, count: 15 },
-  { id: 'seo', name: 'SEO', slug: 'seo', icon: TrendingUp, count: 4 },
-  { id: 'social-media', name: 'Redes Sociales', slug: 'redes-sociales', icon: Share2, count: 3 },
-  { id: 'ppc', name: 'Publicidad Digital', slug: 'publicidad-digital', icon: Target, count: 3 },
-  { id: 'branding', name: 'Branding', slug: 'branding', icon: Palette, count: 2 },
-  { id: 'web', name: 'Desarrollo Web', slug: 'desarrollo-web', icon: Code, count: 2 },
-  { id: 'strategy', name: 'Estrategia', slug: 'estrategia', icon: Lightbulb, count: 1 },
+  { id: 'all', name: 'Todos', slug: 'todos', icon: Grid3X3, count: 8 },
+  { id: 'seo', name: 'SEO', slug: 'seo', icon: TrendingUp, count: 2 },
+  { id: 'social-media', name: 'Redes Sociales', slug: 'redes-sociales', icon: Share2, count: 1 },
+  { id: 'ppc', name: 'Publicidad Digital', slug: 'publicidad-digital', icon: Target, count: 1 },
+  { id: 'branding', name: 'Branding', slug: 'branding', icon: Palette, count: 1 },
+  { id: 'web', name: 'Desarrollo Web', slug: 'desarrollo-web', icon: Code, count: 1 },
+  { id: 'strategy', name: 'Estrategia', slug: 'estrategia', icon: Lightbulb, count: 2 },
 ];
 
 // Popular tags for SEO
@@ -48,7 +48,7 @@ const blogPosts = [
     readTime: '8 min',
     featured: true,
     color: '#FF8C00',
-    author: 'María González',
+    author: 'Equipo Suggestion',
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ const blogPosts = [
     readTime: '12 min',
     featured: true,
     color: '#00BFFF',
-    author: 'Carlos Ramírez',
+    author: 'Equipo Suggestion',
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ const blogPosts = [
     readTime: '10 min',
     featured: false,
     color: '#FF8C00',
-    author: 'Ana Martínez',
+    author: 'Equipo Suggestion',
   },
   {
     id: 4,
@@ -90,7 +90,7 @@ const blogPosts = [
     readTime: '7 min',
     featured: false,
     color: '#00BFFF',
-    author: 'Roberto Sánchez',
+    author: 'Equipo Suggestion',
   },
   {
     id: 5,
@@ -104,7 +104,7 @@ const blogPosts = [
     readTime: '6 min',
     featured: false,
     color: '#FF8C00',
-    author: 'María González',
+    author: 'Equipo Suggestion',
   },
   {
     id: 6,
@@ -118,7 +118,7 @@ const blogPosts = [
     readTime: '9 min',
     featured: false,
     color: '#00BFFF',
-    author: 'Carlos Ramírez',
+    author: 'Equipo Suggestion',
   },
   {
     id: 7,
@@ -132,7 +132,7 @@ const blogPosts = [
     readTime: '8 min',
     featured: false,
     color: '#FF8C00',
-    author: 'Ana Martínez',
+    author: 'Equipo Suggestion',
   },
   {
     id: 8,
@@ -146,7 +146,7 @@ const blogPosts = [
     readTime: '11 min',
     featured: false,
     color: '#00BFFF',
-    author: 'Roberto Sánchez',
+    author: 'Equipo Suggestion',
   },
 ];
 
@@ -163,7 +163,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }
+    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }
   }
 };
 
@@ -199,17 +199,13 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-black">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-40 -right-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#00BFFF15' }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
-          <motion.div
+          <div
             className="absolute -bottom-40 -left-40 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#FF8C0010' }}
-            animate={{ scale: [1.2, 1, 1.2] }}
-            transition={{ duration: 10, repeat: Infinity }}
           />
         </div>
 
@@ -228,10 +224,10 @@ export default function BlogPage() {
             </motion.span>
 
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+              className="text-[clamp(2.2rem,6vw,4.5rem)] font-black text-white mb-4 sm:mb-6 leading-[0.95] tracking-tight uppercase"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              <span className="text-gradient">Insights</span> que Transforman
+              <span style={{ color: '#FF8C00' }}>Insights</span> que Transforman
             </motion.h1>
 
             <motion.p
@@ -754,11 +750,9 @@ export default function BlogPage() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-black relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
+          <div
             className="absolute -top-20 -right-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full blur-3xl"
             style={{ backgroundColor: '#00BFFF15' }}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 8, repeat: Infinity }}
           />
         </div>
 
@@ -770,27 +764,25 @@ export default function BlogPage() {
             className="max-w-3xl mx-auto"
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-space-grotesk)' }}
             >
-              ¿Tienes un proyecto en mente?
+              ¿Tienes un proyecto <span style={{ color: '#FF8C00' }}>en mente?</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 px-4" style={{ fontFamily: 'var(--font-dm-sans)' }}>
               Agenda una consultoría gratuita y conversemos sobre cómo podemos ayudarte.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                size="lg"
-                className="text-white font-semibold px-6 sm:px-10 py-5 sm:py-6 rounded-full text-base sm:text-lg shadow-xl min-h-[52px]"
-                style={{ backgroundColor: '#FF8C00' }}
-                asChild
-              >
-                <Link href="/#contacto">
-                  Contactar Ahora
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                </Link>
-              </Button>
-            </motion.div>
+            <Button
+              size="lg"
+              className="text-black font-black uppercase tracking-widest px-6 sm:px-10 py-5 sm:py-6 rounded-none text-sm sm:text-base min-h-[52px] hover:opacity-90"
+              style={{ backgroundColor: '#FF8C00', fontFamily: 'var(--font-space-grotesk)' }}
+              asChild
+            >
+              <Link href="/#contacto">
+                Contactar Ahora
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>

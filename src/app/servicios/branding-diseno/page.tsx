@@ -50,18 +50,7 @@ export default function BrandingPage() {
     { step: '04', title: 'Entrega', description: 'Archivos finales, manual y acompañamiento en lanzamiento.' },
   ];
 
-  const stats = [
-    { value: '200+', label: 'Marcas creadas' },
-    { value: '95%', label: 'Clientes satisfechos' },
-    { value: '50+', label: 'Rebrandings' },
-    { value: '100%', label: 'Originales' },
-  ];
 
-  const testimonials = [
-    { quote: 'Nuestra marca finalmente refleja quiénes somos. El equipo capturó nuestra esencia perfectamente.', author: 'Carmen Ruiz', role: 'Fundadora' },
-    { quote: 'El proceso fue increíblemente profesional. Desde investigación hasta entrega, todo impecable.', author: 'Javier Molina', role: 'CEO' },
-    { quote: 'Nuestra identidad anterior no nos representaba. Ahora la gente nos recuerda.', author: 'Luisa Fernanda Gómez', role: 'Directora de Marketing' },
-  ];
 
   const faqs = [
     { question: '¿Cuánto tiempo toma un proyecto de branding?', answer: 'Un proyecto completo de identidad toma entre 4-8 semanas dependiendo de la complejidad y alcance.' },
@@ -83,8 +72,6 @@ export default function BrandingPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />

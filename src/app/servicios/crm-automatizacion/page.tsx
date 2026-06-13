@@ -50,18 +50,7 @@ export default function CRMAutomatizacionPage() {
     { step: '04', title: 'Capacitación', description: 'Entrenamos a tu equipo y documentamos todo.' },
   ];
 
-  const stats = [
-    { value: '60%', label: 'Ahorro en tareas manuales' },
-    { value: '3x', label: 'Leads nutridos automáticamente' },
-    { value: '200+', label: 'Implementaciones' },
-    { value: '24/7', label: 'Sistema trabajando' },
-  ];
 
-  const testimonials = [
-    { quote: 'Implementaron HubSpot y ahora mi equipo de ventas pasa menos tiempo en admin y más cerrando deals.', author: 'Gabriel Torres', role: 'VP Sales' },
-    { quote: 'Teníamos leads perdiéndose. Ahora el sistema los nutre automáticamente hasta que estén listos para comprar.', author: 'Alejandra Ríos', role: 'Marketing Manager' },
-    { quote: 'El ROI de la automatización fue inmediato. Menos errores, más eficiencia.', author: 'Daniel Pérez', role: 'COO' },
-  ];
 
   const faqs = [
     { question: '¿Qué CRM recomiendan?', answer: 'Depende de tu presupuesto y necesidades. HubSpot es ideal para marketing, Pipedrive para ventas simples, Salesforce para empresas grandes.' },
@@ -83,8 +72,6 @@ export default function CRMAutomatizacionPage() {
       benefits={benefits}
       features={features}
       process={process}
-      stats={stats}
-      testimonials={testimonials}
       faqs={faqs}
       relatedServices={relatedServices}
     />
