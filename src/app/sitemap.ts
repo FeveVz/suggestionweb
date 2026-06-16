@@ -1,42 +1,47 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
+import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://suggestion.pe';
-
-const servicios = [
-  'marketing-digital',
-  'marketing-redes-sociales',
-  'publicidad-digital',
-  'seo-posicionamiento',
-  'branding-diseno',
-  'desarrollo-web',
-  'consultoria-marketing',
-  'crm-automatizacion',
-  'produccion-audiovisual',
-  'investigacion-mercado',
-  'merchandising',
-  'imprenta-corporativa',
-  'estructuras-publicitarias',
-  'publicidad-movil',
-  'btl-activaciones',
-  'material-pop',
-];
-
+/**
+ * Sitemap dinámico. Se ampliará con las entradas de blog y la exclusión de
+ * categorías noindex en la fase de SEO técnico (doc 16 §10, paso 8).
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const u = (path: string) => `${SITE_URL}${path}`;
 
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: siteUrl, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${siteUrl}/nosotros`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${siteUrl}/portafolio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${siteUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+  const root: MetadataRoute.Sitemap = [
+    { url: u("/"), lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: u("/nosotros"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/casos"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/contacto"), lastModified: now, changeFrequency: "yearly", priority: 0.6 },
+    { url: u("/servicios"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: u("/sectores"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: u("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  const servicioPages: MetadataRoute.Sitemap = servicios.map((slug) => ({
-    url: `${siteUrl}/servicios/${slug}`,
+  const categorias: MetadataRoute.Sitemap = SERVICE_CATEGORIES.map((c) => ({
+    url: u(`/servicios/${c.slug}`),
     lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.85,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }));
 
-  return [...staticPages, ...servicioPages];
+  const servicios: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap((c) =>
+    c.children.map((s) => ({
+      url: u(s.href),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }))
+  );
+
+  const sectores: MetadataRoute.Sitemap = SECTORS.map((s) => ({
+    url: u(s.href),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...root, ...categorias, ...servicios, ...sectores];
 }
