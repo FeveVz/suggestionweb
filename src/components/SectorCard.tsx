@@ -25,7 +25,7 @@ export default function SectorCard({
   return (
     <Link
       href={href}
-      className="hk-sector"
+      className="hk-sector hk-lift"
       style={{
         position: "relative",
         display: "flex",

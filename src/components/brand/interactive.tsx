@@ -21,7 +21,7 @@ export function usePrefersReduced() {
 /* Scroll-reveal: añade .in a los .hk-rise al entrar en viewport */
 export function RevealController() {
   React.useEffect(() => {
-    const els = Array.from(document.querySelectorAll('.hk-rise'));
+    const els = Array.from(document.querySelectorAll('.reveal'));
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       els.forEach((el) => el.classList.add('in'));
       return;
