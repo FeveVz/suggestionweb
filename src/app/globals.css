@@ -249,6 +249,7 @@ img { max-width: 100%; display: block; }
 .hk-nav a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .hk-sector:hover { border-color: var(--cyan) !important; }
 .hk-sector:hover [data-reveal] { opacity: 1 !important; }
+.hk-sector:hover .hk-sector-chip { border-color: var(--cyan) !important; background: rgba(0,191,255,0.12) !important; }
 .hk-sector-link i { transition: transform var(--dur-fast) var(--ease-out); }
 .hk-sector:hover .hk-sector-link i { transform: translate(2px, -2px); }
 .hk-case:hover { border-color: var(--cyan) !important; }

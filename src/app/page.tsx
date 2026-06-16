@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Phone, Mail } from "lucide-react";
+import { ArrowRight, Phone, Mail, Building2, Car, Plane, ShoppingBag, Stethoscope } from "lucide-react";
 import { Section, Label, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
 import { DualReveal, CtaForm } from "@/components/brand/interactive";
 import ProofBar from "@/components/ProofBar";
@@ -18,11 +18,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const SECTORES = [
-  { title: "Inmobiliario", result: "Llenamos tu sala de ventas de citas calificadas, no de curiosos.", href: "/marketing-inmobiliario", shape: 1 },
-  { title: "Automotriz", result: "Del clic al test drive: leads listos para cerrar en piso.", href: "/marketing-automotriz", shape: 2 },
-  { title: "Turismo", result: "Reservas reales, en temporada y fuera de ella, con costo medido.", href: "/marketing-turismo", shape: 6 },
-  { title: "Marcas y consumo", result: "Demanda que se vuelve venta, no likes prestados.", href: "/marketing-marcas-consumo", shape: 5 },
-  { title: "Salud", result: "Agenda llena de pacientes sin quemar tu presupuesto.", href: "/marketing-salud", shape: 4 },
+  { title: "Inmobiliario", result: "Llenamos tu sala de ventas de citas calificadas, no de curiosos.", href: "/marketing-inmobiliario", icon: Building2, shape: 1 },
+  { title: "Automotriz", result: "Del clic al test drive: leads listos para cerrar en piso.", href: "/marketing-automotriz", icon: Car, shape: 2 },
+  { title: "Turismo", result: "Reservas reales, en temporada y fuera de ella, con costo medido.", href: "/marketing-turismo", icon: Plane, shape: 6 },
+  { title: "Marcas y consumo", result: "Demanda que se vuelve venta, no likes prestados.", href: "/marketing-marcas-consumo", icon: ShoppingBag, shape: 5 },
+  { title: "Salud", result: "Agenda llena de pacientes sin quemar tu presupuesto.", href: "/marketing-salud", icon: Stethoscope, shape: 4 },
 ];
 
 const CATEGORIAS = [
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
         <div className="reveal reveal-d2" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
           {SECTORES.map((s, i) => (
-            <SectorCard key={s.href} index={`0${i + 1}`} title={s.title} result={s.result} href={s.href} shape={s.shape} />
+            <SectorCard key={s.href} index={`0${i + 1}`} title={s.title} result={s.result} href={s.href} icon={s.icon} shape={s.shape} />
           ))}
         </div>
       </Section>
