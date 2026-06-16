@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
-import { Section, Label, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
+import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
+import { Section, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
 import { DualReveal, CtaForm } from "@/components/brand/interactive";
 import ProofBar from "@/components/ProofBar";
 import SectorCard from "@/components/SectorCard";
@@ -66,34 +66,42 @@ export default function Home() {
     <>
       {/* HERO */}
       <section style={{ background: "var(--white)", position: "relative", overflow: "hidden" }}>
-        {/* Mancha de marca de fondo (decorativa) */}
-        <div aria-hidden className="hk-float" style={{ position: "absolute", left: "-8%", top: "2%", width: 620, maxWidth: "58%", opacity: 0.07, zIndex: 0, pointerEvents: "none" }}>
-          <Blot shape={1} tint="orange" size="100%" />
+        {/* Etiqueta vertical editorial (desktop) */}
+        <span className="hk-vlabel hk-nav" style={{ position: "absolute", left: 22, top: "50%", transform: "translateY(-50%) rotate(180deg)", zIndex: 2 }}>
+          Marketing de performance — Ica, Perú
+        </span>
+        {/* Mancha de marca masiva que sangra (decorativa, en capa) */}
+        <div aria-hidden className="hk-float" style={{ position: "absolute", right: "-12%", top: "-8%", width: 920, maxWidth: "68%", opacity: 0.08, zIndex: 0, pointerEvents: "none" }}>
+          <Blot shape={2} tint="orange" size="100%" />
         </div>
         <div
           className="hk-hero"
-          style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(3rem,7vw,6.5rem) var(--gutter) clamp(3rem,6vw,5rem)", display: "grid", gridTemplateColumns: "minmax(0,1.05fr) minmax(0,0.95fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center" }}
+          style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4.5rem) var(--gutter) clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "calc(86vh - 68px)" }}
         >
           <div style={{ minWidth: 0 }}>
-            <div className="hk-enter"><Label>Agencia de performance · Ica, Perú</Label></div>
-            <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) clamp(2.5rem,4.6vw,3.75rem)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "18px 0 0", maxWidth: "17ch" }}>
-              Agencia de marketing digital que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span>
+            <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Agencia de performance · Ica → Perú</div>
+            <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(20px,2.6vw,32px) 0 0", maxWidth: 620 }}>
+              <span className="lead">Agencia de marketing digital</span>
+              <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
             </h1>
-            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", maxWidth: "48ch", margin: "22px 0 0" }}>
-              <strong style={{ fontWeight: 700 }}>No es lo que ves.</strong> Trabajamos el funnel completo —
-              <strong style={{ fontWeight: 700 }}>lead</strong>, <strong style={{ fontWeight: 700 }}>cita</strong>, <strong style={{ fontWeight: 700 }}>cierre</strong>—, no métricas de vanidad. Tú no necesitas más likes; necesitas más ventas.
+            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", maxWidth: "46ch", margin: "clamp(20px,2.4vw,30px) 0 0" }}>
+              <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>No es lo que ves.</strong> Trabajamos el funnel completo —
+              <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>lead</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>cita</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>cierre</strong>—, no métricas de vanidad. Tú no necesitas más likes; necesitas más ventas.
             </p>
-            <div className="hk-enter-4" style={{ display: "flex", gap: 12, marginTop: 30, flexWrap: "wrap" }}>
+            <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
               <Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn>
               <Btn as="a" href="/casos" variant="secondary" size="lg">Ver casos</Btn>
             </div>
-            <p className="hk-enter-4" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>
+            <p className="hk-enter-4" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
               Respondemos en menos de 24 h hábiles.
             </p>
           </div>
           <div className="hk-enter-3" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
-            <DualReveal shape={3} size={520} />
+            <DualReveal shape={3} size={560} />
           </div>
+        </div>
+        <div className="hk-nav" style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 var(--gutter) clamp(1.25rem,2.5vw,2rem)" }}>
+          <a href="#sectores" className="hk-scrollcue"><ArrowDown size={14} /> Desliza</a>
         </div>
         <TaglineStrip items={["No es lo que ves", "Convertimos atención en ventas", "Consigue lo posible haciendo lo imposible"]} />
       </section>

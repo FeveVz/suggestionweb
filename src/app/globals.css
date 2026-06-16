@@ -256,6 +256,37 @@ img { max-width: 100%; display: block; }
 @media (min-width: 560px) { .hk-sector-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 900px) { .hk-sector-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1160px) { .hk-sector-grid { grid-template-columns: repeat(5, 1fr); } }
+
+/* ============================================================
+   Premium / art-direction — escala display, etiquetas verticales,
+   numerales fantasma, detalles finos.
+   ============================================================ */
+
+/* Titular display masivo del hero */
+.hk-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 0.94; color: var(--text-strong); }
+.hk-display .lead { display: block; font-size: clamp(1.35rem, 2.1vw, 1.85rem); font-weight: 500; letter-spacing: -0.01em; color: var(--text-muted); margin-bottom: clamp(8px, 1.2vw, 16px); }
+.hk-display .big { display: block; font-size: clamp(2.85rem, 7vw, 5.5rem); }
+
+/* Etiqueta vertical en el borde (editorial) */
+.hk-vlabel { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--font-accent); font-weight: var(--fw-bold); font-size: var(--fs-micro); line-height: 1; text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-muted); white-space: nowrap; }
+
+/* Numeral fantasma (contorno) para secciones */
+.hk-ghost { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: clamp(4.5rem, 13vw, 12rem); line-height: 0.74; color: transparent; -webkit-text-stroke: 1.5px var(--border-subtle); letter-spacing: -0.04em; user-select: none; pointer-events: none; }
+.hk-ghost--dark { -webkit-text-stroke-color: var(--ink-600); }
+
+/* Eyebrow con punto "en vivo" */
+.hk-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-accent); font-weight: var(--fw-bold); font-size: var(--fs-micro); line-height: 1; text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-muted); }
+.hk-eyebrow .live { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 0 rgba(0,191,255,0.5); animation: hk-pulse 2.4s var(--ease-out) infinite; }
+@keyframes hk-pulse { 0% { box-shadow: 0 0 0 0 rgba(0,191,255,0.5); } 70% { box-shadow: 0 0 0 8px rgba(0,191,255,0); } 100% { box-shadow: 0 0 0 0 rgba(0,191,255,0); } }
+
+/* Indicador de scroll */
+.hk-scrollcue { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-accent); font-weight: var(--fw-bold); font-size: var(--fs-micro); line-height: 1; text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-muted); }
+@keyframes hk-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+.hk-scrollcue svg { animation: hk-bob 1.8s var(--ease-in-out) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hk-eyebrow .live, .hk-scrollcue svg { animation: none !important; }
+}
 .hk-sector-link i { transition: transform var(--dur-fast) var(--ease-out); }
 .hk-sector:hover .hk-sector-link i { transform: translate(2px, -2px); }
 .hk-case:hover { border-color: var(--cyan) !important; }
