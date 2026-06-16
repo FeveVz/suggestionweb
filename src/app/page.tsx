@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { ArrowRight, Phone, Mail, Building2, Car, Plane, ShoppingBag, Stethoscope } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
 import { Section, Label, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
 import { DualReveal, CtaForm } from "@/components/brand/interactive";
 import ProofBar from "@/components/ProofBar";
 import SectorCard from "@/components/SectorCard";
-import ServiceGrid from "@/components/ServiceGrid";
 import SectionHeading from "@/components/SectionHeading";
 import Faq from "@/components/Faq";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
+import { SERVICE_CATEGORIES } from "@/content/navegacion";
 
 export const metadata: Metadata = buildMetadata({
   title: "Agencia de Marketing Digital en Ica y Perú | Suggestion",
@@ -20,17 +21,9 @@ export const metadata: Metadata = buildMetadata({
 const SECTORES = [
   { title: "Inmobiliario", result: "Llenamos tu sala de ventas de citas calificadas, no de curiosos.", href: "/marketing-inmobiliario", icon: Building2, shape: 1 },
   { title: "Automotriz", result: "Del clic al test drive: leads listos para cerrar en piso.", href: "/marketing-automotriz", icon: Car, shape: 2 },
-  { title: "Turismo", result: "Reservas reales, en temporada y fuera de ella, con costo medido.", href: "/marketing-turismo", icon: Plane, shape: 6 },
+  { title: "Turismo", result: "Reservas reales, en temporada y fuera de ella, con costo medido.", href: "/marketing-turismo", icon: Luggage, shape: 6 },
   { title: "Marcas y consumo", result: "Demanda que se vuelve venta, no likes prestados.", href: "/marketing-marcas-consumo", icon: ShoppingBag, shape: 5 },
   { title: "Salud", result: "Agenda llena de pacientes sin quemar tu presupuesto.", href: "/marketing-salud", icon: Stethoscope, shape: 4 },
-];
-
-const CATEGORIAS = [
-  { title: "Estrategia y datos", description: "Consultoría e investigación de mercado.", href: "/servicios/estrategia" },
-  { title: "Marketing y publicidad digital", description: "Estrategia integral, pauta y redes sociales.", href: "/servicios/marketing-digital-publicidad" },
-  { title: "Web, SEO y automatización", description: "Desarrollo web, SEO y CRM.", href: "/servicios/web-seo" },
-  { title: "Marca y contenido", description: "Branding y producción audiovisual.", href: "/servicios/marca-contenido" },
-  { title: "Activación y medios físicos", description: "BTL, publicidad exterior, imprenta y merchandising.", href: "/servicios/btl-medios" },
 ];
 
 const CASOS = [
@@ -83,7 +76,7 @@ export default function Home() {
         >
           <div style={{ minWidth: 0 }}>
             <div className="hk-enter"><Label>Agencia de performance · Ica, Perú</Label></div>
-            <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) clamp(2.5rem,5.2vw,4.25rem)/1.0 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "20px 0 0", maxWidth: "15ch" }}>
+            <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) clamp(2.5rem,4.6vw,3.75rem)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "18px 0 0", maxWidth: "17ch" }}>
               Agencia de marketing digital que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span>
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", maxWidth: "48ch", margin: "22px 0 0" }}>
@@ -98,8 +91,8 @@ export default function Home() {
               Respondemos en menos de 24 h hábiles.
             </p>
           </div>
-          <div className="hk-enter-3" style={{ minWidth: 0 }}>
-            <DualReveal shape={3} size={400} />
+          <div className="hk-enter-3" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
+            <DualReveal shape={3} size={520} />
           </div>
         </div>
         <TaglineStrip items={["No es lo que ves", "Convertimos atención en ventas", "Consigue lo posible haciendo lo imposible"]} />
@@ -118,7 +111,7 @@ export default function Home() {
             Cinco verticales donde leemos lo que otros no ven y lo convertimos en ventas medibles.
           </p>
         </div>
-        <div className="reveal reveal-d2" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
+        <div className="hk-sector-grid reveal reveal-d2">
           {SECTORES.map((s, i) => (
             <SectorCard key={s.href} index={`0${i + 1}`} title={s.title} result={s.result} href={s.href} icon={s.icon} shape={s.shape} />
           ))}
@@ -139,7 +132,25 @@ export default function Home() {
               Ver todos los servicios <ArrowRight size={16} />
             </a>
           </div>
-          <ServiceGrid items={CATEGORIAS} columns={2} />
+          <ul style={{ listStyle: "none", margin: 0, padding: 0, borderBottom: "1px solid var(--hairline)" }}>
+            {SERVICE_CATEGORIES.map((cat, i) => (
+              <li key={cat.slug} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "clamp(1rem,3vw,2.5rem)", padding: "22px 0", borderTop: "1px solid var(--hairline)" }}>
+                <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", color: "var(--cyan)", paddingTop: 7 }}>0{i + 1}</span>
+                <div>
+                  <Link href={`/servicios/${cat.slug}`} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>
+                    {cat.label}
+                  </Link>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 14px", marginTop: 12 }}>
+                    {cat.children.map((c) => (
+                      <Link key={c.href} href={c.href} className="hk-ulink" style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)" }}>
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 

@@ -250,6 +250,12 @@ img { max-width: 100%; display: block; }
 .hk-sector:hover { border-color: var(--cyan) !important; }
 .hk-sector:hover [data-reveal] { opacity: 1 !important; }
 .hk-sector:hover .hk-sector-chip { border-color: var(--cyan) !important; background: rgba(0,191,255,0.12) !important; }
+
+/* Grid de 5 sectores sin huérfanos: 1 → 2 → 3 → 5 columnas */
+.hk-sector-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 560px) { .hk-sector-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .hk-sector-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1160px) { .hk-sector-grid { grid-template-columns: repeat(5, 1fr); } }
 .hk-sector-link i { transition: transform var(--dur-fast) var(--ease-out); }
 .hk-sector:hover .hk-sector-link i { transform: translate(2px, -2px); }
 .hk-case:hover { border-color: var(--cyan) !important; }

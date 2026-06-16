@@ -57,7 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <RevealController />
         <div style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
           <Header />
-          <main style={{ flex: 1 }}>{children}</main>
+          <main style={{ flex: 1, overflowX: "clip" }}>{children}</main>
           <Footer />
         </div>
       </body>
