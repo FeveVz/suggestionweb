@@ -46,9 +46,9 @@ export default function SectorCard({
         overflow: "hidden",
       }}
     >
-      {/* Mancha de marca: marca de agua tenue de fondo */}
-      <div aria-hidden style={{ position: "absolute", right: -34, top: -34, opacity: 0.14, pointerEvents: "none", zIndex: 0 }}>
-        <Blot shape={shape} tint="orange" size={170} />
+      {/* Mancha de marca: marca de agua que se revela naranja→cian al hover */}
+      <div aria-hidden style={{ position: "absolute", right: -34, top: -34, opacity: 0.18, pointerEvents: "none", zIndex: 0 }}>
+        <Blot shape={shape} dual reveal size={170} />
       </div>
 
       {/* Ícono del sector + índice */}

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Stat } from "@/components/brand/parts";
+import CountUp from "@/components/CountUp";
 
 /**
  * Barra de prueba social (doc 16 §5). Banda oscura con la línea del funnel
@@ -47,7 +48,7 @@ export default function ProofBar({
           style={{ display: "grid", gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))`, gap: "var(--space-6)", borderTop: funnel ? "1px solid var(--hairline-inverse)" : "none", paddingTop: funnel ? 34 : 0 }}
         >
           {stats.map((s) => (
-            <Stat key={s.label} value={s.value} label={s.label} />
+            <Stat key={s.label} value={<CountUp to={s.value} />} label={s.label} />
           ))}
         </div>
       </div>

@@ -77,7 +77,7 @@ export function Blot({
   );
 }
 
-export function Stat({ value, unit = '', label, tone = 'onDark' }: { value: string; unit?: string; label: string; tone?: 'onDark' | 'light' }) {
+export function Stat({ value, unit = '', label, tone = 'onDark' }: { value: React.ReactNode; unit?: string; label: string; tone?: 'onDark' | 'light' }) {
   const dark = tone === 'onDark';
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

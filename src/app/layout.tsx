@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import ScrollProgress from "@/components/ScrollProgress";
 import { RevealController } from "@/components/brand/interactive";
 import { site, SITE_URL } from "@/lib/site";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {/* Activa animaciones solo si hay JS; sin JS el contenido queda visible (SEO-safe). */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <ScrollProgress />
         <RevealController />
         <div style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
           <Header />

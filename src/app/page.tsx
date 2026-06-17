@@ -7,6 +7,8 @@ import ProofBar from "@/components/ProofBar";
 import SectorCard from "@/components/SectorCard";
 import SectionHeading from "@/components/SectionHeading";
 import Faq from "@/components/Faq";
+import CountUp from "@/components/CountUp";
+import Parallax from "@/components/Parallax";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
@@ -70,10 +72,12 @@ export default function Home() {
         <span className="hk-vlabel hk-nav" style={{ position: "absolute", left: 22, top: "50%", transform: "translateY(-50%) rotate(180deg)", zIndex: 2 }}>
           Marketing de performance — Ica, Perú
         </span>
-        {/* Mancha de marca masiva que sangra (decorativa, en capa) */}
-        <div aria-hidden className="hk-float" style={{ position: "absolute", right: "-12%", top: "-8%", width: 920, maxWidth: "68%", opacity: 0.08, zIndex: 0, pointerEvents: "none" }}>
-          <Blot shape={2} tint="orange" size="100%" />
-        </div>
+        {/* Mancha de marca masiva que sangra (decorativa, en capa) con parallax */}
+        <Parallax speed={0.18} style={{ position: "absolute", right: "-12%", top: "-8%", width: 920, maxWidth: "68%", zIndex: 0, pointerEvents: "none" }}>
+          <div aria-hidden className="hk-float" style={{ opacity: 0.08 }}>
+            <Blot shape={2} tint="orange" size="100%" />
+          </div>
+        </Parallax>
         <div
           className="hk-hero"
           style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4.5rem) var(--gutter) clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "calc(86vh - 68px)" }}
@@ -180,7 +184,7 @@ export default function Home() {
                 <Blot shape={c.shape} tint="orange" size={48} style={{ opacity: 0.9 }} />
               </div>
               <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
-                {c.metric}
+                <CountUp to={c.metric} />
               </div>
               <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>
                 <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
