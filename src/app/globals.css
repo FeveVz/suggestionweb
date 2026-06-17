@@ -254,7 +254,7 @@ img { max-width: 100%; display: block; }
 /* Grid de 5 sectores sin huérfanos: 1 → 2 → 3 → 5 columnas */
 .hk-sector-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
 @media (min-width: 560px) { .hk-sector-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 900px) { .hk-sector-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 720px) { .hk-sector-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1160px) { .hk-sector-grid { grid-template-columns: repeat(5, 1fr); } }
 
 /* ============================================================

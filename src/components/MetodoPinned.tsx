@@ -21,23 +21,29 @@ export default function MetodoPinned() {
   const [active, setActive] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
+  // Decide pin/stack en montaje y al redimensionar (reactivo al breakpoint).
   useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 920px)").matches;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!desktop || reduce) {
-      setPin(false);
-      return;
-    }
-    setPin(true);
+    const decide = () => {
+      const desktop = window.matchMedia("(min-width: 920px)").matches;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setPin(desktop && !reduce);
+    };
+    decide();
+    window.addEventListener("resize", decide);
+    return () => window.removeEventListener("resize", decide);
+  }, []);
+
+  // Paso activo ligado al scroll (solo cuando está pinned).
+  useEffect(() => {
+    if (!pin) return;
     const el = ref.current;
     if (!el) return;
     let raf = 0;
     const onScroll = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
-        const r = el.getBoundingClientRect();
         const span = el.offsetHeight - window.innerHeight;
-        const p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
+        const p = span > 0 ? Math.min(1, Math.max(0, -el.getBoundingClientRect().top / span)) : 0;
         setActive(Math.min(PASOS.length - 1, Math.floor(p * PASOS.length)));
       });
     };
@@ -49,7 +55,7 @@ export default function MetodoPinned() {
       window.removeEventListener("resize", onScroll);
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [pin]);
 
   const heading = (
     <>

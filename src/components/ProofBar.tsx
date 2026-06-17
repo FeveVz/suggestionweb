@@ -53,7 +53,7 @@ export default function ProofBar({
         </div>
       </div>
       <style>{`
-        @media (max-width: 720px) {
+        @media (max-width: 900px) {
           .hk-proof-stats { grid-template-columns: 1fr 1fr !important; gap: var(--space-5) !important; }
         }
       `}</style>
