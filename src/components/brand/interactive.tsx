@@ -21,24 +21,36 @@ export function usePrefersReduced() {
 /* Scroll-reveal: añade .in a los .hk-rise al entrar en viewport */
 export function RevealController() {
   React.useEffect(() => {
-    const els = Array.from(document.querySelectorAll('.reveal'));
-    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      els.forEach((el) => el.classList.add('in'));
+    const els = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
       return;
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    let raf = 0;
+    const update = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const vh = window.innerHeight;
+        const start = vh * 0.92; // empieza a entrar
+        const end = vh * 0.5;    // completamente revelado al llegar al centro
+        for (const el of els) {
+          const r = el.getBoundingClientRect();
+          let p = (start - r.top) / (start - end);
+          p = p < 0 ? 0 : p > 1 ? 1 : p;
+          const e = 1 - Math.pow(1 - p, 3); // easeOutCubic
+          el.style.opacity = String(e);
+          el.style.transform = `translateY(${((1 - e) * 52).toFixed(1)}px) scale(${(0.985 + 0.015 * e).toFixed(4)})`;
+        }
+      });
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+      cancelAnimationFrame(raf);
+    };
   }, []);
   return null;
 }
