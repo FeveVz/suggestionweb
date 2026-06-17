@@ -4,11 +4,14 @@ import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBa
 import { Section, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
 import { DualReveal, CtaForm } from "@/components/brand/interactive";
 import ProofBar from "@/components/ProofBar";
+import ClientLogos from "@/components/ClientLogos";
 import SectorCard from "@/components/SectorCard";
 import SectionHeading from "@/components/SectionHeading";
 import Faq from "@/components/Faq";
 import CountUp from "@/components/CountUp";
 import Parallax from "@/components/Parallax";
+import Magnetic from "@/components/Magnetic";
+import MetodoPinned from "@/components/MetodoPinned";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
@@ -32,13 +35,6 @@ const CASOS = [
   { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350K", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", shape: 1 },
   { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 en campañas de demanda directa.", shape: 5 },
   { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas generadas en una sola campaña, dentro y fuera de temporada.", shape: 6 },
-];
-
-const PASOS = [
-  { n: "01", t: "Leemos", d: "Auditamos tu mercado y tu funnel. Vemos la mancha: dónde se pierde la atención antes de convertir." },
-  { n: "02", t: "Moldeamos", d: "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros." },
-  { n: "03", t: "Convertimos", d: "Activamos campañas y citas. Lead, cita, cierre — sin pasos de vanidad." },
-  { n: "04", t: "Medimos", d: "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta." },
 ];
 
 const POR_QUE = [
@@ -93,8 +89,8 @@ export default function Home() {
               <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>lead</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>cita</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>cierre</strong>—, no métricas de vanidad. Tú no necesitas más likes; necesitas más ventas.
             </p>
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
-              <Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn>
-              <Btn as="a" href="/casos" variant="secondary" size="lg">Ver casos</Btn>
+              <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
+              <Magnetic><Btn as="a" href="/casos" variant="secondary" size="lg">Ver casos</Btn></Magnetic>
             </div>
             <p className="hk-enter-4" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
               Respondemos en menos de 24 h hábiles.
@@ -113,10 +109,13 @@ export default function Home() {
       {/* PROOF BAR */}
       <ProofBar />
 
+      {/* LOGOS DE CLIENTES */}
+      <ClientLogos />
+
       {/* SECTORES */}
       <Section id="sectores" tone="dark">
         <div className="reveal" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24, marginBottom: 40, flexWrap: "wrap" }}>
-          <SectionHeading level={2} kicker="Sectores" tone="dark" maxWidth="18ch">
+          <SectionHeading level={2} kicker="Sectores" tone="dark" maxWidth="18ch" reveal>
             Cada mercado tiene su perspectiva. Nosotros la entendemos.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", maxWidth: "34ch" }}>
@@ -134,7 +133,7 @@ export default function Home() {
       <Section id="servicios" tone="light">
         <div className="hk-serv reveal" style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: "clamp(2rem,5vw,4rem)", alignItems: "start" }}>
           <div>
-            <SectionHeading level={2} kicker="Servicios" maxWidth="14ch">
+            <SectionHeading level={2} kicker="Servicios" maxWidth="14ch" reveal>
               Todo el funnel, bajo un mismo método.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "36ch" }}>
@@ -169,7 +168,7 @@ export default function Home() {
       {/* CASOS */}
       <Section id="casos" tone="light" style={{ background: "var(--surface-raised)" }}>
         <div className="reveal" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24, marginBottom: 40, flexWrap: "wrap" }}>
-          <SectionHeading level={2} kicker="Casos de éxito" maxWidth="18ch">
+          <SectionHeading level={2} kicker="Casos de éxito" maxWidth="18ch" reveal>
             Resultados de negocio, no capturas de likes.
           </SectionHeading>
           <a href="/casos" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
@@ -194,30 +193,8 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* MÉTODO */}
-      <section id="metodo" className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", position: "relative", overflow: "hidden", padding: "var(--section-y) 0" }}>
-        <span className="hk-grain-layer" aria-hidden />
-        <div aria-hidden style={{ position: "absolute", left: 0, right: 0, top: "50%", transform: "translateY(-50%)", height: 360, color: "var(--cyan)", opacity: 0.14, zIndex: 0, pointerEvents: "none", display: "flex", width: "200%", animation: "hk-topo-drift 40s linear infinite" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/textures/topo.svg" alt="" style={{ width: "50%", height: "100%", objectFit: "cover" }} />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/textures/topo.svg" alt="" style={{ width: "50%", height: "100%", objectFit: "cover" }} />
-        </div>
-        <div style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 var(--gutter)" }}>
-          <SectionHeading level={2} kicker="Método" tone="dark" maxWidth="22ch" style={{ marginBottom: 44 }}>
-            Consigue lo posible haciendo lo imposible.
-          </SectionHeading>
-          <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-5)" }}>
-            {PASOS.map((p) => (
-              <div key={p.n} style={{ borderTop: "2px solid var(--cyan)", paddingTop: 20 }}>
-                <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>{p.n}</span>
-                <h3 style={{ font: "var(--fw-medium) var(--fs-xl)/1.1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "12px 0 10px" }}>{p.t}</h3>
-                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>{p.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* MÉTODO (pinned en desktop) */}
+      <MetodoPinned />
 
       {/* POR QUÉ */}
       <Section id="porque" tone="light">

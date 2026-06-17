@@ -1,4 +1,5 @@
 import { Label } from "@/components/brand/parts";
+import RevealText from "@/components/RevealText";
 
 /**
  * Encabezado de sección con control explícito del nivel (H2–H6).
@@ -24,6 +25,7 @@ export default function SectionHeading({
   id,
   maxWidth = "28ch",
   style,
+  reveal = false,
 }: {
   level: Level;
   children: React.ReactNode;
@@ -32,6 +34,7 @@ export default function SectionHeading({
   id?: string;
   maxWidth?: string;
   style?: React.CSSProperties;
+  reveal?: boolean;
 }) {
   const Tag = `h${level}` as "h2" | "h3" | "h4" | "h5" | "h6";
   const color = tone === "dark" ? "var(--white)" : "var(--text-strong)";
@@ -48,7 +51,7 @@ export default function SectionHeading({
           maxWidth,
         }}
       >
-        {children}
+        {reveal && typeof children === "string" ? <RevealText text={children} /> : children}
       </Tag>
     </div>
   );
