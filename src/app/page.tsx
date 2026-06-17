@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
 import { Section, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
-import { DualReveal, CtaForm } from "@/components/brand/interactive";
+import { DualReveal, CtaForm, Percepcion } from "@/components/brand/interactive";
 import ProofBar from "@/components/ProofBar";
 import ClientLogos from "@/components/ClientLogos";
 import SectorCard from "@/components/SectorCard";
@@ -12,6 +12,8 @@ import CountUp from "@/components/CountUp";
 import Parallax from "@/components/Parallax";
 import Magnetic from "@/components/Magnetic";
 import MetodoPinned from "@/components/MetodoPinned";
+import InkReveal from "@/components/InkReveal";
+import ScrollBlot from "@/components/ScrollBlot";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
@@ -68,10 +70,10 @@ export default function Home() {
         <span className="hk-vlabel hk-nav" style={{ position: "absolute", left: 22, top: "50%", transform: "translateY(-50%) rotate(180deg)", zIndex: 2 }}>
           Marketing de performance — Ica, Perú
         </span>
-        {/* Mancha de marca masiva que sangra (decorativa, en capa) con parallax */}
+        {/* Mancha que sangra y cambia naranja→cian al scrollear (parallax + percepción) */}
         <Parallax speed={0.18} style={{ position: "absolute", right: "-12%", top: "-8%", width: 920, maxWidth: "68%", zIndex: 0, pointerEvents: "none" }}>
-          <div aria-hidden className="hk-float" style={{ opacity: 0.08 }}>
-            <Blot shape={2} tint="orange" size="100%" />
+          <div aria-hidden className="hk-float" style={{ opacity: 0.13 }}>
+            <ScrollBlot shape={2} size="100%" />
           </div>
         </Parallax>
         <div
@@ -165,6 +167,9 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* ¿QUÉ VES? — momento interpretable (Rorschach) */}
+      <Percepcion shape={1} />
+
       {/* CASOS */}
       <Section id="casos" tone="light" style={{ background: "var(--surface-raised)" }}>
         <div className="reveal" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24, marginBottom: 40, flexWrap: "wrap" }}>
@@ -175,7 +180,7 @@ export default function Home() {
             Hablemos de tu caso <ArrowRight size={16} />
           </a>
         </div>
-        <div className="reveal reveal-d2" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
+        <InkReveal shape={1} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
           {CASOS.map((c) => (
             <article key={c.title} className="hk-case hk-lift" style={{ border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 18, background: "var(--white)" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
@@ -190,7 +195,7 @@ export default function Home() {
               </p>
             </article>
           ))}
-        </div>
+        </InkReveal>
       </Section>
 
       {/* MÉTODO (pinned en desktop) */}
@@ -229,6 +234,11 @@ export default function Home() {
       {/* CIERRE / CONTACTO */}
       <section id="contacto" className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", borderTop: "1px solid var(--hairline-inverse)", position: "relative", overflow: "hidden" }}>
         <span className="hk-grain-layer" aria-hidden />
+        {/* Composición simétrica (Rorschach): mancha espejada que cambia naranja→cian */}
+        <div aria-hidden style={{ position: "absolute", inset: 0, display: "flex", justifyContent: "center", alignItems: "center", opacity: 0.12, zIndex: 0, pointerEvents: "none" }}>
+          <ScrollBlot shape={4} size="min(34vw, 380px)" />
+          <ScrollBlot shape={4} size="min(34vw, 380px)" mirror style={{ marginLeft: "-6%" }} />
+        </div>
         <div className="hk-cta" style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(2rem,5vw,4.5rem)", alignItems: "center" }}>
           <div>
             <SectionHeading level={2} kicker="Agenda una llamada" tone="dark" maxWidth="14ch">
