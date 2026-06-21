@@ -17,7 +17,7 @@ export const SERVICIOS_PILAR = {
   cta: "Hablemos de tu negocio",
 } as const;
 
-const CATEGORIAS: Servicio[] = [
+const CATEGORIAS_RAW: Servicio[] = [
   {
     slug: "estrategia",
     tipo: "categoria",
@@ -109,6 +109,14 @@ const CATEGORIAS: Servicio[] = [
     cierre: { h2: "Pide tu cotización", cta: "Pide tu cotización" },
   },
 ];
+
+/**
+ * Las 5 categorías son hubs de NAVEGACIÓN, no de ranking: van `noindex` para
+ * evitar canibalizar el head de sus servicios hijos (doc 10 §3.2). Siguen en el
+ * menú, el footer y el pilar; `follow` deja fluir el enlace hacia los hijos, que
+ * son los canónicos de su keyword.
+ */
+const CATEGORIAS: Servicio[] = CATEGORIAS_RAW.map((c) => ({ ...c, noindex: true }));
 
 const SERVICIOS_LIST: Servicio[] = [
   // ---------- Estrategia y datos ----------

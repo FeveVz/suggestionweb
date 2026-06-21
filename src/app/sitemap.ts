@@ -22,13 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  const categorias: MetadataRoute.Sitemap = SERVICE_CATEGORIES.map((c) => ({
-    url: u(`/servicios/${c.slug}`),
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
+  // Las 5 categorías hub van noindex (doc 10 §3.2): se excluyen del sitemap.
   const servicios: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap((c) =>
     c.children.map((s) => ({
       url: u(s.href),
@@ -59,5 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...root, ...categorias, ...servicios, ...sectores, ...blogCategorias, ...blogPosts];
+  return [...root, ...servicios, ...sectores, ...blogCategorias, ...blogPosts];
 }
