@@ -156,7 +156,7 @@ export default function LandingArticle({
       <Section tone="light">
         <div style={{ display: "grid", gap: "var(--space-8)", maxWidth: 880 }}>
           {secciones.map((sec, i) => (
-            <div key={i} className="reveal">
+            <div key={i}>
               <SectionHeading level={2} maxWidth="26ch">
                 {sec.h2}
               </SectionHeading>
@@ -249,7 +249,7 @@ export default function LandingArticle({
       {/* FAQ */}
       {faq.length > 0 && (
         <Section tone="light">
-          <div className="reveal">
+          <div>
             <SectionHeading level={2} kicker="Preguntas frecuentes" maxWidth="20ch" style={{ marginBottom: 20 }}>
               Lo que sueles preguntarte.
             </SectionHeading>

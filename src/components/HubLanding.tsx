@@ -118,7 +118,7 @@ export default function HubLanding({
             {gridHeading}
           </SectionHeading>
         )}
-        <div className="reveal">
+        <div>
           <ServiceGrid items={items} columns={columns} />
         </div>
       </Section>

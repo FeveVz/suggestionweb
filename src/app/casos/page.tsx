@@ -68,7 +68,7 @@ export default function Casos() {
 
       {/* CASOS */}
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
-        <div className="reveal" style={{ display: "grid", gap: "var(--space-6)" }}>
+        <div style={{ display: "grid", gap: "var(--space-6)" }}>
           {CASOS.map((c) => (
             <article key={c.title} className="hk-lift" style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.4fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
               <div>

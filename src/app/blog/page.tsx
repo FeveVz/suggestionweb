@@ -50,7 +50,7 @@ export default function BlogPilar() {
         <SectionHeading level={2} kicker="Artículos" maxWidth="20ch" style={{ marginBottom: 32 }}>
           Lo último del blog.
         </SectionHeading>
-        <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
           {posts.map((p) => (
             <BlogCard key={p.slug} post={p} categoriaNombre={getCategoria(p.categoria)?.nombre} />
           ))}

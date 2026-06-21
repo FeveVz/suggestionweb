@@ -65,7 +65,7 @@ export default function Nosotros() {
         <SectionHeading level={2} kicker="Nuestro método" tone="dark" maxWidth="20ch" style={{ marginBottom: 40 }}>
           Consigue lo posible haciendo lo imposible.
         </SectionHeading>
-        <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
           {METODO.map(([t, d], i) => (
             <div key={t} style={{ padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)" }}>
               <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
@@ -81,7 +81,7 @@ export default function Nosotros() {
         <SectionHeading level={2} kicker="Por qué Suggestion" maxWidth="22ch" style={{ marginBottom: 40 }}>
           Lo que nos hace distintos.
         </SectionHeading>
-        <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
           {POR_QUE.map(([t, d], i) => (
             <div key={t} className="hk-lift" style={{ display: "flex", gap: 18, padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
               <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>

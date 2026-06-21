@@ -47,7 +47,7 @@ export default async function BlogCategoria({ params }: Params) {
       </section>
 
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
-        <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
           {posts.map((p) => (
             <BlogCard key={p.slug} post={p} categoriaNombre={c.nombre} />
           ))}

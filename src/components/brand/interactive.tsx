@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { Label, Btn, Blot } from './parts';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
@@ -18,8 +19,10 @@ export function usePrefersReduced() {
   return r;
 }
 
-/* Scroll-reveal: añade .in a los .hk-rise al entrar en viewport */
+/* Scroll-reveal: revela los .reveal según el scroll. Re-escanea en cada cambio
+   de ruta (usePathname) para que la navegación SPA no deje secciones ocultas. */
 export function RevealController() {
+  const pathname = usePathname();
   React.useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -51,7 +54,7 @@ export function RevealController() {
       window.removeEventListener('resize', update);
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [pathname]);
   return null;
 }
 
