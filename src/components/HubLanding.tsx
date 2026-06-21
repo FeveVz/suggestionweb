@@ -3,6 +3,8 @@ import { Section, Btn, Blot, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import ServiceGrid, { type ServiceGridItem } from "@/components/ServiceGrid";
+import MetodoSection from "@/components/MetodoSection";
+import PorQueSection from "@/components/PorQueSection";
 import JsonLd from "@/components/JsonLd";
 import { site, whatsappLink } from "@/lib/site";
 
@@ -122,6 +124,10 @@ export default function HubLanding({
           <ServiceGrid items={items} columns={columns} />
         </div>
       </Section>
+
+      {/* MÉTODO + POR QUÉ — más sustancia en hubs y pilares */}
+      <MetodoSection />
+      <PorQueSection tone="light" />
 
       {/* CIERRE */}
       <section style={{ background: "var(--black)", color: "var(--white)", borderTop: "1px solid var(--hairline-inverse)" }}>

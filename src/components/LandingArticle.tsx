@@ -4,6 +4,8 @@ import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
+import MetodoSection from "@/components/MetodoSection";
+import PorQueSection from "@/components/PorQueSection";
 import JsonLd from "@/components/JsonLd";
 import { site, whatsappLink } from "@/lib/site";
 import type { Seccion, Faq as FaqType, Cierre } from "@/content/types";
@@ -47,6 +49,9 @@ export default function LandingArticle({
   extraSchema?: Json | Json[];
 }) {
   const waMsg = `Hola Suggestion, me interesa: ${h1}.`;
+  const proofText =
+    proof ??
+    "S/350K en ventas, +350 leads y 8 lotes vendidos con S/3,000 en pauta · 7 años convirtiendo atención en ventas.";
   return (
     <>
       {extraSchema && <JsonLd data={extraSchema} />}
@@ -122,8 +127,8 @@ export default function LandingArticle({
         </div>
       </section>
 
-      {/* BARRA DE PRUEBA */}
-      {proof && (
+      {/* BARRA DE PRUEBA (siempre visible; resultados reales por defecto) */}
+      {proofText && (
         <div style={{ background: "var(--black)", color: "var(--white)" }}>
           <div
             style={{
@@ -146,7 +151,7 @@ export default function LandingArticle({
                 margin: 0,
               }}
             >
-              {proof}
+              {proofText}
             </p>
           </div>
         </div>
@@ -246,9 +251,13 @@ export default function LandingArticle({
         </Section>
       )}
 
+      {/* MÉTODO + POR QUÉ — sustancia de marca, siempre visible */}
+      <MetodoSection />
+      <PorQueSection tone="light" />
+
       {/* FAQ */}
       {faq.length > 0 && (
-        <Section tone="light">
+        <Section tone="light" style={{ background: "var(--surface-raised)" }}>
           <div>
             <SectionHeading level={2} kicker="Preguntas frecuentes" maxWidth="20ch" style={{ marginBottom: 20 }}>
               Lo que sueles preguntarte.
