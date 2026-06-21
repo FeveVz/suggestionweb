@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
+import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
 
 /**
- * Sitemap dinámico. Se ampliará con las entradas de blog y la exclusión de
- * categorías noindex en la fase de SEO técnico (doc 16 §10, paso 8).
+ * Sitemap dinámico: raíz + servicios (pilar/categorías/16) + sectores
+ * (hub/5) + blog (pilar/8 categorías/24 entradas). Las categorías hub son
+ * indexables (copy único); si alguna se marca noindex, excluirla aquí.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -43,5 +45,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...root, ...categorias, ...servicios, ...sectores];
+  const blogCategorias: MetadataRoute.Sitemap = BLOG_CATEGORIAS.map((c) => ({
+    url: u(`/blog/${c.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
+  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
+    url: u(`/blog/${p.categoria}/${p.slug}`),
+    lastModified: new Date(`${p.date}T00:00:00`),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...root, ...categorias, ...servicios, ...sectores, ...blogCategorias, ...blogPosts];
 }
