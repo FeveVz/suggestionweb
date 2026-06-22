@@ -2,13 +2,14 @@ import { notFound } from "next/navigation";
 import LandingArticle, { type RelatedBlock } from "@/components/LandingArticle";
 import type { RelatedLink } from "@/components/RelatedLinks";
 import { serviceSchema } from "@/lib/schema";
-import { getSector } from "@/content/sectores";
+import { getSector, getSectorAst } from "@/content/sectores";
 import { getServicio } from "@/content/servicios";
 
 /** Renderiza una landing de sector (a raíz) desde su slug. */
 export default function SectorPage({ slug }: { slug: string }) {
   const sec = getSector(slug);
   if (!sec) notFound();
+  const ast = getSectorAst(slug);
 
   const shape = ((slug.charCodeAt(slug.length - 1) + slug.length) % 6) + 1;
 
@@ -33,6 +34,8 @@ export default function SectorPage({ slug }: { slug: string }) {
       ctaLabel={sec.cta}
       proof={sec.proof}
       secciones={sec.secciones}
+      beneficios={ast?.beneficios}
+      proceso={ast?.proceso}
       related={related}
       faq={sec.faq}
       cierre={sec.cierre}

@@ -7,9 +7,10 @@ import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import MetodoSection from "@/components/MetodoSection";
 import PorQueSection from "@/components/PorQueSection";
 import TransactionalSections from "@/components/TransactionalSections";
+import PricingSection from "@/components/PricingSection";
 import JsonLd from "@/components/JsonLd";
 import { site, whatsappLink } from "@/lib/site";
-import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso } from "@/content/types";
+import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "@/content/types";
 
 /**
  * Plantilla común de páginas de servicio y sector (hero → prueba → secciones →
@@ -33,6 +34,7 @@ export default function LandingArticle({
   incluye,
   beneficios,
   proceso,
+  precios,
   related = [],
   faq,
   cierre,
@@ -49,6 +51,7 @@ export default function LandingArticle({
   incluye?: ItemTT[];
   beneficios?: ItemTT[];
   proceso?: Paso[];
+  precios?: PlanPrecio[];
   related?: RelatedBlock[];
   faq: FaqType[];
   cierre: Cierre;
@@ -249,6 +252,9 @@ export default function LandingArticle({
 
       {/* AST — qué incluye / beneficios / proceso (transaccional) */}
       <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} />
+
+      {/* PLANES Y PRECIOS */}
+      <PricingSection planes={precios} />
 
       {/* ENLAZADO INTERNO (silo) */}
       {related.length > 0 && (

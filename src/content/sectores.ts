@@ -4,7 +4,7 @@
  * serviciosQueUsa enlaza al silo de /servicios (enlazado interno).
  */
 
-import type { Sector } from "./types";
+import type { Sector, ItemTT, Paso } from "./types";
 
 /** Hub /sectores (doc 08 §0). Página propia. */
 export const SECTORES_HUB = {
@@ -214,3 +214,82 @@ export const getSector = (slug: string): Sector | undefined =>
   SECTORES.find((s) => s.slug === slug);
 
 export const allSectorSlugs = (): string[] => SECTORES.map((s) => s.slug);
+
+/**
+ * AST por sector: beneficios + proceso propios de cada vertical (el "qué
+ * incluye" lo cubre el bloque "Lo que ponemos a trabajar" = serviciosQueUsa).
+ */
+export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] }> = {
+  "marketing-inmobiliario": {
+    beneficios: [
+      { titulo: "Citas, no curiosos", texto: "Filtramos al interesado real y lo llevamos a tu sala de ventas listo para decidir." },
+      { titulo: "Funnel completo del proyecto", texto: "Del lanzamiento a la separación, con pauta, landing, drone y CRM conectados." },
+      { titulo: "Valorización que vende", texto: "Mensajes de plusvalía y etapa inicial que activan al inversor." },
+      { titulo: "Seguimiento que no enfría", texto: "CRM y respuesta rápida para que ningún lead de alto valor se pierda." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Auditamos tu proyecto, tu comprador y tu funnel de ventas." },
+      { paso: "02", titulo: "Captamos", texto: "Pauta segmentada + landing del proyecto que agenda citas." },
+      { paso: "03", titulo: "Calificamos", texto: "Filtramos y nutrimos con CRM hasta la visita." },
+      { paso: "04", titulo: "Cerramos", texto: "Reportamos citas, visitas y separaciones; iteramos." },
+    ],
+  },
+  "marketing-automotriz": {
+    beneficios: [
+      { titulo: "Leads que llegan al piso", texto: "Filtramos al curioso y empujamos a la prueba de manejo." },
+      { titulo: "Ofertas que mueven", texto: "Financiamiento, bono y modelo del mes con el mensaje correcto." },
+      { titulo: "Conectado a tu equipo", texto: "Generación y calificación enlazadas a tu fuerza comercial." },
+      { titulo: "Menos costo por venta", texto: "Seguimiento rápido que baja el costo por test drive y cierre." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Analizamos tu marca, tus modelos y tu proceso comercial." },
+      { paso: "02", titulo: "Captamos", texto: "Campañas que generan y filtran prospectos de compra." },
+      { paso: "03", titulo: "Agendamos", texto: "Calificación + seguimiento que lleva al test drive." },
+      { paso: "04", titulo: "Medimos", texto: "Reportamos pruebas de manejo y cierres; optimizamos." },
+    ],
+  },
+  "marketing-turismo": {
+    beneficios: [
+      { titulo: "Reservas directas", texto: "Menos dependencia de las OTAs y su comisión." },
+      { titulo: "Llena la temporada baja", texto: "Ofertas segmentadas que mueven en los días flojos." },
+      { titulo: "El lugar se vende mostrándolo", texto: "Audiovisual que despierta el deseo de reservar." },
+      { titulo: "Costo medido", texto: "Cada campaña con su costo por reserva claro." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Entendemos tu temporada, tu huésped y tu competencia." },
+      { paso: "02", titulo: "Creamos", texto: "Contenido y ofertas que generan reserva directa." },
+      { paso: "03", titulo: "Convertimos", texto: "Pauta + seguimiento que cierra la reserva." },
+      { paso: "04", titulo: "Medimos", texto: "Reportamos reservas y costo; ajustamos por temporada." },
+    ],
+  },
+  "marketing-marcas-consumo": {
+    beneficios: [
+      { titulo: "Demanda que vende", texto: "Branding atado a métricas de negocio, no a likes." },
+      { titulo: "Punto de venta ganado", texto: "Material POP y merchandising que mueven el lineal." },
+      { titulo: "Marca que justifica el precio", texto: "Posicionamiento que reduce la objeción de precio." },
+      { titulo: "Contenido que vende producto", texto: "Audiovisual que despierta la compra." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Analizamos tu categoría, tu shopper y tu competencia." },
+      { paso: "02", titulo: "Moldeamos", texto: "Posicionamiento, mensaje y mezcla digital + física." },
+      { paso: "03", titulo: "Activamos", texto: "Pauta, contenido y presencia en el punto de venta." },
+      { paso: "04", titulo: "Medimos", texto: "Reportamos demanda y venta; iteramos." },
+    ],
+  },
+  "marketing-salud": {
+    beneficios: [
+      { titulo: "Pacientes que agendan", texto: "Campañas segmentadas por especialidad y zona." },
+      { titulo: "Web que da confianza", texto: "En salud, la confianza es la que decide la cita." },
+      { titulo: "Menos presupuesto quemado", texto: "Apuntamos a quien sí busca tu servicio." },
+      { titulo: "Menos ausencias", texto: "Recordatorios y seguimiento que sostienen la agenda." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Entendemos tu especialidad, tu zona y tu paciente." },
+      { paso: "02", titulo: "Captamos", texto: "Pauta segmentada + web que transmite confianza." },
+      { paso: "03", titulo: "Agendamos", texto: "Seguimiento y recordatorios hasta la cita." },
+      { paso: "04", titulo: "Medimos", texto: "Reportamos citas y costo por paciente; optimizamos." },
+    ],
+  },
+};
+
+export const getSectorAst = (slug: string) => SECTOR_AST[slug];

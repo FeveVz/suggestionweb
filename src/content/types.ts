@@ -24,6 +24,15 @@ export type ItemTT = { titulo: string; texto: string };
 /** Paso de proceso transaccional. */
 export type Paso = { paso: string; titulo: string; texto: string };
 
+/** Plan de precios (tabla transaccional). */
+export type PlanPrecio = {
+  nombre: string;
+  precio: string; // p. ej. "S/1,800"
+  periodo: string; // "/mes" | "pago único" | "por activación" | "por día" | "/proyecto"
+  popular?: boolean;
+  incluye: string[];
+};
+
 /** Servicio (16) o categoría hub (5). Ambos viven en /servicios/[slug]. */
 export type Servicio = {
   slug: string;

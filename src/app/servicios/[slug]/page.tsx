@@ -11,6 +11,7 @@ import {
   allServicioSlugs,
 } from "@/content/servicios";
 import { SECTORES } from "@/content/sectores";
+import { getPrecios } from "@/content/precios";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -113,6 +114,7 @@ export default async function ServicioPage({ params }: Params) {
       incluye={s.incluye}
       beneficios={s.beneficios}
       proceso={s.proceso}
+      precios={getPrecios(s.slug)}
       related={related}
       faq={s.faq}
       cierre={s.cierre}

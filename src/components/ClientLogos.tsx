@@ -19,10 +19,14 @@ export default function ClientLogos() {
           <Label>Más de 50 marcas confían en nosotros</Label>
         </div>
         <div style={{ overflow: "hidden", maskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)", WebkitMaskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)" }}>
-          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(2.5rem,5vw,4.5rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 48s linear infinite", willChange: "transform" }}>
+          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(1.25rem,3vw,2.75rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 48s linear infinite", willChange: "transform" }}>
             {row.map((src, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img key={i} src={src} alt="" aria-hidden className="hk-logo" style={{ height: 40, width: "auto", flexShrink: 0 }} loading="lazy" />
+              // Celda uniforme: cada logo se escala para caber (contain), centrado,
+              // con el mismo footprint sin importar su proporción interna.
+              <span key={i} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", height: 48, width: 116, flexShrink: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt="" aria-hidden className="hk-logo" style={{ maxHeight: 30, maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain" }} loading="lazy" />
+              </span>
             ))}
           </div>
         </div>
