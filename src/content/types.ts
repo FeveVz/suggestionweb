@@ -18,6 +18,12 @@ export type Faq = { q: string; a: string };
 
 export type Cierre = { h2: string; cta: string };
 
+/** Ítem título+texto (beneficios, "qué incluye"). */
+export type ItemTT = { titulo: string; texto: string };
+
+/** Paso de proceso transaccional. */
+export type Paso = { paso: string; titulo: string; texto: string };
+
 /** Servicio (16) o categoría hub (5). Ambos viven en /servicios/[slug]. */
 export type Servicio = {
   slug: string;
@@ -35,6 +41,12 @@ export type Servicio = {
   /** barra de prueba social opcional. */
   proof?: string;
   secciones: Seccion[];
+  /** AST — "qué incluye" (checklist transaccional). */
+  incluye?: ItemTT[];
+  /** AST — beneficios / por qué este servicio. */
+  beneficios?: ItemTT[];
+  /** AST — proceso específico del servicio (sustituye al método genérico). */
+  proceso?: Paso[];
   faq: Faq[];
   /** slugs de servicios relacionados (enlazado interno / silo). */
   enlazaA: string[];

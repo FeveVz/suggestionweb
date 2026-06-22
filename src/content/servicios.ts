@@ -161,6 +161,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Leemos · Moldeamos · Convertimos · Medimos. La consultoría es el “Leemos” hecho profundidad.",
       },
     ],
+    incluye: [
+      { titulo: "Auditoría digital completa", texto: "Análisis de canales, métricas, procesos y herramientas actuales." },
+      { titulo: "Plan estratégico", texto: "Documento con objetivos, estrategias, tácticas y KPIs atados a venta." },
+      { titulo: "Auditoría de competencia", texto: "Análisis de la estrategia digital de tus principales competidores." },
+      { titulo: "Definición de buyer persona", texto: "Perfiles detallados de tus clientes ideales y qué los mueve a comprar." },
+      { titulo: "Customer journey mapping", texto: "Mapeo de los puntos de contacto y dónde se pierde la conversión." },
+      { titulo: "Análisis de funnel", texto: "Identificación de fugas y oportunidades de mejora en el embudo." },
+      { titulo: "Stack de herramientas", texto: "Recomendación del set tecnológico óptimo para tu operación." },
+      { titulo: "Capacitación del equipo", texto: "Training en herramientas y mejores prácticas para tu gente." },
+      { titulo: "Sesiones de seguimiento", texto: "Reuniones periódicas para ajustar el rumbo con datos." },
+    ],
+    beneficios: [
+      { titulo: "Visión objetiva", texto: "Una auditoría imparcial de tu situación actual, con recomendaciones accionables." },
+      { titulo: "Plan de acción", texto: "Un roadmap con prioridades, tiempos y recursos —no teoría de manual." },
+      { titulo: "Experiencia probada", texto: "Consejo basado en casos reales (como Ceinys), no en plantillas genéricas." },
+      { titulo: "Acompañamiento", texto: "No solo decimos qué hacer: te acompañamos en la implementación." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Diagnóstico", texto: "Entrevistas, auditoría y análisis de tu situación actual." },
+      { paso: "02", titulo: "Análisis", texto: "Identificación de oportunidades y áreas de mejora prioritarias." },
+      { paso: "03", titulo: "Propuesta", texto: "Documento con plan de acción y roadmap detallado." },
+      { paso: "04", titulo: "Implementación", texto: "Acompañamiento en la ejecución de las recomendaciones." },
+    ],
     faq: [
       {
         q: "¿Qué tipos de estrategia de marketing existen?",
@@ -169,6 +192,18 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Para qué tamaño de empresa sirve?",
         a: "Desde pymes que quieren ordenarse hasta empresas que necesitan una mirada externa y honesta.",
+      },
+      {
+        q: "¿Cuánto dura una consultoría?",
+        a: "Una consultoría puntual puede ser de 2-4 horas. Un proyecto completo de auditoría y plan estratégico toma de 2 a 4 semanas.",
+      },
+      {
+        q: "¿Qué necesito preparar?",
+        a: "Acceso a tus cuentas de marketing, analytics y datos de ventas, y disposición para compartir información honesta de tu negocio.",
+      },
+      {
+        q: "¿Trabajan con cualquier industria?",
+        a: "Tenemos un playbook por vertical (inmobiliario, automotriz, turismo, consumo, salud). Si tu industria es nueva para nosotros, la investigamos antes de recomendar.",
       },
     ],
     enlazaA: ["investigacion-de-mercado", "marketing-digital"],

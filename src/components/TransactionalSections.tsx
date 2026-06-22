@@ -1,0 +1,81 @@
+import { Check } from "lucide-react";
+import { Section } from "@/components/brand/parts";
+import SectionHeading from "@/components/SectionHeading";
+import type { ItemTT, Paso } from "@/content/types";
+
+/**
+ * Bloques transaccionales (AST) para páginas que venden: "Qué incluye"
+ * (checklist), "Beneficios" (por qué este servicio) y "Proceso" específico.
+ * Siempre visibles. Complementan el contenido de keyword sin reemplazarlo.
+ */
+export default function TransactionalSections({
+  incluye,
+  beneficios,
+  proceso,
+}: {
+  incluye?: ItemTT[];
+  beneficios?: ItemTT[];
+  proceso?: Paso[];
+}) {
+  return (
+    <>
+      {/* QUÉ INCLUYE */}
+      {incluye && incluye.length > 0 && (
+        <Section tone="light" style={{ background: "var(--surface-raised)" }}>
+          <SectionHeading level={2} kicker="Qué incluye" maxWidth="24ch" style={{ marginBottom: 36 }}>
+            Todo lo que entra en el servicio.
+          </SectionHeading>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
+            {incluye.map((it) => (
+              <div key={it.titulo} style={{ display: "flex", gap: 14, padding: "var(--space-5)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+                <span aria-hidden style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", background: "var(--cyan)", display: "grid", placeItems: "center" }}>
+                  <Check size={17} style={{ color: "var(--black)" }} />
+                </span>
+                <div>
+                  <h3 style={{ font: "var(--fw-medium) var(--fs-base)/1.25 var(--font-display)", color: "var(--text-strong)" }}>{it.titulo}</h3>
+                  <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 6 }}>{it.texto}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* BENEFICIOS */}
+      {beneficios && beneficios.length > 0 && (
+        <Section tone="light">
+          <SectionHeading level={2} kicker="Por qué este servicio" maxWidth="24ch" style={{ marginBottom: 36 }}>
+            Lo que ganas trabajando con nosotros.
+          </SectionHeading>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
+            {beneficios.map((b, i) => (
+              <div key={b.titulo} className="hk-lift" style={{ padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+                <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
+                <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)", marginTop: 12 }}>{b.titulo}</h3>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-muted)", marginTop: 6 }}>{b.texto}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* PROCESO */}
+      {proceso && proceso.length > 0 && (
+        <Section tone="dark">
+          <SectionHeading level={2} kicker="Nuestro proceso" tone="dark" maxWidth="22ch" style={{ marginBottom: 40 }}>
+            Una metodología que entrega resultados.
+          </SectionHeading>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
+            {proceso.map((p) => (
+              <div key={p.paso} style={{ padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)" }}>
+                <span style={{ font: "var(--fw-bold) var(--fs-xl)/1 var(--font-accent)", color: "var(--cyan)" }}>{p.paso}</span>
+                <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--white)", marginTop: 12 }}>{p.titulo}</h3>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>{p.texto}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+    </>
+  );
+}

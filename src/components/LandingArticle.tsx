@@ -6,9 +6,10 @@ import Faq from "@/components/Faq";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import MetodoSection from "@/components/MetodoSection";
 import PorQueSection from "@/components/PorQueSection";
+import TransactionalSections from "@/components/TransactionalSections";
 import JsonLd from "@/components/JsonLd";
 import { site, whatsappLink } from "@/lib/site";
-import type { Seccion, Faq as FaqType, Cierre } from "@/content/types";
+import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso } from "@/content/types";
 
 /**
  * Plantilla común de páginas de servicio y sector (hero → prueba → secciones →
@@ -29,6 +30,9 @@ export default function LandingArticle({
   ctaLabel,
   proof,
   secciones,
+  incluye,
+  beneficios,
+  proceso,
   related = [],
   faq,
   cierre,
@@ -42,6 +46,9 @@ export default function LandingArticle({
   ctaLabel: string;
   proof?: string;
   secciones: Seccion[];
+  incluye?: ItemTT[];
+  beneficios?: ItemTT[];
+  proceso?: Paso[];
   related?: RelatedBlock[];
   faq: FaqType[];
   cierre: Cierre;
@@ -240,6 +247,9 @@ export default function LandingArticle({
         </div>
       </Section>
 
+      {/* AST — qué incluye / beneficios / proceso (transaccional) */}
+      <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} />
+
       {/* ENLAZADO INTERNO (silo) */}
       {related.length > 0 && (
         <Section tone="light" style={{ background: "var(--surface-raised)", paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
@@ -251,8 +261,8 @@ export default function LandingArticle({
         </Section>
       )}
 
-      {/* MÉTODO + POR QUÉ — sustancia de marca, siempre visible */}
-      <MetodoSection />
+      {/* MÉTODO genérico (solo si el servicio no trae proceso propio) + POR QUÉ */}
+      {!proceso && <MetodoSection />}
       <PorQueSection tone="light" />
 
       {/* FAQ */}

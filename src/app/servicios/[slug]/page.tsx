@@ -110,6 +110,9 @@ export default async function ServicioPage({ params }: Params) {
       ctaLabel={s.cta}
       proof={s.proof}
       secciones={s.secciones}
+      incluye={s.incluye}
+      beneficios={s.beneficios}
+      proceso={s.proceso}
       related={related}
       faq={s.faq}
       cierre={s.cierre}
