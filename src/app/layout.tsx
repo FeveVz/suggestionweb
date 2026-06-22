@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingMenu from "@/components/FloatingMenu";
 import JsonLd from "@/components/JsonLd";
 import ScrollProgress from "@/components/ScrollProgress";
 import CustomCursor from "@/components/CustomCursor";
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main style={{ flex: 1, overflowX: "clip" }}>{children}</main>
           <Footer />
         </div>
+        <FloatingMenu />
       </body>
     </html>
   );

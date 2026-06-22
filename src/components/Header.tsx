@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Btn } from "@/components/brand/parts";
 import {
   SERVICE_CATEGORIES,
@@ -16,25 +16,18 @@ type OpenMenu = "servicios" | "sectores" | null;
 
 export default function Header() {
   const [open, setOpen] = useState<OpenMenu>(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState<OpenMenu>(null);
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
 
   // Cerrar menús al cambiar de ruta.
   useEffect(() => {
     setOpen(null);
-    setMobileOpen(false);
-    setMobileSection(null);
   }, [pathname]);
 
   // Escape cierra todo.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpen(null);
-        setMobileOpen(false);
-      }
+      if (e.key === "Escape") setOpen(null);
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
@@ -130,15 +123,6 @@ export default function Header() {
               {CTA_PRIMARY.label}
             </Btn>
           </span>
-          <button
-            aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={mobileOpen}
-            onClick={() => setMobileOpen((v) => !v)}
-            className="hk-burger"
-            style={{ display: "none", background: "transparent", border: "none", cursor: "pointer", color: "var(--text-strong)" }}
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
 
@@ -198,62 +182,6 @@ export default function Header() {
         </MegaPanel>
       )}
 
-      {/* Drawer móvil */}
-      {mobileOpen && (
-        <div style={{ borderTop: "1px solid var(--hairline)", background: "var(--white)", padding: "12px var(--gutter) 24px", maxHeight: "calc(100vh - 68px)", overflowY: "auto" }}>
-          <nav style={{ display: "flex", flexDirection: "column" }} aria-label="Móvil">
-            <MobileAccordion
-              label="Servicios"
-              hubHref="/servicios"
-              open={mobileSection === "servicios"}
-              onToggle={() => setMobileSection(mobileSection === "servicios" ? null : "servicios")}
-            >
-              {SERVICE_CATEGORIES.map((cat) => (
-                <div key={cat.slug} style={{ marginBottom: 14 }}>
-                  <Link href={`/servicios/${cat.slug}`} style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)", display: "block", marginBottom: 8 }}>
-                    {cat.label}
-                  </Link>
-                  {cat.children.map((c) => (
-                    <Link key={c.href} href={c.href} style={{ display: "block", font: "var(--fw-medium) var(--fs-sm)/1 var(--font-body)", color: "var(--text-strong)", padding: "8px 0 8px 12px" }}>
-                      {c.label}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </MobileAccordion>
-
-            <MobileAccordion
-              label="Sectores"
-              hubHref="/sectores"
-              open={mobileSection === "sectores"}
-              onToggle={() => setMobileSection(mobileSection === "sectores" ? null : "sectores")}
-            >
-              {SECTORS.map((s) => (
-                <Link key={s.href} href={s.href} style={{ display: "block", font: "var(--fw-medium) var(--fs-sm)/1 var(--font-body)", color: "var(--text-strong)", padding: "10px 0 10px 12px" }}>
-                  Marketing {s.label.toLowerCase()}
-                </Link>
-              ))}
-            </MobileAccordion>
-
-            {MAIN_NAV.filter((l) => l.href !== "/servicios" && l.href !== "/sectores").map((l) => (
-              <Link key={l.href} href={l.href} style={{ font: "var(--fw-medium) var(--fs-md)/1 var(--font-body)", color: "var(--text-strong)", padding: "14px 0", borderBottom: "1px solid var(--hairline)" }}>
-                {l.label}
-              </Link>
-            ))}
-            <div style={{ marginTop: 18 }}>
-              <Btn as="a" href={CTA_PRIMARY.href} size="md" full>
-                {CTA_PRIMARY.label}
-              </Btn>
-            </div>
-          </nav>
-        </div>
-      )}
-
-      <style>{`
-        @media (max-width: 920px) {
-          .hk-burger { display: inline-flex !important; }
-        }
-      `}</style>
     </header>
   );
 }
@@ -281,36 +209,3 @@ function MegaPanel({ children, onClose }: { children: React.ReactNode; onClose: 
   );
 }
 
-function MobileAccordion({
-  label,
-  hubHref,
-  open,
-  onToggle,
-  children,
-}: {
-  label: string;
-  hubHref: string;
-  open: boolean;
-  onToggle: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <div style={{ borderBottom: "1px solid var(--hairline)" }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <Link href={hubHref} style={{ font: "var(--fw-medium) var(--fs-md)/1 var(--font-body)", color: "var(--text-strong)", padding: "14px 0" }}>
-          {label}
-        </Link>
-        <button
-          type="button"
-          aria-label={`${open ? "Contraer" : "Expandir"} ${label}`}
-          aria-expanded={open}
-          onClick={onToggle}
-          style={{ background: "transparent", border: "none", cursor: "pointer", color: "var(--text-strong)", padding: 8 }}
-        >
-          <ChevronDown size={18} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform var(--dur-fast)" }} />
-        </button>
-      </div>
-      {open && <div style={{ padding: "4px 0 16px" }}>{children}</div>}
-    </div>
-  );
-}

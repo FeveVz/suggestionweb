@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Section } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import ProcesoTimeline from "@/components/ProcesoTimeline";
+import BeneficiosGrid from "@/components/BeneficiosGrid";
 import type { ItemTT, Paso } from "@/content/types";
 
 /**
@@ -48,15 +49,7 @@ export default function TransactionalSections({
           <SectionHeading level={2} kicker="Por qué este servicio" maxWidth="24ch" style={{ marginBottom: 36 }}>
             Lo que ganas trabajando con nosotros.
           </SectionHeading>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
-            {beneficios.map((b, i) => (
-              <div key={b.titulo} className="hk-lift" style={{ padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
-                <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
-                <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)", marginTop: 12 }}>{b.titulo}</h3>
-                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-muted)", marginTop: 6 }}>{b.texto}</p>
-              </div>
-            ))}
-          </div>
+          <BeneficiosGrid items={beneficios} />
         </Section>
       )}
 
