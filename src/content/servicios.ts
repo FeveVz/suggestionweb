@@ -473,6 +473,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Trabajamos las redes con mentalidad de funnel: el contenido atrae, la conversación califica y el mensaje cierra.",
       },
     ],
+    incluye: [
+      { titulo: "Estrategia de contenidos", texto: "Calendario editorial mensual alineado con tus objetivos de negocio." },
+      { titulo: "Creación de contenido", texto: "Diseño gráfico, fotografía y video profesional para tus redes." },
+      { titulo: "Community management", texto: "Gestión diaria de comentarios, mensajes y menciones." },
+      { titulo: "Reportes mensuales", texto: "Métricas de crecimiento, engagement y conversiones." },
+      { titulo: "Campañas de pauta", texto: "Publicidad pagada en Meta, TikTok, LinkedIn y más." },
+      { titulo: "Influencer marketing", texto: "Conexión con influencers relevantes para tu marca." },
+      { titulo: "Social listening", texto: "Monitoreo de menciones y tendencias en tu industria." },
+      { titulo: "Gestión de crisis", texto: "Protocolos y manejo profesional de situaciones complejas." },
+      { titulo: "Stories y Reels", texto: "Contenido efímero que humaniza tu marca." },
+    ],
+    beneficios: [
+      { titulo: "Comunidad activa", texto: "Construimos comunidades comprometidas que interactúan y defienden tu marca." },
+      { titulo: "Contenido estratégico", texto: "Cada post tiene un propósito: educa, entretiene y convierte." },
+      { titulo: "Engagement real", texto: "Interacciones auténticas, no vanity metrics: comentarios, shares y conversiones." },
+      { titulo: "Respuesta inmediata", texto: "Community management que responde y capitaliza oportunidades en tiempo real." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Auditoría", texto: "Analizamos tu presencia actual, competencia y oportunidades." },
+      { paso: "02", titulo: "Estrategia", texto: "Definimos tono, contenido y canales según tu audiencia." },
+      { paso: "03", titulo: "Creación", texto: "Producimos contenido atractivo y relevante de forma constante." },
+      { paso: "04", titulo: "Optimización", texto: "Medimos resultados y ajustamos para máximo impacto." },
+    ],
     faq: [
       {
         q: "¿Qué incluye el servicio?",
@@ -481,6 +504,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Con qué frecuencia se publica?",
         a: "Según tu plan; lo definimos por objetivos, no por cantidad porque sí.",
+      },
+      {
+        q: "¿Qué redes sociales gestionan?",
+        a: "Instagram, Facebook, TikTok, LinkedIn, YouTube y más, según dónde esté tu audiencia.",
+      },
+      {
+        q: "¿Quién crea el contenido?",
+        a: "Nuestro equipo de diseño, copy y video crea todo el contenido. También podemos partir de tu material.",
       },
     ],
     enlazaA: ["marketing-digital", "publicidad-digital", "produccion-audiovisual"],
@@ -623,6 +654,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Empezamos por una auditoría: qué te frena, qué oportunidades tienes y por dónde ganar primero.",
       },
     ],
+    incluye: [
+      { titulo: "Auditoría SEO", texto: "Análisis completo de tu sitio: técnico, contenido y autoridad." },
+      { titulo: "SEO técnico", texto: "Optimización de velocidad, estructura, schema e indexación." },
+      { titulo: "Keyword research", texto: "Identificamos las búsquedas rentables de tu industria." },
+      { titulo: "Contenido SEO", texto: "Creación de contenido optimizado que posiciona y convierte." },
+      { titulo: "Link building", texto: "Estrategia de backlinks de calidad para aumentar autoridad." },
+      { titulo: "SEO local", texto: "Posicionamiento en mapas y búsquedas locales (clave en Ica)." },
+      { titulo: "SEO para e-commerce", texto: "Optimización de fichas de producto y categorías." },
+      { titulo: "Reportes mensuales", texto: "Posiciones, tráfico orgánico, keywords y conversiones." },
+      { titulo: "Core Web Vitals", texto: "Optimización de las métricas de experiencia de usuario." },
+    ],
+    beneficios: [
+      { titulo: "Tráfico orgánico de calidad", texto: "Visitantes que buscan justo lo que ofreces: intención de compra real." },
+      { titulo: "Resultados sostenibles", texto: "A diferencia de la pauta, el SEO genera resultados que persisten." },
+      { titulo: "Contenido que posiciona", texto: "Contenido que atrae y convierte mientras sube posiciones." },
+      { titulo: "Autoridad de marca", texto: "Aparecer primero genera confianza: ser primero es ser referente." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Auditoría", texto: "Analizamos tu sitio, competencia y oportunidades de posicionamiento." },
+      { paso: "02", titulo: "Estrategia", texto: "Plan de palabras clave, contenido y optimización técnica." },
+      { paso: "03", titulo: "Implementación", texto: "Ejecutamos optimizaciones y creamos contenido SEO." },
+      { paso: "04", titulo: "Escalamiento", texto: "Medimos resultados y escalamos lo que funciona." },
+    ],
     faq: [
       {
         q: "¿Qué diferencia hay entre SEO y SEM?",
@@ -631,6 +685,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿En cuánto tiempo se ven resultados?",
         a: "El SEO es inversión a mediano plazo: los primeros movimientos en semanas, los resultados sólidos en meses.",
+      },
+      {
+        q: "¿Garantizan las primeras posiciones?",
+        a: "Nadie honesto puede garantizar posiciones específicas en Google. Lo que garantizamos es trabajo profesional y resultados medibles.",
+      },
+      {
+        q: "¿Qué incluye el servicio de SEO?",
+        a: "Auditoría inicial, SEO técnico, investigación de keywords, estrategia de contenido, link building y reportes mensuales.",
       },
     ],
     enlazaA: ["desarrollo-web", "marketing-digital", "crm-automatizacion"],
@@ -670,6 +732,29 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
     ],
+    incluye: [
+      { titulo: "Implementación de CRM", texto: "HubSpot, Pipedrive, Zoho o el que encaje con tu operación." },
+      { titulo: "Migración de datos", texto: "Importamos y limpiamos tu base de datos existente." },
+      { titulo: "Email automation", texto: "Secuencias de bienvenida, nurturing y reactivación." },
+      { titulo: "Lead scoring", texto: "Puntuación automática para priorizar los mejores leads." },
+      { titulo: "Workflows", texto: "Automatizaciones basadas en triggers y comportamientos." },
+      { titulo: "Integraciones", texto: "Conexión con tu web, ads, calendarios y herramientas." },
+      { titulo: "Pipelines de ventas", texto: "Etapas personalizadas con seguimiento automático." },
+      { titulo: "Chatbots", texto: "Atención automatizada en web y WhatsApp." },
+      { titulo: "Reportes y dashboards", texto: "Visibilidad total del funnel de ventas y marketing." },
+    ],
+    beneficios: [
+      { titulo: "Ahorro de tiempo", texto: "Automatiza tareas repetitivas y libera a tu equipo para lo importante." },
+      { titulo: "Leads nutridos", texto: "Secuencias que convierten leads fríos en oportunidades calientes." },
+      { titulo: "Todo en un lugar", texto: "Contactos, oportunidades, tareas y métricas en un solo sistema." },
+      { titulo: "Escalabilidad", texto: "El sistema maneja 10 leads o 10,000 sin que agregues personal." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Auditoría", texto: "Revisamos tus procesos actuales y herramientas." },
+      { paso: "02", titulo: "Arquitectura", texto: "Diseñamos el flujo de datos y las automatizaciones." },
+      { paso: "03", titulo: "Implementación", texto: "Configuramos CRM, integraciones y workflows." },
+      { paso: "04", titulo: "Capacitación", texto: "Entrenamos a tu equipo y documentamos todo." },
+    ],
     faq: [
       {
         q: "¿Para qué sirve un CRM en una empresa?",
@@ -678,6 +763,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Qué tipos de CRM existen?",
         a: "Operativos, analíticos y colaborativos. Elegimos e implementamos el que encaja con tu operación.",
+      },
+      {
+        q: "¿Qué CRM recomiendan?",
+        a: "Depende de tu presupuesto y necesidades: HubSpot para marketing, Pipedrive para ventas simples, soluciones más robustas para empresas grandes.",
+      },
+      {
+        q: "¿Cuánto toma implementar?",
+        a: "Un proyecto típico de CRM + automatizaciones básicas toma de 4 a 8 semanas; los complejos, algo más.",
       },
     ],
     enlazaA: ["desarrollo-web", "publicidad-digital", "redes-sociales"],
@@ -735,6 +828,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Antes de diseñar, definimos qué debe sentir y pensar tu cliente. El arte viene después de la estrategia, nunca al revés.",
       },
     ],
+    incluye: [
+      { titulo: "Investigación de marca", texto: "Análisis de competencia, mercado y tendencias." },
+      { titulo: "Estrategia de marca", texto: "Posicionamiento, arquitectura y personalidad de marca." },
+      { titulo: "Naming", texto: "Creación de nombres memorables y disponibles." },
+      { titulo: "Diseño de logotipo", texto: "Concepto, bocetos, versiones y aplicaciones." },
+      { titulo: "Sistema visual", texto: "Colores, tipografías, iconografía y patrones." },
+      { titulo: "Manual de marca", texto: "Guía completa de aplicación y uso correcto." },
+      { titulo: "Diseño de papelería", texto: "Tarjetas, sobres, carpetas y más." },
+      { titulo: "Plantillas corporativas", texto: "Presentaciones, documentos y email." },
+      { titulo: "Señalética", texto: "Diseño de señales y espacios físicos." },
+    ],
+    beneficios: [
+      { titulo: "Diferenciación real", texto: "Te destacamos de la competencia con una identidad única y memorable." },
+      { titulo: "Conexión emocional", texto: "Diseñamos para generar sentimientos y recuerdos, no solo estética." },
+      { titulo: "Consistencia total", texto: "Tu marca se ve igual en todos los puntos de contacto." },
+      { titulo: "Valor a largo plazo", texto: "Una marca fuerte es un activo que aprecia con el tiempo." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Descubrimiento", texto: "Entendemos tu negocio, valores y audiencia objetivo." },
+      { paso: "02", titulo: "Concepto", texto: "Exploramos direcciones creativas y definimos el concepto." },
+      { paso: "03", titulo: "Diseño", texto: "Desarrollamos el sistema visual completo." },
+      { paso: "04", titulo: "Entrega", texto: "Archivos finales, manual y acompañamiento en el lanzamiento." },
+    ],
     faq: [
       {
         q: "¿Qué es un rebranding y cuándo conviene?",
@@ -743,6 +859,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Cuánto cuesta un manual de marca?",
         a: "Depende del alcance. En la llamada definimos qué necesitas realmente, sin venderte de más.",
+      },
+      {
+        q: "¿Cuánto tiempo toma un proyecto de branding?",
+        a: "Un proyecto completo de identidad toma de 4 a 8 semanas según la complejidad y el alcance.",
+      },
+      {
+        q: "¿Qué incluye la entrega final?",
+        a: "Archivos vectoriales y en PNG/JPG de todas las versiones, manual de marca y una sesión de presentación.",
       },
     ],
     enlazaA: ["produccion-audiovisual", "desarrollo-web", "merchandising"],
