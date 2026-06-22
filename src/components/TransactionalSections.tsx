@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Section } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
+import ProcesoTimeline from "@/components/ProcesoTimeline";
 import type { ItemTT, Paso } from "@/content/types";
 
 /**
@@ -59,23 +60,8 @@ export default function TransactionalSections({
         </Section>
       )}
 
-      {/* PROCESO */}
-      {proceso && proceso.length > 0 && (
-        <Section tone="dark">
-          <SectionHeading level={2} kicker="Nuestro proceso" tone="dark" maxWidth="22ch" style={{ marginBottom: 40 }}>
-            Una metodología que entrega resultados.
-          </SectionHeading>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
-            {proceso.map((p) => (
-              <div key={p.paso} style={{ padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)" }}>
-                <span style={{ font: "var(--fw-bold) var(--fs-xl)/1 var(--font-accent)", color: "var(--cyan)" }}>{p.paso}</span>
-                <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--white)", marginTop: 12 }}>{p.titulo}</h3>
-                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>{p.texto}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
-      )}
+      {/* PROCESO — timeline con animación de scroll (línea que se rellena + cards alternadas) */}
+      {proceso && proceso.length > 0 && <ProcesoTimeline pasos={proceso} />}
     </>
   );
 }
