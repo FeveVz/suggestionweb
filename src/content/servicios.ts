@@ -243,6 +243,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Un informe accionable, no un PDF para archivar. Conclusiones claras y recomendaciones que puedes ejecutar.",
       },
     ],
+    incluye: [
+      { titulo: "Análisis de competencia", texto: "Mapeo de competidores, estrategias y posicionamiento." },
+      { titulo: "Estudios de mercado", texto: "Tamaño de mercado, segmentación, tendencias y proyecciones." },
+      { titulo: "Consumer insights", texto: "Entrevistas, focus groups, encuestas y observación." },
+      { titulo: "Brand tracking", texto: "Monitoreo de percepción, awareness y salud de marca." },
+      { titulo: "Benchmarking", texto: "Comparación con las mejores prácticas de la industria." },
+      { titulo: "Satisfacción de cliente", texto: "NPS, CSAT y estudios de satisfacción y lealtad." },
+      { titulo: "Pruebas de producto", texto: "Test de concepto, producto y precio antes de lanzar." },
+      { titulo: "Análisis de tendencias", texto: "Identificación de tendencias emergentes en tu categoría." },
+      { titulo: "Investigación secundaria", texto: "Análisis de datos, reportes y fuentes existentes." },
+    ],
+    beneficios: [
+      { titulo: "Reduce riesgos", texto: "Valida hipótesis antes de invertir: conoce el mercado antes de entrar." },
+      { titulo: "Conoce a tu cliente", texto: "Entiende qué piensan, necesitan y valoran de verdad tus consumidores." },
+      { titulo: "Supera a la competencia", texto: "Identifica sus fortalezas y debilidades para diferenciarte." },
+      { titulo: "Descubre oportunidades", texto: "Encuentra nichos, tendencias y espacios no atendidos." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Objetivos", texto: "Definimos las preguntas clave que necesitas responder." },
+      { paso: "02", titulo: "Metodología", texto: "Elegimos los métodos óptimos para cada objetivo." },
+      { paso: "03", titulo: "Recolección", texto: "Ejecutamos la investigación de campo y el análisis de datos." },
+      { paso: "04", titulo: "Insights", texto: "Entregamos hallazgos con recomendaciones accionables." },
+    ],
     faq: [
       {
         q: "¿Qué es la investigación de mercado?",
@@ -251,6 +274,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Cómo se hace un estudio de mercado?",
         a: "Definimos la pregunta, elegimos el método (análisis de datos, encuestas, observación del SERP), recopilamos y traducimos los hallazgos en decisiones.",
+      },
+      {
+        q: "¿Qué métodos de investigación utilizan?",
+        a: "Combinamos métodos cuantitativos (encuestas, análisis de datos) y cualitativos (entrevistas, focus groups) según los objetivos.",
+      },
+      {
+        q: "¿Cómo entregan los resultados?",
+        a: "Un informe ejecutivo con hallazgos y recomendaciones accionables, no un PDF para archivar.",
       },
     ],
     enlazaA: ["consultoria", "seo"],
@@ -910,6 +941,29 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
     ],
+    incluye: [
+      { titulo: "Videos corporativos", texto: "Presentación de empresa, cultura y testimonios de clientes." },
+      { titulo: "Spots publicitarios", texto: "Piezas para digital, redes y TV con gancho y CTA." },
+      { titulo: "Contenido para redes", texto: "Reels, TikToks, Stories y más para tu marca." },
+      { titulo: "Videos de producto", texto: "Demostraciones, unboxings y reviews que venden." },
+      { titulo: "Videos de capacitación", texto: "Training interno y manuales en video." },
+      { titulo: "Cobertura de eventos", texto: "Registro audiovisual de eventos presenciales y virtuales." },
+      { titulo: "Fotografía comercial", texto: "Producto, lifestyle y retratos corporativos." },
+      { titulo: "Tomas con drone", texto: "Aéreas para inmobiliaria, eventos y avance de obra." },
+      { titulo: "Postproducción", texto: "Edición, color, motion graphics y efectos." },
+    ],
+    beneficios: [
+      { titulo: "Contenido que engancha", texto: "El video retiene mucho más que el texto: tu mensaje llega de verdad." },
+      { titulo: "Calidad profesional", texto: "Equipo, técnica y experiencia para resultados que destacan." },
+      { titulo: "Versatilidad total", texto: "Un shooting, múltiples formatos para todos tus canales." },
+      { titulo: "Storytelling efectivo", texto: "No solo grabamos: creamos narrativas que conectan y venden." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Concepto", texto: "Definimos el mensaje, el formato y el enfoque creativo." },
+      { paso: "02", titulo: "Pre-producción", texto: "Guion, locaciones, casting y planificación." },
+      { paso: "03", titulo: "Producción", texto: "Grabación con equipo profesional y dirección." },
+      { paso: "04", titulo: "Post-producción", texto: "Edición, color, audio, motion graphics y entregables." },
+    ],
     faq: [
       {
         q: "¿Qué es un spot publicitario?",
@@ -918,6 +972,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Cuánto demora una producción?",
         a: "Depende del tipo de pieza; te damos un cronograma claro desde el inicio.",
+      },
+      {
+        q: "¿Qué incluyen las entregas?",
+        a: "Archivo maestro y versiones para redes (horizontal, vertical y cuadrado), con cortes para anuncios.",
+      },
+      {
+        q: "¿Pueden grabar en locación?",
+        a: "Sí: cubrimos producciones en Ica y en todo el país según el proyecto.",
       },
     ],
     enlazaA: ["branding", "redes-sociales", "publicidad-digital"],
@@ -959,6 +1021,29 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
     ],
+    incluye: [
+      { titulo: "Activaciones de marca", texto: "Experiencias inmersivas en punto de venta y eventos." },
+      { titulo: "Sampling", texto: "Distribución de muestras con personal capacitado." },
+      { titulo: "Roadshows", texto: "Tours itinerantes por múltiples locaciones." },
+      { titulo: "Eventos corporativos", texto: "Lanzamientos, inauguraciones y aniversarios." },
+      { titulo: "Pop-up stores", texto: "Tiendas temporales en ubicaciones estratégicas." },
+      { titulo: "Exhibiciones", texto: "Stands en ferias, expos y convenciones." },
+      { titulo: "Guerrilla marketing", texto: "Acciones sorpresa de alto impacto." },
+      { titulo: "Ambientaciones", texto: "Decoración temática de espacios." },
+      { titulo: "Staff y logística", texto: "Coordinación completa de personal y recursos." },
+    ],
+    beneficios: [
+      { titulo: "Conexión real", texto: "Nada supera la experiencia directa con tu marca." },
+      { titulo: "Memorable", texto: "Las experiencias se recuerdan más que la publicidad." },
+      { titulo: "Genera contenido", texto: "Cada activación es contenido orgánico para redes." },
+      { titulo: "Datos de primera mano", texto: "Obtienes feedback directo de tu audiencia." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Concepto", texto: "Idea creativa alineada a los objetivos de marca." },
+      { paso: "02", titulo: "Planificación", texto: "Logística, permisos, recursos y cronograma." },
+      { paso: "03", titulo: "Producción", texto: "Montaje, staff, materiales y ejecución." },
+      { paso: "04", titulo: "Informe", texto: "Métricas, fotos, videos y aprendizajes." },
+    ],
     faq: [
       {
         q: "¿Qué es el BTL en publicidad?",
@@ -967,6 +1052,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Incluye personal y logística?",
         a: "Sí, manejamos equipo de activación y toda la logística.",
+      },
+      {
+        q: "¿Con cuánta anticipación debo planificar?",
+        a: "Mínimo 4 semanas para activaciones simples; los eventos grandes requieren de 8 a 12 semanas.",
+      },
+      {
+        q: "¿Gestionan los permisos?",
+        a: "Sí, gestionamos los permisos necesarios con autoridades y locales.",
       },
     ],
     enlazaA: ["publicidad-movil", "material-pop", "merchandising"],
@@ -1003,6 +1096,29 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
     ],
+    incluye: [
+      { titulo: "Bicivallas", texto: "Publicidad rodante eco-amigable para zonas de alto tránsito." },
+      { titulo: "Rotulado vehicular", texto: "Impresión e instalación en flotas o vehículos propios." },
+      { titulo: "Pantallas LED móviles", texto: "Videobillboards en vehículos para campañas itinerantes." },
+      { titulo: "Publicidad en vehículos", texto: "Tu marca recorriendo la ciudad todo el día." },
+      { titulo: "Flotas de reparto", texto: "Branding de vehículos de delivery y logística." },
+      { titulo: "Volanteo con captura", texto: "Reparto que además deja base de datos de clientes." },
+      { titulo: "Rutas personalizadas", texto: "Recorridos según tu público y objetivos." },
+      { titulo: "Reporte con GPS", texto: "Tracking de rutas y cobertura de la operación." },
+      { titulo: "Diseño e instalación", texto: "Servicio completo de producción e instalación." },
+    ],
+    beneficios: [
+      { titulo: "Alcance amplio", texto: "Tu mensaje recorre múltiples zonas en un solo día." },
+      { titulo: "Alto impacto", texto: "Nadie ignora un vehículo o pantalla llamativa en movimiento." },
+      { titulo: "Flexibilidad", texto: "Rutas personalizadas según tu target y objetivos." },
+      { titulo: "Costo-efectivo", texto: "Más impresiones por sol invertido que un panel fijo." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Estrategia", texto: "Definimos zonas objetivo y rutas óptimas." },
+      { paso: "02", titulo: "Producción", texto: "Diseño e impresión del material publicitario." },
+      { paso: "03", titulo: "Instalación", texto: "Aplicación profesional en vehículos o pantallas." },
+      { paso: "04", titulo: "Operación", texto: "Ejecución de rutas con tracking y reportes." },
+    ],
     faq: [
       {
         q: "¿Qué cobertura tienen?",
@@ -1011,6 +1127,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Por cuántos días se contrata?",
         a: "Según tu campaña; armamos el plan a tu medida.",
+      },
+      {
+        q: "¿Cuánto dura un rotulado vehicular?",
+        a: "Con buen mantenimiento, varios años; ofrecemos garantía de instalación.",
+      },
+      {
+        q: "¿Puedo elegir las rutas?",
+        a: "Sí: diseñamos rutas a tu medida y también te sugerimos las más probadas.",
       },
     ],
     enlazaA: ["btl", "estructuras-publicitarias", "material-pop"],
@@ -1059,12 +1183,43 @@ const SERVICIOS_LIST: Servicio[] = [
           "Tu punto de marca móvil para ferias, centros comerciales y activaciones.",
       },
     ],
+    incluye: [
+      { titulo: "Paneles y espectaculares", texto: "Gran formato en avenidas y vías de alto tránsito." },
+      { titulo: "Paneles LED", texto: "Video digital en ubicaciones premium." },
+      { titulo: "Tótems publicitarios", texto: "Estructuras verticales de alta visibilidad." },
+      { titulo: "Letreros y avisos", texto: "Identifican tu negocio y atraen a quien pasa." },
+      { titulo: "Mantas y banderolas", texto: "Cobertura en fachadas e intersecciones clave." },
+      { titulo: "Paraderos", texto: "Publicidad en puntos de transporte público." },
+      { titulo: "Módulos publicitarios", texto: "Tu punto de marca móvil para ferias y centros comerciales." },
+      { titulo: "Letreros luminosos", texto: "Visibilidad garantizada también de noche." },
+      { titulo: "Producción e instalación", texto: "Del diseño a la colocación, todo en un lugar." },
+    ],
+    beneficios: [
+      { titulo: "Máxima visibilidad", texto: "Impacto visual garantizado en ubicaciones estratégicas." },
+      { titulo: "Cobertura amplia", texto: "Llega a audiencias masivas en puntos de alto tránsito." },
+      { titulo: "Recordación alta", texto: "El medio exterior tiene de las tasas más altas de recordación." },
+      { titulo: "Activo 24/7", texto: "Tu mensaje trabaja todos los días, todo el día." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Análisis", texto: "Definimos ubicaciones según tu target y presupuesto." },
+      { paso: "02", titulo: "Propuesta", texto: "Mapa con ubicaciones, fotos, tránsito y costos." },
+      { paso: "03", titulo: "Producción", texto: "Diseño e impresión del material publicitario." },
+      { paso: "04", titulo: "Instalación", texto: "Colocación y monitoreo durante la campaña." },
+    ],
     faq: [
       {
         q: "¿Con qué materiales trabajan?",
         a: "Según la pieza: acrílico, PVC, metal, LED y más.",
       },
       { q: "¿Hacen la instalación?", a: "Sí, diseñamos, fabricamos e instalamos." },
+      {
+        q: "¿Cuál es el tiempo mínimo de contratación?",
+        a: "Generalmente 4 semanas, aunque hay ubicaciones con periodos más cortos.",
+      },
+      {
+        q: "¿Incluye el diseño?",
+        a: "Podemos diseñar la creatividad o imprimir tu archivo; cotizamos ambas opciones.",
+      },
     ],
     enlazaA: ["material-pop", "imprenta", "publicidad-movil"],
     cierre: { h2: "Destaca con tu estructura", cta: "Pide tu cotización" },
@@ -1101,10 +1256,41 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
     ],
+    incluye: [
+      { titulo: "Displays de mostrador", texto: "Exhibidores compactos para el punto de venta." },
+      { titulo: "Displays de piso", texto: "Estructuras autoportantes de gran visibilidad." },
+      { titulo: "Cabeceras de góndola", texto: "Espacios premium en supermercados." },
+      { titulo: "Islas y shop-in-shop", texto: "Espacios de marca dedicados dentro de tiendas." },
+      { titulo: "Cartelería", texto: "Carteles, posters, wobblers y más." },
+      { titulo: "Stoppers y stripers", texto: "Material colgante para lineales." },
+      { titulo: "Letras volumétricas", texto: "Marca con cuerpo y presencia, imposible de ignorar." },
+      { titulo: "Señalética", texto: "Letreros y señalización para tiendas." },
+      { titulo: "Mobiliario", texto: "Mostradores, kioscos y mobiliario temporal." },
+    ],
+    beneficios: [
+      { titulo: "Impacto en el momento clave", texto: "Tu producto brilla justo cuando el consumidor decide." },
+      { titulo: "Más rotación", texto: "Un POP bien ejecutado mueve el producto en el lineal." },
+      { titulo: "Visibilidad competitiva", texto: "Destaca entre decenas de productos similares." },
+      { titulo: "Versatilidad de formatos", texto: "Soluciones para cualquier espacio y presupuesto." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Brief", texto: "Objetivos, puntos de venta y productos a exhibir." },
+      { paso: "02", titulo: "Diseño", texto: "Concepto, renders y aprobación visual." },
+      { paso: "03", titulo: "Producción", texto: "Fabricación con materiales de calidad." },
+      { paso: "04", titulo: "Instalación", texto: "Logística y colocación en tiendas." },
+    ],
     faq: [
       {
         q: "¿Qué tipos de material POP hay?",
         a: "Exhibidores, displays, cubos, letras volumétricas, señalética y más. Te asesoramos según tu producto y punto de venta.",
+      },
+      {
+        q: "¿Qué materiales utilizan?",
+        a: "Corrugado, plástico, metal, madera o acrílico, según la durabilidad y el presupuesto.",
+      },
+      {
+        q: "¿Cuánto tiempo toma producir?",
+        a: "Displays de cartón: 2-3 semanas. Estructuras complejas: 4-6 semanas.",
       },
     ],
     enlazaA: ["estructuras-publicitarias", "imprenta", "merchandising"],
@@ -1156,6 +1342,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Atendemos en Ica con tiempos claros y opción de recojo. Te decimos la fecha de entrega antes de empezar, y la cumplimos.",
       },
     ],
+    incluye: [
+      { titulo: "Tarjetas de presentación", texto: "Offset y digital, con acabados especiales." },
+      { titulo: "Papelería corporativa", texto: "Hojas membretadas, sobres y carpetas." },
+      { titulo: "Folletos y flyers", texto: "Dípticos, trípticos y volantes promocionales." },
+      { titulo: "Catálogos", texto: "Encuadernación profesional de alta gama." },
+      { titulo: "Revistas y boletines", texto: "Publicaciones periódicas y newsletters." },
+      { titulo: "Libros y manuales", texto: "Impresión de libros, manuales y anuarios." },
+      { titulo: "Etiquetas y stickers", texto: "Adhesivos y etiquetas de producto." },
+      { titulo: "Empaques", texto: "Cajas, bolsas y packaging personalizado." },
+      { titulo: "Gran formato", texto: "Posters, banners, gigantografías y displays." },
+    ],
+    beneficios: [
+      { titulo: "Calidad premium", texto: "Papeles, tintas y acabados de primera." },
+      { titulo: "Asesoría técnica", texto: "Te guiamos en formatos, papeles y acabados óptimos." },
+      { titulo: "Tiempos competitivos", texto: "Producción ágil sin sacrificar calidad." },
+      { titulo: "Precios justos", texto: "Cotización transparente, sin sorpresas." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Cotización", texto: "Especificaciones técnicas y presupuesto detallado." },
+      { paso: "02", titulo: "Pre-prensa", texto: "Revisión de archivos y pruebas de color." },
+      { paso: "03", titulo: "Impresión", texto: "Producción con control de calidad." },
+      { paso: "04", titulo: "Entrega", texto: "Empacado y logística de envío." },
+    ],
     faq: [
       {
         q: "¿Cuánto demora un pedido?",
@@ -1163,6 +1372,10 @@ const SERVICIOS_LIST: Servicio[] = [
       },
       { q: "¿Diseñan el material?", a: "Sí, ofrecemos diseño además de la impresión." },
       { q: "¿Atienden fuera de Ica?", a: "Sí, coordinamos envíos a otras regiones." },
+      {
+        q: "¿Qué formatos de archivo aceptan?",
+        a: "PDF, AI o PSD. Preferimos PDF de alta resolución con sangrado incluido.",
+      },
     ],
     enlazaA: ["material-pop", "merchandising", "estructuras-publicitarias"],
     cierre: { h2: "Tu material listo y a tiempo", cta: "Cotiza tu impresión" },
@@ -1213,12 +1426,39 @@ const SERVICIOS_LIST: Servicio[] = [
           "Diseño + producción + logística en un solo lugar. No solo imprimimos: pensamos qué pieza refuerza tu marca y cuál es plata tirada.",
       },
     ],
+    incluye: [
+      { titulo: "Ropa corporativa", texto: "Polos, camisetas, casacas y uniformes." },
+      { titulo: "Artículos de oficina", texto: "Agendas, lapiceros, libretas y accesorios de escritorio." },
+      { titulo: "Tecnología", texto: "USBs, power banks, audífonos y gadgets." },
+      { titulo: "Hogar y estilo de vida", texto: "Termos, tazas, paraguas y bolsas." },
+      { titulo: "Kits corporativos", texto: "De bienvenida, navideños y especiales." },
+      { titulo: "Regalos premium", texto: "Regalos ejecutivos de alto valor." },
+      { titulo: "Eco-friendly", texto: "Productos sostenibles y reciclados." },
+      { titulo: "Producción express", texto: "Entregas urgentes cuando lo necesitas." },
+      { titulo: "Diseño de empaque", texto: "Presentación premium para cada producto." },
+    ],
+    beneficios: [
+      { titulo: "Recordación de marca", texto: "Artículos útiles que mantienen tu marca visible día a día." },
+      { titulo: "Fidelización", texto: "Regalos que crean vínculo con clientes y equipo." },
+      { titulo: "Calidad garantizada", texto: "Productos duraderos que no terminan en la basura." },
+      { titulo: "Personalización total", texto: "Diseño, materiales y técnicas adaptados a tu marca." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Briefing", texto: "Definimos objetivos, presupuesto y productos ideales." },
+      { paso: "02", titulo: "Propuesta", texto: "Catálogo curado con opciones y cotización detallada." },
+      { paso: "03", titulo: "Aprobación", texto: "Muestras físicas y diseño final para aprobación." },
+      { paso: "04", titulo: "Entrega", texto: "Producción y logística hasta tu puerta." },
+    ],
     faq: [
       { q: "¿Cuál es el pedido mínimo?", a: "Depende del producto; te lo confirmamos al cotizar." },
       { q: "¿Ustedes hacen el diseño?", a: "Sí, podemos diseñar la pieza o trabajar con tu arte." },
       {
         q: "¿Cuánto demora la entrega?",
         a: "Según cantidad y producto; siempre con fecha comprometida.",
+      },
+      {
+        q: "¿Pueden crear productos personalizados?",
+        a: "Sí: desarrollamos productos a medida desde cero si ningún catálogo cubre tu necesidad.",
       },
     ],
     enlazaA: ["imprenta", "material-pop", "branding"],
