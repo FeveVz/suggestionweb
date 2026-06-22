@@ -301,6 +301,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "Conocemos al consumidor peruano y operamos en todo el país desde Ica. Sabemos qué mensaje activa a un progresista y qué tranquiliza a un conservador. Eso no se improvisa.",
       },
     ],
+    incluye: [
+      { titulo: "Análisis de mercado", texto: "Investigación de tu industria, competencia y audiencia objetivo." },
+      { titulo: "Estrategia digital", texto: "Plan con objetivos claros y roadmap de implementación atado a venta." },
+      { titulo: "SEO técnico", texto: "Optimización técnica para mejorar tu visibilidad en buscadores." },
+      { titulo: "Publicidad digital", texto: "Campañas en Google Ads, Meta Ads y plataformas relevantes." },
+      { titulo: "Marketing de contenidos", texto: "Contenido que atrae, educa y convierte —no que rellena el feed." },
+      { titulo: "Email marketing", texto: "Secuencias que nutren leads y fidelizan clientes." },
+      { titulo: "Analytics y reporting", texto: "Dashboards con las métricas que importan (CPL, ROAS, cierres)." },
+      { titulo: "Optimización continua", texto: "Mejora constante basada en datos y pruebas A/B." },
+      { titulo: "Gestión de redes", texto: "Manejo profesional de tus redes sociales con foco comercial." },
+    ],
+    beneficios: [
+      { titulo: "Resultados medibles", texto: "Cada estrategia tiene KPIs claros: medimos, analizamos y optimizamos tu ROI." },
+      { titulo: "Estrategia personalizada", texto: "No hay dos negocios iguales; la armamos a medida de tus objetivos y mercado." },
+      { titulo: "Enfoque integral", texto: "SEO, pauta, contenido y redes en una sola estrategia cohesiva." },
+      { titulo: "Equipo experto", texto: "Conocimiento actualizado en Google, Meta y más, aplicado a tu caso." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Descubrimiento", texto: "Analizamos tu negocio, competencia y mercado para hallar oportunidades." },
+      { paso: "02", titulo: "Estrategia", texto: "Plan personalizado con objetivos claros y medibles." },
+      { paso: "03", titulo: "Ejecución", texto: "Implementación con agilidad y comunicación transparente." },
+      { paso: "04", titulo: "Optimización", texto: "Medimos resultados y optimizamos para maximizar el ROI." },
+    ],
     faq: [
       {
         q: "¿Qué es el marketing digital y cómo funciona?",
@@ -313,6 +336,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿En cuánto tiempo veo resultados?",
         a: "La pauta puede traer leads en días; el posicionamiento y la marca, en meses. Te decimos qué esperar de cada uno desde el inicio.",
+      },
+      {
+        q: "¿Necesito contratar todos los servicios juntos?",
+        a: "No. Armamos paquetes flexibles según tus objetivos y presupuesto: empezamos por lo esencial y escalamos con resultados.",
+      },
+      {
+        q: "¿Cómo miden el éxito de las campañas?",
+        a: "Con KPIs alineados a tu negocio, no likes: CPL, ROAS y cierres, medidos en GA4, Google Ads, Meta y dashboards propios.",
       },
     ],
     enlazaA: ["publicidad-digital", "redes-sociales", "seo"],
@@ -358,6 +389,29 @@ const SERVICIOS_LIST: Servicio[] = [
           "No “prendemos y olvidamos”. Optimizamos pauta, segmentación y creatividades con pruebas A/B, mirando CPL y ROAS.",
       },
     ],
+    incluye: [
+      { titulo: "Google Ads", texto: "Search, Display, Shopping y YouTube: campañas que capturan intención." },
+      { titulo: "Meta Ads", texto: "Facebook e Instagram con segmentación avanzada y formatos múltiples." },
+      { titulo: "TikTok Ads", texto: "Audiencias jóvenes con contenido nativo que convierte." },
+      { titulo: "LinkedIn Ads", texto: "B2B de alto valor: decision makers y profesionales." },
+      { titulo: "Remarketing", texto: "Recupera a quien visitó tu sitio con anuncios personalizados." },
+      { titulo: "A/B testing", texto: "Probamos creatividades, audiencias y ofertas constantemente." },
+      { titulo: "Landing pages", texto: "Páginas de destino optimizadas para conversión." },
+      { titulo: "Analytics avanzado", texto: "Configuración de conversiones, eventos y atribución." },
+      { titulo: "Automatizaciones", texto: "Reglas que optimizan la pauta 24/7." },
+    ],
+    beneficios: [
+      { titulo: "ROI medible", texto: "Cada conversión se rastrea: sabes cuánto cuesta cada cliente y tu retorno." },
+      { titulo: "Segmentación precisa", texto: "Llegamos a tu audiencia ideal por comportamiento, intereses y más." },
+      { titulo: "Optimización constante", texto: "No “prendemos y olvidamos”: optimizamos a diario." },
+      { titulo: "Reportes transparentes", texto: "Dashboards en tiempo real; tú decides qué métricas priorizar." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Estrategia", texto: "Definimos objetivos, presupuesto y canales según tu negocio." },
+      { paso: "02", titulo: "Setup", texto: "Configuramos cuentas, píxeles, audiencias y campañas." },
+      { paso: "03", titulo: "Lanzamiento", texto: "Activamos con testing inicial de variables." },
+      { paso: "04", titulo: "Escala", texto: "Escalamos lo que funciona y cortamos lo que no." },
+    ],
     faq: [
       {
         q: "¿Qué es la pauta digital?",
@@ -366,6 +420,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Cuánto debo invertir?",
         a: "Depende de tu objetivo y tu mercado. Te proponemos un presupuesto realista y lo escalamos según resultados.",
+      },
+      {
+        q: "¿Qué plataformas manejan?",
+        a: "Google Ads (Search, Display, Shopping, YouTube), Meta (Facebook, Instagram), TikTok y LinkedIn.",
+      },
+      {
+        q: "¿Incluye la creación de los anuncios?",
+        a: "Sí: diseño de las piezas (imágenes, video corto y copy). Para producción audiovisual completa, está nuestro servicio aparte.",
       },
     ],
     enlazaA: ["marketing-digital", "redes-sociales", "crm-automatizacion"],
@@ -482,6 +544,29 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
     ],
+    incluye: [
+      { titulo: "Landing pages", texto: "Páginas de aterrizaje optimizadas para campañas y conversión." },
+      { titulo: "Sitios corporativos", texto: "Webs institucionales que reflejan tu marca y generan confianza." },
+      { titulo: "E-commerce", texto: "Tiendas online optimizadas para venta y remarketing." },
+      { titulo: "Aplicaciones web a medida", texto: "CRM, dashboards y portales de clientes hechos para tu negocio." },
+      { titulo: "CMS personalizado", texto: "Gestiona tu contenido fácilmente, sin saber de código." },
+      { titulo: "PWA", texto: "Progressive Web Apps que funcionan como apps nativas." },
+      { titulo: "Integraciones", texto: "Conexión con CRM, pagos, analytics y automatizaciones." },
+      { titulo: "Mantenimiento", texto: "Soporte, actualizaciones y mejoras continuas." },
+      { titulo: "Hosting optimizado", texto: "Servidores configurados para máximo rendimiento." },
+    ],
+    beneficios: [
+      { titulo: "Velocidad óptima", texto: "Sitios que cargan rápido (Core Web Vitals); el usuario no espera." },
+      { titulo: "Mobile-first", texto: "Diseñados primero para el celular, donde está la mayoría de tu tráfico." },
+      { titulo: "SEO de base", texto: "Estructura técnica optimizada para buscadores desde el día uno." },
+      { titulo: "Seguridad", texto: "SSL, backups y protección, para que tu web no se caiga." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Descubrimiento", texto: "Definimos objetivos, funcionalidades y arquitectura del sitio." },
+      { paso: "02", titulo: "Diseño UX/UI", texto: "Wireframes, prototipo y diseño visual de toda la experiencia." },
+      { paso: "03", titulo: "Desarrollo", texto: "Programación con buenas prácticas y tecnología moderna." },
+      { paso: "04", titulo: "Lanzamiento", texto: "Testing, optimización y puesta en producción con soporte." },
+    ],
     faq: [
       {
         q: "¿Cuánto cuesta una página web?",
@@ -490,6 +575,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿En cuánto tiempo está lista?",
         a: "Una landing en pocos días; una web corporativa o tienda, algunas semanas. Te damos plazos claros.",
+      },
+      {
+        q: "¿Qué tecnologías utilizan?",
+        a: "Según el proyecto: React/Next.js, WordPress o a medida. Elegimos la correcta para tu caso, no la de moda.",
+      },
+      {
+        q: "¿Qué pasa después del lanzamiento?",
+        a: "Planes de mantenimiento mensual: actualizaciones, backups, soporte y mejoras continuas.",
       },
     ],
     enlazaA: ["seo", "crm-automatizacion", "publicidad-digital"],
