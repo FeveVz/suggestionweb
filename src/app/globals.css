@@ -376,7 +376,7 @@ img { max-width: 100%; display: block; }
 .hk-btn:hover svg, .hk-ulink:hover svg { transform: translateX(4px); }
 
 /* Logos de clientes: escala de grises -> color al hover */
-.hk-logo { filter: grayscale(1); opacity: 0.5; transition: filter var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
+.hk-logo { filter: grayscale(1); opacity: 0.75; transition: filter var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
 .hk-logo:hover { filter: none; opacity: 1; }
 
 /* Transición de página (template.tsx) */
