@@ -19,14 +19,12 @@ export default function ClientLogos() {
           <Label>Más de 50 marcas confían en nosotros</Label>
         </div>
         <div style={{ overflow: "hidden", maskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)", WebkitMaskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)" }}>
-          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(0.75rem,2vw,2rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 52s linear infinite", willChange: "transform" }}>
+          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(2rem,4vw,3.75rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 55s linear infinite", willChange: "transform" }}>
             {row.map((src, i) => (
-              // Celda de altura fija: el logo se escala para llenar la altura (no el
-              // ancho), centrado, así quedan parejos sin importar su proporción.
-              <span key={i} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", height: 64, width: 180, flexShrink: 0 }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt="" aria-hidden className="hk-logo" style={{ maxHeight: 52, maxWidth: "160px", width: "auto", height: "auto", objectFit: "contain" }} loading="lazy" />
-              </span>
+              // Altura uniforme, ancho natural (los SVG están recortados al ras):
+              // todos a la misma altura = parejos y legibles. Estándar de logo-bar.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={i} src={src} alt="" aria-hidden className="hk-logo" style={{ height: 46, width: "auto", flexShrink: 0 }} loading="lazy" />
             ))}
           </div>
         </div>
