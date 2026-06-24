@@ -1,5 +1,5 @@
-import { ArrowRight, Phone } from "lucide-react";
-import { Section, Btn, Blot, Label } from "@/components/brand/parts";
+import { ArrowRight, Phone, Check } from "lucide-react";
+import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
@@ -38,7 +38,6 @@ export default function LandingArticle({
   related = [],
   faq,
   cierre,
-  shape = 3,
   extraSchema,
 }: {
   breadcrumbs: Crumb[];
@@ -62,6 +61,8 @@ export default function LandingArticle({
   const proofText =
     proof ??
     "S/350K en ventas, +350 leads y 8 lotes vendidos con S/3,000 en pauta · 7 años convirtiendo atención en ventas.";
+  const heroItems = (incluye?.length ? incluye : beneficios ?? []).slice(0, 5).map((x) => x.titulo);
+  const heroLabel = incluye?.length ? "Qué incluye" : "Lo que logras";
   return (
     <>
       {extraSchema && <JsonLd data={extraSchema} />}
@@ -130,9 +131,23 @@ export default function LandingArticle({
                 </Btn>
               </div>
             </div>
-            <div className="hk-hero-art" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
-              <Blot dual shape={shape} size={420} className="hk-blot-in" />
-            </div>
+            {heroItems.length > 0 && (
+              <aside style={{ minWidth: 0 }}>
+                <div style={{ background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.25rem,3vw,1.75rem)" }}>
+                  <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
+                    {heroLabel}
+                  </span>
+                  <ul style={{ listStyle: "none", margin: "16px 0 0", padding: 0, display: "grid", gap: 12 }}>
+                    {heroItems.map((t) => (
+                      <li key={t} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                        <Check size={16} style={{ color: "var(--cyan)", flexShrink: 0, marginTop: 3 }} aria-hidden />
+                        <span style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-strong)" }}>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </aside>
+            )}
           </div>
         </div>
       </section>

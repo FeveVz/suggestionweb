@@ -1,5 +1,5 @@
 import { ArrowRight, Phone } from "lucide-react";
-import { Section, Btn, Blot, Label } from "@/components/brand/parts";
+import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import ServiceGrid, { type ServiceGridItem } from "@/components/ServiceGrid";
@@ -26,7 +26,6 @@ export default function HubLanding({
   columns = 3,
   gridKicker,
   gridHeading,
-  shape = 1,
   extraSchema,
 }: {
   breadcrumbs: Crumb[];
@@ -55,17 +54,7 @@ export default function HubLanding({
           }}
         >
           <Breadcrumbs items={breadcrumbs} />
-          <div
-            className="hk-hero"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "minmax(0,1.15fr) minmax(0,0.85fr)",
-              gap: "clamp(2rem,5vw,4rem)",
-              alignItems: "center",
-              marginTop: "clamp(1.5rem,3vw,2.5rem)",
-            }}
-          >
-            <div style={{ minWidth: 0 }}>
+          <div style={{ marginTop: "clamp(1.5rem,3vw,2.5rem)", maxWidth: 760 }}>
               <Label dot>{kicker}</Label>
               <h1
                 className="hk-enter-2"
@@ -105,10 +94,6 @@ export default function HubLanding({
                   WhatsApp
                 </Btn>
               </div>
-            </div>
-            <div className="hk-hero-art" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
-              <Blot dual shape={shape} size={420} className="hk-blot-in" />
-            </div>
           </div>
         </div>
       </section>
