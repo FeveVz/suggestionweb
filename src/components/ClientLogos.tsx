@@ -15,10 +15,10 @@ import { Label } from "@/components/brand/parts";
 const LOGOS: { src: string; h: number }[] = [
   { src: "/assets/clientes/cliente-1.svg", h: 58 },
   { src: "/assets/clientes/cliente-2.svg", h: 58 },
-  { src: "/assets/clientes/cliente-3.svg", h: 58 },
+  { src: "/assets/clientes/cliente-3.svg", h: 76 }, // Ceinys (mucho aire interno)
   { src: "/assets/clientes/cliente-4.svg", h: 40 },
-  { src: "/assets/clientes/cliente-5.svg", h: 58 },
-  { src: "/assets/clientes/cliente-6.svg", h: 58 },
+  { src: "/assets/clientes/cliente-5.svg", h: 70 }, // El Charcutero (emblema)
+  { src: "/assets/clientes/cliente-6.svg", h: 76 }, // CGH (mucho aire interno)
   { src: "/assets/clientes/cliente-7.svg", h: 40 },
   { src: "/assets/clientes/cliente-8.svg", h: 42 },
   { src: "/assets/clientes/cliente-9.svg", h: 40 },
@@ -27,7 +27,7 @@ const LOGOS: { src: string; h: number }[] = [
   { src: "/assets/clientes/cliente-12.svg", h: 58 },
   { src: "/assets/clientes/cliente-13.svg", h: 52 },
   { src: "/assets/clientes/cliente-14.svg", h: 42 },
-  { src: "/assets/clientes/cliente-15.svg", h: 58 },
+  { src: "/assets/clientes/cliente-15.svg", h: 70 }, // El Charcutero (versión oscura)
   { src: "/assets/clientes/cliente-16.svg", h: 40 },
   { src: "/assets/clientes/cliente-17.svg", h: 40 },
 ];
