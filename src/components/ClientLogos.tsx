@@ -16,22 +16,22 @@ import { Label } from "@/components/brand/parts";
 // los cuadrados/verticales van mucho más altos que los wordmarks horizontales
 // (que se ven grandes por su ancho). Los emblemas con aire interno, aún más.
 const LOGOS: { src: string; h: number }[] = [
-  { src: "/assets/clientes/trim/cliente-1.png", h: 78 }, // Coplogistics
-  { src: "/assets/clientes/trim/cliente-2.png", h: 82 }, // Aura Andina (tarjeta oscura)
-  { src: "/assets/clientes/trim/cliente-3.png", h: 82 }, // Ceinys (cuadrado)
-  { src: "/assets/clientes/trim/cliente-4.png", h: 44 }, // yonda (horizontal)
-  { src: "/assets/clientes/trim/cliente-5.png", h: 82 }, // El Charcutero
+  { src: "/assets/clientes/trim/cliente-1.png", h: 80 }, // Coplogistics (recortado)
+  { src: "/assets/clientes/trim/cliente-2.png", h: 92 }, // Aura Andina (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-3.png", h: 96 }, // Ceinys (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-4.png", h: 46 }, // yonda (horizontal)
+  { src: "/assets/clientes/trim/cliente-5.png", h: 92 }, // El Charcutero (tarjeta, +caja)
   { src: "/assets/clientes/trim/cliente-6.png", h: 84 }, // CGH (recortado)
-  { src: "/assets/clientes/trim/cliente-7.png", h: 44 }, // Changan (horizontal)
+  { src: "/assets/clientes/trim/cliente-7.png", h: 46 }, // Changan (horizontal)
   { src: "/assets/clientes/trim/cliente-8.png", h: 52 }, // Renault (semi-ancho)
-  { src: "/assets/clientes/trim/cliente-9.png", h: 44 }, // Landini (horizontal)
-  { src: "/assets/clientes/trim/cliente-10.png", h: 46 }, // Citroën (horizontal)
-  { src: "/assets/clientes/trim/cliente-11.png", h: 82 }, // Suzuki (cuadrado)
-  { src: "/assets/clientes/trim/cliente-12.png", h: 82 }, // Mazda (cuadrado)
+  { src: "/assets/clientes/trim/cliente-9.png", h: 46 }, // Landini (horizontal)
+  { src: "/assets/clientes/trim/cliente-10.png", h: 48 }, // Citroën (horizontal)
+  { src: "/assets/clientes/trim/cliente-11.png", h: 92 }, // Suzuki (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-12.png", h: 90 }, // Mazda (tarjeta, +caja)
   { src: "/assets/clientes/trim/cliente-13.png", h: 68 }, // Subaru (semi-cuadrado)
-  { src: "/assets/clientes/trim/cliente-14.png", h: 50 }, // JAC (semi-ancho)
-  { src: "/assets/clientes/trim/cliente-15.png", h: 82 }, // El Charcutero (oscuro)
-  { src: "/assets/clientes/trim/cliente-16.png", h: 44 }, // Motorpark (horizontal)
+  { src: "/assets/clientes/trim/cliente-14.png", h: 52 }, // JAC (semi-ancho)
+  { src: "/assets/clientes/trim/cliente-15.png", h: 92 }, // El Charcutero oscuro (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-16.png", h: 46 }, // Motorpark (horizontal)
   { src: "/assets/clientes/trim/cliente-17.png", h: 48 }, // GWM (horizontal)
 ];
 
