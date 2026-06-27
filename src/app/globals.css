@@ -92,11 +92,14 @@
   --fs-sm: 0.9375rem;
   --fs-base: 1rem;
   --fs-md: 1.125rem;
-  --fs-lg: 1.375rem;
-  --fs-xl: 1.75rem;
-  --fs-2xl: 2.25rem;
-  --fs-3xl: 3rem;
-  --fs-4xl: 3.75rem;
+  /* Escala grande fluida: el mínimo aplica en móvil, el máximo (idéntico al
+     diseño desktop original) se alcanza ~800-965px. Evita H1/H2 gigantes en
+     smartphones sin tocar el desktop. */
+  --fs-lg: clamp(1.25rem, 1.16rem + 0.42vw, 1.375rem);
+  --fs-xl: clamp(1.5rem, 1.30rem + 0.9vw, 1.75rem);
+  --fs-2xl: clamp(1.75rem, 1.40rem + 1.7vw, 2.25rem);
+  --fs-3xl: clamp(2.1rem, 1.58rem + 2.4vw, 3rem);
+  --fs-4xl: clamp(2.4rem, 1.66rem + 3.4vw, 3.75rem);
   --fs-5xl: clamp(3rem, 7vw, 5.5rem);
   --fs-6xl: clamp(3.5rem, 11vw, 8.5rem);
 
@@ -329,6 +332,27 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .hk-stats, .hk-sectores, .hk-casos, .hk-pasos, .hk-porque, .hk-test, .hk-foot { grid-template-columns: 1fr !important; }
 }
+
+/* ============================================================
+   Colapsos responsive de grids con columnas definidas inline.
+   El style inline gana a una clase normal, pero un !important en
+   media query lo vence. Cubre ServiceGrid y RelatedLinks (.hk-grid)
+   y la tarjeta de casos (.hk-split), sin tocar el desktop.
+   ============================================================ */
+@media (max-width: 860px) {
+  .hk-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 760px) {
+  .hk-split { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 560px) {
+  .hk-grid { grid-template-columns: 1fr !important; }
+  /* La banda de logos no debe inflar su altura en pantallas chicas. */
+  :root { --logo-scale: 0.82; }
+}
+
+/* Imágenes/medios nunca desbordan el viewport en móvil */
+img, svg, video { max-width: 100%; }
 
 /* Utilidades heredadas (páginas internas shadcn) */
 @layer base {

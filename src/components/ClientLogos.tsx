@@ -48,7 +48,7 @@ export default function ClientLogos() {
             {row.map((logo, i) => (
               // Altura balanceada por logo (área visual pareja), ancho natural.
               // eslint-disable-next-line @next/next/no-img-element
-              <img key={i} src={logo.src} alt="" aria-hidden className="hk-logo" style={{ height: logo.h, width: "auto", flexShrink: 0 }} loading="lazy" />
+              <img key={i} src={logo.src} alt="" aria-hidden className="hk-logo" style={{ height: `calc(${logo.h}px * var(--logo-scale, 1))`, width: "auto", flexShrink: 0 }} loading="lazy" />
             ))}
           </div>
         </div>
