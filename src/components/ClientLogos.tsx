@@ -12,24 +12,27 @@ import { Label } from "@/components/brand/parts";
  * los emblemas cuadrados van más altos (58px); los logotipos anchos, algo más
  * bajos (40-42px) pero ocupan más ancho. Calculado desde el viewBox de cada SVG.
  */
+// Altura por logo para igualar el TAMAÑO VISUAL (área), no solo la altura:
+// los cuadrados/verticales van mucho más altos que los wordmarks horizontales
+// (que se ven grandes por su ancho). Los emblemas con aire interno, aún más.
 const LOGOS: { src: string; h: number }[] = [
-  { src: "/assets/clientes/cliente-1.svg", h: 58 },
-  { src: "/assets/clientes/cliente-2.svg", h: 58 },
-  { src: "/assets/clientes/cliente-3.svg", h: 76 }, // Ceinys (mucho aire interno)
-  { src: "/assets/clientes/cliente-4.svg", h: 40 },
-  { src: "/assets/clientes/cliente-5.svg", h: 70 }, // El Charcutero (emblema)
-  { src: "/assets/clientes/cliente-6.svg", h: 76 }, // CGH (mucho aire interno)
-  { src: "/assets/clientes/cliente-7.svg", h: 40 },
-  { src: "/assets/clientes/cliente-8.svg", h: 42 },
-  { src: "/assets/clientes/cliente-9.svg", h: 40 },
-  { src: "/assets/clientes/cliente-10.svg", h: 40 },
-  { src: "/assets/clientes/cliente-11.svg", h: 58 },
-  { src: "/assets/clientes/cliente-12.svg", h: 58 },
-  { src: "/assets/clientes/cliente-13.svg", h: 52 },
-  { src: "/assets/clientes/cliente-14.svg", h: 42 },
-  { src: "/assets/clientes/cliente-15.svg", h: 70 }, // El Charcutero (versión oscura)
-  { src: "/assets/clientes/cliente-16.svg", h: 40 },
-  { src: "/assets/clientes/cliente-17.svg", h: 40 },
+  { src: "/assets/clientes/trim/cliente-1.png", h: 78 }, // Coplogistics
+  { src: "/assets/clientes/trim/cliente-2.png", h: 82 }, // Aura Andina (tarjeta oscura)
+  { src: "/assets/clientes/trim/cliente-3.png", h: 82 }, // Ceinys (cuadrado)
+  { src: "/assets/clientes/trim/cliente-4.png", h: 44 }, // yonda (horizontal)
+  { src: "/assets/clientes/trim/cliente-5.png", h: 82 }, // El Charcutero
+  { src: "/assets/clientes/trim/cliente-6.png", h: 84 }, // CGH (recortado)
+  { src: "/assets/clientes/trim/cliente-7.png", h: 44 }, // Changan (horizontal)
+  { src: "/assets/clientes/trim/cliente-8.png", h: 52 }, // Renault (semi-ancho)
+  { src: "/assets/clientes/trim/cliente-9.png", h: 44 }, // Landini (horizontal)
+  { src: "/assets/clientes/trim/cliente-10.png", h: 46 }, // Citroën (horizontal)
+  { src: "/assets/clientes/trim/cliente-11.png", h: 82 }, // Suzuki (cuadrado)
+  { src: "/assets/clientes/trim/cliente-12.png", h: 82 }, // Mazda (cuadrado)
+  { src: "/assets/clientes/trim/cliente-13.png", h: 68 }, // Subaru (semi-cuadrado)
+  { src: "/assets/clientes/trim/cliente-14.png", h: 50 }, // JAC (semi-ancho)
+  { src: "/assets/clientes/trim/cliente-15.png", h: 82 }, // El Charcutero (oscuro)
+  { src: "/assets/clientes/trim/cliente-16.png", h: 44 }, // Motorpark (horizontal)
+  { src: "/assets/clientes/trim/cliente-17.png", h: 48 }, // GWM (horizontal)
 ];
 
 export default function ClientLogos() {
