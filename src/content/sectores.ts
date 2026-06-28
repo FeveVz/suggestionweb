@@ -10,7 +10,7 @@ import type { Sector, ItemTT, Paso } from "./types";
 export const SECTORES_HUB = {
   metaTitle: "Marketing por Industria en Perú | Sectores | Suggestion",
   metaDescription:
-    "Marketing de performance especializado por industria: inmobiliario, automotriz, turismo, marcas y salud. Elige tu sector y hablemos de tu caso.",
+    "Marketing de performance por industria en Perú: inmobiliario, automotriz, turismo, marcas, salud, agroexportación y pisco/vino. Elige tu sector y hablemos.",
   h1: "Cada mercado tiene su perspectiva. Nosotros la entendemos.",
   intro:
     "No hacemos el mismo marketing para todos. Cada industria tiene su cliente, su ciclo y su forma de cerrar. Por eso trabajamos con un playbook propio por sector.",
@@ -210,6 +210,88 @@ export const SECTORES: Sector[] = [
     ],
     cierre: { h2: "Llena tu agenda de pacientes", cta: "Agenda una llamada" },
   },
+  {
+    slug: "marketing-agroexportacion",
+    nombre: "Agroexportación",
+    metaTitle: "Marketing para Agroexportadoras en Perú | Suggestion",
+    metaDescription:
+      "Marketing y web B2B para agroexportadoras: presencia internacional, fichas de producto, ferias y CRM para cerrar con importadores. Agenda una llamada.",
+    h1: "Marketing para agroexportadoras que abren mercados",
+    hero: "Tu producto ya compite en calidad; falta que el importador correcto te encuentre y confíe. Construimos tu presencia B2B —web, catálogo y contenido institucional— para abrir mercados en EE.UU., Europa y Asia desde Ica.",
+    cta: "Abramos nuevos mercados",
+    proof:
+      "Operamos desde Ica, capital agroexportadora del Perú: conocemos el calendario de campaña, las ferias del rubro y al comprador internacional.",
+    secciones: [
+      {
+        h2: "Presencia B2B que genera confianza internacional",
+        parrafo:
+          "El importador investiga antes de escribir. Una web profesional —en inglés y español—, con tus certificaciones, fichas técnicas y trazabilidad, convierte la búsqueda en una reunión.",
+      },
+      {
+        h2: "Del campo a la feria",
+        parrafo:
+          "Preparamos tu marca para Expoalimentaria, Fruit Logistica y rondas de negocio: catálogo, presentación institucional y contenido audiovisual que muestra tu operación y tu estándar.",
+      },
+    ],
+    serviciosQueUsa: [
+      "desarrollo-web",
+      "branding",
+      "crm-automatizacion",
+      "produccion-audiovisual",
+    ],
+    faq: [
+      {
+        q: "¿Por qué una agroexportadora necesita marketing?",
+        a: "Porque el comprador internacional elige también por confianza y profesionalismo. Una marca sólida, una web B2B clara y contenido que muestre tu estándar abren puertas que solo el producto no abre.",
+      },
+      {
+        q: "¿Trabajan web y contenido en inglés?",
+        a: "Sí. Desarrollamos tu presencia en inglés y español, pensada para el importador, con fichas técnicas y certificaciones a la vista.",
+      },
+    ],
+    cierre: { h2: "Llevemos tu marca al mundo", cta: "Agenda una llamada" },
+  },
+  {
+    slug: "marketing-pisco-vino",
+    nombre: "Pisco y Vino",
+    metaTitle: "Marketing para Bodegas de Pisco y Vino en Perú | Suggestion",
+    metaDescription:
+      "Marketing para bodegas de pisco y vino: branding premium, e-commerce, enoturismo y contenido que cuenta tu tradición y vende. Agenda una llamada.",
+    h1: "Marketing para bodegas de pisco y vino",
+    hero: "Tu pisco tiene historia y medallas; falta que más gente la conozca y la compre. Unimos branding premium, e-commerce y enoturismo para que tu bodega venda dentro y fuera de Ica.",
+    cta: "Hagamos crecer tu bodega",
+    proof:
+      "Desde Ica, tierra del pisco: conocemos la tradición, la ruta del pisco y al consumidor que busca lo auténtico.",
+    secciones: [
+      {
+        h2: "Branding premium que justifica el precio",
+        parrafo:
+          "Una etiqueta y una historia bien contadas valen más que un descuento. Construimos la identidad que hace que tu pisco o tu vino se perciba —y se pague— como lo que es.",
+      },
+      {
+        h2: "Vende en línea y recibe en bodega",
+        parrafo:
+          "Montamos tu tienda online para vender a todo el país y trabajamos el enoturismo: visitas, catas y experiencias que llenan tu bodega y fidelizan al cliente.",
+      },
+    ],
+    serviciosQueUsa: [
+      "branding",
+      "desarrollo-web",
+      "produccion-audiovisual",
+      "publicidad-digital",
+    ],
+    faq: [
+      {
+        q: "¿Cómo vender más pisco o vino por internet?",
+        a: "Con una tienda online clara, fotografía que da deseo de comprar y campañas segmentadas por ocasión (regalo, fechas, corporativo). Lo armamos completo, del catálogo al cierre.",
+      },
+      {
+        q: "¿Trabajan enoturismo y visitas a la bodega?",
+        a: "Sí. Promovemos tus visitas, catas y experiencias con contenido y pauta, y montamos el sistema de reservas para que la agenda no dependa solo de la temporada.",
+      },
+    ],
+    cierre: { h2: "Tu bodega merece más mesas", cta: "Agenda una llamada" },
+  },
 ];
 
 export const getSector = (slug: string): Sector | undefined =>
@@ -290,6 +372,34 @@ export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] 
       { paso: "02", titulo: "Captamos", texto: "Pauta segmentada + web que transmite confianza." },
       { paso: "03", titulo: "Agendamos", texto: "Seguimiento y recordatorios hasta la cita." },
       { paso: "04", titulo: "Medimos", texto: "Reportamos citas y costo por paciente; optimizamos." },
+    ],
+  },
+  "marketing-agroexportacion": {
+    beneficios: [
+      { titulo: "Confianza internacional", texto: "Web B2B, fichas y certificaciones que el importador valora antes de escribir." },
+      { titulo: "Listos para la feria", texto: "Catálogo y material institucional para Expoalimentaria y Fruit Logistica." },
+      { titulo: "Tu estándar, visible", texto: "Audiovisual que muestra tu operación, tu calidad y tu trazabilidad." },
+      { titulo: "Contactos que avanzan", texto: "CRM para no perder ninguna oportunidad del comprador internacional." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Analizamos tu mercado destino, tu comprador y tu competencia." },
+      { paso: "02", titulo: "Construimos", texto: "Web B2B, catálogo y contenido institucional en inglés y español." },
+      { paso: "03", titulo: "Posicionamos", texto: "Te ponemos frente al importador: ferias, LinkedIn y rondas de negocio." },
+      { paso: "04", titulo: "Medimos", texto: "Reportamos contactos y oportunidades; iteramos." },
+    ],
+  },
+  "marketing-pisco-vino": {
+    beneficios: [
+      { titulo: "Marca que se paga", texto: "Branding premium que justifica el precio frente al consumidor." },
+      { titulo: "Vende en línea", texto: "E-commerce que abre la venta a todo el país, no solo a tu puerta." },
+      { titulo: "Enoturismo lleno", texto: "Visitas, catas y experiencias con reservas durante todo el año." },
+      { titulo: "Tu historia, contada", texto: "Contenido que convierte tu tradición en deseo de compra." },
+    ],
+    proceso: [
+      { paso: "01", titulo: "Leemos", texto: "Entendemos tu bodega, tu producto y tu consumidor." },
+      { paso: "02", titulo: "Moldeamos", texto: "Marca, etiqueta e historia que elevan tu percepción." },
+      { paso: "03", titulo: "Activamos", texto: "E-commerce, pauta y enoturismo trabajando juntos." },
+      { paso: "04", titulo: "Medimos", texto: "Reportamos ventas y reservas; optimizamos." },
     ],
   },
 };

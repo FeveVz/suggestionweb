@@ -70,6 +70,8 @@ export const SECTORS: NavLink[] = [
   { label: "Turismo", href: "/marketing-turismo" },
   { label: "Marcas y consumo", href: "/marketing-marcas-consumo" },
   { label: "Salud", href: "/marketing-salud" },
+  { label: "Agroexportación", href: "/marketing-agroexportacion" },
+  { label: "Pisco y Vino", href: "/marketing-pisco-vino" },
 ];
 
 /** Menú principal (doc 02 §7). */
