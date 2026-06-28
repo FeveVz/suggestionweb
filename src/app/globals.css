@@ -7,15 +7,15 @@
    Suggestion — Webfonts (self-hosted)
    Display: Space Grotesk · Body/accent: Geomanist
    ============================================================ */
-@font-face { font-family: "Space Grotesk"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Light.ttf") format("truetype"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Regular.ttf") format("truetype"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Medium.ttf") format("truetype"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype"); }
-@font-face { font-family: "Geomanist"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular.otf") format("opentype"); }
-@font-face { font-family: "Geomanist"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular.otf") format("opentype"); }
-@font-face { font-family: "Geomanist"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Medium.otf") format("opentype"); }
-@font-face { font-family: "Geomanist"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Bold.otf") format("opentype"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Light.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Bold.woff2") format("woff2"); }
 
 /* ============================================================
    Tokens — manual de marca Suggestion
