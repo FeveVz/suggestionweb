@@ -41,7 +41,7 @@ const EQUIPO = [
   { n: "María Teresa Vera", r: "Cofundadora y Administradora", d: "Administración y operación: que cada proyecto salga a tiempo y en orden.", i: "MV" },
   { n: "Cristofer Amable", r: "Análisis de mercado y tendencias", d: "Investigación, datos y tendencias que guían cada estrategia.", i: "CA" },
   { n: "Diego Urday", r: "Desarrollo web", d: "Construye las webs, landings y automatizaciones que convierten.", i: "DU" },
-  { n: "Yurayma", r: "Diseño", d: "Identidad visual y piezas gráficas de cada campaña.", i: "Y" },
+  { n: "Yurayma Vásquez", r: "Diseño", d: "Identidad visual y piezas gráficas de cada campaña.", i: "YV" },
   { n: "José Carlos Muñoz", r: "Audiovisual y edición", d: "Cámaras, dirección de foto y edición del contenido de la agencia.", i: "JM" },
   { n: "Nicolás Montoya", r: "Logística y dirección de eventos", d: "Coordina la logística y dirige las activaciones y eventos en calle.", i: "NM" },
 ];
