@@ -64,7 +64,7 @@ export default function Footer() {
           <span style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
             <Dot size={6} /> No es lo que ves.
           </span>
-          <span style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>© {new Date().getFullYear()} {site.name} · Marketing de performance en Ica, Perú</span>
+          <span style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>© {new Date().getFullYear()} {site.legalName} · RUC {site.ruc} · Ica, Perú</span>
         </div>
       </div>
     </footer>

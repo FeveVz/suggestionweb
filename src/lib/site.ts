@@ -10,7 +10,8 @@ export const SITE_URL = (
 
 export const site = {
   name: "Suggestion",
-  legalName: "Suggestion",
+  legalName: "Agencia de Marketing Suggestion S.A.C.",
+  ruc: "20615266753",
   domain: "suggestion.pe",
   url: SITE_URL,
   slogan: "Convertimos atención en ventas",

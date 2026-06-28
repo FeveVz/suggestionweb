@@ -28,6 +28,19 @@ const POR_QUE = [
   ["Transparencia radical", "Ves los números reales del funnel. Sin humo, sin promesas de #1."],
 ];
 
+const VALORES = [
+  ["Humanidad", "Detrás de cada negocio hay personas. Priorizamos relaciones genuinas, no contratos fríos."],
+  ["Transparencia", "Comunicación clara en cada propuesta y reporte. Sin letras pequeñas ni promesas vacías."],
+  ["Autenticidad", "Mostramos la verdad de cada marca. Contenido real y resultados medibles, no postureo."],
+  ["Empatía", "Entendemos tu necesidad antes de proponer. Partimos de tu negocio, no de una plantilla."],
+  ["Adaptabilidad", "Flexibles en la propuesta, ágiles en la ejecución. Nos movemos a la velocidad de tu mercado."],
+];
+
+const EQUIPO = [
+  { n: "Abraham Velásquez Aquije", r: "Gerente General · Cofundador", d: "Dirige la estrategia comercial y de performance de cada cuenta.", i: "AV" },
+  { n: "María Teresa Vera García", r: "Cofundadora", d: "Conduce la marca, el contenido y la relación con cada cliente.", i: "MV" },
+];
+
 export default function Nosotros() {
   const aboutSchema = {
     "@context": "https://schema.org",
@@ -94,15 +107,43 @@ export default function Nosotros() {
         </div>
       </Section>
 
-      {/* EQUIPO */}
+      {/* VALORES */}
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
-        <div style={{ maxWidth: 720 }}>
+        <SectionHeading level={2} kicker="Nuestros valores" maxWidth="24ch" style={{ marginBottom: 40 }}>
+          Cinco principios que no negociamos.
+        </SectionHeading>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "var(--space-4)" }}>
+          {VALORES.map(([t, d], i) => (
+            <div key={t} style={{ padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+              <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", letterSpacing: "var(--tracking-label)", color: "var(--cyan)" }}>0{i + 1}</span>
+              <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)", margin: "12px 0 8px" }}>{t}</h3>
+              <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-muted)" }}>{d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* EQUIPO */}
+      <Section tone="light">
+        <div style={{ maxWidth: 760, marginBottom: 40 }}>
           <SectionHeading level={2} kicker="Nuestro equipo" maxWidth="20ch" style={{ marginBottom: 18 }}>
-            Un solo techo, todo el funnel.
+            Las personas detrás de Suggestion.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)" }}>
-            Estrategia, performance, creatividad, audiovisual y producción, bajo un mismo techo. Por eso la máquina completa funciona conectada: nadie pasa la pelota a un tercero.
+            Estrategia, performance, creatividad y producción bajo un mismo techo. Por eso la máquina completa funciona conectada: nadie pasa la pelota a un tercero.
           </p>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)", maxWidth: 760 }}>
+          {EQUIPO.map((m) => (
+            <div key={m.n} className="hk-lift" style={{ display: "flex", gap: 18, alignItems: "center", padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+              <span aria-hidden style={{ width: 56, height: 56, flexShrink: 0, borderRadius: "50%", background: "var(--black)", color: "var(--white)", display: "grid", placeItems: "center", font: "var(--fw-bold) var(--fs-md)/1 var(--font-display)", letterSpacing: "0.03em" }}>{m.i}</span>
+              <div>
+                <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)" }}>{m.n}</h3>
+                <span style={{ display: "block", font: "var(--fw-bold) var(--fs-micro)/1.2 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--cyan)", marginTop: 6 }}>{m.r}</span>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 8 }}>{m.d}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </Section>
 
