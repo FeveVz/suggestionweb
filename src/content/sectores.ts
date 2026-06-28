@@ -8,7 +8,7 @@ import type { Sector, ItemTT, Paso } from "./types";
 
 /** Hub /sectores (doc 08 §0). Página propia. */
 export const SECTORES_HUB = {
-  metaTitle: "Marketing por Industria / Sectores | Suggestion",
+  metaTitle: "Marketing por Industria en Perú | Sectores | Suggestion",
   metaDescription:
     "Marketing de performance especializado por industria: inmobiliario, automotriz, turismo, marcas y salud. Elige tu sector y hablemos de tu caso.",
   h1: "Cada mercado tiene su perspectiva. Nosotros la entendemos.",
@@ -21,7 +21,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-inmobiliario",
     nombre: "Inmobiliario",
-    metaTitle: "Marketing Inmobiliario que Vende Lotes | Suggestion",
+    metaTitle: "Marketing Inmobiliario en Perú que Vende Lotes | Suggestion",
     metaDescription:
       "Marketing inmobiliario que llena tu pipeline de citas calificadas, no de curiosos. Performance, drone y CRM para proyectos. Agenda una llamada.",
     h1: "Marketing inmobiliario que llena tu pipeline de citas",
@@ -62,12 +62,14 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-automotriz",
     nombre: "Automotriz",
-    metaTitle: "Marketing Automotriz para Concesionarios | Suggestion",
+    metaTitle: "Marketing Automotriz para Concesionarios en Perú | Suggestion",
     metaDescription:
       "Marketing automotriz que lleva del clic al test drive: leads listos para cierre en piso. Campañas para concesionarios y autos. Agenda hoy.",
     h1: "Marketing automotriz: del clic al test drive",
     hero: "Un lead de auto que no llega al piso no sirve. Diseñamos campañas que no solo generan interesados: los califican y los empujan a la prueba de manejo, donde tu equipo cierra.",
     cta: "Llena tu piso de prospectos",
+    proof:
+      "Caso Pacífico Motors: operamos los planes de marketing de su red de concesionarios (Mazda, Suzuki, Subaru, Changan, JAC, Renault y más) en Ica y Cusco.",
     secciones: [
       {
         h2: "Publicidad para venta de autos",
@@ -97,7 +99,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-turismo",
     nombre: "Turismo",
-    metaTitle: "Marketing Turístico para Hoteles | Suggestion",
+    metaTitle: "Marketing Turístico para Hoteles en Perú | Suggestion",
     metaDescription:
       "Marketing turístico que genera reservas reales en temporada y fuera de ella. Para hoteles, restaurantes y agencias de viaje. Agenda una llamada.",
     h1: "Marketing turístico que genera reservas reales",
@@ -134,7 +136,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-marcas-consumo",
     nombre: "Marcas y consumo",
-    metaTitle: "Marketing para Marcas y Consumo Masivo | Suggestion",
+    metaTitle: "Marketing para Marcas y Consumo Masivo en Perú | Suggestion",
     metaDescription:
       "Marketing para marcas y consumo: demanda que se convierte en venta, no en likes. Posicionamiento, performance y activación. Agenda una llamada.",
     h1: "Marcas y consumo: demanda que se vuelve venta",
@@ -171,7 +173,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-salud",
     nombre: "Salud",
-    metaTitle: "Marketing para Clínicas y Salud | Suggestion",
+    metaTitle: "Marketing para Clínicas y Salud en Perú | Suggestion",
     metaDescription:
       "Marketing para clínicas, consultorios y profesionales de la salud: capta pacientes sin quemar presupuesto. Performance y web. Agenda una llamada.",
     h1: "Marketing para clínicas que capta pacientes",

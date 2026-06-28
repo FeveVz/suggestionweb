@@ -8,7 +8,7 @@ import type { Servicio } from "./types";
 
 /** Pilar /servicios (doc 09 §A0). Página propia, no [slug]. */
 export const SERVICIOS_PILAR = {
-  metaTitle: "Servicios de Marketing Digital | Suggestion",
+  metaTitle: "Servicios de Marketing Digital en Ica y Perú | Suggestion",
   metaDescription:
     "Todos nuestros servicios de marketing, de performance a BTL e imprenta. Una sola máquina para convertir mercado en ventas. Agenda hoy.",
   h1: "Servicios de marketing que convierten en ventas",
@@ -125,7 +125,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Consultoría",
-    metaTitle: "Consultoría de Marketing y Estrategia | Suggestion",
+    metaTitle: "Consultoría de Marketing y Estrategia en Perú | Suggestion",
     metaDescription:
       "Consultoría de marketing: diagnóstico, estrategia y detección de fugas para que tu negocio venda más. Agenda tu sesión de diagnóstico hoy.",
     h1: "Consultoría de marketing que ordena tu crecimiento",
@@ -214,7 +214,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Investigación de Mercado",
-    metaTitle: "Investigación y Estudio de Mercado | Suggestion",
+    metaTitle: "Investigación y Estudio de Mercado en Perú | Suggestion",
     metaDescription:
       "Investigación de mercado con datos e insights para decidir con certeza: demanda, competencia y consumidor. Pide tu estudio. Agenda una llamada.",
     h1: "Investigación de mercado que guía tus decisiones",
@@ -554,7 +554,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "Desarrollo Web",
-    metaTitle: "Diseño y Desarrollo Web que Convierte | Suggestion",
+    metaTitle: "Diseño y Desarrollo Web en Perú que Convierte | Suggestion",
     metaDescription:
       "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Agenda una llamada.",
     h1: "Diseño de páginas web que convierten visitas en clientes",
@@ -655,7 +655,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "SEO",
-    metaTitle: "Agencia SEO y Posicionamiento Web | Suggestion",
+    metaTitle: "Agencia SEO y Posicionamiento Web en Perú | Suggestion",
     metaDescription:
       "Agencia SEO en Perú: posicionamiento web que te hace visible cuando tu cliente busca. SEO técnico y de contenidos. Agenda tu auditoría gratuita.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
@@ -734,7 +734,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "CRM y Automatización",
-    metaTitle: "CRM y Automatización de Marketing | Suggestion",
+    metaTitle: "CRM y Automatización de Marketing en Perú | Suggestion",
     metaDescription:
       "CRM y automatización: captura leads, automatiza WhatsApp y califica clientes para vender más con menos esfuerzo. Agenda una demo. Escala tu negocio.",
     h1: "CRM y automatización que escala tus ventas",
@@ -991,7 +991,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "BTL y Activaciones",
-    metaTitle: "BTL y Activaciones de Marca | Suggestion",
+    metaTitle: "BTL y Activaciones de Marca en Ica y Perú | Suggestion",
     metaDescription:
       "BTL y activaciones que conectan: marketing experiencial, sampling y presencia en punto clave con captación de datos. Agenda tu activación hoy.",
     h1: "BTL y activaciones que conectan y captan",
@@ -1145,7 +1145,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Estructuras Publicitarias",
-    metaTitle: "Estructuras y Paneles Publicitarios | Suggestion",
+    metaTitle: "Estructuras y Paneles Publicitarios en Ica | Suggestion",
     metaDescription:
       "Estructuras publicitarias de alto impacto: paneles, tótems, letreros y módulos para tu marca. Diseño y fabricación. Pide tu cotización hoy.",
     h1: "Estructuras publicitarias de alto impacto",
