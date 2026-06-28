@@ -1007,6 +1007,76 @@ export const BLOG_POSTS: BlogPost[] = [
     moneyPage: { label: "Pongamos a vender tu concesionario", href: "/marketing-automotriz" },
     relacionados: ["marketing-automotriz-ejemplos", "leads-para-concesionarios"],
   },
+  {
+    slug: "como-vender-pisco-y-vino-por-internet",
+    categoria: "sectores",
+    title: "Cómo Vender Pisco y Vino por Internet | Suggestion",
+    description:
+      "Cómo vender pisco y vino por internet desde tu bodega: tienda online, fotografía que da deseo, campañas por ocasión y enoturismo. Guía para bodegas. 2026.",
+    h1: "Cómo vender pisco y vino por internet (sin perder la tradición)",
+    excerpt:
+      "Tu pisco gana medallas pero se vende casi solo en la puerta de la bodega. Internet puede llevarlo a todo el Perú —si lo haces con marca y estrategia, no improvisando con un par de fotos. Esto es lo que funciona.",
+    date: "2026-06-20",
+    secciones: [
+      {
+        h2: "Primero la marca, después el carrito",
+        parrafo:
+          "Online compite todo el mundo, también el pisco industrial barato. Lo que te diferencia es tu historia: tu valle, tu uva, tu proceso, tus premios. Una marca y una etiqueta bien contadas hacen que tu botella se perciba —y se pague— como lo que es. Sin eso, terminas vendiendo por precio.",
+      },
+      {
+        h2: "Lo que sí vende en línea",
+        bullets: [
+          { titulo: "Tienda clara y de confianza", texto: "fotos reales, descripción de cada producto y pago fácil. La botella entra por los ojos." },
+          { titulo: "Campañas por ocasión", texto: "Día del Pisco Sour, Fiestas Patrias, Navidad, regalos corporativos: el motivo de compra cambia el mensaje." },
+          { titulo: "Fotografía y video que dan deseo", texto: "el cóctel servido, la cata, el viñedo. Mostrar la experiencia, no solo el envase." },
+          { titulo: "Reseñas y prueba social", texto: "premios, puntajes y clientes reales reducen la desconfianza del que compra por primera vez." },
+        ],
+      },
+      {
+        h2: "El enoturismo es tu otra tienda",
+        parrafo:
+          "En Ica, la visita a la bodega es un producto en sí: catas, recorridos y experiencias que dejan margen alto y fidelizan. Promociónalas con contenido y pauta, y monta un sistema de reservas para no depender solo de la temporada. La web vende la botella; la experiencia crea al cliente que vuelve.",
+      },
+    ],
+    cierre: "En Suggestion unimos branding premium, e-commerce y enoturismo para que tu bodega venda dentro y fuera de Ica.",
+    moneyPage: { label: "Hagamos crecer tu bodega", href: "/marketing-pisco-vino" },
+    relacionados: ["posicionamiento-de-marca", "marketing-para-restaurantes"],
+  },
+  {
+    slug: "marketing-para-agroexportadoras",
+    categoria: "sectores",
+    title: "Marketing para Agroexportadoras: Cómo Abrir Mercados | Suggestion",
+    description:
+      "Cómo una agroexportadora abre mercados con marketing: web B2B en inglés, presencia en ferias y contenido que genera confianza en el importador. 2026.",
+    h1: "Marketing para agroexportadoras: cómo abrir mercados internacionales",
+    excerpt:
+      "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que sí mueve la aguja.",
+    date: "2026-06-24",
+    secciones: [
+      {
+        h2: "El importador te googlea antes de escribirte",
+        parrafo:
+          "Antes de una ronda o una feria, el comprador internacional revisa tu web. Si encuentra una página profesional —en inglés y español—, con tus certificaciones, fichas técnicas, capacidad y trazabilidad, avanzas. Si encuentra un Facebook desactualizado, no. La presencia digital B2B es hoy parte de tu carta de presentación.",
+      },
+      {
+        h2: "Lo que necesita tu marca para exportar",
+        bullets: [
+          { titulo: "Web e identidad B2B", texto: "en inglés y español, con certificaciones (Global G.A.P., HACCP, orgánico) y fichas a la vista." },
+          { titulo: "Material para ferias", texto: "catálogo, presentación institucional y brochure listos para Expoalimentaria y Fruit Logistica." },
+          { titulo: "Contenido que muestra tu estándar", texto: "video y fotografía de tu fundo, packing y proceso: la confianza entra por lo que se ve." },
+          { titulo: "CRM para el seguimiento", texto: "una oportunidad internacional puede tomar meses; sin seguimiento ordenado, se pierde." },
+        ],
+      },
+      {
+        h2: "Ica tiene el producto; falta contar la historia",
+        parrafo:
+          "Palta, uva, espárragos: la región exporta de los mejores del mundo, pero muchas empresas compiten solo por precio. Una marca que comunica su calidad, su gente y su responsabilidad se diferencia y negocia mejor. El marketing no reemplaza al producto; lo posiciona para que valga lo que cuesta.",
+      },
+    ],
+    cierre: "En Suggestion construimos tu presencia B2B —web, contenido y marca— para abrir mercados desde Ica al mundo.",
+    moneyPage: { label: "Abramos nuevos mercados", href: "/marketing-agroexportacion" },
+    relacionados: ["como-vender-pisco-y-vino-por-internet", "posicionamiento-de-marca"],
+  },
 ];
 
 export const getCategoria = (slug: string): BlogCategoria | undefined =>
