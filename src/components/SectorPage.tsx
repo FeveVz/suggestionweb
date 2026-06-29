@@ -5,6 +5,12 @@ import { serviceSchema } from "@/lib/schema";
 import { getSector, getSectorAst } from "@/content/sectores";
 import { getServicio } from "@/content/servicios";
 
+/** Imagen de hero por sector (cuando existe foto/render real). */
+const SECTOR_IMG: Record<string, { src: string; alt: string }> = {
+  "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
+  "marketing-automotriz": { src: "/assets/sectores/automotriz.webp", alt: "Campaña de marketing para el concesionario Pacífico Motors" },
+};
+
 /** Renderiza una landing de sector (a raíz) desde su slug. */
 export default function SectorPage({ slug }: { slug: string }) {
   const sec = getSector(slug);
@@ -31,6 +37,7 @@ export default function SectorPage({ slug }: { slug: string }) {
       kicker="Sector"
       h1={sec.h1}
       hero={sec.hero}
+      heroImage={SECTOR_IMG[slug]}
       ctaLabel={sec.cta}
       proof={sec.proof}
       secciones={sec.secciones}

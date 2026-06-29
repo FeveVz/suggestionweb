@@ -28,6 +28,7 @@ export default function LandingArticle({
   kicker,
   h1,
   hero,
+  heroImage,
   ctaLabel,
   proof,
   secciones,
@@ -44,6 +45,7 @@ export default function LandingArticle({
   kicker: string;
   h1: string;
   hero: string;
+  heroImage?: { src: string; alt: string };
   ctaLabel: string;
   proof?: string;
   secciones: Seccion[];
@@ -131,7 +133,12 @@ export default function LandingArticle({
                 </Btn>
               </div>
             </div>
-            {heroItems.length > 0 && (
+            {heroImage ? (
+              <aside style={{ minWidth: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={heroImage.src} alt={heroImage.alt} loading="lazy" style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }} />
+              </aside>
+            ) : heroItems.length > 0 ? (
               <aside style={{ minWidth: 0 }}>
                 <div style={{ background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.25rem,3vw,1.75rem)" }}>
                   <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
@@ -147,7 +154,7 @@ export default function LandingArticle({
                   </ul>
                 </div>
               </aside>
-            )}
+            ) : null}
           </div>
         </div>
       </section>
