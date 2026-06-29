@@ -9,6 +9,8 @@ import { getServicio } from "@/content/servicios";
 const SECTOR_IMG: Record<string, { src: string; alt: string }> = {
   "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
   "marketing-automotriz": { src: "/assets/sectores/automotriz.webp", alt: "Campaña de marketing para el concesionario Pacífico Motors" },
+  "marketing-turismo": { src: "/assets/sectores/turismo.webp", alt: "Oasis de Huacachina en Ica, principal destino turístico de la región" },
+  "marketing-marcas-consumo": { src: "/assets/sectores/marcas.webp", alt: "Producto de marca: chorizos artesanales de El Charcutero" },
 };
 
 /** Renderiza una landing de sector (a raíz) desde su slug. */
