@@ -15,6 +15,12 @@ import { getPrecios } from "@/content/precios";
 
 type Params = { params: Promise<{ slug: string }> };
 
+/** Imagen de hero por servicio (cuando hay foto de trabajo real). */
+const SERVICE_IMG: Record<string, { src: string; alt: string }> = {
+  btl: { src: "/assets/servicios/btl.webp", alt: "Activación de marca BTL con stand y dinámica en punto de venta" },
+  "produccion-audiovisual": { src: "/assets/servicios/produccion-audiovisual.webp", alt: "Rodaje audiovisual con cámara e iluminación profesional" },
+};
+
 const shapeFor = (slug: string) => ((slug.charCodeAt(0) + slug.length) % 6) + 1;
 
 export function generateStaticParams() {
@@ -108,6 +114,7 @@ export default async function ServicioPage({ params }: Params) {
       kicker={parent?.nombre ?? "Servicio"}
       h1={s.h1}
       hero={s.hero}
+      heroImage={SERVICE_IMG[s.slug]}
       ctaLabel={s.cta}
       proof={s.proof}
       secciones={s.secciones}
