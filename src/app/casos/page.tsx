@@ -45,6 +45,14 @@ const CASOS = [
   },
 ];
 
+const GALERIA = [
+  { src: "/assets/casos/ceinys-campana-1.webp", alt: "Campaña de lotes de Inmobiliaria Ceinys en Meta Ads", cap: "Ceinys — campaña de lotes (Meta Ads)" },
+  { src: "/assets/casos/ceinys-campana-2.webp", alt: "Campaña de bono por WhatsApp de Ceinys", cap: "Ceinys — bono de cierre por WhatsApp" },
+  { src: "/assets/casos/ceinys-render.webp", alt: "Render del proyecto inmobiliario de Ceinys", cap: "Ceinys — render del proyecto" },
+  { src: "/assets/casos/ceinys-campana-3.webp", alt: "Campaña del proyecto Casa de Playa de Ceinys", cap: "Ceinys — proyecto Casa de Playa" },
+  { src: "/assets/casos/pacifico-campana.webp", alt: "Campaña de concesionario para Pacífico Motors", cap: "Pacífico Motors — campaña de concesionario" },
+];
+
 export default function Casos() {
   return (
     <>
@@ -88,6 +96,28 @@ export default function Casos() {
             </article>
           ))}
         </div>
+      </Section>
+
+      {/* TRABAJO REAL — galería de piezas de campaña */}
+      <Section tone="light">
+        <SectionHeading level={2} kicker="El trabajo detrás de los números" maxWidth="22ch" style={{ marginBottom: 32 }}>
+          Las piezas que hicieron el resultado.
+        </SectionHeading>
+        <div className="hk-casos-gal">
+          {GALERIA.map((g) => (
+            <figure key={g.src}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={g.src} alt={g.alt} loading="lazy" style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block" }} />
+              <figcaption style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 8 }}>{g.cap}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <style>{`
+          .hk-casos-gal { columns: 1; column-gap: var(--space-4); }
+          @media (min-width: 600px) { .hk-casos-gal { columns: 2; } }
+          @media (min-width: 980px) { .hk-casos-gal { columns: 3; } }
+          .hk-casos-gal figure { break-inside: avoid; margin: 0 0 var(--space-4); }
+        `}</style>
       </Section>
 
       {/* CIERRE */}
