@@ -12,7 +12,6 @@ import CountUp from "@/components/CountUp";
 import Parallax from "@/components/Parallax";
 import Magnetic from "@/components/Magnetic";
 import MetodoPinned from "@/components/MetodoPinned";
-import InkReveal from "@/components/InkReveal";
 import ScrollBlot from "@/components/ScrollBlot";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
@@ -180,14 +179,14 @@ export default function Home() {
             Hablemos de tu caso <ArrowRight size={16} />
           </a>
         </div>
-        <InkReveal shape={1} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
+        <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
           {CASOS.map((c) => (
             <article key={c.title} className="hk-case hk-lift" style={{ border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 18, background: "var(--white)" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                 <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{c.tag}</span>
                 <Blot shape={c.shape} tint="orange" size={48} style={{ opacity: 0.9 }} />
               </div>
-              <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
+              <div style={{ font: "var(--fw-bold) var(--fs-4xl)/0.95 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
                 <CountUp to={c.metric} />
               </div>
               <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>
@@ -195,7 +194,7 @@ export default function Home() {
               </p>
             </article>
           ))}
-        </InkReveal>
+        </div>
       </Section>
 
       {/* MÉTODO (pinned en desktop) */}
