@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 import { Section } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import ProcesoTimeline from "@/components/ProcesoTimeline";
-import BeneficiosGrid from "@/components/BeneficiosGrid";
+import BeneficiosPinned from "@/components/BeneficiosPinned";
 import type { ItemTT, Paso } from "@/content/types";
 
 /**
@@ -43,15 +43,8 @@ export default function TransactionalSections({
         </Section>
       )}
 
-      {/* BENEFICIOS */}
-      {beneficios && beneficios.length > 0 && (
-        <Section tone="light">
-          <SectionHeading level={2} kicker="Por qué este servicio" maxWidth="24ch" style={{ marginBottom: 36 }}>
-            Lo que ganas trabajando con nosotros.
-          </SectionHeading>
-          <BeneficiosGrid items={beneficios} />
-        </Section>
-      )}
+      {/* BENEFICIOS — "Lo que ganas" como secuencia PINNED (mismo efecto que el Método) */}
+      {beneficios && beneficios.length > 0 && <BeneficiosPinned items={beneficios} />}
 
       {/* PROCESO — timeline con animación de scroll (línea que se rellena + cards alternadas) */}
       {proceso && proceso.length > 0 && <ProcesoTimeline pasos={proceso} />}
