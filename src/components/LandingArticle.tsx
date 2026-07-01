@@ -35,6 +35,7 @@ export default function LandingArticle({
   incluye,
   beneficios,
   proceso,
+  tema,
   precios,
   related = [],
   faq,
@@ -52,6 +53,7 @@ export default function LandingArticle({
   incluye?: ItemTT[];
   beneficios?: ItemTT[];
   proceso?: Paso[];
+  tema?: string;
   precios?: PlanPrecio[];
   related?: RelatedBlock[];
   faq: FaqType[];
@@ -273,7 +275,7 @@ export default function LandingArticle({
       </Section>
 
       {/* AST — qué incluye / beneficios / proceso (transaccional) */}
-      <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} />
+      <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} tema={tema} />
 
       {/* PLANES Y PRECIOS */}
       <PricingSection planes={precios} />

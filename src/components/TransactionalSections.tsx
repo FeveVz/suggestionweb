@@ -14,10 +14,12 @@ export default function TransactionalSections({
   incluye,
   beneficios,
   proceso,
+  tema,
 }: {
   incluye?: ItemTT[];
   beneficios?: ItemTT[];
   proceso?: Paso[];
+  tema?: string;
 }) {
   return (
     <>
@@ -43,8 +45,14 @@ export default function TransactionalSections({
         </Section>
       )}
 
-      {/* BENEFICIOS — "Lo que ganas" como secuencia PINNED (mismo efecto que el Método) */}
-      {beneficios && beneficios.length > 0 && <BeneficiosPinned items={beneficios} />}
+      {/* BENEFICIOS — "Lo que ganas" como secuencia PINNED, personalizada por página (tema) */}
+      {beneficios && beneficios.length > 0 && (
+        <BeneficiosPinned
+          items={beneficios}
+          kicker={tema ? `Por qué ${tema}` : undefined}
+          heading={tema ? `Lo que ganas con ${tema}.` : undefined}
+        />
+      )}
 
       {/* PROCESO — timeline con animación de scroll (línea que se rellena + cards alternadas) */}
       {proceso && proceso.length > 0 && <ProcesoTimeline pasos={proceso} />}

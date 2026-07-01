@@ -95,7 +95,7 @@ export default function BeneficiosPinned({
   const it = items[active];
   return (
     <section style={{ background: "var(--surface-page)", position: "relative" }}>
-      <div ref={ref} style={{ height: `${items.length * 62 + 30}vh`, position: "relative" }}>
+      <div ref={ref} style={{ height: `${items.length * 38 + 14}vh`, position: "relative" }}>
         <div style={{ position: "sticky", top: 68, height: "calc(100vh - 68px)", display: "flex", alignItems: "center", overflow: "hidden" }}>
           <div style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 var(--gutter)", display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: "clamp(2rem,5vw,4.5rem)", alignItems: "center" }}>
             {/* Izquierda: heading + navegación de beneficios */}

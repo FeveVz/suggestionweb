@@ -121,6 +121,7 @@ export default async function ServicioPage({ params }: Params) {
       incluye={s.incluye}
       beneficios={s.beneficios}
       proceso={s.proceso}
+      tema={s.nombre}
       precios={getPrecios(s.slug)}
       related={related}
       faq={s.faq}

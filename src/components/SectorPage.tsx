@@ -45,6 +45,7 @@ export default function SectorPage({ slug }: { slug: string }) {
       secciones={sec.secciones}
       beneficios={ast?.beneficios}
       proceso={ast?.proceso}
+      tema={`marketing ${sec.nombre.toLowerCase()}`}
       related={related}
       faq={sec.faq}
       cierre={sec.cierre}
