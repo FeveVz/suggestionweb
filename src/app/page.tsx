@@ -12,6 +12,7 @@ import CountUp from "@/components/CountUp";
 import Parallax from "@/components/Parallax";
 import Magnetic from "@/components/Magnetic";
 import MetodoPinned from "@/components/MetodoPinned";
+import WorkWall from "@/components/WorkWall";
 import ScrollBlot from "@/components/ScrollBlot";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink } from "@/lib/site";
@@ -198,6 +199,9 @@ export default function Home() {
           ))}
         </div>
       </Section>
+
+      {/* MURO DE TRABAJOS (+50 marcas, miniaturas flotantes) */}
+      <WorkWall />
 
       {/* MÉTODO (pinned en desktop) */}
       <MetodoPinned />
