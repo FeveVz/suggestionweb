@@ -14,8 +14,8 @@ export default function NotFound() {
     <section style={{ background: "var(--white)", minHeight: "68vh", display: "flex", alignItems: "center" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)", display: "grid", gridTemplateColumns: "minmax(0,1fr) auto", gap: "clamp(2rem,5vw,4rem)", alignItems: "center" }} className="hk-split">
         <div>
-          <Label dot>Error 404</Label>
-          <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "18px 0 0", maxWidth: "20ch" }}>
+          <div className="hk-enter"><Label dot>Error 404</Label></div>
+          <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "18px 0 0", maxWidth: "20ch" }}>
             ¿Qué ves aquí? Nosotros tampoco: esta página no existe.
           </h1>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "18px 0 0", maxWidth: "48ch" }}>
@@ -37,8 +37,10 @@ export default function NotFound() {
             ))}
           </nav>
         </div>
-        <div aria-hidden style={{ opacity: 0.9 }}>
-          <Blot shape={4} tint="orange" size={220} />
+        <div aria-hidden className="hk-blot-in" style={{ opacity: 0.9 }}>
+          <div className="hk-float">
+            <Blot shape={4} tint="orange" size={220} />
+          </div>
         </div>
       </div>
     </section>

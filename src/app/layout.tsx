@@ -55,6 +55,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang={site.lang} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
+        {/* Preload de las 2 fuentes above-the-fold (mejora LCP/CLS) */}
+        <link rel="preload" href="/fonts/SpaceGrotesk-SemiBold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Geomanist-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Activa animaciones solo si hay JS; sin JS el contenido queda visible (SEO-safe). */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />

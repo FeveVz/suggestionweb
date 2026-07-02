@@ -19,14 +19,14 @@ export default function Gracias() {
   return (
     <section style={{ background: "var(--white)", minHeight: "62vh", display: "flex", alignItems: "center" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>
-        <Label dot>Mensaje recibido</Label>
-        <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "18px 0 0", maxWidth: "18ch" }}>
+        <div className="hk-enter"><Label dot>Mensaje recibido</Label></div>
+        <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "18px 0 0", maxWidth: "18ch" }}>
           Listo. Tus datos ya están con el equipo.
         </h1>
-        <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "20px 0 0", maxWidth: "52ch" }}>
+        <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "20px 0 0", maxWidth: "52ch" }}>
           Te respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>menos de 24 horas hábiles</strong> con un diagnóstico honesto — sin humo ni promesas mágicas. Si prefieres no esperar, escríbenos directo:
         </p>
-        <div style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}>
+        <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}>
           <Btn as="a" href={whatsappLink("Hola Suggestion, acabo de dejar mis datos en la web.")} target="_blank" rel="noopener noreferrer" size="lg">
             <MessageCircle size={18} /> Abrir WhatsApp
           </Btn>

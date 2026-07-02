@@ -34,6 +34,15 @@ function fechaLarga(iso: string) {
   return `${d.getDate()} ${MESES[d.getMonth()]} ${d.getFullYear()}`;
 }
 
+/** Minutos de lectura (~200 palabras/min) a partir del contenido real del post. */
+function minutosLectura(post: { excerpt: string; secciones: unknown; cierre: string }): number {
+  const words = (JSON.stringify(post.secciones) + post.excerpt + post.cierre)
+    .replace(/[^\p{L}\s]/gu, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return Math.max(2, Math.round(words / 200));
+}
+
 export default async function BlogPostPage({ params }: Params) {
   const { categoria, slug } = await params;
   const post = getPost(categoria, slug);
@@ -69,13 +78,13 @@ export default async function BlogPostPage({ params }: Params) {
           />
           <div style={{ marginTop: 24 }}>
             <Label dot>{cat?.nombre ?? categoria}</Label>
-            <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0" }}>
+            <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0" }}>
               {post.h1}
             </h1>
-            <p style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>
-              {fechaLarga(post.date)} · Por <a href="/nosotros" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
+            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>
+              {fechaLarga(post.date)} · {minutosLectura(post)} min de lectura · Por <a href="/nosotros" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
             </p>
-            <p style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "64ch" }}>
+            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "64ch" }}>
               {post.excerpt}
             </p>
           </div>

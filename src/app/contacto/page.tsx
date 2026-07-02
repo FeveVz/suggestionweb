@@ -49,6 +49,10 @@ export default function Contacto() {
                 <MapPin size={16} style={{ color: "var(--cyan)" }} /> {site.city}, Perú · Atención a todo el país
               </span>
             </div>
+            <div style={{ display: "flex", gap: "10px 18px", flexWrap: "wrap", marginTop: 26, paddingTop: 20, borderTop: "1px solid var(--hairline-inverse)" }}>
+              <span style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>⚡ Respondemos en menos de 24 h hábiles</span>
+              <span style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>Agencia formal · RUC {site.ruc}</span>
+            </div>
           </div>
           <CtaForm />
         </div>

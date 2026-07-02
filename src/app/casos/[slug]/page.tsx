@@ -7,6 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
+import CountUp from "@/components/CountUp";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl, ORG_ID } from "@/lib/site";
 import { CASOS_DETALLE, getCaso, allCasoSlugs } from "@/content/casos";
@@ -54,11 +55,11 @@ export default async function CasoPage({ params }: Params) {
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2rem,4vw,3rem)" }}>
           <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Casos", href: "/casos" }, { name: c.cliente, href: `/casos/${c.slug}` }]} />
           <div style={{ marginTop: "clamp(1.5rem,3vw,2.5rem)", maxWidth: 820 }}>
-            <Label dot>{c.sector}</Label>
-            <h1 style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "20ch" }}>
+            <div className="hk-enter"><Label dot>{c.sector}</Label></div>
+            <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "20ch" }}>
               {c.h1}
             </h1>
-            <p style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "58ch" }}>{c.resumen}</p>
+            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "58ch" }}>{c.resumen}</p>
           </div>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default async function CasoPage({ params }: Params) {
         <div style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2rem,4vw,3rem) var(--gutter)", display: "grid", gridTemplateColumns: `repeat(auto-fit, minmax(160px, 1fr))`, gap: "var(--space-5)" }}>
           {c.stats.map((s) => (
             <div key={s.label}>
-              <div style={{ font: "var(--fw-bold) var(--fs-3xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}>{s.valor}</div>
+              <div style={{ font: "var(--fw-bold) var(--fs-3xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}><CountUp to={s.valor} /></div>
               <p style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>{s.label}</p>
             </div>
           ))}

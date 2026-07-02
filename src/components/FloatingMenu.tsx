@@ -123,7 +123,7 @@ export default function FloatingMenu() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
-          className="hk-fab-btn"
+          className="hk-fab-btn hk-fab-menu"
           style={{ background: open ? "var(--ink-700)" : "var(--black)" }}
         >
           {open ? <X size={24} color="#fff" /> : <Menu size={24} color="#fff" />}
@@ -131,10 +131,13 @@ export default function FloatingMenu() {
       </div>
 
       <style>{`
-        .hk-fab { display: none; position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 1002; flex-direction: column; gap: 12px; align-items: center; }
-        @media (max-width: 920px) { .hk-fab { display: flex; } }
+        /* WhatsApp flota SIEMPRE (desktop incluido); el botón de menú solo en móvil */
+        .hk-fab { display: flex; position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 1002; flex-direction: column; gap: 12px; align-items: center; }
         .hk-fab-btn { width: 54px; height: 54px; border-radius: 50%; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: var(--shadow-lg); transition: transform var(--dur-fast) var(--ease-out); }
+        .hk-fab-btn:hover { transform: translateY(-2px) scale(1.04); }
         .hk-fab-btn:active { transform: scale(0.94); }
+        .hk-fab-menu { display: none; }
+        @media (max-width: 920px) { .hk-fab-menu { display: grid; } }
         .hk-fab-panel { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: 88px; width: min(90vw, 360px); max-height: 74vh; overflow-y: auto; background: var(--black); color: var(--white); border: 1px solid var(--border-on-inverse); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); z-index: 1001; }
         .hk-fab-head { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; background: var(--black); border-bottom: 1px solid var(--hairline-inverse); }
         .hk-fab-close { width: 34px; height: 34px; border-radius: 50%; background: var(--ink-700); border: none; color: var(--white); display: grid; place-items: center; cursor: pointer; }

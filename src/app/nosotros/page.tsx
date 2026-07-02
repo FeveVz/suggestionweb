@@ -141,7 +141,9 @@ export default function Nosotros() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
           {EQUIPO.map((m) => (
             <div key={m.n} className="hk-lift" style={{ display: "flex", gap: 18, alignItems: "center", padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
-              <span aria-hidden style={{ width: 56, height: 56, flexShrink: 0, borderRadius: "50%", background: "var(--black)", color: "var(--white)", display: "grid", placeItems: "center", font: "var(--fw-bold) var(--fs-md)/1 var(--font-display)", letterSpacing: "0.03em" }}>{m.i}</span>
+              <span aria-hidden style={{ width: 60, height: 60, flexShrink: 0, borderRadius: "50%", padding: 2.5, background: "linear-gradient(135deg, var(--orange), var(--cyan))", display: "grid" }}>
+                <span style={{ width: "100%", height: "100%", borderRadius: "50%", background: "var(--black)", color: "var(--white)", display: "grid", placeItems: "center", font: "var(--fw-bold) var(--fs-md)/1 var(--font-display)", letterSpacing: "0.03em" }}>{m.i}</span>
+              </span>
               <div>
                 <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)" }}>{m.n}</h3>
                 <span style={{ display: "block", font: "var(--fw-bold) var(--fs-micro)/1.2 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--cyan)", marginTop: 6 }}>{m.r}</span>
