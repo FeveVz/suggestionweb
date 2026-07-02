@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
 import { Section, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
-import { DualReveal, CtaForm, Percepcion } from "@/components/brand/interactive";
+import { CtaForm, Percepcion } from "@/components/brand/interactive";
+import HeroShowcase from "@/components/HeroShowcase";
 import ProofBar from "@/components/ProofBar";
 import ClientLogos from "@/components/ClientLogos";
 import SectorCard from "@/components/SectorCard";
@@ -89,19 +90,20 @@ export default function Home() {
               <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", maxWidth: "46ch", margin: "clamp(20px,2.4vw,30px) 0 0" }}>
-              <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>No es lo que ves.</strong> Trabajamos el funnel completo —
-              <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>lead</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>cita</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>cierre</strong>—, no métricas de vanidad. Tú no necesitas más likes; necesitas más ventas.
+              <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>Tu problema no es el alcance: es que los clics no se vuelven clientes.</strong> Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>leads</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>citas</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>ventas</strong>.
             </p>
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
               <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
               <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
             </div>
-            <p className="hk-enter-4" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
-              Respondemos en menos de 24 h hábiles.
+            <p className="hk-enter-4" style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
+              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>S/350K</strong> generados para clientes</span>
+              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas</span>
+              <span>Respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>&lt;24 h</strong></span>
             </p>
           </div>
           <div className="hk-enter-3" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
-            <DualReveal shape={3} size={560} />
+            <HeroShowcase />
           </div>
         </div>
         <div className="hk-nav" style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 var(--gutter) clamp(1.25rem,2.5vw,2rem)" }}>
