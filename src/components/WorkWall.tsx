@@ -11,15 +11,17 @@ import CountUp from "@/components/CountUp";
 
 const W = (n: number) => `/assets/wall/wall-${n}.webp`;
 
-// 3 columnas variadas (campañas + fotos reales + renders + drone + merch),
-// balanceadas por altura; se duplican en DOM para el loop infinito.
+// 4 columnas × 7 imágenes variadas (campañas gráficas + fotos reales +
+// renders + drone + merch propio), balanceadas por altura y tipo;
+// se duplican en DOM para el loop infinito.
 const COLS: string[][] = [
-  [W(1), W(2), W(3), W(4), W(5), W(6)],
-  [W(7), W(8), W(9), W(10), W(11), W(12)],
-  [W(13), W(14), W(15), W(16), W(17), W(18)],
+  [W(1), W(24), W(9), W(21), W(15), W(4), W(27)],
+  [W(7), W(2), W(19), W(8), W(16), W(12), W(5)],
+  [W(14), W(10), W(22), W(25), W(3), W(23), W(6)],
+  [W(13), W(17), W(28), W(11), W(26), W(20), W(18)],
 ];
 
-const DUR = [52, 66, 58]; // s — velocidades distintas = movimiento orgánico
+const DUR = [48, 64, 55, 72]; // s — velocidades distintas = movimiento orgánico
 
 export default function WorkWall() {
   return (
@@ -49,9 +51,11 @@ export default function WorkWall() {
         <div className="hk-wall" aria-hidden>
           {COLS.map((col, i) => (
             <div key={i} className="hk-wall-col" style={{ animationDuration: `${DUR[i]}s`, animationDirection: i % 2 ? "reverse" : "normal" }}>
+              {/* eager: las columnas en reversa muestran su 2.ª copia desde t=0;
+                  con lazy quedaban vacías hasta cargar (bug visto por el owner) */}
               {[...col, ...col].map((src, j) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img key={j} src={src} alt="" loading="lazy" decoding="async" />
+                <img key={j} src={src} alt="" loading="eager" decoding="async" />
               ))}
             </div>
           ))}
@@ -59,7 +63,7 @@ export default function WorkWall() {
       </div>
 
       <style>{`
-        .hk-wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; height: 560px; overflow: hidden;
+        .hk-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; height: 580px; overflow: hidden;
           mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
           -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent); }
         .hk-wall-col { display: flex; flex-direction: column; gap: 14px; animation-name: hk-wall-scroll; animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; }
