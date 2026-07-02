@@ -65,6 +65,8 @@ export default function Home() {
     <>
       {/* HERO */}
       <section style={{ background: "var(--white)", position: "relative", overflow: "hidden" }}>
+        {/* Rejilla editorial tenue (profundidad) */}
+        <div aria-hidden className="hk-hero-grid" />
         {/* Etiqueta vertical editorial (desktop) */}
         <span className="hk-vlabel hk-nav" style={{ position: "absolute", left: 22, top: "50%", transform: "translateY(-50%) rotate(180deg)", zIndex: 2 }}>
           Marketing de performance — Ica, Perú
@@ -207,7 +209,7 @@ export default function Home() {
         </SectionHeading>
         <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
           {POR_QUE.map(([t, d], i) => (
-            <div key={t} className="hk-lift" style={{ display: "flex", gap: 18, padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+            <div key={t} className="hk-lift hk-spot" style={{ display: "flex", gap: 18, padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
               <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
               <div>
                 <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>{t}</h3>

@@ -21,6 +21,13 @@ export default function CustomCursor() {
       tx = e.clientX;
       ty = e.clientY;
       if (!shown) { shown = true; el.style.opacity = "1"; }
+      // Spotlight: alimenta --sx/--sy de la tarjeta .hk-spot bajo el cursor
+      const spot = (e.target as HTMLElement).closest?.(".hk-spot") as HTMLElement | null;
+      if (spot) {
+        const r = spot.getBoundingClientRect();
+        spot.style.setProperty("--sx", `${e.clientX - r.left}px`);
+        spot.style.setProperty("--sy", `${e.clientY - r.top}px`);
+      }
     };
     const over = (e: MouseEvent) => {
       const t = e.target as HTMLElement;

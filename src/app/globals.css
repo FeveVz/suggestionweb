@@ -431,3 +431,49 @@ img, svg, video { max-width: 100%; }
   .js .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   .hk-lift:hover { transform: none; }
 }
+
+/* ============================================================
+   Capa premium — micro-interacciones y profundidad ($$$$)
+   ============================================================ */
+
+/* Scrollbar fino con la paleta de la marca */
+html { scrollbar-width: thin; scrollbar-color: var(--ink-300) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--ink-300); border-radius: 999px; border: 2.5px solid var(--white); }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-500); }
+
+/* Nav desktop: subrayado que se desliza (reemplaza el underline simple) */
+.hk-nav a { text-decoration: none !important; background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1.5px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size var(--dur-base) var(--ease-out); padding-bottom: 2px; }
+.hk-nav a:hover { background-size: 100% 1.5px; }
+
+/* Spotlight: halo que sigue al cursor dentro de la tarjeta (desktop, sin reduced-motion) */
+.hk-spot { position: relative; overflow: hidden; }
+.hk-spot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; opacity: 0; transition: opacity var(--dur-base) var(--ease-out); pointer-events: none; background: radial-gradient(220px circle at var(--sx, 50%) var(--sy, 50%), rgba(0, 191, 255, 0.09), transparent 65%); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hk-spot:hover::after { opacity: 1; }
+}
+
+/* Botones: elevación sutil al hover (transform ya transiciona en .hk-btn) */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hk-btn:hover { transform: translateY(-1.5px); box-shadow: var(--shadow-md); }
+  .hk-btn:active { transform: scale(0.98); box-shadow: none; }
+}
+
+/* Rejilla editorial tenue del hero (profundidad sin ruido) */
+.hk-hero-grid { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(var(--hairline) 1px, transparent 1px), linear-gradient(90deg, var(--hairline) 1px, transparent 1px); background-size: 54px 54px; mask-image: radial-gradient(ellipse 70% 60% at 72% 24%, #000 0%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 72% 24%, #000 0%, transparent 70%); opacity: 0.6; }
+
+/* Imágenes de caso/galería: zoom suave al hover */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hk-casos-gal img { transition: transform 0.6s var(--ease-out); }
+  .hk-casos-gal figure:hover img { transform: scale(1.02); }
+  .hk-heroimg { transition: transform 0.7s var(--ease-out), box-shadow 0.7s var(--ease-out); }
+  .hk-heroimg:hover { transform: scale(1.015) rotate(-0.4deg); box-shadow: var(--shadow-lg); }
+}
+
+/* Wordmark fantasma del footer (firma editorial) */
+.hk-foot-ghost { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: clamp(3.4rem, 13.5vw, 11rem); line-height: 0.8; letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 1px var(--ink-600); user-select: none; pointer-events: none; white-space: nowrap; opacity: 0.55; transition: opacity var(--dur-slow) var(--ease-out), -webkit-text-stroke-color var(--dur-slow) var(--ease-out); }
+footer:hover .hk-foot-ghost { opacity: 0.9; -webkit-text-stroke-color: var(--ink-500); }
+
+/* Header con elevación al scrollear */
+.hk-header-solid { box-shadow: 0 1px 0 var(--hairline), 0 10px 30px rgba(0, 0, 0, 0.07); }

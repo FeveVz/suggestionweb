@@ -138,7 +138,7 @@ export default function LandingArticle({
             {heroImage ? (
               <aside style={{ minWidth: 0 }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={heroImage.src} alt={heroImage.alt} loading="lazy" style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }} />
+                <img src={heroImage.src} alt={heroImage.alt} loading="lazy" className="hk-heroimg" style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }} />
               </aside>
             ) : heroItems.length > 0 ? (
               <aside style={{ minWidth: 0 }}>

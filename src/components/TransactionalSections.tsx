@@ -31,7 +31,7 @@ export default function TransactionalSections({
           </SectionHeading>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
             {incluye.map((it) => (
-              <div key={it.titulo} style={{ display: "flex", gap: 14, padding: "var(--space-5)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+              <div key={it.titulo} className="hk-spot" style={{ display: "flex", gap: 14, padding: "var(--space-5)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
                 <span aria-hidden style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", background: "var(--cyan)", display: "grid", placeItems: "center" }}>
                   <Check size={17} style={{ color: "var(--black)" }} />
                 </span>

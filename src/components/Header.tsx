@@ -14,10 +14,28 @@ import {
 
 type OpenMenu = "servicios" | "sectores" | null;
 
+/** Una línea por categoría para el mega-menú (tono de venta, no de índice). */
+const CAT_DESC: Record<string, string> = {
+  estrategia: "Pensar antes de gastar",
+  "marketing-digital-publicidad": "Leads y ventas medibles",
+  "web-seo": "Tu activo digital 24/7",
+  "marca-contenido": "Que te elijan y paguen más",
+  "btl-medios": "Presencia física que convence",
+};
+
 export default function Header() {
   const [open, setOpen] = useState<OpenMenu>(null);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
+
+  // Elevación del header al scrollear (profundidad).
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Cerrar menús al cambiar de ruta.
   useEffect(() => {
@@ -53,14 +71,16 @@ export default function Header() {
     <header
       ref={headerRef}
       onMouseLeave={() => setOpen(null)}
+      className={scrolled ? "hk-header-solid" : undefined}
       style={{
         position: "sticky",
         top: 0,
         zIndex: "var(--z-nav)" as unknown as number,
-        background: "rgba(255,255,255,0.86)",
+        background: scrolled ? "rgba(255,255,255,0.94)" : "rgba(255,255,255,0.86)",
         backdropFilter: "saturate(180%) blur(12px)",
         WebkitBackdropFilter: "saturate(180%) blur(12px)",
-        borderBottom: "1px solid var(--hairline)",
+        borderBottom: scrolled ? "1px solid transparent" : "1px solid var(--hairline)",
+        transition: "background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)",
       }}
     >
       <div
@@ -68,7 +88,8 @@ export default function Header() {
           maxWidth: "var(--container-wide)",
           margin: "0 auto",
           padding: "0 var(--gutter)",
-          height: 68,
+          height: scrolled ? 58 : 68,
+          transition: "height var(--dur-base) var(--ease-out)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -129,27 +150,47 @@ export default function Header() {
       {/* Panel mega-menú Servicios (full-width) */}
       {open === "servicios" && (
         <MegaPanel onClose={() => setOpen(null)}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "var(--space-6)" }}>
-            {SERVICE_CATEGORIES.map((cat) => (
-              <div key={cat.slug}>
-                <Link
-                  href={`/servicios/${cat.slug}`}
-                  onClick={() => setOpen(null)}
-                  style={{ font: "var(--fw-bold) var(--fs-micro)/1.3 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)", display: "block", marginBottom: 14 }}
-                >
-                  {cat.label}
-                </Link>
-                <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                  {cat.children.map((c) => (
-                    <li key={c.href}>
-                      <Link href={c.href} onClick={() => setOpen(null)} style={{ font: "var(--fw-medium) var(--fs-sm)/1.3 var(--font-body)", color: "var(--text-strong)" }}>
-                        {c.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div style={{ display: "flex", gap: "var(--space-7)", alignItems: "stretch" }}>
+            <div style={{ flex: 1, display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "var(--space-6)" }}>
+              {SERVICE_CATEGORIES.map((cat) => (
+                <div key={cat.slug}>
+                  <Link
+                    href={`/servicios/${cat.slug}`}
+                    onClick={() => setOpen(null)}
+                    style={{ font: "var(--fw-bold) var(--fs-micro)/1.3 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)", display: "block" }}
+                  >
+                    {cat.label}
+                  </Link>
+                  <p style={{ font: "var(--fw-light) var(--fs-xs)/1.35 var(--font-body)", color: "var(--ink-400)", margin: "6px 0 12px" }}>
+                    {CAT_DESC[cat.slug]}
+                  </p>
+                  <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                    {cat.children.map((c) => (
+                      <li key={c.href}>
+                        <Link href={c.href} onClick={() => setOpen(null)} style={{ font: "var(--fw-medium) var(--fs-sm)/1.3 var(--font-body)", color: "var(--text-strong)" }}>
+                          {c.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            {/* Caso destacado (prueba dentro del menú) */}
+            <Link
+              href="/casos/inmobiliaria-ceinys"
+              onClick={() => setOpen(null)}
+              className="hk-lift"
+              style={{ width: 250, flexShrink: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 18, padding: "var(--space-5)", background: "var(--black)", color: "var(--white)", borderRadius: "var(--radius-md)", textDecoration: "none" }}
+            >
+              <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>
+                Caso destacado
+              </span>
+              <span style={{ font: "var(--fw-bold) var(--fs-2xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}>S/350K</span>
+              <span style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
+                en ventas para Inmobiliaria Ceinys con S/3,000 de pauta. Ver el caso →
+              </span>
+            </Link>
           </div>
           <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)" }}>
             <Link href="/servicios" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan)" }}>

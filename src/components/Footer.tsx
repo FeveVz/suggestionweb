@@ -60,7 +60,12 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, marginTop: 48, paddingTop: 24, borderTop: "1px solid var(--hairline-inverse)", flexWrap: "wrap" }}>
+        {/* Firma editorial: wordmark fantasma */}
+        <div aria-hidden style={{ overflow: "hidden", marginTop: 56 }}>
+          <div className="hk-foot-ghost">Suggestion</div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, marginTop: 28, paddingTop: 24, borderTop: "1px solid var(--hairline-inverse)", flexWrap: "wrap" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
             <Dot size={6} /> No es lo que ves.
           </span>

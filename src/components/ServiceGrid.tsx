@@ -24,7 +24,7 @@ export default function ServiceGrid({
         <Link
           key={item.href}
           href={item.href}
-          className="hk-case hk-lift"
+          className="hk-case hk-lift hk-spot"
           style={{
             display: "flex",
             flexDirection: "column",

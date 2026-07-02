@@ -30,7 +30,7 @@ export default function BlogCard({
   return (
     <Link
       href={`/blog/${post.categoria}/${post.slug}`}
-      className="hk-case hk-lift"
+      className="hk-case hk-lift hk-spot"
       style={{
         display: "flex",
         flexDirection: "column",

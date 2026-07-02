@@ -34,7 +34,7 @@ export default function RelatedLinks({
           <Link
             key={l.href}
             href={l.href}
-            className="hk-case"
+            className="hk-case hk-spot"
             style={{
               display: "flex",
               alignItems: "flex-start",
