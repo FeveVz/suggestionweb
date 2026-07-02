@@ -11,15 +11,15 @@ import CountUp from "@/components/CountUp";
 
 const W = (n: number) => `/assets/wall/wall-${n}.webp`;
 
-// 4 columnas balanceadas por alturas (se duplican en DOM para el loop)
+// 3 columnas variadas (campañas + fotos reales + renders + drone + merch),
+// balanceadas por altura; se duplican en DOM para el loop infinito.
 const COLS: string[][] = [
-  [W(1), W(9), W(6), W(13)],
-  [W(5), W(10), W(2)],
-  [W(3), W(11), W(4), W(8)],
-  [W(12), W(7), W(14), W(1)],
+  [W(1), W(2), W(3), W(4), W(5), W(6)],
+  [W(7), W(8), W(9), W(10), W(11), W(12)],
+  [W(13), W(14), W(15), W(16), W(17), W(18)],
 ];
 
-const DUR = [44, 56, 48, 62]; // s — velocidades distintas = movimiento orgánico
+const DUR = [52, 66, 58]; // s — velocidades distintas = movimiento orgánico
 
 export default function WorkWall() {
   return (
@@ -59,13 +59,12 @@ export default function WorkWall() {
       </div>
 
       <style>{`
-        .hk-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; height: 560px; overflow: hidden;
+        .hk-wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; height: 560px; overflow: hidden;
           mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
           -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent); }
         .hk-wall-col { display: flex; flex-direction: column; gap: 14px; animation-name: hk-wall-scroll; animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; }
         .hk-wall-col img { width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--border-on-inverse); display: block; }
         @keyframes hk-wall-scroll { from { transform: translateY(0); } to { transform: translateY(calc(-50% - 7px)); } }
-        section:hover .hk-wall-col { animation-play-state: paused; }
         @media (max-width: 920px) {
           .hk-wall-grid { grid-template-columns: 1fr !important; }
           .hk-wall { height: 400px; grid-template-columns: repeat(2, 1fr); }
