@@ -22,6 +22,11 @@ const COLS: string[][] = [
 ];
 
 const DUR = [48, 64, 55, 72]; // s — velocidades distintas = movimiento orgánico
+// Espejo tipo Rorschach: exteriores suben, interiores bajan.
+const DIR = ["normal", "reverse", "reverse", "normal"];
+// Delays negativos: cada columna arranca en una fase distinta del ciclo
+// (se ven "ya en movimiento" desde el primer frame).
+const DELAY = [-8, -26, -14, -38];
 
 export default function WorkWall() {
   return (
@@ -50,7 +55,7 @@ export default function WorkWall() {
         {/* Muro flotante */}
         <div className="hk-wall" aria-hidden>
           {COLS.map((col, i) => (
-            <div key={i} className="hk-wall-col" style={{ animationDuration: `${DUR[i]}s`, animationDirection: i % 2 ? "reverse" : "normal" }}>
+            <div key={i} className="hk-wall-col" style={{ animationDuration: `${DUR[i]}s`, animationDirection: DIR[i], animationDelay: `${DELAY[i]}s` }}>
               {/* eager: las columnas en reversa muestran su 2.ª copia desde t=0;
                   con lazy quedaban vacías hasta cargar (bug visto por el owner) */}
               {[...col, ...col].map((src, j) => (
@@ -63,16 +68,15 @@ export default function WorkWall() {
       </div>
 
       <style>{`
-        .hk-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; height: 580px; overflow: hidden;
+        .hk-wall { --wall-gap: 12px; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--wall-gap); height: 580px; overflow: hidden;
           mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
           -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent); }
-        .hk-wall-col { display: flex; flex-direction: column; gap: 14px; animation-name: hk-wall-scroll; animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; }
+        .hk-wall-col { display: flex; flex-direction: column; gap: var(--wall-gap); animation-name: hk-wall-scroll; animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; }
         .hk-wall-col img { width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--border-on-inverse); display: block; }
-        @keyframes hk-wall-scroll { from { transform: translateY(0); } to { transform: translateY(calc(-50% - 7px)); } }
+        @keyframes hk-wall-scroll { from { transform: translateY(0); } to { transform: translateY(calc(-50% - var(--wall-gap) / 2)); } }
         @media (max-width: 920px) {
           .hk-wall-grid { grid-template-columns: 1fr !important; }
-          .hk-wall { height: 400px; grid-template-columns: repeat(2, 1fr); }
-          .hk-wall-col:nth-child(n+3) { display: none; }
+          .hk-wall { --wall-gap: 8px; height: 440px; }
         }
         @media (prefers-reduced-motion: reduce) {
           .hk-wall-col { animation: none !important; }
