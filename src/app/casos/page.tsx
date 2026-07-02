@@ -18,6 +18,7 @@ export const metadata: Metadata = buildMetadata({
 const CASOS = [
   {
     tag: "Inmobiliario",
+    href: "/casos/inmobiliaria-ceinys",
     title: "Inmobiliaria Ceinys",
     metric: "S/350K",
     note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
@@ -27,6 +28,7 @@ const CASOS = [
   },
   {
     tag: "Consumo",
+    href: "/casos/granjas-bonanza",
     title: "Granjas Bonanza",
     metric: "15",
     note: "contratos cerrados con S/2,500 en campañas de demanda directa.",
@@ -36,6 +38,7 @@ const CASOS = [
   },
   {
     tag: "Turismo",
+    href: "/casos/hoteles-senor-de-luren",
     title: "Hoteles Señor de Luren",
     metric: "75",
     note: "reservas generadas en una sola campaña, dentro y fuera de temporada.",
@@ -92,6 +95,9 @@ export default function Casos() {
               <blockquote style={{ margin: 0, borderLeft: "2px solid var(--cyan)", paddingLeft: 22 }}>
                 <p style={{ font: "var(--fw-light) var(--fs-lg)/1.45 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
                 <footer style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>— {c.author}</footer>
+                <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
+                  Ver el caso completo <ArrowRight size={15} />
+                </a>
               </blockquote>
             </article>
           ))}

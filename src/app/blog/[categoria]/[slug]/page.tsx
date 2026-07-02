@@ -72,8 +72,8 @@ export default async function BlogPostPage({ params }: Params) {
             <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0" }}>
               {post.h1}
             </h1>
-            <p style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>
-              {fechaLarga(post.date)} · Suggestion
+            <p style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>
+              {fechaLarga(post.date)} · Por <a href="/nosotros" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
             </p>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "64ch" }}>
               {post.excerpt}

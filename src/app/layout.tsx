@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
 import ScrollProgress from "@/components/ScrollProgress";
 import CustomCursor from "@/components/CustomCursor";
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
         </div>
         <FloatingMenu />
+        <Analytics />
       </body>
     </html>
   );

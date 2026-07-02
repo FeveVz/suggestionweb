@@ -88,6 +88,9 @@ export default function FloatingMenu() {
                 </div>
 
                 <div style={{ display: "grid", gap: 2, borderTop: "1px solid var(--hairline-inverse)", marginTop: 18, paddingTop: 8 }}>
+                  <Link href="/auditoria-gratis" className="hk-fab-link" style={{ color: "var(--cyan)" }}>
+                    Auditoría gratis (48 h)
+                  </Link>
                   {otras.map((l) => (
                     <Link key={l.href} href={l.href} className="hk-fab-link">
                       {l.label}

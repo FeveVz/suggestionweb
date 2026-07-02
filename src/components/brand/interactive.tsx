@@ -232,11 +232,33 @@ export function CtaForm() {
       '',
       (f.get('objetivo') as string) || 'Quiero más leads / citas / cierres.',
     ].filter((l) => l !== null);
+    // 1) WhatsApp primero (síncrono: mantiene el gesto del usuario → no lo bloquea el navegador)
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
+    // 2) Guardar el lead (keepalive: sobrevive a la navegación; si falla, no rompe la UX)
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      body: JSON.stringify({
+        tipo: 'contacto',
+        nombre: f.get('nombre'),
+        negocio: f.get('negocio'),
+        email: f.get('email'),
+        mensaje: f.get('objetivo'),
+        pagina: window.location.pathname,
+        website: f.get('website'),
+      }),
+    }).catch(() => {});
+    // 3) Evento de conversión (GA4 + Pixel, si están configurados)
+    import('@/lib/tracking').then((m) => m.track('generate_lead', { origen: 'cta-form' })).catch(() => {});
     setSent(true);
+    // 4) Página de gracias (conversión medible)
+    setTimeout(() => window.location.assign('/gracias'), 700);
   };
   return (
     <form onSubmit={onSubmit} className="hk-form" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
+      {/* Honeypot anti-spam: invisible para humanos, los bots lo rellenan */}
+      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
       <Field label="Nombre" name="nombre" placeholder="Tu nombre" required />
       <Field label="Negocio" name="negocio" placeholder="Empresa / rubro" />
       <Field label="Email" name="email" type="email" placeholder="hola@tunegocio.com" required style={{ gridColumn: '1 / -1' }} />

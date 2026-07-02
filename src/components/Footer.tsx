@@ -64,6 +64,17 @@ export default function Footer() {
           <span style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
             <Dot size={6} /> No es lo que ves.
           </span>
+          <nav aria-label="Legal" style={{ display: "flex", gap: "8px 20px", flexWrap: "wrap" }}>
+            {[
+              { label: "Privacidad", href: "/privacidad" },
+              { label: "Términos", href: "/terminos" },
+              { label: "Libro de Reclamaciones", href: "/libro-de-reclamaciones" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)", textDecoration: "underline", textUnderlineOffset: "0.2em" }}>
+                {l.label}
+              </Link>
+            ))}
+          </nav>
           <span style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>© {new Date().getFullYear()} {site.legalName} · RUC {site.ruc} · Ica, Perú</span>
         </div>
       </div>

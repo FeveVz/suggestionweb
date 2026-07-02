@@ -91,7 +91,7 @@ export default function Home() {
             </p>
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
               <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
-              <Magnetic><Btn as="a" href="/casos" variant="secondary" size="lg">Ver casos</Btn></Magnetic>
+              <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
             </div>
             <p className="hk-enter-4" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
               Respondemos en menos de 24 h hábiles.

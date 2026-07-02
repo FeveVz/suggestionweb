@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
+import { CASOS_DETALLE } from "@/content/casos";
 
 /**
  * Sitemap dinámico: raíz + servicios (pilar/categorías/16) + sectores
@@ -16,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/"), lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: u("/nosotros"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: u("/casos"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/auditoria-gratis"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: u("/privacidad"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/terminos"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/libro-de-reclamaciones"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: u("/contacto"), lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: u("/servicios"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: u("/sectores"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -53,5 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...root, ...servicios, ...sectores, ...blogCategorias, ...blogPosts];
+  const casos: MetadataRoute.Sitemap = CASOS_DETALLE.map((c) => ({
+    url: u(`/casos/${c.slug}`),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...root, ...servicios, ...sectores, ...casos, ...blogCategorias, ...blogPosts];
 }
