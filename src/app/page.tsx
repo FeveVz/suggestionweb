@@ -78,7 +78,8 @@ export default function Home() {
         >
           <div style={{ minWidth: 0 }}>
             <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Agencia de performance · Ica → Perú</div>
-            <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: "19ch" }}>
+            {/* maxWidth en px: el h1 hereda 16px de base, así que "ch" aquí colapsaría el ancho */}
+            <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: 680 }}>
               <span className="lead">Agencia de marketing digital</span>
               <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
             </h1>
