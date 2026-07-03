@@ -144,55 +144,125 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
 }
 
 /* ============================================================
-   Percepcion — "¿Qué ves en esta mancha?" reencuadrado a venta
+   Percepcion — test de percepción en 3 actos (psicólogo + marketero):
+   (1) eliges qué ves → (2) la MISMA mancha se anota con lo que ven
+   tres compradores distintos (miradas ancladas con puntos) →
+   (3) la lección de venta + CTA. Sorpresa: la sección te lleva la
+   contraria con elegancia ("tu cliente no ve lo que tú ves").
    ============================================================ */
+
+const PERSONAS = [
+  { quien: 'El inversionista', ve: 'plusvalía y retorno', dot: 'var(--cyan)', pos: { top: '14%', left: '58%' } },
+  { quien: 'La mamá de 34', ve: 'seguridad para los suyos', dot: 'var(--orange)', pos: { top: '48%', left: '4%' } },
+  { quien: 'El escéptico', ve: 'un gasto que puede esperar', dot: 'var(--ink-300)', pos: { top: '76%', left: '54%' } },
+];
+
 export function Percepcion({ shape = 1 }: { shape?: number }) {
-  const opciones = ['Dos figuras', 'Un rostro', 'Una mariposa', 'No estoy seguro'];
-  const [pick, setPick] = React.useState<string | null>(null);
+  const opciones = ['Dos personas cerrando un trato', 'Una mariposa', 'Un mapa del Perú', 'Nada claro, la verdad'];
+  type Fase = 'ask' | 'reveal' | 'lesson';
+  const [fase, setFase] = React.useState<Fase>('ask');
+  const [pick, setPick] = React.useState<string>('');
+  const reduce = usePrefersReduced();
+
+  // reveal → lesson automático (con tiempo para leer las 3 miradas)
+  React.useEffect(() => {
+    if (fase !== 'reveal') return;
+    const t = setTimeout(() => setFase('lesson'), 5200);
+    return () => clearTimeout(t);
+  }, [fase]);
+
+  const elegir = (o: string) => {
+    setPick(o);
+    setFase(reduce ? 'lesson' : 'reveal');
+    import('@/lib/tracking').then((m) => m.track('view_item', { origen: 'percepcion', pick: o })).catch(() => {});
+  };
+
+  const anotado = fase !== 'ask';
+  const chip: React.CSSProperties = { font: 'var(--fw-medium) var(--fs-sm)/1.3 var(--font-body)', color: 'var(--white)', background: 'transparent', border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', padding: '12px 18px', cursor: 'pointer', transition: 'border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out)' };
+
   return (
     <section id="percepcion" style={{ background: 'var(--black)', color: 'var(--white)', padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden' }}>
       <div className="hk-perc" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 var(--gutter)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
-        <div style={{ position: 'relative', display: 'grid', placeItems: 'center', minHeight: 300 }}>
-          {!pick
-            ? <img src={BLOT(shape, 'orange')} alt="Símbolo de percepción" style={{ width: 300, maxWidth: '80%', gridArea: '1 / 1' }} />
-            : <img src={BLOT(shape, 'cyan')} alt="" className="hk-fadein" style={{ width: 300, maxWidth: '80%', gridArea: '1 / 1' }} />}
+        {/* Mancha + miradas ancladas */}
+        <div style={{ display: 'grid', placeItems: 'center', minHeight: 340 }}>
+          <div style={{ position: 'relative', width: 320, maxWidth: '88%', transition: 'transform 0.9s var(--ease-out)', transform: anotado ? 'scale(1.04)' : 'none' }}>
+            <img src={BLOT(shape, 'orange')} alt="Mancha del test de percepción" style={{ width: '100%', display: 'block', opacity: anotado ? 0 : 1, transition: 'opacity 0.9s var(--ease-out)' }} />
+            <img src={BLOT(shape, 'cyan')} alt="" aria-hidden style={{ width: '100%', position: 'absolute', inset: 0, opacity: anotado ? 1 : 0, transition: 'opacity 0.9s var(--ease-out)' }} />
+            {/* Miradas de compradores (aparecen una a una) */}
+            {anotado && PERSONAS.map((p, i) => (
+              <div key={p.quien} className="hk-perc-nota" style={{ position: 'absolute', ...p.pos, animationDelay: reduce ? '0s' : `${0.7 + i * 1.15}s` }}>
+                <span className="hk-perc-dot" style={{ background: p.dot, animationDelay: reduce ? '0s' : `${0.7 + i * 1.15}s` }} aria-hidden />
+                <span className="hk-perc-card">
+                  <strong style={{ display: 'block', font: 'var(--fw-bold) var(--fs-xs)/1.2 var(--font-accent)', color: 'var(--white)' }}>{p.quien}</strong>
+                  <span style={{ font: 'var(--fw-light) var(--fs-xs)/1.35 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>ve {p.ve}</span>
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Guion de 3 actos */}
         <div>
-          <Label tone="onDark" dot>Símbolo de percepción</Label>
-          {!pick ? (
+          <Label tone="onDark" dot>Test de percepción</Label>
+          {fase === 'ask' && (
             <>
               <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '16ch' }}>
                 ¿Qué ves en esta mancha?
               </h2>
               <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '38ch' }}>
-                No hay respuesta correcta. Esa es justo la idea: cada persona ve algo distinto.
+                Respóndete con honestidad. No hay respuesta correcta —y ahí está el punto.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                 {opciones.map((o) => (
-                  <button key={o} onClick={() => setPick(o)} className="hk-chip" style={{ font: 'var(--fw-medium) var(--fs-sm)/1 var(--font-body)', color: 'var(--white)', background: 'transparent', border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', padding: '12px 20px', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out)' }}>
+                  <button key={o} onClick={() => elegir(o)} className="hk-chip" style={chip}>
                     {o}
                   </button>
                 ))}
               </div>
             </>
-          ) : (
-            <>
+          )}
+          {fase === 'reveal' && (
+            <div className="hk-fadein">
               <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '18ch' }}>
-                Tú ves <span style={{ color: 'var(--cyan)' }}>“{pick.toLowerCase()}”</span>. Tu cliente ve otra cosa.
+                Eso viste <span style={{ color: 'var(--cyan)' }}>tú</span>.
               </h2>
-              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
-                Ese es nuestro trabajo: leer lo que tu público percibe y moldear lo que termina viendo —hasta que decide comprarte.
+              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '38ch' }}>
+                Ahora mira la misma mancha con los ojos de tres clientes distintos…
+              </p>
+              <button onClick={() => setFase('lesson')} className="hk-chip" style={chip}>
+                ¿Y esto qué tiene que ver con mi negocio? →
+              </button>
+            </div>
+          )}
+          {fase === 'lesson' && (
+            <div className="hk-fadein">
+              <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
+                Tu venta se decide en la <span style={{ color: 'var(--cyan)' }}>percepción</span>.
+              </h2>
+              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 8px', maxWidth: '42ch' }}>
+                Tú viste {pick ? <em>“{pick.toLowerCase()}”</em> : 'una cosa'}. Tus clientes ven retorno, seguridad o riesgo — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en el mismo producto</strong>.
+              </p>
+              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '0 0 26px', maxWidth: '42ch' }}>
+                El marketing que vende no repite lo que tú ves: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>traduce tu oferta a lo que cada cliente necesita ver</strong>. Eso hacemos.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Btn as="a" href="#contacto" variant="insight" size="md">Quiero esa lectura de mi mercado</Btn>
-                <button onClick={() => setPick(null)} className="hk-chip" style={{ font: 'var(--fw-medium) var(--fs-sm)/1 var(--font-body)', color: 'var(--white)', background: 'transparent', border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', padding: '12px 20px', cursor: 'pointer' }}>
-                  Probar de nuevo
+                <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Descubre qué ve tu mercado</Btn>
+                <button onClick={() => { setFase('ask'); setPick(''); }} className="hk-chip" style={chip}>
+                  Ver la mancha de nuevo
                 </button>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
+
+      <style>{`
+        .hk-perc-nota { display: flex; align-items: flex-start; gap: 8px; opacity: 0; animation: hk-nota-in 0.6s var(--ease-out) both; max-width: min(200px, 52vw); z-index: 2; }
+        .hk-perc-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; box-shadow: 0 0 0 0 rgba(255,255,255,0.35); animation: hk-pulse 2.4s var(--ease-out) infinite; }
+        .hk-perc-card { display: block; background: rgba(17,17,17,0.92); border: 1px solid var(--border-on-inverse); border-radius: var(--radius-sm); padding: 8px 11px; backdrop-filter: blur(4px); box-shadow: var(--shadow-md); }
+        @keyframes hk-nota-in { from { opacity: 0; transform: translateY(10px) scale(0.92); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .hk-perc-nota { animation: none; opacity: 1; } .hk-perc-dot { animation: none; } }
+      `}</style>
     </section>
   );
 }
