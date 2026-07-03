@@ -10,7 +10,6 @@ import SectorCard from "@/components/SectorCard";
 import SectionHeading from "@/components/SectionHeading";
 import Faq from "@/components/Faq";
 import CountUp from "@/components/CountUp";
-import Parallax from "@/components/Parallax";
 import Magnetic from "@/components/Magnetic";
 import MetodoPinned from "@/components/MetodoPinned";
 import WorkWall from "@/components/WorkWall";
@@ -73,12 +72,6 @@ export default function Home() {
         <span className="hk-vlabel hk-nav" style={{ position: "absolute", left: 22, top: "50%", transform: "translateY(-50%) rotate(180deg)", zIndex: 2 }}>
           Marketing de performance — Ica, Perú
         </span>
-        {/* Mancha que sangra y cambia naranja→cian al scrollear (parallax + percepción) */}
-        <Parallax speed={0.18} style={{ position: "absolute", right: "-12%", top: "-8%", width: 920, maxWidth: "68%", zIndex: 0, pointerEvents: "none" }}>
-          <div aria-hidden className="hk-float" style={{ opacity: 0.13 }}>
-            <ScrollBlot shape={2} size="100%" />
-          </div>
-        </Parallax>
         <div
           className="hk-hero"
           style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4.5rem) var(--gutter) clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "calc(86vh - 68px)" }}
@@ -92,7 +85,7 @@ export default function Home() {
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", maxWidth: "46ch", margin: "clamp(20px,2.4vw,30px) 0 0" }}>
               <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>Tu problema no es el alcance: es que los clics no se vuelven clientes.</strong> Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>leads</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>citas</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>ventas</strong>.
             </p>
-            <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
+            <div className="hk-enter-4 hk-hero-ctas" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
               <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
               <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
             </div>

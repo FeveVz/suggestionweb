@@ -49,14 +49,14 @@ export default function HeroShowcase() {
   return (
     <div style={{ width: "100%", maxWidth: 520, display: "flex", flexDirection: "column", gap: 14 }}>
       {/* Feed de notificaciones */}
-      <div aria-hidden style={{ background: "var(--black)", border: "1px solid var(--ink-600)", borderRadius: "var(--radius-md)", padding: "16px 16px 10px", boxShadow: "var(--shadow-lg)" }}>
+      <div aria-hidden style={{ background: "var(--black)", border: "1px solid var(--ink-600)", borderRadius: "var(--radius-md)", padding: "14px 14px 9px", boxShadow: "var(--shadow-lg)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
           <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", boxShadow: "0 0 0 0 rgba(0,191,255,0.5)", animation: reduce ? undefined : "hk-pulse 2.4s var(--ease-out) infinite" }} />
           <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>
             Así se ve tu funnel con nosotros
           </span>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, minHeight: VISIBLE * 62 - 8 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 7, minHeight: VISIBLE * 57 - 7 }}>
           <AnimatePresence initial={false} mode="popLayout">
             {window_.map(({ key, item }) => (
               <motion.div
@@ -66,10 +66,10 @@ export default function HeroShowcase() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={reduce ? undefined : { opacity: 0, y: 18, scale: 0.97 }}
                 transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                style={{ display: "flex", alignItems: "center", gap: 12, background: "var(--ink-800)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-sm)", padding: "10px 14px" }}
+                style={{ display: "flex", alignItems: "center", gap: 12, background: "var(--ink-800)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-sm)", padding: "9px 13px" }}
               >
-                <span style={{ width: 34, height: 34, borderRadius: "50%", background: item.iconBg, display: "grid", placeItems: "center", flexShrink: 0 }}>
-                  <item.Icon size={17} color="#000" strokeWidth={2.4} />
+                <span style={{ width: 32, height: 32, borderRadius: "50%", background: item.iconBg, display: "grid", placeItems: "center", flexShrink: 0 }}>
+                  <item.Icon size={16} color={item.iconBg === "#25D366" ? "#fff" : "#000"} strokeWidth={2.4} />
                 </span>
                 <span style={{ minWidth: 0 }}>
                   <span style={{ display: "block", font: "var(--fw-medium) var(--fs-sm)/1.2 var(--font-body)", color: "var(--white)" }}>{item.titulo}</span>
@@ -82,7 +82,7 @@ export default function HeroShowcase() {
       </div>
 
       {/* Panel de métricas reales (caso Ceinys) */}
-      <div style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "16px 18px", boxShadow: "var(--shadow-md)", position: "relative", overflow: "hidden" }}>
+      <div style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "14px 16px", boxShadow: "var(--shadow-md)", position: "relative", overflow: "hidden" }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
           <div>
             <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
