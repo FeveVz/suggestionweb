@@ -307,7 +307,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
               )}
               {fase === 'scan' && (
                 <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ position: 'absolute', left: '50%', bottom: 14, transform: 'translateX(-50%)', font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)', background: 'rgba(0,0,0,0.72)', border: '1px solid rgba(0,191,255,0.4)', borderRadius: 'var(--radius-pill)', padding: '8px 14px', backdropFilter: 'blur(4px)', whiteSpace: 'nowrap' }}>
-                  <span className="hk-perc-blink" aria-hidden>●</span>&nbsp; Leyendo las miradas…
+                  <span className="hk-perc-blink" aria-hidden>●</span>&nbsp; Analizando perfiles de compra…
                 </motion.span>
               )}
               {/* Pins de compradores: caen con física + anillo */}
@@ -347,7 +347,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                   ¿Qué vendes tú?
                 </h2>
                 <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
-                  Elige tu mundo y te mostramos algo que casi nadie mira: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>cómo ven tu producto tus clientes</strong> — no como lo ves tú.
+                  Cada comprador evalúa lo mismo con criterios distintos. Elige tu rubro y te mostramos <strong style={{ color: 'var(--white)', fontWeight: 700 }}>las tres miradas que deciden tu venta</strong>.
                 </p>
                 <button onClick={() => elegir(RUBRO_OTRO)} className="hk-chip" style={chip}>
                   Mi rubro es otro →
@@ -357,10 +357,10 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
             {(fase === 'scan' || fase === 'reveal') && (
               <motion.div key="mid" {...fadeSlide}>
                 <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
-                  {esBlot ? <>Da igual el rubro: <span style={{ color: 'var(--cyan)' }}>la regla es la misma</span>.</> : <>Mismo producto. <span style={{ color: 'var(--cyan)' }}>Tres compradores</span>.</>}
+                  {esBlot ? <>Cualquier rubro. <span style={{ color: 'var(--cyan)' }}>El mismo principio</span>.</> : <>Mismo producto. <span style={{ color: 'var(--cyan)' }}>Tres compradores</span>.</>}
                 </h2>
                 <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
-                  {fase === 'scan' ? <>Leyendo {esBlot ? 'la mancha' : sel!.cosa} como lo hace tu mercado…</> : <>Mira {esBlot ? 'la mancha' : sel!.cosa} con los ojos de cada uno…</>}
+                  {fase === 'scan' ? <>Analizando {esBlot ? 'tu oferta' : sel!.cosa} con los criterios de tu mercado…</> : <>Tres perfiles. Tres decisiones de compra distintas — sobre {esBlot ? 'la misma oferta' : `el mismo ${sel!.cosa.replace('tu ', '')}`}.</>}
                 </p>
                 <motion.button
                   onClick={() => setFase('lesson')}
@@ -370,7 +370,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                   animate={{ opacity: fase === 'reveal' ? 1 : 0 }}
                   transition={{ duration: 0.4, delay: 0.6 }}
                 >
-                  ¿Y esto qué significa para mi venta? →
+                  Ver la conclusión →
                 </motion.button>
               </motion.div>
             )}
@@ -381,14 +381,14 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                 </h2>
                 <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 8px', maxWidth: '42ch' }}>
                   {sel!.k === 'otro'
-                    ? <>Tú ves tu producto. Cada cliente ve su propia historia — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en lo mismo</strong>.</>
-                    : <>Tú ves {sel!.cosa} perfecto. Ellos ven sueños, dudas o precio — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en el mismo {sel!.cosa.replace('tu ', '')}</strong>.</>}
+                    ? <>Cada perfil percibe un valor distinto en la misma oferta. Un solo mensaje para todos <strong style={{ color: 'var(--white)', fontWeight: 700 }}>desperdicia inversión</strong>.</>
+                    : <>{sel!.miradas[0].quien}, {sel!.miradas[1].quien.charAt(0).toLowerCase() + sel!.miradas[1].quien.slice(1)} y {sel!.miradas[2].quien.charAt(0).toLowerCase() + sel!.miradas[2].quien.slice(1)} no compran el mismo {sel!.cosa.replace('tu ', '')}: compran lo que perciben. Un solo mensaje para los tres <strong style={{ color: 'var(--white)', fontWeight: 700 }}>desperdicia inversión</strong>.</>}
                 </p>
                 <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '0 0 26px', maxWidth: '42ch' }}>
-                  El anuncio que vende no repite lo que tú ves: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>le habla a la mirada de cada comprador</strong>. Eso hacemos, y se mide en ventas.
+                  Nuestra estrategia empieza ahí: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>identificamos los perfiles que deciden tu venta</strong> y construimos el mensaje que cada uno necesita ver. Es el mismo método detrás de los S/350K de Ceinys.
                 </p>
                 <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                  <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Descubre qué ve tu mercado</Btn>
+                  <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Analizar mi mercado — gratis (48 h)</Btn>
                   <button onClick={() => { setFase('ask'); setSel(null); }} className="hk-chip" style={chip}>
                     Probar con otro rubro
                   </button>
