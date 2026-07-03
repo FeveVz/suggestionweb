@@ -267,8 +267,9 @@ img { max-width: 100%; display: block; }
 
 /* Titular display masivo del hero */
 .hk-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 0.94; color: var(--text-strong); }
-.hk-display .lead { display: block; font-size: clamp(1.35rem, 2.1vw, 1.85rem); font-weight: 500; letter-spacing: -0.01em; color: var(--text-muted); margin-bottom: clamp(8px, 1.2vw, 16px); }
-.hk-display .big { display: block; font-size: clamp(2.85rem, 7vw, 5.5rem); }
+.hk-display .lead { display: block; font-size: clamp(1.2rem, 1.6vw, 1.5rem); font-weight: 500; letter-spacing: -0.01em; color: var(--text-muted); margin-bottom: clamp(8px, 1vw, 12px); }
+/* Máx 4.35rem: a tamaños mayores el H1 rompe palabra-por-línea y el hero deja de caber en un pantallazo */
+.hk-display .big { display: block; font-size: clamp(2.6rem, 4.8vw, 4.35rem); }
 
 /* Etiqueta vertical en el borde (editorial) */
 .hk-vlabel { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--font-accent); font-weight: var(--fw-bold); font-size: var(--fs-micro); line-height: 1; text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-muted); white-space: nowrap; }

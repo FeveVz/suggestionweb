@@ -74,18 +74,18 @@ export default function Home() {
         </span>
         <div
           className="hk-hero"
-          style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4.5rem) var(--gutter) clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "calc(86vh - 68px)" }}
+          style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.75rem,3vw,2.75rem) var(--gutter) clamp(1.25rem,2.5vw,2rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "min(calc(86vh - 68px), 680px)" }}
         >
           <div style={{ minWidth: 0 }}>
             <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Agencia de performance · Ica → Perú</div>
-            <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(20px,2.6vw,32px) 0 0", maxWidth: 620 }}>
+            <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: "19ch" }}>
               <span className="lead">Agencia de marketing digital</span>
               <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
             </h1>
-            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", maxWidth: "46ch", margin: "clamp(20px,2.4vw,30px) 0 0" }}>
+            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", maxWidth: "48ch", margin: "clamp(16px,2vw,24px) 0 0" }}>
               <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>Tu problema no es el alcance: es que los clics no se vuelven clientes.</strong> Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>leads</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>citas</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>ventas</strong>.
             </p>
-            <div className="hk-enter-4 hk-hero-ctas" style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
+            <div className="hk-enter-4 hk-hero-ctas" style={{ display: "flex", gap: 14, marginTop: 24, flexWrap: "wrap", alignItems: "center" }}>
               <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
               <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
             </div>
