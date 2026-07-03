@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Label, Btn, Blot } from './parts';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
@@ -220,123 +221,197 @@ const RUBRO_OTRO: RubroTest = {
 
 export function Percepcion({ shape = 1 }: { shape?: number }) {
   void shape;
-  type Fase = 'ask' | 'reveal' | 'lesson';
+  type Fase = 'ask' | 'scan' | 'reveal' | 'lesson';
   const [fase, setFase] = React.useState<Fase>('ask');
   const [sel, setSel] = React.useState<RubroTest | null>(null);
   const reduce = usePrefersReduced();
 
+  // Coreografía: elegir → escaneo (1.6s) → miradas (6s de lectura) → lección.
   React.useEffect(() => {
-    if (fase !== 'reveal') return;
-    const t = setTimeout(() => setFase('lesson'), 5600);
-    return () => clearTimeout(t);
+    if (fase === 'scan') {
+      const t = setTimeout(() => setFase('reveal'), 1600);
+      return () => clearTimeout(t);
+    }
+    if (fase === 'reveal') {
+      const t = setTimeout(() => setFase('lesson'), 6200);
+      return () => clearTimeout(t);
+    }
   }, [fase]);
 
   const elegir = (r: RubroTest) => {
     setSel(r);
-    setFase(reduce ? 'lesson' : 'reveal');
+    setFase(reduce ? 'lesson' : 'scan');
     import('@/lib/tracking').then((m) => m.track('view_item', { origen: 'percepcion', rubro: r.k })).catch(() => {});
   };
 
   const chip: React.CSSProperties = { font: 'var(--fw-medium) var(--fs-sm)/1.3 var(--font-body)', color: 'var(--white)', background: 'transparent', border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', padding: '12px 18px', cursor: 'pointer', transition: 'border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out)' };
   const esBlot = sel?.k === 'otro';
+  const paso = fase === 'ask' ? 1 : fase === 'lesson' ? 3 : 2;
+  const fadeSlide = {
+    initial: reduce ? {} : { opacity: 0, y: 16 },
+    animate: { opacity: 1, y: 0 },
+    exit: reduce ? {} : { opacity: 0, y: -12 },
+    transition: { duration: 0.38, ease: [0.16, 1, 0.3, 1] as const },
+  };
 
   return (
     <section id="percepcion" style={{ background: 'var(--black)', color: 'var(--white)', padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden' }}>
       <div className="hk-perc" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 var(--gutter)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
-        {/* Estímulo: selector visual (2×2 de trabajo real) → producto elegido + miradas */}
-        <div style={{ display: 'grid', placeItems: 'center', minHeight: 360 }}>
+        {/* Estímulo: selector visual (2×2 de trabajo real) → morph → escaneo → miradas */}
+        <div style={{ display: 'grid', placeItems: 'center', minHeight: 380 }}>
           {fase === 'ask' ? (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, width: '100%', maxWidth: 440 }}>
-              {RUBROS_TEST.map((r) => (
-                <button key={r.k} onClick={() => elegir(r)} className="hk-lift" style={{ position: 'relative', padding: 0, border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', overflow: 'hidden', cursor: 'pointer', background: 'var(--ink-800)', aspectRatio: '4 / 3' }}>
-                  <img src={r.img} alt={r.alt} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85, transition: 'transform 0.5s var(--ease-out), opacity 0.3s' }} />
-                  <span style={{ position: 'absolute', inset: 'auto 0 0 0', padding: '18px 12px 10px', background: 'linear-gradient(transparent, rgba(0,0,0,0.85))', font: 'var(--fw-bold) var(--fs-sm)/1.1 var(--font-accent)', color: 'var(--white)', textAlign: 'left' }}>
-                    {r.chip}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, width: '100%', maxWidth: 460 }}>
+              {RUBROS_TEST.map((r, i) => (
+                <motion.button
+                  key={r.k}
+                  onClick={() => elegir(r)}
+                  className="hk-perc-cell"
+                  initial={reduce ? false : { opacity: 0, y: 22 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+                  transition={{ duration: 0.5, delay: i * 0.09, ease: [0.16, 1, 0.3, 1] }}
+                  whileHover={reduce ? undefined : { y: -4 }}
+                  style={{ position: 'relative', padding: 0, border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', overflow: 'hidden', cursor: 'pointer', background: 'var(--ink-800)', aspectRatio: '4 / 3' }}
+                >
+                  <motion.img layoutId={reduce ? undefined : `perc-${r.k}`} src={r.img} alt={r.alt} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <span aria-hidden style={{ position: 'absolute', top: 10, left: 12, font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)', textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>0{i + 1}</span>
+                  <span style={{ position: 'absolute', inset: 'auto 0 0 0', padding: '20px 12px 10px', background: 'linear-gradient(transparent, rgba(0,0,0,0.88))', font: 'var(--fw-bold) var(--fs-sm)/1.1 var(--font-accent)', color: 'var(--white)', textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
+                    {r.chip} <span className="hk-perc-arrow" aria-hidden>↗</span>
                   </span>
-                </button>
+                </motion.button>
               ))}
             </div>
           ) : (
-            <div className="hk-fadein" style={{ position: 'relative', width: '100%', maxWidth: 440 }}>
-              <img
-                src={sel!.img}
-                alt={sel!.alt}
-                style={esBlot
-                  ? { width: '78%', margin: '0 auto', display: 'block' }
-                  : { width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-on-inverse)', display: 'block', boxShadow: 'var(--shadow-lg)' }}
-              />
-              {sel!.miradas.map((p, i) => (
-                <div key={p.quien} className="hk-perc-nota" style={{ position: 'absolute', ...p.pos, animationDelay: reduce ? '0s' : `${0.7 + i * 1.2}s` }}>
-                  <span className="hk-perc-dot" style={{ background: p.dot, animationDelay: reduce ? '0s' : `${0.7 + i * 1.2}s` }} aria-hidden />
-                  <span className="hk-perc-card">
-                    <strong style={{ display: 'block', font: 'var(--fw-bold) var(--fs-xs)/1.2 var(--font-accent)', color: 'var(--white)' }}>{p.quien}</strong>
-                    <span style={{ font: 'var(--fw-light) var(--fs-xs)/1.35 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>ve {p.ve}</span>
-                  </span>
+            <div style={{ position: 'relative', width: '100%', maxWidth: 460 }}>
+              {esBlot ? (
+                <img src={sel!.img} alt={sel!.alt} className="hk-fadein" style={{ width: '78%', margin: '0 auto', display: 'block' }} />
+              ) : (
+                <motion.img
+                  layoutId={reduce ? undefined : `perc-${sel!.k}`}
+                  src={sel!.img}
+                  alt={sel!.alt}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-on-inverse)', display: 'block', boxShadow: 'var(--shadow-lg)' }}
+                />
+              )}
+              {/* Barrido de escaneo: "leyendo las miradas" */}
+              {fase === 'scan' && !esBlot && (
+                <div style={{ position: 'absolute', inset: 0, borderRadius: 'var(--radius-md)', overflow: 'hidden', pointerEvents: 'none' }} aria-hidden>
+                  <motion.div
+                    initial={{ top: '-30%' }}
+                    animate={{ top: '110%' }}
+                    transition={{ duration: 1.15, delay: 0.35, ease: 'easeInOut' }}
+                    style={{ position: 'absolute', left: 0, right: 0, height: '26%', background: 'linear-gradient(180deg, transparent, rgba(0,191,255,0.34), rgba(0,191,255,0.10), transparent)', borderTop: '1px solid rgba(0,191,255,0.55)' }}
+                  />
                 </div>
-              ))}
+              )}
+              {fase === 'scan' && (
+                <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ position: 'absolute', left: '50%', bottom: 14, transform: 'translateX(-50%)', font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)', background: 'rgba(0,0,0,0.72)', border: '1px solid rgba(0,191,255,0.4)', borderRadius: 'var(--radius-pill)', padding: '8px 14px', backdropFilter: 'blur(4px)', whiteSpace: 'nowrap' }}>
+                  <span className="hk-perc-blink" aria-hidden>●</span>&nbsp; Leyendo las miradas…
+                </motion.span>
+              )}
+              {/* Pins de compradores: caen con física + anillo */}
+              {(fase === 'reveal' || fase === 'lesson') &&
+                sel!.miradas.map((p, i) => (
+                  <motion.div
+                    key={p.quien}
+                    initial={reduce ? false : { opacity: 0, y: -22, scale: 0.85 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 320, damping: 22, delay: fase === 'reveal' ? 0.25 + i * 0.85 : 0 }}
+                    className="hk-perc-nota"
+                    style={{ position: 'absolute', ...p.pos }}
+                  >
+                    <span className="hk-perc-dot" style={{ background: p.dot, animationDelay: reduce || fase === 'lesson' ? '0s' : `${0.25 + i * 0.85}s` }} aria-hidden />
+                    <span className="hk-perc-card" style={{ borderLeft: `3px solid ${p.dot}` }}>
+                      <strong style={{ display: 'block', font: 'var(--fw-bold) var(--fs-xs)/1.2 var(--font-accent)', color: 'var(--white)' }}>{p.quien}</strong>
+                      <span style={{ font: 'var(--fw-light) var(--fs-xs)/1.35 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>ve {p.ve}</span>
+                    </span>
+                  </motion.div>
+                ))}
             </div>
           )}
         </div>
 
-        {/* Guion de 3 actos */}
-        <div>
-          <Label tone="onDark" dot>Test de percepción</Label>
-          {fase === 'ask' && (
-            <>
-              <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '16ch' }}>
-                ¿Qué vendes tú?
-              </h2>
-              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
-                Elige tu mundo y te mostramos algo que casi nadie mira: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>cómo ven tu producto tus clientes</strong> — no como lo ves tú.
-              </p>
-              <button onClick={() => elegir(RUBRO_OTRO)} className="hk-chip" style={chip}>
-                Mi rubro es otro →
-              </button>
-            </>
-          )}
-          {fase === 'reveal' && (
-            <div className="hk-fadein">
-              <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
-                {esBlot ? <>Da igual el rubro: <span style={{ color: 'var(--cyan)' }}>la regla es la misma</span>.</> : <>Mismo producto. <span style={{ color: 'var(--cyan)' }}>Tres compradores</span>.</>}
-              </h2>
-              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
-                Mira {esBlot ? 'la mancha' : sel!.cosa} con los ojos de cada uno…
-              </p>
-              <button onClick={() => setFase('lesson')} className="hk-chip" style={chip}>
-                ¿Y esto qué significa para mi venta? →
-              </button>
-            </div>
-          )}
-          {fase === 'lesson' && (
-            <div className="hk-fadein">
-              <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
-                Tu venta se decide en la <span style={{ color: 'var(--cyan)' }}>percepción</span>.
-              </h2>
-              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 8px', maxWidth: '42ch' }}>
-                {sel!.k === 'otro'
-                  ? <>Tú ves tu producto. Cada cliente ve su propia historia — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en lo mismo</strong>.</>
-                  : <>Tú ves {sel!.cosa} perfecto. Ellos ven sueños, dudas o precio — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en el mismo {sel!.cosa.replace('tu ', '')}</strong>.</>}
-              </p>
-              <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '0 0 26px', maxWidth: '42ch' }}>
-                El anuncio que vende no repite lo que tú ves: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>le habla a la mirada de cada comprador</strong>. Eso hacemos, y se mide en ventas.
-              </p>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Descubre qué ve tu mercado</Btn>
-                <button onClick={() => { setFase('ask'); setSel(null); }} className="hk-chip" style={chip}>
-                  Probar con otro rubro
+        {/* Guion de 3 actos (transiciones coreografiadas) */}
+        <div style={{ minHeight: 340, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+            <Label tone="onDark" dot>Test de percepción</Label>
+            <span aria-hidden style={{ font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', letterSpacing: 'var(--tracking-label)', color: 'var(--ink-500)' }}>
+              PASO <span style={{ color: 'var(--cyan)' }}>{paso}</span> / 3
+            </span>
+          </div>
+          <AnimatePresence mode="wait" initial={false}>
+            {fase === 'ask' && (
+              <motion.div key="ask" {...fadeSlide}>
+                <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '16ch' }}>
+                  ¿Qué vendes tú?
+                </h2>
+                <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
+                  Elige tu mundo y te mostramos algo que casi nadie mira: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>cómo ven tu producto tus clientes</strong> — no como lo ves tú.
+                </p>
+                <button onClick={() => elegir(RUBRO_OTRO)} className="hk-chip" style={chip}>
+                  Mi rubro es otro →
                 </button>
-              </div>
-            </div>
-          )}
+              </motion.div>
+            )}
+            {(fase === 'scan' || fase === 'reveal') && (
+              <motion.div key="mid" {...fadeSlide}>
+                <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
+                  {esBlot ? <>Da igual el rubro: <span style={{ color: 'var(--cyan)' }}>la regla es la misma</span>.</> : <>Mismo producto. <span style={{ color: 'var(--cyan)' }}>Tres compradores</span>.</>}
+                </h2>
+                <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
+                  {fase === 'scan' ? <>Leyendo {esBlot ? 'la mancha' : sel!.cosa} como lo hace tu mercado…</> : <>Mira {esBlot ? 'la mancha' : sel!.cosa} con los ojos de cada uno…</>}
+                </p>
+                <motion.button
+                  onClick={() => setFase('lesson')}
+                  className="hk-chip"
+                  style={{ ...chip, visibility: fase === 'reveal' ? 'visible' : 'hidden' }}
+                  initial={reduce ? false : { opacity: 0 }}
+                  animate={{ opacity: fase === 'reveal' ? 1 : 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                >
+                  ¿Y esto qué significa para mi venta? →
+                </motion.button>
+              </motion.div>
+            )}
+            {fase === 'lesson' && (
+              <motion.div key="lesson" {...fadeSlide}>
+                <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
+                  Tu venta se decide en la <span style={{ color: 'var(--cyan)' }}>percepción</span>.
+                </h2>
+                <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 8px', maxWidth: '42ch' }}>
+                  {sel!.k === 'otro'
+                    ? <>Tú ves tu producto. Cada cliente ve su propia historia — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en lo mismo</strong>.</>
+                    : <>Tú ves {sel!.cosa} perfecto. Ellos ven sueños, dudas o precio — <strong style={{ color: 'var(--white)', fontWeight: 700 }}>en el mismo {sel!.cosa.replace('tu ', '')}</strong>.</>}
+                </p>
+                <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '0 0 26px', maxWidth: '42ch' }}>
+                  El anuncio que vende no repite lo que tú ves: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>le habla a la mirada de cada comprador</strong>. Eso hacemos, y se mide en ventas.
+                </p>
+                <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                  <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Descubre qué ve tu mercado</Btn>
+                  <button onClick={() => { setFase('ask'); setSel(null); }} className="hk-chip" style={chip}>
+                    Probar con otro rubro
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
       <style>{`
-        .hk-perc-nota { display: flex; align-items: flex-start; gap: 8px; opacity: 0; animation: hk-nota-in 0.6s var(--ease-out) both; max-width: min(215px, 56vw); z-index: 2; }
-        .hk-perc-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; box-shadow: 0 0 0 0 rgba(255,255,255,0.35); animation: hk-pulse 2.4s var(--ease-out) infinite; }
-        .hk-perc-card { display: block; background: rgba(10,10,10,0.86); border: 1px solid var(--border-on-inverse); border-radius: var(--radius-sm); padding: 8px 11px; backdrop-filter: blur(5px); box-shadow: var(--shadow-md); }
-        @keyframes hk-nota-in { from { opacity: 0; transform: translateY(10px) scale(0.92); } to { opacity: 1; transform: none; } }
-        @media (prefers-reduced-motion: reduce) { .hk-perc-nota { animation: none; opacity: 1; } .hk-perc-dot { animation: none; } }
+        .hk-perc-cell img { filter: grayscale(0.45) brightness(0.92); transition: filter 0.45s var(--ease-out), transform 0.6s var(--ease-out); }
+        .hk-perc-cell:hover img { filter: none; transform: scale(1.05); }
+        .hk-perc-cell:hover { border-color: var(--cyan) !important; }
+        .hk-perc-arrow { color: var(--cyan); transition: transform var(--dur-fast) var(--ease-out); }
+        .hk-perc-cell:hover .hk-perc-arrow { transform: translate(2px, -2px); }
+        .hk-perc-blink { animation: hk-blink 1s steps(2, start) infinite; }
+        @keyframes hk-blink { to { visibility: hidden; } }
+        .hk-perc-nota { display: flex; align-items: flex-start; gap: 8px; max-width: min(215px, 56vw); z-index: 2; }
+        .hk-perc-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; border: 2px solid rgba(255,255,255,0.85); animation: hk-ring 1s var(--ease-out) both; }
+        .hk-perc-card { display: block; background: rgba(8,8,8,0.88); border: 1px solid var(--border-on-inverse); border-radius: var(--radius-sm); padding: 8px 11px; backdrop-filter: blur(5px); box-shadow: var(--shadow-md); }
+        @keyframes hk-ring { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.5); } 100% { box-shadow: 0 0 0 16px rgba(255,255,255,0); } }
+        @media (prefers-reduced-motion: reduce) { .hk-perc-dot { animation: none; } .hk-perc-blink { animation: none; } .hk-perc-cell img { filter: none; } }
       `}</style>
     </section>
   );
