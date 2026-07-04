@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Btn } from "@/components/brand/parts";
-import { track } from "@/lib/tracking";
+import { track, leadDedup } from "@/lib/tracking";
 
 /**
  * Formulario calificador de la auditoría gratis (lead magnet).
@@ -41,6 +41,7 @@ export default function AuditForm() {
       `Objetivo: ${f.get("objetivo")}`,
     ].filter(Boolean);
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg.join("\n"))}`, "_blank", "noopener,noreferrer");
+    const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
     fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -53,9 +54,10 @@ export default function AuditForm() {
         pagina: "/auditoria-gratis",
         website: f.get("website"),
         extra: { web: f.get("web"), inversion: f.get("inversion"), objetivo: f.get("objetivo") },
+        ...dedup,
       }),
     }).catch(() => {});
-    track("generate_lead", { origen: "auditoria" });
+    track("generate_lead", { origen: "auditoria" }, dedup.event_id);
     setSent(true);
     setTimeout(() => window.location.assign("/gracias"), 700);
   };

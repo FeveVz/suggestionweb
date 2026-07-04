@@ -4,6 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Label, Btn, Blot } from './parts';
+import { leadDedup } from '@/lib/tracking';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
 const WHATSAPP = '51937770159';
@@ -461,6 +462,7 @@ export function CtaForm() {
     // 1) WhatsApp primero (síncrono: mantiene el gesto del usuario → no lo bloquea el navegador)
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
     // 2) Guardar el lead (keepalive: sobrevive a la navegación; si falla, no rompe la UX)
+    const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
     fetch('/api/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -473,10 +475,11 @@ export function CtaForm() {
         mensaje: f.get('objetivo'),
         pagina: window.location.pathname,
         website: f.get('website'),
+        ...dedup,
       }),
     }).catch(() => {});
-    // 3) Evento de conversión (GA4 + Pixel, si están configurados)
-    import('@/lib/tracking').then((m) => m.track('generate_lead', { origen: 'cta-form' })).catch(() => {});
+    // 3) Evento de conversión (GA4 + Pixel dedup con la CAPI vía event_id)
+    import('@/lib/tracking').then((m) => m.track('generate_lead', { origen: 'cta-form' }, dedup.event_id)).catch(() => {});
     setSent(true);
     // 4) Página de gracias (conversión medible)
     setTimeout(() => window.location.assign('/gracias'), 700);

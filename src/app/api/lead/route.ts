@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendLeadCapi } from "@/lib/meta-capi";
 
 /**
  * Captura de leads → tabla `leads` en Supabase (la misma BD del dashboard
@@ -56,5 +57,23 @@ export async function POST(req: Request) {
 
   if (!r.ok) return NextResponse.json({ ok: false, error: "db" }, { status: 502 });
   const data = (await r.json()) as { id?: string }[];
+
+  // Meta CAPI: evento Lead server-side, deduplicado con el Pixel vía event_id.
+  // Solo leads reales (no reclamos). Si falta META_CAPI_TOKEN, sendLeadCapi es no-op.
+  if (row.tipo !== "reclamo" && s(b.event_id, 100)) {
+    const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || req.headers.get("x-real-ip") || "";
+    await sendLeadCapi({
+      eventId: s(b.event_id, 100),
+      email: row.email,
+      phone: row.telefono,
+      nombre: row.nombre,
+      fbp: s(b.fbp, 200),
+      fbc: s(b.fbc, 400),
+      ip,
+      ua: req.headers.get("user-agent") || "",
+      sourceUrl: s(b.event_source_url, 500),
+    });
+  }
+
   return NextResponse.json({ ok: true, id: data[0]?.id ?? null });
 }
