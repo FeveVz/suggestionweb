@@ -8,7 +8,7 @@ import { GA_ID, META_PIXEL_ID } from "@/lib/tracking";
 /**
  * GA4 + Meta Pixel (solo si hay ID configurado en lib/tracking.ts).
  * Emite page_view/PageView también en navegación SPA (usePathname).
- * Activos en prod (2026-07-04): GA4 G-WRKGMZ0XWP · Meta Pixel 2487100898472593.
+ * Activos en prod (2026-07-04): GA4 G-WRKGMZ0XWP + Meta Pixel 2487100898472593 (env limpio).
  */
 export default function Analytics() {
   const pathname = usePathname();
