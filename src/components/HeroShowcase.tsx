@@ -31,11 +31,11 @@ const FEED: Item[] = [
 const VISIBLE = 4;
 
 /** Panel de resultados ROTATORIO: la prueba no se apoya en un solo caso. */
-const CASES = [
+const CASES: { k: string; big: string; sub: string; cells: [string, string][] }[] = [
   { k: "Caso real · Inmobiliaria Ceinys", big: "S/350K", sub: "en ventas con S/3,000 de pauta", cells: [["350", "leads"], ["20", "citas"], ["8", "cierres"]] },
   { k: "Eventos · Autoniza", big: "8 autos", sub: "vendidos en 2 eventos (may–jun)", cells: [["3", "autos · 22 may"], ["5", "autos · 25 jun"], ["2", "eventos"]] },
   { k: "Operación · Pacífico Motors", big: "13 marcas", sub: "de vehículos · Ica y Cusco", cells: [["13", "marcas"], ["2", "ciudades"], ["7", "años del equipo"]] },
-] as const;
+];
 
 export default function HeroShowcase() {
   const reduce = usePrefersReduced();
