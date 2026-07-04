@@ -16,8 +16,8 @@ export type Caso = {
   stats: { valor: string; label: string }[];
   reto: string;
   solucion: { titulo: string; texto: string }[];
-  quote: string;
-  autor: string;
+  quote?: string;
+  autor?: string;
   servicios: { label: string; href: string }[];
   imagenes?: { src: string; alt: string; cap: string }[];
 };
@@ -119,6 +119,36 @@ export const CASOS_DETALLE: Caso[] = [
     ],
   },
 ];
+
+CASOS_DETALLE.push({
+  slug: "autoniza-eventos",
+  cliente: "Autoniza",
+  sector: "Automotriz",
+  sectorHref: "/marketing-automotriz",
+  metaTitle: "Caso Autoniza: 8 Autos Vendidos en 2 Eventos | Suggestion",
+  metaDescription:
+    "Cómo Autoniza vendió 3 autos en el evento del 22 de mayo y 5 en el del 25 de junio: convocatoria segmentada, activación y cierre en piso. El caso completo.",
+  h1: "Autoniza: 8 autos vendidos en 2 eventos",
+  resumen:
+    "Un concesionario que convirtió sus eventos en un canal de ventas medible. Con convocatoria segmentada previa, activación en el punto y cierre en piso, cada evento salió con ventas firmadas el mismo día.",
+  stats: [
+    { valor: "3", label: "Autos vendidos · evento del 22 de mayo" },
+    { valor: "5", label: "Autos vendidos · evento del 25 de junio" },
+    { valor: "2", label: "Eventos, ambos con venta el mismo día" },
+  ],
+  reto: "Un evento automotriz sin estrategia junta curiosos: gente que mira, sube al auto, toma fotos y se va. La inversión en local, personal y logística no garantiza ni un cierre. Autoniza necesitaba que cada evento saliera con ventas, no con alcance.",
+  solucion: [
+    { titulo: "Convocatoria segmentada", texto: "Campaña previa dirigida a perfiles con intención y capacidad de compra — el evento se llena de compradores potenciales, no de paseantes." },
+    { titulo: "Activación con dinámica", texto: "Experiencia en el punto con dinámica de participación y captura de datos: cada asistente queda registrado para el seguimiento." },
+    { titulo: "Cierre en piso", texto: "Asesores preparados con la oferta del día; el interesado pasa de la prueba al papeleo sin salir del evento." },
+    { titulo: "Registro y contenido", texto: "Cobertura del evento (incluido drone) que alimenta la prueba social de la marca para la siguiente convocatoria." },
+  ],
+  servicios: [
+    { label: "BTL y Activaciones", href: "/servicios/btl" },
+    { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+    { label: "Producción Audiovisual", href: "/servicios/produccion-audiovisual" },
+  ],
+});
 
 export const getCaso = (slug: string): Caso | undefined => CASOS_DETALLE.find((c) => c.slug === slug);
 export const allCasoSlugs = (): string[] => CASOS_DETALLE.map((c) => c.slug);

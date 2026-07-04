@@ -11,9 +11,9 @@ import CountUp from "@/components/CountUp";
 export type ProofStat = { value: string; label: string };
 
 const DEFAULT_STATS: ProofStat[] = [
-  { value: "S/350K", label: "En ventas generadas (Inmobiliaria Ceinys)" },
-  { value: "+350", label: "Leads calificados en una sola campaña" },
-  { value: "8", label: "Lotes vendidos con S/3,000 de inversión" },
+  { value: "S/350K", label: "En ventas · caso Inmobiliaria Ceinys" },
+  { value: "8", label: "Autos vendidos en 2 eventos (Autoniza)" },
+  { value: "13", label: "Marcas de vehículos gestionadas (Pacífico Motors)" },
   { value: "7", label: "Años convirtiendo atención en ventas" },
 ];
 

@@ -161,6 +161,7 @@ type RubroTest = {
   img: string;
   alt: string;
   miradas: Mirada[];
+  prueba: string; // evidencia del método, específica del rubro
 };
 
 const POS: React.CSSProperties[] = [
@@ -173,6 +174,7 @@ const RUBROS_TEST: RubroTest[] = [
   {
     k: 'lotes', chip: 'Lotes y casas', cosa: 'tu proyecto',
     img: '/assets/sectores/inmobiliario.webp', alt: 'Render de proyecto inmobiliario',
+    prueba: 'los S/350K en ventas de Inmobiliaria Ceinys',
     miradas: [
       { quien: 'El inversionista', ve: 'plusvalía: comprar hoy, vender al doble', dot: 'var(--cyan)', pos: POS[0] },
       { quien: 'La pareja joven', ve: 'el patio donde crecerán sus hijos', dot: 'var(--orange)', pos: POS[1] },
@@ -182,6 +184,7 @@ const RUBROS_TEST: RubroTest[] = [
   {
     k: 'autos', chip: 'Autos', cosa: 'tu auto',
     img: '/assets/wall/wall-10.webp', alt: 'Camioneta en exhibición nocturna en la plaza',
+    prueba: 'los 8 autos que Autoniza vendió en dos eventos',
     miradas: [
       { quien: 'El papá práctico', ve: 'espacio, consumo y garantía', dot: 'var(--cyan)', pos: POS[0] },
       { quien: 'El de 28', ve: 'cómo se verá llegando en él', dot: 'var(--orange)', pos: POS[1] },
@@ -191,6 +194,7 @@ const RUBROS_TEST: RubroTest[] = [
   {
     k: 'viajes', chip: 'Hoteles y viajes', cosa: 'tu destino',
     img: '/assets/sectores/turismo.webp', alt: 'Oasis de Huacachina en Ica',
+    prueba: 'las 75 reservas de Hoteles Señor de Luren',
     miradas: [
       { quien: 'La pareja', ve: 'la escapada que se deben hace meses', dot: 'var(--cyan)', pos: POS[0] },
       { quien: 'La mamá', ve: '“¿es seguro para los niños?”', dot: 'var(--orange)', pos: POS[1] },
@@ -200,6 +204,7 @@ const RUBROS_TEST: RubroTest[] = [
   {
     k: 'producto', chip: 'Productos y consumo', cosa: 'tu producto',
     img: '/assets/sectores/marcas.webp', alt: 'Producto artesanal de marca de consumo',
+    prueba: 'los 15 contratos de Granjas Bonanza',
     miradas: [
       { quien: 'El antojado', ve: 'el gusto que se va a dar el sábado', dot: 'var(--cyan)', pos: POS[0] },
       { quien: 'La mamá', ve: '“¿será fresco y confiable?”', dot: 'var(--orange)', pos: POS[1] },
@@ -212,6 +217,7 @@ const RUBROS_TEST: RubroTest[] = [
 const RUBRO_OTRO: RubroTest = {
   k: 'otro', chip: 'Mi rubro es otro', cosa: 'tu producto',
   img: BLOT(1, 'cyan'), alt: 'Mancha del test de percepción',
+  prueba: 'resultados como los de Ceinys y Autoniza',
   miradas: [
     { quien: 'El inversionista', ve: 'retorno', dot: 'var(--cyan)', pos: POS[0] },
     { quien: 'La mamá de 34', ve: 'seguridad para los suyos', dot: 'var(--orange)', pos: POS[1] },
@@ -385,7 +391,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                     : <>{sel!.miradas[0].quien}, {sel!.miradas[1].quien.charAt(0).toLowerCase() + sel!.miradas[1].quien.slice(1)} y {sel!.miradas[2].quien.charAt(0).toLowerCase() + sel!.miradas[2].quien.slice(1)} no compran el mismo {sel!.cosa.replace('tu ', '')}: compran lo que perciben. Un solo mensaje para los tres <strong style={{ color: 'var(--white)', fontWeight: 700 }}>desperdicia inversión</strong>.</>}
                 </p>
                 <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '0 0 26px', maxWidth: '42ch' }}>
-                  Nuestra estrategia empieza ahí: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>identificamos los perfiles que deciden tu venta</strong> y construimos el mensaje que cada uno necesita ver. Es el mismo método detrás de los S/350K de Ceinys.
+                  Nuestra estrategia empieza ahí: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>identificamos los perfiles que deciden tu venta</strong> y construimos el mensaje que cada uno necesita ver. Es el mismo método detrás de {sel!.prueba}.
                 </p>
                 <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                   <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Analizar mi mercado — gratis (48 h)</Btn>

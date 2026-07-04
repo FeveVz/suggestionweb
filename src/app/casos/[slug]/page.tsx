@@ -122,13 +122,15 @@ export default async function CasoPage({ params }: Params) {
         </Section>
       )}
 
-      {/* QUOTE */}
-      <Section tone="light">
-        <blockquote style={{ margin: "0 auto", maxWidth: 780, borderLeft: "3px solid var(--cyan)", paddingLeft: "clamp(1.25rem,3vw,2rem)" }}>
-          <p style={{ font: "var(--fw-medium) var(--fs-xl)/1.35 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
-          <footer style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>— {c.autor}</footer>
-        </blockquote>
-      </Section>
+      {/* QUOTE (solo si el caso tiene testimonio real) */}
+      {c.quote && (
+        <Section tone="light">
+          <blockquote style={{ margin: "0 auto", maxWidth: 780, borderLeft: "3px solid var(--cyan)", paddingLeft: "clamp(1.25rem,3vw,2rem)" }}>
+            <p style={{ font: "var(--fw-medium) var(--fs-xl)/1.35 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
+            <footer style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>— {c.autor}</footer>
+          </blockquote>
+        </Section>
+      )}
 
       {/* SERVICIOS + OTROS CASOS */}
       <Section tone="light" style={{ background: "var(--surface-raised)", paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>

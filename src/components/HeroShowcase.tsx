@@ -30,6 +30,13 @@ const FEED: Item[] = [
 
 const VISIBLE = 4;
 
+/** Panel de resultados ROTATORIO: la prueba no se apoya en un solo caso. */
+const CASES = [
+  { k: "Caso real · Inmobiliaria Ceinys", big: "S/350K", sub: "en ventas con S/3,000 de pauta", cells: [["350", "leads"], ["20", "citas"], ["8", "cierres"]] },
+  { k: "Eventos · Autoniza", big: "8 autos", sub: "vendidos en 2 eventos (may–jun)", cells: [["3", "autos · 22 may"], ["5", "autos · 25 jun"], ["2", "eventos"]] },
+  { k: "Operación · Pacífico Motors", big: "13 marcas", sub: "de vehículos · Ica y Cusco", cells: [["13", "marcas"], ["2", "ciudades"], ["7", "años del equipo"]] },
+] as const;
+
 export default function HeroShowcase() {
   const reduce = usePrefersReduced();
   const [head, setHead] = useState(VISIBLE); // cuántos items "han llegado"
@@ -39,6 +46,15 @@ export default function HeroShowcase() {
     const id = setInterval(() => setHead((h) => h + 1), 2600);
     return () => clearInterval(id);
   }, [reduce]);
+
+  // Rotación del panel de resultados (Ceinys → Autoniza → Pacífico)
+  const [ci, setCi] = useState(0);
+  useEffect(() => {
+    if (reduce) return;
+    const id = setInterval(() => setCi((c) => (c + 1) % CASES.length), 5600);
+    return () => clearInterval(id);
+  }, [reduce]);
+  const caso = CASES[ci];
 
   // Ventana de los últimos VISIBLE items (loop infinito sobre FEED)
   const window_ = Array.from({ length: VISIBLE }, (_, k) => {
@@ -84,14 +100,14 @@ export default function HeroShowcase() {
       {/* Panel de métricas reales (caso Ceinys) */}
       <div style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "14px 16px", boxShadow: "var(--shadow-md)", position: "relative", overflow: "hidden" }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
-          <div>
+          <motion.div key={`h${ci}`} initial={reduce ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }} style={{ minWidth: 0 }}>
             <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
-              Caso real · Inmobiliaria Ceinys
+              {caso.k}
             </span>
             <div style={{ font: "var(--fw-bold) var(--fs-2xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: 8 }}>
-              <CountUp to="S/350K" /> <span style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)" }}>en ventas con S/3,000</span>
+              <CountUp to={caso.big} /> <span style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)" }}>{caso.sub}</span>
             </div>
-          </div>
+          </motion.div>
           {/* Sparkline que se dibuja */}
           <svg width="120" height="44" viewBox="0 0 120 44" fill="none" aria-hidden style={{ flexShrink: 0 }}>
             <polyline
@@ -106,18 +122,20 @@ export default function HeroShowcase() {
             <circle cx="118" cy="4" r="3.5" fill="var(--orange)" style={reduce ? undefined : { opacity: 0, animation: "hk-fadein 0.4s var(--ease-out) 2.5s forwards" }} />
           </svg>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 14, paddingTop: 12, borderTop: "1px solid var(--hairline)" }}>
-          {[
-            { v: "350", l: "leads" },
-            { v: "20", l: "citas" },
-            { v: "8", l: "cierres" },
-          ].map((s, i) => (
-            <div key={s.l} style={{ textAlign: "center" }}>
+        <motion.div key={`c${ci}`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45 }} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 14, paddingTop: 12, borderTop: "1px solid var(--hairline)" }}>
+          {caso.cells.map(([v, l], i) => (
+            <div key={l} style={{ textAlign: "center" }}>
               <div style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-display)", color: i === 2 ? "var(--cyan)" : "var(--text-strong)" }}>
-                <CountUp to={s.v} />
+                <CountUp to={v} />
               </div>
-              <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{s.l}</span>
+              <span style={{ font: "var(--fw-bold) var(--fs-micro)/1.25 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{l}</span>
             </div>
+          ))}
+        </motion.div>
+        {/* Indicador de casos (también navegable) */}
+        <div style={{ display: "flex", justifyContent: "center", gap: 6, marginTop: 10 }}>
+          {CASES.map((c, i) => (
+            <button key={c.k} onClick={() => setCi(i)} aria-label={c.k} style={{ width: 7, height: 7, borderRadius: "50%", border: "none", padding: 0, cursor: "pointer", background: i === ci ? "var(--cyan)" : "var(--ink-200)", transition: "background var(--dur-base)" }} />
           ))}
         </div>
       </div>

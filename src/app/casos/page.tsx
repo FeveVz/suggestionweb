@@ -46,6 +46,16 @@ const CASOS = [
     author: "Roberto, Gerente General",
     shape: 6,
   },
+  {
+    tag: "Automotriz",
+    href: "/casos/autoniza-eventos",
+    title: "Autoniza",
+    metric: "8",
+    note: "autos vendidos en 2 eventos (22 de mayo y 25 de junio) con convocatoria segmentada, activación y cierre en piso.",
+    quote: "",
+    author: "",
+    shape: 2,
+  },
 ];
 
 const GALERIA = [
@@ -81,7 +91,7 @@ export default function Casos() {
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
         <div style={{ display: "grid", gap: "var(--space-6)" }}>
           {CASOS.map((c) => (
-            <article key={c.title} className="hk-lift hk-split" style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1.4fr)", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
+            <article key={c.title} className="hk-lift hk-split" style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: c.quote ? "minmax(0,1fr) minmax(0,1.4fr)" : "1fr", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
               <div>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
                   <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{c.tag}</span>
@@ -92,13 +102,19 @@ export default function Casos() {
                   <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
                 </p>
               </div>
-              <blockquote style={{ margin: 0, borderLeft: "2px solid var(--cyan)", paddingLeft: 22 }}>
-                <p style={{ font: "var(--fw-light) var(--fs-lg)/1.45 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
-                <footer style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>— {c.author}</footer>
-                <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
+              {c.quote ? (
+                <blockquote style={{ margin: 0, borderLeft: "2px solid var(--cyan)", paddingLeft: 22 }}>
+                  <p style={{ font: "var(--fw-light) var(--fs-lg)/1.45 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
+                  <footer style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>— {c.author}</footer>
+                  <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
+                    Ver el caso completo <ArrowRight size={15} />
+                  </a>
+                </blockquote>
+              ) : (
+                <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
                   Ver el caso completo <ArrowRight size={15} />
                 </a>
-              </blockquote>
+              )}
             </article>
           ))}
         </div>

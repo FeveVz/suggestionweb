@@ -178,17 +178,17 @@ export default function Header() {
             </div>
             {/* Caso destacado (prueba dentro del menú) */}
             <Link
-              href="/casos/inmobiliaria-ceinys"
+              href="/casos/autoniza-eventos"
               onClick={() => setOpen(null)}
               className="hk-lift"
               style={{ width: 250, flexShrink: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 18, padding: "var(--space-5)", background: "var(--black)", color: "var(--white)", borderRadius: "var(--radius-md)", textDecoration: "none" }}
             >
               <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>
-                Caso destacado
+                Resultado reciente
               </span>
-              <span style={{ font: "var(--fw-bold) var(--fs-2xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}>S/350K</span>
+              <span style={{ font: "var(--fw-bold) var(--fs-2xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}>8 autos</span>
               <span style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
-                en ventas para Inmobiliaria Ceinys con S/3,000 de pauta. Ver el caso →
+                vendidos por Autoniza en 2 eventos con convocatoria y activación. Ver el caso →
               </span>
             </Link>
           </div>

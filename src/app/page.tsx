@@ -37,6 +37,7 @@ const CASOS = [
   { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350K", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", shape: 1 },
   { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 en campañas de demanda directa.", shape: 5 },
   { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas generadas en una sola campaña, dentro y fuera de temporada.", shape: 6 },
+  { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos con convocatoria, activación y cierre en piso.", shape: 2 },
 ];
 
 const POR_QUE = [
@@ -91,8 +92,8 @@ export default function Home() {
               <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
             </div>
             <p className="hk-enter-4" style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
-              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>S/350K</strong> generados para clientes</span>
-              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas</span>
+              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas confiaron</span>
+              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>13</strong> marcas automotrices</span>
               <span>Respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>&lt;24 h</strong></span>
             </p>
           </div>

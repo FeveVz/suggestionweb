@@ -64,7 +64,7 @@ export default function LandingArticle({
   const waMsg = `Hola Suggestion, me interesa: ${h1}.`;
   const proofText =
     proof ??
-    "S/350K en ventas, +350 leads y 8 lotes vendidos con S/3,000 en pauta · 7 años convirtiendo atención en ventas.";
+    "Ceinys: S/350K en ventas con S/3,000 · Autoniza: 8 autos vendidos en 2 eventos · Pacífico Motors: 13 marcas gestionadas.";
   const heroItems = (incluye?.length ? incluye : beneficios ?? []).slice(0, 5).map((x) => x.titulo);
   const heroLabel = incluye?.length ? "Qué incluye" : "Lo que logras";
   return (
