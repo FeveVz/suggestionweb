@@ -24,7 +24,7 @@ export default function Gracias() {
           Listo. Tus datos ya están con el equipo.
         </h1>
         <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "20px 0 0", maxWidth: "52ch" }}>
-          Te respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>menos de 24 horas hábiles</strong> con un diagnóstico honesto — sin humo ni promesas mágicas. Si prefieres no esperar, escríbenos directo:
+          Te respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>menos de 24 horas hábiles</strong> con un diagnóstico honesto y claro. Si prefieres no esperar, escríbenos directo:
         </p>
         <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}>
           <Btn as="a" href={whatsappLink("Hola Suggestion, acabo de dejar mis datos en la web.")} target="_blank" rel="noopener noreferrer" size="lg">

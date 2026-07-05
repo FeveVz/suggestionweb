@@ -15,9 +15,9 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const METODO = [
-  ["Leemos", "Auditamos tu mercado y tu funnel. Vemos la mancha: dónde se pierde la atención antes de convertir."],
+  ["Leemos", "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir."],
   ["Moldeamos", "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros."],
-  ["Convertimos", "Activamos campañas y citas. Lead, cita, cierre — sin pasos de vanidad."],
+  ["Convertimos", "Activamos campañas y agendamos citas, hasta el cierre."],
   ["Medimos", "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta."],
 ];
 
@@ -68,7 +68,7 @@ export default function Nosotros() {
               La agencia de performance de Ica
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "54ch" }}>
-              Nacimos para una cosa: convertir atención en ventas. No vendemos humo ni prometemos el #1 de Google. Mostramos números reales y trabajamos el funnel completo.
+              Nacimos para una cosa: convertir la atención de tu mercado en ventas. Mostramos números reales y trabajamos todo el proceso, de la estrategia al cierre.
             </p>
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap" }}>
               <Btn as="a" href="/contacto" size="lg">Agenda una llamada <ArrowRight size={18} /></Btn>
@@ -81,7 +81,7 @@ export default function Nosotros() {
       {/* MÉTODO */}
       <Section tone="dark">
         <SectionHeading level={2} kicker="Nuestro método" tone="dark" maxWidth="20ch" style={{ marginBottom: 40 }}>
-          Consigue lo posible haciendo lo imposible.
+          Un método claro, del primer clic al cierre.
         </SectionHeading>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
           {METODO.map(([t, d], i) => (
@@ -135,7 +135,7 @@ export default function Nosotros() {
             Las personas detrás de Suggestion.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)" }}>
-            Estrategia, performance, creatividad y producción bajo un mismo techo. Por eso la máquina completa funciona conectada: nadie pasa la pelota a un tercero.
+            Estrategia, performance, creatividad y producción bajo un mismo techo. Por eso todo funciona conectado: nadie le pasa la pelota a un tercero.
           </p>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>

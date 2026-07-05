@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Contacto: Agenda una Llamada | Suggestion",
   description:
-    "Cuéntanos de tu negocio y te damos un diagnóstico honesto de tu funnel, sin humo. Agenda una llamada o escríbenos por WhatsApp hoy mismo.",
+    "Cuéntanos de tu negocio y te damos un diagnóstico honesto y claro de tu marketing. Agenda una llamada o escríbenos por WhatsApp hoy mismo.",
   path: "/contacto",
 });
 
@@ -36,7 +36,7 @@ export default function Contacto() {
               Convirtamos tu atención en ventas.
             </h1>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 20, maxWidth: "42ch" }}>
-              Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto de tu funnel —sin humo, sin promesas de #1.
+              Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto y claro de tu proceso de venta.
             </p>
             <div style={{ display: "grid", gap: 16, marginTop: 30 }}>
               <a href={`tel:${site.phoneE164}`} style={{ display: "inline-flex", alignItems: "center", gap: 12, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>

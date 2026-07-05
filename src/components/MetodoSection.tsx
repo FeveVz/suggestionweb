@@ -7,9 +7,9 @@ import SectionHeading from "@/components/SectionHeading";
  */
 
 const PASOS: [string, string][] = [
-  ["Leemos", "Auditamos tu mercado y tu funnel. Vemos la mancha: dónde se pierde la atención antes de convertir."],
+  ["Leemos", "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir."],
   ["Moldeamos", "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros."],
-  ["Convertimos", "Activamos campañas y citas. Lead, cita, cierre — sin pasos de vanidad."],
+  ["Convertimos", "Activamos campañas y agendamos citas, hasta el cierre."],
   ["Medimos", "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta."],
 ];
 

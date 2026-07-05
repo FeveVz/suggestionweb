@@ -11,7 +11,7 @@ import CountUp from "@/components/CountUp";
 export type ProofStat = { value: string; label: string };
 
 const DEFAULT_STATS: ProofStat[] = [
-  { value: "19", label: "Marcas de vehículos que gestionamos" },
+  { value: "19", label: "Marcas de vehículos atendidas" },
   { value: "+50", label: "Marcas que confían en nosotros" },
   { value: "5", label: "Sectores con estrategia propia" },
   { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más" },

@@ -10,10 +10,10 @@ import type { Servicio } from "./types";
 export const SERVICIOS_PILAR = {
   metaTitle: "Servicios de Marketing Digital en Ica y Perú | Suggestion",
   metaDescription:
-    "Todos nuestros servicios de marketing, de performance a BTL e imprenta. Una sola máquina para convertir mercado en ventas. Agenda hoy.",
+    "Todos nuestros servicios de marketing, de performance a BTL e imprenta. Todo tu marketing bajo un mismo método: de la estrategia al cierre. Agenda hoy.",
   h1: "Servicios de marketing que convierten en ventas",
   intro:
-    "No vendemos piezas sueltas. Operamos la máquina completa —digital, marca, web y calle— bajo un mismo método: lead, cita, cierre.",
+    "No vendemos piezas sueltas. Nos encargamos de todo el proceso —digital, marca, web y calle— bajo un mismo método: de la estrategia al cierre.",
   cta: "Hablemos de tu negocio",
 } as const;
 
