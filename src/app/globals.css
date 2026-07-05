@@ -260,6 +260,61 @@ img { max-width: 100%; display: block; }
 @media (min-width: 720px) { .hk-sector-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1160px) { .hk-sector-grid { grid-template-columns: repeat(5, 1fr); } }
 
+/* Lista editorial de sectores (home) — filas numeradas, fondo oscuro */
+.hk-sectorlist { border-top: 1px solid var(--hairline-inverse); }
+.hk-sectorrow {
+  position: relative; display: grid;
+  grid-template-columns: auto minmax(0, 0.85fr) minmax(0, 1.25fr) auto;
+  align-items: center; gap: clamp(1.25rem, 4vw, 3.5rem);
+  padding: clamp(1.6rem, 3vw, 2.5rem) 0;
+  border-bottom: 1px solid var(--hairline-inverse);
+  text-decoration: none;
+  transition: padding-left var(--dur-base) var(--ease-out);
+}
+.hk-sectorrow::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--cyan); transform: scaleY(0);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.hk-sectorrow:hover { padding-left: clamp(12px, 2vw, 28px); }
+.hk-sectorrow:hover::before { transform: scaleY(1); }
+.hk-sectorrow-num {
+  font: var(--fw-bold) var(--fs-lg)/1 var(--font-accent);
+  letter-spacing: var(--tracking-label); color: var(--ink-500);
+  transition: color var(--dur-base) var(--ease-out);
+}
+.hk-sectorrow:hover .hk-sectorrow-num { color: var(--cyan); }
+.hk-sectorrow-head { display: inline-flex; align-items: center; gap: 16px; min-width: 0; }
+.hk-sectorrow-ico { color: var(--cyan); display: grid; place-items: center; flex-shrink: 0; }
+.hk-sectorrow-title {
+  font: var(--fw-medium) var(--fs-2xl)/1.05 var(--font-display);
+  letter-spacing: var(--tracking-tight); color: var(--white);
+  transition: color var(--dur-base) var(--ease-out);
+}
+.hk-sectorrow:hover .hk-sectorrow-title { color: var(--cyan); }
+.hk-sectorrow-result { font: var(--fw-light) var(--fs-sm)/1.55 var(--font-body); color: var(--text-on-inverse-mut); }
+.hk-sectorrow-cta {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent);
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--text-on-inverse-mut); transition: color var(--dur-base) var(--ease-out);
+}
+.hk-sectorrow:hover .hk-sectorrow-cta { color: var(--cyan); }
+.hk-sectorrow-cta svg { transition: transform var(--dur-base) var(--ease-out); }
+.hk-sectorrow:hover .hk-sectorrow-cta svg { transform: translate(2px, -2px); }
+@media (max-width: 1000px) {
+  .hk-sectorrow { grid-template-columns: auto minmax(0,1fr) auto; grid-template-areas: "num head cta" "result result result"; row-gap: 12px; }
+  .hk-sectorrow-num { grid-area: num; }
+  .hk-sectorrow-head { grid-area: head; }
+  .hk-sectorrow-result { grid-area: result; }
+  .hk-sectorrow-cta { grid-area: cta; }
+}
+@media (max-width: 560px) {
+  .hk-sectorrow-title { font-size: var(--fs-xl); }
+  .hk-sectorrow-cta-txt { display: none; }
+  .hk-sectorrow-num { font-size: var(--fs-md); }
+}
+
 /* ============================================================
    Premium / art-direction — escala display, etiquetas verticales,
    numerales fantasma, detalles finos.

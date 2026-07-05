@@ -6,7 +6,7 @@ import { CtaForm, Percepcion } from "@/components/brand/interactive";
 import HeroShowcase from "@/components/HeroShowcase";
 import ProofBar from "@/components/ProofBar";
 import ClientLogos from "@/components/ClientLogos";
-import SectorCard from "@/components/SectorCard";
+import SectorList from "@/components/SectorList";
 import SectionHeading from "@/components/SectionHeading";
 import Faq from "@/components/Faq";
 import CountUp from "@/components/CountUp";
@@ -93,8 +93,8 @@ export default function Home() {
             </div>
             <p className="hk-enter-4" style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
               <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas confiaron</span>
-              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>13</strong> marcas automotrices</span>
               <span>Respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>&lt;24 h</strong></span>
+              <span>Ica <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>→</strong> todo el Perú</span>
             </p>
           </div>
           <div className="hk-enter-3" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
@@ -123,11 +123,7 @@ export default function Home() {
             Cinco verticales que conocemos a fondo, cada una con su propia estrategia.
           </p>
         </div>
-        <div className="hk-sector-grid reveal reveal-d2">
-          {SECTORES.map((s, i) => (
-            <SectorCard key={s.href} index={`0${i + 1}`} title={s.title} result={s.result} href={s.href} icon={s.icon} shape={s.shape} />
-          ))}
-        </div>
+        <SectorList items={SECTORES} />
       </Section>
 
       {/* SERVICIOS */}

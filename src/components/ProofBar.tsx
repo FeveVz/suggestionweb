@@ -5,15 +5,15 @@ import CountUp from "@/components/CountUp";
 /**
  * Barra de prueba social (doc 16 §5). Banda oscura con la línea del funnel
  * (Lead → Cita → Cierre) y 3–4 métricas reales en grande.
- * Por defecto: S/350K · +350 leads · 8 lotes · 7 años (doc 06 §1).
+ * Por defecto (agregado, sin repetir los casos): 19 marcas de vehículos · +50 marcas · 5 sectores · 7 años.
  */
 
 export type ProofStat = { value: string; label: string };
 
 const DEFAULT_STATS: ProofStat[] = [
-  { value: "S/350K", label: "En ventas · caso Inmobiliaria Ceinys" },
-  { value: "8", label: "Autos vendidos en 2 eventos (Autoniza)" },
-  { value: "13", label: "Marcas de vehículos gestionadas (Pacífico Motors)" },
+  { value: "19", label: "Marcas de vehículos que gestionamos" },
+  { value: "+50", label: "Marcas que confían en nosotros" },
+  { value: "5", label: "Sectores con estrategia propia" },
   { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más" },
 ];
 
