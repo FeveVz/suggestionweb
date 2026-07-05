@@ -378,7 +378,7 @@ img { max-width: 100%; display: block; }
 
 /* Responsive de la home */
 @media (max-width: 920px) {
-  .hk-hero { grid-template-columns: 1fr !important; }
+  .hk-hero { grid-template-columns: 1fr !important; min-height: auto !important; align-items: start !important; }
   .hk-hero-art { order: -1; }
   .hk-perc { grid-template-columns: 1fr !important; }
   .hk-stats, .hk-sectores, .hk-casos, .hk-pasos, .hk-porque, .hk-test, .hk-foot { grid-template-columns: 1fr 1fr !important; }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
-import { Section, Btn, Blot, TaglineStrip } from "@/components/brand/parts";
+import { Section, Btn, TaglineStrip } from "@/components/brand/parts";
 import { CtaForm, Percepcion } from "@/components/brand/interactive";
 import HeroShowcase from "@/components/HeroShowcase";
 import ProofBar from "@/components/ProofBar";
@@ -34,10 +34,10 @@ const SECTORES = [
 ];
 
 const CASOS = [
-  { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350K", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", shape: 1 },
-  { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 en campañas de demanda directa.", shape: 5 },
-  { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas generadas en una sola campaña, dentro y fuera de temporada.", shape: 6 },
-  { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos con convocatoria, activación y cierre en piso.", shape: 2 },
+  { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350K", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", img: "/assets/casos/ceinys-render.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
+  { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 en campañas de demanda directa.", img: "/assets/sectores/marcas.webp", alt: "Producto del sector consumo masivo" },
+  { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas generadas en una sola campaña, dentro y fuera de temporada.", img: "/assets/sectores/turismo.webp", alt: "Destino turístico en Ica (sector turismo)" },
+  { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos con convocatoria, activación y cierre en piso.", img: "/assets/sectores/automotriz.webp", alt: "Vehículo del sector automotriz" },
 ];
 
 const POR_QUE = [
@@ -78,7 +78,7 @@ export default function Home() {
           style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.75rem,3vw,2.75rem) var(--gutter) clamp(1.25rem,2.5vw,2rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "min(calc(86vh - 68px), 680px)" }}
         >
           <div style={{ minWidth: 0 }}>
-            <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Agencia de performance · Ica → Perú</div>
+            <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Marketing de performance · Ica → Perú</div>
             {/* maxWidth en px: el h1 hereda 16px de base, así que "ch" aquí colapsaría el ancho */}
             <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: 680 }}>
               <span className="lead">Agencia de marketing digital</span>
@@ -177,17 +177,21 @@ export default function Home() {
         </div>
         <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
           {CASOS.map((c) => (
-            <article key={c.title} className="hk-case hk-lift" style={{ border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 18, background: "var(--white)" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{c.tag}</span>
-                <Blot shape={c.shape} tint="orange" size={48} style={{ opacity: 0.9 }} />
+            <article key={c.title} className="hk-case hk-lift" style={{ border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", overflow: "hidden", display: "flex", flexDirection: "column", background: "var(--white)" }}>
+              {/* Imagen real del caso (relaciona el dato con una prueba visual) */}
+              <div style={{ position: "relative", aspectRatio: "16 / 10", background: "var(--surface-raised)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.img} alt={c.alt} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                <span style={{ position: "absolute", top: 12, left: 12, font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--white)", background: "rgba(8,8,8,0.6)", backdropFilter: "blur(4px)", padding: "6px 10px", borderRadius: "var(--radius-sm)" }}>{c.tag}</span>
               </div>
-              <div style={{ font: "var(--fw-bold) var(--fs-4xl)/0.95 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
-                <CountUp to={c.metric} />
+              <div style={{ padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 14 }}>
+                <div style={{ font: "var(--fw-bold) var(--fs-4xl)/0.95 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
+                  <CountUp to={c.metric} />
+                </div>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>
+                  <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
+                </p>
               </div>
-              <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>
-                <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
-              </p>
             </article>
           ))}
         </div>
