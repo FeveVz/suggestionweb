@@ -104,11 +104,11 @@ export default function Home() {
         <div className="hk-nav" style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 var(--gutter) clamp(1.25rem,2.5vw,2rem)" }}>
           <a href="#sectores" className="hk-scrollcue"><ArrowDown size={14} /> Desliza</a>
         </div>
-        <TaglineStrip items={["No es lo que ves", "Convertimos atención en ventas", "Consigue lo posible haciendo lo imposible"]} />
+        <TaglineStrip items={["Marketing que se mide en ventas", "Resultados que puedes contar", "Una estrategia para cada rubro"]} />
       </section>
 
-      {/* PROOF BAR */}
-      <ProofBar />
+      {/* PROOF BAR (sin la fila del funnel: ya aparece en el panel del hero) */}
+      <ProofBar funnel={false} />
 
       {/* LOGOS DE CLIENTES */}
       <ClientLogos />
@@ -120,7 +120,7 @@ export default function Home() {
             Cada mercado tiene su perspectiva. Nosotros la entendemos.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", maxWidth: "34ch" }}>
-            Cinco verticales donde leemos lo que otros no ven y lo convertimos en ventas medibles.
+            Cinco verticales que conocemos a fondo, cada una con su propia estrategia.
           </p>
         </div>
         <div className="hk-sector-grid reveal reveal-d2">
@@ -138,7 +138,7 @@ export default function Home() {
               Todo el funnel, bajo un mismo método.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "36ch" }}>
-              No vendemos piezas sueltas. Operamos la máquina completa que convierte mercado en ventas: desde la estrategia y la pauta hasta la web, el CRM y el material en la calle.
+              No vendemos piezas sueltas. Nos encargamos de todo el proceso que convierte interesados en clientes: estrategia, anuncios, web, CRM y material en la calle.
             </p>
             <a href="/servicios" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 22, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
               Ver todos los servicios <ArrowRight size={16} />
@@ -247,7 +247,7 @@ export default function Home() {
               Convirtamos tu atención en ventas.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 20, maxWidth: "40ch" }}>
-              Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto de tu funnel —sin humo, sin promesas mágicas.
+              Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto y claro de tu proceso de venta.
             </p>
             <div style={{ display: "flex", gap: 26, marginTop: 30, flexWrap: "wrap" }}>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>

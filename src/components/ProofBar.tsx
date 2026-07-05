@@ -14,7 +14,7 @@ const DEFAULT_STATS: ProofStat[] = [
   { value: "S/350K", label: "En ventas · caso Inmobiliaria Ceinys" },
   { value: "8", label: "Autos vendidos en 2 eventos (Autoniza)" },
   { value: "13", label: "Marcas de vehículos gestionadas (Pacífico Motors)" },
-  { value: "7", label: "Años convirtiendo atención en ventas" },
+  { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más" },
 ];
 
 const FUNNEL = ["Lead", "Cita", "Cierre"];

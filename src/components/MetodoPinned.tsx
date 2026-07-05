@@ -10,9 +10,9 @@ import { Label } from "@/components/brand/parts";
  */
 
 const PASOS = [
-  { n: "01", t: "Leemos", d: "Auditamos tu mercado y tu funnel. Vemos la mancha: dónde se pierde la atención antes de convertir." },
+  { n: "01", t: "Leemos", d: "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir." },
   { n: "02", t: "Moldeamos", d: "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros." },
-  { n: "03", t: "Convertimos", d: "Activamos campañas y citas. Lead, cita, cierre — sin pasos de vanidad." },
+  { n: "03", t: "Convertimos", d: "Activamos campañas y agendamos citas, hasta el cierre." },
   { n: "04", t: "Medimos", d: "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta." },
 ];
 
@@ -61,7 +61,7 @@ export default function MetodoPinned() {
     <>
       <Label tone="onDark">Método</Label>
       <h2 style={{ font: "var(--fw-bold) var(--fs-2xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "14px 0 0", maxWidth: "16ch" }}>
-        Consigue lo posible haciendo lo imposible.
+        Un método claro, del primer clic al cierre.
       </h2>
     </>
   );
