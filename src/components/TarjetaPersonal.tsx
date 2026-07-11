@@ -107,7 +107,7 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
 
         {/* Identidad */}
         <Rise reduce={reduce} delay={0.23}>
-          <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.02 var(--font-display)", letterSpacing: "var(--tracking-tight)", margin: "22px 0 0", maxWidth: "12ch" }}>{t.nombre}</h1>
+          <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.02 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "22px 0 0", maxWidth: "12ch" }}>{t.nombre}</h1>
         </Rise>
         <Rise reduce={reduce} delay={0.3}>
           <p style={{ font: "var(--fw-bold) var(--fs-xs)/1.3 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--cyan)", margin: "12px 0 0" }}>{t.rol}</p>
