@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
 import { CASOS_DETALLE } from "@/content/casos";
+import { EQUIPO } from "@/content/equipo";
 
 /**
  * Sitemap dinámico: raíz + servicios (pilar/categorías/16) + sectores
@@ -65,5 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...root, ...servicios, ...sectores, ...casos, ...blogCategorias, ...blogPosts];
+  const equipo: MetadataRoute.Sitemap = EQUIPO.map((t) => ({
+    url: u(`/equipo/${t.slug}`),
+    lastModified: now,
+    changeFrequency: "yearly" as const,
+    priority: 0.4,
+  }));
+
+  return [...root, ...servicios, ...sectores, ...casos, ...blogCategorias, ...blogPosts, ...equipo];
 }

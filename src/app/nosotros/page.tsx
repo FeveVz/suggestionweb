@@ -37,13 +37,13 @@ const VALORES = [
 ];
 
 const EQUIPO = [
-  { n: "Abraham Velásquez", r: "Gerente General · Cofundador", d: "Dirige la estrategia comercial y de performance de cada cuenta.", i: "AV" },
-  { n: "María Teresa Vera", r: "Cofundadora y Administradora", d: "Administración y operación: que cada proyecto salga a tiempo y en orden.", i: "MV" },
-  { n: "Cristofer Amable", r: "Análisis de mercado y tendencias", d: "Investigación, datos y tendencias que guían cada estrategia.", i: "CA" },
-  { n: "Diego Urday", r: "Desarrollo web", d: "Construye las webs, landings y automatizaciones que convierten.", i: "DU" },
-  { n: "Yurayma Vásquez", r: "Diseño", d: "Identidad visual y piezas gráficas de cada campaña.", i: "YV" },
-  { n: "José Carlos Muñoz", r: "Audiovisual y edición", d: "Cámaras, dirección de foto y edición del contenido de la agencia.", i: "JM" },
-  { n: "Nicolás Montoya", r: "Logística y dirección de eventos", d: "Coordina la logística y dirige las activaciones y eventos en calle.", i: "NM" },
+  { n: "Abraham Velásquez", r: "Gerente General · Cofundador", d: "Dirige la estrategia comercial y de performance de cada cuenta.", i: "AV", slug: "abraham" },
+  { n: "María Teresa Vera", r: "Cofundadora y Administradora", d: "Administración y operación: que cada proyecto salga a tiempo y en orden.", i: "MV", slug: "maria-teresa" },
+  { n: "Cristofer Amable", r: "Análisis de mercado y tendencias", d: "Investigación, datos y tendencias que guían cada estrategia.", i: "CA", slug: "cristofer" },
+  { n: "Diego Urday", r: "Desarrollo web", d: "Construye las webs, landings y automatizaciones que convierten.", i: "DU", slug: "diego" },
+  { n: "Yurayma Vásquez", r: "Diseño", d: "Identidad visual y piezas gráficas de cada campaña.", i: "YV", slug: "yurayma" },
+  { n: "José Carlos Muñoz", r: "Audiovisual y edición", d: "Cámaras, dirección de foto y edición del contenido de la agencia.", i: "JM", slug: "jose-carlos" },
+  { n: "Nicolás Montoya", r: "Logística y dirección de eventos", d: "Coordina la logística y dirige las activaciones y eventos en calle.", i: "NM", slug: "nicolas" },
 ];
 
 export default function Nosotros() {
@@ -140,7 +140,7 @@ export default function Nosotros() {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
           {EQUIPO.map((m) => (
-            <div key={m.n} className="hk-lift" style={{ display: "flex", gap: 18, alignItems: "center", padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
+            <a key={m.n} href={`/equipo/${m.slug}`} className="hk-lift" style={{ display: "flex", gap: 18, alignItems: "center", padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", textDecoration: "none" }}>
               <span aria-hidden style={{ width: 60, height: 60, flexShrink: 0, borderRadius: "50%", padding: 2.5, background: "linear-gradient(135deg, var(--orange), var(--cyan))", display: "grid" }}>
                 <span style={{ width: "100%", height: "100%", borderRadius: "50%", background: "var(--black)", color: "var(--white)", display: "grid", placeItems: "center", font: "var(--fw-bold) var(--fs-md)/1 var(--font-display)", letterSpacing: "0.03em" }}>{m.i}</span>
               </span>
@@ -149,7 +149,7 @@ export default function Nosotros() {
                 <span style={{ display: "block", font: "var(--fw-bold) var(--fs-micro)/1.2 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--cyan)", marginTop: 6 }}>{m.r}</span>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 8 }}>{m.d}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </Section>
