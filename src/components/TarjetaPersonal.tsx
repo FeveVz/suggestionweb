@@ -14,22 +14,17 @@ import type { Talento } from "@/content/equipo";
  * Mobile-first y coreografiada: la identidad "se arma" al entrar, acciones de
  * un toque (vCard, WhatsApp, llamada, correo, compartir), prueba breve de la
  * agencia y el momento Rorschach de marca al cierre.
- * Animación EXPLÍCITA por bloque (initial/animate + delay) — el patrón de
- * variants encadenados dejaba el contenido en opacity:0 sin error.
+ * Coreografía de entrada en CSS PURO (no framer): corre incluso antes de
+ * hidratar, no depende de rAF (que se estrangula con batería baja o tabs
+ * throttled) y es el mismo patrón hk-enter probado en los heroes del sitio.
+ * Framer queda solo para micro-interacciones (whileTap) y decoración.
  */
 
-const spring = { type: "spring" as const, stiffness: 260, damping: 26 };
-
-function Rise({ delay = 0, reduce, style, children }: { delay?: number; reduce: boolean; style?: React.CSSProperties; children: React.ReactNode }) {
+function Rise({ delay = 0, style, children }: { delay?: number; reduce?: boolean; style?: React.CSSProperties; children: React.ReactNode }) {
   return (
-    <motion.div
-      initial={reduce ? false : { opacity: 0, y: 18 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ ...spring, delay: reduce ? 0 : delay }}
-      style={style}
-    >
+    <div className="hk-rise" style={{ ...style, ["--rise" as string]: `${delay}s` }}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -204,6 +199,9 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
 
       <style>{`
         .hk-tp-btn:hover { border-color: var(--cyan) !important; background: var(--ink-700) !important; }
+        .hk-rise { opacity: 0; animation: hk-rise-in 0.7s var(--ease-out) var(--rise, 0s) both; }
+        @keyframes hk-rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .hk-rise { animation: none; opacity: 1; } }
       `}</style>
     </section>
   );
