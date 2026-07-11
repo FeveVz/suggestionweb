@@ -11,26 +11,31 @@ import type { Talento } from "@/content/equipo";
 
 /**
  * Tarjeta personal digital (destino del QR de la tarjeta física).
- * Mobile-first y coreografiada: la identidad "se arma" al entrar (stagger),
- * acciones de un toque (vCard, WhatsApp, llamada, correo, compartir),
- * prueba breve de la agencia y el momento Rorschach de marca al cierre.
- * Reduced-motion: todo visible sin animación.
+ * Mobile-first y coreografiada: la identidad "se arma" al entrar, acciones de
+ * un toque (vCard, WhatsApp, llamada, correo, compartir), prueba breve de la
+ * agencia y el momento Rorschach de marca al cierre.
+ * Animación EXPLÍCITA por bloque (initial/animate + delay) — el patrón de
+ * variants encadenados dejaba el contenido en opacity:0 sin error.
  */
 
 const spring = { type: "spring" as const, stiffness: 260, damping: 26 };
 
+function Rise({ delay = 0, reduce, style, children }: { delay?: number; reduce: boolean; style?: React.CSSProperties; children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={reduce ? false : { opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ...spring, delay: reduce ? 0 : delay }}
+      style={style}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export default function TarjetaPersonal({ t }: { t: Talento }) {
   const reduce = usePrefersReduced();
   const [copiado, setCopiado] = useState(false);
-
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: reduce ? 0 : 0.09, delayChildren: reduce ? 0 : 0.15 } },
-  };
-  const item = {
-    hidden: reduce ? {} : { opacity: 0, y: 18 },
-    show: { opacity: 1, y: 0, transition: spring },
-  };
 
   const waMsg = `Hola ${t.corto}, escaneé tu tarjeta digital y quiero conversar.`;
 
@@ -82,20 +87,17 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
         <Blot shape={1} dual reveal size={340} />
       </motion.div>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "clamp(2.5rem,6vw,4rem) var(--gutter) clamp(3rem,7vw,5rem)", display: "flex", flexDirection: "column", gap: 0 }}
-      >
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "clamp(2.5rem,6vw,4rem) var(--gutter) clamp(3rem,7vw,5rem)" }}>
         {/* Kicker de marca */}
-        <motion.span variants={item} style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)", display: "inline-flex", alignItems: "center", gap: 8 }}>
-          <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)" }} aria-hidden />
-          {site.name} · Tarjeta digital
-        </motion.span>
+        <Rise reduce={reduce} delay={0.05}>
+          <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)", display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)" }} aria-hidden />
+            {site.name} · Tarjeta digital
+          </span>
+        </Rise>
 
         {/* Monograma (foto-ready) */}
-        <motion.div variants={item} style={{ marginTop: 26 }}>
+        <Rise reduce={reduce} delay={0.14} style={{ marginTop: 26 }}>
           <span style={{ width: 104, height: 104, borderRadius: "50%", padding: 3, background: "linear-gradient(135deg, var(--orange), var(--cyan))", display: "grid" }}>
             {t.foto ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -106,33 +108,35 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
               </span>
             )}
           </span>
-        </motion.div>
+        </Rise>
 
         {/* Identidad */}
-        <motion.h1 variants={item} style={{ font: "var(--fw-bold) var(--fs-3xl)/1.02 var(--font-display)", letterSpacing: "var(--tracking-tight)", margin: "22px 0 0", maxWidth: "12ch" }}>
-          {t.nombre}
-        </motion.h1>
-        <motion.p variants={item} style={{ font: "var(--fw-bold) var(--fs-xs)/1.3 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--cyan)", margin: "12px 0 0" }}>
-          {t.rol}
-        </motion.p>
-        <motion.p variants={item} style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", margin: "16px 0 0", maxWidth: "44ch" }}>
-          {t.bio}
-        </motion.p>
+        <Rise reduce={reduce} delay={0.23}>
+          <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.02 var(--font-display)", letterSpacing: "var(--tracking-tight)", margin: "22px 0 0", maxWidth: "12ch" }}>{t.nombre}</h1>
+        </Rise>
+        <Rise reduce={reduce} delay={0.3}>
+          <p style={{ font: "var(--fw-bold) var(--fs-xs)/1.3 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--cyan)", margin: "12px 0 0" }}>{t.rol}</p>
+        </Rise>
+        <Rise reduce={reduce} delay={0.37}>
+          <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", margin: "16px 0 0", maxWidth: "44ch" }}>{t.bio}</p>
+        </Rise>
 
         {/* Especialidades */}
-        <motion.div variants={item} style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 18 }}>
+        <Rise reduce={reduce} delay={0.44} style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 18 }}>
           {t.especialidades.map((e) => (
             <span key={e} style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)", border: "1px solid var(--border-on-inverse)", borderRadius: 999, padding: "7px 13px" }}>
               {e}
             </span>
           ))}
-        </motion.div>
+        </Rise>
 
         {/* Acciones de un toque */}
-        <motion.a variants={item} whileTap={reduce ? undefined : { scale: 0.98 }} href={`/api/vcard/${t.slug}`} style={{ ...accion, marginTop: 30, background: "var(--cyan)", border: "none", color: "var(--black)", font: "var(--fw-bold) var(--fs-md)/1 var(--font-body)", padding: "17px 12px" }}>
-          <UserPlus size={19} strokeWidth={2.2} /> Guardar contacto
-        </motion.a>
-        <motion.div variants={item} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 10 }}>
+        <Rise reduce={reduce} delay={0.52} style={{ marginTop: 30 }}>
+          <motion.a whileTap={reduce ? undefined : { scale: 0.98 }} href={`/api/vcard/${t.slug}`} style={{ ...accion, background: "var(--cyan)", border: "none", color: "var(--black)", font: "var(--fw-bold) var(--fs-md)/1 var(--font-body)", padding: "17px 12px" }}>
+            <UserPlus size={19} strokeWidth={2.2} /> Guardar contacto
+          </motion.a>
+        </Rise>
+        <Rise reduce={reduce} delay={0.6} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 10 }}>
           <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" href={`https://wa.me/${t.whatsapp}?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer" style={accion}>
             <MessageCircle size={17} style={{ color: "#25D366" }} /> WhatsApp
           </motion.a>
@@ -146,13 +150,15 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
             {copiado ? <Check size={17} style={{ color: "var(--cyan)" }} /> : <Share2 size={17} style={{ color: "var(--white)" }} />}
             {copiado ? "¡Enlace copiado!" : "Compartir"}
           </motion.button>
-        </motion.div>
-        <motion.a variants={item} href="/" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, margin: "18px auto 0", font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
-          <Globe size={15} style={{ color: "var(--cyan)" }} /> {site.domain}
-        </motion.a>
+        </Rise>
+        <Rise reduce={reduce} delay={0.66} style={{ textAlign: "center" }}>
+          <a href="/" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
+            <Globe size={15} style={{ color: "var(--cyan)" }} /> {site.domain}
+          </a>
+        </Rise>
 
         {/* Prueba breve de la agencia */}
-        <motion.div variants={item} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 38, paddingTop: 26, borderTop: "1px solid var(--hairline-inverse)" }}>
+        <Rise reduce={reduce} delay={0.74} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 38, paddingTop: 26, borderTop: "1px solid var(--hairline-inverse)" }}>
           {[
             ["7", "años"],
             ["+50", "marcas"],
@@ -165,34 +171,36 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
               <span style={{ font: "var(--fw-light) var(--fs-micro)/1.3 var(--font-body)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>{l}</span>
             </div>
           ))}
-        </motion.div>
+        </Rise>
 
         {/* Momento de marca: el Rorschach interactivo */}
-        <motion.div variants={item} style={{ marginTop: 44, display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+        <Rise reduce={reduce} delay={0.82} style={{ marginTop: 44, display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
           <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>
             {site.tagline}
           </span>
           <DualReveal shape={1} size={300} />
-        </motion.div>
+        </Rise>
 
         {/* CTA para el prospecto que recibió la tarjeta */}
-        <motion.div variants={item} style={{ marginTop: 40, padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)", background: "var(--ink-800)" }}>
-          <p style={{ font: "var(--fw-medium) var(--fs-lg)/1.3 var(--font-display)", letterSpacing: "var(--tracking-snug)" }}>
-            ¿Tienes un negocio? Te decimos qué ve tu mercado.
-          </p>
-          <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>
-            Auditoría gratis de tu marketing, respuesta en 48 h hábiles.
-          </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
-            <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">
-              Pedir mi auditoría <ArrowRight size={16} />
-            </Btn>
-            <Btn as="a" href="/casos" variant="ghostDark" size="md">
-              Ver resultados
-            </Btn>
+        <Rise reduce={reduce} delay={0.9} style={{ marginTop: 40 }}>
+          <div style={{ padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)", background: "var(--ink-800)" }}>
+            <p style={{ font: "var(--fw-medium) var(--fs-lg)/1.3 var(--font-display)", letterSpacing: "var(--tracking-snug)" }}>
+              ¿Tienes un negocio? Te decimos qué ve tu mercado.
+            </p>
+            <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>
+              Auditoría gratis de tu marketing, respuesta en 48 h hábiles.
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
+              <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">
+                Pedir mi auditoría <ArrowRight size={16} />
+              </Btn>
+              <Btn as="a" href="/casos" variant="ghostDark" size="md">
+                Ver resultados
+              </Btn>
+            </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </Rise>
+      </div>
 
       <style>{`
         .hk-tp-btn:hover { border-color: var(--cyan) !important; background: var(--ink-700) !important; }
