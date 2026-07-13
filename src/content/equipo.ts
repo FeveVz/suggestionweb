@@ -36,6 +36,7 @@ export const EQUIPO: Talento[] = [
     bio: "Dirige la estrategia comercial y de performance de cada cuenta. Siete años convirtiendo la atención de los mercados de Ica y Perú en ventas medibles.",
     iniciales: "AV",
     especialidades: ["Estrategia comercial", "Marketing de performance", "Negociación B2B"],
+    foto: "/assets/equipo/abraham.webp",
     ...T,
   },
   {
