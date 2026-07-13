@@ -14,14 +14,16 @@ import Magnetic from "@/components/Magnetic";
 import MetodoPinned from "@/components/MetodoPinned";
 import WorkWall from "@/components/WorkWall";
 import ScrollBlot from "@/components/ScrollBlot";
+import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
+import { faqPageSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
 
 export const metadata: Metadata = buildMetadata({
   title: "Agencia de Marketing Digital en Ica y Perú | Suggestion",
   description:
-    "Agencia de marketing de performance en Ica. Convertimos atención en ventas: leads, citas y cierres medibles. Agenda una llamada hoy.",
+    "Suggestion es la agencia de marketing en Ica que convierte atención en ventas: leads, citas y cierres medibles, en Ica y todo el Perú. Agenda una llamada hoy.",
   path: "/",
 });
 
@@ -53,6 +55,10 @@ const FAQ = [
     a: "Atrae a las personas correctas, las convierte en contactos y acompaña hasta el cierre. Nosotros no nos quedamos en el alcance: medimos cuántos leads, citas y ventas genera cada sol invertido.",
   },
   {
+    q: "¿Por qué elegir una agencia de marketing en Ica y no una de Lima?",
+    a: "Porque conocemos este mercado de primera mano: cómo compra la gente en Ica, qué medios funcionan y qué precios se manejan. Una agencia de marketing en Ica te da esa lectura local con el mismo nivel técnico que una de Lima — y con resultados medibles en ventas, no en promesas.",
+  },
+  {
     q: "¿Atienden en todo el Perú desde Ica?",
     a: "Sí. Operamos desde Ica y manejamos campañas a nivel nacional. La distancia no cambia los resultados; los números, sí.",
   },
@@ -65,6 +71,7 @@ const FAQ = [
 export default function Home() {
   return (
     <>
+      <JsonLd data={faqPageSchema(FAQ)} />
       {/* HERO */}
       <section style={{ background: "var(--white)", position: "relative", overflow: "hidden" }}>
         {/* Rejilla editorial tenue (profundidad) */}
@@ -81,7 +88,7 @@ export default function Home() {
             <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Marketing de performance · Ica → Perú</div>
             {/* maxWidth en px: el h1 hereda 16px de base, así que "ch" aquí colapsaría el ancho */}
             <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: 680 }}>
-              <span className="lead">Agencia de marketing digital</span>
+              <span className="lead">Agencia de marketing en Ica</span>
               <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", maxWidth: "48ch", margin: "clamp(16px,2vw,24px) 0 0" }}>

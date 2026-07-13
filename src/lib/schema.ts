@@ -28,12 +28,21 @@ export function organizationSchema(): Json {
     telephone: site.phoneE164,
     email: site.email,
     priceRange: "$$",
+    slogan: site.slogan,
     address: {
       "@type": "PostalAddress",
       addressLocality: site.city,
       addressRegion: site.region,
       addressCountry: site.country,
     },
+    geo: { "@type": "GeoCoordinates", latitude: -14.0678, longitude: -75.7286 },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
+    knowsAbout: ["Marketing digital", "Publicidad digital", "Meta Ads", "Google Ads", "Desarrollo web", "Branding", "BTL y activaciones"],
     areaServed: [
       { "@type": "City", name: site.city },
       { "@type": "Country", name: "Perú" },

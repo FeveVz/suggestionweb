@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, marginTop: 28, paddingTop: 24, borderTop: "1px solid var(--hairline-inverse)", flexWrap: "wrap" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
-            <Dot size={6} /> No es lo que ves.
+            <Dot size={6} /> No es lo que ves. · <a href="/" className="hk-ulink" style={{ color: "var(--text-on-inverse-mut)" }}>Agencia de marketing en Ica</a>
           </span>
           <nav aria-label="Legal" style={{ display: "flex", gap: "8px 20px", flexWrap: "wrap" }}>
             {[
