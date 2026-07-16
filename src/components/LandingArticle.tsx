@@ -21,6 +21,29 @@ import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "
 
 export type RelatedBlock = { title: string; links: RelatedLink[]; columns?: number };
 
+/** Párrafo de cobertura ÚNICO por página (keyword propia + ángulo local real); clave = ruta. */
+const COBERTURA: Record<string, string> = {
+  "/servicios/consultoria": "¿Buscas consultoría de marketing en Ica? Ordenamos la estrategia de negocios de Ica y Chincha antes de invertir un sol en pauta, y acompañamos a empresas de Lima y todo el Perú a distancia.",
+  "/servicios/marketing-digital": "Hacemos marketing digital para negocios de Ica que quieren vender más — y llevamos campañas nacionales desde nuestra base en la región, con reporte de leads, citas y cierres.",
+  "/servicios/publicidad-digital": "Corremos pauta en Google y Meta Ads para empresas de Ica, Pisco y Nazca, y escalamos campañas a Lima y provincias cuando el negocio lo pide.",
+  "/servicios/investigacion-de-mercado": "Estudiamos el mercado iqueño en campo — y también mercados de otras regiones del Perú — para que decidas con datos y no con intuición.",
+  "/servicios/seo": "Posicionamos negocios de Ica en Google — y sabemos de lo que hablamos: así como llegaste tú a esta página, tus clientes también buscan. Atendemos proyectos SEO de todo el Perú.",
+  "/servicios/redes-sociales": "Gestionamos las redes de marcas de Ica y de clientes en Lima y el resto del país: contenido, comunidad y pauta con objetivos de venta.",
+  "/servicios/desarrollo-web": "Diseñamos páginas web para negocios de Ica, Chincha, Pisco y Nazca — y desarrollamos proyectos para clientes de todo el Perú, siempre orientadas a convertir.",
+  "/servicios/crm-automatizacion": "Implementamos CRM y automatización para equipos de venta en Ica y a nivel nacional: cada lead con su seguimiento, sin importar la ciudad.",
+  "/servicios/branding": "Construimos marcas desde Ica para el Perú: identidad, voz y sistema visual que funcionan igual en una bodega de Chincha que en un corporativo de Lima.",
+  "/servicios/produccion-audiovisual": "Producimos video y foto en Ica y sus provincias — spots, drone y contenido para redes — y viajamos a donde tu marca lo necesite.",
+  "/servicios/material-pop": "Producimos material POP para puntos de venta de Ica y despachamos a tiendas y campañas de todo el Perú.",
+  "/servicios/merchandising": "Merchandising publicitario para empresas de Ica con entrega en toda la región — y envíos corporativos a nivel nacional.",
+  "/marketing-inmobiliario": "Vendemos lotes y proyectos en Ica — donde el mercado inmobiliario crece — y operamos campañas para desarrolladoras de otras regiones del Perú.",
+  "/marketing-automotriz": "Trabajamos con concesionarios de Ica — 19 marcas de vehículos atendidas — y llevamos el mismo método a pisos de venta de cualquier ciudad del país.",
+  "/marketing-turismo": "Ica vive del turismo: Huacachina, el pisco, Paracas a un paso. Sabemos llenar hoteles y tours aquí, y en el resto del Perú.",
+  "/marketing-marcas-consumo": "Movemos marcas de consumo en Ica y sus provincias, y escalamos distribución y demanda a nivel nacional.",
+  "/marketing-salud": "Llenamos agendas de clínicas y consultorios en Ica, y atendemos centros de salud de Lima y provincias cuidando el costo por paciente.",
+  "/marketing-agroexportacion": "Ica es tierra agroexportadora: trabajamos con empresas del sector aquí y en todo el corredor costero del Perú.",
+  "/marketing-pisco-vino": "Estamos en la tierra del pisco: ayudamos a las bodegas de Ica a vender más — y a bodegas y viñas de todo el Perú a construir marca.",
+};
+
 type Json = Record<string, unknown>;
 
 export default function LandingArticle({
@@ -302,9 +325,8 @@ export default function LandingArticle({
             En Ica y en todo el Perú.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)" }}>
-            Somos una agencia de marketing y publicidad con base en Ica: atendemos este servicio para negocios de Ica, Chincha,
-            Pisco y Nazca, y operamos campañas a nivel nacional — Lima incluida — con la misma medición: leads, citas y ventas.
-            La distancia no cambia los resultados; los números, sí.
+            {COBERTURA[breadcrumbs[breadcrumbs.length - 1]?.href ?? ""] ??
+              "Somos una agencia de marketing y publicidad con base en Ica: atendemos negocios de Ica, Chincha, Pisco y Nazca, y operamos campañas a nivel nacional — Lima incluida — con la misma medición: leads, citas y ventas."}
           </p>
         </div>
       </Section>
