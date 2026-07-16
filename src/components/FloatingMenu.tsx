@@ -34,6 +34,9 @@ export default function FloatingMenu() {
 
   const otras = MAIN_NAV.filter((l) => l.href !== "/servicios" && l.href !== "/sectores");
 
+  // Tarjetas personales: tienen su propia botonera de contacto — los FAB estorban (se montaban sobre "Llamar"/"Compartir").
+  if (pathname?.startsWith("/equipo/")) return null;
+
   return (
     <div className="hk-fab-wrap">
       <AnimatePresence>
