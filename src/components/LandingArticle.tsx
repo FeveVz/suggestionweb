@@ -295,6 +295,20 @@ export default function LandingArticle({
       {!proceso && <MetodoSection />}
       <PorQueSection tone="light" />
 
+      {/* Cobertura local (SEO on-page: Ica + provincias + nacional; suma keywords, no reemplaza nada) */}
+      <Section tone="light" style={{ paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
+        <div style={{ maxWidth: 820 }}>
+          <SectionHeading level={2} kicker="Cobertura" maxWidth="22ch" style={{ marginBottom: 16 }}>
+            En Ica y en todo el Perú.
+          </SectionHeading>
+          <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)" }}>
+            Somos una agencia de marketing y publicidad con base en Ica: atendemos este servicio para negocios de Ica, Chincha,
+            Pisco y Nazca, y operamos campañas a nivel nacional — Lima incluida — con la misma medición: leads, citas y ventas.
+            La distancia no cambia los resultados; los números, sí.
+          </p>
+        </div>
+      </Section>
+
       {/* FAQ */}
       {faq.length > 0 && (
         <Section tone="light" style={{ background: "var(--surface-raised)" }}>
