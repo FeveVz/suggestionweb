@@ -9,7 +9,7 @@ import { contactPageSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contacto: Agenda una Llamada | Suggestion",
+  title: "Contacto | Agencia de Marketing en Ica | Suggestion",
   description:
     "Cuéntanos de tu negocio y te damos un diagnóstico honesto y claro de tu marketing. Agenda una llamada o escríbenos por WhatsApp hoy mismo.",
   path: "/contacto",

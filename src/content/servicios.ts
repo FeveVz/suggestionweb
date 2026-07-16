@@ -125,7 +125,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Consultoría",
-    metaTitle: "Consultoría de Marketing y Estrategia en Perú | Suggestion",
+    metaTitle: "Consultoría de Marketing en Ica y Perú | Suggestion",
     metaDescription:
       "Consultoría de marketing: diagnóstico, estrategia y detección de fugas para que tu negocio venda más. Agenda tu sesión de diagnóstico hoy.",
     h1: "Consultoría de marketing que ordena tu crecimiento",
@@ -214,7 +214,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Investigación de Mercado",
-    metaTitle: "Investigación y Estudio de Mercado en Perú | Suggestion",
+    metaTitle: "Investigación de Mercado en Ica y Perú | Suggestion",
     metaDescription:
       "Investigación de mercado con datos e insights para decidir con certeza: demanda, competencia y consumidor. Pide tu estudio. Agenda una llamada.",
     h1: "Investigación de mercado que guía tus decisiones",
@@ -293,7 +293,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Marketing Digital",
-    metaTitle: "Marketing Digital en Perú: Estrategia que Vende | Suggestion",
+    metaTitle: "Marketing Digital en Ica: Estrategia que Vende | Suggestion",
     metaDescription:
       "Servicio de marketing digital integral: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
     h1: "Marketing digital integral que genera ventas, no vanidad",
@@ -385,7 +385,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Publicidad Digital",
-    metaTitle: "Publicidad Digital: Google y Meta Ads con ROI | Suggestion",
+    metaTitle: "Publicidad Digital en Ica: Google y Meta Ads | Suggestion",
     metaDescription:
       "Publicidad digital con ROI medible: campañas de Google Ads y Meta Ads orientadas a leads y ventas, no a alcance. Pide tu propuesta. Agenda hoy.",
     h1: "Publicidad digital con ROI, no con likes",
@@ -469,7 +469,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Redes Sociales",
-    metaTitle: "Gestión de Redes Sociales y Community Manager | Suggestion",
+    metaTitle: "Redes Sociales y Community Manager en Ica | Suggestion",
     metaDescription:
       "Gestión de redes sociales con contenido que conecta y vende: estrategia, community manager y reportes. Agenda una llamada y crece en redes.",
     h1: "Gestión de redes sociales que conecta y vende",
@@ -554,7 +554,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "Desarrollo Web",
-    metaTitle: "Diseño y Desarrollo Web en Perú que Convierte | Suggestion",
+    metaTitle: "Diseño de Páginas Web en Ica que Convierte | Suggestion",
     metaDescription:
       "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Agenda una llamada.",
     h1: "Diseño de páginas web que convierten visitas en clientes",
@@ -655,7 +655,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "SEO",
-    metaTitle: "Agencia SEO y Posicionamiento Web en Perú | Suggestion",
+    metaTitle: "Agencia SEO en Ica y Posicionamiento Web | Suggestion",
     metaDescription:
       "Agencia SEO en Perú: posicionamiento web que te hace visible cuando tu cliente busca. SEO técnico y de contenidos. Agenda tu auditoría gratuita.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
@@ -734,7 +734,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "CRM y Automatización",
-    metaTitle: "CRM y Automatización de Marketing en Perú | Suggestion",
+    metaTitle: "CRM y Automatización de Marketing en Ica | Suggestion",
     metaDescription:
       "CRM y automatización: captura leads, automatiza WhatsApp y califica clientes para vender más con menos esfuerzo. Agenda una demo. Escala tu negocio.",
     h1: "CRM y automatización que escala tus ventas",
@@ -813,7 +813,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marca-contenido",
     nombre: "Branding",
-    metaTitle: "Branding e Identidad de Marca en Perú | Suggestion",
+    metaTitle: "Branding e Identidad de Marca en Ica | Suggestion",
     metaDescription:
       "Branding estratégico que deja huella y vende: naming, logotipo, manual de marca e identidad visual. Construyamos tu marca. Agenda una llamada.",
     h1: "Branding que deja huella y vende",
@@ -908,7 +908,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marca-contenido",
     nombre: "Producción Audiovisual",
-    metaTitle: "Producción Audiovisual y Video Marketing | Suggestion",
+    metaTitle: "Producción Audiovisual en Ica y Video Marketing | Suggestion",
     metaDescription:
       "Producción audiovisual de alto impacto: spots, video sell, fotografía y tomas con drone que cuentan tu historia y venden. Agenda una llamada.",
     h1: "Producción audiovisual que cuenta y vende",
@@ -1229,7 +1229,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Material POP",
-    metaTitle: "Material POP y Publicidad en Punto de Venta | Suggestion",
+    metaTitle: "Material POP y Punto de Venta en Ica | Suggestion",
     metaDescription:
       "Material POP que destaca en el punto de venta: exhibidores, displays y letras volumétricas. Diseño y producción a medida. Pide tu cotización.",
     h1: "Material POP que destaca en el punto de venta",
@@ -1385,7 +1385,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Merchandising",
-    metaTitle: "Merchandising Publicitario y Regalos Corporativos | Suggestion",
+    metaTitle: "Merchandising Publicitario en Ica | Suggestion",
     metaDescription:
       "Merchandising que refuerza tu marca: llaveros, gorras, tazas y regalos corporativos personalizados. Pide tu cotización por WhatsApp hoy.",
     h1: "Merchandising que refuerza tu marca",

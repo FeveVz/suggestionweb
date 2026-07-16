@@ -21,7 +21,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-inmobiliario",
     nombre: "Inmobiliario",
-    metaTitle: "Marketing Inmobiliario en Perú que Vende Lotes | Suggestion",
+    metaTitle: "Marketing Inmobiliario en Ica que Vende Lotes | Suggestion",
     metaDescription:
       "Marketing inmobiliario que llena tu pipeline de citas calificadas, no de curiosos. Performance, drone y CRM para proyectos. Agenda una llamada.",
     h1: "Marketing inmobiliario que llena tu pipeline de citas",
@@ -62,7 +62,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-automotriz",
     nombre: "Automotriz",
-    metaTitle: "Marketing Automotriz para Concesionarios en Perú | Suggestion",
+    metaTitle: "Marketing Automotriz en Ica para Concesionarios | Suggestion",
     metaDescription:
       "Marketing automotriz que lleva del clic al test drive: leads listos para cierre en piso. Campañas para concesionarios y autos. Agenda hoy.",
     h1: "Marketing automotriz: del clic al test drive",
@@ -99,7 +99,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-turismo",
     nombre: "Turismo",
-    metaTitle: "Marketing Turístico para Hoteles en Perú | Suggestion",
+    metaTitle: "Marketing Turístico en Ica para Hoteles | Suggestion",
     metaDescription:
       "Marketing turístico que genera reservas reales en temporada y fuera de ella. Para hoteles, restaurantes y agencias de viaje. Agenda una llamada.",
     h1: "Marketing turístico que genera reservas reales",
@@ -136,7 +136,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-marcas-consumo",
     nombre: "Marcas y consumo",
-    metaTitle: "Marketing para Marcas y Consumo Masivo en Perú | Suggestion",
+    metaTitle: "Marketing para Consumo Masivo en Ica y Perú | Suggestion",
     metaDescription:
       "Marketing para marcas y consumo: demanda que se convierte en venta, no en likes. Posicionamiento, performance y activación. Agenda una llamada.",
     h1: "Marcas y consumo: demanda que se vuelve venta",
@@ -173,7 +173,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-salud",
     nombre: "Salud",
-    metaTitle: "Marketing para Clínicas y Salud en Perú | Suggestion",
+    metaTitle: "Marketing para Clínicas y Salud en Ica | Suggestion",
     metaDescription:
       "Marketing para clínicas, consultorios y profesionales de la salud: capta pacientes sin quemar presupuesto. Performance y web. Agenda una llamada.",
     h1: "Marketing para clínicas que capta pacientes",
@@ -213,7 +213,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-agroexportacion",
     nombre: "Agroexportación",
-    metaTitle: "Marketing para Agroexportadoras en Perú | Suggestion",
+    metaTitle: "Marketing para Agroexportadoras de Ica y Perú | Suggestion",
     metaDescription:
       "Marketing y web B2B para agroexportadoras: presencia internacional, fichas de producto, ferias y CRM para cerrar con importadores. Agenda una llamada.",
     h1: "Marketing para agroexportadoras que abren mercados",
@@ -254,7 +254,7 @@ export const SECTORES: Sector[] = [
   {
     slug: "marketing-pisco-vino",
     nombre: "Pisco y Vino",
-    metaTitle: "Marketing para Bodegas de Pisco y Vino en Perú | Suggestion",
+    metaTitle: "Marketing para Bodegas de Pisco y Vino en Ica | Suggestion",
     metaDescription:
       "Marketing para bodegas de pisco y vino: branding premium, e-commerce, enoturismo y contenido que cuenta tu tradición y vende. Agenda una llamada.",
     h1: "Marketing para bodegas de pisco y vino",

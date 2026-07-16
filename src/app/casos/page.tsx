@@ -9,7 +9,7 @@ import { casosReviewSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Casos de Éxito | Suggestion",
+  title: "Casos de Éxito de Marketing en Ica | Suggestion",
   description:
     "Resultados de negocio, no capturas de likes: S/350K en ventas, 8 lotes, 75 reservas, 15 contratos. Mira nuestros casos. Hablemos del tuyo.",
   path: "/casos",

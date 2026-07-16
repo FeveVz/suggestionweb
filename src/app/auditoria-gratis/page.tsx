@@ -13,7 +13,7 @@ const FAQ = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Auditoría de Marketing Gratis en 48 h | Suggestion",
+  title: "Auditoría de Marketing Gratis en Ica (48 h) | Suggestion",
   description: "Te auditamos gratis el funnel: pauta, web y seguimiento. Recibes 3 mejoras accionables en 48 horas hábiles, sin compromiso. Para negocios en Perú.",
   path: "/auditoria-gratis",
 });
