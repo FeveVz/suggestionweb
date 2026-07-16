@@ -69,7 +69,7 @@ export default function FloatingMenu() {
 
               <div style={{ padding: "20px 20px 8px", flex: 1 }}>
                 <p className="hk-fab-label">Servicios</p>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8, marginBottom: 14 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 0, marginBottom: 16 }}>
                   {SERVICE_CATEGORIES.map((c) => (
                     <Link key={c.slug} href={`/servicios/${c.slug}`} className="hk-fab-card">
                       {c.label}
@@ -144,9 +144,10 @@ export default function FloatingMenu() {
         .hk-fab-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; background: var(--black); border-bottom: 1px solid var(--hairline-inverse); }
         .hk-fab-close { width: 34px; height: 34px; border-radius: 50%; background: var(--ink-700); border: none; color: var(--white); display: grid; place-items: center; cursor: pointer; }
         .hk-fab-label { font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent); text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-on-inverse-mut); margin: 0 0 10px; }
-        .hk-fab-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 54px; padding: 12px 16px; border-radius: var(--radius-sm); background: var(--ink-800); border: 1px solid var(--border-on-inverse); color: var(--white); font: var(--fw-medium) var(--fs-md)/1.25 var(--font-body); text-decoration: none; }
-        .hk-fab-card::after { content: "92"; color: var(--cyan); flex-shrink: 0; }
-        .hk-fab-pill { padding: 10px 14px; border-radius: var(--radius-pill); background: var(--ink-800); border: 1px solid var(--border-on-inverse); color: var(--white); font: var(--fw-light) var(--fs-sm)/1 var(--font-body); white-space: nowrap; text-decoration: none; }
+        .hk-fab-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 15px 2px; background: transparent; border: none; border-bottom: 1px solid var(--hairline-inverse); color: var(--white); font: var(--fw-medium) var(--fs-lg)/1.25 var(--font-display); letter-spacing: var(--tracking-snug); text-decoration: none; }
+        .hk-fab-card::after { content: "→"; color: var(--cyan); flex-shrink: 0; font-family: var(--font-body); }
+        .hk-fab-card:first-child { border-top: 1px solid var(--hairline-inverse); }
+        .hk-fab-pill { padding: 11px 16px; border-radius: var(--radius-pill); background: var(--ink-800); border: 1px solid var(--border-on-inverse); color: var(--white); font: var(--fw-light) var(--fs-sm)/1 var(--font-body); white-space: nowrap; text-decoration: none; }
         .hk-fab-more { display: inline-block; font: var(--fw-bold) var(--fs-sm)/1 var(--font-accent); color: var(--cyan); }
         .hk-fab-link { display: block; padding: 13px 0; color: var(--white); font: var(--fw-medium) var(--fs-md)/1 var(--font-body); text-decoration: none; }
         .hk-fab-foot { position: sticky; bottom: 0; background: var(--black); border-top: 1px solid var(--hairline-inverse); padding: 14px 20px calc(14px + env(safe-area-inset-bottom)); display: grid; gap: 10px; }
