@@ -12,6 +12,44 @@ import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
 type Params = { params: Promise<{ categoria: string; slug: string }> };
 
+/** OG del post = la de su money page (marca en cada compartida + thumbnail elegible). */
+function ogDelPost(moneyHref: string): string {
+  const slug = moneyHref.replace(/^\/servicios\//, "").replace(/^\//, "").split("/")[0];
+  return slug ? `/assets/og/${slug}.png` : "/og-image.png";
+}
+
+/** Anclas de keyword hacia money pages, por categoría del blog (SEO interno). */
+const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
+  inmobiliario: [
+    { label: "Marketing inmobiliario en Ica", href: "/marketing-inmobiliario" },
+    { label: "Publicidad digital en Ica (Google y Meta Ads)", href: "/servicios/publicidad-digital" },
+  ],
+  automotriz: [
+    { label: "Marketing automotriz en Ica", href: "/marketing-automotriz" },
+    { label: "BTL y activaciones para eventos", href: "/servicios/btl" },
+  ],
+  performance: [
+    { label: "Publicidad digital en Ica (Google y Meta Ads)", href: "/servicios/publicidad-digital" },
+    { label: "Marketing digital en Ica", href: "/servicios/marketing-digital" },
+  ],
+  conversion: [
+    { label: "Diseño de páginas web en Ica", href: "/servicios/desarrollo-web" },
+    { label: "CRM y automatización de marketing", href: "/servicios/crm-automatizacion" },
+  ],
+  marca: [
+    { label: "Branding e identidad de marca en Ica", href: "/servicios/branding" },
+    { label: "Producción audiovisual en Ica", href: "/servicios/produccion-audiovisual" },
+  ],
+  "psicologia-de-mercado": [
+    { label: "Investigación de mercado en Ica", href: "/servicios/investigacion-de-mercado" },
+    { label: "Consultoría de marketing en Ica", href: "/servicios/consultoria" },
+  ],
+  sectores: [
+    { label: "Marketing por sectores en Ica y Perú", href: "/sectores" },
+    { label: "Agencia de marketing en Ica", href: "/" },
+  ],
+};
+
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ categoria: p.categoria, slug: p.slug }));
 }
@@ -25,6 +63,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: post.description,
     path: `/blog/${categoria}/${slug}`,
     type: "article",
+    ogImage: ogDelPost(post.moneyPage.href),
   });
 }
 
@@ -61,6 +100,7 @@ export default async function BlogPostPage({ params }: Params) {
           headline: post.h1,
           description: post.description,
           datePublished: post.date,
+          image: ogDelPost(post.moneyPage.href),
           url: `/blog/${categoria}/${slug}`,
         })}
       />
@@ -106,6 +146,11 @@ export default async function BlogPostPage({ params }: Params) {
                 {post.moneyPage.label} <ArrowRight size={18} />
               </Btn>
             </div>
+          </div>
+
+          {/* Enlaces internos con ancla de keyword → money pages (SEO) */}
+          <div style={{ marginTop: "var(--space-8)" }}>
+            <RelatedLinks title="Servicios relacionados" links={SERVICIOS_ANCLA[categoria] ?? [post.moneyPage]} columns={2} />
           </div>
 
           {relatedLinks.length > 0 && (

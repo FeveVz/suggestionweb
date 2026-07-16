@@ -13,6 +13,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Resultados de negocio, no capturas de likes: S/350K en ventas, 8 lotes, 75 reservas, 15 contratos. Mira nuestros casos. Hablemos del tuyo.",
   path: "/casos",
+  ogImage: "/assets/og/casos.png",
 });
 
 const CASOS = [

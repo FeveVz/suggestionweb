@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: s.metaDescription,
     path: `/servicios/${s.slug}`,
     noindex: s.noindex,
+    ogImage: `/assets/og/${s.slug}.png`,
   });
 }
 
