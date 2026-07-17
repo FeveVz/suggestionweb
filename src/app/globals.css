@@ -325,6 +325,8 @@ img { max-width: 100%; display: block; }
 .hk-display .lead { display: block; font-size: clamp(1.2rem, 1.6vw, 1.5rem); font-weight: 500; letter-spacing: -0.01em; color: var(--text-muted); margin-bottom: clamp(8px, 1vw, 12px); }
 /* Máx 4.35rem: a tamaños mayores el H1 rompe palabra-por-línea y el hero deja de caber en un pantallazo */
 .hk-display .big { display: block; font-size: clamp(2.6rem, 4.8vw, 4.35rem); }
+/* Línea de apoyo BAJO el claim (jerarquía peso 1 → peso 2: lo grande se lee primero y es autosuficiente) */
+.hk-display .sub { display: block; font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 500; letter-spacing: -0.005em; line-height: 1.4; color: var(--text-muted); margin-top: clamp(10px, 1.4vw, 16px); }
 
 /* Etiqueta vertical en el borde (editorial) */
 .hk-vlabel { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--font-accent); font-weight: var(--fw-bold); font-size: var(--fs-micro); line-height: 1; text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-muted); white-space: nowrap; }

@@ -86,11 +86,11 @@ export default function Home() {
           style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.75rem,3vw,2.75rem) var(--gutter) clamp(1.25rem,2.5vw,2rem)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,0.9fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "center", minHeight: "min(calc(86vh - 68px), 680px)" }}
         >
           <div style={{ minWidth: 0 }}>
-            <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Marketing de performance · Ica → Perú</div>
-            {/* maxWidth en px: el h1 hereda 16px de base, así que "ch" aquí colapsaría el ancho */}
+            <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Marketing de performance</div>
+            {/* Jerarquía tipográfica: el claim grande es AUTOSUFICIENTE (se lee primero); el matiz va debajo con menos peso. maxWidth en px: el h1 hereda 16px, "ch" colapsaría */}
             <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: 680 }}>
-              <span className="lead">Agencia de marketing en Ica</span>
-              <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
+              <span className="big">Convertimos atención en <span style={{ color: "var(--cyan)" }}>ventas</span>.</span>
+              <span className="sub">Agencia de marketing en Ica, para marcas de todo el Perú.</span>
             </h1>
             {/* "El funnel vivo": el mensaje del párrafo, mostrado en vez de leído (texto completo queda visually-hidden dentro) */}
             <div className="hk-enter-3">
@@ -103,7 +103,6 @@ export default function Home() {
             <p className="hk-enter-4" style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
               <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas confiaron</span>
               <span>Respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>&lt;24 h</strong></span>
-              <span>Ica <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>→</strong> todo el Perú</span>
             </p>
           </div>
           <div className="hk-enter-3" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>
