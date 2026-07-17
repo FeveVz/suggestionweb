@@ -20,9 +20,9 @@ type Item = { Icon: typeof MessageCircle; iconBg: string; titulo: string; detall
 const FEED: Item[] = [
   { Icon: MessageCircle, iconBg: "#25D366", titulo: "Nuevo lead por WhatsApp", detalle: "María · “Quiero cotizar el proyecto”" },
   { Icon: CalendarCheck, iconBg: "var(--orange)", titulo: "Cita agendada", detalle: "Mañana 10:30 · sala de ventas" },
-  { Icon: CheckCircle2, iconBg: "var(--cyan)", titulo: "Venta cerrada", detalle: "S/12,500 · lote 14" },
+  { Icon: CheckCircle2, iconBg: "var(--cyan)", titulo: "Venta cerrada", detalle: "S/37,000 · lote F-17" },
   { Icon: MessageCircle, iconBg: "#25D366", titulo: "Nuevo lead por WhatsApp", detalle: "Junior · “Info del plan de redes”" },
-  { Icon: TrendingUp, iconBg: "var(--cyan)", titulo: "CPL bajó a S/9.80", detalle: "Meta Ads · esta semana" },
+  { Icon: TrendingUp, iconBg: "var(--cyan)", titulo: "CPL bajó a S/3.70", detalle: "Meta Ads · esta semana" },
   { Icon: CalendarCheck, iconBg: "var(--orange)", titulo: "Cita agendada", detalle: "Hoy 4:15 p.m. · showroom" },
   { Icon: MessageCircle, iconBg: "#25D366", titulo: "Nuevo lead por WhatsApp", detalle: "Carla · “¿Atienden clínicas?”" },
   { Icon: CheckCircle2, iconBg: "var(--cyan)", titulo: "Venta cerrada", detalle: "S/8,900 · campaña de temporada" },
