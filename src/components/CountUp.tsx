@@ -58,7 +58,8 @@ export default function CountUp({ to, duration = 1600 }: { to: string; duration?
 
   if (target == null) return <span>{to}</span>;
 
-  const formatted = val.toLocaleString("es-PE", {
+  // Math.max + 0 evita el "-0" fugaz que es-PE formatea con signo durante la animación
+  const formatted = (Math.max(0, val) + 0).toLocaleString("es-PE", {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });
