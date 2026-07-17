@@ -4,6 +4,7 @@ import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBa
 import { Section, Btn, TaglineStrip } from "@/components/brand/parts";
 import { CtaForm, Percepcion } from "@/components/brand/interactive";
 import HeroShowcase from "@/components/HeroShowcase";
+import FunnelVivo from "@/components/FunnelVivo";
 import ProofBar from "@/components/ProofBar";
 import ClientLogos from "@/components/ClientLogos";
 import SectorList from "@/components/SectorList";
@@ -91,9 +92,10 @@ export default function Home() {
               <span className="lead">Agencia de marketing en Ica</span>
               <span className="big">que convierte atención en <span style={{ color: "var(--cyan)" }}>ventas</span></span>
             </h1>
-            <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", maxWidth: "48ch", margin: "clamp(16px,2vw,24px) 0 0" }}>
-              <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>Tu problema no es el alcance: es que los clics no se vuelven clientes.</strong> Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>leads</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>citas</strong>, <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>ventas</strong>.
-            </p>
+            {/* "El funnel vivo": el mensaje del párrafo, mostrado en vez de leído (texto completo queda visually-hidden dentro) */}
+            <div className="hk-enter-3">
+              <FunnelVivo />
+            </div>
             <div className="hk-enter-4 hk-hero-ctas" style={{ display: "flex", gap: 14, marginTop: 24, flexWrap: "wrap", alignItems: "center" }}>
               <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
               <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
