@@ -32,7 +32,7 @@ const VISIBLE = 4;
 
 /** Panel de resultados ROTATORIO: la prueba no se apoya en un solo caso. */
 const CASES: { k: string; big: string; sub: string; cells: [string, string][] }[] = [
-  { k: "Caso real · Inmobiliaria Ceinys", big: "S/350K", sub: "en ventas con S/3,000 de pauta", cells: [["350", "leads"], ["20", "citas"], ["8", "cierres"]] },
+  { k: "Caso real · Inmobiliaria Ceinys", big: "S/350,000", sub: "en ventas con S/3,000 de pauta", cells: [["350", "leads"], ["20", "citas"], ["8", "cierres"]] },
   { k: "Eventos · Autoniza", big: "8 autos", sub: "vendidos en 2 eventos (may–jun)", cells: [["3", "autos · 22 may"], ["5", "autos · 25 jun"], ["2", "eventos"]] },
   { k: "Automotriz · Pacífico, Autoniza y Yonda", big: "19 marcas", sub: "de vehículos atendidas", cells: [["19", "marcas"], ["3", "concesionarios"], ["7", "años"]] },
 ];
