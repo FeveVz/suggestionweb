@@ -21,7 +21,7 @@ const CASOS = [
     tag: "Inmobiliario",
     href: "/casos/inmobiliaria-ceinys",
     title: "Inmobiliaria Ceinys",
-    metric: "S/350K",
+    metric: "S/350.000",
     note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
     quote: "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
     author: "Rosario, Jefa de Ventas",

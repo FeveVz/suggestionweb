@@ -70,7 +70,7 @@ export default async function CasoPage({ params }: Params) {
         <div style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2rem,4vw,3rem) var(--gutter)", display: "grid", gridTemplateColumns: `repeat(auto-fit, minmax(160px, 1fr))`, gap: "var(--space-5)" }}>
           {c.stats.map((s) => (
             <div key={s.label}>
-              <div style={{ font: "var(--fw-bold) var(--fs-3xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}><CountUp to={s.valor} /></div>
+              <div style={{ font: "var(--fw-bold) var(--fs-3xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--cyan)" }}><CountUp to={s.valor} locale={s.locale} /></div>
               <p style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>{s.label}</p>
             </div>
           ))}

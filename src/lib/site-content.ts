@@ -32,5 +32,5 @@ export const siteStats = [
   { value: '+50', label: 'Clientes que confían en nosotros' },
   { value: '7', label: 'Años de experiencia' },
   { value: '+350', label: 'Leads en una sola campaña' },
-  { value: 'S/350K', label: 'En ventas generadas' },
+  { value: 'S/350,000', label: 'En ventas generadas' },
 ];

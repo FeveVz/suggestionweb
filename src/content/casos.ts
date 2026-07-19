@@ -13,7 +13,7 @@ export type Caso = {
   metaDescription: string;
   h1: string;
   resumen: string;
-  stats: { valor: string; label: string }[];
+  stats: { valor: string; locale?: string; label: string }[];
   reto: string;
   solucion: { titulo: string; texto: string }[];
   quote?: string;
@@ -31,11 +31,11 @@ export const CASOS_DETALLE: Caso[] = [
     metaTitle: "Caso Ceinys: S/350K en Ventas con S/3,000 en Ads | Suggestion",
     metaDescription:
       "Cómo llevamos a Inmobiliaria Ceinys a S/350K en ventas: 350 leads, 20 visitas y 8 lotes vendidos con S/3,000 en Meta Ads. El caso completo, paso a paso.",
-    h1: "Ceinys: S/350K en ventas con S/3,000 de pauta",
+    h1: "Ceinys: S/350.000 en ventas con S/3,000 de pauta",
     resumen:
       "Una inmobiliaria de Ica con buen producto y poca predictibilidad comercial. Con una sola campaña bien armada —segmentación, landing, creatividades de valorización y seguimiento— el proyecto pasó de esperar compradores a llenarse de citas calificadas.",
     stats: [
-      { valor: "S/350K", label: "En ventas generadas" },
+      { valor: "S/350,000", locale: "es-ES", label: "En ventas generadas" },
       { valor: "350", label: "Leads calificados" },
       { valor: "20", label: "Visitas a sala de ventas" },
       { valor: "8", label: "Lotes vendidos" },
