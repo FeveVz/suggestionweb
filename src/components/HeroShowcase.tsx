@@ -105,7 +105,7 @@ export default function HeroShowcase() {
               {caso.k}
             </span>
             <div style={{ font: "var(--fw-bold) var(--fs-2xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: 8 }}>
-              <CountUp to={caso.big} /> <span style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)" }}>{caso.sub}</span>
+              <CountUp to={caso.big} locale="es-ES" /> <span style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)" }}>{caso.sub}</span>
             </div>
           </motion.div>
           {/* Sparkline que se dibuja */}

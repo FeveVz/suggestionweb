@@ -36,8 +36,8 @@ const SECTORES = [
   { title: "Salud", result: "Agenda llena de pacientes sin quemar tu presupuesto.", href: "/marketing-salud", icon: Stethoscope, shape: 4 },
 ];
 
-const CASOS = [
-  { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350K", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", img: "/assets/casos/ceinys-render.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
+const CASOS: { tag: string; title: string; metric: string; metricLocale?: string; note: string; img: string; alt: string }[] = [
+  { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350,000", metricLocale: "es-ES", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", img: "/assets/casos/ceinys-render.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
   { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 en campañas de demanda directa.", img: "/assets/casos/bonanza-granja.webp", alt: "Galpón de Granjas Bonanza en operación" },
   { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas generadas en una sola campaña, dentro y fuera de temporada.", img: "/assets/sectores/turismo.webp", alt: "Destino turístico en Ica (sector turismo)" },
   { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos con convocatoria, activación y cierre en piso.", img: "/assets/casos/autoniza-evento.webp", alt: "Activación de Autoniza con camioneta Mitsubishi en la Plaza de Armas de Ica" },
@@ -194,7 +194,7 @@ export default function Home() {
               </div>
               <div style={{ padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 14 }}>
                 <div style={{ font: "var(--fw-bold) var(--fs-4xl)/0.95 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
-                  <CountUp to={c.metric} />
+                  <CountUp to={c.metric} locale={c.metricLocale} />
                 </div>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>
                   <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}

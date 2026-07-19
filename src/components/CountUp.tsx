@@ -15,7 +15,7 @@ function parse(s: string) {
   return { prefix: m[1], raw: m[2], suffix: m[3] };
 }
 
-export default function CountUp({ to, duration = 1600 }: { to: string; duration?: number }) {
+export default function CountUp({ to, duration = 1600, locale = "es-PE" }: { to: string; duration?: number; locale?: string }) {
   const { prefix, raw, suffix } = parse(to);
   const target = raw != null ? parseFloat(raw.replace(/,/g, "")) : null;
   const decimals = raw && raw.includes(".") ? raw.split(".")[1].length : 0;
@@ -59,7 +59,7 @@ export default function CountUp({ to, duration = 1600 }: { to: string; duration?
   if (target == null) return <span>{to}</span>;
 
   // Math.max + 0 evita el "-0" fugaz que es-PE formatea con signo durante la animación
-  const formatted = (Math.max(0, val) + 0).toLocaleString("es-PE", {
+  const formatted = (Math.max(0, val) + 0).toLocaleString(locale, {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });
