@@ -32,6 +32,15 @@ export async function POST(req: Request) {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) return NextResponse.json({ ok: false, error: "config" }, { status: 500 });
 
+  // extra (jsonb) reúne los datos del formulario + la atribución de campaña
+  // (de qué anuncio vino el lead). Se acota el tamaño para no dejar un vector de
+  // llenado de BD por el campo abierto.
+  const baseExtra = b.extra && typeof b.extra === "object" ? (b.extra as Record<string, unknown>) : null;
+  const attribution = b.attribution && typeof b.attribution === "object" ? (b.attribution as Record<string, unknown>) : null;
+  let extra: Record<string, unknown> | null =
+    baseExtra || attribution ? { ...(baseExtra || {}), ...(attribution ? { attribution } : {}) } : null;
+  if (extra && JSON.stringify(extra).length > 4000) extra = baseExtra; // descarta atribución anómala, conserva el formulario
+
   const row = {
     tipo: TIPOS.has(s(b.tipo, 20)) ? s(b.tipo, 20) : "contacto",
     nombre,
@@ -40,7 +49,7 @@ export async function POST(req: Request) {
     telefono: telefono || null,
     mensaje: s(b.mensaje, 3000) || null,
     pagina: s(b.pagina, 300) || null,
-    extra: b.extra && typeof b.extra === "object" ? b.extra : null,
+    extra,
   };
 
   const r = await fetch(`${url}/rest/v1/leads`, {

@@ -4,7 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Label, Btn, Blot } from './parts';
-import { leadDedup } from '@/lib/tracking';
+import { leadDedup, getAttribution } from '@/lib/tracking';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
 const WHATSAPP = '51937770159';
@@ -475,6 +475,7 @@ export function CtaForm() {
         mensaje: f.get('objetivo'),
         pagina: window.location.pathname,
         website: f.get('website'),
+        attribution: getAttribution(),
         ...dedup,
       }),
     }).catch(() => {});

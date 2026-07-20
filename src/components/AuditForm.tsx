@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Btn } from "@/components/brand/parts";
-import { track, leadDedup } from "@/lib/tracking";
+import { track, leadDedup, getAttribution } from "@/lib/tracking";
 
 /**
  * Formulario calificador de la auditoría gratis (lead magnet).
@@ -54,6 +54,7 @@ export default function AuditForm() {
         pagina: "/auditoria-gratis",
         website: f.get("website"),
         extra: { web: f.get("web"), inversion: f.get("inversion"), objetivo: f.get("objetivo") },
+        attribution: getAttribution(),
         ...dedup,
       }),
     }).catch(() => {});
