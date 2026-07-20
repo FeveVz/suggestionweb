@@ -111,12 +111,14 @@ const CATEGORIAS_RAW: Servicio[] = [
 ];
 
 /**
- * Las 5 categorías son hubs de NAVEGACIÓN, no de ranking: van `noindex` para
- * evitar canibalizar el head de sus servicios hijos (doc 10 §3.2). Siguen en el
- * menú, el footer y el pilar; `follow` deja fluir el enlace hacia los hijos, que
- * son los canónicos de su keyword.
+ * Las 5 categorías son INDEXABLES: tienen copy propio (256–382 palabras, 4 H2
+ * cada una) y title propio que ataca su keyword de categoría, así que aportan
+ * valor al usuario y al buscador. Antes iban `noindex` para no canibalizar a los
+ * hijos, pero eso dejaba al pilar /servicios enlazando solo a páginas excluidas
+ * y cortaba el flujo de enlace hacia los 16 servicios. Cada hija sigue siendo la
+ * canónica de SU keyword específica; la categoría rankea por el término genérico.
  */
-const CATEGORIAS: Servicio[] = CATEGORIAS_RAW.map((c) => ({ ...c, noindex: true }));
+const CATEGORIAS: Servicio[] = CATEGORIAS_RAW;
 
 const SERVICIOS_LIST: Servicio[] = [
   // ---------- Estrategia y datos ----------

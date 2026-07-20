@@ -6,9 +6,10 @@ import { CASOS_DETALLE } from "@/content/casos";
 import { EQUIPO } from "@/content/equipo";
 
 /**
- * Sitemap dinámico: raíz + servicios (pilar/categorías/16) + sectores
- * (hub/5) + blog (pilar/8 categorías/24 entradas). Las categorías hub son
- * indexables (copy único); si alguna se marca noindex, excluirla aquí.
+ * Sitemap dinámico: raíz + servicios (pilar/5 categorías/16 hijas) + sectores
+ * (hub + los que haya en SECTORS) + blog (pilar/categorías/entradas). Las
+ * categorías hub son indexables (copy único); si alguna se marca noindex,
+ * excluirla aquí. /gracias queda fuera a propósito (noindex, post-conversión).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -28,15 +29,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  // Las 5 categorías hub van noindex (doc 10 §3.2): se excluyen del sitemap.
-  const servicios: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap((c) =>
-    c.children.map((s) => ({
+  // Las 5 categorías hub son indexables (copy y title propios): se incluyen con
+  // prioridad intermedia — por debajo del pilar /servicios y por encima de nada,
+  // ya que la canónica de cada keyword específica sigue siendo el servicio hijo.
+  const servicios: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap((c) => [
+    {
+      url: u(`/servicios/${c.slug}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    ...c.children.map((s) => ({
       url: u(s.href),
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
-    }))
-  );
+    })),
+  ]);
 
   const sectores: MetadataRoute.Sitemap = SECTORS.map((s) => ({
     url: u(s.href),

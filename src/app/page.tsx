@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope } from "lucide-react";
+import { ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope, Sprout, Wine } from "lucide-react";
 import { Section, Btn, TaglineStrip } from "@/components/brand/parts";
 import { CtaForm, Percepcion } from "@/components/brand/interactive";
 import HeroShowcase from "@/components/HeroShowcase";
@@ -34,6 +34,8 @@ const SECTORES = [
   { title: "Turismo", result: "Reservas reales, en temporada y fuera de ella, con costo medido.", href: "/marketing-turismo", icon: Luggage, shape: 6 },
   { title: "Marcas y consumo", result: "Demanda que se vuelve venta, no likes prestados.", href: "/marketing-marcas-consumo", icon: ShoppingBag, shape: 5 },
   { title: "Salud", result: "Agenda llena de pacientes sin quemar tu presupuesto.", href: "/marketing-salud", icon: Stethoscope, shape: 4 },
+  { title: "Agroexportación", result: "Presencia B2B que te pone frente al importador correcto.", href: "/marketing-agroexportacion", icon: Sprout, shape: 3 },
+  { title: "Pisco y vino", result: "Tu tradición, contada para vender dentro y fuera de Ica.", href: "/marketing-pisco-vino", icon: Wine, shape: 7 },
 ];
 
 const CASOS: { tag: string; title: string; metric: string; metricLocale?: string; note: string; img: string; alt: string }[] = [
@@ -236,7 +238,7 @@ export default function Home() {
             Lo que sueles preguntarte antes de empezar.
           </SectionHeading>
           <div style={{ maxWidth: 820 }}>
-            <Faq items={FAQ} />
+            <Faq items={FAQ} emitSchema={false} />
           </div>
         </div>
       </Section>

@@ -1,11 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { Stat } from "@/components/brand/parts";
 import CountUp from "@/components/CountUp";
+import { SECTORES } from "@/content/sectores";
 
 /**
  * Barra de prueba social (doc 16 §5). Banda oscura con la línea del funnel
  * (Lead → Cita → Cierre) y 3–4 métricas reales en grande.
- * Por defecto (agregado, sin repetir los casos): 19 marcas de vehículos · +50 marcas · 5 sectores · 7 años.
+ * Por defecto (agregado, sin repetir los casos): 19 marcas de vehículos · +50 marcas · sectores · 7 años.
+ * El conteo de sectores se deriva de SECTORES para que nunca se desincronice al añadir verticales.
  */
 
 export type ProofStat = { value: string; label: string };
@@ -13,7 +15,7 @@ export type ProofStat = { value: string; label: string };
 const DEFAULT_STATS: ProofStat[] = [
   { value: "19", label: "Marcas de vehículos atendidas" },
   { value: "+50", label: "Marcas que confían en nosotros" },
-  { value: "5", label: "Sectores con estrategia propia" },
+  { value: String(SECTORES.length), label: "Sectores con estrategia propia" },
   { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más" },
 ];
 
