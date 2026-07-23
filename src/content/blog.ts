@@ -124,7 +124,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "como-crear-un-logo",
     categoria: "marca",
-    title: "Cómo Crear un Logo: Gratis, con IA o Profesional | Suggestion",
+    title: "Cómo Crear un Logo: Gratis o con IA | Suggestion",
     description:
       "¿Crear tu logo gratis, con IA o con un profesional? Te mostramos los 3 caminos, sus costos reales y cuál conviene según tu negocio. Guía 2026.",
     h1: "Cómo crear un logo: gratis, con IA o profesional",
@@ -322,7 +322,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "como-crear-una-pagina-web",
     categoria: "conversion",
-    title: "Cómo Crear una Página Web: ¿Tú o un Profesional? | Suggestion",
+    title: "Cómo Crear una Página Web Paso a Paso | Suggestion",
     description:
       "¿Crear tu página web con Wix o contratar a un profesional? Comparamos costo, tiempo y resultados reales para que decidas según tu negocio. 2026.",
     h1: "Cómo crear una página web: hazlo tú vs contratar",
@@ -508,7 +508,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "crear-pagina-web-wix-vs-profesional",
     categoria: "conversion",
-    title: "Página Web con Wix vs Profesional: ¿Cuál Conviene? | Suggestion",
+    title: "Wix vs Web Profesional: ¿Cuál te Conviene? | Suggestion",
     description:
       "¿Hacer tu web con Wix o contratar a un profesional? Comparamos costo, velocidad, SEO y conversión para que elijas según tus objetivos. 2026.",
     h1: "Crear una página web con Wix vs profesional: qué te conviene",
@@ -583,7 +583,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "comportamiento-del-consumidor-peruano",
     categoria: "psicologia-de-mercado",
-    title: "Comportamiento del Consumidor Peruano: Cómo Decide | Suggestion",
+    title: "Comportamiento del Consumidor Peruano | Suggestion",
     description:
       "Cómo decide de compra el consumidor peruano, qué lo motiva y cómo adaptar tu marketing a su comportamiento real. Claves de segmentación local.",
     h1: "Comportamiento del consumidor peruano: cómo decide tu cliente",
@@ -693,7 +693,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "marketing-para-restaurantes",
     categoria: "sectores",
-    title: "Marketing para Restaurantes: Estrategias que Llenan | Suggestion",
+    title: "Marketing para Restaurantes que Llena Mesas | Suggestion",
     description:
       "Estrategias de marketing para restaurantes que llenan mesas en los días flojos: redes, promociones, reseñas y publicidad local. Guía práctica.",
     h1: "Estrategias de marketing para restaurantes que llenan mesas",
@@ -763,7 +763,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "posicionamiento-de-marca",
     categoria: "marca",
-    title: "Posicionamiento de Marca: Qué Es y Cómo Lograrlo | Suggestion",
+    title: "Posicionamiento de Marca: Guía Práctica | Suggestion",
     description:
       "Qué es el posicionamiento de marca, por qué define tu precio y tu cliente, y cómo lograrlo paso a paso. La base de toda marca que vende. 2026.",
     h1: "Posicionamiento de marca: qué es y cómo lograrlo",
@@ -837,7 +837,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "marketing-inmobiliario-ejemplos",
     categoria: "inmobiliario",
-    title: "Marketing Inmobiliario: Ejemplos que Venden Lotes | Suggestion",
+    title: "Marketing Inmobiliario: Ejemplos que Venden | Suggestion",
     description:
       "Ejemplos reales de marketing inmobiliario que generan citas y ventas: mensajes, formatos y un caso de 8 lotes vendidos con S/3,000. 2026.",
     h1: "Marketing inmobiliario: ejemplos de campañas que sí venden lotes",
@@ -1045,7 +1045,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "marketing-para-agroexportadoras",
     categoria: "sectores",
-    title: "Marketing para Agroexportadoras: Cómo Abrir Mercados | Suggestion",
+    title: "Marketing para Agroexportadoras: Abrir Mercados | Suggestion",
     description:
       "Cómo una agroexportadora abre mercados con marketing: web B2B en inglés, presencia en ferias y contenido que genera confianza en el importador. 2026.",
     h1: "Marketing para agroexportadoras: cómo abrir mercados internacionales",

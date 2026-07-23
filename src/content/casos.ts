@@ -28,7 +28,7 @@ export const CASOS_DETALLE: Caso[] = [
     cliente: "Inmobiliaria Ceinys",
     sector: "Inmobiliario",
     sectorHref: "/marketing-inmobiliario",
-    metaTitle: "Caso Ceinys: S/350K en Ventas con S/3,000 en Ads | Suggestion",
+    metaTitle: "Caso Ceinys: S/350K en Ventas con S/3,000 | Suggestion",
     metaDescription:
       "Cómo llevamos a Inmobiliaria Ceinys a S/350K en ventas: 350 leads, 20 visitas y 8 lotes vendidos con S/3,000 en Meta Ads. El caso completo, paso a paso.",
     h1: "Ceinys: S/350.000 en ventas con S/3,000 de pauta",

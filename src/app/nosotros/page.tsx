@@ -9,7 +9,9 @@ import { site, whatsappLink, absoluteUrl, ORG_ID } from "@/lib/site";
 import { EQUIPO } from "@/content/equipo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Agencia de Marketing en Ica | Nosotros | Suggestion",
+  // La frase exacta se reserva a la portada; aquí va en segundo plano para
+  // conservar relevancia sin competir de frente con ella.
+  title: "Nosotros | La Agencia de Performance de Ica | Suggestion",
   description:
     "Somos Suggestion, agencia de performance en Ica. Convertimos atención en ventas con un método propio por vertical. Conoce cómo trabajamos.",
   path: "/nosotros",

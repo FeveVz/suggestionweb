@@ -13,6 +13,9 @@ export type Talento = {
   /** Nombre corto para saludos ("Hola Abraham…"). */
   corto: string;
   rol: string;
+  /** Rol abreviado SOLO para el <title> (Google corta pasando ~60 caracteres).
+   *  Si no se define, se usa `rol`. No afecta a lo que se ve en la tarjeta. */
+  rolSeo?: string;
   bio: string;
   iniciales: string;
   especialidades: string[];
@@ -33,6 +36,7 @@ export const EQUIPO: Talento[] = [
     nombre: "Abraham Velásquez",
     corto: "Abraham",
     rol: "Gerente General · Cofundador",
+    rolSeo: "Gerente General",
     bio: "Dirige la estrategia comercial y de performance de cada cuenta. Siete años convirtiendo la atención de los mercados de Ica y Perú en ventas medibles.",
     iniciales: "AV",
     especialidades: ["Estrategia comercial", "Marketing de performance", "Negociación B2B"],
@@ -44,6 +48,7 @@ export const EQUIPO: Talento[] = [
     nombre: "María Teresa Vera",
     corto: "María Teresa",
     rol: "Cofundadora · Administradora",
+    rolSeo: "Cofundadora",
     bio: "Administración y operación: que cada proyecto salga a tiempo, en orden y con los números claros.",
     iniciales: "MV",
     especialidades: ["Administración", "Operaciones", "Gestión de proyectos"],
@@ -54,6 +59,7 @@ export const EQUIPO: Talento[] = [
     nombre: "Cristofer Amable",
     corto: "Cristofer",
     rol: "Análisis de mercado y tendencias",
+    rolSeo: "Análisis de mercado",
     bio: "Investigación, datos y tendencias que guían cada estrategia antes de invertir un sol en pauta.",
     iniciales: "CA",
     especialidades: ["Investigación de mercado", "Análisis de datos", "Tendencias"],
@@ -94,6 +100,7 @@ export const EQUIPO: Talento[] = [
     nombre: "Nicolás Montoya",
     corto: "Nicolás",
     rol: "Logística y dirección de eventos",
+    rolSeo: "Eventos y logística",
     bio: "Coordina la logística y dirige las activaciones y eventos en calle, del plano al día D.",
     iniciales: "NM",
     especialidades: ["Eventos y activaciones", "Logística", "Producción en campo"],

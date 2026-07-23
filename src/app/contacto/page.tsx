@@ -9,7 +9,9 @@ import { contactPageSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contacto | Agencia de Marketing en Ica | Suggestion",
+  // Suelta la frase comercial: con 62 palabras esta página nunca debe ser la
+  // que Google muestre para "agencia de marketing en Ica" (esa es la portada).
+  title: "Contacto | Hablemos de tu Proyecto | Suggestion",
   description:
     "Cuéntanos de tu negocio y te damos un diagnóstico honesto y claro de tu marketing. Agenda una llamada o escríbenos por WhatsApp hoy mismo.",
   path: "/contacto",

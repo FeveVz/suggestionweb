@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = getTalento(slug);
   if (!t) return {};
   return buildMetadata({
-    title: `${t.nombre} — ${t.rol} | ${site.name}`,
+    title: `${t.nombre} | ${t.rolSeo ?? t.rol} | ${site.name}`,
     description: `${t.bio} Guarda el contacto de ${t.corto} o escríbele por WhatsApp.`,
     path: `/equipo/${t.slug}`,
   });

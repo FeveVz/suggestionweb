@@ -22,7 +22,11 @@ import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Agencia de Marketing Digital en Ica y Perú | Suggestion",
+  // Frase exacta al inicio: la portada es la única que debe competir por
+  // "agencia de marketing en Ica" (keyword comercial nº1). Se quita "Digital"
+  // —que rompía la coincidencia exacta— y se cede ese término a
+  // /servicios/marketing-digital, su dueña natural.
+  title: "Agencia de Marketing en Ica y Perú | Suggestion",
   description:
     "Suggestion es la agencia de marketing en Ica que convierte atención en ventas: leads, citas y cierres medibles, en Ica y todo el Perú. Agenda una llamada hoy.",
   path: "/",

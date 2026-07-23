@@ -8,7 +8,9 @@ import type { Servicio } from "./types";
 
 /** Pilar /servicios (doc 09 §A0). Página propia, no [slug]. */
 export const SERVICIOS_PILAR = {
-  metaTitle: "Servicios de Marketing Digital en Ica y Perú | Suggestion",
+  // Intención de catálogo, no de keyword raíz: deja de duplicar el patrón de la
+  // portada y cede "marketing digital en Ica" a /servicios/marketing-digital.
+  metaTitle: "Servicios de Marketing y Publicidad | Suggestion",
   metaDescription:
     "Todos nuestros servicios de marketing, de performance a BTL e imprenta. Todo tu marketing bajo un mismo método: de la estrategia al cierre. Agenda hoy.",
   h1: "Servicios de marketing que convierten en ventas",
