@@ -17,10 +17,6 @@ export function organizationSchema(): Json {
     name: site.name,
     legalName: site.legalName,
     taxID: site.ruc,
-    founder: [
-      { "@type": "Person", name: "Abraham Velásquez Aquije", jobTitle: "Gerente General" },
-      { "@type": "Person", name: "María Teresa Vera García", jobTitle: "Cofundadora y Administradora" },
-    ],
     description: site.description,
     url: SITE_URL,
     logo: absoluteUrl(site.logo),
