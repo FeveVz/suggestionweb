@@ -66,6 +66,24 @@ export type Servicio = {
 };
 
 /** Sector vertical (5). URLs a raíz, p. ej. /marketing-inmobiliario. */
+/** Página de cobertura por ciudad (/agencia-de-marketing-en-<slug>). */
+export type Ciudad = {
+  slug: string;
+  nombre: string;
+  metaTitle: string;
+  metaDescription: string;
+  h1: string;
+  hero: string;
+  cta: string;
+  proof?: string;
+  /** Párrafo propio sobre cómo se atiende esa ciudad desde Ica. */
+  cobertura: string;
+  secciones: Seccion[];
+  serviciosQueUsa: string[];
+  faq: Faq[];
+  cierre: Cierre;
+};
+
 export type Sector = {
   slug: string;
   nombre: string;

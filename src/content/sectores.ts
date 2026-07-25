@@ -72,14 +72,54 @@ export const SECTORES: Sector[] = [
       "Caso Pacífico Motors: operamos los planes de marketing de su red de concesionarios (Mazda, Suzuki, Subaru, Changan, JAC, Renault y más) en Ica y Cusco.",
     secciones: [
       {
-        h2: "Publicidad para venta de autos",
+        h2: "¿Por qué tus leads de autos no llegan al piso de venta?",
         parrafo:
-          "Mensajes y ofertas que mueven la decisión: financiamiento, bono, modelo del mes. Lo que tu comprador necesita oír para agendar.",
+          "La mayoría de concesionarios no tiene un problema de anuncios: tiene un problema de filtro. El patrón típico: cien formularios, treinta llamadas que contestan, tres personas que llegan al piso. El resto solo estaba mirando. El marketing automotriz en Ica que hacemos ataca ese hueco: menos volumen y más leads (prospectos con nombre, teléfono y modelo de interés) que sí pueden pagar la cuota.",
       },
       {
-        h2: "Leads para concesionarios",
+        h2: "Marketing automotriz paso a paso: del anuncio a la prueba de manejo",
         parrafo:
-          "Generación y calificación de prospectos conectada a tu equipo comercial, para que ninguna oportunidad se quede sin llamada.",
+          "Armamos cada campaña con un solo objetivo: que alguien se suba al vehículo. Definimos qué modelo empujar, con qué oferta y a qué público. Pautamos en Meta y en Google, cada uno en su rol: Meta despierta el interés, Google captura al que ya está buscando tu marca. El anuncio no pide comprar, pide agendar la prueba de manejo. Y el formulario lleva dos o tres preguntas que ya separan al comprador del curioso.",
+      },
+      {
+        h2: "El comprador no decide por el auto: decide por la cuota",
+        parrafo:
+          "En Perú la conversación de venta arranca en el financiamiento. Por eso ponemos adelante lo que de verdad mueve: cuota inicial, bono, mantenimiento incluido, modelo del mes. Un anuncio que solo muestra el vehículo compite contra todos los demás; uno que muestra la condición atrae solo a quien puede tomarla. La oferta la trabajamos contigo antes de diseñar nada: una pieza bonita sobre una oferta débil no vende.",
+      },
+      {
+        h2: "Tu asesor recibe el prospecto en el celular, no en un Excel al día siguiente",
+        parrafo:
+          "El interesado en un auto se enfría rápido: quien consulta hoy visita otros dos concesionarios esta semana. Conectamos la campaña con tu CRM (el sistema donde queda registrado cada prospecto y su seguimiento) y el contacto llega al asesor al instante, con el modelo que pidió y la campaña de la que salió. Encima corren recordatorios para que nadie se quede sin segundo ni tercer intento. Tú ves quién llamó, quién no y cuánto demoró.",
+      },
+      {
+        h2: "Camiones, livianos y línea amarilla: 19 marcas de vehículos trabajadas",
+        parrafo:
+          "Llevamos 19 marcas de vehículos atendidas entre livianos, camiones y línea amarilla —la maquinaria pesada de construcción—, incluida XCMG. No es lo mismo vender una camioneta familiar que una excavadora: cambia el comprador, el plazo y quién firma. En livianos decide una familia en semanas. En camiones y maquinaria decide un gerente, con evaluación de crédito, ficha técnica y respaldo de repuestos sobre la mesa. Ya sabemos qué mensaje va para cada uno.",
+      },
+      {
+        h2: "Autoniza: 8 autos vendidos en dos eventos",
+        parrafo:
+          "Alquilar el local, colgar banderolas y esperar que caiga gente es la forma más cara de no vender. Con Autoniza invertimos el orden: primero llenamos la lista de asistentes con perfiles que califican, después montamos la activación con captura de datos y dejamos a los asesores con la oferta del día en la mano. Salieron 3 autos vendidos el 22 de mayo y 5 el 25 de junio: ocho unidades en dos fechas.",
+      },
+      {
+        h2: "¿Cómo se mide el marketing automotriz? En pruebas de manejo, no en clics",
+        parrafo:
+          "El alcance y los clics no dicen nada de tu negocio. Reportamos cuántos prospectos entraron, cuántos fueron contactados, cuántas pruebas de manejo se agendaron, cuántas se cumplieron y cuántas unidades se entregaron. De ahí sale el número que importa: cuánto costó cada prueba de manejo y cuánto costó cada venta. Si ese costo sube, se ve en la semana y se corrige. Y si una campaña no funciona te lo decimos, aunque incomode.",
+      },
+      {
+        h2: "La posventa también vende: taller, repuestos y recompra",
+        parrafo:
+          "El concesionario que solo mide unidades nuevas deja plata sobre la mesa. Trabajamos campañas de mantenimiento por kilometraje, recordatorios de servicio, promociones de repuestos y llantas, y reactivación de quienes compraron hace tres o cuatro años y ya están para cambiar. Tu base de clientes es el público más barato que tienes: ya te conocen y ya te compraron. En la mayoría de concesionarios esa base está muerta en una hoja de cálculo.",
+      },
+      {
+        h2: "¿Por qué una agencia de marketing automotriz en Ica?",
+        parrafo:
+          "Porque conocemos el piso de venta por dentro y el mercado por fuera. Sabemos cómo la campaña agrícola de la región mueve la compra de camionetas y de camiones, y qué fines de semana vale la pena un evento. Estamos a minutos de tu concesionario para grabar las unidades, cubrir una activación o sentarnos con tu jefe de ventas cuando el número no sale. Eso no lo reemplaza una llamada desde Lima.",
+      },
+      {
+        h2: "Qué incluye trabajar con nosotros",
+        parrafo:
+          "Un responsable de cuenta que conoce tu operación y te contesta. Estrategia y calendario de campañas por modelo y por mes. Producción de las piezas: foto y video de tus unidades en tu propio piso, no imágenes de catálogo. Puesta en marcha del CRM y del seguimiento comercial junto a tu equipo. Y un reporte mensual con prospectos, pruebas de manejo, cierres y costo por unidad, revisado contigo en reunión.",
       },
     ],
     serviciosQueUsa: [
@@ -90,8 +130,32 @@ export const SECTORES: Sector[] = [
     ],
     faq: [
       {
+        q: "¿Cuánto debo invertir al mes?",
+        a: "Depende de cuántas unidades quieras mover y del margen que deja cada una. No vendemos paquetes cerrados: calculamos cuántas pruebas de manejo necesitas para tu meta y cuánto costaría cada una en tu mercado. De ahí sale el presupuesto. Si no cierra contra tu margen, te lo decimos antes de que firmes.",
+      },
+      {
+        q: "¿En cuánto tiempo se ven resultados?",
+        a: "Los primeros prospectos llegan en los primeros días. Los cierres siguen el ritmo de compra del vehículo: en livianos, semanas; en camiones y línea amarilla, meses, porque hay evaluación de crédito de por medio. No prometemos plazos garantizados, pero desde la primera semana tienes números reales para saber si vamos bien.",
+      },
+      {
         q: "¿Cómo bajar el costo por prueba de manejo?",
-        a: "Con segmentación precisa, creatividades que filtran al curioso y un seguimiento rápido. Menos leads basura, más test drives reales.",
+        a: "Con segmentación precisa, creatividades que filtran al curioso y un seguimiento rápido. Menos leads basura, más pruebas de manejo reales. Y la palanca más grande casi nunca está en el anuncio: está en cuánto demora tu asesor en llamar.",
+      },
+      {
+        q: "¿Trabajan con concesionarios fuera de Ica?",
+        a: "Sí. Operamos para todo el Perú con el mismo método: campaña, calificación, agenda y reporte. Para eventos y grabaciones viajamos a tu piso de venta; el resto se maneja a distancia con reuniones fijas. Escríbenos al +51 937 770 159.",
+      },
+      {
+        q: "¿Pueden llevar la marca y el concesionario al mismo tiempo?",
+        a: "Sí, y es lo más frecuente. Respetamos el manual y las piezas oficiales del fabricante, y encima construimos la capa local: stock disponible, oferta del mes, tus asesores y la ubicación de tu piso. Si la marca aporta fondos de publicidad compartida, ajustamos las piezas a sus reglas.",
+      },
+      {
+        q: "¿Hacen marketing de posventa o solo de venta de unidades?",
+        a: "Las dos. Mantenimiento, repuestos, llantas, recordatorios de servicio y reactivación de tu base para la recompra. Suele ser la parte con mejor retorno, porque le hablas a gente que ya te compró y ya confía en tu taller.",
+      },
+      {
+        q: "¿Trabajan solo autos o también camiones y maquinaria?",
+        a: "Las tres líneas. Entre livianos, camiones y línea amarilla llevamos 19 marcas de vehículos, incluida XCMG. El comprador de maquinaria pesada pide otra conversación —ficha técnica, repuestos, respaldo del taller y financiamiento— y ese contenido lo preparamos con tu equipo técnico.",
       },
     ],
     cierre: { h2: "Del clic al cierre en piso", cta: "Agenda una llamada" },

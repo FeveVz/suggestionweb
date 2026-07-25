@@ -4,7 +4,7 @@
  * Cada entrada deriva a su money page y enlaza a hermanas del cluster.
  */
 
-import type { Seccion } from "./types";
+import type { Seccion, Faq } from "./types";
 
 export type BlogCategoria = {
   slug: string;
@@ -24,6 +24,9 @@ export type BlogPost = {
   excerpt: string;
   date: string;
   secciones: Seccion[];
+  /** Preguntas frecuentes del post. Emiten FAQPage (rich snippet) y capturan
+   *  las "Otras preguntas de los usuarios" de Google. Opcional. */
+  faq?: Faq[];
   cierre: string;
   moneyPage: { label: string; href: string };
   relacionados?: string[];
@@ -247,35 +250,120 @@ export const BLOG_POSTS: BlogPost[] = [
       "Qué es el marketing digital, cómo funciona de verdad y qué canales lo componen. Guía 2026 para que dejes de medir likes y empieces a medir ventas.",
     h1: "Qué es el marketing digital y cómo funciona",
     excerpt:
-      "El marketing digital es usar canales digitales —búsqueda, redes, web, email— para atraer clientes, convertirlos y fidelizarlos. Suena simple, pero la mayoría lo hace mal por una razón: mide likes en vez de ventas.",
+      "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para atraer clientes, convertirlos y fidelizarlos. Suena simple, pero la mayoría lo hace mal por una razón: mide likes en vez de ventas. Esta es la versión sin humo, con lo que cuesta empezar en Perú y lo que puedes esperar de verdad.",
     date: "2026-02-04",
     secciones: [
       {
-        h2: "Cómo funciona (el embudo, sin tecnicismos)",
-        parrafo: "Todo marketing digital que vende sigue tres etapas. Cuando una etapa falla, todo el embudo se cae; por eso no sirve tener muchos seguidores si nadie agenda.",
-        bullets: [
-          { titulo: "Atraer", texto: "que la persona correcta te descubra (pauta, SEO, contenido, redes)." },
-          { titulo: "Convertir", texto: "que esa visita se vuelva contacto o venta (landing, oferta, seguimiento)." },
-          { titulo: "Fidelizar", texto: "que vuelva a comprar y te recomiende (email, CRM, comunidad)." },
-        ],
-      },
-      {
-        h2: "Los canales que lo componen",
-        bullets: [
-          { titulo: "Publicidad digital (pauta)", texto: "Google Ads y Meta Ads." },
-          { titulo: "SEO", texto: "aparecer en Google sin pagar por clic." },
-          { titulo: "Redes sociales", texto: "comunidad y contenido." },
-          { titulo: "Web y CRO", texto: "la página que convierte." },
-          { titulo: "Email y automatización", texto: "seguimiento que cierra." },
-        ],
-      },
-      {
-        h2: "El error más común",
+        h2: "¿Qué es el marketing digital, en una frase?",
         parrafo:
-          "Medir vanidad: alcance, likes, seguidores. Esos números no pagan la planilla. Lo que importa es el CPL (costo por lead), el ROAS (retorno de la pauta) y los cierres.",
+          "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para que la persona correcta te encuentre, te deje un dato y termine comprando. No es una tecnología ni una moda: es el trabajo comercial de siempre, hecho donde tu cliente ya pasa el día. La diferencia con un volante o un panel es que aquí cada paso deja rastro: sabes cuántos vieron el anuncio, cuántos escribieron y cuántos compraron. Ese rastro lo vuelve útil, y también incómodo para quien vende humo.",
+      },
+      {
+        h2: "Qué NO es marketing digital (aunque te lo vendan así)",
+        parrafo:
+          "Postear tres veces por semana no es una estrategia. Es producción de contenido: una pieza del juego, no el juego.",
+        bullets: [
+          { titulo: "No es solo redes", texto: "Instagram y TikTok son un canal más. Si toda tu venta depende de un algoritmo ajeno, tienes un riesgo, no una estrategia." },
+          { titulo: "No es suerte", texto: "Una campaña que funciona se puede explicar: a quién le habló y qué le ofreció." },
+          { titulo: "No arregla un mal producto", texto: "La pauta acelera lo que ya funciona. Si tu precio o tu atención fallan, solo logra que más gente se entere." },
+        ],
+      },
+      {
+        h2: "Cómo funciona: atraer, convertir, fidelizar",
+        parrafo:
+          "Todo lo que vende en digital sigue tres etapas. Cuando una falla, se cae la cadena entera: por eso no sirve tener muchos seguidores si nadie agenda, ni buenos vendedores si no les llega nadie. Antes de invertir más, revisa cuál de las tres está rota. Casi siempre es la segunda.",
+        bullets: [
+          { titulo: "Atraer", texto: "que la persona correcta te descubra (pauta, buscador, contenido, redes)." },
+          { titulo: "Convertir", texto: "que esa visita se vuelva contacto o venta (landing o página de aterrizaje, oferta, seguimiento)." },
+          { titulo: "Fidelizar", texto: "que vuelva a comprar y te recomiende (correo, base de clientes, comunidad)." },
+        ],
+      },
+      {
+        h2: "¿Para qué sirve cada canal?",
+        parrafo:
+          "Cada canal hace un trabajo distinto. Tratarlos a todos igual es el error más caro.",
+        bullets: [
+          { titulo: "Buscador: SEO y Google Ads", texto: "el SEO te posiciona sin pagar por clic; Google Ads compra el lugar. Ambos capturan a quien ya busca lo que vendes." },
+          { titulo: "Redes y pauta en Meta", texto: "despiertan interés en quien no te buscaba. Llenan el embudo (el recorrido desde que te descubre hasta que compra)." },
+          { titulo: "WhatsApp", texto: "en Perú es donde se cierra. Un lead (contacto interesado) que escribe y no recibe respuesta en minutos se enfría." },
+          { titulo: "Correo", texto: "el canal más barato para la segunda venta y para recuperar cotizaciones a medias." },
+          { titulo: "Tu web", texto: "la única propiedad que sí controlas. El resto es alquilado." },
+        ],
+      },
+      {
+        h2: "Contenido o publicidad pagada: ¿por dónde empiezo?",
+        parrafo:
+          "No compiten, se turnan. El contenido —artículos, videos, fichas de producto— acumula: lo que publicas hoy puede seguir trayendo gente en un año, pero tarda meses en despegar. La pauta se enciende y se apaga: el día que dejas de pagar, deja de llegar. Si necesitas ventas este mes, empieza por pauta. Si además quieres dejar de depender de ella, construye contenido en paralelo desde el primer día.",
+      },
+      {
+        h2: "¿Cómo se mide de verdad el marketing digital?",
+        parrafo:
+          "Alcance, likes y seguidores describen el ruido, no el negocio. Los números que deciden si sigues invirtiendo se leen en cadena. Si no puedes seguir un contacto desde el anuncio hasta la boleta, estás adivinando.",
+        bullets: [
+          { titulo: "Leads", texto: "contactos con nombre y teléfono, no visitas." },
+          { titulo: "Citas o visitas", texto: "cuántos de esos leads llegaron a la sala, al local o a la llamada." },
+          { titulo: "Cierres", texto: "cuántos compraron. Es el único número que va al banco." },
+          { titulo: "CPL y retorno", texto: "el CPL es lo que costó cada contacto; el retorno, cuántos soles vendiste por cada sol invertido." },
+        ],
+      },
+      {
+        h2: "¿Cuánto cuesta empezar en Perú?",
+        parrafo:
+          "Son dos bolsillos distintos y conviene no mezclarlos: lo que le pagas a quien ejecuta y lo que le pagas a la plataforma. Lo segundo es la pauta y se va completo en anuncios. En Suggestion un plan mensual arranca en S/1,500 y una landing también en S/1,500; la pauta va aparte. Como referencia de lo que rinde una inversión modesta bien dirigida: Granjas Bonanza cerró 15 contratos con S/2,500 y la inmobiliaria Ceinys llegó a S/350K con S/3,000 en Meta Ads. No es promesa: es lo que pasó en esos casos.",
+      },
+      {
+        h2: "Qué esperar en los primeros 90 días",
+        parrafo:
+          "Asumiendo que tu producto y tu atención ya funcionan, esto es lo razonable. El posicionamiento en buscadores va en otra escala: de 6 a 12 meses.",
+        sub: [
+          { h3: "Mes 1: puesta en marcha", texto: "Se instala la medición, se arma la oferta y salen las primeras campañas. Llegan leads, pero caros: la plataforma recién aprende a quién mostrarte." },
+          { h3: "Mes 2: ajuste", texto: "Ya sabes qué anuncio y qué público responden. Se corta lo que no rinde y se concentra el presupuesto: el CPL baja y aparecen los primeros cierres." },
+          { h3: "Mes 3: lectura real", texto: "Recién aquí hay datos para saber si el canal te funciona. Con tres meses decides con criterio; con tres semanas, no." },
+        ],
+      },
+      {
+        h2: "Los errores que más plata le cuestan a una pyme",
+        bullets: [
+          { titulo: "Mandar el tráfico al perfil de Instagram", texto: "sin un lugar donde dejar el dato, pagas por visitas que se evaporan." },
+          { titulo: "Responder tarde", texto: "buena parte del resultado se decide en la velocidad de respuesta, no en el anuncio." },
+          { titulo: "Cambiar de rumbo cada dos semanas", texto: "apagar una campaña a los 10 días es pagar el aprendizaje y no cobrarlo." },
+          { titulo: "No medir el cierre", texto: "sin saber cuántos leads compraron, optimizas por el lead más barato, que casi nunca es el mejor." },
+          { titulo: "Competir solo por precio", texto: "si tu único argumento es el descuento, atraes a quien se irá con el siguiente." },
+        ],
+      },
+      {
+        h2: "¿Lo haces tú o contratas una agencia?",
+        parrafo:
+          "Hacerlo tú tiene sentido si tienes tiempo real —no “los ratos libres”—, ticket bajo y un solo canal. Tu primer mes de pauta será el curso pagado. Contratar tiene sentido cuando equivocarte cuesta más que el honorario: tickets altos, varios canales o un equipo comercial esperando leads que no llegan. Lo que compras no es saber usar el administrador de anuncios; es criterio para decidir dónde no gastar. Si alguien te promete el primer puesto en Google o retorno garantizado, ya sabes qué te está vendiendo.",
       },
     ],
-    cierre: "En Suggestion trabajamos el funnel completo —lead, cita, cierre—, no métricas de vanidad.",
+    faq: [
+      {
+        q: "¿Qué es el marketing digital en palabras simples?",
+        a: "Es vender por internet de forma ordenada: que te encuentren en el buscador o en redes, que te dejen un dato y que alguien haga seguimiento hasta la venta. Lo digital es el canal; el objetivo comercial es el de siempre.",
+      },
+      {
+        q: "¿Cuáles son los tipos de marketing digital?",
+        a: "Posicionamiento en buscadores (SEO), publicidad pagada en Google y Meta, redes sociales, contenidos, correo y WhatsApp. Casi ningún negocio necesita todos: se eligen dos o tres según dónde está tu cliente y cuánto cuesta tu producto.",
+      },
+      {
+        q: "¿Sirve para un negocio pequeño en Ica?",
+        a: "Sí. Con presupuestos moderados hemos visto resultados concretos en agro, inmobiliaria y hotelería desde Ica. Lo que no perdona es la falta de seguimiento: si nadie contesta el WhatsApp, no hay campaña que lo salve.",
+      },
+      {
+        q: "¿En cuánto tiempo veo resultados?",
+        a: "Los primeros leads pueden llegar en la primera semana de pauta. Saber si el canal es rentable toma unos 90 días: hay que ver cuántos de esos contactos cerraron. El SEO es más lento, de 6 a 12 meses.",
+      },
+      {
+        q: "¿Necesito página web o me basta con redes?",
+        a: "Puedes empezar con redes, pero vas a topar techo. Sin página propia no mides bien, no apareces en el buscador y dependes de una cuenta ajena. Una landing simple resuelve lo básico.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre marketing digital y publicidad digital?",
+        a: "La publicidad digital es una parte del todo: el tramo que se paga por aparecer. El marketing digital suma la estrategia, el contenido, la web, la medición y el seguimiento posventa.",
+      },
+    ],
+    cierre: "Ya sabes qué es el marketing digital; falta saber qué aplica en tu caso. Esa conversación la tenemos gratis: revisamos tus números y te decimos qué canal te conviene primero —y qué todavía no vale la pena pagar.",
     moneyPage: { label: "Agenda tu diagnóstico gratuito", href: "/servicios/marketing-digital" },
     relacionados: ["cuanto-invertir-en-ads-peru", "que-es-un-lead"],
   },
@@ -881,22 +969,110 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-06-03",
     secciones: [
       {
-        h2: "La estrategia de preventa",
+        h2: "¿Por qué la preventa es la etapa donde más se vende un proyecto inmobiliario?",
+        parrafo:
+          "Vender un proyecto inmobiliario en preventa funciona porque el comprador entra al precio más bajo de toda la vida del proyecto. Conforme avanza la obra, el precio sube: ese es tu argumento más fuerte. A ti te da flujo para construir y te confirma, con plata sobre la mesa, si el precio está bien puesto. Cuando la preventa no se mueve, el problema casi nunca es el mercado: es el mensaje o el proceso comercial.",
+      },
+      {
+        h2: "¿Cómo se vende algo que todavía no está construido?",
         bullets: [
-          { titulo: "Vende la valorización, no el ladrillo", texto: "en preventa el argumento es “el precio sube cuando avance la obra”." },
-          { titulo: "Genera urgencia real", texto: "precios y condiciones de lanzamiento por etapas: quien espera, paga más." },
-          { titulo: "Construye confianza", texto: "renders, avance, respaldo de la constructora y casos previos reducen el miedo a comprar sobre plano." },
-          { titulo: "Capta y agenda rápido", texto: "pauta segmentada → landing del proyecto → cita. Sin fricción." },
-          { titulo: "Sigue sin descanso", texto: "el seguimiento automatizado mantiene caliente al lead." },
+          { titulo: "Vende la valorización, no el ladrillo", texto: "el argumento es “el precio sube cuando avance la obra”. Muéstralo con la escalera de precios por etapa." },
+          { titulo: "Genera urgencia real", texto: "condiciones de lanzamiento por etapas: quien espera, paga más. Si la urgencia es inventada, el comprador la huele." },
+          { titulo: "Construye confianza", texto: "renders, avance de obra y entregas anteriores bajan el miedo a comprar sobre plano." },
+          { titulo: "Capta y agenda rápido", texto: "pauta segmentada, página del proyecto y cita cerrada. Cada paso de más te cuesta interesados." },
+          { titulo: "Sigue sin descanso", texto: "el seguimiento ordenado sostiene al interesado hasta que pisa el terreno." },
         ],
       },
       {
-        h2: "El error que hace perder lotes",
+        h2: "Los dos compradores de una preventa (y qué mueve a cada uno)",
         parrafo:
-          "Tratar la preventa como venta normal: esperar que el interesado decida solo. Sin seguimiento estructurado, los leads de mayor valor se enfrían y compran en otro proyecto.",
+          "En un mismo proyecto conviven dos personas distintas. Si les hablas igual, pierdes a las dos.",
+        sub: [
+          { h3: "El que compra para vivir", texto: "Le importa la ubicación, la seguridad, cuánto se demora al colegio o al trabajo y, sobre todo, la cuota: quiere saber si le alcanza. Le vendes cómo será su vida ahí, con plazos claros y papeles en regla." },
+          { h3: "El inversionista", texto: "Decide con números: a cuánto entra hoy, a cuánto podría vender o alquilar después y en cuánto tiempo. Muéstrale la escalera de precios por etapa, el avance comprometido y qué se está construyendo alrededor." },
+          { h3: "Un mensaje para cada uno", texto: "No hagas una sola pieza para los dos. Separa campañas y mide cuál trae mejores citas: casi siempre un público sostiene la venta y el otro solo hace ruido." },
+        ],
+      },
+      {
+        h2: "¿Qué necesitas antes de lanzar la preventa de tu proyecto?",
+        parrafo:
+          "Lanzar sin material es la forma más rápida de quemar presupuesto. Antes del primer sol en pauta:",
+        bullets: [
+          { titulo: "Render y recorrido", texto: "imágenes del proyecto terminado y video del terreno. El drone vende ubicación y entorno como ninguna foto." },
+          { titulo: "Precio de lanzamiento por etapas", texto: "el precio de hoy solo convence si se ve cuánto costará en la siguiente etapa." },
+          { titulo: "Plan de pagos escrito", texto: "inicial, número de cuotas y tipo de financiamiento. La primera pregunta real es “¿cómo pago?”." },
+          { titulo: "Sala de ventas o punto de atención", texto: "un lugar físico, aunque sea un módulo en el terreno. La preventa se cierra cara a cara." },
+          { titulo: "Documentación a la mano", texto: "partida, licencias y estado del trámite. Comprar sobre plano da miedo; los papeles lo bajan." },
+          { titulo: "Quién responde y en cuánto", texto: "persona, horario y tiempo máximo de respuesta, definidos antes de encender la campaña." },
+        ],
+      },
+      {
+        h2: "¿Cómo conseguir citas calificadas y no curiosos?",
+        parrafo:
+          "Un formulario lleno no es una venta. El número que manda es cuántas personas se sientan contigo. Y el filtro empieza en el anuncio: con el rango de precio y la inicial a la vista, se autodescarta quien no puede comprar.",
+        bullets: [
+          { titulo: "Condiciones en la pieza", texto: "precio desde, inicial y forma de pago filtran mejor que cualquier pregunta posterior." },
+          { titulo: "Pregunta poco, pero pregunta", texto: "zona, forma de pago y cuándo piensa comprar separan al interesado real del que solo mira." },
+          { titulo: "Agenda en el primer contacto", texto: "la conversación no es para informar: es para poner día y hora." },
+          { titulo: "Responde en minutos", texto: "el interesado escribe a varios proyectos; el primero en contestar se queda con la cita." },
+        ],
+      },
+      {
+        h2: "El seguimiento hasta la visita: ahí se pierde la mayoría de ventas",
+        parrafo:
+          "Entre el “sí, quiero ir” y llegar al terreno hay una semana de vida real: trabajo, familia, imprevistos. Ahí se cae la mayoría de ventas, no en el anuncio. Confirmar por escrito, mandar la ubicación y recordar el día anterior sube las visitas efectivas —las citas que sí llegan— sin gastar un sol más. Esperar que el interesado decida solo es el error que hace perder lotes.",
+        bullets: [
+          { titulo: "Todo en un CRM", texto: "el CRM es el sistema donde queda registrado cada interesado y cuándo toca volver a buscarlo. En el chat del celular, se pierde." },
+          { titulo: "Tres o cuatro contactos, no uno", texto: "casi nadie decide un lote en la primera llamada." },
+          { titulo: "El que no vino no está perdido", texto: "reprograma. Un “este sábado no puedo” no es un no." },
+        ],
+      },
+      {
+        h2: "¿Qué medir en una preventa (y qué puedes ignorar)?",
+        parrafo:
+          "Mide el embudo completo —el camino del interesado desde el anuncio hasta la firma—. Cinco números te dicen dónde se rompe la venta:",
+        bullets: [
+          { titulo: "Leads y costo por lead", texto: "cuántos dejan sus datos y cuánto te cuesta cada uno." },
+          { titulo: "Citas agendadas", texto: "cuántos de ellos aceptaron día y hora." },
+          { titulo: "Visitas efectivas", texto: "cuántas citas llegaron. Si agendas 20 y llegan 6, el problema es el seguimiento, no la pauta." },
+          { titulo: "Separaciones y unidades vendidas", texto: "el único número que paga la obra." },
+          { titulo: "Costo por venta", texto: "inversión total entre unidades vendidas. Te dice si el proyecto aguanta más presupuesto." },
+        ],
+      },
+      {
+        h2: "Caso real: 8 lotes vendidos con S/3,000 de pauta",
+        parrafo:
+          "Inmobiliaria Ceinys tenía buen producto y un proceso desordenado: interesados sí, citas pocas. Separamos los dos públicos, piezas centradas en la etapa inicial y el precio de lanzamiento, captura por formulario y WhatsApp con respuesta inmediata, y seguimiento hasta la visita. Con S/3,000 en Meta Ads: 350 leads, 20 visitas a sala de ventas y 8 lotes vendidos, equivalentes a S/350K. De 350 interesados, solo 20 se sentaron: esto no se gana por volumen de contactos, sino por lo que haces con ellos.",
+      },
+      {
+        h2: "¿Cambia algo vender en preventa en un mercado como Ica?",
+        parrafo:
+          "Sí, y a favor. En una plaza regional el boca a boca pesa más: el comprador pregunta por quién está detrás del proyecto antes de ir a verlo, así que la reputación es parte del plan de ventas. Y las distancias son cortas: en Ica, del centro al terreno hay minutos. Puedes agendar la visita para el mismo fin de semana en que el interesado escribió, y esa velocidad vende.",
       },
     ],
-    cierre: "En Suggestion conectamos pauta, landing, drone y CRM para vender tu proyecto desde la etapa inicial.",
+    faq: [
+      {
+        q: "¿Qué es la preventa inmobiliaria?",
+        a: "Es vender unidades antes de terminar la obra, muchas veces antes de empezarla. El comprador paga menos porque asume el tiempo de espera; el desarrollador consigue flujo para construir y una señal real de si el precio está bien puesto.",
+      },
+      {
+        q: "¿Cuándo se lanza la preventa de un proyecto?",
+        a: "Depende de tus permisos y de tu cronograma. Lo que sí conviene es no lanzar hasta tener render, precio de lanzamiento, plan de pagos y alguien que responda rápido. Lanzar sin eso quema presupuesto y desgasta al proyecto.",
+      },
+      {
+        q: "¿Cuánto hay que invertir para vender en preventa?",
+        a: "No hay cifra estándar: depende del precio de la unidad, de la competencia en tu zona y de cuántas necesitas colocar. Como referencia real, con Inmobiliaria Ceinys S/3,000 en Meta Ads dieron 350 leads, 20 visitas y 8 lotes vendidos. No es promesa; es prueba de que se puede empezar medido.",
+      },
+      {
+        q: "¿Cómo logro que el interesado sí llegue a la visita?",
+        a: "Confirma día, hora y punto de encuentro por escrito, manda la ubicación y recuerda el día anterior. Y reprograma al que no llegó en vez de darlo por perdido: ahí es donde más citas se recuperan.",
+      },
+      {
+        q: "¿Funciona igual para lotes que para departamentos?",
+        a: "El mecanismo es el mismo —precio de lanzamiento, confianza y seguimiento—, pero cambia el comprador. En lotes suele pesar más el inversionista y la decisión es más corta; en departamentos manda el financiamiento bancario y la fecha de entrega.",
+      },
+    ],
+    cierre: "En Suggestion armamos la preventa completa: mensaje de lanzamiento, campañas separadas por tipo de comprador, página del proyecto y seguimiento hasta que el interesado se sienta en tu sala de ventas. Si vas a vender un proyecto inmobiliario en preventa, conversemos antes del lanzamiento.",
     moneyPage: { label: "Hablemos de tu proyecto", href: "/marketing-inmobiliario" },
     relacionados: ["marketing-inmobiliario-ejemplos", "publicidad-inmobiliaria-en-redes"],
   },
@@ -908,30 +1084,118 @@ export const BLOG_POSTS: BlogPost[] = [
       "Ejemplos de marketing automotriz que llevan del clic al test drive: ofertas, formatos y mensajes que generan leads de autos que sí cierran.",
     h1: "Marketing automotriz: ejemplos que llevan del clic al test drive",
     excerpt:
-      "En automotriz, un anuncio bonito no sirve si no llena el piso. Los ejemplos que funcionan tienen un objetivo claro: llevar al interesado a la prueba de manejo, donde se cierra.",
+      "Pedir “ejemplos de marketing automotriz” y recibir piezas bonitas no le sirve a nadie. Acá tienes siete acciones concretas, del modelo del mes al taller, con qué se hace, por qué funciona y qué número mirar para saber si valió la pena.",
     date: "2026-06-08",
     secciones: [
       {
-        h2: "Ejemplos que funcionan",
+        h2: "¿Qué tienen en común los ejemplos de marketing automotriz que sí venden?",
+        parrafo:
+          "La mayoría de ejemplos de marketing automotriz que circulan son piezas lindas sin objetivo. Los que mueven la caja comparten tres cosas: piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas. En siete años con 19 marcas de vehículos —livianos, camiones y línea amarilla, incluida XCMG— comprobamos que el formato importa menos que esa disciplina. Van siete ejemplos aplicables desde esta semana: qué se hace, por qué funciona y qué medir.",
+      },
+      {
+        h2: "Ejemplo 1: la campaña del modelo del mes",
+        parrafo:
+          "Eliges un solo vehículo del stock y le dedicas el mes completo: pauta, contenido orgánico, la web y el guion del asesor. Un mensaje repetido treinta días entra; seis en paralelo se anulan.",
         bullets: [
-          { titulo: "Oferta con gancho concreto", texto: "bono, cuota inicial baja o financiamiento. El comprador decide por condiciones." },
-          { titulo: "Modelo del mes destacado", texto: "foco en un vehículo, no en todo el catálogo a la vez." },
-          { titulo: "Video del auto en acción", texto: "el deseo se activa mostrándolo, no listándolo." },
-          { titulo: "Llamado a test drive", texto: "el CTA no es “compra”, es “agenda tu prueba de manejo”." },
+          { titulo: "Qué se hace", texto: "un modelo, una oferta y una pieza principal en video vertical. El resto del catálogo se calla ese mes." },
+          { titulo: "Por qué funciona", texto: "nadie compara veinte opciones, compara dos o tres. Simplificar la decisión acorta el camino al piso." },
+          { titulo: "Qué medir", texto: "citas agendadas para ese modelo y unidades salidas de ese stock. Las impresiones no dicen nada." },
         ],
       },
       {
-        h2: "Lo que separa un buen ejemplo de uno malo",
+        h2: "Ejemplo 2: financiamiento con la cuota al frente",
         parrafo:
-          "El bueno filtra: atrae a quien puede comprar y descarta curiosos. El malo junta clics baratos que nunca pisan el concesionario.",
+          "La barrera casi nunca es el precio total: es la cuota. El anuncio pone inicial, cuota y plazo en los primeros segundos, y lleva a un simulador o a un asesor por WhatsApp.",
+        bullets: [
+          { titulo: "Qué se hace", texto: "condiciones visibles y un formulario corto que pregunta lo justo para saber si califica (dependiente o independiente, rango de inicial)." },
+          { titulo: "Por qué funciona", texto: "filtra solo. Quien sabe que no califica no deja sus datos, y tu asesor deja de quemar mañanas con quien no iba a calificar." },
+          { titulo: "Qué medir", texto: "qué porcentaje de tus leads (interesados que dejan sus datos) llega aprobado por la financiera." },
+        ],
       },
       {
-        h2: "Del clic al cierre",
+        h2: "Ejemplo 3: el evento de fin de semana que sale con autos firmados",
         parrafo:
-          "La campaña genera el interés; la prueba de manejo y el vendedor cierran. Conectar la pauta con un seguimiento rápido es lo que baja el costo por venta.",
+          "Un sábado de puertas abiertas no vende solo. Vende la convocatoria previa: dos semanas de pauta dirigida a un perfil con intención y capacidad, más una condición que solo existe ese día. Con Autoniza, en Ica, así salieron 3 autos vendidos el 22 de mayo y 5 el 25 de junio.",
+        bullets: [
+          { titulo: "Qué se hace", texto: "invitación pagada con registro previo, recordatorio el día anterior y la oferta del día por escrito." },
+          { titulo: "Por qué funciona", texto: "la fecha límite es verdadera y el cliente ya está frente al auto. Del interés a la firma queda una tarde." },
+          { titulo: "Qué medir", texto: "registrados, asistentes y unidades firmadas el mismo día. Si vino gente y no firmó nadie, falló la oferta." },
+        ],
+      },
+      {
+        h2: "Ejemplo 4: posventa y taller, la mina olvidada del marketing automotriz",
+        parrafo:
+          "Casi nadie invierte en el taller y es el ingreso más predecible de un concesionario: cada unidad vendida vuelve por mantenimiento. La posventa te adelanta a que el cliente termine en el taller de la esquina.",
+        bullets: [
+          { titulo: "Qué se hace", texto: "mensajes a tu propia base según fecha de compra o kilometraje, con precio y horarios. Paquetes por temporada: revisión antes del feriado largo." },
+          { titulo: "Por qué funciona", texto: "le hablas a gente que ya te compró y ya confía. Y quien mantiene su vehículo contigo vuelve cuando toca cambiarlo." },
+          { titulo: "Qué medir", texto: "órdenes de trabajo agendadas, ticket promedio del taller y qué parte de tu base regresó este año." },
+        ],
+      },
+      {
+        h2: "Ejemplo 5: contenido que muestra el auto en uso, no la ficha técnica",
+        parrafo:
+          "El error típico es publicar la ficha técnica. Al comprador peruano le importa cómo se porta el vehículo en su realidad: la trocha, la carga, el consumo en carretera, cuántas maletas entran de verdad.",
+        bullets: [
+          { titulo: "Qué se hace", texto: "videos verticales cortos, un tema por pieza: la entrega de un cliente, la suspensión en camino malo, cuánto carga la tolva." },
+          { titulo: "Por qué funciona", texto: "responde objeciones antes de que el cliente las diga y le deja material al asesor para mandar mientras negocia." },
+          { titulo: "Qué medir", texto: "conversaciones iniciadas desde cada pieza y cuántas terminan en cita. Guardados y compartidos son pista; el conteo de me gusta, no." },
+        ],
+      },
+      {
+        h2: "Ejemplo 6: volver a quien cotizó y no compró",
+        parrafo:
+          "La mayoría de cotizaciones no cierra en la primera visita. Esa base —nombre, modelo consultado, fecha— es tu activo más barato y suele estar en un cuaderno o en el celular de un asesor que ya renunció.",
+        bullets: [
+          { titulo: "Qué se hace", texto: "ordenarla en un CRM (sistema que registra cada contacto y su seguimiento) y hacer remarketing (volver a mostrar anuncios a quien ya te contactó) con la novedad que cambia su decisión: llegó stock, cambió la tasa, hay bono." },
+          { titulo: "Por qué funciona", texto: "ya sabes qué modelo quería y cuánto podía pagar. No arrancas de cero." },
+          { titulo: "Qué medir", texto: "cierres de base antigua frente a cierres de contactos nuevos, y el costo de cada uno." },
+        ],
+      },
+      {
+        h2: "Ejemplo 7: línea amarilla y camiones, cuando el comprador es una empresa",
+        parrafo:
+          "Vender una excavadora o una flota no se parece a vender un auto familiar. Decide un comité, el ciclo dura meses y el argumento es costo por hora, repuestos y respaldo técnico. La campaña no busca venta rápida: busca entrar en la lista corta.",
+        bullets: [
+          { titulo: "Qué se hace", texto: "contenido técnico —fichas, máquina trabajando, tiempos de respuesta del servicio—, pauta dirigida a construcción, minería y agroindustria, y formularios que piden empresa y uso del equipo." },
+          { titulo: "Por qué funciona", texto: "el comprador empresarial investiga antes de escribirte. Si no encuentra información seria, no te considera." },
+          { titulo: "Qué medir", texto: "oportunidades abiertas y valor del embudo (las negociaciones en curso), no contactos sueltos. El cierre puede caer dos trimestres después." },
+        ],
+      },
+      {
+        h2: "¿Por dónde empiezas si solo puedes hacer una cosa?",
+        parrafo:
+          "Ordena tu base y activa posventa y remarketing: es lo más barato y lo que responde más rápido, porque le hablas a gente que ya te conoce. Recién después mete plata en captación nueva. En marketing automotriz, el error que más presupuesto quema es hacerlo al revés.",
+        bullets: [
+          { titulo: "Repartir el presupuesto en todo el catálogo", texto: "seis campañas chicas rinden menos que una bien hecha." },
+          { titulo: "Prometer una condición y cambiarla en el piso", texto: "el cliente lo cuenta, y eso cuesta más que el descuento." },
+          { titulo: "Dejar el mensaje del sábado para el lunes", texto: "cuando llamas, ya cotizó en otros dos sitios." },
+        ],
       },
     ],
-    cierre: "En Suggestion hacemos marketing automotriz que llena el piso de prospectos listos para cerrar.",
+    faq: [
+      {
+        q: "¿Cuánto debe invertir un concesionario en marketing digital?",
+        a: "No hay cifra estándar, y desconfía de quien te la dé de frente. Trabájalo al revés: cuántas unidades quieres mover al mes, cuántas citas necesitas según tu tasa de cierre y cuánto cuesta hoy generar una cita. De ahí sale el presupuesto, y tienes que poder sostenerlo tres meses.",
+      },
+      {
+        q: "¿Qué funciona mejor para vender autos, Meta o Google?",
+        a: "Hacen trabajos distintos. Meta despierta el interés de quien todavía no está buscando; Google atiende al que ya escribió “camioneta 4x4 precio” y está comparando. Si alcanza para una sola, empieza donde ya hay intención de compra.",
+      },
+      {
+        q: "¿Los eventos en concesionario venden o solo llenan de gente?",
+        a: "Venden si la convocatoria está segmentada y hay una condición que solo existe ese día. Autoniza cerró 3 unidades el 22 de mayo y 5 el 25 de junio con ese esquema. Sin convocatoria previa, un evento es un gasto en toldo y bocaditos.",
+      },
+      {
+        q: "¿Cuántos leads necesito para vender un vehículo?",
+        a: "Depende de tu marca, tu precio y sobre todo de tu equipo comercial, así que no copies un ratio de internet. Saca el tuyo: divide los interesados del último trimestre entre las unidades vendidas en ese periodo. Ese número te dice si el problema está en la campaña o en el seguimiento.",
+      },
+      {
+        q: "¿En cuánto tiempo se ven resultados?",
+        a: "En livianos, las primeras citas suelen aparecer en los primeros días de campaña; el cierre depende de tu ciclo y de tu equipo. En camiones y línea amarilla se habla de meses, porque decide un comité. Nadie honesto te garantiza un plazo.",
+      },
+    ],
+    cierre: "En Suggestion aterrizamos estos ejemplos de marketing automotriz para concesionarios de Ica y del resto del Perú: convocatoria, piso, posventa y base de datos, medidos en unidades vendidas.",
     moneyPage: { label: "Llena tu piso", href: "/marketing-automotriz" },
     relacionados: ["leads-para-concesionarios", "publicidad-para-venta-de-autos"],
   },
@@ -979,9 +1243,21 @@ export const BLOG_POSTS: BlogPost[] = [
       "Ideas de publicidad para venta de autos que generan interés y citas: formatos, mensajes y ofertas que mueven al comprador. Guía práctica 2026.",
     h1: "Publicidad para venta de autos: ideas que funcionan",
     excerpt:
-      "La publicidad de autos compite por atención en un mercado saturado. Estas ideas destacan y, sobre todo, mueven al comprador a actuar —no solo a mirar.",
+      "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que sí mueve al comprador a actuar.",
     date: "2026-06-17",
     secciones: [
+      {
+        h2: "¿Qué mensaje mueve de verdad la decisión de comprar un auto?",
+        parrafo:
+          "Nadie compra un auto por un adjetivo. La publicidad para venta de autos que funciona no habla de “diseño imponente”: habla de condiciones. El comprador ya sabe qué modelo le gusta; lo que no sabe es si puede pagarlo este mes. Tu anuncio tiene que responder eso antes que nada.",
+        bullets: [
+          { titulo: "Financiamiento y cuota mensual", texto: "la cifra que el comprador compara con su sueldo. Casi nadie la pone." },
+          { titulo: "Cuota inicial", texto: "un “inicial desde…” con la cifra al frente mueve más que un porcentaje de descuento: define si puede empezar hoy." },
+          { titulo: "Bono o beneficio", texto: "SOAT, primer mantenimiento, accesorios. Te cuesta menos que rebajar el precio y convence igual." },
+          { titulo: "Modelo del mes", texto: "una unidad, una oferta. Anunciar todo el catálogo diluye el mensaje y encarece cada lead." },
+          { titulo: "Entrega inmediata", texto: "“stock disponible, te lo llevas esta semana” le gana a la espera." },
+        ],
+      },
       {
         h2: "Ideas de publicidad que funcionan",
         bullets: [
@@ -993,17 +1269,90 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "Dónde pautar",
+        h2: "Cómo se ve un anuncio que trae compradores y no curiosos",
         parrafo:
-          "Meta Ads para generar deseo y captar interesados; Google Ads para capturar a quien ya busca tu marca o modelo. La combinación cubre todo el embudo: del que aún no decide al que ya está buscando.",
+          "La diferencia no está en la creatividad, está en el filtro. Un anuncio que le habla a todos junta clics baratos y quema al equipo comercial. Uno que filtra dice la cuota, nombra el modelo y pide una cita.",
+        sub: [
+          { h3: "Menciona la condición, aunque descarte gente", texto: "Si el financiamiento exige un inicial del 20%, dilo. El que no califica te ahorra dos llamadas." },
+          { h3: "Pide una cita, no un “me interesa”", texto: "“Agenda tu prueba” trae menos leads que “más información”, pero una parte real de ellos aparece." },
+          { h3: "Muestra la unidad que sí tienes", texto: "El render de catálogo genera desconfianza cuando el comprador llega y ve otra cosa." },
+        ],
       },
       {
-        h2: "El cierre está en el seguimiento",
+        h2: "¿Se vende igual un liviano que un camión o una máquina de línea amarilla?",
         parrafo:
-          "El mejor anuncio sin seguimiento es plata a medias. Conecta la publicidad con respuesta rápida y agendamiento de prueba de manejo.",
+          "No, y confundirlos sale caro. Desde Ica hemos manejado pauta para 19 marcas de vehículos —livianos, camiones y línea amarilla (maquinaria pesada de construcción y movimiento de tierra)— y el comprador no se parece en nada.",
+        sub: [
+          { h3: "Liviano: decisión personal y rápida", texto: "Semanas, a veces días. Decide una familia, pesa la cuota y la emoción cuenta." },
+          { h3: "Camión y línea amarilla: decisión empresarial y larga", texto: "Meses, y no decide una sola persona. El argumento no es el diseño: es el costo de operación, los repuestos, el respaldo del taller y el leasing (arrendamiento con opción de compra)." },
+          { h3: "Cambia el canal, no solo el mensaje", texto: "Pesa más la búsqueda en Google y el contenido técnico que el video emocional. Pocos leads es lo normal: un cierre justifica meses de inversión." },
+        ],
+      },
+      {
+        h2: "¿Dónde conviene pautar publicidad para venta de autos?",
+        parrafo:
+          "Meta Ads para generar deseo y captar interesados; Google Ads para capturar a quien ya busca tu marca o modelo. La combinación cubre todo el embudo: del que aún no decide al que ya está buscando. Súmale remarketing —volver a mostrar el anuncio a quien ya visitó tu web—, porque en automotriz el indeciso es la norma. Y no descuides el catálogo de usados: trae búsquedas de intención altísima y a veces al comprador de un cero kilómetros.",
+      },
+      {
+        h2: "El test drive es la conversión que sí predice la venta",
+        parrafo:
+          "Entre el formulario y la firma hay un paso que casi nadie mide: la prueba de manejo. Es la conversión intermedia real, donde el interesado invierte su tiempo y se sube. De ahí en adelante cierra tu asesor, no la pauta. Por eso conviene diseñar la campaña para agendar pruebas. Si no puedes ofrecer prueba del modelo anunciado, el equivalente es una visita con hora y asesor asignado.",
+      },
+      {
+        h2: "Qué hacer con el lead en los primeros minutos",
+        parrafo:
+          "El mejor anuncio sin seguimiento es plata a medias. La ventana es corta: el interesado consulta a tres o cuatro concesionarios la misma tarde, y quien contesta primero se queda con la visita.",
+        bullets: [
+          { titulo: "Contesta en el mismo canal", texto: "si llenó un formulario en Meta, un WhatsApp antes de cinco minutos." },
+          { titulo: "Propón horario, no folletos", texto: "el primer mensaje ofrece dos fechas concretas para la prueba de manejo." },
+          { titulo: "Registra todo en un CRM", texto: "un sistema donde cada lead queda con su estado y su siguiente paso. En chats sueltos se pierde la mitad." },
+          { titulo: "Insiste sin acosar", texto: "tres o cuatro contactos en dos semanas. Buena parte de las citas se agenda después del primer intento." },
+        ],
+      },
+      {
+        h2: "Eventos y activaciones: la pauta que se cierra el mismo día",
+        parrafo:
+          "Un evento en el concesionario convierte la publicidad en una fecha, y una fecha le pone plazo al indeciso. La clave está en la convocatoria: si llenas el local de paseantes, gastaste en gaseosa. Con Autoniza, en Ica, trabajamos convocatoria segmentada previa, activación en el punto y cierre en piso: 8 autos vendidos en 2 eventos —3 el 22 de mayo y 5 el 25 de junio—, firmados el mismo día.",
+      },
+      {
+        h2: "Cómo medir si la publicidad para venta de autos funcionó",
+        parrafo:
+          "El costo por clic no te dice nada y el costo por lead te dice poco. La métrica que ordena la inversión de un concesionario es el costo por prueba de manejo, y detrás el costo por unidad vendida.",
+        bullets: [
+          { titulo: "Costo por prueba agendada", texto: "y cuántas de esas citas se presentaron. La asistencia delata la calidad del lead." },
+          { titulo: "Costo por unidad vendida", texto: "la inversión del mes dividida entre los autos vendidos con origen en pauta." },
+          { titulo: "Origen del lead registrado", texto: "si no anotas de dónde vino cada cierre, terminas apagando la campaña que sí vendía." },
+          { titulo: "Ventana de medición realista", texto: "en camiones y maquinaria el cierre llega meses después. Evaluar a siete días te hace cancelar lo que funcionaba." },
+        ],
       },
     ],
-    cierre: "En Suggestion creamos publicidad de autos que genera citas, no solo vistas.",
+    faq: [
+      {
+        q: "¿Cuánto cuesta hacer publicidad para venta de autos?",
+        a: "No hay tarifa única, y quien te dé una cifra sin ver tu operación está adivinando. El presupuesto se calcula al revés: cuántas unidades quieres vender, cuántas pruebas de manejo necesitas para eso y cuánto te cuesta hoy cada prueba agendada.",
+      },
+      {
+        q: "¿Conviene poner el precio o la cuota en el anuncio?",
+        a: "En la mayoría de casos, sí. Ocultarlo trae más formularios, pero muchos se caen en la primera llamada al escuchar la cifra. Publicar la cuota o el inicial te deja un lead más caro por unidad y mucho más barato por venta.",
+      },
+      {
+        q: "¿Cuántos leads necesito para vender un auto?",
+        a: "Depende de tu tasa de cierre, y ese dato lo mides tú, no lo copias de un blog. Durante un mes anota cuántos leads llegaron, cuántos agendaron prueba, cuántos se presentaron y cuántos firmaron. Ahí ves en qué escalón se te cae la venta.",
+      },
+      {
+        q: "¿Meta Ads o Google Ads para un concesionario?",
+        a: "Los dos, en distinta proporción. Google captura a quien ya escribe el nombre del modelo; Meta genera interés en quien todavía no lo buscaba. Con presupuesto corto, empieza por Google en los modelos con demanda de búsqueda y suma Meta para lanzamientos y eventos.",
+      },
+      {
+        q: "¿Sirve para vender camiones o maquinaria de línea amarilla?",
+        a: "Sirve, con otras expectativas. El comprador es una empresa, el ciclo dura meses y llegan pocos leads: eso es normal. Aquí se mide la calidad de la oportunidad y las reuniones concretadas, no el volumen de formularios.",
+      },
+      {
+        q: "¿En cuánto tiempo se ven resultados?",
+        a: "En livianos, las primeras pruebas de manejo suelen aparecer en las primeras semanas; afinar audiencias y mensajes toma un par de meses. En camiones y maquinaria se piensa en trimestres. No prometemos plazos garantizados: mostramos el avance con los números de cada mes.",
+      },
+    ],
+    cierre: "En Suggestion hemos llevado pauta de 19 marcas de vehículos, de livianos a línea amarilla. Armamos tu publicidad para venta de autos con una sola meta: pruebas de manejo agendadas y unidades saliendo del piso.",
     moneyPage: { label: "Pongamos a vender tu concesionario", href: "/marketing-automotriz" },
     relacionados: ["marketing-automotriz-ejemplos", "leads-para-concesionarios"],
   },

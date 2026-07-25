@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Btn, Label } from "@/components/brand/parts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Secciones from "@/components/Secciones";
+import Faq from "@/components/Faq";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
@@ -74,8 +75,8 @@ function fechaLarga(iso: string) {
 }
 
 /** Minutos de lectura (~200 palabras/min) a partir del contenido real del post. */
-function minutosLectura(post: { excerpt: string; secciones: unknown; cierre: string }): number {
-  const words = (JSON.stringify(post.secciones) + post.excerpt + post.cierre)
+function minutosLectura(post: { excerpt: string; secciones: unknown; faq?: unknown; cierre: string }): number {
+  const words = (JSON.stringify(post.secciones) + JSON.stringify(post.faq ?? "") + post.excerpt + post.cierre)
     .replace(/[^\p{L}\s]/gu, " ")
     .split(/\s+/)
     .filter(Boolean).length;
@@ -135,6 +136,14 @@ export default async function BlogPostPage({ params }: Params) {
       <section style={{ background: "var(--white)" }}>
         <div style={{ maxWidth: 820, margin: "0 auto", padding: "0 var(--gutter) var(--section-y)" }}>
           <Secciones secciones={post.secciones} />
+
+          {/* FAQ del post: responde las "Otras preguntas de los usuarios" y
+              emite el FAQPage de esta URL (una sola vez, aquí). */}
+          {post.faq && post.faq.length > 0 && (
+            <div style={{ marginTop: "var(--space-8)" }}>
+              <Faq items={post.faq} />
+            </div>
+          )}
 
           {/* CTA a money page */}
           <div style={{ marginTop: "var(--space-8)", padding: "clamp(1.5rem,3vw,2.5rem)", background: "var(--black)", color: "var(--white)", borderRadius: "var(--radius-md)" }}>

@@ -4,6 +4,7 @@ import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
 import { CASOS_DETALLE } from "@/content/casos";
 import { EQUIPO } from "@/content/equipo";
+import { allCiudadSlugs, ciudadHref } from "@/content/ciudades";
 
 /**
  * Sitemap dinámico: raíz + servicios (pilar/5 categorías/16 hijas) + sectores
@@ -47,6 +48,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]);
 
+  // Páginas de cobertura por ciudad: copy propio por ciudad, indexables.
+  const ciudades: MetadataRoute.Sitemap = allCiudadSlugs().map((slug) => ({
+    url: u(ciudadHref(slug)),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   const sectores: MetadataRoute.Sitemap = SECTORS.map((s) => ({
     url: u(s.href),
     lastModified: now,
@@ -82,5 +91,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...root, ...servicios, ...sectores, ...casos, ...blogCategorias, ...blogPosts, ...equipo];
+  return [...root, ...servicios, ...sectores, ...ciudades, ...casos, ...blogCategorias, ...blogPosts, ...equipo];
 }

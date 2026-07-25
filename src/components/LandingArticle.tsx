@@ -63,6 +63,7 @@ export default function LandingArticle({
   related = [],
   faq,
   cierre,
+  cobertura,
   extraSchema,
 }: {
   breadcrumbs: Crumb[];
@@ -81,6 +82,8 @@ export default function LandingArticle({
   related?: RelatedBlock[];
   faq: FaqType[];
   cierre: Cierre;
+  /** Párrafo de cobertura propio (páginas de ciudad); si no, se usa COBERTURA por ruta. */
+  cobertura?: string;
   shape?: number;
   extraSchema?: Json | Json[];
 }) {
@@ -325,7 +328,8 @@ export default function LandingArticle({
             En Ica y en todo el Perú.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)" }}>
-            {COBERTURA[breadcrumbs[breadcrumbs.length - 1]?.href ?? ""] ??
+            {cobertura ??
+              COBERTURA[breadcrumbs[breadcrumbs.length - 1]?.href ?? ""] ??
               "Somos una agencia de marketing y publicidad con base en Ica: atendemos negocios de Ica, Chincha, Pisco y Nazca, y operamos campañas a nivel nacional — Lima incluida — con la misma medición: leads, citas y ventas."}
           </p>
         </div>

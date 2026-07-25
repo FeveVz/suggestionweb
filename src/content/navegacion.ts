@@ -5,6 +5,8 @@
  * los MISMOS slugs.
  */
 
+import { CIUDADES } from "./ciudades";
+
 export type NavLink = { label: string; href: string };
 
 export type ServiceCategory = {
@@ -97,6 +99,11 @@ export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
   {
     title: "Sectores",
     links: SECTORS.map((s) => ({ label: `Marketing ${s.label.toLowerCase()}`, href: s.href })),
+  },
+  {
+    // Da a cada página de ciudad un enlace entrante desde todo el sitio.
+    title: "Dónde trabajamos",
+    links: CIUDADES.map((c) => ({ label: c.nombre, href: `/agencia-de-marketing-en-${c.slug}` })),
   },
   {
     title: "Agencia",
