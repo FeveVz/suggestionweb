@@ -95,7 +95,9 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
   {
     slug: "inmobiliario",
     nombre: "Inmobiliario",
-    metaTitle: "Marketing Inmobiliario: Ideas y Casos | Suggestion",
+    // Intención informativa por delante: la keyword comercial "marketing
+    // inmobiliario en Ica" es de /marketing-inmobiliario, no de esta categoría.
+    metaTitle: "Guías y Artículos de Marketing Inmobiliario | Suggestion",
     metaDescription:
       "Cómo se vende un proyecto hoy: captación de citas, drone y mensajes que mueven la decisión. Ideas y casos de marketing inmobiliario.",
     h1: "Marketing inmobiliario: ideas y casos",
@@ -105,7 +107,8 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
   {
     slug: "automotriz",
     nombre: "Automotriz",
-    metaTitle: "Marketing Automotriz: Ideas y Casos | Suggestion",
+    // Ídem: la keyword comercial la defiende /marketing-automotriz.
+    metaTitle: "Guías y Artículos de Marketing Automotriz | Suggestion",
     metaDescription:
       "Del clic al test drive: cómo llevar leads de autos hasta el cierre en piso. Ideas y casos de marketing automotriz.",
     h1: "Marketing automotriz: ideas y casos",

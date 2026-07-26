@@ -31,8 +31,65 @@ const CATEGORIAS_RAW: Servicio[] = [
     hero: "Antes de gastar en marketing, entiende el terreno. Aquí vive el “pensar” que hace rentable todo lo demás.",
     cta: "Ordenemos tu estrategia",
     keyword: "estrategia de marketing",
-    secciones: [],
-    faq: [],
+    secciones: [
+      {
+        h2: "Antes de invertir, entender",
+        parrafo:
+          "La mayoría de negocios que llegan con un problema de marketing en realidad tienen un problema de definición: no saben con precisión a quién le venden mejor, por qué les compran los que sí compran, ni dónde exactamente se les cae la venta. Encender campañas sin resolver eso es la forma más rápida de gastar bien un presupuesto en la dirección equivocada. Esta categoría existe para responder esas preguntas antes de que cuesten dinero.",
+      },
+      {
+        h2: "Qué incluye esta categoría",
+        parrafo:
+          "Dos servicios que suelen ir juntos: uno mira hacia afuera y el otro ordena hacia adentro.",
+        bullets: [
+          { titulo: "Consultoría", texto: "diagnóstico del proceso comercial completo y un plan priorizado: qué hacer primero, qué después y qué no hacer." },
+          { titulo: "Investigación de mercado", texto: "datos reales sobre tu público, tu competencia y tu categoría, para decidir con evidencia en vez de con intuición." },
+        ],
+      },
+      {
+        h2: "Qué revisamos en un diagnóstico",
+        parrafo:
+          "Seguimos el recorrido completo del cliente, desde que te descubre hasta que paga, buscando dónde se pierde. Casi siempre hay más ventas escondidas en las fugas que en un canal nuevo.",
+        bullets: [
+          { titulo: "Tu oferta", texto: "qué vendes, a qué precio y por qué alguien debería elegirte a ti y no al de al lado." },
+          { titulo: "Tu captación", texto: "de dónde llegan hoy tus clientes y cuánto te cuesta cada uno, si es que lo sabes." },
+          { titulo: "Tu conversión", texto: "qué pasa entre el primer contacto y la venta: quién responde, en cuánto tiempo y con qué argumentos." },
+          { titulo: "Tu medición", texto: "qué datos tienes realmente y cuáles estás decidiendo a ciegas." },
+        ],
+      },
+      {
+        h2: "Investigar no siempre es caro",
+        parrafo:
+          "No toda investigación requiere un estudio formal. Muchas veces las respuestas más valiosas salen de hablar con diez clientes actuales, revisar qué te preguntan por WhatsApp o mirar en serio lo que hace la competencia. Ese trabajo, hecho con orden, ya cambia decisiones. Los estudios más grandes tienen sentido cuando la decisión que depende de ellos es igual de grande: entrar a un mercado nuevo, lanzar una línea, cambiar el precio.",
+      },
+      {
+        h2: "Qué te llevas al final",
+        parrafo:
+          "Un documento que se pueda ejecutar, no una presentación bonita: los hallazgos, las prioridades ordenadas por impacto y esfuerzo, y qué se mide para saber si funcionó. Y algo que valoramos más que el entregable: si en el diagnóstico concluimos que tu problema no se resuelve con marketing —porque es de producto, de precio o de capacidad de atención—, te lo decimos. Es más útil que venderte una campaña que no iba a funcionar.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué diferencia hay entre consultoría y ejecutar campañas?",
+        a: "La consultoría decide el rumbo; la ejecución lo recorre. Puedes contratar solo el diagnóstico y aplicarlo con tu propio equipo o con otro proveedor: el plan es tuyo. De hecho, buena parte de lo que recomendamos se puede implementar sin nosotros.",
+      },
+      {
+        q: "¿Sirve una consultoría si mi negocio es pequeño?",
+        a: "Suele servir más, porque con presupuesto limitado equivocarse cuesta proporcionalmente más. Media hora ordenando prioridades puede ahorrarte meses invirtiendo en el canal equivocado.",
+      },
+      {
+        q: "¿Cuánto dura un diagnóstico?",
+        a: "Un diagnóstico inicial es cuestión de días, no de meses: revisar tu situación, hablar contigo y devolverte las prioridades. Los estudios de mercado más profundos requieren más tiempo porque implican recoger datos de terceros.",
+      },
+      {
+        q: "¿Necesito tener datos ordenados para empezar?",
+        a: "No. Es habitual que el punto de partida sea justamente que no hay datos, y ordenar eso es parte del trabajo. Lo que sí ayuda mucho es que tengas claro cuánto vale un cliente para ti y cuántos puedes atender.",
+      },
+      {
+        q: "¿Y si el diagnóstico dice que no necesito una agencia?",
+        a: "Te lo decimos igual. Preferimos perder un contrato que cobrar por algo que no iba a mover tu negocio: la mitad de nuestros clientes llegan por recomendación, y eso no sobrevive a vender humo.",
+      },
+    ],
     enlazaA: ["consultoria", "investigacion-de-mercado"],
     cierre: { h2: "Ordenemos tu estrategia", cta: "Ordenemos tu estrategia" },
   },
@@ -47,8 +104,60 @@ const CATEGORIAS_RAW: Servicio[] = [
     hero: "Atraer al cliente correcto y convertirlo en venta. Estrategia, pauta y comunidad, conectadas en un solo embudo.",
     cta: "Quiero más leads",
     keyword: "marketing y publicidad digital",
-    secciones: [],
-    faq: [],
+    secciones: [
+      {
+        h2: "Atraer y convertir: los dos trabajos distintos",
+        parrafo:
+          "Marketing y publicidad digital se usan como sinónimos y no lo son. La publicidad compra atención hoy: enciendes el presupuesto y llegan contactos; lo apagas y dejan de llegar. El marketing construye la demanda que no depende del presupuesto: contenido, marca y presencia que siguen trabajando el mes que decidas no invertir. Un negocio que solo hace publicidad vive alquilando clientes; uno que solo hace contenido tarda demasiado en facturar. La combinación es lo que sostiene el crecimiento.",
+      },
+      {
+        h2: "Qué incluye esta categoría",
+        parrafo:
+          "Tres frentes que se coordinan entre sí, porque el mismo mensaje tiene que sostenerse en los tres para que el cliente reconozca a la misma marca.",
+        bullets: [
+          { titulo: "Marketing digital", texto: "la estrategia completa: qué canal, qué mensaje, para qué público y con qué objetivo comercial." },
+          { titulo: "Publicidad digital", texto: "campañas en Meta y Google que traen contactos con intención, no clics baratos." },
+          { titulo: "Redes sociales", texto: "la presencia que sostiene la confianza entre campaña y campaña, y que revisa todo el que va a comprarte." },
+        ],
+      },
+      {
+        h2: "Cómo medimos que funciona",
+        parrafo:
+          "Reportamos la cadena completa: contactos, citas y cierres, con el costo de cada paso. El alcance y los seguidores aparecen en el informe, pero no son la métrica que decide si seguimos invirtiendo. Este enfoque es el que llevó a una inmobiliaria de Ica a S/350K en ventas con S/3,000 en Meta Ads: 350 contactos, 20 visitas a sala de ventas y 8 lotes vendidos. La cifra que importa no fue el alcance, fueron los 8 lotes.",
+      },
+      {
+        h2: "Un método por rubro, no una receta genérica",
+        parrafo:
+          "Un concesionario necesita llenar el piso de pruebas de manejo; una clínica, llenar la agenda sin quemar presupuesto; una inmobiliaria, citas calificadas en sala de ventas. Los tres podrían usar las mismas herramientas y fracasar con la misma estrategia. Por eso trabajamos con un enfoque distinto para cada uno de los siete sectores que atendemos, en lugar de aplicar la misma plantilla a todos.",
+      },
+      {
+        h2: "Qué necesitas tener antes de invertir en pauta",
+        parrafo:
+          "Somos claros con esto porque nos ahorra problemas a los dos: la publicidad acelera lo que ya funciona, no lo arregla. Antes de encender campañas conviene tener resuelto a dónde llega el interesado —una página o un WhatsApp que responda—, quién atiende y en cuánto tiempo, y qué se le ofrece exactamente. Si falta alguna de las tres, la pauta solo consigue que más gente descubra el problema. Cuando detectamos eso en el diagnóstico, lo decimos antes de cobrar.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuál es la diferencia entre marketing digital y publicidad digital?",
+        a: "La publicidad es una parte del marketing: es el dinero que pones en plataformas para comprar atención. El marketing incluye además la estrategia, el mensaje, el contenido, la web y el seguimiento. Puedes hacer marketing sin publicidad, pero es más lento; hacer publicidad sin estrategia es más rápido y más caro.",
+      },
+      {
+        q: "¿Meta Ads o Google Ads?",
+        a: "Google captura a quien ya está buscando lo que vendes, así que suele traer intención más alta y funciona bien para servicios que se buscan por necesidad. Meta genera demanda en quien no te estaba buscando y rinde mejor en productos visuales y decisiones más impulsivas. Muchos negocios terminan usando ambos, pero conviene empezar por el que corresponde a cómo compra tu cliente.",
+      },
+      {
+        q: "¿En cuánto tiempo veo resultados?",
+        a: "Los primeros contactos por publicidad llegan en días. Estabilizar el costo por contacto toma entre 4 y 8 semanas, porque la plataforma necesita datos para aprender. El posicionamiento orgánico y el contenido van en otra escala: meses. Desconfía de quien te prometa ventas garantizadas la primera semana.",
+      },
+      {
+        q: "¿Manejan el presupuesto de pauta o lo pago yo directamente?",
+        a: "Lo habitual y más transparente es que la cuenta publicitaria sea tuya y pagues la pauta directamente a la plataforma. Así ves el gasto real sin intermediarios y la cuenta queda a tu nombre, con su historial, aunque algún día dejemos de trabajar juntos.",
+      },
+      {
+        q: "¿Necesito publicar todos los días en redes?",
+        a: "No. La frecuencia importa menos que la consistencia y que tener algo que decir. Es mejor publicar dos veces por semana con contenido que aporte, que siete veces con relleno. Lo que sí es innegociable es responder rápido los mensajes: ahí se pierden más ventas que en el calendario de publicaciones.",
+      },
+    ],
     enlazaA: ["marketing-digital", "publicidad-digital", "redes-sociales"],
     cierre: { h2: "Quiero más leads", cta: "Quiero más leads" },
   },
@@ -63,8 +172,65 @@ const CATEGORIAS_RAW: Servicio[] = [
     hero: "Tu activo digital trabajando 24/7: una web que convierte, posicionamiento que te hace visible y automatización que no deja caer ningún lead.",
     cta: "Construyamos tu máquina de ventas",
     keyword: "web seo y automatización",
-    secciones: [],
-    faq: [],
+    secciones: [
+      {
+        h2: "Lo único de internet que sí es tuyo",
+        parrafo:
+          "Tus redes son alquiladas: si mañana cambia el algoritmo, te suspenden la cuenta o la plataforma pierde relevancia, se va con ella tu canal de venta. Tu web y tu base de contactos son lo único que controlas de verdad. Por eso esta categoría no va de tener una página bonita: va de construir el activo que sostiene el negocio cuando lo demás falla.",
+      },
+      {
+        h2: "Qué incluye esta categoría",
+        parrafo:
+          "Tres piezas que resuelven el mismo problema en momentos distintos: que te encuentren, que al llegar decidan, y que ninguno se pierda después.",
+        bullets: [
+          { titulo: "Desarrollo web", texto: "sitios pensados para convertir visitas en contactos, rápidos en el celular y fáciles de actualizar." },
+          { titulo: "SEO", texto: "aparecer cuando alguien busca lo que vendes, que es el tráfico con más intención de compra que existe." },
+          { titulo: "CRM y automatización", texto: "que cada contacto quede registrado, reciba respuesta rápida y tenga seguimiento hasta el cierre." },
+        ],
+      },
+      {
+        h2: "Una web que convierte, no un folleto digital",
+        parrafo:
+          "La mayoría de webs de pyme son un folleto: cuentan quién eres y ahí termina. Una web que convierte hace tres cosas más: deja clarísimo qué problema resuelves en los primeros cinco segundos, quita cada obstáculo entre el interés y el contacto, y da señales de confianza —casos, cifras, datos de contacto visibles— justo donde el visitante duda. La diferencia entre una y otra no es el diseño: es el orden de la información.",
+      },
+      {
+        h2: "SEO: lento, pero es el que se queda",
+        parrafo:
+          "Posicionarse toma meses y nadie honesto te garantiza una posición en Google, porque no depende solo del trabajo que hagamos. Lo que sí se puede prometer es el método: contenido que responde lo que la gente realmente busca, estructura técnica correcta y presencia local bien resuelta. La ventaja compensa la espera: cuando una página se posiciona, sigue trayendo contactos sin que pagues por cada clic.",
+      },
+      {
+        h2: "Automatizar sin volverse frío",
+        parrafo:
+          "Automatizar no es responder con un robot. Es que el primer mensaje salga en segundos mientras tu equipo llega, que ninguna cotización quede sin seguimiento porque alguien la olvidó, y que sepas de qué campaña vino cada cliente. El toque humano se reserva para donde hace la diferencia: la conversación que cierra.",
+      },
+      {
+        h2: "Cómo se nota que está funcionando",
+        parrafo:
+          "En tres números: cuánta gente llega, qué porcentaje deja sus datos y cuántos de esos compran. Si sube el tráfico pero no los contactos, el problema es la web. Si hay contactos pero no ventas, el problema es el seguimiento. Medir por separado es lo que permite arreglar la pieza correcta en vez de gastar más en publicidad.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto tarda una web en estar lista?",
+        a: "Depende del alcance, pero lo que más influye no es la programación: es la rapidez con que se define el contenido y se aprueban los textos e imágenes. Un proyecto con el contenido listo avanza mucho más rápido que uno donde se va decidiendo sobre la marcha.",
+      },
+      {
+        q: "¿Es mejor una web hecha a medida o una plantilla?",
+        a: "Una plantilla resuelve bien si necesitas presencia rápida y económica. Empieza a quedarse corta cuando necesitas velocidad de carga real, posicionamiento serio o funciones propias. La pregunta útil no es cuál es mejor, sino cuánto te cuesta migrar después si tu negocio crece.",
+      },
+      {
+        q: "¿Cuánto tiempo toma ver resultados de SEO?",
+        a: "Se mide en meses, no semanas. Las primeras señales —que Google indexe y muestre tus páginas— aparecen pronto, pero subir a las primeras posiciones en términos con competencia es un trabajo sostenido. Si necesitas ventas este mes, el SEO no es el canal; es el que asegura los meses siguientes.",
+      },
+      {
+        q: "¿Necesito un CRM si tengo pocos clientes?",
+        a: "Cuantos menos clientes tengas, más caro te sale perder uno. No hace falta un sistema costoso: lo esencial es que exista un solo lugar con todos los contactos, su historial y la próxima acción con fecha. Eso ya evita la mayoría de las pérdidas por olvido.",
+      },
+      {
+        q: "¿Puedo actualizar la web yo mismo?",
+        a: "Sí, las hacemos para que puedas cambiar textos, fotos y publicaciones sin depender de nadie. Lo que conviene dejar en manos técnicas son los cambios de estructura, porque ahí es donde un ajuste mal hecho puede afectar el posicionamiento que costó meses.",
+      },
+    ],
     enlazaA: ["desarrollo-web", "seo", "crm-automatizacion"],
     cierre: {
       h2: "Construyamos tu máquina de ventas",
@@ -82,8 +248,64 @@ const CATEGORIAS_RAW: Servicio[] = [
     hero: "La marca que se recuerda y el contenido que mueve a la acción. Lo que hace que te elijan a ti y paguen más.",
     cta: "Construyamos tu marca",
     keyword: "marca y contenido",
-    secciones: [],
-    faq: [],
+    secciones: [
+      {
+        h2: "La marca es lo que queda cuando apagas la pauta",
+        parrafo:
+          "Puedes comprar atención todos los meses o construir una razón para que te elijan sin pagar por ella. La marca es eso: la diferencia entre competir por precio y competir por preferencia. En mercados como el iqueño, donde muchos ofrecen lo mismo, la marca suele ser el único terreno donde de verdad se puede ganar sin bajar el margen.",
+      },
+      {
+        h2: "Qué incluye esta categoría",
+        parrafo:
+          "Dos frentes que resuelven la misma pregunta —por qué elegirte a ti— desde ángulos distintos.",
+        bullets: [
+          { titulo: "Branding", texto: "identidad, mensaje y posicionamiento: cómo te ven, qué prometes y en qué te diferencias." },
+          { titulo: "Producción audiovisual", texto: "el material que demuestra lo que dices: video de producto, institucional, testimonios y contenido para campañas." },
+        ],
+      },
+      {
+        h2: "Branding no es solo el logo",
+        parrafo:
+          "Cambiar el logo es lo último y lo menos importante. Antes va lo que casi nadie define: a quién le hablas, qué problema resuelves mejor que los demás, con qué tono lo dices y qué te hace reconocible en tres segundos. Cuando eso está claro, el diseño se vuelve una consecuencia. Cuando no lo está, cada pieza se ve distinta y la marca se diluye por más bonito que sea el logotipo.",
+      },
+      {
+        h2: "El video ya no es opcional",
+        parrafo:
+          "Para un producto que se toca, un servicio que se explica o un proyecto que aún no existe, el video hace algo que ninguna foto puede: demuestra. Un recorrido por la obra, un testimonio real de un cliente, el producto funcionando. Es también el formato que más rinde en pauta, porque retiene la atención lo suficiente para que el mensaje llegue completo.",
+      },
+      {
+        h2: "Marca fuerte, publicidad más barata",
+        parrafo:
+          "Esto se ve en los números y no es teoría: cuando la gente ya te conoce, tus anuncios necesitan menos esfuerzo para convencer, y eso baja el costo de cada contacto. La marca no es el gasto que se recorta cuando hay que apretar: es lo que hace que el resto del presupuesto rinda más.",
+      },
+      {
+        h2: "Cómo trabajamos la coherencia",
+        parrafo:
+          "El mismo mensaje tiene que sostenerse en el anuncio, en la web, en el vendedor que atiende y en el banner de la fachada. Por eso definimos la marca antes de producir piezas, y dejamos documentado cómo se aplica. Es lo que evita que cada proveedor interprete la marca a su manera y que el cliente termine viendo tres empresas distintas.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuándo conviene hacer un rebranding?",
+        a: "Cuando la marca ya no representa lo que vendes, cuando te confunden con la competencia o cuando cambió tu público. Lo que no es buena razón es el aburrimiento interno: tú ves tu logo todos los días, tu cliente lo ve unos segundos al mes. Cambiar sin motivo estratégico tira a la basura el reconocimiento que ya habías construido.",
+      },
+      {
+        q: "¿Qué incluye un manual de marca?",
+        a: "Cómo se usa el logo y cómo no, colores y tipografías con sus códigos exactos, tono de comunicación y ejemplos de aplicación. Su valor real es práctico: cualquier proveedor puede producir una pieza correcta sin adivinar, y tu marca se ve igual en todos lados.",
+      },
+      {
+        q: "¿Necesito video si ya tengo buenas fotos?",
+        a: "Las fotos muestran, el video demuestra. Si vendes algo que hay que ver en funcionamiento, un proceso que genera confianza o un espacio que hay que recorrer, el video convierte mejor. Si tu producto se entiende de un vistazo, la foto puede ser suficiente.",
+      },
+      {
+        q: "¿Cuánto material audiovisual necesito para empezar?",
+        a: "Menos del que crees. Un video principal bien hecho y algunas piezas cortas derivadas de la misma grabación suelen cubrir varios meses de campañas. Es más rentable planificar una sola producción con varios usos que grabar cada mes sin plan.",
+      },
+      {
+        q: "¿La marca sirve si mi negocio vende a otras empresas?",
+        a: "Sirve igual o más. En ventas entre empresas la decisión pasa por la confianza y por reducir el riesgo de equivocarse: quien elige un proveedor está poniendo su propio prestigio en juego. Una marca sólida y material institucional serio hacen esa decisión más fácil.",
+      },
+    ],
     enlazaA: ["branding", "produccion-audiovisual"],
     cierre: { h2: "Construyamos tu marca", cta: "Construyamos tu marca" },
   },
@@ -98,8 +320,72 @@ const CATEGORIAS_RAW: Servicio[] = [
     hero: "Lo digital atrae; lo físico convence y se queda. Presencia de marca en la calle, el punto de venta y las manos de tu cliente.",
     cta: "Pide tu cotización",
     keyword: "activación y medios físicos",
-    secciones: [],
-    faq: [],
+    secciones: [
+      {
+        h2: "Por qué lo físico sigue vendiendo (y más en Ica)",
+        parrafo:
+          "Un anuncio se cierra con el pulgar; una gigantografía en la avenida no. El medio físico tiene una ventaja que lo digital no puede comprar: ocupa un espacio real en la ruta diaria de tu cliente y no compite con veinte notificaciones. En una plaza como Ica, donde buena parte de la decisión de compra todavía pasa por la calle, el punto de venta y el boca a boca, la presencia física no es nostalgia: es donde está el cliente. Lo que sí cambió es que ahora se puede medir, y esa es la parte que casi nadie hace.",
+      },
+      {
+        h2: "Qué cubre esta categoría",
+        parrafo:
+          "Seis frentes que suelen contratarse por separado y funcionan mucho mejor coordinados, porque comparten la misma marca, el mismo mensaje y el mismo calendario.",
+        bullets: [
+          { titulo: "BTL y activaciones", texto: "presencia en eventos, ferias y punto de venta, con equipo y guion de contacto para que la activación termine en dato, no solo en foto." },
+          { titulo: "Publicidad móvil", texto: "tu marca circulando por las rutas donde está tu público, con cobertura que un panel fijo no alcanza." },
+          { titulo: "Estructuras publicitarias", texto: "tótems, letras volumétricas y señalización que convierten tu fachada en el mejor anuncio permanente que puedes tener." },
+          { titulo: "Material POP", texto: "lo que decide la compra en el último metro: exhibidores, señalética de góndola, piezas de mostrador." },
+          { titulo: "Imprenta", texto: "gigantografías, banners, tarjetas y todo el impreso corporativo, con producción rápida y color controlado." },
+          { titulo: "Merchandising", texto: "el objeto útil que se queda meses en el escritorio de tu cliente recordándole quién eres." },
+        ],
+      },
+      {
+        h2: "Cómo se conecta con lo digital",
+        parrafo:
+          "El error más común es tratarlos como mundos aparte: la agencia digital por un lado y el imprentero por otro. El resultado es una marca que se ve de dos maneras distintas y una inversión que nadie sabe si funcionó. Nosotros trabajamos ambos lados bajo el mismo método: la activación captura datos que entran al mismo embudo que la publicidad digital, el material lleva un código o un número que permite atribuir de dónde vino cada contacto, y la campaña en redes avisa del evento antes de que ocurra. Físico y digital empujando en la misma dirección.",
+      },
+      {
+        h2: "Se puede medir, y así lo hacemos",
+        parrafo:
+          "Que sea físico no significa que sea a ciegas. En cada activación registramos cuántos contactos se captaron y cuántos terminaron en venta; en material y estructuras medimos el efecto en consultas y en tráfico al local. La prueba está en los eventos que operamos para un concesionario: 3 vehículos vendidos en la activación del 22 de mayo y 5 en la del 25 de junio. No es alcance estimado: son unidades salidas del piso.",
+      },
+      {
+        h2: "Producción y montaje, sin intermediarios",
+        parrafo:
+          "Diseñamos, producimos y montamos. Eso evita el problema clásico de dividir el trabajo entre tres proveedores: el diseño que se ve distinto al impreso, el impreso que llega tarde al evento y el montaje que nadie supervisó. Un solo responsable del calendario y del resultado final.",
+      },
+      {
+        h2: "Para qué tipo de negocio funciona mejor",
+        parrafo:
+          "Para el que necesita presencia local visible y decisiones de compra que ocurren cerca: concesionarios y marcas de vehículos —atendemos 19 marcas, de livianos a línea amarilla—, inmobiliarias con sala de ventas, marcas de consumo en punto de venta, hoteles y restaurantes, y empresas que van a ferias sectoriales. Si tu cliente decide sin verte físicamente nunca, probablemente te convenga empezar por el frente digital.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto tiempo toma producir una gigantografía o un banner?",
+        a: "Depende del formato y del acabado, pero la producción impresa suele resolverse en días, no semanas. Lo que más retrasa un pedido no es la impresión: es la aprobación del arte. Si el diseño ya está cerrado y el archivo llega en condiciones, los tiempos se acortan mucho.",
+      },
+      {
+        q: "¿Hacen el diseño o tengo que llevarlo listo?",
+        a: "Podemos hacer ambas cosas. Si ya tienes tu manual de marca y tu arte, lo producimos respetando color y proporciones. Si no lo tienes, lo diseñamos nosotros, que suele ser más barato que reimprimir un material que salió mal.",
+      },
+      {
+        q: "¿Una activación BTL sirve si mi negocio es pequeño?",
+        a: "Sirve si tu cliente se concentra en un lugar y un momento: una feria del rubro, un fin de semana en el local, una fecha comercial. Lo que no recomendamos es una activación suelta sin objetivo claro; sin una meta de contactos y un seguimiento posterior, se convierte en un gasto con buenas fotos.",
+      },
+      {
+        q: "¿Cómo sé si el material físico está funcionando?",
+        a: "Poniéndole una forma de rastrear el origen: un número de WhatsApp o un código exclusivos de esa pieza, o simplemente preguntando a cada contacto cómo llegó y anotándolo. Es de las cosas más fáciles de medir y de las que casi nadie hace.",
+      },
+      {
+        q: "¿Trabajan fuera de Ica?",
+        a: "Sí. Operamos desde Ica para todo el Perú y ya coordinamos producción y montaje en otras plazas. Para trabajos fuera de la región conviene planificar con más anticipación por la logística de traslado.",
+      },
+      {
+        q: "¿Puedo contratar solo imprenta sin el resto?",
+        a: "Sí, se puede contratar cada frente por separado. Lo que ganas al juntarlos es coherencia de marca y un solo calendario; lo que ganas al separarlos es empezar con menos compromiso. Ambas son opciones válidas según tu momento.",
+      },
+    ],
     enlazaA: [
       "btl",
       "publicidad-movil",

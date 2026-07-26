@@ -4,6 +4,9 @@ import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import ServiceGrid, { type ServiceGridItem } from "@/components/ServiceGrid";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
+import Secciones from "@/components/Secciones";
+import Faq, { type FaqItem } from "@/components/Faq";
+import type { Seccion } from "@/content/types";
 import MetodoSection from "@/components/MetodoSection";
 import PorQueSection from "@/components/PorQueSection";
 import JsonLd from "@/components/JsonLd";
@@ -29,6 +32,8 @@ export default function HubLanding({
   gridHeading,
   extraSchema,
   related,
+  secciones,
+  faq,
 }: {
   breadcrumbs: Crumb[];
   kicker: string;
@@ -44,6 +49,11 @@ export default function HubLanding({
   /** Bloques de enlaces bajo el grid: dan a las páginas hijas un enlace
    *  contextual con anchor de keyword desde su propio pilar. */
   related?: { title: string; links: RelatedLink[]; columns?: number }[];
+  /** Cuerpo editorial del hub. Sin esto la página se queda en el grid de hijas
+   *  (~250 palabras) y no tiene con qué competir en su propia keyword. */
+  secciones?: Seccion[];
+  /** Preguntas frecuentes del hub; emiten el FAQPage de esta URL. */
+  faq?: FaqItem[];
 }) {
   return (
     <>
@@ -121,6 +131,19 @@ export default function HubLanding({
           </div>
         )}
       </Section>
+
+      {/* CUERPO EDITORIAL + FAQ (opcionales): es lo que da a un hub contenido
+          propio con el que competir, en vez de ser solo un índice de hijas. */}
+      {((secciones && secciones.length > 0) || (faq && faq.length > 0)) && (
+        <Section tone="light">
+          {secciones && secciones.length > 0 && <Secciones secciones={secciones} />}
+          {faq && faq.length > 0 && (
+            <div style={{ marginTop: secciones && secciones.length > 0 ? "var(--space-8)" : 0 }}>
+              <Faq items={faq} />
+            </div>
+          )}
+        </Section>
+      )}
 
       {/* MÉTODO + POR QUÉ — más sustancia en hubs y pilares */}
       <MetodoSection />

@@ -73,6 +73,8 @@ export default async function ServicioPage({ params }: Params) {
         columns={children.length >= 3 ? 3 : 2}
         gridKicker="Servicios"
         gridHeading="Lo que incluye esta área."
+        secciones={s.secciones}
+        faq={s.faq}
         shape={shapeFor(s.slug)}
         extraSchema={collectionPageSchema({
           name: s.metaTitle,
