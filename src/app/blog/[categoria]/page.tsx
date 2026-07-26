@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Section, Label } from "@/components/brand/parts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogCard from "@/components/BlogCard";
+import Secciones from "@/components/Secciones";
+import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
 import { collectionPageSchema } from "@/lib/schema";
@@ -53,6 +55,19 @@ export default async function BlogCategoria({ params }: Params) {
           ))}
         </div>
       </Section>
+
+      {/* Cuerpo editorial de la categoría: le da tema propio (y el nivel H2 que
+          faltaba entre el H1 y los títulos de las tarjetas). */}
+      {((c.secciones && c.secciones.length > 0) || (c.faq && c.faq.length > 0)) && (
+        <Section tone="light">
+          {c.secciones && c.secciones.length > 0 && <Secciones secciones={c.secciones} />}
+          {c.faq && c.faq.length > 0 && (
+            <div style={{ marginTop: c.secciones && c.secciones.length > 0 ? "var(--space-8)" : 0 }}>
+              <Faq items={c.faq} />
+            </div>
+          )}
+        </Section>
+      )}
     </>
   );
 }

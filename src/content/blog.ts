@@ -13,6 +13,11 @@ export type BlogCategoria = {
   metaDescription: string;
   h1: string;
   intro: string;
+  /** Cuerpo editorial bajo el listado. Sin esto la categoría es solo un índice
+   *  de tarjetas (~150 palabras) y salta de H1 a H3 sin nivel intermedio. */
+  secciones?: Seccion[];
+  /** Preguntas frecuentes de la categoría; emiten su FAQPage. */
+  faq?: Faq[];
 };
 
 export type BlogPost = {
@@ -52,6 +57,51 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     h1: "Marketing digital y pauta: guías para vender",
     intro:
       "Cómo invertir en publicidad y que vuelva en ventas. Meta Ads, Google Ads y las métricas que sí importan.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre la parte del marketing que se mide en dinero: cuánto invertir, qué significan las siglas que aparecen en los informes y cómo saber si una campaña rinde o solo gasta. Está pensada para quien pone su propio dinero en publicidad y quiere entender qué está comprando, no para especialistas.",
+      },
+      {
+        h2: "Los tres números que deciden si una campaña funciona",
+        parrafo:
+          "Casi todo el análisis de performance se apoya en estos tres, y ninguno sirve solo.",
+        bullets: [
+          { titulo: "CPL (costo por lead)", texto: "lo que te cuesta conseguir un contacto interesado. Útil, pero engañoso si lo miras aislado: un contacto barato que nunca compra sale caro." },
+          { titulo: "ROAS (retorno de la inversión publicitaria)", texto: "cuántos soles vendiste por cada sol invertido. Solo es fiable cuando la venta ocurre rápido y puedes atribuirla." },
+          { titulo: "Costo por venta cerrada", texto: "el que de verdad manda. Es el único que compara contra tu margen y te dice si el negocio se sostiene." },
+        ],
+      },
+      {
+        h2: "El error más común en pauta",
+        parrafo:
+          "Optimizar hacia lo que es fácil de medir en lugar de hacia lo que importa. Bajar el costo por contacto es sencillo: pide menos datos y promete de más. Terminas con muchos contactos baratos, un informe que se ve bien y un equipo comercial que pierde el día llamando a gente que nunca iba a comprar. La regla práctica es medir siempre un paso más abajo en el embudo de lo que estás optimizando.",
+      },
+      {
+        h2: "Cuánto invertir cuando recién empiezas",
+        parrafo:
+          "No existe una cifra estándar y desconfía de quien te la dé sin preguntarte nada. El monto sale de tu margen por venta y de cuántos clientes nuevos puedes atender sin que baje la calidad. Lo que sí es una regla razonable: es mejor sostener un presupuesto modesto tres meses seguidos que hacer un mes fuerte y cortar, porque las plataformas necesitan datos acumulados para dejar de gastar en aprender.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es el marketing de performance?",
+        a: "Es el enfoque que mide cada sol invertido contra un resultado de negocio concreto —un contacto, una cita, una venta— en lugar de contra alcance o seguidores. No es un canal, es una forma de decidir dónde poner el presupuesto.",
+      },
+      {
+        q: "¿Cuál es un buen CPL?",
+        a: "Depende por completo del margen de tu producto. Un CPL de S/50 es excelente para vender un auto y ruinoso para vender un producto de S/80. La comparación útil no es contra el promedio del mercado, sino contra lo que tú puedes pagar y seguir ganando.",
+      },
+      {
+        q: "¿En cuánto tiempo se estabiliza una campaña?",
+        a: "Entre 4 y 8 semanas habitualmente. Las primeras semanas el costo por contacto suele ser más alto porque la plataforma está aprendiendo a quién mostrarte. Juzgar una campaña por sus primeros siete días lleva a cortar cosas que iban a funcionar.",
+      },
+      {
+        q: "¿Puedo medir resultados si vendo por WhatsApp?",
+        a: "Sí, y es lo más común en Perú. Requiere anotar de dónde vino cada conversación y qué pasó con ella. No hace falta un sistema complejo: un registro ordenado y constante ya te permite calcular costo por contacto y por venta.",
+      },
+    ]
   },
   {
     slug: "conversion",
@@ -62,6 +112,52 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     h1: "Conversión y CRO: convierte visitas en clientes",
     intro:
       "Por qué tu tráfico no se vuelve venta y cómo arreglarlo: landings, embudos y seguimiento.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre lo que pasa después del clic: por qué una visita se va sin dejar sus datos, cómo debe estar armada una página para que convierta y qué hacer con los contactos que ya tienes. Es la parte menos glamorosa del marketing y, casi siempre, donde están escondidas las ventas que ya pagaste.",
+      },
+      {
+        h2: "Traer más gente rara vez es la solución",
+        parrafo:
+          "Cuando las ventas no llegan, el reflejo es subir el presupuesto de publicidad. Pero si de cada cien visitas solo una deja sus datos, duplicar el tráfico solo duplica el gasto y mantiene el problema. Mejorar esa proporción cuesta menos y beneficia a todos los canales a la vez: al pagado, al orgánico y al que llega por recomendación.",
+      },
+      {
+        h2: "Dónde se pierde una conversión",
+        parrafo:
+          "Casi siempre en uno de estos cuatro puntos, y conviene revisarlos en este orden.",
+        bullets: [
+          { titulo: "No se entiende qué vendes", texto: "si en cinco segundos el visitante no sabe qué problema le resuelves, se va. Suele ser un problema de orden, no de diseño." },
+          { titulo: "Pides demasiado", texto: "cada campo extra en un formulario cuesta contactos. Pide lo mínimo para poder llamar." },
+          { titulo: "No hay razón para actuar hoy", texto: "sin un motivo concreto, la decisión se pospone y pospuesta es perdida." },
+          { titulo: "Nadie responde a tiempo", texto: "la conversión no termina en el formulario. Termina cuando alguien contesta, y en eso se juegan más ventas que en toda la página." },
+        ],
+      },
+      {
+        h2: "Prueba, no opines",
+        parrafo:
+          "La discusión de oficina sobre qué color de botón funciona mejor se resuelve en un día probando las dos versiones con gente real. Es más barato y más honesto que la opinión del que habla más fuerte. Y aplica a casi todo: el titular, la foto, el orden de las secciones, el texto del botón.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es la tasa de conversión?",
+        a: "El porcentaje de visitantes que hace lo que querías que hicieran: dejar sus datos, escribir por WhatsApp o comprar. Si de 200 visitas 6 te escriben, tu tasa es del 3%. Lo importante no es el número absoluto sino cómo evoluciona cuando cambias algo.",
+      },
+      {
+        q: "¿Cuál es una buena tasa de conversión?",
+        a: "Varía muchísimo por rubro y por tipo de tráfico: quien llega buscando tu servicio convierte mucho más que quien vio un anuncio sin buscarte. Por eso el punto de comparación útil eres tú mismo el mes pasado, no un promedio de internet.",
+      },
+      {
+        q: "¿Cuántos campos debe tener mi formulario?",
+        a: "Los mínimos para poder contactar y calificar: normalmente nombre y un medio de contacto. Cada campo adicional reduce el número de personas que lo completan, así que pídelo solo si de verdad vas a usar ese dato.",
+      },
+      {
+        q: "¿Sirve el chat en vivo o el WhatsApp flotante?",
+        a: "Sirve mucho, siempre que alguien responda rápido. Un botón de WhatsApp que nadie atiende hasta el día siguiente es peor que no tenerlo, porque genera una expectativa de inmediatez que luego no se cumple.",
+      },
+    ]
   },
   {
     slug: "marca",
@@ -71,6 +167,46 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
       "Branding que vende vs. branding bonito, y contenido que mueve a la acción. Guías de marca y posicionamiento.",
     h1: "Marca y contenidos que dejan huella",
     intro: "Branding que vende vs. branding bonito, y contenido que mueve a la acción.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre lo que hace que te elijan cuando el precio es parecido: identidad, posicionamiento, logotipo y contenido. Menos táctica que las otras secciones y más estrategia, pero es lo que decide si compites por preferencia o por descuento.",
+      },
+      {
+        h2: "La marca no es el logo",
+        parrafo:
+          "El logotipo es la parte visible de algo más grande: la promesa que haces, el tono con el que hablas, la experiencia que entregas y lo que la gente dice de ti cuando no estás. Muchos proyectos de marca empiezan y terminan en el logo, y por eso no cambian nada del negocio. El orden correcto es al revés: primero decidir qué quieres significar y para quién, y después dibujarlo.",
+      },
+      {
+        h2: "Por qué una marca fuerte abarata la publicidad",
+        parrafo:
+          "Cuando alguien ya te conoce, tu anuncio no tiene que convencerlo desde cero: solo tiene que recordarle. Eso se traduce en menos esfuerzo para conseguir el mismo contacto, es decir, en un costo por resultado más bajo. Por eso recortar la inversión en marca para meterlo todo en pauta suele salir caro: encareces cada campaña futura.",
+      },
+      {
+        h2: "El contenido demuestra lo que la marca promete",
+        parrafo:
+          "Puedes decir que eres serio, cercano o experto, pero la gente lo cree por lo que ve: un video del proceso, un caso contado con números, la respuesta a una duda que nadie más se molesta en explicar. El contenido es la prueba de la promesa. Sin él, la marca es solo una declaración de intenciones.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuándo conviene cambiar de logo?",
+        a: "Cuando ya no representa lo que vendes, cuando te confunden con la competencia o cuando cambió tu público. El aburrimiento propio no es razón suficiente: tú ves tu logo a diario, tu cliente lo ve unos segundos al mes, y cambiarlo sin motivo tira el reconocimiento acumulado.",
+      },
+      {
+        q: "¿Qué diferencia hay entre marca e identidad visual?",
+        a: "La identidad visual es cómo se ve —logo, colores, tipografía—. La marca incluye eso y todo lo demás: qué prometes, cómo hablas, cómo atiendes y qué recuerdan de ti. La identidad se diseña; la marca se construye con el tiempo y se puede arruinar en una mala atención.",
+      },
+      {
+        q: "¿Vale la pena invertir en marca si soy pequeño?",
+        a: "Sí, y no tiene que ser caro. Lo esencial —saber a quién le hablas, qué te diferencia y decirlo siempre igual— cuesta reflexión más que presupuesto. Un negocio pequeño con mensaje claro compite mejor que uno grande con mensaje difuso.",
+      },
+      {
+        q: "¿Cada cuánto debo publicar contenido?",
+        a: "Importa más la constancia y la utilidad que la frecuencia. Publicar poco pero bien, de forma sostenida, construye más que una racha intensa seguida de meses en silencio.",
+      },
+    ]
   },
   {
     slug: "ia-automatizacion",
@@ -81,6 +217,52 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     h1: "IA y automatización aplicadas al marketing",
     intro:
       "Qué sí funciona de la inteligencia artificial en marketing —y qué es solo ruido—. Automatiza sin perder el toque humano.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre cómo usar la inteligencia artificial y la automatización en un negocio real, sin exageraciones. Qué tareas conviene automatizar, cuáles no, y cómo evitar que la eficiencia se convierta en una atención fría que espante clientes.",
+      },
+      {
+        h2: "Automatiza el trámite, no la relación",
+        parrafo:
+          "La regla práctica es sencilla: automatiza lo repetitivo y previsible —confirmar que un mensaje llegó, recordar una cita, registrar un contacto, enviar una ficha— y deja para las personas lo que requiere criterio, como negociar, resolver un problema o cerrar. Cuando se invierte el orden y el robot atiende la conversación de venta, se nota, y el cliente se va.",
+      },
+      {
+        h2: "Lo que la IA hace bien hoy en un negocio pequeño",
+        parrafo:
+          "Sin necesidad de un equipo técnico ni de grandes inversiones.",
+        bullets: [
+          { titulo: "Redactar borradores", texto: "primeras versiones de textos, descripciones y respuestas frecuentes. El resultado necesita revisión humana, pero ahorra el arranque en blanco." },
+          { titulo: "Ordenar información", texto: "resumir conversaciones, clasificar consultas por tipo o extraer datos de mensajes sueltos." },
+          { titulo: "Responder lo básico al instante", texto: "horarios, ubicación, disponibilidad. Gana tiempo mientras una persona llega a la conversación." },
+          { titulo: "Producir variantes", texto: "versiones de un mismo anuncio para probar cuál funciona mejor, en minutos en vez de días." },
+        ],
+      },
+      {
+        h2: "El riesgo de automatizar mal",
+        parrafo:
+          "Una automatización mal puesta hace daño rápido: mensajes que llegan fuera de contexto, respuestas que no resuelven y una sensación de estar hablando con una pared. Antes de automatizar un paso conviene preguntarse si a ti te gustaría recibir eso. Y siempre debe haber una salida clara hacia una persona.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿La IA puede reemplazar a mi equipo de marketing?",
+        a: "No hoy. Acelera tareas —redactar borradores, generar variantes, ordenar datos— pero no decide la estrategia ni conoce tu mercado ni asume responsabilidad por un error. Lo que sí hace es que un equipo pequeño rinda como uno más grande.",
+      },
+      {
+        q: "¿Qué debería automatizar primero?",
+        a: "La respuesta inmediata al primer contacto y el registro de cada consulta. Son las dos fugas más comunes y las más baratas de cerrar. Todo lo demás puede esperar.",
+      },
+      {
+        q: "¿Un chatbot espanta clientes?",
+        a: "Espanta si finge ser humano, si no resuelve o si no deja salida. Funciona bien cuando es honesto sobre lo que es, responde lo básico al instante y ofrece pasar con una persona en cuanto la conversación se complica.",
+      },
+      {
+        q: "¿Necesito herramientas caras para automatizar?",
+        a: "No para empezar. Las respuestas rápidas de WhatsApp Business, una hoja de cálculo bien organizada y un par de conexiones simples resuelven la mayoría de los problemas de un negocio pequeño.",
+      },
+    ]
   },
   {
     slug: "psicologia-de-mercado",
@@ -91,6 +273,46 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     h1: "Psicología de mercado: por qué la gente compra",
     intro:
       "La decisión de compra es emocional y se racionaliza después. Gatillos, sesgos y comportamiento del consumidor peruano.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre cómo decide realmente la gente: qué la mueve a comprar, qué la frena y por qué lo que dice en una encuesta no siempre coincide con lo que hace en la tienda. Aplicado al mercado peruano, con ejemplos concretos y sin promesas de fórmulas mágicas.",
+      },
+      {
+        h2: "Lo que la gente dice y lo que la gente hace",
+        parrafo:
+          "Es la primera lección de este campo y la más incómoda: preguntarle a alguien si compraría tu producto casi no predice nada. Las personas responden lo que suena razonable, no lo que harán. Por eso las preguntas útiles miran hacia atrás y no hacia adelante: qué compraste la última vez, cuánto pagaste, qué te hizo dudar. La memoria de lo hecho miente mucho menos que la intención declarada.",
+      },
+      {
+        h2: "Decidimos rápido y justificamos después",
+        parrafo:
+          "La mayor parte de las decisiones de compra se toma con el sistema intuitivo del cerebro —rápido, emocional, basado en atajos— y luego se explica con argumentos racionales. No significa que la gente sea irracional: significa que el precio, la ficha técnica y la comparación llegan casi siempre después de que la decisión ya se inclinó por confianza, familiaridad o el temor a equivocarse.",
+      },
+      {
+        h2: "Aplicarlo sin manipular",
+        parrafo:
+          "Todos estos principios se pueden usar para comunicar mejor algo verdadero o para empujar a alguien a una mala decisión. La diferencia importa más de lo que parece, y no solo por ética: manipular consigue una venta y pierde la recompra, las reseñas y la recomendación, que es donde está el negocio a largo plazo. La prueba es simple: si tu cliente supiera exactamente por qué le comunicaste así, ¿se sentiría bien atendido?",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Esto es lo mismo que el neuromarketing?",
+        a: "Se solapan mucho. La psicología de mercado estudia el comportamiento de compra en general; el neuromarketing se apoya además en lo que se sabe del funcionamiento del cerebro y en mediciones de respuesta no consciente. En la práctica diaria de un negocio se usan juntas.",
+      },
+      {
+        q: "¿Necesito un estudio caro para conocer a mi cliente?",
+        a: "No para empezar. Hablar con diez clientes actuales, revisar qué te preguntan por WhatsApp y observar qué compran juntos ya te da más de lo que imaginas. Los estudios formales tienen sentido cuando la decisión que depende de ellos es grande.",
+      },
+      {
+        q: "¿Funcionan igual estos principios en Perú?",
+        a: "Los mecanismos son universales, las referencias culturales no. La recomendación de un conocido, por ejemplo, pesa especialmente en el mercado peruano. Conviene tomar el principio y validarlo con tu propio público antes de darlo por hecho.",
+      },
+      {
+        q: "¿Sirve esto para vender a empresas y no solo a personas?",
+        a: "Sí. En las empresas también deciden personas, y con una presión añadida: el miedo a equivocarse frente a su jefe. Por eso en ventas entre empresas pesan tanto las señales que reducen el riesgo percibido: casos, garantías, referencias.",
+      },
+    ]
   },
   {
     slug: "inmobiliario",
@@ -103,6 +325,46 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     h1: "Marketing inmobiliario: ideas y casos",
     intro:
       "Cómo se vende un proyecto hoy: captación de citas, drone y mensajes que mueven la decisión.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre cómo se vende un proyecto inmobiliario hoy: preventa, captación de interesados, campañas para lotes y departamentos, y el seguimiento que lleva del formulario a la sala de ventas. Escrito desde la experiencia de operar campañas para proyectos reales.",
+      },
+      {
+        h2: "El problema no suele ser la cantidad de interesados",
+        parrafo:
+          "Casi todos los proyectos generan consultas. Donde se cae la venta es más adelante: contactos que nadie calificó, visitas que se agendan y no se concretan, y seguimientos que se abandonan al segundo intento. Antes de subir el presupuesto de publicidad conviene medir cuántos de los interesados que ya tienes llegaron efectivamente a pisar el terreno.",
+      },
+      {
+        h2: "Dos compradores, dos mensajes",
+        parrafo:
+          "En un mismo proyecto conviven el que compra para vivir y el que compra para invertir. Al primero le importan la ubicación, la seguridad, los tiempos de traslado y la cuota; al segundo, a cuánto entra hoy, a cuánto podría vender después y en cuánto tiempo. Hablarles con la misma pieza es la forma más rápida de no convencer a ninguno de los dos.",
+      },
+      {
+        h2: "La preventa es donde está el margen",
+        parrafo:
+          "Es la etapa con el precio más bajo del proyecto y, por eso mismo, la que tiene el argumento más fuerte: quien entra ahora entra antes de que el precio suba con el avance de obra. Comunicar bien esa escalera de valorización, con fechas y etapas concretas, mueve más que cualquier adjetivo sobre las amenidades.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuántos contactos hacen falta para vender un lote?",
+        a: "Bastantes más que en productos de ticket bajo, porque la decisión es larga y suele involucrar a una familia. Lo relevante no es el promedio del sector sino tu propia proporción: mídela durante un par de meses y trabaja con ese número.",
+      },
+      {
+        q: "¿Conviene poner el precio en los anuncios?",
+        a: "Mostrar precio o cuota reduce la cantidad de consultas y sube su calidad, porque filtra a quien no puede pagarlo. Si tu equipo comercial está saturado atendiendo gente fuera de rango, ponerlo suele ser una mejora inmediata.",
+      },
+      {
+        q: "¿Qué material necesito antes de lanzar la campaña?",
+        a: "Como mínimo, imágenes del proyecto terminado, el precio de lanzamiento con su plan de pagos y un lugar donde recibir al interesado, sea sala de ventas o punto de atención. Lanzar sin eso es quemar presupuesto.",
+      },
+      {
+        q: "¿Redes sociales o portales inmobiliarios?",
+        a: "Hacen cosas distintas. El portal captura a quien ya está buscando comprar; las redes generan interés en quien no lo estaba buscando y permiten contar el proyecto. La mayoría de proyectos termina usando ambos, con presupuestos y expectativas separadas.",
+      },
+    ]
   },
   {
     slug: "automotriz",
@@ -113,6 +375,51 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
       "Del clic al test drive: cómo llevar leads de autos hasta el cierre en piso. Ideas y casos de marketing automotriz.",
     h1: "Marketing automotriz: ideas y casos",
     intro: "Del clic al test drive: cómo llevar leads de autos hasta el cierre en piso.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre marketing para concesionarios y marcas de vehículos: cómo generar prospectos que sí llegan al piso, qué mensajes mueven la decisión de compra y cómo se arma un evento de venta. Escrito desde la experiencia de atender 19 marcas, de livianos a línea amarilla.",
+      },
+      {
+        h2: "Un contacto que no llega al piso no vale nada",
+        parrafo:
+          "Es la particularidad del rubro: la venta se cierra presencialmente, casi siempre después de una prueba de manejo. Por eso optimizar hacia el clic barato o hacia el formulario es engañarse. La métrica que ordena todo el trabajo es el costo por prueba de manejo efectiva, y después el costo por unidad vendida.",
+      },
+      {
+        h2: "Lo que realmente mueve la decisión",
+        parrafo:
+          "No es la ficha técnica. Es la cuota mensual, la cuota inicial, el bono vigente, la disponibilidad inmediata y qué pasa con el mantenimiento. Cuando el anuncio responde eso, el interesado llega con la decisión medio tomada y la conversación en el piso es mucho más corta.",
+      },
+      {
+        h2: "Livianos, camiones y línea amarilla no se venden igual",
+        parrafo:
+          "El comprador de un vehículo liviano decide en semanas y muchas veces en familia. El de un camión o de maquinaria decide en meses, es una empresa y suele haber un comité de por medio, con criterios de rentabilidad, disponibilidad de repuestos y servicio postventa. Tratar ambos con la misma campaña y el mismo plazo de expectativa lleva a conclusiones equivocadas.",
+      },
+      {
+        h2: "La posventa es la mina olvidada",
+        parrafo:
+          "Toda la atención se va a vender la unidad y casi nadie trabaja la base de clientes que ya compró: mantenimientos, repuestos, accesorios y la renovación años después. Es el público más barato de alcanzar porque ya te conoce, y el que sostiene el taller entre picos de venta.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuántos prospectos necesito para vender un vehículo?",
+        a: "Depende del segmento y del precio, y varía mucho entre un liviano y una unidad de trabajo. Lo importante es medir tu propia proporción a lo largo de un par de meses en lugar de guiarte por promedios ajenos.",
+      },
+      {
+        q: "¿Los eventos en concesionario venden o solo llenan de gente?",
+        a: "Venden si hay convocatoria segmentada previa, una oferta con fecha límite y un equipo preparado para cerrar ese mismo día. Sin esas tres cosas se convierten en una jornada concurrida sin resultado. En dos eventos que operamos se vendieron 8 vehículos: 3 en uno y 5 en el otro.",
+      },
+      {
+        q: "¿Conviene mostrar el precio o la cuota en el anuncio?",
+        a: "La cuota suele funcionar mejor porque es la cifra con la que el comprador realmente decide si puede permitírselo. Eso sí, indica la condición: si el financiamiento exige una inicial determinada, decirlo filtra a quien no califica y ahorra llamadas.",
+      },
+      {
+        q: "¿Sirve el marketing digital para vender maquinaria pesada?",
+        a: "Sí, pero con otro objetivo. Aquí no buscas una venta inmediata sino entrar en la lista corta de proveedores de una empresa. El trabajo es de presencia, credibilidad y contenido técnico sostenido, con un ciclo de decisión de meses.",
+      },
+    ]
   },
   {
     slug: "sectores",
@@ -123,6 +430,51 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     h1: "Marketing para turismo, consumo y salud",
     intro:
       "Estrategias por rubro: llenar temporada baja, mover el punto de venta y captar pacientes.",
+    secciones: [
+      {
+        h2: "Qué encontrarás en esta sección",
+        parrafo:
+          "Artículos sobre marketing aplicado a rubros concretos: turismo y hotelería, salud, restaurantes, agroexportación y bodegas de pisco y vino. La lógica de fondo es la misma en todos, pero lo que funciona en cada uno cambia bastante, y ahí está la diferencia entre una campaña que rinde y una genérica.",
+      },
+      {
+        h2: "Por qué el mismo método da resultados distintos",
+        parrafo:
+          "Un hotel compite contra la estacionalidad; una clínica, contra la desconfianza; una agroexportadora, contra la distancia y el idioma de su comprador. Las herramientas se parecen —publicidad, web, contenido, seguimiento— pero el mensaje, el canal y hasta la definición de éxito son diferentes. Por eso las recetas universales de marketing rinden tan poco en la práctica.",
+      },
+      {
+        h2: "Lo que casi todos los rubros comparten",
+        parrafo:
+          "Por muy distinto que sea el negocio, estos tres puntos aparecen una y otra vez.",
+        bullets: [
+          { titulo: "La velocidad de respuesta", texto: "quien contesta primero suele quedarse con el cliente, en cualquier rubro." },
+          { titulo: "La prueba", texto: "casos, reseñas y material real convencen más que cualquier adjetivo sobre uno mismo." },
+          { titulo: "El seguimiento", texto: "la mayoría de ventas no se cierra en el primer contacto, y casi nadie llega al tercero." },
+        ],
+      },
+      {
+        h2: "La estacionalidad se trabaja, no se sufre",
+        parrafo:
+          "Turismo, gastronomía y agro viven de temporadas, y el error clásico es invertir solo cuando la demanda ya está alta. Los meses flojos no se arreglan bajando el precio: se trabajan con una oferta distinta, dirigida a otro público —normalmente más cercano y de escapada corta— y preparada con anticipación.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Por qué el marketing cambia según el sector?",
+        a: "Porque cambia cómo decide el cliente. El plazo de decisión, quién decide, qué genera confianza y dónde busca son distintos en cada rubro. Las herramientas se parecen; la estrategia no debería.",
+      },
+      {
+        q: "¿Y si mi rubro no aparece en esta sección?",
+        a: "Los principios de fondo —entender a quién le vendes, medir la cadena completa y cerrar las fugas del seguimiento— se aplican a cualquier negocio. Los artículos de las otras secciones cubren esa parte común.",
+      },
+      {
+        q: "¿Cómo lleno mi negocio en temporada baja?",
+        a: "Con una propuesta distinta a la de temporada alta y dirigida a otro público. En alta el mensaje apunta a quien ya decidió venir; en baja hay que crear el motivo del viaje o la visita, y anticiparse con semanas, no con días.",
+      },
+      {
+        q: "¿Sirve el marketing digital para negocios que venden a otras empresas?",
+        a: "Sí, con otro enfoque. No busca una venta inmediata sino credibilidad y estar presente cuando la empresa evalúa proveedores: web sólida, contenido técnico y material institucional serio.",
+      },
+    ]
   },
 ];
 
