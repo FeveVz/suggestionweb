@@ -309,7 +309,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "¿Cuánto cuesta empezar en Perú?",
         parrafo:
-          "Son dos bolsillos distintos y conviene no mezclarlos: lo que le pagas a quien ejecuta y lo que le pagas a la plataforma. Lo segundo es la pauta y se va completo en anuncios. En Suggestion un plan mensual arranca en S/1,500 y una landing también en S/1,500; la pauta va aparte. Como referencia de lo que rinde una inversión modesta bien dirigida: Granjas Bonanza cerró 15 contratos con S/2,500 y la inmobiliaria Ceinys llegó a S/350K con S/3,000 en Meta Ads. No es promesa: es lo que pasó en esos casos.",
+          "Son dos bolsillos distintos y conviene no mezclarlos: lo que le pagas a quien ejecuta el trabajo y lo que le pagas a la plataforma. Lo segundo es la pauta, y se va completo en anuncios. La cifra correcta no sale de una tabla: sale de tu margen por venta y de cuántos clientes nuevos puedes atender sin que se te caiga la calidad. Empieza por ahí y hacia atrás. Como referencia de lo que rinde una inversión modesta bien dirigida: una inmobiliaria de Ica llegó a S/350K en ventas con S/3,000 en Meta Ads, y una marca de consumo cerró 15 contratos con S/2,500. No es promesa —cada mercado es distinto—, pero sirve para dimensionar.",
       },
       {
         h2: "Qué esperar en los primeros 90 días",
