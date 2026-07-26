@@ -3,6 +3,7 @@ import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import ServiceGrid, { type ServiceGridItem } from "@/components/ServiceGrid";
+import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import MetodoSection from "@/components/MetodoSection";
 import PorQueSection from "@/components/PorQueSection";
 import JsonLd from "@/components/JsonLd";
@@ -27,6 +28,7 @@ export default function HubLanding({
   gridKicker,
   gridHeading,
   extraSchema,
+  related,
 }: {
   breadcrumbs: Crumb[];
   kicker: string;
@@ -39,6 +41,9 @@ export default function HubLanding({
   gridHeading?: string;
   shape?: number;
   extraSchema?: Json | Json[];
+  /** Bloques de enlaces bajo el grid: dan a las páginas hijas un enlace
+   *  contextual con anchor de keyword desde su propio pilar. */
+  related?: { title: string; links: RelatedLink[]; columns?: number }[];
 }) {
   return (
     <>
@@ -108,6 +113,13 @@ export default function HubLanding({
         <div>
           <ServiceGrid items={items} columns={columns} />
         </div>
+        {related && related.length > 0 && (
+          <div style={{ marginTop: "var(--space-8)", display: "grid", gap: "var(--space-7)" }}>
+            {related.map((b) => (
+              <RelatedLinks key={b.title} title={b.title} links={b.links} columns={b.columns ?? 2} />
+            ))}
+          </div>
+        )}
       </Section>
 
       {/* MÉTODO + POR QUÉ — más sustancia en hubs y pilares */}
