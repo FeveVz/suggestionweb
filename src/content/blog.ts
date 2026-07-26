@@ -484,37 +484,117 @@ export const BLOG_POSTS: BlogPost[] = [
       "Qué es un lead, los tipos que existen y por qué se enfrían. Aprende a capturarlos y darles seguimiento para convertir más sin gastar más.",
     h1: "Qué es un lead y cómo dejar de perderlos",
     excerpt:
-      "Un lead es una persona que mostró interés en lo que vendes y te dejó un dato para contactarla. Suena obvio, pero ahí empieza el problema: la mayoría de negocios genera leads y los pierde por no saber qué hacer con ellos.",
+      "Un lead es una persona que mostró interés en lo que vendes y te dejó un dato para contactarla. Suena obvio, pero ahí empieza el problema: la mayoría de negocios genera leads y los pierde por no saber qué hacer con ellos. Esta es la guía completa, sin tecnicismos.",
     date: "2026-03-04",
     secciones: [
       {
-        h2: "Tipos de leads (no todos valen igual)",
+        h2: "¿Qué es un lead, en palabras simples?",
+        parrafo:
+          "Un lead es un contacto interesado: alguien que levantó la mano y te dejó una forma de ubicarlo —su número, su correo o un mensaje por WhatsApp—. Esa es la diferencia con una visita. Quien entra a tu web y se va sin dejar rastro no es un lead: es tráfico. El lead empieza a existir en el momento en que puedes iniciar una conversación con esa persona.",
+      },
+      {
+        h2: "Visita, lead, prospecto y cliente: no son lo mismo",
+        parrafo:
+          "Se usan como sinónimos y eso genera desorden en el equipo comercial. Vale la pena separarlos, porque cada etapa se trabaja distinto.",
         bullets: [
-          { titulo: "Lead frío", texto: "mostró interés mínimo; falta nutrirlo." },
-          { titulo: "Lead tibio (MQL)", texto: "interactuó varias veces; tiene potencial." },
-          { titulo: "Lead caliente (SQL)", texto: "listo para hablar de compra." },
+          { titulo: "Visita", texto: "vio tu contenido o tu anuncio. No sabes quién es y no puedes contactarla." },
+          { titulo: "Lead", texto: "te dejó un dato. Ya puedes escribirle." },
+          { titulo: "Prospecto", texto: "además de dejarte el dato, encaja con lo que vendes y tiene una necesidad real." },
+          { titulo: "Cliente", texto: "compró. Y aquí no termina: es el más barato de volver a vender." },
         ],
-        parrafo: "Tratar a todos igual es el error #1: persigues a los fríos y descuidas a los calientes.",
+      },
+      {
+        h2: "Tipos de leads: no todos valen igual",
+        parrafo:
+          "Tratar a todos por igual es el error más caro: persigues a los que todavía no van a comprar y descuidas a los que ya estaban listos. Verás estas siglas en cualquier herramienta, así que conviene entenderlas.",
+        bullets: [
+          { titulo: "Lead frío", texto: "mostró interés mínimo, quizá solo curiosidad. Necesita información antes que una llamada de venta." },
+          { titulo: "Lead tibio (MQL)", texto: "interactuó varias veces y encaja con tu cliente ideal. MQL solo significa que marketing lo considera listo para que ventas lo mire." },
+          { titulo: "Lead caliente (SQL)", texto: "pidió precio, disponibilidad o una cita. SQL quiere decir que ventas ya lo aceptó como oportunidad real. Aquí la velocidad lo es todo." },
+        ],
+      },
+      {
+        h2: "¿De dónde salen los leads?",
+        parrafo:
+          "No todos llegan de internet, y confundir el origen hace que midas mal. Conviene registrar de dónde vino cada uno para saber qué canal sostener.",
+        bullets: [
+          { titulo: "Formulario de tu web", texto: "el más ordenado: llega con los datos que tú pediste." },
+          { titulo: "WhatsApp", texto: "en Perú es el rey. Rápido y cercano, pero se pierde entre conversaciones si nadie lo registra." },
+          { titulo: "Llamada o visita al local", texto: "el más caliente de todos y, curiosamente, el que casi nadie anota." },
+          { titulo: "Redes sociales", texto: "comentarios y mensajes directos. Son leads aunque no se sientan como tales." },
+          { titulo: "Ferias, activaciones y referidos", texto: "cierran muy bien porque llegan con confianza previa. Merecen su propio registro." },
+        ],
       },
       {
         h2: "Por qué se te enfrían los leads",
+        parrafo:
+          "Un lead no se pierde de golpe: se enfría. Y casi siempre por las mismas tres razones, que no tienen que ver con la publicidad sino con lo que pasa después.",
         bullets: [
-          { titulo: "Tardas en responder", texto: "un lead sin respuesta en minutos pierde temperatura rápido." },
-          { titulo: "No haces seguimiento", texto: "la mayoría de ventas se cierra después de varios contactos." },
-          { titulo: "No los organizas", texto: "sin un CRM, los leads viven en mensajes sueltos y se pierden." },
+          { titulo: "Tardas en responder", texto: "el interés dura poco. Quien escribe a tres proveedores suele quedarse con el que contestó primero, no con el mejor." },
+          { titulo: "No haces seguimiento", texto: "un 'lo voy a pensar' no es un no. La mayoría de ventas se cierra después de varios contactos, y casi nadie llega al tercero." },
+          { titulo: "No los organizas", texto: "si los leads viven en mensajes sueltos, cuadernos y capturas de pantalla, se pierden. No por mala intención: por desorden." },
         ],
       },
       {
-        h2: "Cómo dejar de perderlos",
+        h2: "¿Cómo saber si un lead es bueno? (calificar)",
+        parrafo:
+          "Calificar es hacerle cuatro preguntas al contacto —a veces sin preguntárselas directamente— para saber cuánto esfuerzo merece. No es filtrar por filtrar: es dejar de gastar tu mejor hora en quien nunca iba a comprar.",
+        sub: [
+          { h3: "¿Tiene una necesidad real?", texto: "Busca resolver algo concreto o solo estaba mirando. La forma en que pregunta suele delatarlo." },
+          { h3: "¿Puede pagarlo?", texto: "No se trata de juzgar a nadie, sino de ubicar tu oferta. Si tu producto no está a su alcance hoy, quizá lo esté en seis meses." },
+          { h3: "¿Decide él?", texto: "En ventas a empresas casi nunca decide quien escribe. Saber quién firma cambia toda la conversación." },
+          { h3: "¿Para cuándo?", texto: "El que compra este mes y el que compra el año que viene necesitan seguimientos distintos, no el mismo mensaje repetido." },
+        ],
+      },
+      {
+        h2: "¿Necesito un CRM si vendo por WhatsApp?",
+        parrafo:
+          "Un CRM es simplemente el lugar donde vive cada contacto con su historial: qué pidió, qué se le respondió y cuándo toca volver a escribirle. No es un software caro para empresas grandes; puede empezar siendo una hoja de cálculo bien llevada. La pregunta correcta no es si lo necesitas, sino esta: si mañana tu vendedor renuncia y se va con su celular, ¿pierdes las conversaciones? Si la respuesta es sí, ya lo necesitas.",
+      },
+      {
+        h2: "¿Cuánto cuesta un lead y por qué el barato puede salir caro?",
+        parrafo:
+          "El costo por lead (CPL) es lo que pagaste en publicidad dividido entre los contactos que entraron. Es útil, pero engaña si lo miras solo. Bajar el CPL es fácil: pides menos datos, prometes más de lo que puedes cumplir y te llenas de contactos que nunca iban a comprar. Terminas pagando poco por cada lead y mucho por cada venta. El número que manda es el costo por venta cerrada, no el costo por contacto.",
+      },
+      {
+        h2: "Cómo dejar de perder leads: los cuatro básicos",
+        parrafo:
+          "Antes de aumentar el presupuesto de publicidad, cierra las fugas. Casi siempre hay más ventas escondidas aquí que en un anuncio nuevo.",
         bullets: [
-          { titulo: "Captura ordenada", texto: "todo lead entra a un solo lugar (CRM)." },
-          { titulo: "Respuesta rápida", texto: "automatiza el primer contacto (incluido WhatsApp)." },
-          { titulo: "Seguimiento constante", texto: "secuencias que nutren hasta el cierre." },
-          { titulo: "Calificación", texto: "prioriza a los calientes, nutre a los fríos." },
+          { titulo: "Captura ordenada", texto: "todo lead entra a un solo lugar, venga de donde venga, y con su origen anotado." },
+          { titulo: "Respuesta rápida", texto: "un primer mensaje automático gana tiempo, pero no reemplaza a una persona. Que el humano llegue pronto." },
+          { titulo: "Seguimiento con calendario", texto: "cada lead con una próxima acción y una fecha. Sin eso, el seguimiento depende de la memoria." },
+          { titulo: "Calificación", texto: "prioriza a los calientes hoy y nutre a los fríos con información útil, sin acosarlos." },
         ],
       },
     ],
-    cierre: "En Suggestion automatizamos la captura, el seguimiento y la calificación para que ningún lead se enfríe.",
+    faq: [
+      {
+        q: "¿Un lead es lo mismo que un cliente potencial?",
+        a: "Casi. Todo lead es un cliente potencial, pero no todo cliente potencial es un lead: para serlo tiene que haberte dejado una forma de contactarlo. Esa es la diferencia práctica, porque sin dato no hay conversación posible.",
+      },
+      {
+        q: "¿Qué significan MQL y SQL?",
+        a: "Son etiquetas para saber en qué momento va cada contacto. MQL es el lead que marketing considera listo para que ventas lo revise; SQL es el que ventas ya aceptó como oportunidad real porque pidió precio, cita o disponibilidad. Si tu equipo es pequeño, basta con llamarlos tibio y caliente.",
+      },
+      {
+        q: "¿En cuánto tiempo debería responder un lead?",
+        a: "Lo antes posible, y en WhatsApp eso significa minutos. El interés se enfría rápido y quien pregunta suele estar consultando a varios a la vez. Si no puedes sostener esa velocidad todo el día, al menos ten un primer mensaje automático que confirme la recepción y diga cuándo responderá una persona.",
+      },
+      {
+        q: "¿Cuántos leads necesito para lograr una venta?",
+        a: "Depende del rubro y del precio. En productos de ticket bajo pueden bastar unos pocos; en inmobiliario o vehículos hacen falta bastantes más, porque la decisión es larga. Lo importante no es el promedio de otros: es medir el tuyo durante un par de meses y trabajar con ese número.",
+      },
+      {
+        q: "¿Sirve un CRM si soy un negocio pequeño?",
+        a: "Sí, y no tiene que ser caro. Lo esencial es que exista un solo lugar donde estén todos los contactos con su historial y su próxima acción. Una hoja de cálculo ordenada es infinitamente mejor que varias conversaciones sueltas en distintos celulares.",
+      },
+      {
+        q: "¿Es mejor tener muchos leads baratos o pocos caros?",
+        a: "Ninguno de los dos por sí solo. Lo que importa es cuántos terminan comprando. Un lead más caro que cierra con frecuencia sale más barato que diez que solo consumen el tiempo de tu equipo. Mide el costo por venta, no el costo por contacto.",
+      },
+    ],
+    cierre: "Si tus leads se están enfriando entre WhatsApp, correos y cuadernos, el problema no es la publicidad: es el proceso. Eso se ordena.",
     moneyPage: { label: "Agenda una demo", href: "/servicios/crm-automatizacion" },
     relacionados: ["como-automatizar-whatsapp", "que-es-el-marketing-digital"],
   },
@@ -526,31 +606,98 @@ export const BLOG_POSTS: BlogPost[] = [
       "Qué es el neuromarketing, cómo funciona y 5 técnicas para aplicarlo en tu negocio sin manipular. La ciencia detrás de por qué la gente compra.",
     h1: "Qué es el neuromarketing y cómo usarlo para vender más",
     excerpt:
-      "El neuromarketing estudia cómo decide el cerebro de tu cliente —no lo que dice que decide, sino lo que realmente hace—. La compra es emocional y se justifica después con la razón. Quien entiende eso, vende más sin bajar el precio.",
+      "El neuromarketing estudia cómo decide el cerebro de tu cliente: no lo que dice que decide, sino lo que realmente hace. Es un campo con mucha evidencia útil y también con mucho charlatán, así que aquí va la versión honesta: qué sirve, qué no, y qué puedes aplicar sin un laboratorio.",
     date: "2026-03-11",
     secciones: [
       {
-        h2: "Qué es el neuromarketing",
+        h2: "¿Qué es el neuromarketing?",
         parrafo:
-          "Es la aplicación de la neurociencia y la psicología al marketing: cómo la atención, la emoción y la memoria influyen en la decisión de compra. No es manipular; es comunicar como el cerebro realmente procesa.",
+          "Es la aplicación de la neurociencia y la psicología del comportamiento al marketing: entender cómo la atención, la emoción y la memoria influyen en la decisión de compra. La idea de fondo está bien documentada: decidimos con el sistema rápido e intuitivo del cerebro y después justificamos la decisión con argumentos racionales. Por eso una persona puede jurar que compró por el precio cuando en realidad compró por confianza.",
       },
       {
-        h2: "5 técnicas que puedes aplicar hoy",
+        h2: "Qué NO es el neuromarketing",
+        parrafo:
+          "Aquí es donde conviene ser claro, porque se vende mucho humo con esta palabra.",
         bullets: [
-          { titulo: "Ancla de precio", texto: "mostrar primero una opción cara hace que la siguiente parezca razonable." },
-          { titulo: "Escasez y urgencia reales", texto: "“quedan 3” mueve, pero solo si es verdad." },
-          { titulo: "Prueba social", texto: "el cerebro confía en lo que otros ya validaron." },
-          { titulo: "Menos opciones", texto: "demasiadas alternativas paralizan; guía la decisión." },
-          { titulo: "Historias, no datos sueltos", texto: "el cerebro recuerda relatos, no cifras aisladas." },
+          { titulo: "No lee la mente", texto: "ninguna técnica te dice qué está pensando un cliente. Muestra tendencias en grupos, no certezas individuales." },
+          { titulo: "No es un botón de compra", texto: "no existe una palabra ni un color que obligue a nadie a pagar. Si alguien te lo vende así, desconfía." },
+          { titulo: "No reemplaza a la investigación", texto: "complementa lo que ya sabes de tu mercado; no sustituye hablar con tus clientes." },
+          { titulo: "No arregla un mal producto", texto: "puede hacer que más gente lo pruebe. También hará que se enteren más rápido de que no cumple." },
         ],
       },
       {
-        h2: "El límite ético (y comercial)",
+        h2: "Los tres resortes: atención, emoción y memoria",
         parrafo:
-          "El neuromarketing potencia un buen mensaje; no salva uno falso. Manipular genera una venta y mata la recompra. Nosotros lo usamos para comunicar mejor lo que sí es verdad.",
+          "Casi todo lo aplicable se reduce a estos tres. Tu comunicación primero tiene que ser vista, luego sentida y por último recordada. Si falla el primero, los otros dos no llegan a ocurrir.",
+        sub: [
+          { h3: "Atención", texto: "el cerebro descarta casi todo lo que ve para ahorrar energía. Compite el contraste, el movimiento, las caras y lo inesperado; pierde lo genérico." },
+          { h3: "Emoción", texto: "lo que no genera ninguna reacción no se procesa a fondo. No hace falta drama: basta con que sea relevante para la situación de esa persona." },
+          { h3: "Memoria", texto: "recordamos historias, no listas de características. Por eso un caso concreto pesa más que cinco viñetas de beneficios." },
+        ],
+      },
+      {
+        h2: "Sesgos que sí puedes aplicar hoy",
+        parrafo:
+          "Un sesgo es un atajo mental. No son trucos: son la forma en que tu cliente ya decide, la aproveches o no.",
+        bullets: [
+          { titulo: "Ancla de precio", texto: "la primera cifra que ve condiciona todo lo demás. Mostrar primero el plan completo hace que el intermedio se lea como razonable." },
+          { titulo: "Prueba social", texto: "confiamos en lo que otros ya validaron. Una reseña con nombre y foto pesa más que diez frases anónimas." },
+          { titulo: "Escasez real", texto: "las últimas unidades o el precio de lanzamiento mueven la decisión, pero solo si es verdad. La escasez inventada se descubre y quema la marca." },
+          { titulo: "Aversión a la pérdida", texto: "duele más perder algo que ilusiona ganarlo. 'No pierdas el precio de preventa' suele mover más que 'aprovecha el precio de preventa'." },
+          { titulo: "Menos opciones", texto: "demasiadas alternativas paralizan. Tres opciones bien explicadas venden más que doce." },
+          { titulo: "Historias antes que datos", texto: "el dato respalda, el relato convence. Cuenta el caso y después pon la cifra." },
+        ],
+      },
+      {
+        h2: "Cómo se aplica en tu web y en tus anuncios",
+        parrafo:
+          "No hace falta rediseñar nada para empezar. Los cambios que más rinden suelen ser los más aburridos: reducir el esfuerzo que le pides al visitante y quitar los motivos de duda. Una sola idea por pantalla, el beneficio antes que la característica, un botón que diga exactamente qué pasa al tocarlo, y las señales de confianza —reseñas, garantía, datos de contacto visibles— cerca del punto donde la persona tiene que decidir. En un anuncio, los tres primeros segundos deciden si existe el resto.",
+      },
+      {
+        h2: "Qué puedes medir sin un laboratorio",
+        parrafo:
+          "El neuromarketing de manual usa seguimiento ocular o lectura de actividad cerebral, cosas fuera del alcance de casi cualquier negocio. La buena noticia es que el 90% del beneficio se consigue con herramientas simples.",
+        bullets: [
+          { titulo: "Pruebas comparativas", texto: "dos versiones del mismo anuncio o de la misma página, y que decida el comportamiento real de la gente, no la opinión de la oficina." },
+          { titulo: "Mapas de calor", texto: "muestran dónde miran y dónde hacen clic los visitantes. Suelen revelar que nadie ve eso que tanto discutieron." },
+          { titulo: "Grabaciones de sesión", texto: "ver a cinco personas usar tu web enseña más que cualquier informe." },
+          { titulo: "Preguntar bien", texto: "no preguntes si comprarían: pregunta qué hicieron la última vez que compraron algo parecido. La memoria de lo hecho miente menos que la intención declarada." },
+        ],
+      },
+      {
+        h2: "Qué es ciencia asentada y qué es marketing de agencias",
+        parrafo:
+          "Conviene distinguir. Que la emoción y los atajos mentales influyen en la decisión es algo con décadas de investigación detrás y no está en discusión. En cambio, muchas afirmaciones que circulan —porcentajes exactos sobre cuánto decide el subconsciente, o colores con supuestos efectos universales— son simplificaciones que se repiten sin fuente. Aplica los principios, desconfía de las cifras redondas y prueba en tu propio mercado: lo que funciona en un rubro puede no funcionar en el tuyo.",
+      },
+      {
+        h2: "El límite ético (que además es comercial)",
+        parrafo:
+          "El neuromarketing potencia un mensaje verdadero; no salva uno falso. Manipular consigue una venta y mata la recompra, que es donde está el negocio de verdad. La prueba es sencilla: si tu cliente supiera exactamente por qué le comunicaste así, ¿se sentiría bien atendido o engañado? Si es lo segundo, no lo hagas. Además del daño reputacional, en Perú la publicidad engañosa tiene consecuencias ante Indecopi.",
       },
     ],
-    cierre: "En Suggestion aplicamos psicología del consumidor a tu marca y tus campañas.",
+    faq: [
+      {
+        q: "¿El neuromarketing manipula a las personas?",
+        a: "No, si se usa bien. Comunicar de forma clara y en el orden en que el cerebro procesa la información no es manipular: es hacer más fácil una decisión que la persona ya quería tomar. La manipulación empieza cuando la afirmación es falsa, la urgencia es inventada o se oculta información importante.",
+      },
+      {
+        q: "¿Necesito equipos caros para aplicarlo?",
+        a: "No. El seguimiento ocular y las mediciones de actividad cerebral están fuera del alcance de la mayoría de negocios, y tampoco hacen falta. Con pruebas comparativas, mapas de calor y observar a unos pocos usuarios reales se consigue casi todo el beneficio práctico.",
+      },
+      {
+        q: "¿Funciona igual en Perú que en otros países?",
+        a: "Los principios son universales porque el funcionamiento del cerebro lo es, pero las referencias culturales no. La prueba social, por ejemplo, pesa mucho en mercados donde la recomendación cercana manda, como el peruano. Lo prudente es tomar el principio y validarlo con tu propio público.",
+      },
+      {
+        q: "¿Sirve para un negocio pequeño?",
+        a: "Sobre todo para un negocio pequeño, porque la mayoría de mejoras no cuesta dinero: reordenar una página, cambiar el texto de un botón, poner las reseñas donde se ven o simplificar las opciones. Son decisiones de criterio, no de presupuesto.",
+      },
+      {
+        q: "¿Cuál es la diferencia con la psicología del consumidor?",
+        a: "Se solapan bastante. La psicología del consumidor estudia el comportamiento de compra en general; el neuromarketing se apoya además en lo que sabemos del funcionamiento del cerebro y en mediciones de respuesta no consciente. En la práctica del día a día, se usan juntas.",
+      },
+    ],
+    cierre: "Entender cómo decide tu cliente sirve poco si tu marca y tus mensajes no lo reflejan. Ahí es donde este conocimiento se vuelve ventas.",
     moneyPage: { label: "Hablemos de tu marca", href: "/servicios/branding" },
     relacionados: ["psicologia-de-ventas", "comportamiento-del-consumidor-peruano"],
   },
