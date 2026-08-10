@@ -1230,6 +1230,21 @@ const SERVICIOS_LIST: Servicio[] = [
           },
         ],
       },
+          {
+        h2: "Productora de contenido audiovisual en Ica",
+        parrafo:
+          "Trabajamos como productora de contenido audiovisual de punta a punta: idea, guión, rodaje y entrega final. Eso significa que no tienes que coordinar por tu cuenta al camarógrafo, al editor y a quien hace las locuciones, ni asumir el riesgo de que cada uno entienda la marca a su manera. Un solo responsable del calendario y del resultado, y una marca que se ve igual en todas las piezas.",
+      },
+      {
+        h2: "Servicios de postproducción",
+        parrafo:
+          "La postproducción es donde un material bien grabado termina de convertirse en una pieza que vende, y donde uno mediocre se salva a medias. Cubrimos el montaje, la corrección de color, el diseño de sonido, los gráficos en movimiento y los subtítulos —imprescindibles hoy, porque buena parte del video en redes se ve sin audio—. También hacemos postproducción de material que grabaste tú o que ya tenías archivado.",
+      },
+      {
+        h2: "De una grabación, varias piezas",
+        parrafo:
+          "Es la forma más rentable de producir: se planifica un solo rodaje pensando desde el inicio en todos los formatos que vas a necesitar. De ahí salen el video principal, los cortes verticales para redes, las fotos del mismo set y material de recurso para meses de campaña. Grabar cada mes sin plan cuesta bastante más y da menos.",
+      },
     ],
     incluye: [
       { titulo: "Videos corporativos", texto: "Presentación de empresa, cultura y testimonios de clientes." },
@@ -1270,6 +1285,14 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Pueden grabar en locación?",
         a: "Sí: cubrimos producciones en Ica y en todo el país según el proyecto.",
+      },
+          {
+        q: "¿Hacen solo la postproducción si yo ya tengo el material grabado?",
+        a: "Sí. Podemos encargarnos solo del montaje, el color, el sonido y los gráficos sobre material que grabaste tú o que tenías archivado. Lo único que pedimos es revisar antes los archivos originales: de la calidad de la grabación depende hasta dónde se puede llegar en postproducción.",
+      },
+      {
+        q: "¿Cuánto material audiovisual necesito para empezar?",
+        a: "Menos del que crees. Un video principal bien hecho y varias piezas cortas derivadas de la misma grabación suelen cubrir varios meses de campañas. Es más rentable planificar una producción con varios usos que grabar cada mes sin un plan detrás.",
       },
     ],
     enlazaA: ["branding", "redes-sociales", "publicidad-digital"],
@@ -1715,6 +1738,21 @@ const SERVICIOS_LIST: Servicio[] = [
         parrafo:
           "Diseño + producción + logística en un solo lugar. No solo imprimimos: pensamos qué pieza refuerza tu marca y cuál es plata tirada.",
       },
+          {
+        h2: "Souvenirs corporativos para eventos y ferias",
+        parrafo:
+          "El souvenir corporativo tiene un trabajo concreto: que la persona se lleve tu marca a casa después de un evento, una feria o una activación. Funciona cuando es útil o bonito de verdad; si no, acaba en el cajón el mismo día. Elegimos la pieza según el momento —no es lo mismo un stand de feria, donde la gente carga cosas todo el día, que una cena de cierre de año— y la producimos con tu marca aplicada como debe verse.",
+      },
+      {
+        h2: "Tu proveedor de merchandising en Ica: plazos y entrega",
+        parrafo:
+          "La diferencia entre un buen proveedor de merchandising y uno cualquiera casi nunca está en el producto: está en si llega a tiempo y sale como en la muestra. Trabajamos con fecha de entrega comprometida desde la cotización, aprobación de arte antes de producir y control de color al recibir. Coordinamos la entrega en tu local de Ica o donde la necesites, y para pedidos grandes fraccionamos los envíos si te conviene por espacio.",
+      },
+      {
+        h2: "Merchandising para empresas: cómo elegir la pieza correcta",
+        parrafo:
+          "Antes de elegir el producto conviene responder tres cosas: a quién se lo vas a dar, dónde lo va a usar y qué quieres que recuerde. Un cliente corporativo que trabaja en escritorio valora lo utilitario; un público joven en la calle, lo vestible. Con esa respuesta se decide el presupuesto por unidad, no al revés. Es la parte que casi nadie hace y la que separa el merchandising que trabaja para tu marca del que solo gasta presupuesto.",
+      },
     ],
     incluye: [
       { titulo: "Ropa corporativa", texto: "Polos, camisetas, casacas y uniformes." },
@@ -1749,6 +1787,18 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Pueden crear productos personalizados?",
         a: "Sí: desarrollamos productos a medida desde cero si ningún catálogo cubre tu necesidad.",
+      },
+          {
+        q: "¿Cuánto demora la entrega de merchandising?",
+        a: "Depende del producto y de la cantidad, pero lo que más retrasa un pedido casi nunca es la producción: es la aprobación del arte. Con el diseño cerrado y el arte aprobado, los tiempos se acortan mucho. Te damos una fecha comprometida desde la cotización para que puedas planificar tu evento o tu campaña.",
+      },
+      {
+        q: "¿Hay una cantidad mínima por pedido?",
+        a: "Sí, y varía según el producto y la técnica de personalización: bordar tiene un mínimo distinto al de un grabado o una impresión. En la cotización te decimos el mínimo de cada opción para que compares con el presupuesto que tienes.",
+      },
+      {
+        q: "¿Qué souvenir corporativo conviene para una feria?",
+        a: "Algo liviano, útil y que no estorbe: en una feria la gente ya carga bolsas y folletos. Lo pesado o frágil se abandona en el stand. Si quieres dejar una pieza de más valor, es mejor entregarla solo a los contactos calificados en lugar de repartirla a todo el que pasa.",
       },
     ],
     enlazaA: ["imprenta", "material-pop", "branding"],
