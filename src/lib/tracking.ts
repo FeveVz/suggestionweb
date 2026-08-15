@@ -18,6 +18,15 @@ export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 export const GADS_ID = process.env.NEXT_PUBLIC_GADS_ID || "";
 export const GADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL || "";
 
+/**
+ * Microsoft Clarity: grabaciones de sesión y mapas de calor. Con el tráfico
+ * actual (decenas de visitas al mes) las estadísticas no dicen nada, pero ver
+ * sesiones reales sí: enseña dónde se atasca quien llega buscando "imprenta en
+ * Ica". Enmascara el contenido de los formularios por defecto — no tocar eso.
+ * Vacío = no se inyecta nada.
+ */
+export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "y2utjzo8p3";
+
 type Gtag = (...args: unknown[]) => void;
 type Fbq = (...args: unknown[]) => void;
 

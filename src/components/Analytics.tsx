@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
-import { GA_ID, META_PIXEL_ID, GADS_ID, captureAttribution, track } from "@/lib/tracking";
+import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, captureAttribution, track } from "@/lib/tracking";
 
 /**
  * GA4 + Meta Pixel (solo si hay ID configurado en lib/tracking.ts).
@@ -50,7 +50,7 @@ export default function Analytics() {
     return () => document.removeEventListener("click", onClick, { capture: true });
   }, []);
 
-  if (!GA_ID && !META_PIXEL_ID) return null;
+  if (!GA_ID && !META_PIXEL_ID && !CLARITY_ID) return null;
 
   return (
     <>
@@ -74,6 +74,15 @@ export default function Analytics() {
             t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
             document,'script','https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '${META_PIXEL_ID}');`}
+        </Script>
+      )}
+      {CLARITY_ID && (
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "${CLARITY_ID}");`}
         </Script>
       )}
     </>

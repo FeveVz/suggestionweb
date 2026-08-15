@@ -29,7 +29,16 @@ export default function Privacidad() {
 
         <h2 style={H2}>2. Datos que recopilamos</h2>
         <p style={P}>
-          Recopilamos los datos que nos entregas voluntariamente en nuestros formularios: nombre, nombre de tu negocio, correo electrónico, teléfono/WhatsApp y el mensaje u objetivo que describas. Además, con fines estadísticos, usamos herramientas de analítica (como Google Analytics y Meta Pixel) que registran datos de navegación de forma agregada mediante cookies.
+          Recopilamos los datos que nos entregas voluntariamente en nuestros formularios: nombre, nombre de tu negocio, correo electrónico, teléfono/WhatsApp y el mensaje u objetivo que describas. Además, con fines estadísticos, usamos herramientas de analítica (Google Analytics y Meta Pixel) que registran datos de navegación de forma agregada mediante cookies.
+        </p>
+        <p style={P}>
+          También usamos <strong>Microsoft Clarity</strong>, una herramienta que registra cómo se
+          usa el sitio —desplazamiento, clics y recorrido entre páginas— para entender qué se
+          entiende bien y qué no, y mejorarlo. Este registro es de tu navegación, no de tu
+          identidad: Clarity enmascara por defecto el contenido que escribes en los formularios,
+          de modo que <strong>lo que teclees en nuestro formulario de contacto no queda grabado</strong>.
+          Puedes desactivar este tipo de seguimiento desde la configuración de tu navegador o con
+          cualquier extensión de bloqueo; el sitio seguirá funcionando igual.
         </p>
 
         <h2 style={H2}>3. Finalidad</h2>
