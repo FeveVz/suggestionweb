@@ -469,6 +469,76 @@ export const CIUDADES: Ciudad[] = [
     ],
     cierre: { h2: "Hagamos crecer tu negocio en Huaraz", cta: "Agenda una llamada" },
   },
+  {
+    slug: "palpa",
+    nombre: "Palpa",
+    metaTitle: "Agencia de Marketing en Palpa | Suggestion",
+    metaDescription:
+      "Marketing para negocios de Palpa: agro y cítricos, turismo de geoglifos y comercio local. Campañas medibles operadas desde Ica. Agenda una llamada.",
+    h1: "Agencia de marketing en Palpa",
+    hero: "Palpa es un mercado pequeño con dos activos que pocos tienen: una fruta con nombre propio y unos geoglifos más antiguos que los de Nazca. Ninguno de los dos está bien contado, y ahí es donde hay negocio.",
+    cta: "Hablemos de tu negocio en Palpa",
+    proof:
+      "Siete años trabajando desde Ica con más de 50 marcas, en siete sectores con estrategia propia.",
+    cobertura:
+      "Palpa está a poco más de una hora de nuestra oficina en Ica, camino a Nazca, así que es mercado de casa: podemos estar presencialmente para grabar, fotografiar producto o sentarnos con el equipo, y llevar las campañas del día a día en remoto.",
+    secciones: [
+      {
+        h2: "Un mercado pequeño se trabaja distinto",
+        parrafo:
+          "Con pocos habitantes, el error clásico es copiar la receta de una ciudad grande: mucha pauta apuntando a un público que no existe en ese volumen. En Palpa la ecuación es otra. La recomendación pesa más que el anuncio, el mismo cliente vuelve varias veces al año y buena parte de la venta importante no está en el distrito, sino fuera: el comprador de Lima, el turista que baja por la Panamericana, el acopiador que compra la cosecha. Por eso lo que rinde no es gritar más fuerte adentro, es hacerse visible afuera.",
+      },
+      {
+        h2: "La naranja de Palpa: un nombre que nadie ha convertido en marca",
+        parrafo:
+          "Palpa es conocida por sus cítricos y tiene hasta su propia fiesta de la naranja. Eso es un activo de marca que en otros países valdría mucho dinero y que aquí se vende, casi siempre, como fruta a granel sin nombre. La oportunidad para un productor o una asociación es la de siempre en agro: dejar de competir por kilo y empezar a competir por procedencia. Eso se construye con marca, empaque, fotografía decente y una presencia digital que un comprador serio pueda revisar antes de llamar.",
+      },
+      {
+        h2: "Turismo: los geoglifos que casi nadie visita",
+        parrafo:
+          "Los geoglifos de Palpa son anteriores a las líneas de Nazca y están a un lado de la ruta que miles de viajeros recorren cada año camino al sur. La mayoría pasa de largo, no porque no le interese, sino porque no se entera. Para un hospedaje, un restaurante o una agencia de la zona, el trabajo no es competir con Nazca: es aparecer en la planificación del viaje, que ocurre semanas antes y en internet, con una propuesta concreta de por qué vale la pena parar.",
+      },
+      {
+        h2: "Agro: vender al comprador, no al vecino",
+        parrafo:
+          "Para el productor de cítricos, uva o pecana, el marketing útil no es publicar en redes: es que cuando un acopiador, un exportador o un comprador mayorista te busque, encuentre una empresa que da confianza. Eso significa una web sencilla pero seria, fichas de producto con datos reales de calibre y campaña, fotografías que muestren el estado del cultivo y una forma ordenada de responder cada consulta. Es el mismo trabajo que hacemos en agroexportación, uno de nuestros siete sectores.",
+      },
+      {
+        h2: "Comercio local: primero lo básico, que suele estar suelto",
+        parrafo:
+          "Antes de pensar en campañas, para un negocio que vende en el distrito lo que más rinde es lo más simple y lo que casi nadie tiene en orden: aparecer en Google Maps con horarios correctos y fotos actuales, responder rápido el WhatsApp y tener reseñas reales. Suena elemental y es exactamente donde se pierden clientes todas las semanas.",
+      },
+      {
+        h2: "Qué medimos",
+        parrafo:
+          "Consultas, pedidos o reservas según tu rubro, y cuánto costó conseguir cada uno. En un mercado chico los números son pequeños y por eso mismo se pueden seguir uno a uno: sabes de dónde vino cada cliente. Esa trazabilidad es una ventaja, no una limitación.",
+      },
+    ],
+    serviciosQueUsa: ["branding", "desarrollo-web", "redes-sociales", "produccion-audiovisual"],
+    faq: [
+      {
+        q: "¿Tiene sentido invertir en marketing en un distrito pequeño como Palpa?",
+        a: "Tiene sentido si tu cliente no está solo en Palpa. Para agro, turismo o cualquier negocio que venda fuera, sí: ahí compites con empresas de otras regiones y la presencia digital decide. Si vendes únicamente al vecindario, lo primero es la ficha de Google y la atención rápida, y eso cuesta más orden que dinero.",
+      },
+      {
+        q: "¿Cuánto debería invertir al mes?",
+        a: "En mercados chicos suele bastar un presupuesto modesto bien dirigido, y es preferible sostenerlo tres meses que hacer un mes fuerte y cortar. La cifra sale de tu margen por venta y de cuánto puedes atender. Si en el diagnóstico vemos que aún no es momento de invertir, te lo decimos.",
+      },
+      {
+        q: "¿Pueden ir presencialmente a Palpa?",
+        a: "Sí. Estamos a poco más de una hora desde Ica, camino a Nazca, así que grabaciones, fotografía de producto y reuniones presenciales no son problema. Las campañas se operan en remoto, igual que con clientes de la misma ciudad.",
+      },
+      {
+        q: "¿Trabajan con asociaciones de productores?",
+        a: "Sí, y suele ser el formato más rentable en agro: varios productores comparten el costo de marca, material y presencia digital, y cada uno mantiene su venta. Lo importante es definir desde el inicio quién decide y quién responde las consultas que lleguen.",
+      },
+      {
+        q: "¿Cómo atraigo turistas si Nazca se lleva la atención?",
+        a: "No compitiendo de frente, sino apareciendo antes: el viajero planifica con semanas de anticipación y busca qué ver en el camino. Una propuesta clara —qué se visita, cuánto dura, por qué vale la pena— colocada donde busca esa persona, convierte mejor que intentar disputarle el nombre a Nazca.",
+      },
+    ],
+    cierre: { h2: "Hagamos crecer tu negocio en Palpa", cta: "Agenda una llamada" },
+  },
 ];
 
 export const getCiudad = (slug: string): Ciudad | undefined =>
