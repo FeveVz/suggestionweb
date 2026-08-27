@@ -725,9 +725,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "cuanto-invertir-en-ads-peru",
     categoria: "performance",
-    title: "¿Cuánto Invertir en Google y Meta Ads en Perú? | Suggestion",
+    title: "¿Cuánto Invertir en Google Ads y Meta Ads en Perú? | Suggestion",
     description:
-      "¿Cuánto invertir en Google Ads y Meta Ads en Perú? Te explicamos cómo definir tu presupuesto según tu objetivo, sin cifras mágicas. Guía real 2026.",
+      "Cómo calcular tu presupuesto de Google Ads y Meta Ads en Perú a partir de tu meta de ventas, no de una cifra mágica: el método, la tabla y los errores. 2026.",
     h1: "¿Cuánto invertir en Google Ads y Meta Ads en Perú?",
     excerpt:
       "La respuesta honesta no es una cifra: es “depende, y aquí está de qué depende”. Cualquiera que te dé un número sin conocer tu negocio te está vendiendo humo. Esto es lo que sí determina tu presupuesto.",
@@ -756,6 +756,95 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "La métrica que importa: ROAS, no gasto",
         parrafo:
           "No preguntes “¿cuánto gasto?” sino “¿cuánto me devuelve cada sol?”. Con S/3,000 bien invertidos, una inmobiliaria que asesoramos generó S/350K. El monto importa menos que la estrategia detrás.",
+      },
+      {
+        h2: "El método, paso a paso",
+        parrafo:
+          "Este es el cálculo completo. Se hace al revés, desde la meta hacia el monto, y funciona igual para un consultorio que para un proyecto inmobiliario. Si te falta algún dato, el propio ejercicio te dice cuál tienes que empezar a medir.",
+        pasos: [
+          { titulo: "Define la meta en ventas, no en leads", texto: "«quiero 10 ventas este mes». Una meta en leads es una meta a medias: puedes cumplirla y no facturar nada." },
+          { titulo: "Aplica tu tasa de cierre real", texto: "si cierras 1 de cada 5, esas 10 ventas necesitan 50 leads. Usa tu número, no el que te gustaría tener." },
+          { titulo: "Multiplica por tu costo por lead", texto: "si tu CPL histórico es S/15, la pauta base son S/750. Si nunca lo has medido, este es el dato que te falta." },
+          { titulo: "Comprueba que el volumen da para aprender", texto: "las plataformas necesitan un mínimo de conversiones semanales para optimizar. Si tu presupuesto no llega, sube el objetivo de conversión a algo más frecuente." },
+          { titulo: "Contrasta con tu margen", texto: "si cada venta te deja S/300 y captarla cuesta S/375, el problema no es el presupuesto: es la oferta o el proceso de cierre." },
+        ],
+      },
+      {
+        h2: "Por qué un presupuesto demasiado pequeño no funciona",
+        parrafo:
+          "Hay un mínimo por debajo del cual la pauta no es «más lenta», simplemente no aprende. Meta lo documenta de forma explícita: cada conjunto de anuncios necesita unos 50 eventos de optimización por semana para salir de la fase de aprendizaje, y mientras está en ella los resultados son inestables y el costo por resultado más alto. Si tu evento de optimización es una compra y solo consigues 8 al mes, el sistema nunca llega a entender a quién mostrarle el anuncio.",
+        dato: {
+          cifra: "50",
+          texto: "eventos de optimización por conjunto de anuncios y semana: el umbral que Meta necesita para salir de la fase de aprendizaje. Por debajo, el costo por resultado es más alto e inestable.",
+          fuente: "Meta, Servicio de ayuda para empresas — «Información sobre la fase de aprendizaje»",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "El error que más presupuesto quema",
+          texto: "Cambiar el presupuesto, el público o el creativo cada dos días. Cada cambio importante reinicia la fase de aprendizaje, así que una campaña retocada a diario vive permanentemente en su fase más cara. Si vas a mover algo, muévelo y espera a tener resultados suficientes antes de volver a tocar.",
+        },
+      },
+      {
+        h2: "Google Ads y Meta Ads: qué hace cada uno",
+        parrafo:
+          "No compiten, hacen cosas distintas. Uno recoge demanda que ya existe y el otro la crea. Elegir mal el reparto es más caro que elegir mal el monto.",
+        tabla: {
+          cabeceras: ["", "Google Ads", "Meta Ads"],
+          filas: [
+            ["Qué hace", "Captura demanda: aparece cuando alguien ya está buscando", "Genera demanda: interrumpe con una propuesta"],
+            ["Intención del usuario", "Alta — te está buscando", "Baja al principio, se construye"],
+            ["Cuándo conviene", "Servicios y urgencias: «imprenta en Ica», «dentista cerca»", "Productos y proyectos: inmobiliario, retail, lanzamientos"],
+            ["Costo por clic", "Más alto, pero el clic vale más", "Más bajo, hace falta más volumen"],
+            ["Techo", "El número de personas que buscan al mes", "Prácticamente el tamaño del público"],
+            ["Se nota en", "Semanas", "Días para leads, semanas para ventas"],
+          ],
+          nota: "La mayoría de negocios necesita los dos; lo que cambia es el reparto, no la elección.",
+        },
+      },
+      {
+        h2: "Cuánto público hay realmente en Perú",
+        parrafo:
+          "Antes de decidir el monto conviene saber el tamaño del terreno. Perú es un mercado digital maduro, no emergente: eso significa que tu cliente está online, pero también que tu competencia ya está pujando por él. En mercados así, la ventaja rara vez viene de pagar más por clic; viene de convertir mejor lo que ya estás pagando.",
+        dato: {
+          cifra: "82%",
+          texto: "de la población peruana usa internet —28,4 millones de personas—, y el 99,5% de quienes usan internet está en al menos una red social. TikTok ya es la segunda plataforma del país por número de usuarios.",
+          fuente: "Digital 2026 Report — Perú",
+        },
+      },
+      {
+        h2: "Cuánto tarda en dar resultado",
+        parrafo:
+          "Es la pregunta que más malentendidos genera, porque la respuesta depende de qué llames resultado. Los primeros datos llegan en días; las conclusiones fiables, no. Apagar una campaña a la semana porque «no vendió» es la forma más común de tirar el dinero de la fase de aprendizaje justo antes de recuperarlo.",
+        tabla: {
+          cabeceras: ["Plazo", "Qué ya se puede leer", "Qué todavía no"],
+          filas: [
+            ["Días 1-7", "Que la campaña entrega y a qué costo por clic", "Nada sobre rentabilidad: sigue en fase de aprendizaje"],
+            ["Semanas 2-4", "Costo por lead estable, qué creativo gana", "El costo por venta, si tu ciclo de cierre es largo"],
+            ["Mes 2-3", "Costo por venta real y qué públicos rinden", "El efecto de marca, que tarda más"],
+          ],
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuál es el presupuesto mínimo para hacer publicidad en Perú?",
+        a: "No hay un mínimo oficial, pero sí uno práctico: el que permita conseguir suficientes conversiones semanales para que la plataforma aprenda. Si tu presupuesto no llega a ese volumen con el evento que te importa —una compra, un lead—, la salida no es gastar más, es optimizar por un evento más frecuente, como un inicio de conversación.",
+      },
+      {
+        q: "¿Cuánto cuesta un clic en Google Ads en Perú?",
+        a: "Varía muchísimo según el rubro y la competencia, y por eso desconfía de cualquiera que te dé una cifra sin conocer tu sector. Lo que sí es constante es la lógica: cuanto más cara sea la venta que hay detrás de una búsqueda, más gente puja por ella y más sube el clic. La pregunta útil no es cuánto cuesta el clic, sino cuántos clics necesitas para una venta.",
+      },
+      {
+        q: "¿Es mejor invertir todo en una plataforma o repartir?",
+        a: "Al principio suele rendir más concentrar, porque repartir un presupuesto pequeño entre dos plataformas hace que ninguna llegue al volumen que necesita para aprender. Una vez que una funciona de forma estable, abrir la segunda tiene sentido para no depender de un solo canal.",
+      },
+      {
+        q: "¿Cada cuánto debo revisar el presupuesto?",
+        a: "Mirarlo a diario, sí; tocarlo a diario, no. Cada cambio importante reinicia la fase de aprendizaje. Un ritmo razonable es revisar los números todos los días y hacer ajustes una vez por semana, con datos suficientes detrás.",
+      },
+      {
+        q: "¿Qué hago si no conozco mi costo por lead?",
+        a: "Empezar por medirlo. Se puede reservar un presupuesto pequeño durante unas semanas con el único objetivo de averiguarlo: cuánto cuesta traer un contacto y qué porcentaje termina comprando. Ese dato convierte cualquier decisión posterior de presupuesto en un cálculo en vez de una apuesta.",
       },
     ],
     cierre: "¿Quieres saber cuánto necesitas invertir para tu objetivo? Te damos un número honesto.",
@@ -1187,7 +1276,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "ia-automatizacion",
     title: "Cómo Automatizar WhatsApp en tu Negocio | Suggestion",
     description:
-      "Cómo automatizar WhatsApp para responder al instante, calificar leads y agendar sin estar pegado al celular. Guía práctica con ejemplos. 2026.",
+      "Automatiza WhatsApp para responder al instante, calificar y agendar sin vivir pegado al celular: qué se automatiza, App o API, y el error de sonar a robot.",
     h1: "Cómo automatizar WhatsApp en tu negocio",
     excerpt:
       "WhatsApp es donde tu cliente peruano quiere hablar. El problema: si no respondes rápido, el lead se enfría. Automatizar resuelve eso sin que vivas pegado al celular.",
@@ -1216,6 +1305,82 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "El error común",
         parrafo:
           "Automatizar todo y sonar a robot. La automatización atiende lo repetitivo; la persona cierra. El equilibrio es responder al instante y derivar al humano en el momento justo.",
+      },
+      {
+        h2: "Por qué los minutos deciden la venta",
+        parrafo:
+          "La urgencia de responder rápido no es una intuición de vendedores: está medida. El estudio de referencia sobre tiempo de respuesta analizó más de 15.000 contactos y 100.000 intentos de llamada, y encontró que las probabilidades de calificar un lead se desploman al pasar de cinco a treinta minutos. Y sin embargo la mayoría de empresas tarda muchísimo más: una auditoría de más de dos mil compañías midió una media de primera respuesta de 42 horas. Ahí está la oportunidad completa —contestar rápido es una ventaja competitiva porque casi nadie lo hace—, y es exactamente lo que resuelve automatizar el primer contacto.",
+        dato: {
+          cifra: "21×",
+          texto: "menos probabilidades de calificar un lead si lo contactas a los 30 minutos en vez de a los 5. Y la media de primera respuesta medida en 2.241 empresas fue de 42 horas.",
+          fuente: "Lead Response Management Study (MIT / InsideSales.com) y Oldroyd, McElheran y Elkington, Harvard Business Review",
+        },
+      },
+      {
+        h2: "App de WhatsApp Business o API: cuál necesitas",
+        parrafo:
+          "Es la primera decisión y la que más gente se salta. La aplicación gratuita basta para muchos negocios pequeños; la API existe para cuando el volumen o el equipo la superan. Pasar a la API antes de tiempo añade costo y complejidad sin beneficio, y quedarse en la app cuando ya no da es lo que hace que se pierdan conversaciones.",
+        tabla: {
+          cabeceras: ["", "App WhatsApp Business", "WhatsApp Business API"],
+          filas: [
+            ["Para quién", "Negocio pequeño, una persona atendiendo", "Equipo, varios asesores, volumen alto"],
+            ["Usuarios a la vez", "Limitado y atado a un teléfono", "Varios agentes sobre el mismo número"],
+            ["Automatización", "Respuestas rápidas y mensaje de ausencia", "Flujos completos, calificación y derivación"],
+            ["Integración con CRM", "No", "Sí, es su razón de ser"],
+            ["Costo", "Gratis", "Por conversación, más la plataforma"],
+            ["Cuándo dar el salto", "—", "Cuando se pierden mensajes o no sabes quién respondió qué"],
+          ],
+        },
+      },
+      {
+        h2: "Cómo montarlo sin romper la atención",
+        parrafo:
+          "El orden importa: casi todos los proyectos que fracasan empezaron por el chatbot y dejaron para el final quién contesta cuando el bot no sabe. Hazlo al revés.",
+        pasos: [
+          { titulo: "Escribe las 10 preguntas que más te hacen", texto: "sácalas de tus conversaciones reales de los últimos meses, no de lo que crees que preguntan. Ese listado es el 80% de la automatización." },
+          { titulo: "Define qué es un lead caliente para ti", texto: "sin ese criterio, el bot no sabe a quién derivar y acaba pasándolo todo o nada. Suelen bastar dos o tres condiciones." },
+          { titulo: "Decide el punto de traspaso a una persona", texto: "y quién es esa persona, con horario. La automatización aguanta hasta que hay que negociar; ahí empieza el trabajo humano." },
+          { titulo: "Conecta la conversación al CRM", texto: "si el chat no deja registro, no hay seguimiento posible y vuelves al punto de partida con más tecnología." },
+          { titulo: "Mide y recorta", texto: "revisa cada semana en qué punto la gente abandona el flujo. Casi siempre sobran preguntas, no faltan." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "La ventana de 24 horas",
+          texto: "WhatsApp solo permite escribir libremente a un cliente durante las 24 horas siguientes a su último mensaje. Pasado ese plazo hay que usar plantillas aprobadas previamente. Es la regla que más planes de seguimiento rompe: si tu flujo asume que puedes escribir cuando quieras, dejará de funcionar en cuanto el contacto tarde un día en responder.",
+        },
+      },
+      {
+        h2: "Qué NO automatizar",
+        parrafo:
+          "La automatización tiene un límite claro y cruzarlo cuesta clientes. Todo lo que sea repetitivo, previsible y sin carga emocional es candidato. Todo lo que implique negociar, disculparse o decidir algo fuera de lo estándar, no.",
+        bullets: [
+          { titulo: "Un reclamo", texto: "quien escribe molesto y recibe un menú de opciones se va más molesto. Detectar el enfado y pasarlo a una persona es más valioso que cualquier respuesta automática." },
+          { titulo: "Una negociación de precio o condiciones", texto: "un bot no puede ceder ni leer el margen que hay disponible." },
+          { titulo: "El cierre", texto: "la automatización acerca al cliente hasta la puerta; el que la abre es alguien del equipo." },
+          { titulo: "Preguntas que no estaban previstas", texto: "es mejor un «te paso con alguien del equipo» inmediato que una respuesta genérica que no resuelve nada." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Se puede automatizar el WhatsApp normal?",
+        a: "El WhatsApp personal no. La app de WhatsApp Business permite lo básico —mensaje de bienvenida, mensaje de ausencia y respuestas rápidas—, que ya cubre a muchos negocios pequeños. Para flujos de calificación, varios agentes sobre el mismo número o conexión con un CRM hace falta la API.",
+      },
+      {
+        q: "¿Un chatbot espanta a los clientes?",
+        a: "Espanta el que finge ser humano y el que no deja salir. Uno que responde al instante, dice claramente que es automático y ofrece hablar con una persona en el primer mensaje suele mejorar la experiencia, sobre todo fuera de horario, cuando la alternativa era el silencio.",
+      },
+      {
+        q: "¿Qué se automatiza primero?",
+        a: "La respuesta inmediata al primer mensaje y las preguntas frecuentes. Son lo más repetitivo y lo que más rápido se nota, porque atacan justo el punto donde se pierden los leads: el tiempo muerto entre que alguien escribe y alguien contesta.",
+      },
+      {
+        q: "¿Puedo escribirle a un cliente cuando quiera?",
+        a: "No. Fuera de la ventana de 24 horas desde su último mensaje, WhatsApp solo permite plantillas aprobadas de antemano. Conviene diseñar el seguimiento contando con esa restricción desde el principio.",
+      },
+      {
+        q: "¿Cómo sé si la automatización está funcionando?",
+        a: "Tres números: cuánto tardas en dar el primer contacto, qué porcentaje de conversaciones llega hasta el final del flujo y cuántas terminan en cita o venta. Si el tiempo de respuesta baja pero las citas no suben, el problema está en el traspaso a la persona, no en el bot.",
       },
     ],
     cierre: "En Suggestion montamos tu automatización de WhatsApp conectada al CRM, para que ningún lead se enfríe.",
@@ -1289,6 +1454,81 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "En tus anuncios, landings y guiones de venta. El mismo presupuesto de pauta rinde más cuando el mensaje activa los gatillos correctos.",
       },
+      {
+        h2: "Por qué funcionan: cómo decide realmente el cerebro",
+        parrafo:
+          "Los gatillos no son trucos de vendedor, son atajos que el cerebro usa porque no puede analizar todo con calma. Decidir a fondo cuesta energía y tiempo, así que la mayoría de decisiones cotidianas se toman por vía rápida —intuición, contexto, lo que hacen los demás— y solo después buscamos razones para justificarlas. Por eso una persona puede explicarte con argumentos impecables una compra que hizo en tres segundos. Entender esto cambia cómo se escribe: no se trata de convencer a un juez imparcial, sino de que la vía rápida no encuentre motivos para frenar.",
+        bullets: [
+          { titulo: "El esfuerzo es un costo", texto: "un formulario largo, un precio confuso o un proceso poco claro no solo molestan: se leen como riesgo, y ante el riesgo la respuesta por defecto es no hacer nada." },
+          { titulo: "Lo familiar se percibe como más seguro", texto: "por eso la repetición coherente funciona, y por eso cambiar de mensaje cada mes cuesta caro." },
+          { titulo: "El contexto define el valor", texto: "el mismo precio parece caro o barato según con qué se compare. La comparación se la das tú o se la inventa el cliente." },
+        ],
+      },
+      {
+        h2: "Cómo se ve cada gatillo en un anuncio real",
+        parrafo:
+          "El error habitual no es elegir mal el gatillo, es dejarlo en abstracto. Estos son los mismos seis, escritos como aparecerían en una pieza concreta.",
+        bullets: [
+          { titulo: "Reciprocidad", texto: "en vez de «contáctanos», entregar algo aprovechable sin condiciones: un diagnóstico, una plantilla, una respuesta útil. La deuda de gratitud es real y no hace falta forzarla." },
+          { titulo: "Prueba social", texto: "«8 lotes vendidos con S/3,000» dice más que «somos líderes». Un número verificable pesa más que cualquier adjetivo." },
+          { titulo: "Autoridad", texto: "mostrar el método, no el título. Explicar cómo se hace algo demuestra que sabes hacerlo mejor que declararlo." },
+          { titulo: "Escasez", texto: "solo si el límite existe: quedan tres unidades de esa etapa, la promoción termina el viernes de verdad. Si el «último día» se repite cada semana, deja de funcionar y ensucia la marca." },
+          { titulo: "Compromiso y coherencia", texto: "pedir un paso pequeño antes del grande. Una pregunta respondida por WhatsApp acerca más a la cita que un botón de «comprar»." },
+          { titulo: "Aversión a la pérdida", texto: "contar qué cuesta no decidir —el precio de la etapa siguiente, el mes de agenda vacía— en vez de repetir lo bueno que es tu producto." },
+        ],
+      },
+      {
+        h2: "Los que NO deberías usar",
+        parrafo:
+          "Hay técnicas que funcionan en el corto plazo y que se pagan después. Todas comparten el mismo problema: le enseñan al cliente que tus mensajes no son fiables. Y en un mercado local, donde la gente se conoce y se pregunta entre sí, esa reputación se propaga mucho más rápido de lo que cualquier campaña puede reparar.",
+        tabla: {
+          cabeceras: ["Gatillo", "Uso honesto", "Uso que quema la marca"],
+          filas: [
+            ["Escasez", "Quedan tres unidades de esa etapa y es verdad", "«Últimas unidades» permanente"],
+            ["Urgencia", "La promoción termina el viernes y termina", "Cuenta atrás que se reinicia al recargar"],
+            ["Prueba social", "Casos reales con cifras verificables", "Testimonios comprados o inventados"],
+            ["Autoridad", "Mostrar el método y los resultados", "Premios y sellos que nadie puede comprobar"],
+            ["Anclaje de precio", "Comparar con la alternativa real", "Tachar un precio que nunca existió"],
+          ],
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "La prueba de los cinco segundos",
+          texto: "Si te incomodaría que el cliente supiera exactamente cómo montaste ese mensaje, no lo uses. Es una regla más útil que cualquier debate teórico sobre ética publicitaria, y se responde sola.",
+        },
+      },
+      {
+        h2: "Cómo saber si tu mensaje está funcionando",
+        parrafo:
+          "La psicología de ventas se puede probar, y probarla evita discusiones de gustos. Lo único que hace falta es cambiar una cosa a la vez y darle volumen suficiente para que el resultado no sea azar. Cambiar el titular y la imagen y el público a la vez y ver que mejoró no enseña nada, porque no sabes qué lo movió. Y cuidado con la métrica que se mira: un anuncio que dispara los clics pero no las citas no está persuadiendo, solo está llamando la atención.",
+        bullets: [
+          { titulo: "Una variable por prueba", texto: "titular, o imagen, o llamada a la acción. Nunca las tres." },
+          { titulo: "Mira la métrica del final", texto: "citas o ventas, no clics. El clic barato es la trampa más común." },
+          { titulo: "Da tiempo suficiente", texto: "con pocos resultados, cualquier diferencia es ruido. Decidir con veinte datos es tirar una moneda con más pasos." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Los gatillos mentales son manipulación?",
+        a: "Lo son cuando el argumento es falso. La escasez es honesta si el límite existe y manipuladora si te lo inventas; la prueba social es honesta si los testimonios son reales. El gatillo no es el problema: describe cómo decidimos las personas. Lo que se juzga es si lo que dice es verdad.",
+      },
+      {
+        q: "¿Qué es la psicología de mercado?",
+        a: "Es el estudio de cómo deciden realmente las personas cuando compran: qué las frena, qué las acelera y qué peso tienen la emoción, el contexto y lo que hacen los demás. Aplicada al marketing sirve para escribir mensajes que encajan con cómo se toma la decisión, en vez de asumir que el cliente compara opciones con una hoja de cálculo.",
+      },
+      {
+        q: "¿En qué se diferencia del neuromarketing?",
+        a: "El neuromarketing mide respuestas del cuerpo y del cerebro —atención, mirada, reacción emocional— con instrumentos. La psicología de ventas trabaja con principios de comportamiento ya establecidos y los aplica al mensaje. Una necesita laboratorio; la otra se puede usar mañana en un anuncio.",
+      },
+      {
+        q: "¿Cuál de los seis gatillos funciona mejor?",
+        a: "Depende del freno que tenga tu cliente. Si desconfía, prueba social y autoridad. Si duda del momento, escasez y aversión a la pérdida. Si le da pereza empezar, reciprocidad y un primer paso pequeño. Aplicar los seis a la vez en la misma pieza suele conseguir que no se note ninguno.",
+      },
+      {
+        q: "¿Sirven igual en negocios que venden a empresas?",
+        a: "Sirven, pero cambia el peso. En B2B la decisión es más lenta, hay más de una persona implicada y el riesgo personal de equivocarse pesa mucho: la autoridad y la prueba social —casos de empresas parecidas— rinden bastante más que la urgencia.",
+      },
     ],
     cierre: "En Suggestion escribimos campañas que persuaden con principios reales, no con trucos.",
     moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
@@ -1327,6 +1567,75 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "La publicidad genera el interés; el seguimiento lo convierte en cita. Sin un CRM y respuesta rápida, pagas por leads que se enfrían. Así llevamos a una inmobiliaria a 8 lotes vendidos con S/3,000.",
       },
+      {
+        h2: "Cómo segmentar sin tirar el presupuesto",
+        parrafo:
+          "El error más caro en inmobiliario no es el anuncio, es a quién se lo enseñas. Segmentar por «interesados en bienes raíces» suena lógico y es de lo peor que puedes hacer: ese interés lo tiene también quien mira propiedades por entretenimiento. Lo que sirve es acotar por señales que se parezcan a las de tus compradores reales, y para eso tienes que mirar quiénes te compraron el año pasado antes de tocar el administrador de anuncios.",
+        bullets: [
+          { titulo: "Radio geográfico realista", texto: "no es donde está el proyecto, es de dónde vienen los que compran. En proyectos de segunda vivienda, el comprador suele vivir a horas de distancia." },
+          { titulo: "Públicos similares a tus clientes", texto: "cargar la lista de quienes ya compraron y pedir a la plataforma gente parecida rinde más que cualquier interés predefinido." },
+          { titulo: "Quien ya interactuó", texto: "los que vieron el 75% de tu video o entraron a la landing valen mucho más que un público frío, y cuestan menos por resultado." },
+          { titulo: "Excluir a los que ya compraron", texto: "obvio y casi nadie lo hace: sigues pagando por mostrarle el proyecto a quien ya firmó." },
+        ],
+      },
+      {
+        h2: "Formulario instantáneo o landing: cuál conviene",
+        parrafo:
+          "Es la decisión que más cambia la calidad del lead y casi siempre se toma sin pensar. El formulario instantáneo de la plataforma se rellena solo con los datos de la cuenta: consigue muchísimos más contactos y bastante más baratos, pero también más gente que dio un toque sin querer. La landing obliga a salir de la red y escribir los datos, así que trae menos leads, más caros y mucho mejor informados. Ninguna es mejor en abstracto: depende de dónde tengas el cuello de botella. Si tu equipo comercial está ocioso, formulario instantáneo. Si está saturado llamando a gente que no contesta, landing.",
+        bullets: [
+          { titulo: "Formulario instantáneo", texto: "volumen y bajo costo por lead, a cambio de más ruido. Añadir una pregunta abierta reduce el relleno accidental." },
+          { titulo: "Landing propia", texto: "menos volumen, mejor intención, y te deja medir todo lo que pasa después con tus propias herramientas." },
+          { titulo: "WhatsApp directo", texto: "el que menos fricción tiene en Perú, pero no deja un registro ordenado salvo que lo conectes a un CRM." },
+        ],
+        tabla: {
+          cabeceras: ["", "Formulario instantáneo", "Landing propia"],
+          filas: [
+            ["Volumen de leads", "Alto", "Bajo"],
+            ["Costo por lead", "Bajo", "Más alto"],
+            ["Calidad del contacto", "Variable: hay relleno accidental", "Mejor: hubo intención de escribir"],
+            ["Datos que puedes pedir", "Los de la cuenta, poco más", "Los que necesites"],
+            ["Qué puedes medir después", "Poco: pasa dentro de la red", "Todo: es tu web"],
+            ["Cuándo conviene", "Equipo comercial con capacidad libre", "Equipo saturado de leads que no califican"],
+          ],
+        },
+      },
+      {
+        h2: "Cómo se estructura una campaña por fases",
+        parrafo:
+          "Un proyecto no se anuncia igual en el mes uno que en el seis, y meter todo el presupuesto en «captación» desde el primer día es la forma habitual de agotar el público y ver cómo sube el costo por lead semana a semana. La estructura que aguanta divide la inversión en tres frentes que conviven: alguien que no te conoce, alguien que ya te vio y alguien que ya dejó sus datos y no ha venido.",
+        bullets: [
+          { titulo: "Descubrimiento", texto: "video de recorrido a público frío. Objetivo: que la gente correcta sepa que el proyecto existe y dónde está." },
+          { titulo: "Captación", texto: "formulario o landing a quienes ya mostraron interés. Aquí es donde el costo por lead tiene sentido mirarlo." },
+          { titulo: "Recuperación", texto: "a quien dejó datos y no agendó. Un avance de obra o un cambio de condiciones da un motivo nuevo para volver a aparecer." },
+        ],
+      },
+      {
+        h2: "Por qué sube tu costo por lead con el tiempo",
+        parrafo:
+          "Casi todas las campañas inmobiliarias empiezan bien y se van encareciendo, y la explicación rara vez es que «el algoritmo cambió». En un mercado local el público disponible es finito: cuando llevas semanas mostrando el mismo anuncio a la misma gente, los que iban a responder ya respondieron y el resto lo ignora. Eso se ve en la frecuencia —cuántas veces ve tu anuncio la misma persona— antes de que se note en el costo. La solución no es subir el presupuesto sobre el mismo creativo, es cambiar el creativo o abrir público nuevo. Subir el presupuesto sin cambiar nada solo acelera el desgaste.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué red funciona mejor para publicidad inmobiliaria en Perú?",
+        a: "Meta —Facebook e Instagram— concentra la mayor parte de la captación porque permite generar demanda y segmentar por zona con precisión. Google sirve para capturar a quien ya está buscando activamente un proyecto o un distrito concreto, que suele ser menos gente pero con intención más alta. La mayoría de proyectos usa ambos con presupuestos muy distintos.",
+      },
+      {
+        q: "¿Conviene poner el precio en los anuncios de lotes?",
+        a: "Depende de tu cuello de botella. Ponerlo reduce el volumen de leads y sube su calidad, porque filtra a quien no puede pagarlo. No ponerlo genera más contactos y más trabajo de calificación. Si tu equipo se pasa el día llamando a gente que no califica, ponerlo casi siempre mejora el resultado final aunque el costo por lead suba.",
+      },
+      {
+        q: "¿Cuánto tarda en verse resultado una campaña inmobiliaria?",
+        a: "Los leads llegan en días; las ventas, no. El ciclo de decisión de un inmueble se mide en semanas o meses, así que juzgar una campaña por las ventas de la primera quincena lleva a apagarla justo cuando empezaba a llenar el embudo. Lo que sí se puede evaluar pronto es el costo por lead y, sobre todo, el porcentaje que llega a visita.",
+      },
+      {
+        q: "¿Sirve el retargeting en proyectos inmobiliarios?",
+        a: "Es donde mejor funciona, precisamente porque la decisión es lenta. Quien vio el recorrido completo o entró a la landing y no dejó datos sigue siendo un candidato semanas después, y volver a aparecer con el avance de obra cuesta una fracción de lo que cuesta un público frío.",
+      },
+      {
+        q: "¿Por qué recibo muchos leads y ninguna visita?",
+        a: "Suele ser una de tres: el anuncio promete algo que el proyecto no es, el formulario es tan fácil que se rellena sin intención, o el primer contacto tarda demasiado. Antes de tocar la campaña vale la pena medir cuánto se tarda en llamar al primer lead del día: si la respuesta se cuenta en horas, el problema no está en la pauta.",
+      },
     ],
     cierre: "En Suggestion conectamos pauta, landing, drone y CRM para llenar tu sala de ventas.",
     moneyPage: { label: "Llenemos tu sala de ventas", href: "/marketing-inmobiliario" },
@@ -1335,9 +1644,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "marketing-para-restaurantes",
     categoria: "sectores",
-    title: "Marketing para Restaurantes que Llena Mesas | Suggestion",
+    title: "Marketing para Restaurantes: Cómo Llenar Mesas | Suggestion",
     description:
-      "Estrategias de marketing para restaurantes que llenan mesas en los días flojos: redes, promociones, reseñas y publicidad local. Guía práctica.",
+      "Marketing para restaurantes que llena los días flojos: búsqueda local y reseñas, contenido que da hambre, promociones que no queman el margen y qué medir.",
     h1: "Estrategias de marketing para restaurantes que llenan mesas",
     excerpt:
       "Un buen restaurante con mesas vacías un martes no tiene un problema de comida: tiene un problema de marketing. Estas estrategias llenan los días flojos y suben el ticket.",
@@ -1361,6 +1670,95 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Mide lo que importa",
         parrafo: "Reservas, pedidos y ticket promedio. No seguidores.",
+      },
+      {
+        h2: "Lo primero no es Instagram, es que te encuentren",
+        parrafo:
+          "La mayoría de restaurantes invierte su energía en redes y descuida el sitio donde se toma la decisión de verdad: la búsqueda local. Cuando alguien tiene hambre y busca dónde comer cerca, no abre Instagram, abre el mapa. Y esa búsqueda no es curiosidad: es una decisión a punto de tomarse. Un perfil de empresa completo —horarios correctos, fotos reales del local y de los platos, carta actualizada y reseñas recientes— convierte mejor que cualquier campaña, y no tiene costo por clic.",
+        dato: {
+          cifra: "76%",
+          texto: "de quienes hacen una búsqueda de tipo «cerca de mí» visita un negocio dentro de las 24 horas siguientes. Es el tipo de búsqueda que menos tarda en convertirse en una visita real.",
+          fuente: "Think with Google",
+        },
+        nota: {
+          titulo: "Antes de pagar publicidad",
+          texto: "Comprueba que tu ficha esté verificada, con el horario real —incluidos feriados—, la ubicación exacta en el mapa y fotos que representen lo que sirves hoy. Un perfil abandonado hace que la publicidad traiga gente a un local que parece cerrado.",
+        },
+      },
+      {
+        h2: "Las reseñas se piden, no se esperan",
+        parrafo:
+          "Casi ningún cliente contento escribe una reseña por iniciativa propia; el que sí escribe sin que se lo pidan suele ser el que se fue molesto. Por eso un restaurante con buena comida puede acabar con una nota mediocre: no es que tenga muchos detractores, es que solo ellos hablan. Pedirlas de forma sistemática corrige ese sesgo, y no requiere ninguna herramienta.",
+        pasos: [
+          { titulo: "Elige el momento", texto: "justo después de una experiencia buena, cuando pagan y todavía están en la mesa. Un mensaje al día siguiente rinde una fracción." },
+          { titulo: "Hazlo fácil", texto: "un QR en la cuenta o en la mesa que lleve directo a escribir la reseña. Cada paso extra pierde a la mitad." },
+          { titulo: "Que lo pida una persona", texto: "el mesero que atendió, en una frase. Convierte mucho más que un cartel." },
+          { titulo: "Responde a todas", texto: "sobre todo a las malas, sin discutir y ofreciendo solucionarlo. Quien lee la respuesta no es quien se quejó, es el próximo cliente." },
+          { titulo: "Nunca las compres", texto: "las plataformas las detectan y penalizan la ficha completa. El daño dura más que el beneficio." },
+        ],
+      },
+      {
+        h2: "Cada canal resuelve un problema distinto",
+        parrafo:
+          "«Hacer marketing» para un restaurante no es una sola cosa. Antes de repartir tiempo y presupuesto conviene saber qué problema tienes: que no te conocen, que no te encuentran, que no vuelven o que el martes está vacío.",
+        tabla: {
+          cabeceras: ["Canal", "Qué problema resuelve", "Cuándo priorizarlo"],
+          filas: [
+            ["Perfil de empresa y mapa", "Que no te encuentren cuando ya tienen hambre", "Siempre. Es lo primero y no cuesta pauta"],
+            ["Instagram y TikTok", "Que no te conozcan ni deseen tu plato", "Para construir demanda y atraer público nuevo"],
+            ["Publicidad geolocalizada", "Llenar un día concreto o lanzar algo", "Cuando hay una promoción con fecha"],
+            ["WhatsApp", "Reservas y pedidos sin fricción", "En cuanto el volumen de mensajes supere al mesero"],
+            ["Fidelización", "Que vengan una vez y no vuelvan", "Cuando ya llenas fines de semana"],
+          ],
+          nota: "El orden no es negociable: sin ficha ordenada, todo lo demás trae gente a un sitio que parece cerrado.",
+        },
+      },
+      {
+        h2: "Promociones que no queman tu margen",
+        parrafo:
+          "El descuento es la herramienta más fácil y la más cara. Rebajar el precio de lo que ya vendes bien te quita margen sin traer a nadie nuevo, y acostumbra al cliente a esperar la rebaja. Las promociones que funcionan no bajan el precio: cambian el comportamiento —el día, la hora o lo que pide el cliente.",
+        bullets: [
+          { titulo: "Mueve el día, no el precio", texto: "una propuesta que solo existe de martes a jueves llena los días flojos sin tocar lo que cobras el sábado." },
+          { titulo: "Sube el ticket en vez de bajarlo", texto: "una combinación que añade entrada o bebida deja más margen que un porcentaje de descuento sobre el plato." },
+          { titulo: "Pon un motivo", texto: "una promoción con una razón —temporada, aniversario, plato nuevo— no le enseña al cliente que tu precio normal está inflado." },
+          { titulo: "Ponle fecha de fin y respétala", texto: "la que se renueva sola deja de ser promoción y pasa a ser tu precio." },
+        ],
+      },
+      {
+        h2: "Qué medir, en concreto",
+        parrafo:
+          "Un restaurante no necesita un panel complicado. Con cuatro números apuntados cada semana se ve casi todo lo que hace falta decidir, y ninguno de ellos es «seguidores».",
+        tabla: {
+          cabeceras: ["Número", "Qué te dice", "Dónde sale"],
+          filas: [
+            ["Reservas y pedidos por día", "Qué días están flojos de verdad", "Tu propio registro"],
+            ["Ticket promedio", "Si las promociones suman o restan margen", "Caja"],
+            ["Reseñas nuevas y nota media", "Si el sistema de pedirlas funciona", "Tu perfil de empresa"],
+            ["Clientes que vuelven", "Si el problema es atraer o retener", "Reservas o programa de fidelización"],
+          ],
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es lo primero que debe hacer un restaurante en marketing?",
+        a: "Ordenar su presencia en la búsqueda local: ficha verificada, horarios reales, ubicación exacta, fotos actuales y reseñas recientes. Es donde ocurre la decisión con más intención —quien busca dónde comer cerca ya tiene hambre— y no requiere presupuesto de publicidad.",
+      },
+      {
+        q: "¿Cómo lleno el restaurante los días de semana?",
+        a: "Con una propuesta que solo exista esos días, para no canalizar hacia ella a los clientes del fin de semana. Funciona mejor cambiar el comportamiento —un menú de mediodía, una noche temática— que rebajar el precio de lo que ya vendes.",
+      },
+      {
+        q: "¿Cuántas reseñas necesito?",
+        a: "Más que una cifra concreta, importa el flujo: es mejor recibir unas pocas cada semana que muchas de golpe y ninguna en un año. Las reseñas antiguas pesan menos, y una nota alta con la última reseña de hace dos años genera desconfianza.",
+      },
+      {
+        q: "¿Vale la pena estar en apps de delivery?",
+        a: "Depende de tu margen. Las comisiones son altas, así que un plato pensado para el local puede dejar de ser rentable en delivery. Muchos restaurantes lo resuelven con una carta distinta para ese canal en vez de renunciar a él o perder dinero en cada pedido.",
+      },
+      {
+        q: "¿Publicar todos los días en redes ayuda?",
+        a: "Publicar por publicar, no. Lo que mueve la aguja es el contenido que provoca una acción concreta —reservar, pedir, venir hoy— y que muestre comida real bien grabada. Tres publicaciones que dan hambre valen más que treinta de relleno.",
       },
     ],
     cierre: "En Suggestion hacemos marketing para restaurantes y turismo enfocado en llenar, no en likes.",
@@ -1952,6 +2350,11 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Primer contacto inmediato", texto: "aunque sea un mensaje corto que reconozca la consulta y proponga hora de llamada." },
           { titulo: "Canal que el cliente usa", texto: "en Perú, WhatsApp se responde y una llamada de número desconocido a menudo no." },
         ],
+        dato: {
+          cifra: "21×",
+          texto: "menos probabilidades de calificar un lead si lo contactas a los 30 minutos en vez de a los 5. La media de primera respuesta medida en 2.241 empresas fue de 42 horas: por eso llegar primero sigue siendo una ventaja disponible.",
+          fuente: "Lead Response Management Study (MIT / InsideSales.com) y Oldroyd, McElheran y Elkington, Harvard Business Review",
+        },
       },
       {
         h2: "Qué preguntar para calificar sin espantar",
