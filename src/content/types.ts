@@ -7,11 +7,33 @@ export type Bullet = { titulo?: string; texto: string };
 
 export type SubSeccion = { h3: string; texto: string };
 
+/** Tabla comparativa. En móvil hace scroll horizontal dentro de su caja. */
+export type Tabla = {
+  cabeceras: string[];
+  filas: string[][];
+  /** Pie de tabla: fuente del dato o matiz necesario. */
+  nota?: string;
+};
+
+/** Proceso numerado (01, 02, 03…). El número lo pone el componente. */
+export type Paso2 = { titulo: string; texto: string };
+
+/** Cifra destacada. `fuente` es obligatoria cuando el dato no es propio. */
+export type Dato = { cifra: string; texto: string; fuente?: string };
+
+/** Aviso al margen. `tipo` decide el color del filete: cian informa, naranja advierte. */
+export type Nota = { tipo?: "info" | "aviso"; titulo?: string; texto: string };
+
 export type Seccion = {
   h2: string;
   parrafo?: string;
   bullets?: Bullet[];
   sub?: SubSeccion[];
+  /** Bloques de estructura enriquecida (todos opcionales). */
+  tabla?: Tabla;
+  pasos?: Paso2[];
+  dato?: Dato;
+  nota?: Nota;
 };
 
 export type Faq = { q: string; a: string };
