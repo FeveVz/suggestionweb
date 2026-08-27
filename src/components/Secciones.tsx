@@ -238,7 +238,13 @@ export default function Secciones({ secciones }: { secciones: Seccion[] }) {
   return (
     <div style={{ display: "grid", gap: "var(--space-7)" }}>
       {secciones.map((sec, i) => (
-        <div key={i}>
+        // minWidth:0 es obligatorio: al ser hijo de un grid, por defecto vale
+        // `auto` y no puede encoger por debajo del contenido. La tabla lleva
+        // min-width para que sus columnas sean legibles, y sin esto ese ancho
+        // empujaba la caja a 462 px dentro de una pantalla de 375: el
+        // overflow-x:clip del <main> recortaba 107 px que el lector no podía
+        // alcanzar ni scrolleando.
+        <div key={i} style={{ minWidth: 0 }}>
           <SectionHeading level={2} maxWidth="30ch">
             {sec.h2}
           </SectionHeading>
