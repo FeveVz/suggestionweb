@@ -31,9 +31,14 @@ export const site = {
   region: "Ica",
   country: "PE",
 
-  // Imágenes de marca
+  // Imágenes de marca.
+  // logo/logoWhite (PNG 7118px) son SOLO para JSON-LD y metadatos: los leen los
+  // rastreadores, no viajan al navegador. Lo que se pinta en pantalla usa las
+  // versiones WebP de 800px — el PNG pesaba 236 KB y estaba en las 92 páginas.
   logo: "/assets/logos/suggestion-logo-black.png",
   logoWhite: "/assets/logos/suggestion-logo-white.png",
+  logoImg: "/assets/logos/suggestion-logo-black.webp",
+  logoWhiteImg: "/assets/logos/suggestion-logo-white.webp",
   ogImage: "/og-image.png",
 
   social: {

@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Bloque de marca */}
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={site.logoWhite} alt="Suggestion" style={{ height: 24, width: "auto" }} />
+            <img src={site.logoWhiteImg} alt="Suggestion" width={800} height={135} loading="lazy" decoding="async" style={{ height: 24, width: "auto" }} />
             <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 18, maxWidth: "30ch" }}>
               Agencia de marketing de performance. {site.slogan}.
             </p>

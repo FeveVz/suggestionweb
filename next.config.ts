@@ -26,7 +26,39 @@ const nextConfig: NextConfig = {
       destination: "https://suggestion.pe/:path*",
       permanent: true,
     });
-    return [aCanonico("www.suggestion.pe"), aCanonico("suggestionweb.vercel.app")];
+    return [
+      aCanonico("www.suggestion.pe"),
+      aCanonico("suggestionweb.vercel.app"),
+      // /about llegaba a la 404 desde algún enlace externo antiguo (visto en
+      // Clarity). La página equivalente es /nosotros.
+      { source: "/about", destination: "/nosotros", permanent: true },
+    ];
+  },
+
+  /**
+   * Caché de los estáticos de /public.
+   *
+   * Vercel los servía con `Cache-Control: public, max-age=0, must-revalidate`,
+   * así que el navegador revalidaba las 56 imágenes de la home en CADA visita:
+   * quien volvía pagaba casi lo mismo que quien entraba por primera vez.
+   *
+   * Las fuentes van con `immutable` a un año porque no cambian nunca. Las
+   * imágenes van a 30 días con `stale-while-revalidate`: si alguna se
+   * reemplaza, el visitante ve la vieja una vez y el navegador ya se trae la
+   * nueva de fondo. Para forzar un cambio inmediato, renombrar el archivo
+   * (estos nombres no llevan hash, a diferencia de /_next/static).
+   */
+  async headers() {
+    return [
+      {
+        source: "/fonts/:archivo*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+      {
+        source: "/assets/:ruta*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
+      },
+    ];
   },
 };
 

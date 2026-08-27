@@ -98,7 +98,7 @@ export default function Header() {
       >
         <Link href="/" aria-label="Suggestion — inicio" style={{ display: "flex", flexShrink: 0 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/logos/suggestion-logo-black.png" alt="Suggestion" style={{ height: 22, width: "auto" }} />
+          <img src="/assets/logos/suggestion-logo-black.webp" alt="Suggestion" width={800} height={135} style={{ height: 22, width: "auto" }} />
         </Link>
 
         {/* Nav desktop */}
