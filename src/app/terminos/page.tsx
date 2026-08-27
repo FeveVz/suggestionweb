@@ -5,7 +5,8 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "Términos y Condiciones | Suggestion",
-  description: "Condiciones de uso del sitio web de Agencia de Marketing Suggestion S.A.C.",
+  description:
+    "Condiciones de uso del sitio de Agencia de Marketing Suggestion S.A.C. (Ica, Per\u00fa): alcance del servicio, propiedad intelectual y responsabilidad.",
   path: "/terminos",
 });
 

@@ -21,9 +21,15 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const t = getTalento(slug);
   if (!t) return {};
+  // Google corta la meta description pasados ~160 caracteres. Con bios largas
+  // (la de Abraham son 152) el añadido quedaba fuera igual y salía una
+  // descripción truncada a media frase: mejor engancharlo solo si cabe.
+  const cta = `Guarda el contacto de ${t.corto} o escríbele por WhatsApp.`;
+  const description = t.bio.length + 1 + cta.length <= 158 ? `${t.bio} ${cta}` : t.bio;
+
   return buildMetadata({
     title: `${t.nombre} | ${t.rolSeo ?? t.rol} | ${site.name}`,
-    description: `${t.bio} Guarda el contacto de ${t.corto} o escríbele por WhatsApp.`,
+    description,
     path: `/equipo/${t.slug}`,
   });
 }

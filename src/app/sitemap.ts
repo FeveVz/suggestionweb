@@ -11,23 +11,28 @@ import { allCiudadSlugs, ciudadHref } from "@/content/ciudades";
  * (hub + los que haya en SECTORS) + blog (pilar/categorías/entradas). Las
  * categorías hub son indexables (copy único); si alguna se marca noindex,
  * excluirla aquí. /gracias queda fuera a propósito (noindex, post-conversión).
+ *
+ * Sobre `lastModified`: solo lo llevan las entradas del blog, que tienen fecha
+ * real. Antes TODAS las páginas se sellaban con la fecha de compilación, así
+ * que cada despliegue le decía a Google que las 66 habían cambiado —fuera
+ * cierto o no— y Google acaba ignorando una señal que miente. Sin lastmod se
+ * fía de su propio rastreo, que es lo correcto cuando no sabemos la fecha.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const u = (path: string) => `${SITE_URL}${path}`;
 
   const root: MetadataRoute.Sitemap = [
-    { url: u("/"), lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: u("/nosotros"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: u("/casos"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: u("/auditoria-gratis"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: u("/privacidad"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
-    { url: u("/terminos"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
-    { url: u("/libro-de-reclamaciones"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
-    { url: u("/contacto"), lastModified: now, changeFrequency: "yearly", priority: 0.6 },
-    { url: u("/servicios"), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: u("/sectores"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: u("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: u("/"), changeFrequency: "weekly", priority: 1 },
+    { url: u("/nosotros"), changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/casos"), changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/auditoria-gratis"), changeFrequency: "monthly", priority: 0.9 },
+    { url: u("/privacidad"), changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/terminos"), changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/libro-de-reclamaciones"), changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/contacto"), changeFrequency: "yearly", priority: 0.6 },
+    { url: u("/servicios"), changeFrequency: "monthly", priority: 0.9 },
+    { url: u("/sectores"), changeFrequency: "monthly", priority: 0.8 },
+    { url: u("/blog"), changeFrequency: "weekly", priority: 0.8 },
   ];
 
   // Las 5 categorías hub son indexables (copy y title propios): se incluyen con
@@ -36,13 +41,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicios: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap((c) => [
     {
       url: u(`/servicios/${c.slug}`),
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     ...c.children.map((s) => ({
       url: u(s.href),
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
@@ -51,21 +54,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Páginas de cobertura por ciudad: copy propio por ciudad, indexables.
   const ciudades: MetadataRoute.Sitemap = allCiudadSlugs().map((slug) => ({
     url: u(ciudadHref(slug)),
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const sectores: MetadataRoute.Sitemap = SECTORS.map((s) => ({
     url: u(s.href),
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const blogCategorias: MetadataRoute.Sitemap = BLOG_CATEGORIAS.map((c) => ({
     url: u(`/blog/${c.slug}`),
-    lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.5,
   }));
@@ -79,14 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const casos: MetadataRoute.Sitemap = CASOS_DETALLE.map((c) => ({
     url: u(`/casos/${c.slug}`),
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   const equipo: MetadataRoute.Sitemap = EQUIPO.map((t) => ({
     url: u(`/equipo/${t.slug}`),
-    lastModified: now,
     changeFrequency: "yearly" as const,
     priority: 0.4,
   }));
