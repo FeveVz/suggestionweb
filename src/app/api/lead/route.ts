@@ -3,14 +3,64 @@ import { sendLeadCapi } from "@/lib/meta-capi";
 
 /**
  * Captura de leads → tabla `leads` en Supabase (la misma BD del dashboard
- * admin). Tipos: contacto | auditoria | reclamo. Honeypot `website` contra
- * spam. Nunca expone la service key (solo server-side).
+ * admin). Tipos: contacto | auditoria | reclamo. Dos capas contra abuso:
+ * honeypot `website` (bots) y límite de 5 envíos por IP cada 10 min (flood).
+ * Nunca expone la service key (solo server-side).
  */
 
 const TIPOS = new Set(["contacto", "auditoria", "reclamo"]);
 const s = (v: unknown, max: number) => (typeof v === "string" ? v.trim().slice(0, max) : "");
 
+/**
+ * Límite de envíos por IP — ventana deslizante en memoria.
+ *
+ * El honeypot para bots tontos, pero no impedía que alguien enviara el
+ * formulario en bucle y llenara la tabla `leads` (y disparara eventos Lead
+ * falsos en Meta). Una persona real envía una vez, dos si se equivoca.
+ *
+ * Es en memoria a propósito: no hay Redis en el proyecto y añadirlo por esto
+ * no compensa. Limitación honesta: en Vercel cada instancia tiene su propio
+ * mapa, así que un atacante repartido entre instancias pasaría más de
+ * MAX_ENVIOS. Aun así corta el caso real (un script desde una IP) y cuesta
+ * cero. Si algún día hace falta de verdad, mover a Vercel KV.
+ */
+const VENTANA_MS = 10 * 60 * 1000;
+const MAX_ENVIOS = 5;
+const MAX_IPS = 5000; // techo de memoria; al llegar se limpia lo caducado
+const envios = new Map<string, number[]>();
+
+const ipDe = (req: Request) =>
+  (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() ||
+  req.headers.get("x-real-ip") ||
+  "";
+
+function pasaLimite(ip: string): boolean {
+  if (!ip) return true; // sin IP no penalizamos a nadie
+  const ahora = Date.now();
+
+  if (envios.size > MAX_IPS) {
+    for (const [k, v] of envios) if (!v.some((t) => ahora - t < VENTANA_MS)) envios.delete(k);
+  }
+
+  const recientes = (envios.get(ip) || []).filter((t) => ahora - t < VENTANA_MS);
+  if (recientes.length >= MAX_ENVIOS) {
+    envios.set(ip, recientes);
+    return false;
+  }
+  recientes.push(ahora);
+  envios.set(ip, recientes);
+  return true;
+}
+
 export async function POST(req: Request) {
+  const ip = ipDe(req);
+  if (!pasaLimite(ip)) {
+    return NextResponse.json(
+      { ok: false, error: "demasiados envios" },
+      { status: 429, headers: { "Retry-After": "600" } },
+    );
+  }
+
   let b: Record<string, unknown>;
   try {
     b = await req.json();
@@ -70,7 +120,6 @@ export async function POST(req: Request) {
   // Meta CAPI: evento Lead server-side, deduplicado con el Pixel vía event_id.
   // Solo leads reales (no reclamos). Si falta META_CAPI_TOKEN, sendLeadCapi es no-op.
   if (row.tipo !== "reclamo" && s(b.event_id, 100)) {
-    const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || req.headers.get("x-real-ip") || "";
     await sendLeadCapi({
       eventId: s(b.event_id, 100),
       email: row.email,

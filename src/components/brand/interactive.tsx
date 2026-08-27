@@ -449,8 +449,10 @@ function Field({ label, name, type = 'text', textarea = false, required = false,
 
 export function CtaForm() {
   const [sent, setSent] = React.useState(false);
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [aviso, setAviso] = React.useState<string | null>(null);
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setAviso(null);
     const f = new FormData(e.currentTarget);
     const lines = [
       `Hola Suggestion, soy ${f.get('nombre') || ''}.`,
@@ -461,9 +463,9 @@ export function CtaForm() {
     ].filter((l) => l !== null);
     // 1) WhatsApp primero (síncrono: mantiene el gesto del usuario → no lo bloquea el navegador)
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
-    // 2) Guardar el lead (keepalive: sobrevive a la navegación; si falla, no rompe la UX)
+    // 2) Guardar el lead (keepalive: sobrevive a la navegación)
     const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
-    fetch('/api/lead', {
+    const guardado = fetch('/api/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       keepalive: true,
@@ -478,17 +480,39 @@ export function CtaForm() {
         attribution: getAttribution(),
         ...dedup,
       }),
-    }).catch(() => {});
+    });
     // 3) Evento de conversión (GA4 + Pixel dedup con la CAPI vía event_id)
     import('@/lib/tracking').then((m) => m.track('generate_lead', { origen: 'cta-form' }, dedup.event_id)).catch(() => {});
     setSent(true);
-    // 4) Página de gracias (conversión medible)
-    setTimeout(() => window.location.assign('/gracias'), 700);
+
+    // 4) Página de gracias — pero solo si el lead se guardó de verdad. Antes se
+    // saltaba a /gracias a los 700 ms con el error tragado, así que un fallo del
+    // servidor se veía igual que un éxito.
+    const r = await Promise.race([
+      guardado.catch(() => null),
+      new Promise<'timeout'>((res) => setTimeout(() => res('timeout'), 2500)),
+    ]);
+
+    if (r === 'timeout') {
+      window.location.assign('/gracias');
+      return;
+    }
+    if (r && r.ok) {
+      window.location.assign('/gracias');
+      return;
+    }
+    setSent(false);
+    setAviso(r && r.status === 429 ? 'Ya recibimos tu solicitud hace unos minutos. Si es urgente, escríbenos directamente por WhatsApp.' : 'No pudimos guardar tus datos, pero ya te abrimos WhatsApp con el mensaje escrito: envíalo desde ahí y te respondemos igual.');
   };
   return (
     <form onSubmit={onSubmit} className="hk-form" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
       {/* Honeypot anti-spam: invisible para humanos, los bots lo rellenan */}
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
+      {aviso && (
+        <p role="status" style={{ gridColumn: '1 / -1', margin: 0, font: 'var(--fw-light) var(--fs-sm)/1.5 var(--font-body)', color: '#ffb4ab' }}>
+          {aviso}
+        </p>
+      )}
       <Field label="Nombre" name="nombre" placeholder="Tu nombre" required />
       <Field label="Negocio" name="negocio" placeholder="Empresa / rubro" />
       <Field label="Email" name="email" type="email" placeholder="hola@tunegocio.com" required style={{ gridColumn: '1 / -1' }} />

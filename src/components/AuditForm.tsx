@@ -29,9 +29,11 @@ function F({ l, children, span }: { l: string; children: React.ReactNode; span?:
 
 export default function AuditForm() {
   const [sent, setSent] = useState(false);
+  const [aviso, setAviso] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setAviso(null);
     const f = new FormData(e.currentTarget);
     const msg = [
       `Hola Suggestion, quiero mi auditoría gratis. Soy ${f.get("nombre")}.`,
@@ -42,7 +44,7 @@ export default function AuditForm() {
     ].filter(Boolean);
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg.join("\n"))}`, "_blank", "noopener,noreferrer");
     const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
-    fetch("/api/lead", {
+    const guardado = fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       keepalive: true,
@@ -57,15 +59,40 @@ export default function AuditForm() {
         attribution: getAttribution(),
         ...dedup,
       }),
-    }).catch(() => {});
+    });
     track("generate_lead", { origen: "auditoria" }, dedup.event_id);
     setSent(true);
-    setTimeout(() => window.location.assign("/gracias"), 700);
+
+    // Antes esto era `.catch(() => {})` + salto a /gracias a los 700 ms: si el
+    // guardado fallaba, el lead se perdía y nadie se enteraba. Ahora esperamos
+    // la respuesta (con tope de 2,5 s para no dejar a nadie mirando el botón) y
+    // solo celebramos si de verdad se guardó.
+    const r = await Promise.race([
+      guardado.catch(() => null),
+      new Promise<"timeout">((res) => setTimeout(() => res("timeout"), 2500)),
+    ]);
+
+    if (r === "timeout") {
+      // WhatsApp ya está abierto y `keepalive` termina el guardado igual.
+      window.location.assign("/gracias");
+      return;
+    }
+    if (r && r.ok) {
+      window.location.assign("/gracias");
+      return;
+    }
+    setSent(false);
+    setAviso(r && r.status === 429 ? "Ya recibimos tu solicitud hace unos minutos. Si es urgente, escríbenos directamente por WhatsApp." : "No pudimos guardar tus datos, pero ya te abrimos WhatsApp con el mensaje escrito: envíalo desde ahí y te respondemos igual.");
   };
 
   return (
     <form onSubmit={onSubmit} className="hk-form" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-4)" }}>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
+      {aviso && (
+        <p role="status" style={{ gridColumn: "1 / -1", margin: 0, font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "#b3261e" }}>
+          {aviso}
+        </p>
+      )}
       <F l="Nombre *"><input name="nombre" required placeholder="Tu nombre" className="hk-input" style={input} /></F>
       <F l="Negocio *"><input name="negocio" required placeholder="Empresa / rubro" className="hk-input" style={input} /></F>
       <F l="WhatsApp *"><input name="telefono" required type="tel" placeholder="+51 ..." className="hk-input" style={input} /></F>
