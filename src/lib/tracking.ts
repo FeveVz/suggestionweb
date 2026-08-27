@@ -1,7 +1,29 @@
 /**
  * IDs de medición — ÚNICO lugar donde pegarlos.
- * GA_ID: GA4 "ID de medición" (empieza con G-). Ojo: NO es el número de
- * propiedad (237086613); se copia de Admin → Flujos de datos → Web.
+ *
+ * GA_ID: tiene que ser un ID que Google SIRVA como etiqueta, no cualquier ID que
+ * aparezca en el panel. Es la distinción que nos costó un mes de datos:
+ *
+ *   - ID de etiqueta ("GT-…" o el "G-…" dueño de la etiqueta) → googletagmanager
+ *     lo sirve (200) y enruta a todos sus destinos. ESTE es el que va aquí.
+ *   - ID de DESTINO (un "G-…" que solo figura como destino de otra etiqueta)
+ *     → `gtag/js?id=…` devuelve **404** y la librería nunca se ejecuta.
+ *
+ * Hasta 2026-08-25 aquí había `G-RVE3CLTNW3`, que es el ID de medición del flujo
+ * pero solo existe como DESTINO de la etiqueta `GT-NNQW6GPS`. Resultado: el script
+ * daba 404, `window.google_tag_data` quedaba undefined y no salía ni un `/g/collect`.
+ * Meta y Clarity seguían bien, así que no se notó.
+ *
+ * Cómo comprobarlo antes de dar por bueno un ID (30 segundos):
+ *   curl -o /dev/null -w "%{http_code}" "https://www.googletagmanager.com/gtag/js?id=EL-ID"
+ *   200 → sirve. 404 → es un destino, no vale.
+ *   OJO: un ID inventado también devuelve 200 (tag genérico). Para confirmar que
+ *   enruta a tu propiedad, busca tu ID de medición dentro del JS que devuelve.
+ *
+ * Y en el navegador: `typeof window.gtag` NO prueba nada (es el shim de
+ * Analytics.tsx, existe siempre). Lo concluyente es `window.google_tag_data`
+ * definido y una petición real a `/g/collect` con tu `tid=`.
+ *
  * META_PIXEL_ID: Events Manager → Conectar datos → Web (número de ~15 dígitos).
  * Con los IDs vacíos no se inyecta ningún script (cero peso).
  */
