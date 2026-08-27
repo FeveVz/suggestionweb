@@ -1198,9 +1198,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marca-contenido",
     nombre: "Producción Audiovisual",
-    metaTitle: "Producción Audiovisual en Ica y Video Marketing | Suggestion",
+    // Google ya nos muestra por "productora", "postproducción" y "servicios de
+    // producción audiovisual" (130 impresiones en 52 días), pero ni el título ni
+    // la descripción usaban esas palabras. Ojo: en posición 53-73 esto no trae
+    // clics por sí solo; sirve para cuando el contenido haga subir la página.
+    metaTitle: "Productora Audiovisual en Ica | Postproducción | Suggestion",
     metaDescription:
-      "Producción audiovisual de alto impacto: spots, video sell, fotografía y tomas con drone que cuentan tu historia y venden. Agenda una llamada.",
+      "Servicios de producción audiovisual y postproducción en Ica: spots, video sell, fotografía y drone. Productora propia. Agenda una llamada.",
     h1: "Producción audiovisual que cuenta y vende",
     hero: "El video es lo que más se ve y lo que más vende —si está bien hecho. Producimos contenido audiovisual de alto impacto que cuenta tu historia y mueve a la acción.",
     cta: "Contemos tu historia",
@@ -1654,6 +1658,55 @@ const SERVICIOS_LIST: Servicio[] = [
         parrafo:
           "Atendemos en Ica con tiempos claros y opción de recojo. Te decimos la fecha de entrega antes de empezar, y la cumplimos.",
       },
+      {
+        h2: "Impresiones por tiraje corto o largo",
+        parrafo:
+          "No hay pedido demasiado pequeño. Una caja de tarjetas, cincuenta volantes para una activación del sábado o el catálogo completo de temporada: la diferencia está en la máquina que conviene, no en si te atendemos o no. Por debajo de unos cientos de ejemplares la impresión digital sale más barata y se entrega antes, porque no hay que preparar planchas. A partir de ahí el offset empieza a compensar y el costo por unidad baja cuanto más subes. Si no sabes en qué punto está tu pedido, dinos cuántos necesitas y te decimos cuál de las dos te conviene —incluso cuando la respuesta es la que factura menos.",
+        bullets: [
+          { titulo: "Tirajes cortos", texto: "digital: entrega rápida, sin costo de arranque, ideal para pruebas, personalización o pedidos de última hora." },
+          { titulo: "Tirajes largos", texto: "offset: el costo por unidad cae con el volumen y el color se mantiene idéntico de la primera hoja a la última." },
+          { titulo: "Reimpresiones", texto: "guardamos el archivo aprobado, así que repetir un pedido es confirmar la cantidad y nada más." },
+        ],
+      },
+      {
+        h2: "Gigantografías y gran formato para exteriores",
+        parrafo:
+          "Una gigantografía se juzga a diez metros y bajo el sol de Ica, no en la pantalla. Por eso importa tanto el material como la tinta: una lona con tinta que no es UV se destiñe en un par de meses de verano, y un vinilo mal elegido se levanta con el viento. Elegimos el soporte según dónde va a estar la pieza y cuánto tiene que durar, y te decimos qué esperar de cada opción antes de imprimir.",
+        sub: [
+          {
+            h3: "Banners y lonas",
+            texto: "Lona frontlit para fachadas y ferias, con refuerzo perimetral y ojales donde toque sujetar. La medida se define por la estructura que ya tienes, no al revés.",
+          },
+          {
+            h3: "Vinilos y adhesivos",
+            texto: "Para vidrios, paredes, vehículos y escaparates. Vinilo microperforado cuando hay que cubrir una ventana sin dejar el local a oscuras.",
+          },
+          {
+            h3: "Rígidos y foam",
+            texto: "Foam, PVC y acrílico para señalética, tótems y piezas de punto de venta que tienen que sostenerse solas.",
+          },
+          {
+            h3: "Textil y DTF",
+            texto: "Impresión sobre tela para banderolas, roll ups y prendas, con lavado resistente.",
+          },
+        ],
+      },
+      {
+        h2: "Cómo preparar tu archivo antes de imprimir",
+        parrafo:
+          "La mayoría de retrasos en imprenta no son de la máquina: son archivos que llegan mal y hay que devolver. Estos cuatro puntos evitan casi todos. Y si no manejas ninguno, no es problema: también diseñamos la pieza.",
+        bullets: [
+          { titulo: "PDF de alta resolución", texto: "es el formato que menos sorpresas da. También aceptamos AI y PSD; evita JPG para piezas con texto." },
+          { titulo: "300 ppp a tamaño real", texto: "una imagen que se ve bien en pantalla puede salir pixelada al imprimir. En gran formato basta menos, porque se mira de lejos." },
+          { titulo: "Color en CMYK", texto: "las pantallas trabajan en RGB y hay colores —los fluorescentes sobre todo— que no existen en tinta. Convertir antes evita que el resultado te sorprenda." },
+          { titulo: "3 mm de sangrado", texto: "extiende el fondo 3 mm más allá del corte y deja los textos a 5 mm del borde, o el guillotinado se comerá parte del diseño." },
+        ],
+      },
+      {
+        h2: "Dónde entregamos",
+        parrafo:
+          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos entrega o recojo el mismo día en que el pedido está listo. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización, no después.",
+      },
     ],
     incluye: [
       { titulo: "Tarjetas de presentación", texto: "Offset y digital, con acabados especiales." },
@@ -1688,6 +1741,26 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Qué formatos de archivo aceptan?",
         a: "PDF, AI o PSD. Preferimos PDF de alta resolución con sangrado incluido.",
+      },
+      {
+        q: "¿Hay una cantidad mínima para imprimir?",
+        a: "No. Imprimimos desde una unidad en digital. Lo que cambia con la cantidad es la técnica que conviene: digital para tirajes cortos, offset cuando el volumen hace que baje el costo por unidad.",
+      },
+      {
+        q: "¿Cuánto dura una gigantografía en exterior?",
+        a: "Depende del material y de la tinta. Con lona y tinta UV, una pieza aguanta bien la exposición al sol y la lluvia durante temporadas completas. Con materiales de interior puesta a la intemperie, se destiñe en semanas. Te decimos qué esperar antes de imprimir.",
+      },
+      {
+        q: "¿Puedo pedir una prueba antes del tiraje completo?",
+        a: "Sí, y en pedidos grandes lo recomendamos. Una prueba de color impresa cuesta poco y evita descubrir un tono equivocado cuando ya hay mil ejemplares hechos.",
+      },
+      {
+        q: "¿Qué pasa si mi archivo no está listo para imprenta?",
+        a: "Lo revisamos en pre-prensa y te decimos qué falta: resolución, sangrado, color o tipografías sin convertir. Si prefieres no lidiar con eso, diseñamos la pieza nosotros.",
+      },
+      {
+        q: "¿Trabajan con empresas de fuera de la ciudad de Ica?",
+        a: "Sí. Atendemos toda la región —Chincha, Pisco, Nazca, Palpa y los distritos de la ciudad— con fecha de entrega comprometida, y coordinamos envíos al resto del país.",
       },
     ],
     enlazaA: ["material-pop", "merchandising", "estructuras-publicitarias"],

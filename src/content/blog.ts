@@ -1090,6 +1090,58 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Optimizar por clics o alcance baratos. Un lead barato que no cierra es más caro que un lead caro que sí compra. La métrica final siempre es la venta, no el clic.",
       },
+      {
+        h2: "Antes del CPL: qué cuenta como lead y qué no",
+        parrafo:
+          "El CPL solo significa algo si todos entienden lo mismo por «lead». Un lead es una persona que dejó una forma de contactarla y mostró interés en lo que vendes. No es una visita a la web, no es un seguidor nuevo y no es alguien que comentó «precio?» y desapareció. Cuando una agencia y un cliente discuten porque «los leads no sirven», casi siempre están contando cosas distintas.",
+        bullets: [
+          { titulo: "Lead frío", texto: "dejó sus datos por un contenido o un sorteo, pero no tenía intención de comprar ahora. Sirve para nutrir, no para llamar hoy." },
+          { titulo: "Lead tibio", texto: "preguntó por el producto o servicio. Hay interés real, pero falta información, presupuesto o momento." },
+          { titulo: "Lead caliente", texto: "pidió precio, disponibilidad o una cita concreta. Es el que se enfría si tardas horas en responder." },
+        ],
+      },
+      {
+        h2: "Del CPL al costo por venta: la cuenta que casi nadie hace",
+        parrafo:
+          "El CPL es el primer eslabón, no el último. Lo que decide si la campaña es rentable es cuánto te cuesta cada venta cerrada, y eso depende de lo que pasa después del formulario. Un ejemplo con números redondos: inviertes S/2,000 y consigues 100 leads, así que tu CPL es S/20. De esos 100 contestan 60, de los 60 agendan 20 y de los 20 cierran 5. Tu costo por venta real es S/400, no S/20. Si tu margen por venta es S/1,200, la campaña funciona. Si es S/300, estás perdiendo dinero con un CPL que parecía excelente.",
+        bullets: [
+          { titulo: "Tasa de contacto", texto: "cuántos leads logras que te respondan. Es la que más sube si contestas en minutos en vez de en días." },
+          { titulo: "Tasa de cita", texto: "cuántos de los contactados aceptan una reunión, visita o prueba." },
+          { titulo: "Tasa de cierre", texto: "cuántas de esas citas terminan en venta. Aquí manda el equipo comercial, no la pauta." },
+        ],
+      },
+      {
+        h2: "Cómo saber qué ROAS necesitas de verdad",
+        parrafo:
+          "«Un ROAS de 3» no quiere decir nada sin conocer tu margen. Lo que importa es el punto de equilibrio: divide 1 entre tu margen bruto y sabrás por debajo de qué ROAS pierdes dinero. Con un margen del 50%, el equilibrio está en 2: por cada sol invertido necesitas vender dos para no perder. Con un margen del 20%, el equilibrio sube a 5, y un ROAS de 4 —que suena bien— te está costando dinero. Este cálculo cambia por completo la conversación sobre si una campaña «va bien».",
+      },
+      {
+        h2: "Por qué tus números no cuadran con los de la plataforma",
+        parrafo:
+          "Es normal que Meta o Google reporten más conversiones que tu sistema interno, y no siempre es que mientan. Cada plataforma se atribuye las ventas de personas que vieron o tocaron su anuncio dentro de una ventana de tiempo, así que si alguien ve un anuncio en Instagram y luego busca tu marca en Google, las dos se apuntan la misma venta. A eso se suman los bloqueadores de anuncios, que impiden que parte de los datos vuelva, y las conversiones contadas dos veces cuando hay más de una etiqueta midiendo lo mismo. La salida no es elegir a quién creerle: es tener una fuente propia —el CRM o la hoja donde registras las ventas reales— y usar las plataformas para decidir dónde mover el presupuesto, no para saber cuánto vendiste.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es un lead caliente?",
+        a: "Alguien que ya pidió algo concreto: precio, disponibilidad, una cita o una cotización. Se diferencia del lead tibio en que no le falta interés, le falta cerrar. Es también el que más rápido se pierde: la probabilidad de contactarlo cae mucho a partir de la primera hora.",
+      },
+      {
+        q: "¿Cuál es un CPL bueno?",
+        a: "No existe un número universal. Un CPL de S/10 puede ser malo si esos leads no cierran nunca, y uno de S/80 puede ser excelente si cada venta te deja miles de soles. La referencia útil no es el promedio del sector, sino tu propio costo por venta comparado con tu margen.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre CPL y CPA?",
+        a: "El CPL mide lo que cuesta conseguir un contacto interesado. El CPA mide lo que cuesta conseguir la acción que de verdad te importa, que normalmente es la venta. Entre uno y otro está todo tu proceso comercial: velocidad de respuesta, calidad de la atención y capacidad de cierre.",
+      },
+      {
+        q: "¿Se pueden mirar CPL y ROAS a la vez?",
+        a: "Sí, y en la mayoría de negocios conviene. El CPL te dice si la captación está sana y el ROAS si el dinero vuelve. Cuando el CPL baja pero el ROAS también, casi siempre significa que estás atrayendo leads más baratos y peores.",
+      },
+      {
+        q: "¿Por qué mi campaña tiene buen ROAS y aun así no gano dinero?",
+        a: "Porque el ROAS mide ingresos, no beneficio. No descuenta el costo del producto, la comisión de la plataforma de pago, la logística ni el trabajo de tu equipo. Un ROAS por encima de tu punto de equilibrio —1 dividido entre tu margen bruto— es lo que indica rentabilidad real.",
+      },
     ],
     cierre: "En Suggestion reportamos CPL, ROAS y cierres con transparencia. Sin humo.",
     moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
@@ -1345,6 +1397,58 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Apuntar a “todos” gasta de más. Segmenta por especialidad, zona e intención, y conecta la publicidad con un buen seguimiento. Menos desperdicio, más citas.",
       },
+      {
+        h2: "Lo que sí y lo que no puedes decir en publicidad de salud",
+        parrafo:
+          "Salud es una de las categorías más reguladas por las plataformas y, además, está sujeta a las normas sanitarias y de publicidad del país. Antes de escribir un anuncio conviene saber dónde está la línea, porque una cuenta rechazada retrasa semanas. Como criterio práctico: puedes describir el servicio, la especialidad y la experiencia del equipo; no puedes prometer resultados, sugerir que el paciente tiene una condición ni usar imágenes de antes y después como argumento principal.",
+        bullets: [
+          { titulo: "Evita el «tú» diagnóstico", texto: "las plataformas rechazan anuncios que dan por hecho el estado de salud de quien los ve («¿tienes dolor de rodilla?»). Reformularlo en tercera persona suele bastar." },
+          { titulo: "Nada de garantías", texto: "«resultados garantizados» o «cura definitiva» son rechazo seguro y, en varias especialidades, también un problema regulatorio." },
+          { titulo: "Credenciales verificables", texto: "número de colegiatura, especialidad y años de ejercicio construyen más confianza que cualquier adjetivo, y no dan problemas de aprobación." },
+        ],
+      },
+      {
+        h2: "La cita perdida cuesta más que el lead caro",
+        parrafo:
+          "En consultorios y clínicas el problema rara vez es conseguir contactos: es que no lleguen. Una agenda con ausentismo alto desperdicia horas de profesional que ya estaban pagadas, y esas horas cuestan mucho más que el anuncio que trajo al paciente. Antes de subir el presupuesto de captación vale la pena mirar cuántas de las citas agendadas se convierten en consulta efectiva; en muchos casos, recuperar ese porcentaje llena la agenda sin gastar un sol más.",
+        bullets: [
+          { titulo: "Confirmación el día anterior", texto: "un recordatorio por WhatsApp reduce las ausencias de forma notable y cuesta prácticamente nada." },
+          { titulo: "Cancelación fácil", texto: "parece contraintuitivo, pero permitir cancelar libera el espacio a tiempo para otro paciente en vez de perderlo." },
+          { titulo: "Lista de espera", texto: "tener a quién llamar cuando se libera un hueco convierte una cancelación en una consulta." },
+        ],
+      },
+      {
+        h2: "Las reseñas y el perfil local pesan más que la pauta",
+        parrafo:
+          "Cuando alguien busca un profesional de salud cerca, lo que decide muchas veces no es un anuncio sino lo que ve en el mapa: cuántas reseñas hay, de qué fecha son y cómo responde el consultorio a las críticas. Un perfil verificado, con horarios correctos, fotos reales del local y reseñas recientes convierte mejor que la mayoría de campañas, y no tiene costo por clic. Pedir la reseña en el momento adecuado —justo después de una consulta que fue bien, no por mensaje masivo semanas después— es lo que marca la diferencia entre tener tres reseñas y tener cincuenta.",
+      },
+      {
+        h2: "El paciente que ya tienes vale más que el que persigues",
+        parrafo:
+          "En salud la recurrencia y la recomendación son el canal más rentable y el más ignorado. Un control anual recordado a tiempo, un tratamiento que quedó a medias o una familia que llega porque alguien quedó conforme cuestan una fracción de lo que cuesta captar a un desconocido. Antes de ampliar la inversión publicitaria conviene revisar la base de pacientes: cuántos no vuelven desde hace más de un año y cuántos dejaron un tratamiento incompleto. Casi siempre hay más agenda disponible ahí que en una campaña nueva.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo atraer pacientes a mi consultorio si recién empiezo?",
+        a: "Empieza por lo que no depende de presupuesto: un perfil de empresa verificado con horarios y fotos reales, la especialidad y la zona claras en la web, y un canal de contacto que se responda rápido. Con esa base, una campaña pequeña segmentada por especialidad y distrito rinde mucho más que una grande sin ella.",
+      },
+      {
+        q: "¿Qué presupuesto de publicidad necesita una clínica?",
+        a: "La cifra importa menos que la relación entre el costo de captar un paciente y lo que ese paciente deja a lo largo del tratamiento. En especialidades donde el paciente vuelve varias veces, se puede pagar bastante más por la primera cita que en una consulta única. Calcula primero ese valor y el presupuesto se deduce solo.",
+      },
+      {
+        q: "¿Por qué me rechazan los anuncios de salud?",
+        a: "Casi siempre por interpelar directamente al usuario sobre su estado de salud, prometer resultados o usar imágenes de antes y después como reclamo. Reescribir el mismo mensaje en tercera persona y sin promesa de resultado suele resolverlo.",
+      },
+      {
+        q: "¿Sirven las reseñas para conseguir más pacientes?",
+        a: "Mucho, y más que en otros sectores: en salud la decisión se toma por confianza. Lo que pesa no es solo la nota media, sino la cantidad, lo recientes que sean y cómo responde el consultorio a las reseñas negativas.",
+      },
+      {
+        q: "¿Cómo reduzco las citas a las que el paciente no llega?",
+        a: "Con confirmación el día anterior, cancelación fácil y una lista de espera para cubrir los huecos. Es la mejora de rentabilidad más rápida en una agenda de salud, porque no requiere aumentar la captación.",
+      },
     ],
     cierre: "En Suggestion captamos pacientes con publicidad segmentada, web de confianza y seguimiento.",
     moneyPage: { label: "Llena tu agenda", href: "/marketing-salud" },
@@ -1380,6 +1484,59 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "El error más caro",
         parrafo:
           "Querer ser todo para todos. Una marca que dice mucho no dice nada. Posicionar es elegir —y renunciar a lo que no eres.",
+      },
+      {
+        h2: "Cómo se escribe un posicionamiento en una frase",
+        parrafo:
+          "Un posicionamiento que no cabe en una frase no se va a sostener en el tiempo, porque nadie en el equipo lo va a recordar. La estructura clásica sigue funcionando porque obliga a decidir las cuatro cosas que importan: para quién, en qué categoría, qué prometes y por qué te van a creer. Escribirla es incómodo justamente porque cada hueco exige renunciar a algo.",
+        bullets: [
+          { titulo: "Para quién", texto: "el cliente concreto al que le sirves mejor que nadie. Si la respuesta es «cualquiera que necesite lo que vendo», todavía no hay posicionamiento." },
+          { titulo: "En qué categoría", texto: "con qué te comparan en la cabeza del cliente. A veces la mejor decisión estratégica es cambiar de categoría en vez de competir mejor dentro de la actual." },
+          { titulo: "Qué prometes", texto: "el beneficio principal, uno solo. Dos beneficios es cero beneficios." },
+          { titulo: "Por qué te creen", texto: "la razón para creer: un dato, un método, una trayectoria, algo verificable. Sin esto, la promesa es publicidad." },
+        ],
+      },
+      {
+        h2: "Cómo saber si tu posicionamiento está funcionando",
+        parrafo:
+          "El posicionamiento no vive en tu manual de marca, vive en la cabeza de otras personas, así que la única forma de evaluarlo es escuchar. La prueba más barata y más brutal es preguntar a diez clientes que ya te compraron por qué te eligieron a ti, y comparar sus palabras con las tuyas. Cuando coinciden, el posicionamiento está entrando. Cuando cada uno dice algo distinto —o cuando todos dicen «porque estaban disponibles» o «porque eran más baratos»—, todavía no ocupas ningún lugar propio.",
+        bullets: [
+          { titulo: "Repiten tus palabras", texto: "cuando un cliente te explica a otro usando tu frase, el posicionamiento ya no depende de tu publicidad." },
+          { titulo: "Te buscan por nombre", texto: "el aumento de búsquedas de tu marca es la señal más limpia de que ocupas un lugar." },
+          { titulo: "El precio deja de ser la primera pregunta", texto: "cuando lo primero que preguntan es cómo trabajas y no cuánto cuestas, cambiaste de terreno." },
+        ],
+      },
+      {
+        h2: "Posicionamiento, identidad y rebranding no son lo mismo",
+        parrafo:
+          "Se confunden a diario y la confusión sale cara. El posicionamiento es la decisión estratégica: qué lugar quieres ocupar y para quién. La identidad visual es la consecuencia: cómo se ve y se oye esa decisión. Y el rebranding es el cambio de una o de las dos, normalmente porque el negocio cambió. Rediseñar el logo sin haber decidido el posicionamiento es la forma más cara de no cambiar nada: la marca se ve distinta y el cliente sigue pensando exactamente lo mismo de ella.",
+      },
+      {
+        h2: "Cuánto tarda en notarse",
+        parrafo:
+          "Más de lo que casi nadie está dispuesto a esperar. Un posicionamiento se construye por repetición coherente, y la repetición necesita tiempo: los mismos mensajes, el mismo tono y las mismas decisiones sostenidos durante meses, no semanas. El error habitual no es elegir mal el territorio, es cambiarlo cada trimestre porque «no está funcionando» justo cuando empezaba a calar. Si algo tiene que cambiar rápido son las campañas; el posicionamiento es lo que las mantiene apuntando al mismo sitio.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es el posicionamiento de marca en palabras simples?",
+        a: "Es el lugar que tu marca ocupa en la cabeza del cliente cuando piensa en tu categoría. No es lo que tú dices que eres: es lo que la otra persona recuerda y siente cuando te nombran, comparado con las alternativas que conoce.",
+      },
+      {
+        q: "¿En qué se diferencia del branding?",
+        a: "El posicionamiento es la decisión —qué lugar quieres ocupar y para quién—. El branding es cómo se expresa esa decisión: nombre, identidad visual, tono, experiencia. Uno es la estrategia y el otro su ejecución; hacer el segundo sin el primero es decorar sin saber qué se está diciendo.",
+      },
+      {
+        q: "¿Cómo elijo el territorio que quiero ocupar?",
+        a: "Buscando el cruce entre tres cosas: algo que a tu cliente le importe de verdad, algo que tú puedas sostener mejor que la competencia y algo que nadie esté ocupando ya con fuerza. Si falta cualquiera de las tres, el territorio no se sostiene.",
+      },
+      {
+        q: "¿Puede una empresa pequeña posicionarse frente a una grande?",
+        a: "Suele ser más fácil, precisamente por ser pequeña: puede elegir un nicho estrecho y ser inequívocamente la mejor opción ahí, algo que una marca grande no puede hacer sin renunciar a volumen. Competir de frente en la misma categoría y con el mismo mensaje es lo que no funciona.",
+      },
+      {
+        q: "¿Cada cuánto se debe revisar el posicionamiento?",
+        a: "Se revisa cuando cambia el negocio —nuevo público, nueva oferta, nuevo mercado— o cuando la evidencia dice que los clientes te perciben de una forma que ya no te sirve. Cambiarlo por calendario o por cansancio interno es la forma más rápida de no llegar nunca a ocupar un lugar.",
       },
     ],
     cierre: "En Suggestion definimos tu posicionamiento antes de diseñar nada. Estrategia primero.",
@@ -1453,6 +1610,60 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "El patrón detrás de todo ejemplo que vende",
         parrafo:
           "Mensaje aspiracional + segmentación precisa + captura ordenada + seguimiento rápido. Falla uno y la campaña no cierra.",
+      },
+      {
+        h2: "Más ejemplos por formato",
+        parrafo:
+          "El ángulo decide qué dices; el formato decide si te creen. En inmobiliario, donde el comprador no puede tocar el producto antes de pagar, el formato hace la mitad del trabajo.",
+        bullets: [
+          { titulo: "Recorrido en video vertical", texto: "grabado a pie por el terreno o la obra, sin música épica: se ve el acceso, el entorno y el estado real. Genera menos leads que un anuncio bonito, pero llegan mejor informados." },
+          { titulo: "Antes y después del entorno", texto: "cómo estaba la zona hace tres años y cómo está hoy. Es el argumento de valorización contado con evidencia en vez de con promesas." },
+          { titulo: "Mapa con referencias", texto: "la ubicación explicada por lo que hay alrededor —colegio, vía principal, tiempo al centro— en vez de por coordenadas." },
+          { titulo: "Testimonio de un comprador", texto: "alguien que ya compró explicando por qué. En una decisión de tanto dinero, la prueba social pesa más que cualquier adjetivo." },
+          { titulo: "Comparativa honesta", texto: "en qué caso este proyecto NO conviene. Filtra curiosos y genera confianza en quien sí encaja." },
+        ],
+      },
+      {
+        h2: "Dónde se cae la venta: entre el lead y la visita",
+        parrafo:
+          "Los ejemplos que se comparten suelen ser del anuncio, pero el punto donde se pierde el dinero casi siempre está después. En el caso de arriba, de 350 leads llegaron 20 a la visita: eso es menos de 1 de cada 15, y aun así fue suficiente para vender 8 lotes. La diferencia entre una campaña rentable y una que no lo es rara vez está en el creativo; está en cuánto tarda alguien en llamar, en si la visita se agenda con día y hora concretos o queda en «cuando puedas», y en si hay alguien esperando cuando el interesado llega.",
+        bullets: [
+          { titulo: "Agenda cerrada, no abierta", texto: "«el sábado a las 10» convierte mucho más que «avísame cuando quieras venir»." },
+          { titulo: "Recordatorio antes de la visita", texto: "con la ubicación exacta y el nombre de quien lo va a recibir." },
+          { titulo: "Transporte resuelto", texto: "en proyectos alejados, ofrecer movilidad multiplica la asistencia." },
+        ],
+      },
+      {
+        h2: "Preventa y entrega inmediata no se anuncian igual",
+        parrafo:
+          "Vender un lote en preventa es vender una proyección: el comprador paga hoy por algo que existirá después, así que lo que hay que sostener es la credibilidad del proyecto —quién está detrás, qué ha entregado antes, en qué estado está la habilitación—. Vender con entrega inmediata es lo contrario: el producto se puede pisar, y lo que decide es la comparación directa con lo que hay en la zona. Usar el mismo anuncio para los dos casos es el error más común: al comprador de preventa le sobra el detalle del acabado y al de entrega inmediata le falta ver el terreno.",
+      },
+      {
+        h2: "Cómo saber si tu marketing inmobiliario funciona",
+        parrafo:
+          "El número de leads es la métrica más fácil de conseguir y la que menos dice. En proyectos con ticket alto y ciclo largo, un mes puede cerrarse con pocos leads y mucha venta, o al revés. Las señales que de verdad indican salud son cuántos de esos contactos llegan a pisar el terreno, cuántas visitas terminan en separación y cuánto tarda el proceso completo desde el primer mensaje. Si el costo por visita baja y la tasa de cierre se mantiene, la campaña está mejorando aunque el costo por lead haya subido.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuáles son los mejores ejemplos de marketing inmobiliario?",
+        a: "Los que no venden metros y precio, sino una razón para decidir: valorización con evidencia, proyección de vida, o una comparación honesta con las alternativas de la zona. El formato que mejor acompaña esos ángulos suele ser el video de recorrido real, porque muestra lo que una foto retocada no puede.",
+      },
+      {
+        q: "¿Cómo promocionar terrenos en venta sin bajar el precio?",
+        a: "Cambiando el argumento en vez del número. Un terreno se compra por lo que va a valer y por lo que permite hacer, no por lo que cuesta hoy. Mostrar el desarrollo del entorno, los accesos y los plazos de habilitación sostiene el precio mejor que cualquier descuento.",
+      },
+      {
+        q: "¿Cuántos leads hacen falta para vender un lote?",
+        a: "Varía enormemente según el proyecto y el precio. Lo útil no es el promedio de nadie, sino tu propia cadena: cuántos leads llegan a visita y cuántas visitas cierran. Con esos dos porcentajes puedes calcular exactamente cuántos contactos necesitas para la meta del mes.",
+      },
+      {
+        q: "¿Sirve el video con drone en marketing inmobiliario?",
+        a: "Sirve cuando responde una pregunta real del comprador: dónde está, qué hay alrededor y en qué estado está la obra. Cuando es solo una toma aérea bonita sin contexto, se ve mucho y decide poco.",
+      },
+      {
+        q: "¿Conviene poner el precio en el anuncio?",
+        a: "Depende de qué problema tengas. Ponerlo reduce el número de leads y sube su calidad, porque filtra a quien no puede pagarlo. No ponerlo genera más volumen y más trabajo de calificación. Si tu equipo comercial está saturado de contactos que no califican, ponerlo suele ser la mejor decisión.",
       },
     ],
     cierre: "En Suggestion hacemos marketing inmobiliario que llena salas de ventas, no que junta curiosos.",
@@ -1731,6 +1942,58 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "La métrica correcta",
         parrafo:
           "No mires “cuántos leads”, mira cuántos test drives y cierres. Menos leads buenos valen más que muchos malos.",
+      },
+      {
+        h2: "Por qué el tiempo de respuesta decide la venta",
+        parrafo:
+          "En automotriz, quien contesta primero se lleva la mayoría de las ventas. No porque venda mejor, sino porque el comprador de auto casi nunca deja sus datos en un solo sitio: llena el formulario de tres o cuatro concesionarios la misma tarde y compara. Cuando tu asesor llama al día siguiente, la conversación ya la tuvo con otro. Un lead contactado en los primeros minutos y uno contactado al día siguiente no valen lo mismo aunque hayan costado igual, y esa diferencia no se arregla con más presupuesto de pauta.",
+        bullets: [
+          { titulo: "Turno asignado", texto: "que cada lead tenga dueño desde que entra. Sin dueño, todos asumen que lo llamó otro." },
+          { titulo: "Primer contacto inmediato", texto: "aunque sea un mensaje corto que reconozca la consulta y proponga hora de llamada." },
+          { titulo: "Canal que el cliente usa", texto: "en Perú, WhatsApp se responde y una llamada de número desconocido a menudo no." },
+        ],
+      },
+      {
+        h2: "Qué preguntar para calificar sin espantar",
+        parrafo:
+          "Calificar no es interrogar. Tres preguntas bien puestas separan al comprador real del que está mirando, y ninguna necesita sonar a filtro: se pueden hacer dentro de una conversación normal. La clave es que respondan a lo que de verdad cambia la venta —cuándo, cómo lo paga y qué maneja hoy— y no a datos que a nadie le sirven.",
+        bullets: [
+          { titulo: "Plazo", texto: "«¿para cuándo lo necesitas?» ordena la agenda mejor que cualquier puntaje. Quien responde «este mes» va primero." },
+          { titulo: "Forma de pago", texto: "contado o financiado cambia el proceso completo. Si es financiado, saberlo temprano evita ilusionar a quien no va a calificar." },
+          { titulo: "Vehículo actual", texto: "si hay una unidad de por medio, hay una parte de pago y también una fecha real de decisión." },
+        ],
+      },
+      {
+        h2: "Por qué el seguimiento vale más que el volumen",
+        parrafo:
+          "La mayoría de ventas de vehículo no se cierra en el primer contacto, y sin embargo la mayoría de los equipos comerciales abandona ahí. Un lead que dijo «lo voy a pensar» en marzo puede comprar en mayo, y comprará donde alguien se acordó de él. Ese seguimiento no es insistencia: es aparecer con algo útil —una unidad que encaja mejor, un cambio de condiciones, la llegada de un modelo— en vez de preguntar «¿ya decidiste?». Un CRM ayuda, pero antes que la herramienta está la regla: ningún lead se cierra sin una fecha de próximo contacto.",
+      },
+      {
+        h2: "Camiones y línea amarilla no se venden como un auto",
+        parrafo:
+          "Cuando el vehículo es de trabajo, la lógica cambia. La decisión es de empresa, el ciclo es más largo, casi siempre hay más de una persona involucrada y lo que pesa no es el diseño sino el costo por kilómetro, la disponibilidad de repuestos y el respaldo del taller. Un anuncio que funciona para un auto familiar rara vez funciona aquí. En Suggestion hemos atendido 19 marcas de vehículos, entre livianos, camiones y línea amarilla, y la diferencia práctica es esa: en livianos compites por atención; en pesados compites por confianza y por tiempo de respuesta del servicio postventa.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuántos leads necesita un concesionario al mes?",
+        a: "Depende de tu tasa de cierre, no del sector. Si cierras 1 de cada 20 leads y quieres 10 ventas al mes, necesitas 200. La pregunta más útil es la inversa: si subes la tasa de cierre del 5% al 8%, necesitas 75 leads menos para el mismo resultado, y eso suele salir más barato que comprar más tráfico.",
+      },
+      {
+        q: "¿Qué es un lead calificado en automotriz?",
+        a: "Uno del que sabes tres cosas: en qué plazo quiere comprar, cómo piensa pagar y qué vehículo tiene hoy. Con eso el asesor puede priorizar la agenda del día. Sin eso, solo tiene una lista de nombres.",
+      },
+      {
+        q: "¿Sirve pedir muchos datos en el formulario para filtrar?",
+        a: "Filtra, pero también espanta. Cada campo extra reduce el número de personas que lo completan, y entre las que abandonan hay compradores reales que simplemente tenían prisa. Suele funcionar mejor un formulario corto y una calificación en el primer contacto.",
+      },
+      {
+        q: "¿Por qué llegan leads que dicen que nunca dejaron sus datos?",
+        a: "Casi siempre son formularios rellenados por error desde el móvil o campañas segmentadas por interés genérico en autos, no por intención de compra. Se corrige apuntando a señales de intención —búsquedas de modelo, financiamiento, comparativas— en vez de a quien «le gustan los autos».",
+      },
+      {
+        q: "¿Cuántas veces conviene insistir con un lead que no responde?",
+        a: "Más de lo que la mayoría hace y de forma más espaciada. Varios intentos repartidos en semanas, por canales distintos y con un motivo nuevo cada vez, rinden mucho más que tres llamadas el mismo día. Lo que quema al contacto no es el número de intentos, es repetir el mismo mensaje.",
       },
     ],
     cierre: "En Suggestion generamos y calificamos leads conectados a tu equipo comercial, para que ninguno se pierda.",

@@ -11,6 +11,7 @@ import {
   allServicioSlugs,
 } from "@/content/servicios";
 import { SECTORES } from "@/content/sectores";
+import { CIUDADES, ciudadHref } from "@/content/ciudades";
 import { getPrecios } from "@/content/precios";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -108,6 +109,21 @@ export default async function ServicioPage({ params }: Params) {
       title: "Sectores donde lo aplicamos",
       links: sectorLinks,
       columns: sectorLinks.length >= 3 ? 3 : 2,
+    });
+  }
+
+  // Ciudades que declaran usar este servicio (ciudades.ts → serviciosQueUsa).
+  // Hasta ahora las 8 páginas de ciudad solo recibían el enlace del pie, que se
+  // repite en las 92 y Google trata como plantilla, no como recomendación. Al
+  // derivarlo del propio contenido, el enlace solo aparece donde es cierto.
+  const ciudadLinks: RelatedLink[] = CIUDADES.filter((c) =>
+    c.serviciosQueUsa.includes(s.slug)
+  ).map((c) => ({ label: `Agencia de marketing en ${c.nombre}`, href: ciudadHref(c.slug) }));
+  if (ciudadLinks.length) {
+    related.push({
+      title: "Dónde lo hacemos",
+      links: ciudadLinks,
+      columns: ciudadLinks.length >= 3 ? 3 : 2,
     });
   }
 
