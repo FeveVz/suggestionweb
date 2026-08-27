@@ -237,7 +237,29 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
-:focus-visible { outline: var(--border-w-bold) solid var(--focus-ring); outline-offset: 2px; }
+/* El anillo de foco usaba --cyan (#00bfff): sobre blanco da 2,12:1 y
+   prácticamente no se veía. WCAG 2.2 pide 3:1 para el indicador de foco.
+   --cyan-700 (#0098cc) sí pasa sobre blanco y sigue legíble sobre negro; el
+   box-shadow blanco lo separa del fondo cuando la sección es oscura. */
+:focus-visible {
+  outline: var(--border-w-bold) solid var(--cyan-700);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 1px var(--white);
+}
+
+/* Salto al contenido: fuera de pantalla hasta que recibe el foco. */
+.hk-skip {
+  position: fixed; top: 8px; left: 8px; z-index: 200;
+  transform: translateY(-160%);
+  background: var(--black); color: var(--white);
+  padding: 12px 18px; border-radius: var(--radius-sm);
+  font: var(--fw-medium) var(--fs-sm)/1 var(--font-body);
+  text-decoration: none;
+}
+.hk-skip:focus-visible { transform: translateY(0); }
+@media (prefers-reduced-motion: no-preference) {
+  .hk-skip { transition: transform .18s ease; }
+}
 ::selection { background: var(--cyan); color: var(--black); }
 
 /* ============================================================

@@ -60,13 +60,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="preload" href="/fonts/Geomanist-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Activa animaciones solo si hay JS; sin JS el contenido queda visible (SEO-safe). */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* Salto al contenido: primer tabulador de la página. Sin esto, quien
+            navega con teclado o lector de pantalla tenía que recorrer el menú
+            entero (~20 enlaces) en cada una de las 92 páginas. */}
+        <a href="#contenido" className="hk-skip">Saltar al contenido</a>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollProgress />
         <CustomCursor />
         <RevealController />
         <div style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
           <Header />
-          <main style={{ flex: 1, overflowX: "clip" }}>{children}</main>
+          <main id="contenido" style={{ flex: 1, overflowX: "clip" }}>{children}</main>
           <Footer />
         </div>
         <FloatingMenu />
