@@ -80,7 +80,7 @@ export default function BeneficiosPinned({
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
             {items.map((it, i) => (
               <div key={it.titulo} className="hk-lift" style={{ padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
-                <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>{num(i)}</span>
+                <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan-text)" }}>{num(i)}</span>
                 <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)", marginTop: 12 }}>{it.titulo}</h3>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-muted)", marginTop: 6 }}>{it.texto}</p>
               </div>
@@ -110,7 +110,7 @@ export default function BeneficiosPinned({
                         <span style={{ position: "absolute", inset: 0, background: "var(--cyan)", transformOrigin: "left", transform: on ? "scaleX(1)" : "scaleX(0)", transition: "transform var(--dur-slow) var(--ease-out)" }} />
                       </span>
                       <span style={{ font: "var(--fw-medium) var(--fs-md)/1.15 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: on ? "var(--text-strong)" : "var(--text-muted)" }}>
-                        <span style={{ color: "var(--cyan)", marginRight: 10, fontFamily: "var(--font-accent)", fontSize: "var(--fs-xs)" }}>{num(i)}</span>{p.titulo}
+                        <span style={{ color: "var(--cyan-text-sm)", marginRight: 10, fontFamily: "var(--font-accent)", fontSize: "var(--fs-xs)" }}>{num(i)}</span>{p.titulo}
                       </span>
                     </li>
                   );

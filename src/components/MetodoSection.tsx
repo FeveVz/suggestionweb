@@ -15,7 +15,7 @@ const PASOS: [string, string][] = [
 
 export default function MetodoSection() {
   return (
-    <section style={{ background: "var(--black)", color: "var(--white)" }}>
+    <section data-tono="oscuro" style={{ background: "var(--black)", color: "var(--white)" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>
         <SectionHeading level={2} kicker="Cómo trabajamos" tone="dark" maxWidth="22ch" style={{ marginBottom: 40 }}>
           El método que convierte atención en ventas.
@@ -23,7 +23,7 @@ export default function MetodoSection() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
           {PASOS.map(([t, d], i) => (
             <div key={t} style={{ padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)" }}>
-              <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
+              <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan-text)" }}>0{i + 1}</span>
               <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--white)", marginTop: 14 }}>{t}</h3>
               <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>{d}</p>
             </div>

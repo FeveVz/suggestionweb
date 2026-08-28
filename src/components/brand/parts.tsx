@@ -113,7 +113,9 @@ export function Stat({ value, unit = '', label, tone = 'onDark', href }: { value
 export function Section({ id, tone = 'light', children, style }: { id?: string; tone?: 'light' | 'dark'; children: React.ReactNode; style?: React.CSSProperties }) {
   const dark = tone === 'dark';
   return (
-    <section id={id} style={{ background: dark ? 'var(--black)' : 'var(--white)', color: dark ? 'var(--white)' : 'var(--text-body)', padding: 'var(--section-y) 0', ...style }}>
+    // data-tono deja que --cyan-text vuelva al cian de marca dentro de las
+    // superficies oscuras (ver globals.css).
+    <section id={id} data-tono={dark ? 'oscuro' : undefined} style={{ background: dark ? 'var(--black)' : 'var(--white)', color: dark ? 'var(--white)' : 'var(--text-body)', padding: 'var(--section-y) 0', ...style }}>
       <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 var(--gutter)' }}>{children}</div>
     </section>
   );

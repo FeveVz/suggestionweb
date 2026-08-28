@@ -95,7 +95,7 @@ export default function Home() {
             <div className="hk-enter hk-eyebrow"><span className="live" aria-hidden />Marketing de performance</div>
             {/* Jerarquía tipográfica: el claim grande es AUTOSUFICIENTE (se lee primero); el matiz va debajo con menos peso. maxWidth en px: el h1 hereda 16px, "ch" colapsaría */}
             <h1 className="hk-enter-2 hk-display" style={{ margin: "clamp(16px,2vw,24px) 0 0", maxWidth: 680 }}>
-              <span className="big">Convertimos atención en <span style={{ color: "var(--cyan)" }}>ventas</span>.</span>
+              <span className="big">Convertimos atención en <span style={{ color: "var(--cyan-text)" }}>ventas</span>.</span>
               <span className="sub">Agencia de marketing en Ica, para marcas de todo el Perú.</span>
             </h1>
             {/* "El funnel vivo": el mensaje del párrafo, mostrado en vez de leído (texto completo queda visually-hidden dentro) */}
@@ -168,14 +168,14 @@ export default function Home() {
           <ul style={{ listStyle: "none", margin: 0, padding: 0, borderBottom: "1px solid var(--hairline)" }}>
             {SERVICE_CATEGORIES.map((cat, i) => (
               <li key={cat.slug} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "clamp(1rem,3vw,2.5rem)", padding: "22px 0", borderTop: "1px solid var(--hairline)" }}>
-                <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", color: "var(--cyan)", paddingTop: 7 }}>0{i + 1}</span>
+                <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", color: "var(--cyan-text-sm)", paddingTop: 7 }}>0{i + 1}</span>
                 <div>
                   <Link href={`/servicios/${cat.slug}`} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>
                     {cat.label}
                   </Link>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 14px", marginTop: 12 }}>
                     {cat.children.map((c) => (
-                      <Link key={c.href} href={c.href} className="hk-ulink" style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)" }}>
+                      <Link key={c.href} href={c.href} className="hk-ulink hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)" }}>
                         {c.label}
                       </Link>
                     ))}
@@ -236,7 +236,7 @@ export default function Home() {
         <div className="reveal" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "var(--space-4)" }}>
           {POR_QUE.map(([t, d], i) => (
             <div key={t} className="hk-lift hk-spot" style={{ display: "flex", gap: 18, padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
-              <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
+              <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan-text)" }}>0{i + 1}</span>
               <div>
                 <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>{t}</h3>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-muted)", marginTop: 6 }}>{d}</p>

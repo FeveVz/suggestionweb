@@ -44,6 +44,7 @@
 
   --orange-700: #cc7000;
   --cyan-700: #0098cc;
+  --cyan-800: #007ea6;
 
   /* Superficies */
   --surface-page: var(--white);
@@ -245,6 +246,46 @@ img { max-width: 100%; display: block; }
   outline: var(--border-w-bold) solid var(--cyan-700);
   outline-offset: 2px;
   box-shadow: 0 0 0 1px var(--white);
+}
+
+/* ============================================================
+   Cian legible sobre fondo claro
+   ============================================================
+   El cian de marca (#00bfff) da 9,9:1 sobre negro —perfecto— pero solo 2,12:1
+   sobre blanco, y ahi se usaba para la palabra "ventas" del H1 y para los
+   numerales de paso. La marca no cambia: #00bfff sigue igual en todo fondo
+   oscuro y en lo decorativo. Lo que baja por la rampa es el TEXTO sobre claro,
+   y con dos escalones porque WCAG pide umbrales distintos:
+
+     --cyan-text     #0098cc  3,35:1  texto GRANDE  (>=18,66 px en negrita)
+     --cyan-text-sm  #007ea6  4,64:1  texto PEQUENO (el resto)
+
+   En superficies oscuras ambos vuelven al cian de marca, asi que el mismo
+   componente se ve vibrante sobre negro y legible sobre blanco sin duplicar
+   codigo. `Section tone="dark"` marca esas superficies con data-tono. */
+:root {
+  --cyan-text: var(--cyan-700);
+  --cyan-text-sm: var(--cyan-800);
+}
+[data-tono="oscuro"] {
+  --cyan-text: var(--cyan);
+  --cyan-text-sm: var(--cyan);
+}
+
+/* ============================================================
+   Area tactil sin tocar el diseno
+   ============================================================
+   WCAG 2.2 (2.5.8) pide 24x24 px de objetivo. Los enlaces de las listas densas
+   —pie de pagina y listado de servicios— median 18-20 px de alto. En vez de
+   separarlos, que cambiaria el ritmo visual de la pagina, el ::after amplia la
+   zona de toque 6 px arriba y abajo: la caja crece a ~30 px y NADA se mueve.
+   Con el gap de 12 px de esas listas, las zonas quedan pegadas pero sin
+   solaparse. */
+.hk-tap { position: relative; }
+.hk-tap::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -6px; bottom: -6px;
 }
 
 /* Salto al contenido: fuera de pantalla hasta que recibe el foco. */

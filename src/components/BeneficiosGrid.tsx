@@ -23,7 +23,7 @@ export default function BeneficiosGrid({ items }: { items: ItemTT[] }) {
           viewport={{ once: true, margin: "0px 0px -12% 0px" }}
           transition={{ duration: 0.55, delay: i * 0.09, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan)" }}>0{i + 1}</span>
+          <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan-text)" }}>0{i + 1}</span>
           <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)", marginTop: 12 }}>{b.titulo}</h3>
           <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-muted)", marginTop: 6 }}>{b.texto}</p>
         </motion.div>

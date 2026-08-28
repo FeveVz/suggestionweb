@@ -46,7 +46,7 @@ export default function Footer() {
             <nav key={col.title} style={{ display: "flex", flexDirection: "column", gap: 12 }} aria-label={col.title}>
               <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>{col.title}</span>
               {col.links.map((l) => (
-                <Link key={l.href} href={l.href} style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</Link>
+                <Link key={l.href} href={l.href} className="hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</Link>
               ))}
             </nav>
           ))}
@@ -55,7 +55,7 @@ export default function Footer() {
           <nav style={{ display: "flex", flexDirection: "column", gap: 12 }} aria-label="Contacto">
             <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>Contacto</span>
             {contactLinks.map((l) => (
-              <a key={l.href} href={l.href} style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</a>
+              <a key={l.href} href={l.href} className="hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</a>
             ))}
           </nav>
         </div>
@@ -75,7 +75,7 @@ export default function Footer() {
               { label: "Términos", href: "/terminos" },
               { label: "Libro de Reclamaciones", href: "/libro-de-reclamaciones" },
             ].map((l) => (
-              <Link key={l.href} href={l.href} style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)", textDecoration: "underline", textUnderlineOffset: "0.2em" }}>
+              <Link key={l.href} href={l.href} className="hk-tap" style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-on-inverse-mut)", textDecoration: "underline", textUnderlineOffset: "0.2em" }}>
                 {l.label}
               </Link>
             ))}
