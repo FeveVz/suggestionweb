@@ -125,7 +125,7 @@ export default function HeroShowcase() {
         <motion.div key={`c${ci}`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45 }} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 14, paddingTop: 12, borderTop: "1px solid var(--hairline)" }}>
           {caso.cells.map(([v, l], i) => (
             <div key={l} style={{ textAlign: "center" }}>
-              <div style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-display)", color: i === 2 ? "var(--cyan)" : "var(--text-strong)" }}>
+              <div style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-display)", color: i === 2 ? "var(--cyan-text)" : "var(--text-strong)" }}>
                 <CountUp to={v} />
               </div>
               <span style={{ font: "var(--fw-bold) var(--fs-micro)/1.25 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{l}</span>
