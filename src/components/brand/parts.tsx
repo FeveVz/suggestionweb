@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 /* ============================================================
    Primitivas de marca Suggestion (presentacionales)
@@ -77,15 +79,34 @@ export function Blot({
   );
 }
 
-export function Stat({ value, unit = '', label, tone = 'onDark' }: { value: React.ReactNode; unit?: string; label: string; tone?: 'onDark' | 'light' }) {
+/**
+ * Cifra + etiqueta. Con `href` se convierte en enlace.
+ *
+ * El href se anadio por comportamiento medido, no por gusto: en Clarity, 5 de
+ * los 17 clics de la home (29%) caian sobre "+50 marcas que confian en
+ * nosotros" — el elemento mas clicado de toda la pagina— y no pasaba nada,
+ * porque era texto plano. La gente quiere ver esas marcas.
+ */
+export function Stat({ value, unit = '', label, tone = 'onDark', href }: { value: React.ReactNode; unit?: string; label: string; tone?: 'onDark' | 'light'; href?: string }) {
   const dark = tone === 'onDark';
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+  const cuerpo = (
+    <>
       <div style={{ font: 'var(--fw-bold) var(--fs-4xl)/0.95 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: dark ? 'var(--white)' : 'var(--text-strong)' }}>
         {value}{unit && <span style={{ color: 'var(--cyan)', fontSize: '0.5em', marginLeft: 2 }}>{unit}</span>}
       </div>
       <div style={{ font: 'var(--fw-light) var(--fs-sm)/1.45 var(--font-body)', color: dark ? 'var(--text-on-inverse-mut)' : 'var(--text-muted)', maxWidth: '20ch' }}>{label}</div>
-    </div>
+    </>
+  );
+
+  if (!href) return <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>{cuerpo}</div>;
+
+  return (
+    <Link href={href} className="hk-stat-link" style={{ display: 'flex', flexDirection: 'column', gap: 8, textDecoration: 'none' }}>
+      {cuerpo}
+      <span aria-hidden className="hk-stat-cue" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)' }}>
+        Ver <ArrowRight size={13} />
+      </span>
+    </Link>
   );
 }
 

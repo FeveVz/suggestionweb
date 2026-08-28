@@ -10,13 +10,15 @@ import { SECTORES } from "@/content/sectores";
  * El conteo de sectores se deriva de SECTORES para que nunca se desincronice al añadir verticales.
  */
 
-export type ProofStat = { value: string; label: string };
+export type ProofStat = { value: string; label: string; href?: string };
 
+// Cada cifra lleva a la página que la demuestra. Antes eran texto plano y
+// concentraban el 29% de los clics de la home sin llevar a ninguna parte.
 const DEFAULT_STATS: ProofStat[] = [
-  { value: "19", label: "Marcas de vehículos atendidas" },
-  { value: "+50", label: "Marcas que confían en nosotros" },
-  { value: String(SECTORES.length), label: "Sectores con estrategia propia" },
-  { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más" },
+  { value: "19", label: "Marcas de vehículos atendidas", href: "/marketing-automotriz" },
+  { value: "+50", label: "Marcas que confían en nosotros", href: "/casos" },
+  { value: String(SECTORES.length), label: "Sectores con estrategia propia", href: "/sectores" },
+  { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más", href: "/nosotros" },
 ];
 
 const FUNNEL = ["Lead", "Cita", "Cierre"];
@@ -50,7 +52,7 @@ export default function ProofBar({
           style={{ display: "grid", gridTemplateColumns: `repeat(${stats.length}, minmax(0, 1fr))`, gap: "var(--space-6)", borderTop: funnel ? "1px solid var(--hairline-inverse)" : "none", paddingTop: funnel ? 34 : 0 }}
         >
           {stats.map((s) => (
-            <Stat key={s.label} value={<CountUp to={s.value} />} label={s.label} />
+            <Stat key={s.label} value={<CountUp to={s.value} />} label={s.label} href={s.href} />
           ))}
         </div>
       </div>
@@ -58,6 +60,14 @@ export default function ProofBar({
         @media (max-width: 900px) {
           .hk-proof-stats { grid-template-columns: 1fr 1fr !important; gap: var(--space-5) !important; }
         }
+        /* La pista "Ver →" aparece al pasar por encima o al enfocar con
+           teclado: en reposo la banda se mantiene limpia. En táctil no hay
+           hover, así que ahí se muestra siempre. */
+        .hk-stat-cue { opacity: 0; transform: translateY(-4px); transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+        .hk-stat-link:hover .hk-stat-cue,
+        .hk-stat-link:focus-visible .hk-stat-cue { opacity: 1; transform: none; }
+        @media (hover: none) { .hk-stat-cue { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .hk-stat-cue { transition: none; } }
       `}</style>
     </section>
   );

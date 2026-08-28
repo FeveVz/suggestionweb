@@ -6,8 +6,14 @@ import { Eye, MousePointerClick, MessageCircle, Handshake } from "lucide-react";
  * encendiendo cada etapa (la última hace pop). CSS puro en un solo loop de 5s
  * (todas las animaciones comparten duración → sincronía perfecta), solo
  * transform/opacity/color (fluido en móvil). Server Component, cero JS.
- * Reduced-motion: estado final estático. El mensaje textual completo vive en
- * un párrafo visually-hidden (SEO/lectores de pantalla).
+ * Reduced-motion: estado final estático.
+ *
+ * El gancho —la frase que nombra el problema del visitante— se muestra VISIBLE
+ * encima del funnel. Antes el párrafo entero estaba visually-hidden: lo leían
+ * Google y los lectores de pantalla, pero quien llegaba veía cuatro iconos sin
+ * nada que los explicara, justo en la pantalla donde se va el 43%. El resto
+ * del párrafo sigue oculto para no repetir en pantalla lo que el funnel ya
+ * cuenta en imagen.
  */
 
 const PASOS = [
@@ -25,10 +31,12 @@ const HIDDEN: React.CSSProperties = {
 export default function FunnelVivo() {
   return (
     <div style={{ margin: "clamp(20px,2.6vw,30px) 0 0" }}>
+      <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", margin: "0 0 clamp(18px,2.2vw,26px)", maxWidth: "46ch" }}>
+        Tu problema no es el alcance: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>es que los clics no se vuelven clientes</strong>.
+      </p>
       <p style={HIDDEN}>
-        Tu problema no es el alcance: es que los clics no se vuelven clientes. Armamos tu funnel completo —anuncios,
-        web, WhatsApp y CRM— y lo medimos hasta el cierre: la atención se vuelve clic, el clic conversación por
-        WhatsApp y la conversación venta.
+        Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: la atención se
+        vuelve clic, el clic conversación por WhatsApp y la conversación venta.
       </p>
       <div className="fv" aria-hidden>
         <span className="fv-line" />

@@ -102,12 +102,23 @@ export default function Home() {
             <div className="hk-enter-3">
               <FunnelVivo />
             </div>
+            {/* La acción principal es WhatsApp porque es la que la gente usa:
+                Meta cuenta 27 eventos `Contactar` (clics a WhatsApp) frente a 4
+                `Cliente potencial` (formularios enviados). /contacto no se
+                pierde: sigue en el CTA fijo de la cabecera durante todo el
+                scroll, y la auditoría se queda como segunda opción. */}
             <div className="hk-enter-4 hk-hero-ctas" style={{ display: "flex", gap: 14, marginTop: 24, flexWrap: "wrap", alignItems: "center" }}>
-              <Magnetic><Btn as="a" href="/contacto" size="lg">Quiero más leads <ArrowRight size={18} /></Btn></Magnetic>
+              <Magnetic>
+                <Btn as="a" href={whatsappLink("Hola Suggestion, quiero más leads para mi negocio.")} size="lg">
+                  Escríbenos por WhatsApp <ArrowRight size={18} />
+                </Btn>
+              </Magnetic>
               <Magnetic><Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn></Magnetic>
             </div>
             <p className="hk-enter-4" style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
-              <span><strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas confiaron</span>
+              <Link href="/casos" style={{ color: "inherit" }}>
+                <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas confiaron
+              </Link>
               <span>Respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>&lt;24 h</strong></span>
             </p>
           </div>
