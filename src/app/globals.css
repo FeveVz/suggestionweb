@@ -343,7 +343,9 @@ img { max-width: 100%; display: block; }
 .hk-sectorrow:hover::before { transform: scaleY(1); }
 .hk-sectorrow-num {
   font: var(--fw-bold) var(--fs-lg)/1 var(--font-accent);
-  letter-spacing: var(--tracking-label); color: var(--ink-500);
+  /* --text-on-inverse-mut y no --ink-500: la fila de sectores vive en seccion
+     oscura, y ese gris esta pensado para fondo claro (daba 3,83:1 sobre negro). */
+  letter-spacing: var(--tracking-label); color: var(--text-on-inverse-mut);
   transition: color var(--dur-base) var(--ease-out);
 }
 .hk-sectorrow:hover .hk-sectorrow-num { color: var(--cyan); }
