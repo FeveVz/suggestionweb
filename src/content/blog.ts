@@ -482,10 +482,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "como-crear-un-logo",
     categoria: "marca",
-    title: "Cómo Crear un Logo: Gratis o con IA | Suggestion",
+    title: "Cómo Crear un Logo Paso a Paso | Suggestion",
     description:
-      "¿Crear tu logo gratis, con IA o con un profesional? Te mostramos los 3 caminos, sus costos reales y cuál conviene según tu negocio. Guía 2026.",
-    h1: "Cómo crear un logo: gratis, con IA o profesional",
+      "Cómo crear un logo que funcione: el proceso paso a paso, qué hace bueno a un logo, los archivos y versiones que debes exigir y cómo evaluarlo.",
+    h1: "Cómo crear un logo paso a paso",
     excerpt:
       "Buscar “crear logo” devuelve mil herramientas que prometen un logo en cinco minutos. Algunas sirven; otras te dan un dibujo bonito que no aguanta el primer mes de tu negocio. Antes de elegir, entiende los tres caminos y qué pierdes (o ganas) en cada uno.",
     date: "2026-01-14",
@@ -512,6 +512,76 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Un logo es la punta del iceberg. Lo que hace que te elijan y paguen más es la marca completa: nombre, identidad visual, tono y coherencia. Eso no lo da una plantilla ni la IA.",
       },
+      {
+        h2: "Qué hace bueno a un logo (no es que sea bonito)",
+        parrafo:
+          "«Bonito» es una opinión y cambia cada temporada. Un logo se juzga por si funciona en las condiciones reales en las que va a vivir: bordado en un polo, impreso a una tinta en una factura, reducido a 16 píxeles en la pestaña del navegador, visto de lejos en una gigantografía. La mayoría de logos que hay que rehacer al año no eran feos: eran imposibles de usar.",
+        bullets: [
+          { titulo: "Legible en pequeño", texto: "si a 16 px se convierte en una mancha, no sirve como ícono, y el ícono es donde más veces lo va a ver tu cliente." },
+          { titulo: "Funciona en una sola tinta", texto: "prueba a ponerlo todo negro. Si se cae, dependía del color para leerse y va a fallar en sellos, bordados y grabados." },
+          { titulo: "Tiene aire alrededor", texto: "un área de respeto definida evita que acabe pegado a un texto o al borde de una pieza." },
+          { titulo: "No depende de un degradado ni de una sombra", texto: "los efectos se pierden en producción física. El logo tiene que aguantar plano." },
+          { titulo: "Es distinto al del vecino", texto: "si cambiando el nombre podría ser de otro negocio del rubro, no te está diferenciando." },
+        ],
+      },
+      {
+        h2: "El proceso, en orden",
+        parrafo:
+          "Un logo no se empieza dibujando. Se empieza decidiendo qué tiene que comunicar y a quién, porque eso es lo único que permite elegir entre dos propuestas sin caer en «me gusta más el azul».",
+        pasos: [
+          { titulo: "Define qué debe transmitir y a quién", texto: "tres adjetivos, el cliente al que le hablas y con quién te comparan. Sin esto, aprobar un logo es cuestión de gusto personal." },
+          { titulo: "Mira a la competencia antes de dibujar", texto: "no para copiar, para saber qué está ocupado. Si en tu rubro todos usan verde y una hoja, ahí no hay diferenciación posible." },
+          { titulo: "Explora en blanco y negro", texto: "sin color, la forma tiene que sostenerse sola. El color se decide después y se equivoca menos." },
+          { titulo: "Reduce a dos o tres direcciones", texto: "presentar veinte opciones no es generosidad, es no haber decidido. Pocas propuestas bien argumentadas valen más." },
+          { titulo: "Pruébalo donde va a vivir", texto: "en una tarjeta, en el ícono de WhatsApp, en un polo, en un banner. Si sobrevive a las cuatro, está listo." },
+          { titulo: "Cierra las versiones y los archivos", texto: "principal, horizontal, ícono, en negativo. Y los formatos, que es donde más proyectos quedan cojos." },
+          { titulo: "Escribe las reglas de uso", texto: "colores exactos, tipografías, área de respeto y qué no se puede hacer. Sin esto, cada proveedor lo aplicará a su manera." },
+        ],
+      },
+      {
+        h2: "Los archivos que tienes que exigir",
+        parrafo:
+          "Aquí es donde se nota si un logo está terminado o solo entregado. Si te dan una sola imagen y nada más, tendrás que pagar dos veces la primera vez que necesites un banner grande o un bordado.",
+        tabla: {
+          cabeceras: ["Formato", "Para qué sirve", "¿Imprescindible?"],
+          filas: [
+            ["SVG / AI / EPS", "Vectorial: escala a cualquier tamaño sin perder nitidez. Es el original", "Sí, es el archivo maestro"],
+            ["PDF vectorial", "Lo que pide cualquier imprenta", "Sí"],
+            ["PNG con fondo transparente", "Web, presentaciones, documentos", "Sí, en varios tamaños"],
+            ["JPG", "Usos rápidos donde no hace falta transparencia", "Opcional"],
+            ["Versión en negativo", "Para fondos oscuros o fotos", "Sí"],
+            ["Ícono cuadrado", "Perfiles, favicon, apps", "Sí"],
+          ],
+          nota: "La diferencia clave es vectorial contra mapa de bits: el vectorial se agranda sin pixelarse, el mapa de bits no. Sin el vectorial no tienes el original, tienes una foto de él.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "Pregunta esto antes de pagar",
+          texto: "¿Me entregan el archivo vectorial editable y los derechos de uso por escrito? Si la respuesta es que solo entregan imágenes, o que el vectorial se paga aparte, estás comprando una foto de tu logo y no tu logo. Es el problema más común con los paquetes muy baratos.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto tiempo toma crear un logo?",
+        a: "La parte de dibujar es la más corta. Lo que marca el plazo es decidir qué debe transmitir y a quién, y las rondas de revisión. Un proceso ordenado con el brief claro desde el principio avanza mucho más rápido que uno que empieza mostrando propuestas.",
+      },
+      {
+        q: "¿Qué archivos me deben entregar?",
+        a: "Como mínimo el vectorial editable —SVG, AI o EPS—, un PDF vectorial para imprenta, PNG con fondo transparente en varios tamaños, la versión para fondo oscuro y el ícono cuadrado. Si solo te dan imágenes, no tienes el original.",
+      },
+      {
+        q: "¿Cuántas propuestas es normal recibir?",
+        a: "Pocas y bien argumentadas. Veinte opciones suele significar que nadie decidió nada y traslada la decisión a tu gusto personal. Dos o tres rumbos, cada uno con su razón de ser, permiten elegir con criterio.",
+      },
+      {
+        q: "¿Mi logo tiene que decir a qué me dedico?",
+        a: "No necesariamente, y la mayoría de marcas grandes no lo hace. Lo literal ayuda al principio, cuando nadie te conoce, pero encierra al negocio si algún día amplías lo que vendes. Es una decisión estratégica, no estética.",
+      },
+      {
+        q: "¿Cada cuánto se debe cambiar un logo?",
+        a: "Idealmente casi nunca. Un logo bien resuelto aguanta años y solo pide ajustes menores. Cambiarlo con frecuencia destruye el reconocimiento que tanto cuesta construir; si te dan ganas de cambiarlo cada temporada, el problema suele estar en el posicionamiento, no en el dibujo.",
+      },
     ],
     cierre: "En Suggestion construimos branding estratégico: del nombre al manual de marca.",
     moneyPage: { label: "Construyamos tu marca", href: "/servicios/branding" },
@@ -522,7 +592,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "marca",
     title: "Crear un Logo con IA: Ventajas y Límites Reales | Suggestion",
     description:
-      "¿Crear tu logo con IA? Te explicamos qué hace bien, dónde falla y cómo usarla sin arruinar tu marca. Guía honesta con ejemplos. 2026.",
+      "Crear un logo con IA: qué hace bien, por qué INDECOPI rechazó registrar obras puramente generadas por IA y el problema del formato. La versión honesta.",
     h1: "Crear un logo con IA: ventajas, límites y cuándo NO usarla",
     excerpt:
       "La IA crea logos en segundos. Eso es real y útil. Pero confundir “tengo una imagen” con “tengo una marca” es el error que pagan caro muchos negocios. Aquí la versión honesta.",
@@ -555,6 +625,70 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Cuando el logo va a ser la cara de un negocio que quiere durar y diferenciarse. Ahí necesitas estrategia, no una imagen rápida.",
       },
+      {
+        h2: "Lo que dijo INDECOPI sobre las obras hechas con IA",
+        parrafo:
+          "Esta es la parte que casi nadie menciona y que en Perú ya tiene criterio establecido. En septiembre de 2024, la Dirección de Derecho de Autor del INDECOPI emitió dos resoluciones rechazando el registro de obras puramente generadas por inteligencia artificial. El razonamiento: la autoría exige una persona natural y una originalidad humana significativa, y escribir un prompt no alcanza para ser autor. La puerta no está cerrada del todo —una obra con intervención creativa humana significativa sí puede registrarse—, pero cada caso se evalúa por separado.",
+        dato: {
+          cifra: "2",
+          texto: "resoluciones del INDECOPI, en septiembre de 2024, rechazando el registro por derecho de autor de obras puramente generadas por IA. El criterio: un prompt simple no constituye autoría.",
+          fuente: "Dirección de Derecho de Autor del INDECOPI",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "Derecho de autor y marca no son lo mismo",
+          texto: "Que una obra no se pueda registrar por derecho de autor no significa que el logo no se pueda registrar como MARCA, que es otro trámite, con otros requisitos —lo que se evalúa ahí es que sea distintivo— y una vigencia de 10 años renovables. Son dos protecciones distintas y conviene no confundirlas. Esto es información general, no asesoría legal: para un caso concreto, sobre todo si es híbrido humano-IA, consulta a un especialista en propiedad intelectual.",
+        },
+      },
+      {
+        h2: "El problema del formato que descubres tarde",
+        parrafo:
+          "Hay un detalle técnico que arruina más proyectos que el debate legal, y aparece el día que necesitas imprimir. Los generadores de imagen con IA entregan mapas de bits —PNG o JPG—, es decir, una rejilla de píxeles. Un logo necesita ser vectorial: una descripción matemática de las formas que se puede agrandar a cualquier tamaño sin perder nitidez. Cuando llevas un PNG a una imprenta para una gigantografía, el resultado sale borroso, y no hay ajuste que lo salve. Convertirlo a vector después no es un botón: es redibujarlo, y a menudo cuesta más que haberlo diseñado bien desde el principio.",
+        tabla: {
+          cabeceras: ["", "Lo que entrega la IA", "Lo que necesita un logo"],
+          filas: [
+            ["Tipo de archivo", "Mapa de bits (PNG, JPG)", "Vectorial (SVG, AI, EPS)"],
+            ["Al agrandarlo", "Se pixela", "Nítido a cualquier tamaño"],
+            ["Para imprenta y gigantografía", "No sirve", "Es lo que piden"],
+            ["Editar un color o una forma", "Prácticamente no se puede", "Se edita en minutos"],
+            ["Versiones y variantes", "Hay que generar de nuevo y no coinciden", "Se derivan del original"],
+          ],
+        },
+      },
+      {
+        h2: "La forma sensata de usarla",
+        parrafo:
+          "Nada de lo anterior significa que la IA no sirva; significa que sirve para una parte del trabajo y no para otra. Usada en su sitio, ahorra semanas de exploración. Usada como entrega final, deja un archivo que no se puede imprimir, no se puede editar y cuya propiedad es discutible.",
+        pasos: [
+          { titulo: "Explora con IA", texto: "genera decenas de direcciones visuales en minutos. Es lo mejor que hace y es genuinamente útil." },
+          { titulo: "Elige dos o tres rumbos, no un archivo", texto: "lo que te llevas de esta etapa es una dirección estética, no el logo terminado." },
+          { titulo: "Redibuja en vectorial con criterio", texto: "aquí entra el trabajo humano: simplificar, ajustar proporciones, resolver la versión en negativo y el ícono." },
+          { titulo: "Prueba y documenta", texto: "aplicaciones reales, versiones, reglas de uso. Es lo que convierte una imagen en una identidad." },
+          { titulo: "Registra la marca", texto: "el trámite de marca protege el uso comercial en tu categoría, y es independiente del debate sobre la autoría del archivo." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Puedo registrar en Perú un logo hecho con IA?",
+        a: "Hay que separar dos cosas. Por derecho de autor, el INDECOPI rechazó en 2024 registrar obras puramente generadas por IA: exige una persona natural y originalidad humana significativa, y un prompt simple no basta. Como marca, en cambio, el trámite es otro y lo que se evalúa es que sea distintiva. Es información general: para tu caso concreto consulta a un especialista en propiedad intelectual.",
+      },
+      {
+        q: "¿Por qué mi logo hecho con IA sale borroso al imprimirlo?",
+        a: "Porque la IA entrega mapas de bits —PNG o JPG—, que son rejillas de píxeles, y un logo necesita ser vectorial para escalar sin perder nitidez. Al agrandarlo para una gigantografía, los píxeles se estiran. No hay ajuste que lo arregle: hay que redibujarlo en vectorial.",
+      },
+      {
+        q: "¿Se puede convertir un logo de IA a vector?",
+        a: "Existen vectorizadores automáticos y funcionan razonablemente con trazos simples. Con dibujos complejos, degradados o texturas el resultado queda sucio y con cientos de puntos imposibles de editar. En la práctica, lo que se hace es redibujarlo tomando el archivo de IA como referencia.",
+      },
+      {
+        q: "¿Es legal usar comercialmente un logo generado con IA?",
+        a: "Usarlo y que puedas protegerlo son cosas distintas. Cada herramienta tiene sus propios términos sobre el uso comercial de lo que genera —conviene leerlos—, y aparte está la cuestión de si puedes impedir que otro use algo parecido, que es donde entra el registro de marca.",
+      },
+      {
+        q: "¿Entonces la IA no sirve para nada en branding?",
+        a: "Sirve, y mucho, en la etapa de exploración: en minutos recorres direcciones visuales que antes tomaban días. El error no es usarla, es confundir una imagen generada con una identidad terminada.",
+      },
     ],
     cierre: "En Suggestion combinamos lo mejor de ambos mundos: velocidad de exploración y criterio estratégico.",
     moneyPage: { label: "Construyamos tu marca", href: "/servicios/branding" },
@@ -565,7 +699,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "marca",
     title: "Qué es un Rebranding y Cuándo Conviene | Suggestion",
     description:
-      "Qué es un rebranding, en qué se diferencia de un lavado de cara y las 6 señales de que tu marca ya lo necesita. Guía clara con ejemplos.",
+      "Qué es un rebranding, cuándo conviene y cuándo NO, la diferencia entre refresh y cambio total, y cómo hacerlo sin perder el posicionamiento que ya tienes.",
     h1: "Qué es un rebranding y cuándo tu marca lo necesita",
     excerpt:
       "Rebranding no es “cambiar el logo porque ya aburre”. Es realinear tu marca con lo que tu negocio es hoy y con el cliente que quieres. Hecho por moda, es un gasto. Hecho por estrategia, recupera ventas.",
@@ -591,6 +725,71 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Qué NO es un rebranding",
         parrafo:
           "No es solo un logo nuevo. Si cambias la cara pero no la estrategia detrás, en seis meses estás igual. El rebranding empieza en el posicionamiento, no en el color.",
+      },
+      {
+        h2: "Refresh o cambio total: no cuestan lo mismo",
+        parrafo:
+          "La decisión más cara del proceso se toma al principio y casi siempre por intuición. Un refresh actualiza lo visual manteniendo el reconocimiento; un cambio total rompe con lo anterior. La regla práctica: cuanto más te conozcan tus clientes, más caro sale romper. Si llevas años en el mercado, tirar el reconocimiento acumulado tiene que estar justificado por un cambio real en el negocio, no por cansancio interno con el logo.",
+        tabla: {
+          cabeceras: ["", "Refresh", "Rebranding total"],
+          filas: [
+            ["Qué cambia", "Colores, tipografía, aplicaciones", "Nombre, posicionamiento, identidad completa"],
+            ["Qué conserva", "El reconocimiento acumulado", "Poco o nada"],
+            ["Cuándo tiene sentido", "La marca envejeció, pero sigue siendo la correcta", "El negocio ya no es el mismo"],
+            ["Riesgo principal", "Quedarse corto y tener que repetirlo", "Que el cliente no te reconozca"],
+            ["Esfuerzo de comunicación", "Bajo: se puede hacer sin anunciarlo", "Alto: hay que explicarlo y sostenerlo meses"],
+          ],
+        },
+      },
+      {
+        h2: "Cómo hacerlo sin perder lo que ya tienes",
+        parrafo:
+          "Un rebranding mal ejecutado destruye en un fin de semana posicionamiento que costó años. Lo que se rompe no es el diseño: son las conexiones —enlaces, fichas, reseñas, recuerdo del cliente—. Estos pasos evitan la mayor parte del daño y ninguno es caro; lo caro es descubrirlos después.",
+        pasos: [
+          { titulo: "Inventaría dónde apareces", texto: "web, perfil de empresa, redes, directorios, facturas, rotulación, vehículos, uniformes. La lista siempre es más larga de lo que uno cree y es la base del calendario." },
+          { titulo: "Si cambia el dominio, redirige todo", texto: "cada URL antigua necesita un redirect 301 a su equivalente. Sin eso, el posicionamiento y los enlaces que apuntaban a ti se pierden, y ese es el daño más difícil de revertir." },
+          { titulo: "Actualiza el perfil de empresa antes que las redes", texto: "es donde la gente comprueba que sigues existiendo. Cambiar el nombre ahí sin avisar genera más confusión que en cualquier otro sitio." },
+          { titulo: "Convive un tiempo con las dos identidades", texto: "un «antes conocidos como…» durante unos meses cuesta poco y evita que un cliente de años crea que cerraste." },
+          { titulo: "Cambia lo físico por lotes, no de golpe", texto: "rotulación, packaging y uniformes se renuevan según se agotan o según prioridad de visibilidad. Hacerlo todo a la vez multiplica el costo sin multiplicar el efecto." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "El error que más caro sale",
+          texto: "Cambiar el dominio o las URLs sin redirecciones. Google trata las direcciones nuevas como un sitio nuevo, sin el historial del anterior: puedes perder de golpe años de posicionamiento y tardar meses en recuperarlo. Es reversible solo si actúas rápido, y evitable por completo si lo planificas antes.",
+        },
+      },
+      {
+        h2: "Cuándo NO hacerlo",
+        parrafo:
+          "Casi tan importante como saber cuándo toca es reconocer cuándo un rebranding es una distracción cara. En estos cuatro casos el problema está en otro sitio y cambiar la identidad solo lo tapa unos meses.",
+        bullets: [
+          { titulo: "Porque a ti ya te aburre", texto: "tú ves tu marca cien veces al día; tu cliente, unas pocas al año. El cansancio interno llega mucho antes que el desgaste real." },
+          { titulo: "Para tapar un problema de producto o servicio", texto: "si la gente se queja de los plazos o de la atención, una identidad nueva solo consigue que la queja se vea más moderna." },
+          { titulo: "Porque un competidor cambió", texto: "reaccionar a la marca ajena es la forma más rápida de parecerse a ella." },
+          { titulo: "Sin presupuesto para sostener el cambio", texto: "un rebranding a medias —logo nuevo en la web, el viejo en la fachada y en las facturas— comunica desorden, que es peor que verse anticuado." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cada cuánto se hace un rebranding?",
+        a: "No hay calendario. Se hace cuando el negocio cambió o cuando la marca dejó de conectar con el cliente al que quieres llegar, no por antigüedad. Muchas marcas fuertes llevan décadas con ajustes menores y ningún cambio de fondo.",
+      },
+      {
+        q: "¿Un rebranding afecta mi posicionamiento en Google?",
+        a: "Si cambias el dominio o las URLs, mucho, y por eso las redirecciones 301 no son opcionales. Si solo cambias lo visual y el nombre se mantiene, el impacto es mínimo. La parte técnica es la que hay que planificar antes de anunciar nada.",
+      },
+      {
+        q: "¿Puedo cambiar solo el logo?",
+        a: "Puedes, y a veces es lo correcto: si el posicionamiento sigue siendo válido y solo la ejecución envejeció, un refresh visual resuelve. Pero si lo que falla es qué representas, el logo nuevo no va a arreglarlo.",
+      },
+      {
+        q: "¿Cómo le explico el cambio a mis clientes?",
+        a: "Contando el porqué, no el resultado. A nadie le interesa que estrenaste tipografía; sí le interesa saber que ampliaste servicios o cambiaste de enfoque. El cambio visual es la consecuencia de esa noticia, no la noticia.",
+      },
+      {
+        q: "¿Cuánto dura la transición?",
+        a: "Lo digital cambia en días; lo físico y el recuerdo del cliente, meses. Conviene planificar una convivencia de varios meses entre la identidad antigua y la nueva, sobre todo si tu marca tiene años de reconocimiento local.",
       },
     ],
     cierre: "¿Tu marca ya no te representa? En Suggestion hacemos rebranding con estrategia, no por moda.",
@@ -962,7 +1161,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "ia-automatizacion",
     title: "Las Mejores IA para Crear Logos en 2026 | Suggestion",
     description:
-      "Las mejores herramientas de IA para crear logos, para qué sirve cada una y por qué ninguna reemplaza la estrategia de un diseñador. Guía 2026.",
+      "Qué tipos de IA para logos existen, qué entrega cada uno y cuál te conviene según lo que necesites. Comparativa por tipo de herramienta, no por marca.",
     h1: "Las mejores IA para crear logos (y sus límites)",
     excerpt:
       "Las herramientas de IA para logos se multiplicaron. Algunas son útiles para explorar; ninguna construye una marca sola. Esta es la guía honesta: para qué sirven y dónde se quedan cortas.",
@@ -985,6 +1184,73 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Por qué no reemplazan a un diseñador",
         parrafo:
           "Un logo es el 10% de una marca. El otro 90% —estrategia, naming, identidad visual, coherencia, registro— necesita criterio humano. La IA te da un punto de partida; un profesional te da una marca que diferencia y se puede proteger.",
+      },
+      {
+        h2: "Comparativa por tipo de herramienta",
+        parrafo:
+          "Las herramientas concretas cambian de nombre cada pocos meses, así que compararlas una a una envejece mal. Lo que no cambia es en qué categoría cae cada una y qué puedes esperar de ella. Elige la categoría primero; la marca del momento da igual.",
+        tabla: {
+          cabeceras: ["Tipo", "Qué te entrega", "Formato", "Para qué conviene"],
+          filas: [
+            ["Generador por texto", "Conceptos a partir de una descripción", "Mapa de bits", "Explorar rumbos visuales rápido"],
+            ["Plantilla + personalización", "Un logo armado y listo para usar", "Mapa de bits y a veces vector", "Un proyecto temporal o una prueba"],
+            ["IA generativa de imagen", "Grafismos originales y llamativos", "Mapa de bits", "Inspiración, casi nunca un logo usable"],
+            ["Vectorizadores automáticos", "Convierte una imagen a vector", "Vector, con retoque", "Rescatar un trazo simple, no un dibujo complejo"],
+          ],
+          nota: "Ninguna categoría entrega hoy un sistema de marca completo: versiones, área de respeto, reglas de uso y archivos maestros siguen siendo trabajo humano.",
+        },
+      },
+      {
+        h2: "Cómo elegir según lo que necesitas",
+        parrafo:
+          "Antes de probar herramientas, decide en cuál de estos tres casos estás. La respuesta cambia por completo cuánto tiene sentido invertir en esto.",
+        tabla: {
+          cabeceras: ["Tu situación", "Qué usar"],
+          filas: [
+            ["Necesito una imagen para un evento de un fin de semana", "Plantilla con personalización, y listo"],
+            ["Estoy validando una idea de negocio", "Generador por texto para explorar, sin cerrar nada"],
+            ["Voy a abrir el negocio y quiero verme serio", "IA para explorar, diseño humano para cerrar"],
+            ["Ya tengo clientes y mi marca se ve improvisada", "Proceso de branding: el logo es la última parte"],
+          ],
+        },
+      },
+      {
+        h2: "Qué exigirle al resultado, salga de donde salga",
+        parrafo:
+          "Da igual si el logo lo hizo una IA, un editor gratuito o un estudio: la lista de comprobación es la misma. Si falla alguno de estos cinco puntos, el logo no está terminado, aunque se vea bien en la pantalla donde lo generaste.",
+        bullets: [
+          { titulo: "Archivo vectorial editable", texto: "sin él no tienes el original y no podrás imprimir en grande ni modificar nada." },
+          { titulo: "Legible en 16 píxeles", texto: "es el tamaño del ícono en una pestaña o en un perfil, y es donde tu cliente lo verá más veces." },
+          { titulo: "Funciona a una sola tinta", texto: "prueba a ponerlo todo en negro: si se cae, fallará en sellos, bordados y grabados." },
+          { titulo: "Tiene versión para fondo oscuro", texto: "la vas a necesitar el primer día, para el pie de tu web o una foto." },
+          { titulo: "No se parece al de un competidor", texto: "búscalo por imagen antes de adoptarlo. La IA se entrena con lo que ya existe y repite patrones del rubro." },
+        ],
+        nota: {
+          titulo: "Una comprobación de dos minutos",
+          texto: "Sube el logo a una búsqueda inversa por imagen antes de mandarlo a imprimir. Si aparecen resultados muy parecidos, tienes un problema de diferenciación —y quizá de registro— que es mucho más barato descubrir ahora que después de rotular la fachada.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuál es la mejor IA para crear logos?",
+        a: "Depende de qué necesites, no de cuál esté de moda: las herramientas concretas cambian cada pocos meses. Para explorar rumbos, un generador por texto. Para algo temporal y listo para usar, una plataforma de plantillas con personalización. Para un negocio que va a durar, ninguna sola: IA para explorar y trabajo humano para cerrar.",
+      },
+      {
+        q: "¿Las IA de logos son gratis?",
+        a: "Casi todas dejan generar gratis y cobran al descargar en buena calidad o en formato editable. Conviene comprobar antes de invertir tiempo qué incluye exactamente la descarga de pago: si no incluye el archivo vectorial, el problema de fondo sigue ahí.",
+      },
+      {
+        q: "¿Dos negocios pueden terminar con el mismo logo de IA?",
+        a: "Es posible, sobre todo con plantillas y con estilos muy pedidos dentro de un mismo rubro. Estas herramientas se entrenan con lo que ya existe y tienden a repetir patrones. Una búsqueda inversa por imagen antes de adoptarlo cuesta dos minutos y evita un problema caro.",
+      },
+      {
+        q: "¿Puedo usar IA solo para el ícono y hacer el resto aparte?",
+        a: "Sí, y es una forma sensata de usarla. El riesgo es que el ícono generado no combine con la tipografía ni resista la reducción, así que aun así hay que redibujarlo y ajustarlo para que funcione como sistema.",
+      },
+      {
+        q: "¿Qué le pido a la herramienta para que el resultado sirva?",
+        a: "Descripciones concretas en vez de adjetivos: el rubro, la sensación buscada, si quieres símbolo o solo tipografía, y pedirlo en blanco y negro. Trabajar sin color en la exploración obliga a que la forma se sostenga sola, que es la prueba que de verdad importa.",
       },
     ],
     cierre: "En Suggestion usamos IA para acelerar, pero diseñamos con estrategia para que tu marca venda.",
@@ -2154,7 +2420,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "ia-automatizacion",
     title: "IA en el Marketing: Qué Sí Funciona en 2026 | Suggestion",
     description:
-      "Qué usos de la inteligencia artificial en marketing dan resultados reales y cuáles son ruido. Guía honesta para aplicarla sin perder el criterio.",
+      "Qué usos de la IA en marketing dan resultados reales y cuáles son ruido, por dónde empezar y qué cuidar con los datos de tus clientes. Guía honesta 2026.",
     h1: "IA en el marketing: qué sí funciona en 2026 (y qué es ruido)",
     excerpt:
       "La IA está en todos los discursos de marketing, pero no todo lo que brilla vende. Separemos lo que de verdad mueve resultados de lo que solo suena moderno.",
@@ -2181,6 +2447,67 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "La regla",
         parrafo:
           "La IA es un multiplicador: potencia a un buen equipo y expone a uno malo. Úsala para ganar velocidad, no para apagar el criterio.",
+      },
+      {
+        h2: "Dónde ayuda de verdad y dónde no",
+        parrafo:
+          "La diferencia no está en la tarea sino en quién asume el costo del error. Cuando equivocarse es barato y se detecta al instante —un borrador flojo se reescribe—, la IA rinde. Cuando el error es caro o pasa desapercibido —un dato inventado en una propuesta, una decisión de rumbo—, sale mucho más cara de lo que ahorra.",
+        tabla: {
+          cabeceras: ["Tarea", "¿Ayuda la IA?", "Por qué"],
+          filas: [
+            ["Primeros borradores y variantes", "Sí, mucho", "Equivocarse es gratis y tú editas antes de publicar"],
+            ["Responder preguntas frecuentes", "Sí", "Es repetitivo y previsible, justo lo que hace bien"],
+            ["Resumir y ordenar información", "Sí", "Ahorra horas de lectura, tú validas lo importante"],
+            ["Traducir y adaptar textos", "Sí, con revisión", "Buena base; el vocabulario técnico necesita ojo humano"],
+            ["Decidir la estrategia", "No", "No conoce tu margen, tu equipo ni tu mercado real"],
+            ["Datos y cifras para una propuesta", "No sin verificar", "Puede inventarlos con total aplomo"],
+            ["Hablar con un cliente molesto", "No", "Requiere criterio y capacidad de ceder"],
+          ],
+        },
+      },
+      {
+        h2: "Por dónde empezar sin quemar el intento",
+        parrafo:
+          "El fracaso típico es comprar una herramienta cara, usarla dos semanas y abandonarla. Suele funcionar mejor al revés: empezar por una tarea concreta que te robe tiempo cada semana y medir si de verdad lo ahorra.",
+        pasos: [
+          { titulo: "Elige una tarea repetitiva y medible", texto: "responder las mismas cinco preguntas, redactar la primera versión de los anuncios, ordenar los leads del mes. Una sola, no cinco." },
+          { titulo: "Mide cuánto te toma hoy", texto: "sin ese número de partida, después no vas a saber si mejoró o solo lo parece." },
+          { titulo: "Prueba dos semanas con revisión humana siempre", texto: "nada sale sin que alguien lo lea. Es la regla que evita casi todos los desastres." },
+          { titulo: "Compara y decide", texto: "si ahorra tiempo real y la calidad se sostiene, se queda. Si no, se descarta sin drama y pruebas otra cosa." },
+          { titulo: "Documenta lo que funciona", texto: "las instrucciones que dan buen resultado son un activo del equipo. Guardadas, cualquiera obtiene el mismo nivel; en la cabeza de una persona, se pierden." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Cuidado con los datos de tus clientes",
+          texto: "Antes de pegar una base de datos, una conversación o información sensible en una herramienta de IA, comprueba qué hace esa herramienta con lo que le mandas: hay servicios que usan lo que escribes para entrenar sus modelos. En Perú, los datos personales están protegidos por la Ley 29733, y tratarlos implica responsabilidades. Ante la duda, anonimiza antes de subir.",
+        },
+      },
+      {
+        h2: "La ventaja ya no es usarla",
+        parrafo:
+          "Hace un par de años, usar IA era una ventaja en sí misma. Hoy la usa todo el mundo, así que la ventaja se desplazó a otro sitio: al criterio para saber qué pedirle, a los datos propios que tú tienes y tu competencia no, y a la parte del trabajo que sigue siendo insustituiblemente humana —conocer a tu cliente, decidir a qué renuncias, sostener una relación—. El resultado paradójico es que cuanto más se generaliza la IA, más vale lo que no se puede generar: un caso real, una foto de tu equipo, un dato de tu propia operación, una opinión que alguien firma.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿La IA va a reemplazar al marketing?",
+        a: "Reemplaza tareas, no el criterio. Escribe borradores, resume y clasifica muy rápido, pero no decide a quién le vendes, qué te diferencia ni a qué renuncias. Lo que sí está cambiando es qué parte del trabajo se paga: la ejecución repetitiva vale menos, el criterio vale más.",
+      },
+      {
+        q: "¿Se nota cuando un contenido lo hizo una IA?",
+        a: "Cuando se publica sin editar, se nota: suena correcto y no dice nada, y no contiene nada que solo tú puedas saber. Lo que delata a un texto automático no es la gramática, es la ausencia de experiencia propia, ejemplos concretos y datos de primera mano.",
+      },
+      {
+        q: "¿Google penaliza el contenido hecho con IA?",
+        a: "Lo que penaliza es el contenido sin valor, con independencia de cómo se produjo. Un artículo útil, verificado y con experiencia real detrás funciona aunque el borrador lo escribiera una IA; uno genérico y repetido no funciona aunque lo escribiera una persona.",
+      },
+      {
+        q: "¿Qué herramienta de IA me conviene?",
+        a: "Empieza por la tarea, no por la herramienta. Define qué te roba tiempo cada semana y busca qué lo resuelve; una suscripción cara que nadie usa es más común que un problema de elegir mal la marca.",
+      },
+      {
+        q: "¿Puedo darle a la IA los datos de mis clientes?",
+        a: "Con cuidado y sabiendo qué hace el servicio con esa información: algunos la usan para entrenar sus modelos. En Perú los datos personales están protegidos por la Ley 29733, así que lo prudente es anonimizar antes de subir cualquier base o conversación.",
       },
     ],
     cierre: "En Suggestion integramos IA en flujos de trabajo y automatización, con estrategia humana al mando.",
