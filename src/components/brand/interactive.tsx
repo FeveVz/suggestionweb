@@ -343,7 +343,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
         <div style={{ minHeight: 340, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
             <Label tone="onDark" dot>Test de percepción</Label>
-            <span aria-hidden style={{ font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', letterSpacing: 'var(--tracking-label)', color: 'var(--ink-500)' }}>
+            <span aria-hidden style={{ font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', letterSpacing: 'var(--tracking-label)', color: 'var(--text-on-inverse-mut)' }}>
               PASO <span style={{ color: 'var(--cyan)' }}>{paso}</span> / 3
             </span>
           </div>

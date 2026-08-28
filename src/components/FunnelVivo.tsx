@@ -8,6 +8,12 @@ import { Eye, MousePointerClick, MessageCircle, Handshake } from "lucide-react";
  * transform/opacity/color (fluido en móvil). Server Component, cero JS.
  * Reduced-motion: estado final estático.
  *
+ * Colores: el icono y la etiqueta van en --text-muted (reposo) y
+ * --cyan-text-sm (activo). NO usan el cian de marca porque son texto de
+ * 12 px sobre blanco: #00bfff da 2,12:1 y #b3b3b3 daba 2,10:1, ambos por
+ * debajo del 4,5:1 que pide WCAG para texto pequeño. La línea y el punto
+ * que viajan SÍ conservan el cian de marca: son decoración, no texto.
+ *
  * El gancho —la frase que nombra el problema del visitante— se muestra VISIBLE
  * encima del funnel. Antes el párrafo entero estaba visually-hidden: lo leían
  * Google y los lectores de pantalla, pero quien llegaba veía cuatro iconos sin
@@ -90,7 +96,7 @@ export default function FunnelVivo() {
         .fv-node {
           position: relative; z-index: 1;
           display: flex; flex-direction: column; align-items: center; gap: 8px;
-          color: var(--ink-300);
+          color: var(--text-muted);
           width: var(--fv-s);
         }
         .fv-ico {
@@ -129,10 +135,10 @@ export default function FunnelVivo() {
           100%    { left: calc(100% - var(--fv-s) / 2); opacity: 0; }
         }
         /* cada nodo se enciende cuando el punto le llega (4%/30%/57%/83%) */
-        @keyframes fv-n1 { 0%,3% { color: var(--ink-300); } 6% { color: var(--cyan); } 94% { color: var(--cyan); } 99%,100% { color: var(--ink-300); } }
-        @keyframes fv-n2 { 0%,29% { color: var(--ink-300); } 33% { color: var(--cyan); } 94% { color: var(--cyan); } 99%,100% { color: var(--ink-300); } }
-        @keyframes fv-n3 { 0%,55% { color: var(--ink-300); } 59% { color: var(--cyan); } 94% { color: var(--cyan); } 99%,100% { color: var(--ink-300); } }
-        @keyframes fv-n4 { 0%,81% { color: var(--ink-300); } 85% { color: var(--cyan); } 94% { color: var(--cyan); } 99%,100% { color: var(--ink-300); } }
+        @keyframes fv-n1 { 0%,3% { color: var(--text-muted); } 6% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
+        @keyframes fv-n2 { 0%,29% { color: var(--text-muted); } 33% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
+        @keyframes fv-n3 { 0%,55% { color: var(--text-muted); } 59% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
+        @keyframes fv-n4 { 0%,81% { color: var(--text-muted); } 85% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
         /* pop de "venta": escala + anillo que se expande */
         @keyframes fv-pop {
           0%, 82%  { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,191,255,0); }
@@ -146,7 +152,7 @@ export default function FunnelVivo() {
           .fv-prog { transform: scaleX(1); }
           .fv-dot { opacity: 0; }
           .fv-n1, .fv-n2, .fv-n3 { color: var(--ink-700); }
-          .fv-n4 { color: var(--cyan); }
+          .fv-n4 { color: var(--cyan-text-sm); }
         }
       `}</style>
     </div>
