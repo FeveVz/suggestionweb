@@ -271,6 +271,16 @@ img { max-width: 100%; display: block; }
   --cyan-text: var(--cyan);
   --cyan-text-sm: var(--cyan);
 }
+/* Y al reves: una tarjeta CLARA dentro de una seccion oscura vuelve a los
+   tonos legibles sobre blanco. Sin esto el mecanismo no se puede anidar, y
+   paso de verdad: las tarjetas del equipo en /nosotros son blancas dentro de
+   una seccion negra, asi que heredaban el cian de marca y volvian a dar
+   2,12:1. Marca con data-tono="claro" cualquier superficie clara que metas
+   dentro de una oscura. */
+[data-tono="claro"] {
+  --cyan-text: var(--cyan-700);
+  --cyan-text-sm: var(--cyan-800);
+}
 
 /* ============================================================
    Area tactil sin tocar el diseno

@@ -135,7 +135,7 @@ export default function Nosotros() {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>
           {EQUIPO.map((m) => (
-            <a key={m.slug} href={`/equipo/${m.slug}`} className="hk-lift" style={{ display: "flex", gap: 18, alignItems: "center", padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", textDecoration: "none" }}>
+            <a key={m.slug} href={`/equipo/${m.slug}`} className="hk-lift" data-tono="claro" style={{ display: "flex", gap: 18, alignItems: "center", padding: "var(--space-6)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", textDecoration: "none" }}>
               <span aria-hidden style={{ width: 60, height: 60, flexShrink: 0, borderRadius: "50%", padding: 2.5, background: "linear-gradient(135deg, var(--orange), var(--cyan))", display: "grid" }}>
                 {m.foto ? (
                   // eslint-disable-next-line @next/next/no-img-element
