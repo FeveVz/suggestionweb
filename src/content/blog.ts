@@ -856,8 +856,8 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "conversion",
     title: "Cómo Crear una Página Web Paso a Paso | Suggestion",
     description:
-      "¿Crear tu página web con Wix o contratar a un profesional? Comparamos costo, tiempo y resultados reales para que decidas según tu negocio. 2026.",
-    h1: "Cómo crear una página web: hazlo tú vs contratar",
+      "Los 7 pasos para crear una página web que traiga clientes: dominio a tu nombre, estructura, contenido, velocidad y medición. Qué hacer y en qué orden.",
+    h1: "Cómo crear una página web paso a paso",
     excerpt:
       "Crear una página web nunca fue tan fácil… ni tan fácil de hacer mal. Hoy puedes armar una en una tarde con Wix, o invertir en una hecha para vender. La diferencia no es la estética: es si trae clientes o solo “se ve bonita”.",
     date: "2026-02-18",
@@ -880,6 +880,77 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "SEO técnico de base", texto: "para que Google la encuentre." },
           { titulo: "Mobile-first", texto: "la mayoría te visita desde el celular." },
         ],
+      },
+      {
+        h2: "El orden correcto para hacerla",
+        parrafo:
+          "Casi todo el mundo empieza por el diseño y deja la estructura para el final. Es al revés: el diseño es la última capa, y cambiarlo es barato. Reordenar una web ya publicada —cambiar las URLs, rehacer la navegación— es lo que cuesta caro y lo que suele romper el posicionamiento que ya tenías.",
+        pasos: [
+          { titulo: "Define qué tiene que hacer la web", texto: "«que la gente me escriba por WhatsApp», «que pidan cotización», «que compren». Una sola acción principal. Sin esto, todo lo demás son opiniones sobre colores." },
+          { titulo: "Registra el dominio a tu nombre", texto: "no al de la agencia ni al del sobrino que te la hace. Es el activo que no puedes perder y el paso donde más gente se equivoca." },
+          { titulo: "Escribe la estructura antes que el diseño", texto: "qué páginas hay, cómo se llaman sus URLs y cómo se enlazan entre sí. Este esqueleto es el que define si Google te entiende." },
+          { titulo: "Redacta pensando en la pregunta del cliente", texto: "cada página responde a una duda concreta. El texto se escribe antes del diseño, no se rellena después." },
+          { titulo: "Diseña sobre el móvil primero", texto: "porque es donde va a entrar la mayoría. Lo que funciona en 375 px funciona en escritorio; al revés casi nunca." },
+          { titulo: "Monta la medición desde el día uno", texto: "analítica y eventos de contacto. Una web sin medir es una web sobre la que solo puedes opinar." },
+          { titulo: "Publica y corrige con datos", texto: "ninguna web nace terminada. Lo que la mejora es ver dónde abandona la gente, no rediseñarla entera cada año." },
+        ],
+      },
+      {
+        h2: "Los cimientos técnicos que Google mira",
+        parrafo:
+          "Hay tres medidas concretas —las Core Web Vitals— que Google evalúa con datos de usuarios reales, no de laboratorio, y sobre el percentil 75: para aprobar, el 75% de las visitas tiene que tener una buena experiencia. Son las mismas tres para cualquier web del mundo, así que sirven como lista de verificación objetiva cuando alguien te entrega un sitio.",
+        tabla: {
+          cabeceras: ["Métrica", "Qué mide", "Umbral bueno"],
+          filas: [
+            ["LCP", "Cuánto tarda en aparecer el elemento más grande de la pantalla", "menos de 2,5 s"],
+            ["INP", "Cuánto tarda la página en responder cuando alguien toca algo", "menos de 200 ms"],
+            ["CLS", "Cuánto se mueve el contenido solo mientras carga", "menos de 0,1"],
+          ],
+          nota: "Se miden sobre usuarios reales (informe CrUX de Chrome) y en el percentil 75, no con una prueba puntual desde tu computadora.",
+        },
+        dato: {
+          cifra: "2,5 s",
+          texto: "es el límite del LCP para que Google considere buena la carga de tu página. Por encima, no solo baja la experiencia: es una señal que compite con la del competidor que sí lo cumple.",
+          fuente: "Google — umbrales de Core Web Vitals",
+        },
+      },
+      {
+        h2: "Los errores que cuestan rehacerla",
+        parrafo:
+          "Estos cuatro no se arreglan con un retoque: obligan a volver a empezar. Merece la pena revisarlos antes de aprobar cualquier propuesta.",
+        bullets: [
+          { titulo: "El dominio no está a tu nombre", texto: "si la relación con quien te la hizo se rompe, pierdes la dirección, el correo y el posicionamiento de golpe. Comprueba a nombre de quién está registrado." },
+          { titulo: "No tienes acceso al hosting ni al gestor", texto: "una web que solo puede tocar otra persona es una web que no controlas. Pide los accesos aunque no vayas a usarlos." },
+          { titulo: "Las URLs cambian sin redirección", texto: "cada dirección antigua que muere sin un redirect 301 se lleva su posicionamiento. Es la forma más común de perder tráfico al estrenar web." },
+          { titulo: "No hay forma de contactar en cada página", texto: "el visitante decide cuando decide, no cuando llega al final. Si tiene que buscar cómo escribirte, no escribe." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Antes de firmar nada",
+          texto: "Pregunta explícitamente a nombre de quién quedará el dominio, quién tendrá los accesos y qué pasa con el sitio si dejan de trabajar juntos. Una respuesta clara a esas tres preguntas vale más que cualquier portafolio.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto tarda en hacerse una página web?",
+        a: "Depende mucho más del contenido que del desarrollo. La parte técnica suele ser la más previsible; lo que alarga los proyectos es esperar textos, fotos y decisiones. Si llegas con el contenido listo, los plazos se acortan a la mitad.",
+      },
+      {
+        q: "¿Qué necesito tener antes de empezar?",
+        a: "El objetivo de la web en una frase, el dominio disponible o registrado, los textos de las páginas principales, fotos reales de tu negocio y los datos de contacto definitivos. Con eso el proyecto avanza sin bloqueos.",
+      },
+      {
+        q: "¿La web sola trae clientes?",
+        a: "Casi nunca por sí sola. Una web es donde convierte el tráfico que llega desde otro sitio: búsqueda, publicidad, redes o recomendación. Sin ninguna de esas fuentes, funciona como una tarjeta de presentación bien hecha, no como un canal de ventas.",
+      },
+      {
+        q: "¿Cómo sé si mi web es rápida?",
+        a: "Mirando sus Core Web Vitals con datos de usuarios reales, no con una prueba desde tu propia computadora —que suele tener mejor conexión que tus clientes—. Los umbrales son LCP por debajo de 2,5 s, INP por debajo de 200 ms y CLS por debajo de 0,1.",
+      },
+      {
+        q: "¿Necesito blog en mi web?",
+        a: "Solo si vas a mantenerlo. Un blog abandonado con tres entradas de hace dos años resta credibilidad. Si no hay quien escriba con regularidad, es mejor invertir ese esfuerzo en que las páginas de servicio respondan bien las dudas reales de tus clientes.",
       },
     ],
     cierre: "En Suggestion diseñamos webs rápidas y pensadas para una sola cosa: convertir visitas en clientes.",
@@ -1241,7 +1312,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "conversion",
     title: "Wix vs Web Profesional: ¿Cuál te Conviene? | Suggestion",
     description:
-      "¿Hacer tu web con Wix o contratar a un profesional? Comparamos costo, velocidad, SEO y conversión para que elijas según tus objetivos. 2026.",
+      "Wix o desarrollo profesional: comparativa honesta de costo, velocidad, SEO, control y qué cuesta migrar después. Cuándo gana cada uno, sin vender humo.",
     h1: "Crear una página web con Wix vs profesional: qué te conviene",
     excerpt:
       "Wix y similares democratizaron las webs: cualquiera arma una. La duda real es si esa web te va a traer clientes o solo a “estar online”. Comparemos honesto.",
@@ -1265,6 +1336,77 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Conversión", texto: "una web pro se diseña para que el visitante actúe; una plantilla, no." },
           { titulo: "Escalabilidad", texto: "si planeas crecer (tienda, integraciones), lo pro evita migrar después." },
         ],
+        tabla: {
+          cabeceras: ["", "Constructor (Wix y similares)", "Desarrollo profesional"],
+          filas: [
+            ["Puesta en marcha", "Horas o días", "Semanas"],
+            ["Estructura del costo", "Suscripción mensual, para siempre", "Inversión inicial mayor, mantenimiento menor"],
+            ["Control de la velocidad", "Limitado: cargas lo que la plataforma decide", "Total: se optimiza lo que haga falta"],
+            ["SEO técnico", "Lo básico resuelto, el detalle no", "Sin techo"],
+            ["Diseño", "Plantilla que usan miles", "A medida de tu marca"],
+            ["Integraciones", "Las del catálogo de la plataforma", "Las que necesite tu operación"],
+            ["Si quieres cambiar", "Migrar es rehacer: el contenido no sale limpio", "El código y el contenido son tuyos"],
+          ],
+        },
+      },
+      {
+        h2: "El costo que casi nadie cuenta: migrar",
+        parrafo:
+          "La comparación de precios suele quedarse en el primer año, y ahí el constructor gana siempre. El cálculo honesto incluye qué pasa cuando el negocio crece y la plataforma se queda corta, porque entonces no hay «actualización»: hay que rehacer. El contenido no se exporta limpio, las URLs cambian y, si no se redirigen una por una, se pierde el posicionamiento que costó años construir. Ese es el momento en el que un ahorro de dos años se paga de golpe.",
+        nota: {
+          tipo: "aviso",
+          titulo: "La pregunta que evita el problema",
+          texto: "Antes de elegir plataforma, pregúntate qué necesitará tu web dentro de dos años: ¿va a vender online, a conectarse con tu sistema de facturación, a tener versiones en otro idioma? Si alguna respuesta es sí, empezar donde vas a terminar sale más barato que migrar.",
+        },
+      },
+      {
+        h2: "Cuándo gana cada uno",
+        parrafo:
+          "No hay una respuesta universal, y desconfía de quien te la dé sin preguntarte nada. Estos son los casos en los que la decisión es bastante clara.",
+        tabla: {
+          cabeceras: ["Tu situación", "Qué conviene"],
+          filas: [
+            ["Estás validando una idea y necesitas estar online ya", "Constructor"],
+            ["Negocio simple: informar, mostrar y que te escriban", "Constructor"],
+            ["Presupuesto muy ajustado y nadie que mantenga la web", "Constructor"],
+            ["La web es tu canal de ventas principal", "Profesional"],
+            ["Compites por búsquedas donde el SEO decide", "Profesional"],
+            ["Necesitas conectarla con CRM, facturación o inventario", "Profesional"],
+            ["Tu marca tiene que verse distinta a las demás", "Profesional"],
+          ],
+        },
+      },
+      {
+        h2: "Cómo decidir sin arrepentirte",
+        parrafo:
+          "Tres preguntas, en este orden. Si las tres se responden con honestidad, la decisión se toma sola y no hace falta comparar funcionalidades.",
+        pasos: [
+          { titulo: "¿Qué papel juega la web en tus ventas?", texto: "si es un folleto que la gente mira después de conocerte, el constructor sobra. Si es donde llega el desconocido que va a comprarte, no." },
+          { titulo: "¿De dónde va a venir el tráfico?", texto: "si viene de tu red de contactos o de redes sociales, la plataforma importa poco. Si tiene que venir de Google, importa mucho." },
+          { titulo: "¿Quién la va a mantener?", texto: "una web profesional abandonada envejece igual que una plantilla. Si no hay nadie que la actualice, elige la opción que puedas tocar tú." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Wix es malo para el SEO?",
+        a: "No es malo, es limitado. Resuelve bien lo básico —títulos, descripciones, sitemap— pero te deja poco margen en lo técnico: control fino de la velocidad, del marcado de datos estructurados o de cómo se sirven las imágenes. Para competir por búsquedas poco disputadas suele bastar; para pelear en un sector saturado, se queda corto.",
+      },
+      {
+        q: "¿Puedo empezar con Wix y migrar después?",
+        a: "Puedes, pero cuenta con que migrar es rehacer. El contenido no se exporta de forma que sirva en otra plataforma y las URLs cambian, así que hay que redirigir una por una para no perder posicionamiento. Es una opción razonable si de verdad estás validando; es cara si ya sabes hacia dónde vas.",
+      },
+      {
+        q: "¿Una web profesional es siempre más rápida?",
+        a: "No por definición: una web a medida mal hecha puede ser lentísima. Lo que da el desarrollo profesional es la posibilidad de optimizarla, que en un constructor simplemente no existe. Pide siempre ver las Core Web Vitals medidas con usuarios reales, no una promesa.",
+      },
+      {
+        q: "¿Qué pasa si dejo de pagar la suscripción del constructor?",
+        a: "La web deja de estar online. Es la diferencia de fondo entre alquilar y tener: con desarrollo propio pagas hosting y dominio, que son mucho más baratos y se pueden mover de proveedor; con un constructor, el sitio vive mientras dure la suscripción.",
+      },
+      {
+        q: "¿Necesito saber programar para mantener una web profesional?",
+        a: "No, si te la entregan con un gestor de contenidos y te enseñan a usarlo. Es una condición razonable que pedir antes de contratar: que puedas cambiar textos, fotos y precios sin depender de nadie.",
       },
     ],
     cierre: "En Suggestion hacemos webs rápidas y pensadas para convertir, no solo para verse bien.",
@@ -1392,7 +1534,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "psicologia-de-mercado",
     title: "Comportamiento del Consumidor Peruano | Suggestion",
     description:
-      "Cómo decide de compra el consumidor peruano, qué lo motiva y cómo adaptar tu marketing a su comportamiento real. Claves de segmentación local.",
+      "Cómo decide el consumidor peruano: qué lo frena, qué lo motiva y cómo adaptar tu mensaje. Confianza, WhatsApp y aversión al riesgo, con datos del mercado.",
     h1: "Comportamiento del consumidor peruano: cómo decide tu cliente",
     excerpt:
       "Vender en Perú con un manual gringo no funciona. El consumidor peruano tiene motivaciones, desconfianzas y aspiraciones propias. Entenderlas es la diferencia entre una campaña que conecta y una que se ignora.",
@@ -1416,6 +1558,72 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Cómo aplicarlo a tu marketing",
         parrafo:
           "Define a quién le vendes de verdad, qué teme y qué aspira, y construye el mensaje desde ahí. No le hables a “todos”: háblale a tu cliente real, en su idioma.",
+      },
+      {
+        h2: "El terreno real: un país conectado",
+        parrafo:
+          "Conviene empezar por descartar una idea vieja: que el cliente peruano «todavía no está online». Lo está, de forma masiva y sobre todo desde el móvil. Eso cambia la conversación: la ventaja ya no está en llegar antes que nadie a internet, sino en hacerlo mejor que el competidor que también está ahí. Y también significa que un negocio sin presencia digital ordenada no es invisible: es sospechoso.",
+        dato: {
+          cifra: "82%",
+          texto: "de la población peruana usa internet —28,4 millones de personas—, y el 99,5% de quienes usan internet está en al menos una red social. TikTok ya es la segunda plataforma del país.",
+          fuente: "Digital 2026 Report — Perú",
+        },
+      },
+      {
+        h2: "La desconfianza es el freno principal, no el precio",
+        parrafo:
+          "Cuando una venta no se cierra, el vendedor suele concluir que estaba caro. En la mayoría de los casos lo que falló fue el riesgo percibido: el cliente no estaba seguro de que fueras a cumplir. Es una desconfianza razonable en un mercado donde mucha gente ha pagado por adelantado algo que no llegó. La consecuencia práctica es que reducir el riesgo suele mover más que bajar el precio, y cuesta menos.",
+        tabla: {
+          cabeceras: ["Lo que el cliente teme", "Lo que lo desactiva"],
+          filas: [
+            ["Que no exista el negocio de verdad", "Dirección, fotos reales del local, RUC visible, perfil de empresa verificado"],
+            ["Que paguen y no llegue", "Pago contra entrega, adelanto parcial, comprobante formal"],
+            ["Que no le respondan después", "Tiempo de respuesta corto y un canal donde ya te escribió antes"],
+            ["Que le vendan humo", "Casos con cifras, reseñas recientes, hablar también de lo que no haces"],
+            ["Que sea peor de lo que parece", "Fotos sin retoque, video del producto real, política de cambios clara"],
+          ],
+        },
+      },
+      {
+        h2: "WhatsApp no es un canal más: es el canal",
+        parrafo:
+          "En Perú, la conversación comercial ocurre en WhatsApp. Un formulario que promete respuesta «en 24 a 48 horas» compite contra un chat que responde en minutos, y pierde. Esto tiene una consecuencia incómoda para muchas webs: el botón más importante no es «enviar formulario», es el que abre una conversación. Y la contraparte es que si abres ese canal tienes que atenderlo: un WhatsApp que no responde hace más daño que no tenerlo.",
+        nota: {
+          titulo: "Un detalle que cambia la tasa de respuesta",
+          texto: "Una llamada de un número desconocido a menudo no se contesta; un mensaje escrito, casi siempre se lee. Si tu proceso comercial arranca llamando, prueba a arrancar escribiendo y llamar después de la primera respuesta.",
+        },
+      },
+      {
+        h2: "Segmentar por momento, no solo por perfil",
+        parrafo:
+          "Edad, distrito y nivel socioeconómico describen a la persona, pero no explican por qué compra hoy y no el mes pasado. Lo que suele explicarlo es el momento: un cambio de trabajo, un hijo que entra al colegio, una campaña escolar, una fiesta patronal, el aguinaldo. Construir el calendario de esos momentos para tu categoría rinde más que afinar el rango de edad, y es información que sale de tus propias ventas del año pasado.",
+        bullets: [
+          { titulo: "Momentos del calendario", texto: "campaña escolar, Fiestas Patrias, Navidad, vendimia. Marcan picos previsibles que se pueden preparar con semanas de anticipación." },
+          { titulo: "Momentos de la vida", texto: "mudanza, negocio nuevo, ascenso, boda. No se pueden predecir uno a uno, pero sí estar presente cuando alguien los busca." },
+          { titulo: "Momentos de urgencia", texto: "algo se rompió, hay que entregar mañana. Aquí gana quien responde primero, no quien tiene mejor precio." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿En qué se diferencia el consumidor peruano de otros?",
+        a: "Más que en gustos, en el peso que le da a la confianza y en el canal donde conversa. El riesgo percibido —que no cumplan, que no respondan— pesa mucho en la decisión, y la conversación comercial ocurre por mensajería y no por correo o formulario. Una estrategia copiada de otro mercado suele fallar justamente en esos dos puntos.",
+      },
+      {
+        q: "¿Es cierto que en Perú todo se decide por precio?",
+        a: "Es cierto cuando el cliente no percibe ninguna otra diferencia. Cuando dos opciones parecen iguales, el precio es el único criterio disponible. La salida no es bajarlo, es dar razones visibles para elegirte: prueba social, garantías, velocidad de respuesta o una especialización clara.",
+      },
+      {
+        q: "¿Cómo genero confianza si mi negocio es nuevo?",
+        a: "Con señales verificables en vez de adjetivos: fotos reales de tu local y tu equipo, datos formales de la empresa, un perfil de empresa verificado, y respuestas rápidas y concretas. Los primeros clientes se consiguen quitando motivos para desconfiar, no añadiendo promesas.",
+      },
+      {
+        q: "¿Sirve segmentar solo por nivel socioeconómico?",
+        a: "Sirve para dimensionar el mercado, no para escribir el mensaje. Dos personas del mismo nivel compran cosas distintas según su momento y su actitud. Cruzar el perfil con el motivo de compra da campañas mucho más precisas.",
+      },
+      {
+        q: "¿Cada cuánto cambia este comportamiento?",
+        a: "Los frenos de fondo —desconfianza, aversión al riesgo, preferencia por la conversación directa— son bastante estables. Lo que cambia rápido son las plataformas donde ocurre: la migración de atención hacia el video corto de los últimos años es el ejemplo más claro.",
       },
     ],
     cierre: "En Suggestion construimos estrategias con el consumidor peruano en el centro, no plantillas importadas.",
@@ -2529,7 +2737,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "sectores",
     title: "Cómo Vender Pisco y Vino por Internet | Suggestion",
     description:
-      "Cómo vender pisco y vino por internet desde tu bodega: tienda online, fotografía que da deseo, campañas por ocasión y enoturismo. Guía para bodegas. 2026.",
+      "Cómo vender pisco y vino por internet desde tu bodega de Ica: marca, tienda, campañas por ocasión y enoturismo, con las cifras reales del sector. 2026.",
     h1: "Cómo vender pisco y vino por internet (sin perder la tradición)",
     excerpt:
       "Tu pisco gana medallas pero se vende casi solo en la puerta de la bodega. Internet puede llevarlo a todo el Perú —si lo haces con marca y estrategia, no improvisando con un par de fotos. Esto es lo que funciona.",
@@ -2554,6 +2762,67 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "En Ica, la visita a la bodega es un producto en sí: catas, recorridos y experiencias que dejan margen alto y fidelizan. Promociónalas con contenido y pauta, y monta un sistema de reservas para no depender solo de la temporada. La web vende la botella; la experiencia crea al cliente que vuelve.",
       },
+      {
+        h2: "Con quién compites de verdad",
+        parrafo:
+          "Antes de decidir el mensaje conviene mirar el tamaño del vecindario. La denominación de origen no es un club pequeño: hay cientos de productores autorizados, y casi la mitad están en Ica. Eso significa que «pisco de Ica con DO» no te diferencia de nada —lo dice también el de al lado—. Lo que diferencia es todo lo que viene después: el valle concreto, la uva, el método, la familia, el premio verificable.",
+        dato: {
+          cifra: "235",
+          texto: "productores de Ica autorizados a usar la denominación de origen Pisco, de 533 en todo el país: casi la mitad. La región concentra además el 57% de los despachos de exportación.",
+          fuente: "Registro de productores autorizados de la DO Pisco (julio de 2025)",
+        },
+      },
+      {
+        h2: "La tendencia que decide tu estrategia",
+        parrafo:
+          "Hay dos curvas que van en direcciones opuestas y que casi nadie cruza al planificar: las exportaciones de pisco vienen creciendo, mientras el consumo interno lleva tiempo bajando. Para una bodega esto no es un dato de prensa, es una decisión estratégica. Si tu apuesta es el mercado nacional, estás peleando por una porción que se encoge y necesitas quitarle clientes a alguien: ahí manda la marca. Si tu apuesta es afuera, el terreno crece pero el juego es otro —etiqueta en inglés, certificaciones, capacidad de despacho y un comprador que evalúa proveedores, no una botella.",
+        tabla: {
+          cabeceras: ["", "Vender en Perú", "Vender al exterior"],
+          filas: [
+            ["Cómo va el mercado", "El consumo interno viene cayendo", "Las exportaciones vienen creciendo"],
+            ["A quién le hablas", "Al consumidor final", "A un importador o distribuidor"],
+            ["Qué decide la compra", "Marca, ocasión y recomendación", "Capacidad, consistencia y certificaciones"],
+            ["Dónde ocurre", "Tienda online, redes, la propia bodega", "Ferias, rondas de negocio y tu web en inglés"],
+            ["Qué necesitas primero", "Marca y contenido que den deseo", "Ficha técnica, volumen sostenido y respaldo formal"],
+          ],
+        },
+      },
+      {
+        h2: "Las tres ocasiones que concentran la venta",
+        parrafo:
+          "El pisco y el vino no se compran de forma pareja durante el año: se concentran en fechas. Preparar esas fechas con antelación —producción, fotografía, campaña y stock— rinde mucho más que publicar de forma constante sin picos.",
+        pasos: [
+          { titulo: "Fiestas Patrias y Día del Pisco Sour", texto: "el momento de mayor intención del año para el consumidor nacional. La campaña se prepara semanas antes, no la semana de." },
+          { titulo: "Regalo corporativo de fin de año", texto: "es venta B2B con ticket alto y decisión temprana: las empresas cierran proveedores mucho antes de diciembre. Necesita catálogo, opciones de personalizado y plazos claros." },
+          { titulo: "Vendimia y temporada de visitas", texto: "aquí el producto no es la botella sino la experiencia. Reservas abiertas y contenido del viñedo con antelación." },
+        ],
+        nota: {
+          titulo: "Antes de abrir la tienda online",
+          texto: "Resuelve el envío de bebidas alcohólicas —embalaje, transportista y a qué provincias llegas de verdad— y déjalo escrito en la web. Es la primera duda de quien compra desde fuera de Ica, y no responderla en la página del producto cuesta más ventas que cualquier detalle de diseño.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Se puede vender pisco por internet en Perú?",
+        a: "Sí, y las bodegas lo hacen. Lo que hay que resolver bien es la logística —embalaje para vidrio, transportista que acepte alcohol y cobertura real por provincia— y la verificación de mayoría de edad en el proceso de compra. Conviene dejar todo eso explícito en la web antes de invertir en atraer tráfico.",
+      },
+      {
+        q: "¿Cómo diferencio mi pisco si todos son de Ica y con DO?",
+        a: "Precisamente porque la denominación la comparten cientos de productores, no puede ser tu argumento principal. Lo que diferencia es lo específico: el valle, la variedad de uva, el método, la historia de la familia, los premios verificables y cómo se ve tu bodega por dentro.",
+      },
+      {
+        q: "¿Conviene vender en marketplaces o en tienda propia?",
+        a: "Los marketplaces dan volumen y visibilidad inmediata, pero se quedan comisión y no te dejan construir marca ni base de clientes. La tienda propia cuesta más de arrancar y es donde acumulas valor. Muchas bodegas empiezan en marketplace y van moviendo al comprador recurrente a su propia tienda.",
+      },
+      {
+        q: "¿Vale la pena apostar por la exportación?",
+        a: "Depende de tu capacidad, no de tu voluntad. El mercado externo crece, pero el importador no compra una botella: compra un proveedor que pueda sostener volumen y consistencia campaña tras campaña. Si eso todavía no es tu caso, rinde más consolidar la marca en el mercado nacional y el enoturismo.",
+      },
+      {
+        q: "¿Qué contenido funciona mejor para una bodega?",
+        a: "El que muestra lo que no se puede copiar: el viñedo, la destilación, la cata, las manos que trabajan. En una categoría donde el producto se juzga por confianza y tradición, el detrás de escena vale más que cualquier foto de estudio de la botella.",
+      },
     ],
     cierre: "En Suggestion unimos branding premium, e-commerce y enoturismo para que tu bodega venda dentro y fuera de Ica.",
     moneyPage: { label: "Hagamos crecer tu bodega", href: "/marketing-pisco-vino" },
@@ -2564,7 +2833,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "sectores",
     title: "Marketing para Agroexportadoras: Abrir Mercados | Suggestion",
     description:
-      "Cómo una agroexportadora abre mercados con marketing: web B2B en inglés, presencia en ferias y contenido que genera confianza en el importador. 2026.",
+      "Marketing B2B para agroexportadoras de Ica: web en inglés, certificaciones a la vista, material de feria y seguimiento. Con las cifras reales de la región.",
     h1: "Marketing para agroexportadoras: cómo abrir mercados internacionales",
     excerpt:
       "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que sí mueve la aguja.",
@@ -2588,6 +2857,75 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Ica tiene el producto; falta contar la historia",
         parrafo:
           "Palta, uva, espárragos: la región exporta de los mejores del mundo, pero muchas empresas compiten solo por precio. Una marca que comunica su calidad, su gente y su responsabilidad se diferencia y negocia mejor. El marketing no reemplaza al producto; lo posiciona para que valga lo que cuesta.",
+      },
+      {
+        h2: "El dato que define tu marketing",
+        parrafo:
+          "Hay una cifra que ordena todas las decisiones de comunicación de una agroexportadora iqueña, y es la proporción de a dónde va la producción. Cuando prácticamente todo se va afuera, tu público no es el consumidor que compra en el mercado: es un comprador profesional al otro lado del mundo que evalúa proveedores. Eso descarta de golpe media estrategia habitual —contenido de recetas, promociones, campañas de temporada local— y pone el foco en otra cosa: credibilidad verificable.",
+        dato: {
+          cifra: "92%",
+          texto: "de la producción agrícola de Ica se destina al mercado externo y solo el 8% al interno. Tu marketing no le habla a un consumidor: le habla a un importador.",
+          fuente: "Reporte regional de Ica",
+        },
+      },
+      {
+        h2: "Dónde está Ica de verdad",
+        parrafo:
+          "Conviene tener el mapa claro, aunque no siempre halague. Ica es la segunda región agroexportadora del país —por detrás de La Libertad— y concentra alrededor de la quinta parte de las exportaciones agrícolas peruanas, con más de setecientas mil toneladas colocadas en unos setenta y cinco mercados. Ser el segundo en un país que lidera varias categorías a nivel mundial sigue siendo una posición muy fuerte, y es un argumento mucho más creíble frente a un importador que cualquier superlativo sin respaldo.",
+        tabla: {
+          cabeceras: ["Producto", "Peso en el valor agroexportado de Ica"],
+          filas: [
+            ["Uva", "32,8%"],
+            ["Palta", "12,5%"],
+            ["Arándano", "10,2%"],
+            ["Espárrago", "5,9%"],
+          ],
+          nota: "Referencia de 2024. La concentración en uva explica por qué muchas empresas de la región compiten en la misma ventana y con el mismo argumento.",
+        },
+      },
+      {
+        h2: "Qué mira un importador antes de responderte",
+        parrafo:
+          "El comprador internacional hace una criba antes de contestar un solo correo, y la hace con lo que encuentra online. No busca inspiración: busca motivos para descartarte rápido y quedarse con una lista corta. Esto es lo que revisa, más o menos en este orden.",
+        pasos: [
+          { titulo: "Que la empresa exista y sea seria", texto: "web propia con dominio corporativo, correos que no sean gratuitos, datos formales y presencia coherente. Un correo de Gmail y un Facebook desactualizado bastan para quedar fuera." },
+          { titulo: "Certificaciones vigentes y a la vista", texto: "Global G.A.P., HACCP, BRC, orgánico, comercio justo. No en un PDF que hay que pedir: visibles en la web, con su fecha." },
+          { titulo: "Capacidad real y campaña", texto: "hectáreas, variedades, volumen por semana y ventana de cosecha. Un importador planifica su temporada: si no puede estimar si le sirves, no pregunta." },
+          { titulo: "Trazabilidad y proceso", texto: "cómo se cosecha, se procesa y se despacha. Fotos y video del fundo y del packing hacen aquí más trabajo que cualquier texto." },
+          { titulo: "Con quién has trabajado antes", texto: "mercados a los que ya exportas y tipo de cliente. Reduce el riesgo percibido más que ningún adjetivo." },
+        ],
+      },
+      {
+        h2: "Por qué el seguimiento es la mitad del trabajo",
+        parrafo:
+          "Una oportunidad de exportación no se cierra en la feria: se abre ahí. Entre el primer contacto y la primera orden pueden pasar meses y varias campañas, con muestras, auditorías y negociaciones de por medio. La mayoría de las oportunidades no se pierden por precio ni por calidad, se pierden porque nadie volvió a escribir en el momento adecuado. Un registro ordenado de cada contacto —qué pidió, en qué quedó, cuándo toca retomar— es una ventaja competitiva barata en un sector donde casi nadie lo hace bien.",
+        nota: {
+          tipo: "aviso",
+          titulo: "El error más caro tras una feria",
+          texto: "Volver con tarjetas y no escribir en las 48 horas siguientes. El importador vio decenas de proveedores esa semana; pasado ese plazo ya no recuerda cuál eras. El correo de seguimiento se prepara ANTES de viajar, no al volver.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Necesita una agroexportadora estar en redes sociales?",
+        a: "Menos de lo que se cree, y con otro propósito. El importador no decide en Instagram, pero sí comprueba que la empresa exista y se vea activa. Para este sector rinde más una web sólida en inglés con certificaciones y capacidad a la vista, y usar LinkedIn para el contacto profesional, que publicar a diario en redes de consumo.",
+      },
+      {
+        q: "¿La web tiene que estar en inglés?",
+        a: "Sí, si el objetivo es exportar. Y no una traducción automática: la ficha técnica, las certificaciones y las condiciones comerciales tienen vocabulario propio, y un error ahí resta credibilidad justo donde más se juzga. Lo habitual es mantener las dos versiones, español para el entorno local e inglés para el comprador.",
+      },
+      {
+        q: "¿Qué material hace falta para una feria internacional?",
+        a: "Catálogo con fichas técnicas por producto, presentación institucional breve, y fotografía y video del fundo y el packing. Y algo que suele faltar: la secuencia de seguimiento escrita antes de viajar, para poder responder en las 48 horas siguientes a cada contacto.",
+      },
+      {
+        q: "¿Cómo compito si vendo lo mismo que la empresa de al lado?",
+        a: "Diferenciándote en lo que no es el fruto: consistencia campaña tras campaña, trazabilidad demostrable, prácticas laborales y ambientales, y capacidad de respuesta. Cuando el producto es comparable, el importador elige al proveedor que le da menos problemas, no al que tiene la mejor foto.",
+      },
+      {
+        q: "¿Cuánto tarda en dar resultado el marketing B2B agro?",
+        a: "Se mide en campañas, no en semanas. El ciclo va de la feria a la muestra, de la muestra a la auditoría y de ahí a la primera orden, y puede ocupar más de una temporada. Por eso el indicador útil no son los leads del mes, sino cuántas oportunidades avanzan de etapa.",
       },
     ],
     cierre: "En Suggestion construimos tu presencia B2B —web, contenido y marca— para abrir mercados desde Ica al mundo.",
