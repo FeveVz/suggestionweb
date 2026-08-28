@@ -32,6 +32,19 @@ export default function CountUp({ to, duration = 1600, locale = "es-PE" }: { to:
       return;
     }
     setVal(0);
+
+    // Red de seguridad: si el observador no llega a dispararse, la cifra se
+    // queda en 0 para siempre —y "0 marcas confían en nosotros" es peor que no
+    // animar nada—. Se vio de verdad en un navegador cuyo panel estaba oculto:
+    // sin composición, IntersectionObserver no reporta intersecciones nunca.
+    // Pasados 3 s, la cifra salta a su valor final pase lo que pase.
+    const red = setTimeout(() => {
+      if (!started.current) {
+        started.current = true;
+        setVal(target);
+      }
+    }, 3000);
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -53,7 +66,10 @@ export default function CountUp({ to, duration = 1600, locale = "es-PE" }: { to:
       { threshold: 0.4 }
     );
     io.observe(el);
-    return () => io.disconnect();
+    return () => {
+      clearTimeout(red);
+      io.disconnect();
+    };
   }, [target, duration]);
 
   if (target == null) return <span>{to}</span>;
