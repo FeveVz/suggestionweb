@@ -242,21 +242,21 @@ export const PRECIOS: Record<string, PlanPrecio[]> = {
   "publicidad-movil": [
     {
       nombre: "Starter",
-      precio: "S/70",
-      periodo: "por día",
+      precio: "S/120",
+      periodo: "por 4 horas",
       incluye: ["Contrato mínimo: 15 días", "1 bicivalla luminosa", "Activación de 4 horas diarias", "Recorrido en zonas estratégicas", "Visibilidad diurna y nocturna"],
     },
     {
       nombre: "Business",
-      precio: "S/120",
-      periodo: "por día",
+      precio: "S/190",
+      periodo: "por 4 horas",
       popular: true,
       incluye: ["Contrato mínimo: 15 días", "1 bicivalla luminosa", "1 bicipluma", "Activación de 4 horas diarias", "Mayor cobertura en campo", "Refuerzo de impacto visual"],
     },
     {
       nombre: "Enterprise",
-      precio: "S/150",
-      periodo: "por día",
+      precio: "S/250",
+      periodo: "por 4 horas",
       incluye: ["Contrato mínimo: 15 días", "1 bicivalla luminosa", "2 biciplumas", "Activación de 4 horas diarias", "Alta visibilidad", "Mayor recordación de marca"],
     },
   ],
