@@ -3,6 +3,8 @@ import { Search, Target, Zap } from "lucide-react";
 import { Label } from "@/components/brand/parts";
 import AuditForm from "@/components/AuditForm";
 import Faq from "@/components/Faq";
+import Secciones from "@/components/Secciones";
+import type { Seccion } from "@/content/types";
 import { buildMetadata } from "@/lib/seo";
 
 const FAQ = [
@@ -18,6 +20,35 @@ export const metadata: Metadata = buildMetadata({
   path: "/auditoria-gratis",
   ogImage: "/assets/og/auditoria-gratis.png",
 });
+
+/**
+ * Va DESPUES del formulario a proposito: en una pagina de conversion, el
+ * contenido que empuja el formulario hacia abajo cuesta leads. Esto es para
+ * quien baja porque duda, no para quien ya decidio.
+ */
+const SECCIONES: Seccion[] = [
+  {
+    h2: "Qué miramos, en concreto",
+    parrafo:
+      "El diagnóstico no es una revisión superficial de tu Instagram. Seguimos el recorrido completo de un cliente tuyo, desde que te descubre hasta que paga, buscando dónde se pierde. Casi siempre hay más ventas escondidas en las fugas que en un canal nuevo.",
+    pasos: [
+      { titulo: "Cómo te encuentran hoy", texto: "qué aparece cuando alguien busca lo que vendes en tu zona, y si tu ficha de empresa está completa. Es lo más barato de arreglar y lo que más veces está descuidado." },
+      { titulo: "Qué dice tu publicidad visible", texto: "a quién le habla, qué promete y si eso encaja con lo que el cliente busca. Lo revisamos con lo público: no necesitamos acceso a tus cuentas." },
+      { titulo: "Qué pasa cuando llegan a tu web", texto: "si se entiende qué haces en cinco segundos, si es rápida en el móvil y si hay una forma clara de escribirte sin buscarla." },
+      { titulo: "Qué ocurre después del contacto", texto: "cuánto tardas en responder y por qué canal. Es el tramo donde más se pierde y el que menos se mira." },
+      { titulo: "Qué estás midiendo", texto: "si sabes cuánto te cuesta un cliente hoy. Si la respuesta es que no, ese es el primer hallazgo." },
+    ],
+  },
+  {
+    h2: "Por qué es gratis",
+    parrafo:
+      "Porque es la forma más honesta que conocemos de enseñar cómo trabajamos. Una propuesta comercial dice lo que prometemos; un diagnóstico dice lo que vemos, y eso se puede juzgar sin haber pagado nada. Una parte de quienes lo piden termina trabajando con nosotros y otra parte no, y las dos cosas nos parecen bien: aplicar las tres mejoras por tu cuenta también es un resultado válido.",
+    nota: {
+      titulo: "Lo que NO es",
+      texto: "No es una propuesta comercial disfrazada ni una llamada de venta de una hora. Son veinte minutos con tres cosas concretas que puedes aplicar con nosotros o sin nosotros. Y para el diagnóstico inicial no pedimos acceso a tus cuentas publicitarias: trabajamos con lo que es público y con lo que nos cuentes.",
+    },
+  },
+];
 
 const ENTREGABLES = [
   { Icon: Search, t: "Leemos tu funnel completo", d: "Revisamos tu pauta, tu web/redes y tu seguimiento: dónde se está escapando la venta." },
@@ -71,6 +102,13 @@ export default function AuditoriaGratis() {
             Lo que sueles preguntarte.
           </h2>
           <Faq items={FAQ} />
+        </div>
+      </section>
+
+      {/* DETALLE PARA QUIEN DUDA — después del formulario a propósito */}
+      <section style={{ background: "var(--white)" }}>
+        <div style={{ maxWidth: 860, margin: "0 auto", padding: "var(--section-y-tight) var(--gutter)" }}>
+          <Secciones secciones={SECCIONES} />
         </div>
       </section>
     </>

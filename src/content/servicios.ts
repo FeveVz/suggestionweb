@@ -1596,6 +1596,50 @@ const SERVICIOS_LIST: Servicio[] = [
         parrafo:
           "Tu punto de marca móvil para ferias, centros comerciales y activaciones.",
       },
+      {
+        h2: "Cuántas palabras caben de verdad",
+        parrafo:
+          "Es la regla de oficio que más presupuesto salva en publicidad exterior, y la que más se ignora. Quien pasa en auto por delante de un panel dispone de un par de segundos, y la mitad de ellos mirando la carretera. En ese tiempo no se lee un párrafo: se reconoce una marca y se retiene una idea. Por eso las estructuras que funcionan tienen pocas palabras, muy grandes, con contraste alto y una sola cosa que hacer. Un panel con teléfono, dirección, web, redes y tres servicios no comunica cinco cosas: no comunica ninguna.",
+        bullets: [
+          { titulo: "Una idea por pieza", texto: "si hay que elegir entre el qué y el dónde, gana el que responda la duda del que pasa." },
+          { titulo: "Legible a la distancia real", texto: "no en la pantalla del diseñador. La prueba es alejarse del monitor hasta que el texto sea del tamaño que tendrá en la calle." },
+          { titulo: "Contraste antes que color de marca", texto: "si el mensaje no se lee, el color corporativo no sirve de nada." },
+          { titulo: "Marca visible sin leerla", texto: "el logo tiene que reconocerse de un vistazo, porque muchas veces es lo único que quedará." },
+        ],
+      },
+      {
+        h2: "Cómo se elige la ubicación",
+        parrafo:
+          "El mismo panel rinde muy distinto según dónde esté, y no basta con que pase mucha gente. Lo que decide es cuánta atención tiene disponible quien pasa y desde qué ángulo lo ve.",
+        pasos: [
+          { titulo: "Tránsito, pero del tuyo", texto: "una avenida muy transitada no sirve si por ahí no pasa tu cliente. Vale más un punto con menos flujo y mejor perfil." },
+          { titulo: "Velocidad de paso", texto: "en una vía rápida el mensaje tiene que ser más corto y más grande que en una calle comercial donde la gente camina." },
+          { titulo: "Ángulo y distancia de lectura", texto: "un panel perpendicular a la marcha se ve más tiempo que uno de frente, y eso cambia cuánto texto admite." },
+          { titulo: "Iluminación", texto: "si tu público pasa de noche y la estructura no ilumina, media campaña no existe." },
+          { titulo: "Qué hay alrededor", texto: "una estructura rodeada de otras cinco compite por la mirada; a veces una ubicación más discreta rinde más." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Antes de instalar en vía pública",
+          texto: "La publicidad exterior suele requerir autorización municipal, y las condiciones cambian de un distrito a otro: medidas permitidas, tipo de soporte, distancia a cruces o a otras estructuras. Conviene verificarlo con la municipalidad correspondiente antes de producir, no después. Te acompañamos en ese trámite, pero la normativa aplicable la marca cada municipio.",
+        },
+      },
+      {
+        h2: "Qué estructura conviene según lo que buscas",
+        parrafo:
+          "«Estructura publicitaria» agrupa piezas con propósitos distintos. Elegir por precio sin mirar la función es lo que hace que una inversión buena parezca mala.",
+        tabla: {
+          cabeceras: ["Pieza", "Para qué sirve", "Dónde funciona"],
+          filas: [
+            ["Panel de gran formato", "Que te conozcan y te recuerden", "Avenidas y vías de alto tránsito"],
+            ["Panel LED", "Mensajes que cambian o campañas por horario", "Ubicaciones premium y zonas nocturnas"],
+            ["Tótem", "Ordenar y señalar en piso", "Ferias, exteriores de local, estacionamientos"],
+            ["Letrero o aviso", "Que encuentren tu negocio", "La fachada: es tu señal permanente"],
+            ["Módulo", "Vender o captar datos en el sitio", "Centros comerciales, ferias, activaciones"],
+          ],
+          nota: "El letrero de fachada suele ser la estructura más rentable de todas y la que más se descuida: trabaja todos los días para quien ya está delante de tu puerta.",
+        },
+      },
     ],
     incluye: [
       { titulo: "Paneles y espectaculares", texto: "Gran formato en avenidas y vías de alto tránsito." },
@@ -1634,6 +1678,26 @@ const SERVICIOS_LIST: Servicio[] = [
         q: "¿Incluye el diseño?",
         a: "Podemos diseñar la creatividad o imprimir tu archivo; cotizamos ambas opciones.",
       },
+      {
+        q: "¿Necesito permiso municipal para un panel?",
+        a: "En vía pública, normalmente sí, y las condiciones cambian de un distrito a otro: medidas, tipo de soporte y distancias mínimas. Lo verificamos contigo antes de producir y te acompañamos en el trámite, pero la normativa la marca cada municipalidad.",
+      },
+      {
+        q: "¿Cuántas palabras debe llevar un panel?",
+        a: "Las menos posibles. Quien pasa en auto dispone de un par de segundos y la mitad mirando la vía: en ese tiempo se reconoce una marca y se retiene una idea, no una lista. Si dudas entre dos mensajes, quita uno.",
+      },
+      {
+        q: "¿Qué diferencia hay entre un panel y un letrero?",
+        a: "El propósito. El panel busca que te conozcan y trabaja para gente que va de paso; el letrero identifica tu local y trabaja para quien ya está delante. El letrero de fachada suele ser la estructura más rentable y la que más se descuida.",
+      },
+      {
+        q: "¿Los paneles LED valen la pena?",
+        a: "Cuando tienes varios mensajes o quieres cambiar por horario o temporada, sí: es la única pieza que se actualiza sin producir material nuevo. Si tu mensaje es uno solo y estable, un panel impreso bien ubicado rinde igual por bastante menos.",
+      },
+      {
+        q: "¿Fabrican e instalan ustedes?",
+        a: "Sí: diseño, fabricación e instalación salen del mismo sitio. Eso evita el problema habitual de que la pieza llegue con medidas que no encajan en la estructura o en el espacio autorizado.",
+      },
     ],
     enlazaA: ["material-pop", "imprenta", "publicidad-movil"],
     cierre: { h2: "Destaca con tu estructura", cta: "Pide tu cotización" },
@@ -1667,6 +1731,52 @@ const SERVICIOS_LIST: Servicio[] = [
             h3: "Exhibidores y góndolas",
             texto: "Espacios de marca que aumentan la visibilidad y la rotación.",
           },
+        ],
+      },
+      {
+        h2: "Qué significa POP",
+        parrafo:
+          "POP viene de «point of purchase», punto de compra. Se llama así a todo el material que trabaja dentro de la tienda, justo donde el cliente decide: exhibidores, displays, cartelería, señalética, cabeceras de góndola. Es la única publicidad que aparece en el momento exacto de la decisión, y por eso se juzga distinto que un anuncio: no tiene que gustar, tiene que conseguir que una mano se mueva hacia tu producto y no hacia el de al lado.",
+        nota: {
+          titulo: "La diferencia con el resto de tu publicidad",
+          texto: "Un anuncio compite por atención; una pieza POP compite por espacio. La tienda tiene un metraje limitado y el encargado decide qué entra. Por eso una pieza bien pensada no es solo la que más se ve: es también la que al local le resulta cómoda de montar, no estorba el paso y no se cae a la semana.",
+        },
+      },
+      {
+        h2: "El material decide cuánto dura y cuánto cuesta",
+        parrafo:
+          "Es la pregunta que más ordena un presupuesto, y casi siempre se responde al revés: se elige el material por precio y luego se descubre que no aguanta la campaña. La lógica correcta es empezar por cuánto tiempo tiene que estar en pie y en qué condiciones va a vivir la pieza.",
+        tabla: {
+          cabeceras: ["Material", "Cuánto aguanta", "Cuándo conviene"],
+          filas: [
+            ["Cartón corrugado", "Semanas", "Campañas cortas, lanzamientos, alto volumen de piezas"],
+            ["PVC y foam", "Meses", "Cartelería y señalética de interior que rota poco"],
+            ["Acrílico", "Años", "Piezas de marca permanentes y de buena percepción"],
+            ["Metal y madera", "Años", "Mobiliario, islas y espacios de marca dedicados"],
+          ],
+          nota: "En zonas con humedad o exposición al sol la vida útil baja; conviene decirlo antes de producir, no después.",
+        },
+      },
+      {
+        h2: "Cómo saber qué pieza necesitas",
+        parrafo:
+          "No hay una pieza mejor que otra: hay una que encaja con lo que quieres conseguir y con el espacio que te da la tienda. Estas cuatro preguntas suelen bastar para cerrar la decisión en una conversación.",
+        pasos: [
+          { titulo: "¿Dónde va a estar?", texto: "mostrador, pasillo, cabecera de góndola o vitrina. El sitio manda sobre el tamaño y el peso; una pieza que no cabe no se instala, por buena que sea." },
+          { titulo: "¿Cuánto tiempo?", texto: "una promoción de dos semanas y una presencia permanente no piden el mismo material ni el mismo presupuesto." },
+          { titulo: "¿Quién la monta?", texto: "si la arma el personal de la tienda, tiene que montarse sin herramientas y en minutos, o acabará en el almacén." },
+          { titulo: "¿Cuántos puntos?", texto: "el costo por unidad cambia mucho con la cantidad, y también la técnica de producción que conviene." },
+        ],
+      },
+      {
+        h2: "Los errores que dejan la pieza en el almacén",
+        parrafo:
+          "Producir material POP es barato comparado con lo que cuesta que no se use. Estos cuatro fallos son los que más veces hemos visto, y los cuatro se evitan antes de imprimir.",
+        bullets: [
+          { titulo: "No medir el espacio real", texto: "el plano del local y lo que hay de verdad rara vez coinciden. Una foto con una cinta métrica evita rehacer la pieza entera." },
+          { titulo: "Demasiado texto", texto: "el cliente pasa por delante en segundos. Si hay que detenerse a leer, no se lee." },
+          { titulo: "Olvidar el permiso de la tienda", texto: "cadenas y supermercados tienen sus propias reglas de formato, materiales y fechas. Consultarlas primero ahorra una producción completa." },
+          { titulo: "Producir sin prueba", texto: "una unidad de muestra colocada en el punto real revela en cinco minutos lo que un render no muestra." },
         ],
       },
     ],
@@ -1705,6 +1815,26 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Cuánto tiempo toma producir?",
         a: "Displays de cartón: 2-3 semanas. Estructuras complejas: 4-6 semanas.",
+      },
+      {
+        q: "¿Qué significa POP en publicidad?",
+        a: "Viene de «point of purchase», punto de compra. Agrupa todo el material que comunica dentro de la tienda —exhibidores, displays, cartelería, señalética— y su rasgo distintivo es que aparece justo en el momento en que el cliente decide qué llevarse.",
+      },
+      {
+        q: "¿Hay una cantidad mínima?",
+        a: "No, producimos desde una unidad. Lo que cambia con la cantidad es la técnica que conviene y, por tanto, el costo por pieza: para pocos puntos de venta suele salir mejor una producción distinta que para un despliegue en decenas de tiendas.",
+      },
+      {
+        q: "¿Diseñan la pieza o solo la producen?",
+        a: "Las dos cosas. Si ya tienes el diseño lo producimos; si no, lo diseñamos partiendo del espacio real y de lo que la tienda permite, que suele ser la restricción que más condiciona el resultado.",
+      },
+      {
+        q: "¿Instalan en las tiendas?",
+        a: "Sí, coordinamos logística e instalación. En cadenas conviene revisar antes sus normas de material y fechas de montaje, porque a veces obligan a cambiar el formato.",
+      },
+      {
+        q: "¿Trabajan fuera de Ica?",
+        a: "Sí. Producimos aquí y coordinamos envío e instalación a otras regiones; en ese caso el plazo de transporte se suma al de producción y lo decimos junto con la cotización.",
       },
     ],
     enlazaA: ["estructuras-publicitarias", "imprenta", "merchandising"],
