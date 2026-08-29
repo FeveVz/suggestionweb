@@ -6,6 +6,8 @@ import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
+import Secciones from "@/components/Secciones";
+import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import CountUp from "@/components/CountUp";
 import { buildMetadata } from "@/lib/seo";
@@ -123,6 +125,25 @@ export default async function CasoPage({ params }: Params) {
       )}
 
       {/* QUOTE (solo si el caso tiene testimonio real) */}
+      {c.secciones && c.secciones.length > 0 && (
+        <Section tone="light">
+          <div style={{ maxWidth: 820 }}>
+            <Secciones secciones={c.secciones} />
+          </div>
+        </Section>
+      )}
+
+      {c.faq && c.faq.length > 0 && (
+        <Section tone="light" style={{ background: "var(--surface-raised)" }}>
+          <div style={{ maxWidth: 820 }}>
+            <SectionHeading level={2} kicker="Preguntas" maxWidth="24ch" style={{ marginBottom: 28 }}>
+              Lo que suelen preguntarnos sobre este caso.
+            </SectionHeading>
+            <Faq items={c.faq} />
+          </div>
+        </Section>
+      )}
+
       {c.quote && (
         <Section tone="light">
           <blockquote style={{ margin: "0 auto", maxWidth: 780, borderLeft: "3px solid var(--cyan)", paddingLeft: "clamp(1.25rem,3vw,2rem)" }}>
