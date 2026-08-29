@@ -206,17 +206,34 @@ function NotaAlMargen({ n }: { n: NonNullable<Seccion["nota"]> }) {
         borderLeft: `3px solid ${aviso ? "var(--orange)" : "var(--cyan-700)"}`,
       }}
     >
+      {/* El titulo del aviso sigue el patron de kicker del propio sistema
+          (ver <Label>): texto en --text-muted y el color en un punto. Antes iba
+          en naranja o cian a 12 px sobre blanco, que da 2,33:1 y 3,35:1 cuando
+          el texto pequeno necesita 4,5:1. El filete de la izquierda ya carga
+          con la senal de color, asi que no se pierde nada. */}
       {n.titulo && (
         <strong
           style={{
-            display: "block",
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
             font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)",
             textTransform: "uppercase",
             letterSpacing: "var(--tracking-label)",
-            color: aviso ? "var(--orange)" : "var(--cyan-700)",
+            color: "var(--text-muted)",
             marginBottom: 10,
           }}
         >
+          <span
+            aria-hidden
+            style={{
+              width: 6,
+              height: 6,
+              borderRadius: "50%",
+              background: aviso ? "var(--orange)" : "var(--cyan)",
+              flexShrink: 0,
+            }}
+          />
           {n.titulo}
         </strong>
       )}
