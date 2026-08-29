@@ -3,6 +3,7 @@ import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
+import Secciones from "@/components/Secciones";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import MetodoSection from "@/components/MetodoSection";
 import PorQueSection from "@/components/PorQueSection";
@@ -220,83 +221,13 @@ export default function LandingArticle({
       {/* SECCIONES */}
       <Section tone="light">
         <div style={{ display: "grid", gap: "var(--space-8)", maxWidth: 880 }}>
-          {secciones.map((sec, i) => (
-            <div key={i}>
-              <SectionHeading level={2} maxWidth="26ch">
-                {sec.h2}
-              </SectionHeading>
-              {sec.parrafo && (
-                <p
-                  style={{
-                    font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)",
-                    color: "var(--text-body)",
-                    marginTop: 16,
-                    maxWidth: "66ch",
-                  }}
-                >
-                  {sec.parrafo}
-                </p>
-              )}
-              {sec.sub && (
-                <div style={{ display: "grid", gap: "var(--space-5)", marginTop: 24 }}>
-                  {sec.sub.map((s, j) => (
-                    <div key={j}>
-                      <h3
-                        style={{
-                          font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)",
-                          letterSpacing: "var(--tracking-snug)",
-                          color: "var(--text-strong)",
-                        }}
-                      >
-                        {s.h3}
-                      </h3>
-                      <p
-                        style={{
-                          font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)",
-                          color: "var(--text-muted)",
-                          marginTop: 6,
-                          maxWidth: "64ch",
-                        }}
-                      >
-                        {s.texto}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
-              {sec.bullets && (
-                <ul style={{ listStyle: "none", margin: "24px 0 0", padding: 0, display: "grid", gap: 14 }}>
-                  {sec.bullets.map((b, j) => (
-                    <li key={j} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                      <span
-                        aria-hidden
-                        style={{
-                          width: 7,
-                          height: 7,
-                          borderRadius: "50%",
-                          background: "var(--cyan)",
-                          marginTop: 9,
-                          flexShrink: 0,
-                        }}
-                      />
-                      <p
-                        style={{
-                          font: "var(--fw-light) var(--fs-base)/1.55 var(--font-body)",
-                          color: "var(--text-body)",
-                          maxWidth: "64ch",
-                        }}
-                      >
-                        {b.titulo && (
-                          <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{b.titulo}. </strong>
-                        )}
-                        {b.texto}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
+          {/* Un solo render de secciones para todo el sitio: antes esta
+              plantilla repetia su propia version (parrafo, sub, bullets) y por
+              eso las paginas de servicio, sector y ciudad ignoraban EN SILENCIO
+              los bloques de tabla, pasos, dato y nota. Se escribio contenido con
+              esos bloques y sencillamente no aparecia. Ahora comparte componente
+              con el blog y los casos. */}
+          <Secciones secciones={secciones} />
         </div>
       </Section>
 
