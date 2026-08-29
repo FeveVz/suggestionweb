@@ -57,10 +57,15 @@ export default function WorkWall() {
           {COLS.map((col, i) => (
             <div key={i} className="hk-wall-col" style={{ animationDuration: `${DUR[i]}s`, animationDirection: DIR[i], animationDelay: `${DELAY[i]}s` }}>
               {/* eager: las columnas en reversa muestran su 2.ª copia desde t=0;
-                  con lazy quedaban vacías hasta cargar (bug visto por el owner) */}
+                  con lazy quedaban vacías hasta cargar (bug visto por el owner).
+                  fetchPriority low: siguen siendo eager —así el muro no se rompe—
+                  pero dejan de competir por ancho de banda con el elemento que
+                  define el LCP. React precarga automáticamente toda imagen que no
+                  sea lazy, y eran 28 <link rel=preload> para un bloque que está
+                  al 53% de la página; el LCP de campo se fue a 2,5 s. */}
               {[...col, ...col].map((src, j) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img key={j} src={src} alt="" loading="eager" decoding="async" />
+                <img key={j} src={src} alt="" loading="eager" decoding="async" fetchPriority="low" />
               ))}
             </div>
           ))}
