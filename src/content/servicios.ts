@@ -1434,6 +1434,44 @@ const SERVICIOS_LIST: Servicio[] = [
           },
         ],
       },
+      {
+        h2: "Qué significa BTL, y por qué el nombre ya se quedó corto",
+        parrafo:
+          "BTL viene de «below the line», por debajo de la línea. El nombre nace de una época en que los presupuestos se partían en dos: arriba iban los medios masivos —televisión, radio, prensa— y abajo todo lo demás, que se consideraba secundario. Hoy esa frontera casi no significa nada, pero el término quedó y sigue siendo útil para nombrar una cosa concreta: las acciones en las que la marca y la persona se encuentran cara a cara. Sampling, activaciones, eventos, roadshows, promotoría. Lo que las une no es el presupuesto: es que hay contacto directo, y que ese contacto se puede medir.",
+      },
+      {
+        h2: "Qué tipo de acción necesitas",
+        parrafo:
+          "«Hacer BTL» agrupa acciones con objetivos distintos, y meterlas en el mismo saco es la forma habitual de que una activación salga cara y no deje nada. Esto es lo que cambia entre una y otra.",
+        tabla: {
+          cabeceras: ["Acción", "Para qué sirve", "Qué se mide"],
+          filas: [
+            ["Sampling", "Que prueben el producto", "Muestras entregadas y recompra"],
+            ["Activación en punto de venta", "Mover la venta en el sitio", "Ventas del día frente a un día normal"],
+            ["Evento propio", "Cerrar ventas o fidelizar", "Asistentes registrados y cierres"],
+            ["Roadshow", "Cubrir varias zonas o ciudades", "Contactos por plaza y costo por contacto"],
+            ["Promotoría", "Presencia sostenida en tienda", "Rotación del producto en el periodo"],
+          ],
+          nota: "Si la acción no tiene una forma clara de medirse antes de empezar, tampoco la tendrá después.",
+        },
+      },
+      {
+        h2: "Una activación sin datos es una fiesta",
+        parrafo:
+          "Es la diferencia que nos importa y la razón de que trabajemos el BTL junto a lo digital. Una activación puede salir preciosa, llenarse de gente y no dejar absolutamente nada: fotos bonitas y ningún nombre. La misma acción, con captura de datos y un seguimiento preparado de antemano, deja una base de personas que estuvieron frente a tu marca y que se pueden volver a contactar. El costo del montaje es el mismo; lo que cambia es qué te llevas a casa.",
+        pasos: [
+          { titulo: "Definimos qué cuenta como resultado", texto: "muestras entregadas, datos capturados, ventas del día o citas agendadas. Una sola cosa principal, decidida antes de montar nada." },
+          { titulo: "Preparamos la captura", texto: "un formulario corto, un código o una dinámica que pida los datos a cambio de algo. Sin esto, todo el que no compra hoy se pierde." },
+          { titulo: "Activamos", texto: "con personal de animación y captación, y con la mecánica pensada para que participar sea fácil y rápido." },
+          { titulo: "Damos seguimiento en 48 horas", texto: "es el tramo que más resultados deja y el que más se abandona. El recuerdo de una activación se enfría rápido." },
+          { titulo: "Reportamos", texto: "contactos, costo por contacto y qué pasó después. También cuando el número no acompaña." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Lo que hay que resolver antes de la fecha",
+          texto: "Permisos del local o de la autoridad, energía, montaje y desmontaje, y qué pasa si llueve o el espacio cambia de sitio. Una activación se juega en la logística tanto como en la idea, y los imprevistos del día no se improvisan bien. Por eso pedimos un mínimo de cuatro semanas para acciones simples y de ocho a doce para eventos grandes.",
+        },
+      },
     ],
     incluye: [
       { titulo: "Activaciones de marca", texto: "Experiencias inmersivas en punto de venta y eventos." },
@@ -1475,6 +1513,26 @@ const SERVICIOS_LIST: Servicio[] = [
         q: "¿Gestionan los permisos?",
         a: "Sí, gestionamos los permisos necesarios con autoridades y locales.",
       },
+      {
+        q: "¿Hacen activaciones fuera de Ica?",
+        a: "Sí. Operamos desde Ica y trabajamos con marcas de todo el Perú, incluidas activaciones y roadshows en Lima y otras regiones. Lo que cambia según el destino es la logística y los plazos de montaje, y lo decimos por adelantado en la propuesta, no después.",
+      },
+      {
+        q: "¿Qué diferencia hay entre BTL y ATL?",
+        a: "ATL —«above the line»— son los medios masivos: televisión, radio, prensa, exterior de gran formato. BTL son las acciones de contacto directo con la persona. La distinción nació de cómo se repartían los presupuestos y hoy importa menos que antes; lo que sigue siendo distinto es que en BTL hay una conversación real y, por tanto, datos que se pueden capturar.",
+      },
+      {
+        q: "¿Cómo se mide una activación?",
+        a: "Decidiendo antes qué cuenta como resultado —muestras, datos capturados, ventas del día o citas— y montando la captura desde el principio. Medir por asistencia hace parecer buena una activación llena de gente que no dejó ni un nombre.",
+      },
+      {
+        q: "¿Ponen ustedes a las promotoras y el personal?",
+        a: "Sí: equipo de activación, animación, captación y apoyo, más la logística completa. Trabajamos con personal capacitado en la mecánica concreta de tu acción, no genérico.",
+      },
+      {
+        q: "¿Se puede combinar la activación con campañas digitales?",
+        a: "Es lo que recomendamos. La campaña digital previa llena el punto con la gente correcta —igual que en un evento automotriz— y los datos capturados en la activación alimentan después el seguimiento. Hacer las dos cosas por separado desaprovecha la mitad del trabajo.",
+      },
     ],
     enlazaA: ["publicidad-movil", "material-pop", "merchandising"],
     cierre: { h2: "Activemos tu marca en la calle", cta: "Agenda tu activación" },
@@ -1507,6 +1565,43 @@ const SERVICIOS_LIST: Servicio[] = [
             texto:
               "Repartimos y, además, capturamos datos para que la acción deje base de clientes.",
           },
+        ],
+      },
+      {
+        h2: "Qué es una bicivalla",
+        parrafo:
+          "Una bicivalla es un panel publicitario montado sobre una bicicleta o triciclo que recorre la ciudad en lugar de esperar a que la ciudad pase por delante. Lleva la gráfica por las dos caras, circula por las zonas y horas que tú decides, y en las versiones luminosas sigue trabajando cuando cae la noche. Es la forma más flexible de publicidad exterior: no depende de que haya un espacio libre en una avenida ni de contratar meses de un soporte fijo.",
+        nota: {
+          titulo: "Se lee distinto que un panel de avenida",
+          texto: "Esta es la diferencia práctica que casi nadie aprovecha. Un panel de avenida lo ve alguien que va en auto a 60 km/h y solo admite unas pocas palabras. Una bicivalla circula a velocidad de peatón, por calles comerciales, y quien la ve suele estar caminando o esperando: puede leer bastante más y puede reaccionar en el momento —anotar el número, escanear un código, entrar al local—. Diseñar una bicivalla con el mismo criterio que una valla es desperdiciar la mitad de lo que puede hacer.",
+        },
+      },
+      {
+        h2: "Bicivalla, panel fijo o vehículo rotulado",
+        parrafo:
+          "Las tres son publicidad exterior y resuelven cosas distintas. Elegir por precio sin mirar la función es lo que hace que una inversión razonable parezca mala.",
+        tabla: {
+          cabeceras: ["", "Bicivalla", "Panel fijo", "Vehículo rotulado"],
+          filas: [
+            ["Dónde impacta", "Donde tú decidas, y cambia cada día", "En un punto, siempre el mismo", "Por las rutas de tu operación"],
+            ["Compromiso", "Por días", "Por meses", "Pago único, dura años"],
+            ["Flexibilidad de mensaje", "Alta: se cambia la gráfica", "Baja: reimprimir e instalar", "Ninguna: hay que re-rotular"],
+            ["Quién lo ve", "Peatón y tráfico lento", "Tráfico rápido", "Quien coincide con tu recorrido"],
+            ["Cuánto texto admite", "Bastante: se lee de cerca", "Muy poco: se ve en segundos", "Poco: casi siempre en movimiento"],
+            ["Permisos", "Los de circulación habituales", "Autorización municipal del soporte", "Ninguno especial"],
+          ],
+          nota: "El vehículo rotulado sale prácticamente gratis una vez instalado, pero recorre las rutas de tu negocio, no las de tu público: por eso complementa a las otras dos en lugar de sustituirlas.",
+        },
+      },
+      {
+        h2: "Cómo se diseña una ruta que sirva",
+        parrafo:
+          "Una bicivalla dando vueltas sin plan es un gasto bonito. La diferencia entre una campaña que se nota y una que no está en decidir estas cuatro cosas antes de salir.",
+        pasos: [
+          { titulo: "Dónde está tu público, no dónde hay gente", texto: "el mercado central concentra multitud, pero si vendes departamentos tu comprador está en otro lado. Más flujo no es mejor flujo." },
+          { titulo: "A qué hora", texto: "las cuatro horas de activación no rinden igual a las diez de la mañana que a la salida de oficinas. La franja se elige según cuándo está disponible tu cliente." },
+          { titulo: "Cuántas pasadas por el mismo punto", texto: "la publicidad exterior funciona por repetición: ver una vez no deja huella, ver cinco veces en una semana sí. Eso se planifica, no se improvisa." },
+          { titulo: "Qué queremos que pase después", texto: "si el mensaje pide escribir por WhatsApp, alguien tiene que estar contestando esa tarde. Si no, la campaña genera interés y lo deja caer." },
         ],
       },
     ],
@@ -1549,6 +1644,26 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         q: "¿Puedo elegir las rutas?",
         a: "Sí: diseñamos rutas a tu medida y también te sugerimos las más probadas.",
+      },
+      {
+        q: "¿Qué es exactamente una bicivalla?",
+        a: "Un panel publicitario montado sobre una bicicleta o triciclo, con gráfica por las dos caras, que recorre las zonas y horarios que elijas. En su versión luminosa sigue siendo visible de noche. Su ventaja frente a un soporte fijo es que el impacto se lleva hasta donde está tu público, y se contrata por días en lugar de por meses.",
+      },
+      {
+        q: "¿Cuánta gente ve una bicivalla?",
+        a: "Depende por completo de la ruta y la franja horaria, y desconfía de quien te dé una cifra cerrada sin conocer ninguna de las dos. Lo que sí se puede planificar es la repetición: cuántas veces pasa por los mismos puntos, que es lo que de verdad deja huella en publicidad exterior.",
+      },
+      {
+        q: "¿Cuánto texto puede llevar la gráfica?",
+        a: "Más que un panel de avenida, porque se lee de cerca y a velocidad de peatón. Aun así, la regla sigue siendo una idea principal grande y legible; el detalle puede ir debajo para quien se acerque.",
+      },
+      {
+        q: "¿Se puede combinar con volanteo?",
+        a: "Sí, y suele ser la combinación que mejor funciona: la bicivalla genera el reconocimiento y el volanteo con captura de datos convierte ese interés en una base de contactos con la que después se puede trabajar.",
+      },
+      {
+        q: "¿Hace falta permiso municipal?",
+        a: "Para circular con una bicivalla se aplican las condiciones habituales de circulación, más simples que las de instalar una estructura fija en vía pública. Aun así, cada municipalidad tiene sus reglas y las verificamos según la zona.",
       },
     ],
     enlazaA: ["btl", "estructuras-publicitarias", "material-pop"],

@@ -28,6 +28,12 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
   // sin nombre. Si TODAS estan vacias, la tabla va sin thead. Una sola vacia
   // si se mantiene: es la celda de esquina habitual en una comparativa.
   const conCabeceras = t.cabeceras.some((c) => c.trim() !== "");
+  // Una fila con menos celdas que cabeceras rompe la rejilla en silencio: la
+  // columna sobrante queda sin <td> y el navegador desalinea el resto. Paso
+  // de verdad al escribir una comparativa de 4 columnas con filas de 3. Se
+  // rellena para que la tabla siempre salga rectangular.
+  const ancho = Math.max(t.cabeceras.length, ...t.filas.map((f) => f.length));
+  const filas = t.filas.map((f) => [...f, ...Array(Math.max(0, ancho - f.length)).fill("")]);
   return (
     <figure style={{ margin: "24px 0 0" }}>
       {/* La caja hace el scroll, nunca la página: en móvil una tabla de 3-4
@@ -67,7 +73,7 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
           </thead>
           )}
           <tbody>
-            {t.filas.map((fila, i) => (
+            {filas.map((fila, i) => (
               <tr key={i}>
                 {fila.map((celda, j) =>
                   j === 0 ? (
