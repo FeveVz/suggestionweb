@@ -222,6 +222,15 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
         h2: "Qué encontrarás en esta sección",
         parrafo:
           "Artículos sobre cómo usar la inteligencia artificial y la automatización en un negocio real, sin exageraciones. Qué tareas conviene automatizar, cuáles no, y cómo evitar que la eficiencia se convierta en una atención fría que espante clientes.",
+        tabla: {
+          cabeceras: ["Si lo que te pasa es…", "Empieza por"],
+          filas: [
+            ["Pierdo clientes porque tardo en responder", "Cómo automatizar WhatsApp en tu negocio"],
+            ["No sé qué de la IA sirve y qué es ruido", "IA en el marketing: qué sí funciona"],
+            ["Quiero un logo y estoy mirando herramientas de IA", "Las mejores IA para crear logos (y sus límites)"],
+          ],
+          nota: "El orden no es casual: automatizar la respuesta suele dar más resultado que cualquier otra cosa de esta lista.",
+        },
       },
       {
         h2: "Automatiza el trámite, no la relación",
@@ -330,6 +339,15 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
         h2: "Qué encontrarás en esta sección",
         parrafo:
           "Artículos sobre cómo se vende un proyecto inmobiliario hoy: preventa, captación de interesados, campañas para lotes y departamentos, y el seguimiento que lleva del formulario a la sala de ventas. Escrito desde la experiencia de operar campañas para proyectos reales.",
+        tabla: {
+          cabeceras: ["Si lo que te pasa es…", "Empieza por"],
+          filas: [
+            ["No sé qué anuncios funcionan en inmobiliario", "Marketing inmobiliario: ejemplos de campañas que sí venden lotes"],
+            ["Tengo leads pero nadie llega a visitar", "Publicidad inmobiliaria en redes: qué funciona en Perú"],
+            ["Voy a lanzar un proyecto en preventa", "Cómo vender un proyecto en preventa"],
+          ],
+          nota: "Si lo que buscas es que trabajemos tu proyecto y no leer sobre el tema, la página del servicio está en Marketing inmobiliario.",
+        },
       },
       {
         h2: "El problema no suele ser la cantidad de interesados",
@@ -435,6 +453,16 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
         h2: "Qué encontrarás en esta sección",
         parrafo:
           "Artículos sobre marketing aplicado a rubros concretos: turismo y hotelería, salud, restaurantes, agroexportación y bodegas de pisco y vino. La lógica de fondo es la misma en todos, pero lo que funciona en cada uno cambia bastante, y ahí está la diferencia entre una campaña que rinde y una genérica.",
+        tabla: {
+          cabeceras: ["Tu negocio", "Empieza por"],
+          filas: [
+            ["Consultorio o clínica", "Cómo conseguir más pacientes para tu clínica o consultorio"],
+            ["Restaurante", "Estrategias de marketing para restaurantes que llenan mesas"],
+            ["Bodega de pisco o vino", "Cómo vender pisco y vino por internet"],
+            ["Agroexportadora", "Marketing para agroexportadoras: cómo abrir mercados"],
+          ],
+          nota: "Aunque tu rubro no esté en la lista, el artículo del sector más parecido suele servir: lo que cambia es el calendario y el canal, no la lógica.",
+        },
       },
       {
         h2: "Por qué el mismo método da resultados distintos",
