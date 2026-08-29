@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HubLanding from "@/components/HubLanding";
 import { buildMetadata } from "@/lib/seo";
 import { collectionPageSchema } from "@/lib/schema";
-import { SERVICIOS_PILAR, soloCategorias, getServiciosByCategoria } from "@/content/servicios";
+import { SERVICIOS_PILAR, SERVICIOS_PILAR_SECCIONES, SERVICIOS_PILAR_FAQ, soloCategorias, getServiciosByCategoria } from "@/content/servicios";
 
 export const metadata: Metadata = buildMetadata({
   title: SERVICIOS_PILAR.metaTitle,
@@ -50,6 +50,8 @@ export default function ServiciosPilar() {
       gridKicker="Cinco categorías, un solo método"
       gridHeading="Elige por dónde empezar."
       related={related}
+      secciones={SERVICIOS_PILAR_SECCIONES}
+      faq={SERVICIOS_PILAR_FAQ}
       shape={2}
       extraSchema={collectionPageSchema({
         name: SERVICIOS_PILAR.metaTitle,

@@ -4,7 +4,7 @@
  * Slugs idénticos a content/navegacion.ts. Una keyword principal por página.
  */
 
-import type { Servicio } from "./types";
+import type { Servicio, Seccion, Faq } from "./types";
 
 /** Pilar /servicios (doc 09 §A0). Página propia, no [slug]. */
 export const SERVICIOS_PILAR = {
@@ -18,6 +18,103 @@ export const SERVICIOS_PILAR = {
     "No vendemos piezas sueltas. Nos encargamos de todo el proceso —digital, marca, web y calle— bajo un mismo método: de la estrategia al cierre.",
   cta: "Hablemos de tu negocio",
 } as const;
+
+/**
+ * Cuerpo del pilar /servicios. Ojo con el reparto: esta página NO explica cada
+ * servicio —eso lo hace su propia página— sino que ayuda a ELEGIR. Si aquí se
+ * desarrolla el contenido de las hijas, compiten entre sí y Google acaba
+ * mostrando peor a las dos.
+ */
+export const SERVICIOS_PILAR_SECCIONES: Seccion[] = [
+  {
+    h2: "Empieza por el problema, no por el servicio",
+    parrafo:
+      "Casi nadie llega buscando «una campaña de publicidad digital». Se llega con un problema: el teléfono no suena, llegan contactos que no compran, la marca se ve improvisada al lado de la competencia. Por eso conviene entrar por ahí. Esta tabla es el atajo que usamos en la primera conversación, y sirve igual si decides no trabajar con nosotros.",
+    tabla: {
+      cabeceras: ["Lo que te pasa", "Dónde suele estar la causa", "Por dónde empezar"],
+      filas: [
+        ["No llegan contactos", "Nadie sabe que existes o no te encuentran", "Publicidad digital y SEO"],
+        ["Llegan contactos que no compran", "Atraes al público equivocado o no calificas", "Estrategia y CRM"],
+        ["Contactan y se enfrían", "Nadie responde a tiempo", "CRM y automatización"],
+        ["Compiten contigo por precio", "No hay una razón visible para elegirte", "Branding y contenido"],
+        ["La web no convierte", "Estructura y velocidad, casi nunca el diseño", "Desarrollo web"],
+        ["Nadie te ve en la calle", "Toda la inversión está en pantalla", "BTL, imprenta y publicidad móvil"],
+      ],
+      nota: "Es un mapa de partida, no un diagnóstico. La causa real aparece al mirar tus números.",
+    },
+  },
+  {
+    h2: "Por qué lo digital y la calle están en el mismo sitio",
+    parrafo:
+      "La mayoría de agencias hace una cosa u otra: o campañas o producción física. Nosotros hacemos las dos, y no por ampliar catálogo. En Ica y en buena parte del Perú, la decisión de compra rara vez ocurre entera en la pantalla: alguien ve un anuncio, pregunta por WhatsApp, pasa por el local y decide delante del producto. Cuando la campaña la lleva una empresa y el material del punto de venta otra, el cliente nota la costura —el envase no se parece al anuncio, el mensaje cambia a mitad de camino— y esa incoherencia se paga en ventas.",
+    bullets: [
+      { titulo: "Un solo mensaje", texto: "lo que ve en Instagram, lo que lee en la web y lo que encuentra en el local dicen lo mismo." },
+      { titulo: "Un solo responsable", texto: "si algo falla, no hay dos proveedores señalándose. Es una conversación, no tres." },
+      { titulo: "Tiempos que encajan", texto: "la gigantografía está lista cuando arranca la campaña, no dos semanas después." },
+    ],
+  },
+  {
+    h2: "Qué pasa en las primeras semanas",
+    parrafo:
+      "Para que no haya sorpresas, este es el recorrido real de un encargo, con lo que se ve y lo que todavía no. La parte más aburrida —medir bien— es la que decide si todo lo demás sirve para algo.",
+    pasos: [
+      { titulo: "Diagnóstico", texto: "miramos tu proceso comercial completo, no solo tu marketing: de dónde llegan hoy tus clientes, qué les cuesta y dónde se pierden. Casi siempre hay más ventas en las fugas que en un canal nuevo." },
+      { titulo: "Medición antes que campaña", texto: "si no está claro qué cuenta como lead y cómo se registra, cualquier resultado posterior es una opinión. Esto se monta primero." },
+      { titulo: "Primeras campañas", texto: "arrancan con presupuesto de aprendizaje, no con el total. Las plataformas necesitan volumen para optimizar, y tocarlo cada dos días reinicia ese aprendizaje." },
+      { titulo: "Ajuste con datos", texto: "a partir de aquí las decisiones dejan de ser de gusto: se mira qué mensaje trae contactos que cierran y se mueve el presupuesto hacia ahí." },
+      { titulo: "Reporte", texto: "costo por lead, por cita y por venta. Con los números como son, incluidos los meses en que no salen." },
+    ],
+    nota: {
+      titulo: "Lo que necesitamos de ti",
+      texto: "Alguien que responda los mensajes el mismo día, claridad en precios y condiciones para que el asesor no tenga que consultar, y acceso a tus números reales de venta. Sin esas tres cosas cualquier inversión se pierde en un tramo que no controlamos, y preferimos decirlo al principio.",
+    },
+  },
+  {
+    h2: "Agencia, freelance o equipo propio",
+    parrafo:
+      "No siempre la respuesta somos nosotros, y decirlo ahorra tiempo a todos. Estas son las tres formas de resolverlo y cuándo tiene sentido cada una.",
+    tabla: {
+      cabeceras: ["", "Freelance", "Agencia", "Equipo interno"],
+      filas: [
+        ["Cuándo conviene", "Una pieza concreta y puntual", "Varias piezas que tienen que encajar", "Volumen alto y constante"],
+        ["Coordinación", "La haces tú", "Va incluida", "La haces tú"],
+        ["Cobertura", "Una especialidad", "Todo el proceso", "La que contrates"],
+        ["Riesgo", "Depende de una persona", "Depende de la relación", "Costo fijo alto"],
+        ["Se nota antes en", "Coste", "Consistencia", "Conocimiento del producto"],
+      ],
+      nota: "Muchos negocios acaban combinando: equipo interno para el día a día y agencia para lo que exige método y volumen.",
+    },
+  },
+];
+
+/** Preguntas del pilar: comerciales, no técnicas. Las técnicas de cada
+ *  servicio viven en su propia página. */
+export const SERVICIOS_PILAR_FAQ: Faq[] = [
+  {
+    q: "¿Puedo contratar un solo servicio?",
+    a: "Sí, y a veces es lo correcto: si lo que necesitas es imprimir un pedido o montar una web, no hace falta nada más. Lo que no recomendamos es contratar campañas sueltas sin resolver antes la medición y la respuesta a los contactos, porque el resultado depende de esos dos tramos tanto como de la pauta.",
+  },
+  {
+    q: "¿Trabajan por proyecto o de forma continua?",
+    a: "Las dos. La producción —imprenta, merchandising, un evento, una web— es por proyecto y tiene principio y fin. La captación y la medición funcionan de forma continua, porque su valor está en el ajuste mes a mes; un mes suelto de publicidad casi nunca alcanza para salir de la fase de aprendizaje.",
+  },
+  {
+    q: "¿Cuánto cuesta?",
+    a: "Cada página de servicio tiene sus planes publicados, para que puedas hacerte una idea sin pedir cotización. La cifra que importa, en todo caso, no es el precio del servicio sino cuánto te cuesta hoy conseguir un cliente: si no lo tienes medido, es lo primero que calculamos juntos.",
+  },
+  {
+    q: "¿Atienden fuera de Ica?",
+    a: "Sí. Operamos desde Ica y trabajamos con marcas de todo el Perú; la parte digital es igual en cualquier ciudad. Para producción física y activaciones coordinamos envíos y equipos según el destino, y lo decimos por adelantado cuando el plazo cambia.",
+  },
+  {
+    q: "¿Y si ya tengo un equipo de marketing?",
+    a: "Trabajamos en las dos formas: llevando la parte que exige método y volumen mientras tu equipo se ocupa del día a día, o al revés. Lo que no funciona es duplicar decisiones sobre la misma campaña sin que nadie tenga la última palabra.",
+  },
+  {
+    q: "¿Garantizan resultados?",
+    a: "No, y desconfía de quien lo haga: nadie controla la competencia, el mercado ni tu capacidad de cierre. Lo que sí garantizamos es transparencia en los números —costo por lead, por cita y por venta— y decirte cuando algo no está funcionando, incluso si eso significa recomendarte parar.",
+  },
+];
 
 const CATEGORIAS_RAW: Servicio[] = [
   {

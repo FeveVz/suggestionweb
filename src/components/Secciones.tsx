@@ -23,6 +23,11 @@ const CELDA = {
 };
 
 function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
+  // Una ficha de datos (dos columnas, sin encabezados) no debe emitir un
+  // <thead> con celdas vacias: para un lector de pantalla eso son cabeceras
+  // sin nombre. Si TODAS estan vacias, la tabla va sin thead. Una sola vacia
+  // si se mantiene: es la celda de esquina habitual en una comparativa.
+  const conCabeceras = t.cabeceras.some((c) => c.trim() !== "");
   return (
     <figure style={{ margin: "24px 0 0" }}>
       {/* La caja hace el scroll, nunca la página: en móvil una tabla de 3-4
@@ -36,6 +41,7 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
         }}
       >
         <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 460 }}>
+          {conCabeceras && (
           <thead>
             <tr>
               {t.cabeceras.map((c, i) => (
@@ -59,6 +65,7 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
               ))}
             </tr>
           </thead>
+          )}
           <tbody>
             {t.filas.map((fila, i) => (
               <tr key={i}>
