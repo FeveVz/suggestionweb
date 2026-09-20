@@ -118,6 +118,15 @@ export type Sector = {
   secciones: Seccion[];
   /** servicios que el sector pone a trabajar (slugs). */
   serviciosQueUsa: string[];
+  /**
+   * Artículos del blog que explican el mercado de este sector.
+   *
+   * Existe por el reparto de contenido: la página de sector dice qué hacemos,
+   * en qué orden y qué medimos; el artículo explica cómo funciona el mercado.
+   * Este bloque es el puente entre las dos, y de paso da enlaces internos a
+   * unos posts que casi no recibían (2-3 cada uno, medido el 2026-09-20).
+   */
+  lecturas?: { label: string; href: string }[];
   faq: Faq[];
   cierre: Cierre;
 };

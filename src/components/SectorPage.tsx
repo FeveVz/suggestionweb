@@ -28,6 +28,11 @@ export default function SectorPage({ slug }: { slug: string }) {
   const related: RelatedBlock[] = links.length
     ? [{ title: "Lo que ponemos a trabajar", links, columns: 2 }]
     : [];
+  // El puente al blog: esta página dice qué hacemos y qué medimos; el artículo
+  // explica cómo funciona el mercado. Antes las dos contaban lo mismo.
+  if (sec.lecturas?.length) {
+    related.push({ title: "Para entender el mercado", links: sec.lecturas, columns: 2 });
+  }
 
   return (
     <LandingArticle

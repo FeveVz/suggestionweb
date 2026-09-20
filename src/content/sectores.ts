@@ -99,6 +99,11 @@ export const SECTORES: Sector[] = [
       "crm-automatizacion",
       "produccion-audiovisual",
     ],
+    lecturas: [
+      { label: "Cómo vender un proyecto en preventa", href: "/blog/inmobiliario/vender-proyecto-en-preventa" },
+      { label: "Ejemplos de campañas que venden lotes", href: "/blog/inmobiliario/marketing-inmobiliario-ejemplos" },
+      { label: "Publicidad inmobiliaria en redes", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
+    ],
     faq: [
       {
         q: "¿Cómo vender un proyecto inmobiliario más rápido?",
@@ -199,6 +204,11 @@ export const SECTORES: Sector[] = [
       "crm-automatizacion",
       "redes-sociales",
       "btl",
+    ],
+    lecturas: [
+      { label: "Leads para concesionarios que sí cierran", href: "/blog/automotriz/leads-para-concesionarios" },
+      { label: "Publicidad para venta de autos", href: "/blog/automotriz/publicidad-para-venta-de-autos" },
+      { label: "Del clic al test drive: ejemplos", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
     ],
     faq: [
       {
@@ -523,6 +533,9 @@ export const SECTORES: Sector[] = [
       "seo",
       "crm-automatizacion",
     ],
+    lecturas: [
+      { label: "Cómo conseguir más pacientes", href: "/blog/sectores/como-conseguir-mas-pacientes" },
+    ],
     faq: [
       {
         q: "¿Cómo conseguir más pacientes?",
@@ -574,31 +587,6 @@ export const SECTORES: Sector[] = [
           "Preparamos tu marca para Expoalimentaria, Fruit Logistica y rondas de negocio: catálogo, presentación institucional y contenido audiovisual que muestra tu operación y tu estándar.",
       },
       {
-        h2: "El dato que ordena todo tu marketing",
-        parrafo:
-          "Hay una cifra que decide qué tiene sentido hacer y qué no en una agroexportadora de Ica: prácticamente toda la producción de la región se va afuera. Cuando tu comprador está al otro lado del mundo y es un profesional que evalúa proveedores, media estrategia habitual deja de aplicar. No hacen falta recetas, ni promociones de temporada, ni comunidad. Hace falta credibilidad verificable y capacidad demostrable.",
-        dato: {
-          cifra: "92%",
-          texto: "de la producción agrícola de Ica se destina al mercado externo y solo el 8% al interno. Tu marketing no le habla a un consumidor: le habla a un importador.",
-          fuente: "Reporte regional de Ica",
-        },
-      },
-      {
-        h2: "Dónde está Ica, con los números delante",
-        parrafo:
-          "Trabajamos desde la región y preferimos describirla con exactitud, porque frente a un comprador internacional un dato verificable convence más que un superlativo. Ica es la segunda región agroexportadora del país —por detrás de La Libertad— y concentra alrededor de la quinta parte de las exportaciones agrícolas peruanas, con más de setecientas mil toneladas colocadas en cerca de setenta y cinco mercados. En un país que lidera varias categorías a nivel mundial, ser el segundo sigue siendo una posición muy fuerte.",
-        tabla: {
-          cabeceras: ["Producto", "Peso en el valor agroexportado de Ica"],
-          filas: [
-            ["Uva", "32,8%"],
-            ["Palta", "12,5%"],
-            ["Arándano", "10,2%"],
-            ["Espárrago", "5,9%"],
-          ],
-          nota: "Referencia de 2024. La concentración en uva explica por qué tantas empresas de la región compiten en la misma ventana y con el mismo argumento: ahí la marca es lo que separa.",
-        },
-      },
-      {
         h2: "Qué construimos, y en qué orden",
         parrafo:
           "El material de una agroexportadora no se improvisa la semana de la feria. Este es el orden que seguimos, pensado para que cada pieza esté lista antes de que haga falta.",
@@ -616,9 +604,46 @@ export const SECTORES: Sector[] = [
         },
       },
       {
-        h2: "Por qué el ciclo se mide en campañas, no en semanas",
+        h2: "Cómo preparamos una feria",
         parrafo:
-          "Es la diferencia más grande entre este sector y cualquier otro que trabajamos, y conviene tenerla clara antes de empezar. El recorrido va de la feria a la muestra, de la muestra a la auditoría y de ahí a la primera orden, y puede ocupar más de una temporada. Por eso el indicador útil no son los contactos del mes, sino cuántas oportunidades avanzan de etapa. Un año con pocas órdenes nuevas pero con varios compradores en auditoría es un buen año, aunque un panel de leads diga lo contrario.",
+          "Una feria no se prepara la semana anterior: se prepara con el calendario al revés, desde la fecha del evento hacia atrás. Este es el reparto que usamos, y el motivo de cada plazo.",
+        tabla: {
+          cabeceras: ["Cuándo", "Qué se hace", "Por qué ese plazo"],
+          filas: [
+            ["8 semanas antes", "Catálogo y fichas técnicas por producto", "Es lo que más tarda: hay que confirmar volúmenes, ventanas y certificaciones vigentes"],
+            ["6 semanas antes", "Rodaje en fundo y packing", "Depende del estado real del cultivo; si se deja para el final, no hay qué grabar"],
+            ["4 semanas antes", "Presentación institucional y material impreso", "Con tiempo de imprenta y de corrección, sin pagar urgencias"],
+            ["2 semanas antes", "Secuencia de seguimiento escrita y CRM listo", "Se escribe antes de viajar, cuando hay cabeza para hacerlo bien"],
+            ["48 horas después", "Primer correo a cada contacto", "El importador vio decenas de proveedores esa semana; pasado ese plazo ya no recuerda cuál eras"],
+          ],
+        },
+      },
+      {
+        h2: "Qué necesitamos de tu lado",
+        parrafo:
+          "Casi todo lo que hace creíble a una agroexportadora está dentro de la empresa, no en la agencia. Nuestro trabajo es sacarlo y ponerlo donde el comprador lo busca; para eso hacen falta cuatro cosas concretas.",
+        bullets: [
+          { titulo: "Certificaciones vigentes, con su fecha", texto: "Global G.A.P., HACCP, BRC, orgánico. Publicar una vencida hace más daño que no publicar ninguna." },
+          { titulo: "Volumen y ventana reales", texto: "hectáreas, variedades y fechas de campaña. Si el importador no puede estimar si le sirves, no pregunta." },
+          { titulo: "Acceso al fundo y al packing", texto: "un día de grabación por campaña. La imagen del proceso real hace más trabajo que cualquier texto." },
+          { titulo: "Quién responde, y en cuánto", texto: "una persona con correo corporativo y un plazo comprometido. El material abre la conversación; quien la sostiene eres tú." },
+        ],
+      },
+      {
+        h2: "Qué medimos",
+        parrafo:
+          "En un sector donde entre el primer contacto y la primera orden pueden pasar meses, medir «leads del mes» no dice nada. Estos son los indicadores que reportamos y lo que cada uno responde.",
+        tabla: {
+          cabeceras: ["Indicador", "Qué responde", "Cada cuánto"],
+          filas: [
+            ["Oportunidades que avanzan de etapa", "Si el embudo se mueve: de contacto a muestra, de muestra a auditoría", "Mensual"],
+            ["Tiempo de primera respuesta", "Si el seguimiento se está cumpliendo de verdad", "Semanal"],
+            ["Visitas a fichas desde mercados destino", "Si la web llega a quien tiene que llegar", "Mensual"],
+            ["Muestras enviadas", "El paso donde una conversación se vuelve seria", "Mensual"],
+            ["Contactos por LinkedIn y feria", "De dónde sale cada oportunidad, para repetir lo que funciona", "Por campaña"],
+          ],
+          nota: "Un año con pocas órdenes nuevas pero con varios compradores en auditoría es un buen año. Un panel de leads diría lo contrario, y por eso no usamos ese panel.",
+        },
       },
     ],
     serviciosQueUsa: [
@@ -627,30 +652,33 @@ export const SECTORES: Sector[] = [
       "crm-automatizacion",
       "produccion-audiovisual",
     ],
+    lecturas: [
+      { label: "Cómo abrir mercados internacionales", href: "/blog/sectores/marketing-para-agroexportadoras" },
+    ],
     faq: [
       {
-        q: "¿Por qué una agroexportadora necesita marketing?",
-        a: "Porque el comprador internacional elige también por confianza y profesionalismo. Una marca sólida, una web B2B clara y contenido que muestre tu estándar abren puertas que solo el producto no abre.",
+        q: "¿Con cuánta anticipación hay que preparar una feria?",
+        a: "Ocho semanas para llegar sin pagar urgencias. El catálogo con fichas técnicas es lo que más tarda, porque hay que confirmar volúmenes, ventanas y certificaciones vigentes; el rodaje en fundo depende del estado real del cultivo, así que tampoco se puede dejar para el final.",
       },
       {
         q: "¿Trabajan web y contenido en inglés?",
         a: "Sí. Desarrollamos tu presencia en inglés y español, pensada para el importador, con fichas técnicas y certificaciones a la vista. Y no con traducción automática: la ficha técnica y las condiciones comerciales tienen vocabulario propio, y un error ahí resta credibilidad justo donde más se juzga.",
       },
       {
-        q: "¿Necesita una agroexportadora estar en redes sociales?",
-        a: "Menos de lo que se cree, y con otro propósito. El importador no decide en Instagram, pero sí comprueba que la empresa exista y se vea activa. Rinde más una web sólida con certificaciones y capacidad a la vista, y LinkedIn para el contacto profesional, que publicar a diario en redes de consumo.",
+        q: "¿Hacen ustedes el contacto comercial con los importadores?",
+        a: "No. Nosotros construimos la presencia, el material y el sistema de seguimiento; la relación comercial la lleva tu equipo, que es quien puede comprometer volumen y precio. Cuando una agencia se mete ahí, la conversación se cae en la primera pregunta técnica.",
       },
       {
-        q: "¿Qué material hace falta para una feria internacional?",
-        a: "Catálogo con fichas técnicas por producto, presentación institucional breve, y fotografía y video del fundo y el packing. Y la secuencia de seguimiento escrita antes de viajar, que es lo que suele faltar y lo que más oportunidades cuesta.",
+        q: "¿Qué necesitan de nuestro lado para empezar?",
+        a: "Certificaciones vigentes con su fecha, volúmenes y ventana de campaña reales, un día de acceso al fundo y al packing para grabar, y una persona con correo corporativo que responda en un plazo comprometido. Con eso hay material para todo lo demás.",
       },
       {
-        q: "¿Cómo me diferencio si vendo lo mismo que la empresa de al lado?",
-        a: "En lo que no es el fruto: consistencia campaña tras campaña, trazabilidad demostrable, prácticas laborales y ambientales, y capacidad de respuesta. Cuando el producto es comparable, el importador elige al proveedor que le da menos problemas.",
+        q: "¿Qué pasa si ya tenemos web?",
+        a: "La revisamos antes de proponer rehacerla. A veces el problema no es el diseño sino que las certificaciones están en un PDF que hay que pedir, no hay ficha por producto o no se entiende la capacidad. Eso se arregla sobre la web que ya tienes y cuesta bastante menos.",
       },
       {
-        q: "¿Cuánto tarda en dar resultado?",
-        a: "Se mide en campañas, no en semanas. Por eso trabajamos con un indicador distinto: cuántas oportunidades avanzan de etapa —de contacto a muestra, de muestra a auditoría— en lugar de cuántos leads entraron este mes.",
+        q: "¿Pueden trabajar junto a nuestro equipo de exportaciones?",
+        a: "Es como mejor funciona. Ellos conocen el producto, el calendario y al comprador; nosotros ponemos el material, el orden y la medición. Las reuniones fijas son con esa área, no con gerencia general, porque es donde está la información que hace falta.",
       },
       {
         q: "¿Trabajan con empresas fuera de Ica?",
@@ -682,42 +710,45 @@ export const SECTORES: Sector[] = [
           "Montamos tu tienda online para vender a todo el país y trabajamos el enoturismo: visitas, catas y experiencias que llenan tu bodega y fidelizan al cliente.",
       },
       {
-        h2: "Por qué la denominación de origen ya no te diferencia",
+        h2: "Qué construimos primero, y por qué en ese orden",
         parrafo:
-          "Es la primera conversación incómoda que tenemos con casi toda bodega. La denominación de origen no es un club pequeño: hay cientos de productores autorizados y casi la mitad están en Ica. Decir «pisco de Ica con DO» te pone en la misma frase que el vecino. Lo que sí diferencia es todo lo que viene después —el valle concreto, la variedad de uva, el método, la familia, el premio verificable—, y eso es exactamente lo que trabajamos.",
-        dato: {
-          cifra: "235",
-          texto: "productores de Ica autorizados a usar la denominación de origen Pisco, de 533 en todo el país. La región concentra además el 57% de los despachos de exportación.",
-          fuente: "Registro de productores autorizados de la DO Pisco (julio de 2025)",
-        },
-      },
-      {
-        h2: "Dos curvas opuestas, y una decisión que sale de ellas",
-        parrafo:
-          "Hay un dato del sector que casi nadie cruza al planificar: las exportaciones de pisco vienen creciendo mientras el consumo interno lleva tiempo bajando. Para una bodega eso no es una noticia de prensa, es una decisión estratégica que cambia dónde poner el dinero. Si tu apuesta es el mercado nacional, peleas por una porción que se encoge y necesitas quitarle clientes a alguien: ahí manda la marca. Si tu apuesta es afuera, el terreno crece pero el juego es otro —etiqueta en inglés, certificaciones, capacidad de despacho y un comprador que evalúa proveedores, no una botella.",
-        tabla: {
-          cabeceras: ["", "Vender en Perú", "Vender al exterior"],
-          filas: [
-            ["Cómo va el mercado", "El consumo interno viene cayendo", "Las exportaciones vienen creciendo"],
-            ["A quién le hablas", "Al consumidor final", "A un importador o distribuidor"],
-            ["Qué decide la compra", "Marca, ocasión y recomendación", "Capacidad, consistencia y certificaciones"],
-            ["Qué construimos primero", "Marca, etiqueta y contenido que dan deseo", "Ficha técnica, web en inglés y respaldo formal"],
-          ],
-          nota: "No son excluyentes, pero sí distintas: intentar las dos con el mismo material suele terminar sin ninguna de las dos.",
-        },
-      },
-      {
-        h2: "El enoturismo es tu segundo negocio, no un extra",
-        parrafo:
-          "En Ica, la visita a la bodega no es una actividad de cortesía: es un producto con margen alto que además fabrica clientes recurrentes. Quien viene, cata y se lleva una botella se acuerda de tu marca de una forma que ninguna campaña compra. Y la cercanía a Lima juega a favor, porque convierte el fin de semana en un plan realista y no en unas vacaciones que hay que planificar. Trabajamos las visitas como se trabaja un hotel: con contenido que muestre la experiencia real y un sistema de reservas que no dependa de contestar mensajes a mano.",
-        bullets: [
-          { titulo: "El contenido que funciona", texto: "el viñedo, la destilación, las manos que trabajan. Lo que no se puede copiar convence más que la foto de estudio de la botella." },
-          { titulo: "Reservas ordenadas", texto: "para que la agenda no dependa de quién esté libre para responder el WhatsApp." },
-          { titulo: "La visita alimenta la venta online", texto: "quien probó en la bodega vuelve a comprar por internet si le dejas por dónde." },
+          "El orden no es un detalle de gestión: es lo que decide si el dinero de publicidad trabaja o se evapora. En una bodega empezamos siempre por lo que sostiene el precio, seguimos por lo que quita dudas al comprador y solo al final abrimos el grifo del tráfico. Traer visitas a una tienda que no explica cómo llega la botella es la forma más cara de aprender esto.",
+        pasos: [
+          { titulo: "Marca y etiqueta", texto: "la etiqueta es lo único de tu producto que alguien ve antes de probarlo, y es lo que sostiene el precio en un estante donde todas las botellas prometen tradición. De aquí sale el resto." },
+          { titulo: "La ficha que resuelve dudas", texto: "cobertura real por provincia, cómo va embalado el vidrio y verificación de mayoría de edad. Escrito en la propia ficha del producto, no en una página de ayuda que nadie abre." },
+          { titulo: "Tienda y campañas por ocasión", texto: "el pisco y el vino se compran por motivo —regalo, fecha, pedido corporativo—, así que las campañas se arman por ocasión y no por producto." },
+          { titulo: "Enoturismo y recurrencia", texto: "la visita se convierte en cliente que recompra si al salir de la bodega tiene por dónde volver a comprar. Ese puente se construye, no aparece solo." },
         ],
         nota: {
-          titulo: "Antes de abrir la tienda online",
-          texto: "Resuelve el envío de bebidas alcohólicas —embalaje para vidrio, transportista que las acepte y a qué provincias llegas de verdad— y déjalo escrito en la web. Es la primera duda de quien compra desde fuera de Ica, y no responderla en la ficha del producto cuesta más ventas que cualquier detalle de diseño.",
+          tipo: "aviso",
+          titulo: "Dónde termina nuestro trabajo",
+          texto: "No despachamos, no embalamos y no gestionamos tu transportista: eso es tuyo. Lo que sí hacemos es no dejar que la tienda se abra hasta que esas tres cosas estén decididas y escritas, porque la primera duda de quien compra desde fuera de Ica es si su botella va a llegar entera.",
+        },
+      },
+      {
+        h2: "Cómo trabajamos el enoturismo",
+        parrafo:
+          "Las visitas se trabajan como se trabaja un hotel, no como se trabaja una red social: hay una agenda que llenar, una temporada que cambia y una experiencia que se vende mostrándola. Nuestra parte es esa, y se reduce a tres cosas concretas.",
+        bullets: [
+          { titulo: "Grabamos en tu bodega", texto: "el viñedo, la destilación y las manos que trabajan, una vez por temporada. Con material propio no hay que inventar contenido cada semana." },
+          { titulo: "Ordenamos las reservas", texto: "un sistema donde la gente elige día y hora, para que la agenda no dependa de quién esté libre para responder el WhatsApp." },
+          { titulo: "Empujamos por calendario", texto: "la pauta sigue la temporada —vendimia, feriados largos, fiestas—, no un plan fijo de publicaciones." },
+        ],
+      },
+      {
+        h2: "Qué medimos en una bodega",
+        parrafo:
+          "Ninguna de estas cifras es el alcance de una publicación. Son las que dicen si la bodega vendió más este mes que el anterior, y son las que reportamos.",
+        tabla: {
+          cabeceras: ["Indicador", "Qué responde", "Cada cuánto"],
+          filas: [
+            ["Ventas de la tienda online", "Si el canal propio crece o solo se mueve en campaña", "Semanal"],
+            ["Ticket promedio", "Si la marca sostiene el precio o vende por descuento", "Mensual"],
+            ["Reservas de visita", "Si el enoturismo llena agenda fuera de feriados", "Semanal"],
+            ["Recompra a 90 días", "Si el cliente vuelve, que es donde está el margen", "Trimestral"],
+            ["Costo por venta", "Cuánto cuesta cada botella vendida con pauta", "Mensual"],
+          ],
+          nota: "El primer mes de una tienda nueva es calibración: hay poco historial y las cifras se mueven mucho. Lo decimos antes, no cuando llega el reporte.",
         },
       },
     ],
@@ -727,34 +758,37 @@ export const SECTORES: Sector[] = [
       "produccion-audiovisual",
       "publicidad-digital",
     ],
+    lecturas: [
+      { label: "Cómo vender pisco y vino por internet", href: "/blog/sectores/como-vender-pisco-y-vino-por-internet" },
+    ],
     faq: [
       {
-        q: "¿Cómo vender más pisco o vino por internet?",
-        a: "Con una tienda online clara, fotografía que da deseo de comprar y campañas segmentadas por ocasión (regalo, fechas, corporativo). Lo armamos completo, del catálogo al cierre.",
-      },
-      {
-        q: "¿Trabajan enoturismo y visitas a la bodega?",
-        a: "Sí. Promovemos tus visitas, catas y experiencias con contenido y pauta, y montamos el sistema de reservas para que la agenda no dependa solo de la temporada.",
-      },
-      {
-        q: "¿Cómo diferencio mi pisco si todos son de Ica y con DO?",
-        a: "Precisamente porque la denominación la comparten cientos de productores, no puede ser tu argumento principal. Lo que diferencia es lo específico y comprobable: el valle, la variedad, el método, la historia de la familia y los premios. Ese es el trabajo de marca que hacemos antes de tocar la publicidad.",
-      },
-      {
-        q: "¿Conviene vender en marketplaces o en tienda propia?",
-        a: "Los marketplaces dan volumen inmediato pero se quedan comisión y no te dejan construir marca ni base de clientes. La tienda propia cuesta más de arrancar y es donde acumulas valor. Muchas bodegas empiezan en marketplace y van moviendo al comprador recurrente a su propia tienda; ese traslado también se puede diseñar.",
-      },
-      {
-        q: "¿Vale la pena apostar por la exportación?",
-        a: "Depende de tu capacidad, no de tu voluntad. El mercado externo crece, pero el importador no compra una botella: compra un proveedor que sostenga volumen y consistencia campaña tras campaña. Si eso todavía no es tu caso, rinde más consolidar la marca en el mercado nacional y el enoturismo, y preparar la exportación mientras tanto.",
+        q: "¿Trabajan con bodegas pequeñas o solo con las grandes?",
+        a: "Con bodegas pequeñas también, y suele ser donde más se nota el cambio: una marca bien construida y una etiqueta que sostiene el precio pesan más cuando no hay presupuesto para competir por volumen. Lo que sí hace falta es producto estable y capacidad para atender lo que se venda.",
       },
       {
         q: "¿Ayudan con el diseño de la etiqueta?",
         a: "Sí, y suele ser el punto donde más se gana. La etiqueta es lo único de tu producto que el cliente ve antes de probarlo, y es lo que sostiene el precio en un estante donde todas las botellas prometen tradición.",
       },
       {
-        q: "¿Se puede vender pisco por internet en Perú?",
-        a: "Sí, y las bodegas lo hacen. Lo que hay que dejar resuelto antes de invertir en atraer tráfico es la logística —embalaje, transportista que acepte alcohol y cobertura real por provincia— y la verificación de mayoría de edad en la compra.",
+        q: "¿Trabajan enoturismo y visitas a la bodega?",
+        a: "Sí. Grabamos la experiencia real en tu bodega, montamos el sistema de reservas para que la agenda no dependa de contestar mensajes a mano y empujamos por temporada —vendimia, feriados largos, fiestas—, que es cuando la gente decide venir.",
+      },
+      {
+        q: "¿Se encargan del envío de las botellas?",
+        a: "No. El embalaje, el transportista y la cobertura son tuyos; nosotros no despachamos. Lo que hacemos es no abrir la tienda hasta que esas tres cosas estén decididas y escritas en la ficha del producto, porque es la primera duda de quien compra desde fuera de Ica.",
+      },
+      {
+        q: "¿Qué necesitan de mi lado para empezar?",
+        a: "Acceso a la bodega para grabar una vez por temporada, la información real del producto (valle, variedad, método, premios verificables), quién responde los pedidos y a qué provincias llegas hoy. Con eso arrancamos; lo demás lo construimos nosotros.",
+      },
+      {
+        q: "¿En cuánto tiempo se ve la primera venta online?",
+        a: "Las primeras ventas suelen aparecer en las primeras semanas de campaña, pero el primer mes es calibración: hay poco historial y las cifras se mueven mucho. La conversación seria sobre si el canal funciona es al segundo mes, con datos suficientes para decidir.",
+      },
+      {
+        q: "¿Atienden bodegas fuera de Ica?",
+        a: "Sí, en todo el Perú. Operamos desde Ica, así que para bodegas de la región el trabajo de grabación es más fácil de agendar; fuera de la región viajamos para el rodaje y el resto se maneja a distancia con reuniones fijas.",
       },
     ],
     cierre: { h2: "Tu bodega merece más mesas", cta: "Agenda una llamada" },
