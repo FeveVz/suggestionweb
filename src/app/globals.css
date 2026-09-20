@@ -504,8 +504,17 @@ img, svg, video { max-width: 100%; }
    solo realzan. El scroll-reveal solo oculta bajo <html class="js">.
    ============================================================ */
 
-/* Entradas en carga (CSS puro, terminan visibles aunque no animen) */
-@keyframes hk-enter-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+/* Entradas en carga (CSS puro, terminan visibles aunque no animen).
+   ⚠️ NO animar la opacidad aquí. Estas clases visten el hero, que es el
+   elemento que define el LCP. Chrome no cuenta como "pintado" nada que esté
+   en opacity:0, así que el texto existía desde el primer segundo y el LCP no
+   arrancaba hasta que la animación lo hacía visible. Medido el 2026-09-20:
+   7,0 s de LCP en la home, de los cuales 6,2 s eran espera de pintado, con el
+   servidor respondiendo en 0,8 s. En el artículo era peor: el elemento LCP
+   acababa siendo el logo de la cabecera, lo único que se pintaba a tiempo.
+   Animando solo el desplazamiento, el texto se pinta en el primer frame y la
+   entrada se sigue viendo igual. */
+@keyframes hk-enter-up { from { transform: translateY(30px); } to { transform: none; } }
 @keyframes hk-blot-in { from { opacity: 0; transform: scale(0.84) rotate(-7deg); } to { opacity: 1; transform: none; } }
 @keyframes hk-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
 
@@ -536,8 +545,10 @@ img, svg, video { max-width: 100%; }
 .hk-logo { filter: grayscale(1); opacity: 0.75; transition: filter var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
 .hk-logo:hover { filter: none; opacity: 1; }
 
-/* Transición de página (template.tsx) */
-@keyframes hk-page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+/* Transición de página (template.tsx). Misma regla que hk-enter-up: este div
+   envuelve TODAS las páginas, así que un fundido desde opacity:0 aquí retrasa
+   el pintado de cualquier cosa que haya dentro. Solo desplazamiento. */
+@keyframes hk-page-in { from { transform: translateY(10px); } to { transform: none; } }
 .hk-page-in { animation: hk-page-in 0.5s var(--ease-out) both; }
 
 /* Cursor personalizado (punto con mezcla; crece sobre interactivos) */
