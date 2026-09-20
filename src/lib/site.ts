@@ -19,7 +19,7 @@ export const site = {
   description:
     "Agencia de marketing de performance en Ica, Perú. Convertimos atención en ventas: leads, citas y cierres medibles.",
   locale: "es_PE",
-  lang: "es",
+  lang: "es-PE",
   hreflang: "es-PE",
 
   // NAP — idéntico en web, GBP y directorios

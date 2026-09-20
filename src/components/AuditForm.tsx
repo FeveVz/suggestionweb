@@ -93,10 +93,10 @@ export default function AuditForm() {
           {aviso}
         </p>
       )}
-      <F l="Nombre *"><input name="nombre" required placeholder="Tu nombre" className="hk-input" style={input} /></F>
-      <F l="Negocio *"><input name="negocio" required placeholder="Empresa / rubro" className="hk-input" style={input} /></F>
-      <F l="WhatsApp *"><input name="telefono" required type="tel" placeholder="+51 ..." className="hk-input" style={input} /></F>
-      <F l="Web o Instagram (opcional)"><input name="web" placeholder="tunegocio.pe / @tunegocio" className="hk-input" style={input} /></F>
+      <F l="Nombre *"><input name="nombre" required autoComplete="name" placeholder="Tu nombre" className="hk-input" style={input} /></F>
+      <F l="Negocio *"><input name="negocio" required autoComplete="organization" placeholder="Empresa / rubro" className="hk-input" style={input} /></F>
+      <F l="WhatsApp *"><input name="telefono" required type="tel" autoComplete="tel" placeholder="+51 ..." className="hk-input" style={input} /></F>
+      <F l="Web o Instagram (opcional)"><input name="web" autoComplete="url" placeholder="tunegocio.pe / @tunegocio" className="hk-input" style={input} /></F>
       <F l="¿Cuánto inviertes al mes en publicidad?">
         <select name="inversion" className="hk-input" style={input} defaultValue="Aún no invierto">
           <option>Aún no invierto</option>

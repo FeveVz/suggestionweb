@@ -28,6 +28,15 @@ export type Caso = {
   autor?: string;
   servicios: { label: string; href: string }[];
   imagenes?: { src: string; alt: string; cap: string }[];
+  /**
+   * Fechas reales de la PÁGINA, no del proyecto. Google pide `datePublished`
+   * e `image` para dar resultados enriquecidos a un Article y las cuatro
+   * páginas los emitían vacíos. Las fechas salen del historial del repo: las
+   * cuatro se publicaron el 2026-07-01 (e2c1a7a) y se reescribieron el
+   * 2026-08-28 (18b05cd). Si se reescribe un caso, actualizar `revisado`.
+   */
+  publicado: string;
+  revisado: string;
   /** Cuerpo editorial: el porqué detrás de los números. */
   secciones?: Seccion[];
   /** Preguntas frecuentes del caso. Emiten FAQPage. */
@@ -37,6 +46,8 @@ export type Caso = {
 export const CASOS_DETALLE: Caso[] = [
   {
     slug: "inmobiliaria-ceinys",
+    publicado: "2026-07-01",
+    revisado: "2026-08-28",
     cliente: "Inmobiliaria Ceinys",
     sector: "Inmobiliario",
     sectorHref: "/marketing-inmobiliario",
@@ -144,6 +155,8 @@ export const CASOS_DETALLE: Caso[] = [
   },
   {
     slug: "granjas-bonanza",
+    publicado: "2026-07-01",
+    revisado: "2026-08-28",
     cliente: "Granjas Bonanza",
     sector: "Marcas y consumo",
     sectorHref: "/marketing-marcas-consumo",
@@ -226,6 +239,8 @@ export const CASOS_DETALLE: Caso[] = [
   },
   {
     slug: "hoteles-senor-de-luren",
+    publicado: "2026-07-01",
+    revisado: "2026-08-28",
     cliente: "Hoteles Señor de Luren",
     sector: "Turismo",
     sectorHref: "/marketing-turismo",
@@ -321,6 +336,8 @@ export const CASOS_DETALLE: Caso[] = [
 
 CASOS_DETALLE.push({
   slug: "autoniza-eventos",
+    publicado: "2026-07-01",
+    revisado: "2026-08-28",
   cliente: "Autoniza",
   sector: "Automotriz",
   sectorHref: "/marketing-automotriz",

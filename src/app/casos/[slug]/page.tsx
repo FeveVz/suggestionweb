@@ -11,7 +11,7 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import CountUp from "@/components/CountUp";
 import { buildMetadata } from "@/lib/seo";
-import { absoluteUrl, ORG_ID } from "@/lib/site";
+import { absoluteUrl, ORG_ID, site } from "@/lib/site";
 import { CASOS_DETALLE, getCaso, allCasoSlugs } from "@/content/casos";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -38,11 +38,19 @@ export default async function CasoPage({ params }: Params) {
     description: x.h1,
   }));
 
+  // datePublished e image son requisitos de Google para un Article: sin ellos
+  // el marcado existe pero no compite por resultado enriquecido. Las fechas
+  // vienen del propio caso (ver el comentario en content/casos.ts) y la imagen
+  // es la primera de la galería si la tiene; si no, la de compartir del sitio,
+  // que es exactamente la que ya declara su og:image.
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: c.h1,
     description: c.metaDescription,
+    image: absoluteUrl(c.imagenes?.[0]?.src ?? site.ogImage),
+    datePublished: c.publicado,
+    dateModified: c.revisado,
     author: { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: absoluteUrl(`/casos/${c.slug}`),

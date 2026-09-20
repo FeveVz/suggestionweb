@@ -137,7 +137,11 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
         <span style={{ color: 'var(--orange)', opacity: marketWins ? 1 : 0.45, transition: 'opacity var(--dur-base)' }}>Lo que el mercado ve</span>
         <span style={{ color: 'var(--cyan)', opacity: usWins ? 1 : 0.45, transition: 'opacity var(--dur-base)' }}>Lo que vemos nosotros</span>
       </figcaption>
-      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, font: 'var(--fw-light) var(--fs-xs) var(--font-body)', color: 'var(--text-muted)' }}>
+      {/* --text-muted (#696969) sobre negro da 3,83:1 y el minimo para texto
+          pequeño es 4,5:1. Es el mismo error que ya aparecio en .hk-sectorrow-num
+          y en "PASO n / 3": token de fondo claro usado sobre oscuro. Sobre
+          oscuro va --text-on-inverse-mut (#b3b3b3, 10:1). */}
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, font: 'var(--fw-light) var(--fs-xs) var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 8 4 4-4 4" /><path d="M2 12h20" /><path d="m6 8-4 4 4 4" /></svg>
         {touched ? 'Esto es lo que cambia un buen marketing.' : 'Arrastra y descúbrelo.'}
       </span>
@@ -427,9 +431,23 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
 /* ============================================================
    Formulario de contacto → WhatsApp
    ============================================================ */
+/**
+ * Autorrelleno del móvil. Sin esto, quien escribe desde el teléfono teclea su
+ * nombre y su correo enteros, que es justo donde se abandona un formulario.
+ * El campo trampa (`website`) va aparte, con autoComplete="off" a propósito.
+ */
+const AUTOCOMPLETAR: Record<string, string> = {
+  nombre: 'name',
+  email: 'email',
+  negocio: 'organization',
+  telefono: 'tel',
+  web: 'url',
+};
+
 function Field({ label, name, type = 'text', textarea = false, required = false, placeholder, style }: { label: string; name: string; type?: string; textarea?: boolean; required?: boolean; placeholder?: string; style?: React.CSSProperties }) {
   const common = {
     name, required, placeholder,
+    autoComplete: AUTOCOMPLETAR[name],
     className: 'hk-input',
     style: {
       font: 'var(--fw-light) var(--fs-base)/1.4 var(--font-body)', color: 'var(--white)', background: 'var(--ink-800)',

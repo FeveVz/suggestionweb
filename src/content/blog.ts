@@ -952,7 +952,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "cuanto-invertir-en-ads-peru",
     categoria: "performance",
-    title: "¿Cuánto Invertir en Google Ads y Meta Ads en Perú? | Suggestion",
+    title: "Cuánto Invertir en Google y Meta Ads en Perú | Suggestion",
     description:
       "Cómo calcular tu presupuesto de Google Ads y Meta Ads en Perú a partir de tu meta de ventas, no de una cifra mágica: el método, la tabla y los errores. 2026.",
     h1: "¿Cuánto invertir en Google Ads y Meta Ads en Perú?",
@@ -2634,7 +2634,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "vender-proyecto-en-preventa",
     categoria: "inmobiliario",
-    title: "Cómo Vender un Proyecto Inmobiliario en Preventa | Suggestion",
+    title: "Vender un Proyecto Inmobiliario en Preventa | Suggestion",
     description:
       "Cómo vender un proyecto inmobiliario en preventa: estrategia de valorización, captación de citas y seguimiento para cerrar antes de construir.",
     h1: "Cómo vender un proyecto inmobiliario en preventa",
@@ -2969,7 +2969,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "publicidad-para-venta-de-autos",
     categoria: "automotriz",
-    title: "Publicidad para Venta de Autos: Ideas que Funcionan | Suggestion",
+    title: "Publicidad para Venta de Autos que Funciona | Suggestion",
     description:
       "Ideas de publicidad para venta de autos que generan interés y citas: formatos, mensajes y ofertas que mueven al comprador. Guía práctica 2026.",
     h1: "Publicidad para venta de autos: ideas que funcionan",

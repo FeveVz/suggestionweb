@@ -133,9 +133,21 @@ export default function HeroShowcase() {
           ))}
         </motion.div>
         {/* Indicador de casos (también navegable) */}
-        <div style={{ display: "flex", justifyContent: "center", gap: 6, marginTop: 10 }}>
+        {/* El punto se ve de 7 px, pero el boton mide 24x24: era el unico fallo
+            de accesibilidad que Lighthouse encontraba en la home (WCAG 2.2
+            pide 24x24 de area tactil). El gap negativo compensa el ancho nuevo
+            para que el grupo de puntos siga viendose igual de junto. */}
+        <div style={{ display: "flex", justifyContent: "center", gap: 0, marginTop: 2 }}>
           {CASES.map((c, i) => (
-            <button key={c.k} onClick={() => setCi(i)} aria-label={c.k} style={{ width: 7, height: 7, borderRadius: "50%", border: "none", padding: 0, cursor: "pointer", background: i === ci ? "var(--cyan)" : "var(--ink-200)", transition: "background var(--dur-base)" }} />
+            <button
+              key={c.k}
+              onClick={() => setCi(i)}
+              aria-label={c.k}
+              aria-current={i === ci}
+              style={{ width: 24, height: 24, border: "none", padding: 0, background: "none", cursor: "pointer", display: "grid", placeItems: "center" }}
+            >
+              <span aria-hidden style={{ width: 7, height: 7, borderRadius: "50%", background: i === ci ? "var(--cyan)" : "var(--ink-200)", transition: "background var(--dur-base)" }} />
+            </button>
           ))}
         </div>
       </div>

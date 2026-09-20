@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Section, Label } from "@/components/brand/parts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogCard from "@/components/BlogCard";
+import SectionHeading from "@/components/SectionHeading";
 import Secciones from "@/components/Secciones";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
@@ -49,7 +50,13 @@ export default async function BlogCategoria({ params }: Params) {
       </section>
 
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)" }}>
+        {/* Este H2 no es decorativo: las tarjetas titulan en H3 y, al ir
+            primero, la página saltaba del H1 al H3. Un lector de pantalla que
+            navega por encabezados perdía el nivel intermedio. */}
+        <SectionHeading level={2} maxWidth="30ch">
+          {posts.length === 1 ? "1 artículo en esta categoría" : `${posts.length} artículos en esta categoría`}
+        </SectionHeading>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))", gap: "var(--space-4)", marginTop: "var(--space-5)" }}>
           {posts.map((p) => (
             <BlogCard key={p.slug} post={p} categoriaNombre={c.nombre} />
           ))}
