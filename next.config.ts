@@ -1,5 +1,46 @@
 import type { NextConfig } from "next";
 
+/**
+ * Política de seguridad de contenido.
+ *
+ * ⚠️ REGLA AL TOCAR ESTO: la medición es lo primero que se rompe con una CSP
+ * mal hecha, y se rompe EN SILENCIO. Ya costó más de un mes de datos de GA4
+ * por un motivo parecido. Si se añade o quita un dominio, comprobar después en
+ * vivo que `window.google_tag_data` existe y que salen peticiones reales a
+ * `/g/collect`, `facebook.com/tr` y `clarity.ms/collect`.
+ *
+ * Quién es cada dominio:
+ * - googletagmanager + google-analytics + analytics.google.com → GA4 (GT-NNQW6GPS).
+ * - connect.facebook.net + facebook.com → Píxel de Meta.
+ * - capig.stape.pm → pasarela server-side de Stape (API de Conversiones).
+ * - clarity.ms + bing.com → Clarity (es de Microsoft y carga su propio tag).
+ *
+ * `unsafe-inline` en script-src es obligatorio hoy: Next inyecta su arranque
+ * en línea, el sitio marca `<html class="js">` así y los bloques JSON-LD son
+ * etiquetas <script>. Con nonce habría que hacer dinámicas las 92 páginas
+ * estáticas, y eso cuesta más de lo que protege en un sitio sin sesiones.
+ */
+const CSP = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  // www.facebook.com va aquí porque el Píxel envía parte de sus eventos como
+  // POST de formulario oculto a /tr/, no como imagen. Con `form-action 'self'`
+  // a secas, la consola escupía "Sending form data to facebook.com/tr
+  // violates..." y ese evento se perdía. Detectado en local antes de subirlo.
+  "form-action 'self' https://www.facebook.com",
+  "frame-ancestors 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms https://capig.stape.pm https://bat.bing.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://capig.stape.pm https://*.bing.com",
+  "frame-src 'self' https://www.facebook.com https://td.doubleclick.net https://www.googletagmanager.com",
+  "media-src 'self'",
+  "worker-src 'self' blob:",
+  "upgrade-insecure-requests",
+].join("; ");
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
@@ -57,6 +98,23 @@ const nextConfig: NextConfig = {
       {
         source: "/assets/:ruta*",
         headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
+      },
+      {
+        // Cabeceras de seguridad en todas las páginas. El sitio solo tenía
+        // HSTS (que lo pone Vercel), y Lighthouse marcaba la ausencia de CSP
+        // como severidad alta. Es un sitio con formularios que recogen datos
+        // de clientes: esto es higiene mínima.
+        source: "/:ruta*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+          },
+          { key: "Content-Security-Policy", value: CSP },
+        ],
       },
     ];
   },
