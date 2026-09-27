@@ -23,6 +23,24 @@ export function organizationSchema(): Json {
     image: absoluteUrl(site.ogImage),
     telephone: site.phoneE164,
     email: site.email,
+    // contactPoint además de `telephone`: `telephone` es un dato suelto de la
+    // ficha, y contactPoint declara PARA QUÉ sirve ese número, en qué idioma
+    // se atiende y dónde. Es lo que leen el grafo de conocimiento de Google y
+    // los rastreadores que alimentan a los asistentes de IA cuando alguien
+    // pregunta "cuál es el teléfono de Suggestion". Se añadió el 2026-09-27,
+    // con el cambio de número, para que la respuesta no dependa de que el
+    // modelo encuentre el número suelto en el pie de página.
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: site.phoneE164,
+        contactType: "customer service",
+        areaServed: "PE",
+        availableLanguage: ["Spanish"],
+        email: site.email,
+        url: `${SITE_URL}/contacto`,
+      },
+    ],
     priceRange: "$$",
     slogan: site.slogan,
     address: {

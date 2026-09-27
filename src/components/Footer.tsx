@@ -9,9 +9,21 @@ const socials = [
   { name: "Facebook", Icon: Facebook, href: site.social.facebook },
 ];
 
+/**
+ * El número aparece dos veces a propósito, con dos destinos distintos:
+ *
+ * - Escrito, enlazado a WhatsApp, porque es por donde entra la mayoría del
+ *   contacto (Meta cuenta 27 clics a WhatsApp frente a 4 formularios).
+ * - "Llamar", con `tel:`, que es lo que una persona busca desde el móvil
+ *   cuando llega por "imprenta cerca de mí" y quiere resolver ya. De paso es
+ *   la forma inequívoca de decirle a Google y a los rastreadores de IA cuál
+ *   es el teléfono del negocio: un `wa.me/51...` es una URL, un `tel:` es un
+ *   número de teléfono declarado como tal.
+ */
 const contactLinks = [
   { label: site.email, href: `mailto:${site.email}` },
   { label: site.phoneDisplay, href: whatsappLink() },
+  { label: "Llamar", href: `tel:${site.phoneE164}` },
   { label: "Agenda una llamada", href: "/contacto" },
 ];
 
