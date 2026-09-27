@@ -7,7 +7,7 @@ import { Label, Btn, Blot } from './parts';
 import { leadDedup, getAttribution } from '@/lib/tracking';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
-const WHATSAPP = '51937770159';
+const WHATSAPP = '51920010308';
 
 export function usePrefersReduced() {
   const [r, setR] = React.useState(false);

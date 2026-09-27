@@ -66,7 +66,7 @@ Con CPL (costo por lead), ROAS (retorno de la inversión publicitaria) y cierres
 Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto de tu funnel —sin humo, sin promesas mágicas.
 
 *Formulario:* Nombre · Negocio · Email · ¿Qué quieres lograr?  **(Enviar por WhatsApp)**
-*+51 937 770 159 · hola@suggestion.pe · Respondemos en menos de 24 h hábiles.*
+*+51 920 010 308 · hola@suggestion.pe · Respondemos en menos de 24 h hábiles.*
 
 ---
 
@@ -109,7 +109,7 @@ Depende de tus objetivos y tu mercado. En la llamada de diagnóstico te damos un
 La pauta puede traer leads en días; el posicionamiento y la marca, en meses. Te decimos qué esperar de cada uno desde el inicio.
 
 ## Cierre — H2: Lleva tu marketing a resultados
-**(Agenda tu diagnóstico gratuito)** · *o escríbenos por WhatsApp: +51 937 770 159.*
+**(Agenda tu diagnóstico gratuito)** · *o escríbenos por WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -161,7 +161,7 @@ Es renovar una marca existente. Conviene cuando tu marca ya no representa lo que
 Depende del alcance. En la llamada definimos qué necesitas realmente, sin venderte de más.
 
 ## Cierre — H2: Tu marca merece vender
-**(Construyamos tu marca)** · *WhatsApp: +51 937 770 159.*
+**(Construyamos tu marca)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -210,7 +210,7 @@ Diseño + producción + logística en un solo lugar. No solo imprimimos: pensamo
 **¿Cuánto demora la entrega?** Según cantidad y producto; siempre con fecha comprometida.
 
 ## Cierre — H2: Tu marca en manos de tus clientes
-**(Pide tu cotización)** · *WhatsApp: +51 937 770 159.*
+**(Pide tu cotización)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -263,7 +263,7 @@ No solo imprimimos: revisamos tu arte para que salga bien a la primera, y si no 
 **¿Atienden fuera de Ica?** Sí, coordinamos envíos a otras regiones.
 
 ## Cierre — H2: Tu material listo y a tiempo
-**(Cotiza tu impresión)** · *WhatsApp: +51 937 770 159.*
+**(Cotiza tu impresión)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -316,7 +316,7 @@ Vende directo, con una experiencia de compra sin fricción.
 **¿En cuánto tiempo está lista?** Una landing en pocos días; una web corporativa o tienda, algunas semanas. Te damos plazos claros.
 
 ## Cierre — H2: Tu web debería traerte clientes
-**(Quiero una web que venda)** · *WhatsApp: +51 937 770 159.*
+**(Quiero una web que venda)** · *WhatsApp: +51 920 010 308.*
 
 ---
 

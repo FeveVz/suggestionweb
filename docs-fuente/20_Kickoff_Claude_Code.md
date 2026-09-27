@@ -50,7 +50,7 @@ Sigue el roadmap del doc 16. No le pidas "construye todo" de una; va por etapas 
    `Crea los componentes del doc 16 §5 (Header con mega-menú, Footer, Hero, CtaButton/WhatsAppButton, ProofBar, SectionHeading, Faq con FAQPage schema, Breadcrumbs, ContactForm a wa.me, JsonLd, etc.). Accesibles, Server Components donde se pueda.`
 
 3. **Home** (referencia de estilo)
-   `Construye la Home con el copy literal del doc 06 §1, estructura H del doc 04 §1 y schema del doc 12. CTA primario "Agenda una llamada", secundario WhatsApp +51 937 770 159.`
+   `Construye la Home con el copy literal del doc 06 §1, estructura H del doc 04 §1 y schema del doc 12. CTA primario "Agenda una llamada", secundario WhatsApp +51 920 010 308.`
 
 4. **Datos + páginas de servicios (16+5)**
    `Crea content/servicios.ts poblado con el copy de los docs 06, 07 y 09 y la estructura/meta de docs 04-05. Genera /servicios/[slug] data-driven con generateStaticParams. Respeta keyword principal única por página (doc 10) y noindex en categorías que dupliquen al hijo.`
@@ -73,7 +73,7 @@ Sigue el roadmap del doc 16. No le pidas "construye todo" de una; va por etapas 
 - Una keyword principal por página; copy literal de los docs, sin relleno.
 - Un solo H1 por página; jerarquía H2-H6 exacta de docs 04/05.
 - Cada página con su Schema (doc 12) vía `<JsonLd>`.
-- CTA primario "Agenda una llamada" + WhatsApp +51 937 770 159 en toda página.
+- CTA primario "Agenda una llamada" + WhatsApp +51 920 010 308 en toda página.
 - Mobile-first, Core Web Vitals primero, `next/image`.
 - Voz de marca: directa, anti-vanidad. Español Perú (`lang="es"`, hreflang `es-PE`).
 

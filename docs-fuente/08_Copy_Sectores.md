@@ -1,5 +1,5 @@
 # Copy final — Sectores (hub + 5 landings) — Suggestion
-**Fase 5.** Páginas de conversión por vertical. Voz de marca. **(CTA)** = botón · *itálica* = microcopy/maquetado. CTA secundario: WhatsApp +51 937 770 159.
+**Fase 5.** Páginas de conversión por vertical. Voz de marca. **(CTA)** = botón · *itálica* = microcopy/maquetado. CTA secundario: WhatsApp +51 920 010 308.
 Bajo volumen, alto win-rate: el objetivo de estas páginas es **convertir**, no traer tráfico masivo.
 
 ---
@@ -56,7 +56,7 @@ Con leads bien segmentados, una landing que agende citas y un seguimiento automa
 **¿Trabajan preventa y lanzamiento?** Sí, desde la etapa inicial, que es cuando la valorización vende sola.
 
 ## Cierre — H2: Llenemos tu sala de ventas
-**(Agenda una llamada)** · *WhatsApp: +51 937 770 159.*
+**(Agenda una llamada)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -88,7 +88,7 @@ Generación y calificación de prospectos conectada a tu equipo comercial, para 
 Con segmentación precisa, creatividades que filtran al curioso y un seguimiento rápido. Menos leads basura, más test drives reales.
 
 ## Cierre — H2: Del clic al cierre en piso
-**(Agenda una llamada)** · *WhatsApp: +51 937 770 159.*
+**(Agenda una llamada)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -123,7 +123,7 @@ Llena mesas en los días flojos con promociones y contenido que de verdad mueven
 Sí. Con ofertas segmentadas y campañas de demanda directa se llena la baja, como hicimos con Hoteles Señor de Luren.
 
 ## Cierre — H2: Llena tu temporada (y la baja también)
-**(Agenda una llamada)** · *WhatsApp: +51 937 770 159.*
+**(Agenda una llamada)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -158,7 +158,7 @@ Reforzamos tu presencia con merchandising, material POP e impresión que tu clie
 Sí, cuando está atado a estrategia comercial. Una marca fuerte reduce la objeción de precio y acelera la decisión.
 
 ## Cierre — H2: Demanda que se vuelve venta
-**(Agenda una llamada)** · *WhatsApp: +51 937 770 159.*
+**(Agenda una llamada)** · *WhatsApp: +51 920 010 308.*
 
 ---
 
@@ -193,7 +193,7 @@ Desde un consultorio independiente hasta un policlínico: presencia profesional 
 Con campañas segmentadas por especialidad y zona, una web que transmita confianza y un seguimiento que no deje caer la cita.
 
 ## Cierre — H2: Llena tu agenda de pacientes
-**(Agenda una llamada)** · *WhatsApp: +51 937 770 159.*
+**(Agenda una llamada)** · *WhatsApp: +51 920 010 308.*
 
 ---
 

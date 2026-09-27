@@ -23,9 +23,9 @@ export const site = {
   hreflang: "es-PE",
 
   // NAP — idéntico en web, GBP y directorios
-  phoneDisplay: "+51 937 770 159",
-  phoneE164: "+51937770159",
-  whatsappNumber: "51937770159",
+  phoneDisplay: "+51 920 010 308",
+  phoneE164: "+51920010308",
+  whatsappNumber: "51920010308",
   email: "hola@suggestion.pe",
   city: "Ica",
   region: "Ica",

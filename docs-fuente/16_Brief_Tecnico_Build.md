@@ -100,7 +100,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 - Objetivo: LCP < 2.5s, INP < 200ms, CLS < 0.1, Lighthouse ≥ 90.
 
 ## 8. Formulario y conversión
-- `ContactForm` arma un mensaje y abre `https://wa.me/51937770159?text=...` (sin backend al inicio).
+- `ContactForm` arma un mensaje y abre `https://wa.me/51920010308?text=...` (sin backend al inicio).
 - Opcional fase 2: endpoint `/api/contacto` + envío de email.
 - Eventos GA4: `whatsapp_click`, `form_submit`, `agenda_click`.
 

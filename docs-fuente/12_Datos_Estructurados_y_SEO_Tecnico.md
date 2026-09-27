@@ -35,7 +35,7 @@ Las mejores técnicas, aplicadas a suggestion.pe. Todo el Schema en **JSON-LD** 
   "url": "https://suggestion.pe",
   "logo": "https://suggestion.pe/logo.png",
   "image": "https://suggestion.pe/og-image.png",
-  "telephone": "+51937770159",
+  "telephone": "+51920010308",
   "email": "hola@suggestion.pe",
   "priceRange": "$$",
   "address": { "@type": "PostalAddress", "addressLocality": "Ica", "addressRegion": "Ica", "addressCountry": "PE" },

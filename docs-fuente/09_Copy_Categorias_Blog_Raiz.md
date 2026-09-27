@@ -1,5 +1,5 @@
 # Copy final — Categorías, Blog y Páginas raíz — Suggestion
-**Fase 5 (cierre).** Voz de marca. **(CTA)** = botón · *itálica* = microcopy/maquetado. CTA secundario: WhatsApp +51 937 770 159.
+**Fase 5 (cierre).** Voz de marca. **(CTA)** = botón · *itálica* = microcopy/maquetado. CTA secundario: WhatsApp +51 920 010 308.
 Categorías y blog = páginas **hub**: intro corta + enlaces a sus hijas. Las raíz = marca y conversión.
 
 ---
@@ -128,7 +128,7 @@ Performance, no vanidad · Método propio por vertical · Base en Ica, alcance n
 Estrategia, performance, creatividad, audiovisual y producción, bajo un mismo techo. *(Equipo → fotos/roles)*
 
 **H2 (cierre): Trabajemos juntos**
-**(Agenda una llamada)** · *WhatsApp: +51 937 770 159.*
+**(Agenda una llamada)** · *WhatsApp: +51 920 010 308.*
 
 ## C2. Casos de éxito — `/casos`
 **Title:** Casos de Éxito | Suggestion
@@ -147,7 +147,7 @@ Esto es lo que pasa cuando el marketing se mide en ventas, no en alcance.
 > "En una sola campaña generamos 75 reservas. Los resultados hablan por sí solos." — Roberto, Gerente General.
 
 **H2 (cierre): Hablemos de tu caso**
-**(Hablemos de tu caso)** · *WhatsApp: +51 937 770 159.*
+**(Hablemos de tu caso)** · *WhatsApp: +51 920 010 308.*
 
 ## C3. Contacto / Agenda — `/contacto`
 **Title:** Contacto: Agenda una Llamada | Suggestion
@@ -158,7 +158,7 @@ Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto de tu funne
 
 **H2: Escríbenos**
 *Formulario:* Nombre · Negocio · Email · ¿Qué quieres lograr?  **(Enviar por WhatsApp)**
-*+51 937 770 159 · hola@suggestion.pe · Ica, Perú · Atención a todo el país.*
+*+51 920 010 308 · hola@suggestion.pe · Ica, Perú · Atención a todo el país.*
 *Respondemos en menos de 24 h hábiles.*
 
 ---

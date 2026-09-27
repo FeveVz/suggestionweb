@@ -2,7 +2,7 @@ import { Btn } from "@/components/brand/parts";
 import { whatsappLink } from "@/lib/site";
 
 /**
- * CTA secundario: WhatsApp (+51 937 770 159) con mensaje pre-rellenado
+ * CTA secundario: WhatsApp (+51 920 010 308) con mensaje pre-rellenado
  * opcional (doc 16 §5, CLAUDE.md regla 5).
  */
 

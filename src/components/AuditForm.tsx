@@ -10,7 +10,7 @@ import { track, leadDedup, getAttribution } from "@/lib/tracking";
  * redirige a /gracias (conversión medible).
  */
 
-const WHATSAPP = "51937770159";
+const WHATSAPP = "51920010308";
 
 const label: React.CSSProperties = { font: "var(--fw-medium) var(--fs-sm)/1 var(--font-body)", color: "var(--white)" };
 const input: React.CSSProperties = {

@@ -225,7 +225,7 @@ export const SECTORES: Sector[] = [
       },
       {
         q: "¿Trabajan con concesionarios fuera de Ica?",
-        a: "Sí. Operamos para todo el Perú con el mismo método: campaña, calificación, agenda y reporte. Para eventos y grabaciones viajamos a tu piso de venta; el resto se maneja a distancia con reuniones fijas. Escríbenos al +51 937 770 159.",
+        a: "Sí. Operamos para todo el Perú con el mismo método: campaña, calificación, agenda y reporte. Para eventos y grabaciones viajamos a tu piso de venta; el resto se maneja a distancia con reuniones fijas. Escríbenos al +51 920 010 308.",
       },
       {
         q: "¿Pueden llevar la marca y el concesionario al mismo tiempo?",
