@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const root: MetadataRoute.Sitemap = [
     { url: u("/"), lastModified: GLOBAL, changeFrequency: "weekly", priority: 1 },
     { url: u("/nosotros"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.7 },
+    { url: u("/metodo"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.8 },
     { url: u("/casos"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.7 },
     { url: u("/auditoria-gratis"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.9 },
     { url: u("/privacidad"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },

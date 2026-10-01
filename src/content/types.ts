@@ -57,6 +57,8 @@ export type PlanPrecio = {
 
 /** Servicio (16) o categoría hub (5). Ambos viven en /servicios/[slug]. */
 export type Servicio = {
+  /** Casos publicados que prueban lo que esta página promete. */
+  pruebas?: Prueba[];
   slug: string;
   tipo: "servicio" | "categoria";
   /** slug de la categoría padre (solo servicios). */
@@ -105,6 +107,14 @@ export type Ciudad = {
   faq: Faq[];
   cierre: Cierre;
 };
+
+/**
+ * Enlace a una prueba publicada (un caso con cifras) desde una página de
+ * servicio. Nace con la pauta: una página que promete ROI y no enseña un
+ * resultado medido es una promesa más. Opcional a propósito: solo se pone
+ * donde hay caso que enseñar.
+ */
+export type Prueba = { label: string; href: string };
 
 export type Sector = {
   slug: string;

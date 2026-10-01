@@ -770,6 +770,10 @@ const SERVICIOS_LIST: Servicio[] = [
   {
     slug: "publicidad-digital",
     tipo: "servicio",
+    pruebas: [
+      { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Publicidad Digital",
     metaTitle: "Publicidad Digital en Ica: Google y Meta Ads | Suggestion",
@@ -779,7 +783,27 @@ const SERVICIOS_LIST: Servicio[] = [
     hero: "Pauta que se paga sola. Gestionamos tus campañas en Google y Meta con un solo norte: que cada sol invertido vuelva en leads y ventas, no en alcance que no cierra.",
     cta: "Pide tu propuesta",
     keyword: "publicidad digital",
+    // Barra de prueba propia: la de por defecto abre con el caso de Ceinys de
+    // S/3,000 → S/350K, y en esta página queda a tres líneas del bloque del
+    // caso nuevo del MISMO cliente. Dos períodos distintos, medidos con
+    // criterios distintos, invitando a una comparación que no se sostiene.
+    proof:
+      "Autoniza: 8 autos vendidos en 2 eventos · Granjas Bonanza: 15 contratos con S/2,500 de inversión · Señor de Luren: 75 reservas en una sola campaña.",
     secciones: [
+      {
+        h2: "Un resultado medido, no una promesa",
+        parrafo:
+          "Del 26 de agosto al 29 de septiembre de 2026, Grupo Inmobiliario Ceinys, venta de lotes. Es el último reporte que publicamos con autorización del cliente, y está entero —con la resta de lo que no nos corresponde— en la página del caso.",
+        tabla: {
+          cabeceras: ["", ""],
+          filas: [
+            ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
+            ["Lotes cerrados por leads que entraron durante el período", "18"],
+            ["Publicidad por lote vendido", "S/230.51"],
+          ],
+          nota: "Resultado medido al 29 de septiembre de 2026. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",
+        },
+      },
       {
         h2: "Campañas de Google Ads",
         parrafo: "Aparece justo cuando tu cliente está buscando lo que vendes.",

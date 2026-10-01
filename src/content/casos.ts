@@ -37,6 +37,19 @@ export type Caso = {
    */
   publicado: string;
   revisado: string;
+  /**
+   * Agrupa casos del mismo cliente. Dos casos del mismo cliente con períodos y
+   * criterios distintos no deben aparecer uno al lado del otro: el lector
+   * compara cifras que no son comparables. Se usa para excluirlos del bloque
+   * "Otros casos", no para despublicar nada.
+   */
+  grupo?: string;
+  /**
+   * Enlaces que no son servicios: el método, otro caso del mismo cliente.
+   * Nace con el caso de septiembre de Ceinys, que necesita mandar a la página
+   * donde se explica cómo se cuentan esas cifras.
+   */
+  enlaces?: { label: string; href: string }[];
   /** Cuerpo editorial: el porqué detrás de los números. */
   secciones?: Seccion[];
   /** Preguntas frecuentes del caso. Emiten FAQPage. */
@@ -45,7 +58,131 @@ export type Caso = {
 
 export const CASOS_DETALLE: Caso[] = [
   {
+    slug: "ceinys-septiembre-2026",
+    grupo: "ceinys",
+    publicado: "2026-10-01",
+    revisado: "2026-10-01",
+    cliente: "Grupo Inmobiliario Ceinys",
+    sector: "Inmobiliario",
+    sectorHref: "/marketing-inmobiliario",
+    metaTitle: "Caso Ceinys: 18 Lotes a S/230.51 de Pauta | Suggestion",
+    metaDescription:
+      "Del 26 de agosto al 29 de septiembre de 2026 (35 días): S/4,149.21 en Meta Ads y 18 lotes cerrados con leads que entraron en ese período. La resta y el embudo.",
+    h1: "Ceinys: 18 lotes cerrados a S/230.51 de publicidad por lote",
+    resumen:
+      "Del 26 de agosto al 29 de septiembre de 2026 —35 días— el Grupo Inmobiliario Ceinys cerró 25 lotes. No nos atribuimos los 25: siete los cerró gente que ya estaba en cartera antes del 26 de agosto, y esas ventas las pagó el esfuerzo de meses anteriores. Quedan 18, cerrados con leads que entraron durante el período, y esa es la cifra que usamos. La resta la hacemos nosotros, antes de que la haga usted.",
+    stats: [
+      { valor: "S/4,149.21", label: "Invertido en Meta Ads del 26/08 al 29/09/2026" },
+      { valor: "18", label: "Lotes cerrados por leads que entraron durante el período" },
+      { valor: "S/230.51", label: "Publicidad por lote vendido" },
+      { valor: "12", label: "De esos 18, los que además tienen origen de anuncio en el CRM" },
+    ],
+    reto: "Ceinys vende lotes en varios proyectos a la vez, y el cierre casi nunca ocurre el mismo mes que el primer mensaje: hay visita, hay familia que decide y hay cartera que madura durante semanas. Con ese desfase, la pregunta difícil no es cuántas conversaciones trajo la pauta, sino cuáles de las ventas del período puede reclamar como suyas la pauta de ese mismo período.",
+    solucion: [
+      { titulo: "Un nombre que el CRM también entiende", texto: "La campaña en Meta y el campo de campaña del CRM comparten la misma estructura, así que en la mayoría de los casos el origen queda escrito en el lead al crearlo. Lo que no queda atado a una campaña no se completa después de memoria: se reporta aparte, y por eso en esta página también está la cifra más estricta." },
+      { titulo: "La venta se cuenta cuando cierra", texto: "Un cierre de septiembre es de septiembre aunque el lead haya entrado en julio. Lo que cambia es a qué esfuerzo se le atribuye, y eso se informa aparte." },
+      { titulo: "La resta, antes del reporte", texto: "De los 25 lotes cerrados se separan los 7 que venían de cartera anterior. Lo que reportamos es el resultado de 18, no el de 25." },
+      { titulo: "Medición contra el CRM, no contra el administrador", texto: "Meta dice cuántas conversaciones pagó. El CRM dice cuántas se convirtieron en algo. El reporte cruza las dos fuentes y manda la segunda." },
+    ],
+    servicios: [
+      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "CRM y Automatización", href: "/servicios/crm-automatizacion" },
+    ],
+    enlaces: [{ label: "Cómo medimos una campaña", href: "/metodo" }],
+    secciones: [
+      {
+        h2: "La resta que casi nadie hace",
+        parrafo:
+          "Con los mismos datos se pueden titular tres cifras distintas, y las tres son ciertas. Las publicamos juntas, de la más generosa a la más estricta, y usamos la del medio.",
+        tabla: {
+          cabeceras: ["Qué se cuenta", "Lotes", "Publicidad por lote"],
+          filas: [
+            ["Cerrados durante el período", "25", "S/165.97"],
+            ["Cerrados por leads que entraron durante el período de pauta", "18", "S/230.51"],
+            ["De ese grupo, los que además tienen origen de anuncio en el CRM", "12", "S/345.77"],
+          ],
+          nota: "Los 25 incluyen 7 lotes que cerró gente de cartera anterior al período: esa venta la pagó el esfuerzo de meses anteriores, no esta pauta. La cifra que usamos es la de 18: lotes cerrados por leads que entraron durante el período, sin exigir que el CRM confirme el origen. La de 12 toma solo los lotes de esa misma cohorte en los que además el CRM confirma que el lead vino de un anuncio, y es la que sobrevive a cualquier auditoría.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "Fecha de corte",
+          texto: "Resultado medido al 29 de septiembre de 2026. Los leads que entraron durante el período siguen en proceso: estos son los lotes cerrados a la fecha de corte, no el total final. Si lo actualizamos, será con la fecha nueva al lado y dejando ver la anterior.",
+        },
+      },
+      {
+        h2: "De dónde vino lo que se vendió",
+        parrafo:
+          "Reconocer lo que no es tuyo cuesta poco y vale mucho, pero antes va un aviso que el lector merece. Los 25 lotes se pueden partir de dos maneras distintas, y las dos dan 18 y 7 por pura casualidad. La tabla de arriba separa por cuándo entró el lead. Esta separa por otra cosa: el origen que el CRM tiene escrito en ese lead. No son los mismos 18 ni los mismos 7, y solo 12 lotes cumplen las dos condiciones a la vez —son los de la tercera fila de la tabla anterior—. De los 7 que no tienen origen de anuncio, tres entraron por canales ajenos a esta pauta y cuatro quedaron sin origen registrado: de esos cuatro no sabemos de dónde vinieron, así que no los contamos como anuncio, aunque tampoco afirmamos que no lo fueran.",
+        tabla: {
+          cabeceras: ["Origen del lead", "Lotes", "% de los 25"],
+          filas: [
+            ["Con origen de anuncio en el CRM", "18", "72%"],
+            ["Otras fuentes o sin origen registrado", "7", "28%"],
+          ],
+          nota: "Este reparto es por origen del lead, no por cohorte, y por eso aquí no va ningún costo por lote: ese sale de la tabla anterior, que usa otro denominador. De estos 18 con origen de anuncio, 12 vienen de leads que entraron durante esta pauta y 6 de leads anteriores que maduraron y cerraron ahora.",
+        },
+      },
+      {
+        h2: "El embudo, con sus caídas a la vista",
+        parrafo:
+          "Un embudo sin caídas es un embudo maquillado. Este es el recorrido completo de los leads que el CRM registró durante el período, en porcentaje sobre esa misma base.",
+        tabla: {
+          cabeceras: ["Etapa", "De los leads registrados"],
+          filas: [
+            ["Recibió contacto efectivo", "78.7%"],
+            ["Llegó a interesado o más avanzado", "18.1%"],
+            ["Llegó a visita agendada o realizada", "8.8%"],
+            ["Compró", "4.6%"],
+          ],
+          nota: "Escalera acumulada: quien compró ya pasó por visita, así que los tramos no se suman.",
+        },
+        dato: {
+          cifra: "S/414.92",
+          texto: "costó cada comprador, cargando toda la inversión del período sobre los compradores cuyo lead entró en él. Por lote la cifra baja a S/230.51, porque varios compradores se llevaron más de uno.",
+        },
+      },
+      {
+        h2: "Lo que no vas a encontrar en esta página",
+        parrafo:
+          "El reporte que entregamos a Ceinys tiene once hojas. Lo que ves aquí es una parte muy pequeña, y la selección no fue casual.",
+        bullets: [
+          { titulo: "Ningún nombre de comprador", texto: "ni cuántos lotes compró cada uno. Son personas que le compraron a nuestro cliente, no material de marketing nuestro." },
+          { titulo: "Ningún nombre ni desempeño del equipo comercial", texto: "quién vendió más y quién menos es una conversación entre Ceinys y su gente." },
+          { titulo: "Ningún nombre de campaña ni de proyecto", texto: "dónde pone su presupuesto es información que su competencia pagaría por tener." },
+          { titulo: "Ningún pantallazo del administrador", texto: "una captura sin contexto no prueba nada y suele enseñar más de lo que debería." },
+        ],
+        nota: {
+          titulo: "La misma regla con todos",
+          texto: "Ceinys autorizó por escrito la publicación de estas cifras y sabe exactamente cuáles son. Con los datos de cualquier otro cliente —incluido el suyo, si trabajamos juntos— aplicamos la misma regla.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Por qué no titulan con todos los lotes cerrados en el período?",
+        a: "Porque no todos los pagó esta pauta. Siete de los 25 lotes cerrados en el período los compró gente que ya estaba en la cartera del cliente antes de que esta campaña empezara: esa venta la pagó el trabajo de meses anteriores. Al descontar esos siete quedan 18 lotes cerrados por leads que entraron durante el período de pauta, y ese es el número que usamos. Nos deja peor en el titular y mejor cuando alguien revisa.",
+      },
+      {
+        q: "¿Qué pasa con los lotes que cierren en octubre?",
+        a: "Que todavía no están contados. Un lead inmobiliario tarda semanas en decidir, así que la cohorte de septiembre sigue abierta y el número puede subir. Por eso cada cifra lleva su fecha de corte desde el primer día: si la actualizamos, se verá la fecha nueva al lado de la anterior.",
+      },
+      {
+        q: "¿Cuánto facturó Ceinys con esos lotes?",
+        a: "De este período no publicamos facturación, y no es discreción: en las once hojas del reporte cruzado no hay una sola cifra de ingresos. Lo que mide es inversión publicitaria y unidades vendidas —S/4,149.21 y 18 lotes al 29 de septiembre de 2026—, nada más. Estimar los ingresos multiplicando lotes por un precio sería inventar un número que nadie midió, y preferimos quedarnos cortos. Cuánto factura Ceinys es asunto de Ceinys.",
+      },
+      {
+        q: "¿Cómo sé que estas cifras son reales?",
+        a: "Ceinys autorizó por escrito su publicación y puede confirmarlas abriendo su propio CRM. Si estás evaluando trabajar con nosotros y quieres verificarlo, se puede coordinar.",
+      },
+      {
+        q: "¿Esto se repite en cualquier proyecto inmobiliario?",
+        a: "No automáticamente. Funcionó porque el producto era vendible, el precio competitivo y había un equipo capaz de cerrar en sala. La pauta trae a la persona correcta y la medición dice qué funciona; el cierre lo hace la gente del proyecto. Si una de esas tres partes falla, el costo por lote sube por mucho que se ajuste la campaña.",
+      },
+    ],
+  },
+  {
     slug: "inmobiliaria-ceinys",
+    grupo: "ceinys",
     publicado: "2026-07-01",
     revisado: "2026-08-28",
     cliente: "Inmobiliaria Ceinys",
@@ -78,6 +215,7 @@ export const CASOS_DETALLE: Caso[] = [
       { label: "CRM y Automatización", href: "/servicios/crm-automatizacion" },
       { label: "Producción Audiovisual", href: "/servicios/produccion-audiovisual" },
     ],
+    enlaces: [{ label: "Cómo medimos una campaña", href: "/metodo" }],
     secciones: [
       {
         h2: "Los números, en contexto",

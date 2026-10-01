@@ -32,7 +32,10 @@ export default async function CasoPage({ params }: Params) {
   const c = getCaso(slug);
   if (!c) notFound();
 
-  const otros = CASOS_DETALLE.filter((x) => x.slug !== c.slug).map((x) => ({
+  // Se excluyen los casos del mismo cliente: dos períodos del mismo proyecto,
+  // medidos con criterios distintos, invitan a una comparación que no se
+  // sostiene. Siguen publicados y accesibles desde /casos.
+  const otros = CASOS_DETALLE.filter((x) => x.slug !== c.slug && !(c.grupo && x.grupo === c.grupo)).map((x) => ({
     label: x.cliente,
     href: `/casos/${x.slug}`,
     description: x.h1,
@@ -165,6 +168,9 @@ export default async function CasoPage({ params }: Params) {
       <Section tone="light" style={{ background: "var(--surface-raised)", paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
         <div style={{ display: "grid", gap: "var(--space-7)" }}>
           <RelatedLinks title="Servicios que usó este caso" links={c.servicios} columns={c.servicios.length >= 3 ? 3 : 2} />
+          {c.enlaces && c.enlaces.length > 0 && (
+            <RelatedLinks title="Cómo se midió" links={c.enlaces} columns={2} />
+          )}
           <RelatedLinks title="Otros casos" links={otros} columns={2} />
           <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)" }}>
             ¿Tu rubro? Mira <Link href={c.sectorHref} className="hk-ulink" style={{ color: "var(--text-strong)", fontWeight: 500 }}>marketing {c.sector.toLowerCase()}</Link>.

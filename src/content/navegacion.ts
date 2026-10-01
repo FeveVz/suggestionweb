@@ -109,6 +109,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
     title: "Agencia",
     links: [
       { label: "Nosotros", href: "/nosotros" },
+      { label: "Cómo medimos", href: "/metodo" },
       { label: "Casos", href: "/casos" },
       { label: "Blog", href: "/blog" },
       { label: "Contacto", href: "/contacto" },

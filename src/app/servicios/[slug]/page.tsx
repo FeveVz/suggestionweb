@@ -89,6 +89,12 @@ export default async function ServicioPage({ params }: Params) {
   // ---- Servicio: artículo completo + enlazado de silo ----
   const related: RelatedBlock[] = [];
 
+  // Las pruebas van primero: una página que promete retorno y no enseña un
+  // resultado medido es una promesa más. Solo aparece donde hay caso publicado.
+  if (s.pruebas && s.pruebas.length) {
+    related.push({ title: "La prueba", links: s.pruebas, columns: 2 });
+  }
+
   const serviceLinks: RelatedLink[] = s.enlazaA.flatMap((sl) => {
     const r = getServicio(sl);
     return r ? [{ label: r.nombre, href: `/servicios/${r.slug}` }] : [];
