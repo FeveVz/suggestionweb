@@ -123,6 +123,20 @@ export const CASOS_DETALLE: Caso[] = [
         },
       },
       {
+        h2: "Lo mismo, contado en personas",
+        parrafo:
+          "Dieciocho lotes no son dieciocho compradores: varias familias cerraron más de uno. Contado en personas la escalera es la misma, con el mismo orden y el mismo criterio, y vuelve a haber tres cifras ciertas a la vez.",
+        tabla: {
+          cabeceras: ["Qué se cuenta", "Compradores", "Publicidad por comprador"],
+          filas: [
+            ["Compraron durante el período", "16", "S/259.33"],
+            ["Compraron y su lead entró durante el período de pauta", "10", "S/414.92"],
+            ["De ese grupo, los que además tienen origen de anuncio en el CRM", "7", "S/592.74"],
+          ],
+          nota: "Cambia el denominador, no el método: son las mismas ventas de la primera tabla, contadas por persona en vez de por lote. El costo por comprador sale más alto que el costo por lote justamente porque varios compradores se llevaron más de uno, y esa es la razón por la que la cifra que publicamos arriba es la de lotes: es la unidad que el cliente vende.",
+        },
+      },
+      {
         h2: "El embudo, con sus caídas a la vista",
         parrafo:
           "Un embudo sin caídas es un embudo maquillado. Este es el recorrido completo de los leads que el CRM registró durante el período, en porcentaje sobre esa misma base.",
@@ -137,8 +151,8 @@ export const CASOS_DETALLE: Caso[] = [
           nota: "Escalera acumulada: quien compró ya pasó por visita, así que los tramos no se suman.",
         },
         dato: {
-          cifra: "S/414.92",
-          texto: "costó cada comprador, cargando toda la inversión del período sobre los compradores cuyo lead entró en él. Por lote la cifra baja a S/230.51, porque varios compradores se llevaron más de uno.",
+          cifra: "4.6%",
+          texto: "de los leads que el CRM registró durante el período terminó comprando. Es el último escalón, y el único que paga la pauta.",
         },
       },
       {

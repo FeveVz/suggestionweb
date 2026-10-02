@@ -11,20 +11,34 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Casos de Éxito de Marketing en Ica | Suggestion",
   description:
-    "Resultados de negocio, no capturas de likes: S/350K en ventas, 8 lotes, 75 reservas, 15 contratos. Mira nuestros casos. Hablemos del tuyo.",
+    "Resultados de negocio, no capturas de likes: 18 lotes a S/230.51 de pauta, S/350K en ventas, 75 reservas, 15 contratos. Mira nuestros casos.",
   path: "/casos",
   ogImage: "/assets/og/casos.png",
 });
 
-const CASOS = [
+// Cada tarjeta lleva su período. Son campañas distintas, medidas con criterios
+// distintos, y la fecha evita que dos casos del mismo cliente se lean como una
+// progresión. Por eso tampoco van seguidos en la lista.
+const CASOS: {
+  tag: string;
+  href: string;
+  title: string;
+  periodo?: string;
+  metric: string;
+  note: string;
+  quote: string;
+  author: string;
+  shape: number;
+}[] = [
   {
     tag: "Inmobiliario",
-    href: "/casos/inmobiliaria-ceinys",
-    title: "Inmobiliaria Ceinys",
-    metric: "S/350.000",
-    note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
-    quote: "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
-    author: "Rosario, Jefa de Ventas",
+    href: "/casos/ceinys-septiembre-2026",
+    title: "Grupo Inmobiliario Ceinys",
+    periodo: "Del 26 de agosto al 29 de septiembre de 2026",
+    metric: "18",
+    note: "lotes cerrados a S/230.51 de publicidad por lote, con S/4,149.21 en Meta Ads. Ya descontados los que cerró cartera anterior al período.",
+    quote: "",
+    author: "",
     shape: 1,
   },
   {
@@ -51,11 +65,23 @@ const CASOS = [
     tag: "Automotriz",
     href: "/casos/autoniza-eventos",
     title: "Autoniza",
+    periodo: "Eventos del 22 de mayo y el 25 de junio",
     metric: "8",
-    note: "autos vendidos en 2 eventos (22 de mayo y 25 de junio) con convocatoria segmentada, activación y cierre en piso.",
+    note: "autos vendidos en 2 eventos con convocatoria segmentada, activación y cierre en piso.",
     quote: "",
     author: "",
     shape: 2,
+  },
+  {
+    tag: "Inmobiliario",
+    href: "/casos/inmobiliaria-ceinys",
+    title: "Inmobiliaria Ceinys",
+    periodo: "Caso publicado en julio de 2026",
+    metric: "S/350.000",
+    note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
+    quote: "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
+    author: "Rosario, Jefa de Ventas",
+    shape: 1,
   },
 ];
 
@@ -70,7 +96,7 @@ const GALERIA = [
 export default function Casos() {
   return (
     <>
-      <JsonLd data={casosReviewSchema(CASOS.map((c) => ({ quote: c.quote, author: c.author })))} />
+      <JsonLd data={casosReviewSchema(CASOS.filter((c) => c.quote && c.author).map((c) => ({ quote: c.quote, author: c.author })))} />
 
       {/* HERO */}
       <section style={{ background: "var(--white)" }}>
@@ -98,7 +124,10 @@ export default function Casos() {
                   <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{c.tag}</span>
                   <Blot shape={c.shape} tint="orange" size={44} />
                 </div>
-                <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: 16 }}>{c.metric}</div>
+                {c.periodo && (
+                  <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 12 }}>{c.periodo}</p>
+                )}
+                <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: c.periodo ? 8 : 16 }}>{c.metric}</div>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-body)", marginTop: 10 }}>
                   <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
                 </p>
