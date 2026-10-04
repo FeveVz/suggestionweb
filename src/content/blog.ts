@@ -1182,7 +1182,111 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion diseñamos webs rápidas y pensadas para una sola cosa: convertir visitas en clientes.",
     moneyPage: { label: "Quiero una web que venda", href: "/servicios/desarrollo-web" },
-    relacionados: ["crear-pagina-web-wix-vs-profesional", "que-es-un-lead"],
+    relacionados: ["crear-pagina-web-wix-vs-profesional", "que-es-un-lead", "posicionamiento-web-como-aparecer-en-google"],
+  },
+  {
+    slug: "posicionamiento-web-como-aparecer-en-google",
+    categoria: "conversion",
+    title: "Posicionamiento Web: Cómo Aparecer en Google | Suggestion",
+    description:
+      "Por qué tu página no aparece en Google y qué revisar primero: si está indexada, con qué intención te buscan y si tu rubro se busca en local o en nacional.",
+    h1: "Posicionamiento web: por qué no apareces en Google y qué revisar primero",
+    excerpt:
+      "Antes de contratar nada ni de escribir una palabra clave, hay una comprobación de dos minutos que casi nadie hace y que explica la mitad de los casos: saber si Google tiene tu página.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Lo primero: ¿Google tiene tu página o ni la conoce?",
+        parrafo:
+          "Hay dos problemas distintos que se confunden todo el tiempo. Uno es no estar posicionado: Google te conoce pero te pone detrás de otros. El otro es no estar indexado: Google no tiene tu página en absoluto, y entonces no hay posición que mejorar porque no estás jugando. El segundo es más común de lo que parece y se arregla antes, así que conviene descartarlo primero.",
+        nota: {
+          titulo: "Cómo comprobarlo en dos minutos",
+          texto: "Copia una frase literal y poco común de tu página —media línea basta— y búscala en Google entre comillas. Si tu página aparece, está indexada. Si no aparece ninguna, Google no la tiene. Es más fiable que el truco de buscar «site:» con la ruta completa, que devuelve falsos negativos con bastante frecuencia.",
+        },
+      },
+      {
+        h2: "Estar indexado tampoco es estar posicionado",
+        parrafo:
+          "Que Google tenga tu página significa que puede mostrarla, no que vaya a hacerlo. Para que la muestre tiene que considerar que responde mejor que las demás a lo que alguien escribió. Y ahí entran tres cosas, en este orden: que la página trate de verdad del tema, que el sitio tenga algo de credibilidad en ese tema, y que la experiencia no espante —velocidad, móvil, que se lea—.",
+        bullets: [
+          { titulo: "Una página por intención", texto: "una sola página intentando posicionar para diez cosas distintas no posiciona para ninguna. Es el error más repetido en webs de servicios." },
+          { titulo: "El texto que nadie lee sí cuenta", texto: "el título que sale en el buscador y la descripción deciden si te hacen clic. Dos páginas con el mismo título compiten entre ellas." },
+          { titulo: "Los enlaces internos enseñan de qué va cada página", texto: "si ninguna página de tu sitio enlaza a otra con un texto que la describa, Google tiene que adivinar." },
+          { titulo: "La velocidad no te sube, pero te hunde", texto: "los umbrales razonables son 2,5 s de carga del elemento principal y menos de 200 ms de respuesta a la primera interacción." },
+        ],
+      },
+      {
+        h2: "Local o nacional: la decisión que va antes que las palabras clave",
+        parrafo:
+          "Antes de elegir términos hay que saber si tu servicio se busca con el nombre de tu ciudad o sin él, porque la respuesta cambia dónde se gana. Y la intuición falla: mucha gente asume que su rubro es local porque su oficina lo es.",
+        tabla: {
+          cabeceras: ["", "Se busca en local", "Se busca en nacional"],
+          filas: [
+            ["Ejemplos de rubro", "Imprenta, taller, clínica, restaurante, ferretería", "Agencias, software y todo lo que se presta a distancia"],
+            ["Cómo lo escribe la gente", "Servicio más ciudad, o «cerca de mí»", "El servicio a secas"],
+            ["Dónde se decide", "El perfil de empresa en Google, las reseñas y el mapa", "El contenido y la credibilidad del sitio"],
+            ["Contra quién compites", "Los negocios de tu zona", "Todo el país"],
+          ],
+          nota: "Se comprueba gratis: escribe tu servicio seguido del nombre de tu ciudad en el buscador y mira las sugerencias que aparecen solas. Si lo que sugiere no tiene nada que ver con tu rubro, nadie busca así y ese no es tu camino.",
+        },
+      },
+      {
+        h2: "La intención: por qué atraer visitas equivocadas no sirve de nada",
+        parrafo:
+          "Dos personas pueden escribir palabras parecidas y querer cosas opuestas. Una está estudiando el tema; la otra está a punto de contratar. Si tu página de servicio está escrita para la primera, vas a tener visitas y ninguna consulta, y es un problema que no se ve en las métricas de tráfico.",
+        tabla: {
+          cabeceras: ["Lo que escribe", "Qué quiere", "Qué página le corresponde"],
+          filas: [
+            ["«qué es…», «ejemplos de…», «…pdf»", "Entender. A veces es un estudiante", "Un artículo del blog"],
+            ["«cómo hacer…», «…paso a paso»", "Resolverlo por su cuenta, por ahora", "Una guía"],
+            ["«agencia de…», «empresa de…», «…precio»", "Contratar a alguien", "La página de servicio"],
+            ["«servicio + ciudad»", "Contratar cerca, hoy", "La ficha de empresa y una página local"],
+          ],
+          nota: "Un truco rápido para saber qué intención tiene un término: escríbelo en el buscador y mira qué arrastra. Si sugiere «curso», «carrera» o «pdf», quien lo busca quiere aprender, no comprar.",
+        },
+      },
+      {
+        h2: "Qué revisar esta semana, en este orden",
+        parrafo:
+          "Si tuvieras que hacer una sola cosa, haz la primera. La mayoría de sitios con problemas de visibilidad se atascan ahí y gastan el presupuesto en el paso cuatro.",
+        pasos: [
+          { titulo: "Comprueba qué está indexado", texto: "con el truco de la frase entre comillas, página por página, empezando por las que te darían dinero. Es normal descubrir que el blog está entero y las páginas de servicio no." },
+          { titulo: "Abre Search Console", texto: "es gratis y es la única fuente que dice la verdad sobre tus impresiones, tus clics y tu posición media. Lo demás son estimaciones de terceros." },
+          { titulo: "Mira para qué te encuentran hoy", texto: "las consultas reales casi nunca son las que crees. Ahí suele estar la victoria más rápida: un término en el que ya estás en la segunda página y solo necesita una página decente." },
+          { titulo: "Y recién entonces, escribe", texto: "una página por intención, con el término principal en el título, y enlazada desde las páginas que ya reciben visitas." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Una advertencia sobre los plazos",
+          texto: "Lo técnico se nota en semanas. Posicionar un término con competencia real lleva meses, y nadie puede garantizarte una posición concreta porque nadie controla el buscador. Quien te garantice el primer puesto te está diciendo algo que no puede cumplir.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto tarda el posicionamiento web?",
+        a: "Depende de qué tan competido esté el término y de dónde partas. Los arreglos técnicos se notan en semanas; posicionar una palabra con competencia real es cosa de meses. Si el sitio es nuevo, suma el tiempo que tarda Google en tomárselo en serio. Desconfía de cualquier plazo cerrado que te den sin haber mirado tu sitio.",
+      },
+      {
+        q: "¿Cómo sé si Google tiene mi página indexada?",
+        a: "Busca entre comillas una frase literal y poco común de esa página. Si aparece, está indexada. Si no aparece nada, Google no la tiene y hay que resolver eso antes que cualquier otra cosa. Search Console te lo confirma con la herramienta de inspección de URL.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre SEO y SEM?",
+        a: "El SEO es aparecer en los resultados que no se pagan; el SEM es pagar por aparecer. El primero tarda más pero no se apaga cuando dejas de invertir; el segundo trae visitas desde el primer día y se corta en cuanto paras. No compiten entre ellos: responden a plazos distintos.",
+      },
+      {
+        q: "¿Tengo que poner el nombre de mi ciudad en todo?",
+        a: "Solo si tu servicio se busca así, y eso se comprueba en el propio buscador antes de decidirlo. En servicios que se prestan en persona suele funcionar muy bien. En servicios que se prestan a distancia suele ser esfuerzo perdido, porque la gente escribe el servicio a secas.",
+      },
+      {
+        q: "¿Sirve de algo tener un blog para posicionar?",
+        a: "Sirve si responde dudas reales de tu cliente y si enlaza hacia las páginas que venden. Un blog que recibe visitas y no lleva a ninguna parte entretiene y no convierte. Un blog abandonado con tres entradas viejas resta más de lo que suma.",
+      },
+    ],
+    cierre: "En Suggestion empezamos cada proyecto de posicionamiento por lo mismo: comprobar qué tiene Google de ti hoy, antes de proponer nada.",
+    moneyPage: { label: "Posicionamiento web (SEO)", href: "/servicios/seo" },
+    relacionados: ["como-crear-una-pagina-web", "crear-pagina-web-wix-vs-profesional", "que-es-un-lead"],
   },
   {
     slug: "mejores-ia-para-crear-logos",

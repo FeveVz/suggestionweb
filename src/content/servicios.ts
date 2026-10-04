@@ -680,13 +680,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Marketing Digital",
-    metaTitle: "Marketing Digital en Ica: Estrategia que Vende | Suggestion",
+    metaTitle: "Agencia de Marketing Digital en Perú | Suggestion",
     metaDescription:
-      "Servicio de marketing digital integral: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
+      "Agencia de marketing digital en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
     h1: "Marketing digital integral que genera ventas, no vanidad",
     hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el funnel conectado.",
     cta: "Agenda tu diagnóstico",
-    keyword: "marketing digital",
+    keyword: "agencia de marketing digital",
     proof:
       "El mismo método que llevó a Ceinys a S/350K en ventas con S/3,000 de inversión.",
     secciones: [
@@ -776,13 +776,13 @@ const SERVICIOS_LIST: Servicio[] = [
     ],
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Publicidad Digital",
-    metaTitle: "Publicidad Digital en Ica: Google y Meta Ads | Suggestion",
+    metaTitle: "Agencia de Google Ads y Meta Ads en Perú | Suggestion",
     metaDescription:
       "Publicidad digital con ROI medible: campañas de Google Ads y Meta Ads orientadas a leads y ventas, no a alcance. Pide tu propuesta. Agenda hoy.",
     h1: "Publicidad digital con ROI, no con likes",
     hero: "Pauta que se paga sola. Gestionamos tus campañas en Google y Meta con un solo norte: que cada sol invertido vuelva en leads y ventas, no en alcance que no cierra.",
     cta: "Pide tu propuesta",
-    keyword: "publicidad digital",
+    keyword: "agencia de google ads",
     // Barra de prueba propia: la de por defecto abre con el caso de Ceinys de
     // S/3,000 → S/350K, y en esta página queda a tres líneas del bloque del
     // caso nuevo del MISMO cliente. Dos períodos distintos, medidos con
@@ -880,10 +880,10 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Redes Sociales",
-    metaTitle: "Redes Sociales y Community Manager en Ica | Suggestion",
+    metaTitle: "Gestión de Redes Sociales para Empresas | Suggestion",
     metaDescription:
-      "Gestión de redes sociales con contenido que conecta y vende: estrategia, community manager y reportes. Agenda una llamada y crece en redes.",
-    h1: "Gestión de redes sociales que conecta y vende",
+      "Gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Agenda una llamada.",
+    h1: "Redes que traen clientes, no solo seguidores",
     hero: "Tus redes no son un mural de fotos bonitas: son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
     cta: "Crezcamos en redes",
     keyword: "gestión de redes sociales",
@@ -913,6 +913,51 @@ const SERVICIOS_LIST: Servicio[] = [
         h2: "Por qué con Suggestion",
         parrafo:
           "Trabajamos las redes con mentalidad de funnel: el contenido atrae, la conversación califica y el mensaje cierra.",
+      },
+      {
+        h2: "Qué medimos y qué ignoramos",
+        parrafo:
+          "Casi todos los reportes de redes que llegan a nuestras manos están llenos de números que suben y no significan nada. La diferencia entre una cuenta que trabaja y una que entretiene está en qué se mira cada mes.",
+        tabla: {
+          cabeceras: ["Métrica de vanidad", "Lo que sí dice algo"],
+          filas: [
+            ["Seguidores ganados", "Conversaciones iniciadas, y de dónde salieron"],
+            ["Alcance e impresiones", "Clics al enlace, al WhatsApp o a la ficha"],
+            ["Me gusta por publicación", "Mensajes que el equipo pudo atender y qué pasó con cada uno"],
+            ["La mejor hora para publicar", "Qué formato y qué mensaje trajeron clientes, no aplausos"],
+          ],
+          nota: "Ninguna de las de la izquierda es falsa ni inútil: sirven para diagnosticar. El problema aparece cuando se presentan como resultado y el negocio lo que necesita son ventas.",
+        },
+      },
+      {
+        h2: "Orgánico y pauta no son lo mismo, y confundirlos sale caro",
+        parrafo:
+          "Es el malentendido más común en redes. El contenido orgánico construye criterio y confianza con quien ya te sigue; la pauta pone tu mensaje delante de quien todavía no te conoce. Pedirle al orgánico el volumen de clientes de una campaña es pedirle algo que no hace, y de ahí nace la frustración de muchos negocios con sus redes.",
+        tabla: {
+          cabeceras: ["", "Contenido orgánico", "Pauta"],
+          filas: [
+            ["A quién llega", "Sobre todo a quien ya te sigue", "A quien tú elijas, te conozca o no"],
+            ["Para qué sirve", "Confianza, criterio y quedarte en la memoria", "Volumen de contactos nuevos"],
+            ["Cuándo da fruto", "Meses, de forma acumulativa", "Desde el primer día"],
+            ["Qué pasa si paras", "Se enfría despacio", "Se corta de golpe"],
+          ],
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "El orden que recomendamos",
+          texto: "Si el presupuesto obliga a elegir, primero la pauta con una oferta clara y alguien que responda rápido; el contenido orgánico después, cuando ya hay con quién hablar. Al revés se tarda mucho más en ver la primera venta.",
+        },
+      },
+      {
+        h2: "Qué pedirle a quien lleva tus redes",
+        parrafo:
+          "Da igual si es una agencia, un freelance o alguien de tu equipo. Estas cuatro cosas separan a quien gestiona de quien solo publica.",
+        bullets: [
+          { titulo: "Un calendario que puedas ver antes", texto: "saber qué se va a publicar y por qué, en lugar de enterarte cuando ya está arriba." },
+          { titulo: "Alguien que conteste en horario comercial", texto: "la mayoría de ventas por redes se pierde en los mensajes sin responder, no en el contenido." },
+          { titulo: "Un reporte que termine en una decisión", texto: "si el informe no dice qué se cambia el mes que viene, es un recuento, no un reporte." },
+          { titulo: "Los accesos a tu nombre", texto: "las cuentas, el administrador comercial y el píxel se quedan contigo el día que cambies de proveedor. Esto se acuerda al empezar, no al terminar." },
+        ],
       },
     ],
     incluye: [
@@ -965,13 +1010,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "Desarrollo Web",
-    metaTitle: "Diseño de Páginas Web en Ica que Convierte | Suggestion",
+    metaTitle: "Diseño de Páginas Web Profesionales | Suggestion",
     metaDescription:
       "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Agenda una llamada.",
     h1: "Diseño de páginas web que convierten visitas en clientes",
     hero: "Una web bonita que no vende es un gasto. Diseñamos páginas web rápidas, claras y pensadas para una sola cosa: que el visitante haga lo que tú necesitas —comprar, escribir o agendar.",
     cta: "Quiero una web que venda",
-    keyword: "diseño y desarrollo web",
+    keyword: "diseño de páginas web",
     secciones: [
       {
         h2: "Diseño y desarrollo web profesional",
@@ -1066,13 +1111,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "SEO",
-    metaTitle: "Agencia SEO en Ica y Posicionamiento Web | Suggestion",
+    metaTitle: "Agencia SEO y Posicionamiento Web en Perú | Suggestion",
     metaDescription:
       "Agencia SEO en Perú: posicionamiento web que te hace visible cuando tu cliente busca. SEO técnico y de contenidos. Agenda tu auditoría gratuita.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
     hero: "El mejor lugar para esconder un cadáver es la segunda página de Google. Te llevamos a la primera, justo cuando tu cliente busca lo que ofreces —sin pagar por cada clic.",
     cta: "Agenda tu auditoría",
-    keyword: "agencia seo",
+    keyword: "posicionamiento web",
     secciones: [
       {
         h2: "Posicionamiento web orgánico",
@@ -1094,6 +1139,51 @@ const SERVICIOS_LIST: Servicio[] = [
         h2: "Consultoría y auditoría SEO",
         parrafo:
           "Empezamos por una auditoría: qué te frena, qué oportunidades tienes y por dónde ganar primero.",
+      },
+      {
+        h2: "Posicionamiento local y nacional no son el mismo trabajo",
+        parrafo:
+          "Es la primera decisión de una estrategia y la que más presupuesto desperdicia cuando se toma mal. Un servicio que se presta en persona se busca con la ciudad al lado; uno que se presta a distancia, casi nunca. Conviene saber en cuál de los dos juegos estás antes de escribir una sola palabra, porque las páginas que ganan son distintas.",
+        tabla: {
+          cabeceras: ["", "Búsqueda local", "Búsqueda nacional"],
+          filas: [
+            ["Qué se busca así", "Imprenta, taller, clínica, restaurante, ferretería", "Agencias, software y servicios que se prestan a distancia"],
+            ["Cómo escribe la gente", "Servicio más ciudad, o «cerca de mí»", "El servicio a secas, o servicio más país"],
+            ["Dónde se gana", "Perfil de empresa, reseñas y el mapa", "Contenido, autoridad y una página por intención"],
+            ["Contra quién compites", "Los negocios de tu calle", "Todo el país, y algunos de fuera"],
+          ],
+          nota: "El error caro es dar por hecho que tu rubro es local porque tu oficina lo es. Se comprueba en minutos: si al escribir tu servicio junto al nombre de tu ciudad el buscador no sugiere nada parecido, ese no es el camino.",
+        },
+      },
+      {
+        h2: "Lo que se puede prometer en SEO y lo que no",
+        parrafo:
+          "El SEO arrastra más promesas vacías que cualquier otro servicio de marketing, así que conviene decir dónde está la línea. Hay cosas que dependen de quien trabaja y otras que dependen de Google; mezclarlas es la receta de una decepción.",
+        tabla: {
+          cabeceras: ["Lo que suena en una propuesta", "Lo que pasa en realidad"],
+          filas: [
+            ["«Primer puesto garantizado»", "Nadie controla el ranking de Google. Quien lo garantiza, o no lo sabe o lo sabe y lo dice igual"],
+            ["«Resultados en 30 días»", "Lo técnico mejora en semanas; posicionar un término con competencia es cosa de meses"],
+            ["«500 enlaces entrantes»", "La cantidad no es la métrica. Enlaces malos en volumen hacen daño, no bien"],
+            ["«SEO para 50 palabras clave»", "Una página bien hecha compite sola por decenas de variantes. Perseguir 50 términos sueltos produce 50 páginas flojas"],
+          ],
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "La pregunta que destapa a cualquiera",
+          texto: "Pide ver Search Console de un cliente, aunque sea con el nombre tapado: impresiones, clics y posición media de los últimos seis meses. Es el dato que no se puede maquillar, y quien trabaja de verdad lo tiene a mano.",
+        },
+      },
+      {
+        h2: "Por dónde empieza una auditoría nuestra",
+        parrafo:
+          "No empezamos por las palabras clave. Empezamos por comprobar que Google puede leer y entender lo que ya tienes, porque optimizar contenido que el buscador no rastrea es pintar una pared que nadie va a ver.",
+        pasos: [
+          { titulo: "Qué hay indexado de verdad", texto: "cuántas de tus páginas están realmente en Google y cuáles de las que importan no lo están. Es habitual encontrar páginas de servicio fuera del índice mientras el blog entra entero." },
+          { titulo: "Qué te frena en lo técnico", texto: "velocidad, estructura de encabezados, enlazado interno, datos estructurados y los errores que Search Console ya te está avisando." },
+          { titulo: "Para qué te encuentran hoy", texto: "las consultas que ya te traen gente, que casi nunca son las que crees. Ahí suele estar la victoria más rápida y la más barata." },
+          { titulo: "Con qué palabras busca tu cliente", texto: "y con qué intención. No es lo mismo quien busca para aprender que quien busca para contratar; mezclar las dos en una página es perder las dos." },
+        ],
       },
     ],
     incluye: [
@@ -1141,17 +1231,21 @@ const SERVICIOS_LIST: Servicio[] = [
     cierre: { h2: "Aparece primero en Google", cta: "Agenda tu auditoría" },
   },
   {
+    pruebas: [
+      { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     slug: "crm-automatizacion",
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "CRM y Automatización",
-    metaTitle: "CRM y Automatización de Marketing en Ica | Suggestion",
+    metaTitle: "CRM para Ventas y WhatsApp | Suggestion",
     metaDescription:
-      "CRM y automatización: captura leads, automatiza WhatsApp y califica clientes para vender más con menos esfuerzo. Agenda una demo. Escala tu negocio.",
+      "CRM para ventas y WhatsApp: captura cada lead, automatiza el seguimiento y califica solo. Con el campo de origen bien puesto desde el primer contacto.",
     h1: "CRM y automatización que escala tus ventas",
     hero: "¿Cuántos leads se te enfrían por no responder a tiempo? Automatizamos la captura, el seguimiento y la calificación para que ningún cliente potencial se pierda —y tu equipo cierre más.",
     cta: "Agenda una demo",
-    keyword: "crm y automatización",
+    keyword: "crm para ventas",
     secciones: [
       {
         h2: "Automatización de WhatsApp y chatbots",
@@ -1171,6 +1265,32 @@ const SERVICIOS_LIST: Servicio[] = [
             h3: "Alertas y seguimiento comercial",
             texto: "Tu equipo recibe el aviso correcto en el momento correcto.",
           },
+        ],
+      },
+      {
+        h2: "CRM para inmobiliarias",
+        parrafo:
+          "Es el rubro donde un CRM deja de ser orden administrativo y pasa a ser la diferencia entre saber qué funciona y adivinarlo. La venta tarda semanas, el comprador compara varios proyectos y el cierre casi nunca ocurre el mismo mes que el primer mensaje. Con ese desfase, si el origen no queda escrito al crear el lead, tres meses después nadie puede decir qué campaña pagó qué venta.",
+        bullets: [
+          { titulo: "El origen se escribe al entrar, no al cerrar", texto: "la campaña queda guardada en el lead desde el primer contacto. Reconstruirla después, de memoria, nunca sale bien." },
+          { titulo: "La cartera se cuenta aparte", texto: "un lead de hace dos meses que madura y cierra ahora no es una venta de la pauta de este mes. Si el sistema no los separa, los números engordan solos." },
+          { titulo: "El tiempo de primera respuesta se mide", texto: "en lotes y departamentos, quien contesta primero se suele quedar con la visita." },
+          { titulo: "Cada etapa con dueño y fecha", texto: "contactado, interesado, visita agendada, visita realizada, cierre. Sin eso no hay embudo: hay una lista de nombres." },
+        ],
+        nota: {
+          titulo: "Dónde se ve esto funcionando",
+          texto: "El caso de Ceinys publicado en este sitio sale justo de aquí. El reporte cruza la inversión de la pauta contra el CRM del cliente, y por eso se puede separar qué parte de las ventas del período vino de los leads que entraron con la campaña y qué parte venía de cartera anterior.",
+        },
+      },
+      {
+        h2: "Lo que un CRM no arregla",
+        parrafo:
+          "Conviene decirlo antes de vender nada: un CRM ordena y recuerda, pero no vende. Hemos visto implementaciones impecables que no movieron un sol, y casi siempre por las mismas cuatro razones.",
+        bullets: [
+          { titulo: "No llama por ti", texto: "si nadie contesta los leads, el sistema solo va a documentar con mucha precisión cuántos se enfriaron." },
+          { titulo: "No arregla una oferta que no interesa", texto: "automatizar el seguimiento de algo que nadie quiere acelera el «no»; no lo convierte en «sí»." },
+          { titulo: "No sobrevive si nadie lo llena", texto: "un campo que el equipo no completa es un campo que miente. Mejor tres obligatorios y bien puestos que veinte opcionales." },
+          { titulo: "No sustituye la conversación", texto: "las plantillas sirven para llegar a tiempo, no para cerrar. El cierre sigue siendo cosa de una persona." },
         ],
       },
     ],
