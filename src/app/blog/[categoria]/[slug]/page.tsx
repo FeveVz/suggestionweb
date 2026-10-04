@@ -19,34 +19,60 @@ function ogDelPost(moneyHref: string): string {
   return slug ? `/assets/og/${slug}.png` : "/og-image.png";
 }
 
-/** Anclas de keyword hacia money pages, por categoría del blog (SEO interno). */
+/**
+ * Anclas de keyword hacia money pages, por categoría del blog (SEO interno).
+ *
+ * El blog es lo único que Google tiene posicionado, y hasta ahora no
+ * repartía esa fuerza: /servicios/seo y /servicios/redes-sociales recibían
+ * cero enlaces editoriales, y la categoría ia-automatizacion ni siquiera
+ * figuraba en este mapa (caía al respaldo de un solo enlace).
+ *
+ * Los anclajes de servicio digital ya no llevan "en Ica": no hay búsquedas
+ * así —"marketing digital ica" deriva a icatsin e ícaro; "páginas web ica"
+ * no devuelve ni una sugerencia—. Lo digital se contrata a nivel nacional y
+ * por vertical. Ica se mantiene donde sí tiene demanda: la home, las páginas
+ * de ciudad y los servicios físicos (imprenta, BTL, estructuras).
+ *
+ * Cada enlace tiene que ser honesto para los posts de SU categoría: esto es
+ * enlazado interno, no un escaparate.
+ */
 const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
   inmobiliario: [
-    { label: "Marketing inmobiliario en Ica", href: "/marketing-inmobiliario" },
-    { label: "Publicidad digital en Ica (Google y Meta Ads)", href: "/servicios/publicidad-digital" },
+    { label: "Marketing inmobiliario", href: "/marketing-inmobiliario" },
+    { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    { label: "Gestión de redes sociales", href: "/servicios/redes-sociales" },
   ],
   automotriz: [
-    { label: "Marketing automotriz en Ica", href: "/marketing-automotriz" },
+    { label: "Marketing automotriz", href: "/marketing-automotriz" },
+    { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
     { label: "BTL y activaciones para eventos", href: "/servicios/btl" },
   ],
   performance: [
-    { label: "Publicidad digital en Ica (Google y Meta Ads)", href: "/servicios/publicidad-digital" },
-    { label: "Marketing digital en Ica", href: "/servicios/marketing-digital" },
+    { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
+    { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
   ],
   conversion: [
-    { label: "Diseño de páginas web en Ica", href: "/servicios/desarrollo-web" },
-    { label: "CRM y automatización de marketing", href: "/servicios/crm-automatizacion" },
+    { label: "Diseño de páginas web profesionales", href: "/servicios/desarrollo-web" },
+    { label: "Posicionamiento web (SEO)", href: "/servicios/seo" },
+    { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
   ],
   marca: [
-    { label: "Branding e identidad de marca en Ica", href: "/servicios/branding" },
-    { label: "Producción audiovisual en Ica", href: "/servicios/produccion-audiovisual" },
+    { label: "Branding e identidad de marca", href: "/servicios/branding" },
+    { label: "Producción audiovisual", href: "/servicios/produccion-audiovisual" },
+    { label: "Gestión de redes sociales", href: "/servicios/redes-sociales" },
+  ],
+  "ia-automatizacion": [
+    { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
+    { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
+    { label: "Branding e identidad de marca", href: "/servicios/branding" },
   ],
   "psicologia-de-mercado": [
-    { label: "Investigación de mercado en Ica", href: "/servicios/investigacion-de-mercado" },
-    { label: "Consultoría de marketing en Ica", href: "/servicios/consultoria" },
+    { label: "Investigación de mercado", href: "/servicios/investigacion-de-mercado" },
+    { label: "Consultoría de marketing", href: "/servicios/consultoria" },
   ],
   sectores: [
-    { label: "Marketing por sectores en Ica y Perú", href: "/sectores" },
+    { label: "Marketing por sectores en Perú", href: "/sectores" },
     { label: "Agencia de marketing en Ica", href: "/" },
   ],
 };
