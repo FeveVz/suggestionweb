@@ -25,9 +25,15 @@ export default function SectorPage({ slug }: { slug: string }) {
     const s = getServicio(sl);
     return s ? [{ label: s.nombre, href: `/servicios/${s.slug}` }] : [];
   });
-  const related: RelatedBlock[] = links.length
-    ? [{ title: "Lo que ponemos a trabajar", links, columns: 2 }]
-    : [];
+  // Las pruebas van primero y antes que los servicios: una página de sector
+  // que promete resultados y no enseña ninguno pide un acto de fe.
+  const related: RelatedBlock[] = [];
+  if (sec.pruebas?.length) {
+    related.push({ title: "La prueba", links: sec.pruebas, columns: 2 });
+  }
+  if (links.length) {
+    related.push({ title: "Lo que ponemos a trabajar", links, columns: 2 });
+  }
   // El puente al blog: esta página dice qué hacemos y qué medimos; el artículo
   // explica cómo funciona el mercado. Antes las dos contaban lo mismo.
   if (sec.lecturas?.length) {

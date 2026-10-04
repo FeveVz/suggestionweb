@@ -19,11 +19,15 @@ export const SECTORES_HUB = {
 
 export const SECTORES: Sector[] = [
   {
+    pruebas: [
+      { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     slug: "marketing-inmobiliario",
     nombre: "Inmobiliario",
-    metaTitle: "Marketing Inmobiliario en Ica que Vende Lotes | Suggestion",
+    metaTitle: "Agencia de Marketing Inmobiliario en Perú | Suggestion",
     metaDescription:
-      "Marketing inmobiliario que llena tu pipeline de citas calificadas, no de curiosos. Performance, drone y CRM para proyectos. Agenda una llamada.",
+      "Agencia de marketing inmobiliario en Perú: citas calificadas, no curiosos. Performance, drone y CRM con el origen de cada lead escrito. Agenda una llamada.",
     h1: "Marketing inmobiliario que llena tu pipeline de citas",
     hero: "Tu problema no es la falta de interesados; es la falta de citas que cierran. Generamos leads calificados, los filtramos y los llevamos a tu sala de ventas listos para decidir.",
     cta: "Llenemos tu sala de ventas",
@@ -103,6 +107,8 @@ export const SECTORES: Sector[] = [
       { label: "Cómo vender un proyecto en preventa", href: "/blog/inmobiliario/vender-proyecto-en-preventa" },
       { label: "Ejemplos de campañas que venden lotes", href: "/blog/inmobiliario/marketing-inmobiliario-ejemplos" },
       { label: "Publicidad inmobiliaria en redes", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
+      { label: "Qué es un embudo de ventas", href: "/blog/conversion/que-es-un-embudo-de-ventas" },
+      { label: "Qué es un CRM y cuándo lo necesitas", href: "/blog/ia-automatizacion/que-es-un-crm" },
     ],
     faq: [
       {
@@ -137,9 +143,13 @@ export const SECTORES: Sector[] = [
     cierre: { h2: "Llenemos tu sala de ventas", cta: "Agenda una llamada" },
   },
   {
+    pruebas: [
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     slug: "marketing-automotriz",
     nombre: "Automotriz",
-    metaTitle: "Marketing Automotriz en Ica para Concesionarios | Suggestion",
+    metaTitle: "Agencia de Marketing Automotriz en Perú | Suggestion",
     metaDescription:
       "Marketing automotriz que lleva del clic al test drive: leads listos para cierre en piso. Campañas para concesionarios y autos. Agenda hoy.",
     h1: "Marketing automotriz: del clic al test drive",
@@ -184,6 +194,22 @@ export const SECTORES: Sector[] = [
           "El alcance y los clics no dicen nada de tu negocio. Reportamos cuántos prospectos entraron, cuántos fueron contactados, cuántas pruebas de manejo se agendaron, cuántas se cumplieron y cuántas unidades se entregaron. De ahí sale el número que importa: cuánto costó cada prueba de manejo y cuánto costó cada venta. Si ese costo sube, se ve en la semana y se corrige. Y si una campaña no funciona te lo decimos, aunque incomode.",
       },
       {
+        h2: "Dónde se cae un lead de autos",
+        parrafo:
+          "Un concesionario no pierde ventas en el anuncio: las pierde en los tramos de en medio, y casi siempre en los mismos. Esta es la escalera que miramos cada semana, con lo que suele romperla en cada escalón.",
+        tabla: {
+          cabeceras: ["Tramo", "Qué lo rompe", "Cómo se arregla"],
+          filas: [
+            ["Del anuncio al mensaje", "Anuncio sin precio ni cuota: filtra mal", "Mostrar la cuota de entrada desde la pieza"],
+            ["Del mensaje a la respuesta", "Nadie contesta en la primera hora", "Asignación automática y alerta al asesor en el celular"],
+            ["De la respuesta a la cita", "Se conversa pero no se propone una fecha", "Pedir la cita en el segundo mensaje, con dos horarios concretos"],
+            ["De la cita a la prueba de manejo", "La unidad no está lista o el asesor no está", "Confirmar la víspera y tener la unidad separada"],
+            ["De la prueba al cierre", "La financiera demora y el comprador se enfría", "Precalificar antes de la visita, no después"],
+          ],
+          nota: "El segundo tramo es el que más veces aparece como culpable y el más barato de arreglar: no necesita más presupuesto de pauta, necesita que alguien conteste.",
+        },
+      },
+      {
         h2: "La posventa también vende: taller, repuestos y recompra",
         parrafo:
           "El concesionario que solo mide unidades nuevas deja plata sobre la mesa. Trabajamos campañas de mantenimiento por kilometraje, recordatorios de servicio, promociones de repuestos y llantas, y reactivación de quienes compraron hace tres o cuatro años y ya están para cambiar. Tu base de clientes es el público más barato que tienes: ya te conocen y ya te compraron. En la mayoría de concesionarios esa base está muerta en una hoja de cálculo.",
@@ -209,6 +235,8 @@ export const SECTORES: Sector[] = [
       { label: "Leads para concesionarios que sí cierran", href: "/blog/automotriz/leads-para-concesionarios" },
       { label: "Publicidad para venta de autos", href: "/blog/automotriz/publicidad-para-venta-de-autos" },
       { label: "Del clic al test drive: ejemplos", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
+      { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
+      { label: "Panel, valla o publicidad móvil: cuál elegir", href: "/blog/imprenta-btl/panel-valla-bicivalla-o-vehiculo-rotulado" },
     ],
     faq: [
       {
@@ -243,11 +271,15 @@ export const SECTORES: Sector[] = [
     cierre: { h2: "Del clic al cierre en piso", cta: "Agenda una llamada" },
   },
   {
+    pruebas: [
+      { label: "Caso Hoteles Señor de Luren · 75 reservas", href: "/casos/hoteles-senor-de-luren" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     slug: "marketing-turismo",
     nombre: "Turismo",
-    metaTitle: "Marketing Turístico en Ica para Hoteles | Suggestion",
+    metaTitle: "Agencia de Marketing para Hoteles y Turismo | Suggestion",
     metaDescription:
-      "Marketing turístico que genera reservas reales en temporada y fuera de ella. Para hoteles, restaurantes y agencias de viaje. Agenda una llamada.",
+      "Agencia de marketing para hoteles, restaurantes y agencias de viaje: reservas reales en temporada y fuera de ella, y la ficha de Google trabajando. Agenda una llamada.",
     h1: "Marketing turístico que genera reservas reales",
     hero: "El reto del turismo no es solo llenar en temporada alta: es no vaciarse en la baja. Diseñamos campañas que generan reservas todo el año, con costo medido.",
     cta: "Llena tu temporada",
@@ -300,6 +332,21 @@ export const SECTORES: Sector[] = [
         ],
       },
       {
+        h2: "Las reseñas deciden la reserva",
+        parrafo:
+          "En hotelería y restaurantes, la reseña no es una métrica de reputación: es parte del producto. La persona que está eligiendo entre tú y el de al lado abre las reseñas antes que la web, y lo que decide no es solo la nota promedio.",
+        bullets: [
+          { titulo: "La frecuencia pesa más que el total", texto: "veinte reseñas recientes transmiten un negocio vivo; doscientas de hace tres años transmiten uno que fue bueno alguna vez." },
+          { titulo: "Las respuestas se leen", texto: "sobre todo las de las reseñas malas. Una respuesta serena y concreta a una queja convence más que diez elogios, porque enseña cómo tratas un problema." },
+          { titulo: "Las fotos de los huéspedes mandan", texto: "pesan más que las profesionales porque se perciben como reales. Que el lugar se vea igual de bien en una foto de celular es un trabajo de operación, no de marketing." },
+          { titulo: "Pedirlas tiene que ser un hábito", texto: "al momento de la salida, con el enlace directo y de parte de la persona que atendió. Sin rutina no llegan." },
+        ],
+        nota: {
+          titulo: "El detalle que cambia el mes",
+          texto: "Revisa que tu horario y tus fotos en Google estén actualizados antes de cada temporada. Un cliente que llega y encuentra cerrado, o que esperaba otra cosa por una foto vieja, deja una reseña que cuesta meses compensar.",
+        },
+      },
+      {
         h2: "Qué trabajamos según el negocio",
         parrafo:
           "«Turismo» junta realidades distintas, y meterlas en la misma estrategia es la forma habitual de que ninguna funcione. Esto es lo que cambia en cada caso.",
@@ -323,6 +370,12 @@ export const SECTORES: Sector[] = [
       "redes-sociales",
       "produccion-audiovisual",
       "seo",
+    ],
+    lecturas: [
+      { label: "Cómo aparecer primero en Google Maps", href: "/blog/conversion/como-aparecer-primero-en-google-maps" },
+      { label: "Ficha de empresa en Google: crearla y verificarla", href: "/blog/conversion/ficha-de-empresa-en-google-crear-y-verificar" },
+      { label: "Marketing para restaurantes", href: "/blog/sectores/marketing-para-restaurantes" },
+      { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
     ],
     faq: [
       {
@@ -353,9 +406,13 @@ export const SECTORES: Sector[] = [
     cierre: { h2: "Llena tu temporada (y la baja también)", cta: "Agenda una llamada" },
   },
   {
+    pruebas: [
+      { label: "Caso Granjas Bonanza · 15 contratos", href: "/casos/granjas-bonanza" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     slug: "marketing-marcas-consumo",
     nombre: "Marcas y consumo",
-    metaTitle: "Marketing para Consumo Masivo en Ica y Perú | Suggestion",
+    metaTitle: "Agencia de Marketing para Marcas de Consumo | Suggestion",
     metaDescription:
       "Marketing para marcas y consumo: demanda que se convierte en venta, no en likes. Posicionamiento, performance y activación. Agenda una llamada.",
     h1: "Marcas y consumo: demanda que se vuelve venta",
@@ -410,6 +467,22 @@ export const SECTORES: Sector[] = [
         ],
       },
       {
+        h2: "Dónde se vende cambia todo lo demás",
+        parrafo:
+          "Una marca de consumo no tiene un solo canal: tiene varios que compiten entre sí por el mismo presupuesto y que exigen piezas distintas. Decidir en cuál se juega el año es la decisión que más condiciona todo lo demás, y se toma antes de diseñar nada.",
+        tabla: {
+          cabeceras: ["Canal", "Qué decide la venta", "Dónde va el esfuerzo"],
+          filas: [
+            ["Bodega y mercado de barrio", "La relación con el bodeguero y estar a la vista", "Material POP, exhibición y rotación"],
+            ["Autoservicio y supermercado", "Ganar la comparación en el estante", "Empaque, jalavistas y negociación del espacio"],
+            ["Venta directa y ferias", "La degustación y quien atiende", "Activación, merchandising y stand"],
+            ["Aplicaciones de delivery", "La foto, la ficha y las reseñas", "Contenido de catálogo y gestión de la reputación"],
+            ["Tienda propia en línea", "Que te encuentren y que confíen", "Web, posicionamiento y pauta con remarketing"],
+          ],
+          nota: "La mayoría de marcas pequeñas intenta estar en los cinco a la vez con el presupuesto de uno. Elegir dos y hacerlos bien rinde más que aparecer mal en todos.",
+        },
+      },
+      {
         h2: "Qué medimos en una marca de consumo",
         parrafo:
           "Seguidores y alcance describen la conversación, no el negocio. Estos cuatro números sí permiten decidir, y ninguno necesita un panel complicado.",
@@ -434,6 +507,12 @@ export const SECTORES: Sector[] = [
       "branding",
       "produccion-audiovisual",
       "material-pop",
+    ],
+    lecturas: [
+      { label: "Material POP: qué funciona en punto de venta", href: "/blog/imprenta-btl/material-pop-punto-de-venta" },
+      { label: "Merchandising corporativo: qué regalar", href: "/blog/imprenta-btl/merchandising-corporativo-que-regalar" },
+      { label: "Comportamiento del consumidor peruano", href: "/blog/psicologia-de-mercado/comportamiento-del-consumidor-peruano" },
+      { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
     ],
     faq: [
       {
@@ -460,11 +539,15 @@ export const SECTORES: Sector[] = [
     cierre: { h2: "Demanda que se vuelve venta", cta: "Agenda una llamada" },
   },
   {
+    pruebas: [
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+      { label: "Todos los casos publicados", href: "/casos" },
+    ],
     slug: "marketing-salud",
     nombre: "Salud",
-    metaTitle: "Marketing para Clínicas y Salud en Ica | Suggestion",
+    metaTitle: "Agencia de Marketing para Clínicas en Perú | Suggestion",
     metaDescription:
-      "Marketing para clínicas, consultorios y profesionales de la salud: capta pacientes sin quemar presupuesto. Performance y web. Agenda una llamada.",
+      "Agencia de marketing para clínicas dentales, estéticas y médicas: capta pacientes sin quemar presupuesto, con la agenda y la ficha de Google medidas. Agenda una llamada.",
     h1: "Marketing para clínicas que capta pacientes",
     hero: "Más pacientes, sin quemar tu presupuesto en clics que no agendan. Diseñamos campañas para clínicas, consultorios y profesionales de la salud, enfocadas en llenar la agenda.",
     cta: "Llena tu agenda",
@@ -517,6 +600,39 @@ export const SECTORES: Sector[] = [
         ],
       },
       {
+        h2: "Cada especialidad se capta distinto",
+        parrafo:
+          "«Marketing para clínicas» no es una sola cosa. Lo que mueve a alguien a pedir una cita de ortodoncia no se parece a lo que lo mueve a buscar un traumatólogo, y la campaña que funciona en una especialidad fracasa en la otra por motivos que no tienen que ver con el presupuesto.",
+        tabla: {
+          cabeceras: ["Especialidad", "Cómo llega el paciente", "Qué decide la campaña"],
+          filas: [
+            ["Dental", "Busca por tratamiento concreto y compara precios", "El precio de entrada y las facilidades de pago, visibles desde el anuncio"],
+            ["Estética", "Investiga durante semanas antes de escribir", "La confianza: resultados reales, el profesional y el lugar"],
+            ["Médica general y especialidades", "Busca por síntoma o por especialidad y con urgencia", "Disponibilidad: quién lo atiende antes"],
+            ["Veterinaria", "Busca por cercanía y por urgencia", "La ficha de Google, el horario y que alguien conteste"],
+            ["Fisioterapia y rehabilitación", "Llega por derivación o por dolor persistente", "La explicación del tratamiento y la continuidad de sesiones"],
+          ],
+          nota: "La diferencia práctica está en el tiempo de decisión. En urgencia, gana quien aparece y contesta; en estética, gana quien lleva meses construyendo confianza. Mezclar las dos lógicas en una sola campaña es el error que más presupuesto quema en este rubro.",
+        },
+      },
+      {
+        h2: "Lo que la publicidad en salud no debería decir",
+        parrafo:
+          "Este es el rubro donde la línea entre captar y prometer se cruza más rápido, y donde cruzarla sale más caro: en reputación, en reclamos y en la relación con el paciente que llegó esperando otra cosa. Son criterios que aplicamos siempre, aunque el cliente pida lo contrario.",
+        bullets: [
+          { titulo: "No prometer resultados", texto: "ningún tratamiento garantiza un desenlace. Una campaña que lo insinúa genera expectativas que después alguien tiene que sostener en consulta." },
+          { titulo: "Los datos del paciente son sensibles", texto: "nombres, diagnósticos y fotos no entran en un anuncio ni en una publicación. En Perú la protección de datos personales trata la información de salud con una categoría aparte, y con razón." },
+          { titulo: "Antes y después, solo con consentimiento escrito y específico", texto: "y que ese consentimiento diga para qué se va a usar la imagen y dónde. Un permiso verbal no es un permiso." },
+          { titulo: "El profesional, identificado", texto: "quién atiende y con qué credenciales. Es lo que el paciente busca antes de decidir, y ocultarlo levanta más dudas de las que resuelve." },
+          { titulo: "Nada de descuentos que presionen una decisión clínica", texto: "una oferta con cuenta regresiva para un procedimiento médico es la clase de pieza que destruye la confianza que costó años construir." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Lo que sí funciona en su lugar",
+          texto: "Explicar bien el procedimiento, enseñar el lugar y al equipo, responder las dudas frecuentes y dar un precio de referencia claro. Es menos espectacular que una promesa, y convierte mejor porque llega gente que ya entendió a qué viene.",
+        },
+      },
+      {
         h2: "Lo que no vamos a hacer con tu marca",
         parrafo:
           "La publicidad de salud está regulada por las plataformas y por las normas sanitarias, y hay atajos que consiguen clics a corto plazo y cuentas rechazadas o problemas después. Preferimos decirlo por adelantado.",
@@ -535,6 +651,9 @@ export const SECTORES: Sector[] = [
     ],
     lecturas: [
       { label: "Cómo conseguir más pacientes", href: "/blog/sectores/como-conseguir-mas-pacientes" },
+      { label: "Cómo aparecer primero en Google Maps", href: "/blog/conversion/como-aparecer-primero-en-google-maps" },
+      { label: "Ficha de empresa en Google: crearla y verificarla", href: "/blog/conversion/ficha-de-empresa-en-google-crear-y-verificar" },
+      { label: "Qué es un CRM y cuándo lo necesitas", href: "/blog/ia-automatizacion/que-es-un-crm" },
     ],
     faq: [
       {
@@ -565,6 +684,10 @@ export const SECTORES: Sector[] = [
     cierre: { h2: "Llena tu agenda de pacientes", cta: "Agenda una llamada" },
   },
   {
+    pruebas: [
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+      { label: "Todos los casos publicados", href: "/casos" },
+    ],
     slug: "marketing-agroexportacion",
     nombre: "Agroexportación",
     metaTitle: "Marketing para Agroexportadoras de Ica y Perú | Suggestion",
@@ -654,6 +777,9 @@ export const SECTORES: Sector[] = [
     ],
     lecturas: [
       { label: "Cómo abrir mercados internacionales", href: "/blog/sectores/marketing-para-agroexportadoras" },
+      { label: "Cuánto cuesta una página web en Perú", href: "/blog/conversion/cuanto-cuesta-una-pagina-web-en-peru" },
+      { label: "Merchandising corporativo: qué regalar", href: "/blog/imprenta-btl/merchandising-corporativo-que-regalar" },
+      { label: "Qué es un CRM y cuándo lo necesitas", href: "/blog/ia-automatizacion/que-es-un-crm" },
     ],
     faq: [
       {
@@ -688,6 +814,10 @@ export const SECTORES: Sector[] = [
     cierre: { h2: "Llevemos tu marca al mundo", cta: "Agenda una llamada" },
   },
   {
+    pruebas: [
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+      { label: "Todos los casos publicados", href: "/casos" },
+    ],
     slug: "marketing-pisco-vino",
     nombre: "Pisco y Vino",
     metaTitle: "Marketing para Bodegas de Pisco y Vino en Ica | Suggestion",
@@ -760,6 +890,9 @@ export const SECTORES: Sector[] = [
     ],
     lecturas: [
       { label: "Cómo vender pisco y vino por internet", href: "/blog/sectores/como-vender-pisco-y-vino-por-internet" },
+      { label: "Material POP: qué funciona en punto de venta", href: "/blog/imprenta-btl/material-pop-punto-de-venta" },
+      { label: "Cuánto cuesta un logotipo en Perú", href: "/blog/marca/cuanto-cuesta-un-logotipo-en-peru" },
+      { label: "Cuánto cuesta registrar una marca en Indecopi", href: "/blog/marca/cuanto-cuesta-registrar-una-marca-en-indecopi" },
     ],
     faq: [
       {

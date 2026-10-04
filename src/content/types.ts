@@ -117,6 +117,8 @@ export type Ciudad = {
 export type Prueba = { label: string; href: string };
 
 export type Sector = {
+  /** Casos publicados que prueban lo que esta página promete. */
+  pruebas?: Prueba[];
   slug: string;
   nombre: string;
   metaTitle: string;
