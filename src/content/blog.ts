@@ -5291,6 +5291,688 @@ export const BLOG_POSTS: BlogPost[] = [
     moneyPage: { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
     relacionados: ["cuanto-invertir-en-ads-peru", "cpl-vs-roas", "que-es-un-lead"],
   },
+  {
+    slug: "marketing-para-clinicas-dentales",
+    categoria: "sectores",
+    title: "Marketing para Clínicas Dentales en Perú | Suggestion",
+    description:
+      "Cómo capta pacientes una clínica dental: qué tratamiento se busca, cuánto cuesta traer cada uno, por qué la ficha de Google decide más que la campaña y cómo se llena la silla.",
+    h1: "Marketing para clínicas dentales: cómo llenar la silla",
+    excerpt:
+      "El problema de casi ninguna clínica dental es que no llegan pacientes. Es que llegan, preguntan el precio y desaparecen. Eso no se arregla con más publicidad.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "El paciente dental no se capta como cualquier otro",
+        parrafo:
+          "En odontología, la persona casi nunca busca «dentista»: busca el tratamiento que necesita, y llega con un precio en la cabeza antes de escribirte. Eso cambia todo el planteamiento. No estás compitiendo por atención como una marca de consumo: estás compitiendo por confianza contra tres consultorios que ya le dieron un número por WhatsApp. Quien gana no suele ser el más barato, sino el que responde antes y explica mejor en qué se diferencia lo que cobra.",
+        bullets: [
+          { titulo: "Busca por tratamiento, no por profesional", texto: "«cuánto cuesta una ortodoncia», «implante dental precio», «muela del juicio». La campaña se arma por tratamiento o no se entera de nada." },
+          { titulo: "Compara en paralelo", texto: "escribe a varios el mismo día. El tiempo de respuesta no es un detalle de servicio: es el filtro." },
+          { titulo: "El precio es la primera pregunta, no la última", texto: "esconderlo no sube la conversión, la baja: el que pregunta y no recibe respuesta se va con el que sí la dio." },
+          { titulo: "La decisión es a plazos", texto: "en tratamientos de monto alto, la facilidad de pago decide más que el descuento. Es información que debería estar visible antes de que pregunten." },
+        ],
+      },
+      {
+        h2: "Qué tratamiento traer, y qué cuesta traerlo",
+        parrafo:
+          "No todos los tratamientos se captan igual ni valen lo mismo para la clínica. Esta es la lógica que usamos para decidir en cuál se invierte primero, porque poner todo el presupuesto en el más buscado suele ser el peor negocio.",
+        tabla: {
+          cabeceras: ["Tratamiento", "Cómo llega", "Qué lo decide"],
+          filas: [
+            ["Urgencia y dolor", "Busca ya, por cercanía, y llama", "Que aparezcas en el mapa y que alguien conteste"],
+            ["Limpieza y profilaxis", "Volumen alto, ticket bajo", "El precio visible y la facilidad de agendar"],
+            ["Ortodoncia", "Investiga semanas y compara", "La cuota mensual, el plazo y ver casos reales"],
+            ["Implantes y rehabilitación", "Ticket alto, decisión lenta", "La confianza en el profesional y la explicación del procedimiento"],
+            ["Estética dental", "Decisión emocional, muy visual", "Resultados reales, el lugar y la percepción de calidad"],
+          ],
+          nota: "La estrategia que mejor funciona en clínicas pequeñas es captar por lo que trae volumen —urgencia y limpieza— y convertir dentro de la consulta hacia el tratamiento de mayor valor. Captar directo el implante sale caro y tarda; captar la limpieza y diagnosticar bien, no.",
+        },
+      },
+      {
+        h2: "La ficha de Google decide más que la campaña",
+        parrafo:
+          "Es la parte que más clínicas descuidan y la que más pacientes trae. Cuando alguien tiene dolor o quiere una consulta cerca, no abre Instagram: abre el mapa. Y ahí el orden lo deciden factores que Google documenta —relevancia, distancia y prominencia— y que se trabajan sin pagar un sol de publicidad.",
+        bullets: [
+          { titulo: "Categoría correcta y servicios listados uno por uno", texto: "si no está «ortodoncista» o «implantes dentales» entre tus servicios, no apareces cuando alguien lo busca." },
+          { titulo: "Reseñas pedidas con rutina, no por suerte", texto: "al terminar la consulta, con el enlace directo y de parte de quien atendió. Un paciente contento rara vez reseña solo." },
+          { titulo: "Fotos del consultorio real", texto: "la sala, el equipo, el equipamiento. En salud, ver el lugar baja la ansiedad de la primera visita más que cualquier texto." },
+          { titulo: "Horario exacto, incluidos feriados", texto: "el paciente con dolor que llega y encuentra cerrado deja una reseña de una estrella que cuesta meses compensar." },
+          { titulo: "Responder todas las reseñas", texto: "sobre todo las malas, y sin entrar en detalles clínicos. Lo que el siguiente paciente evalúa es cómo tratas un problema." },
+        ],
+      },
+      {
+        h2: "El problema real no es captar: es la silla vacía",
+        parrafo:
+          "Casi todas las clínicas que nos escriben piden más pacientes, y en la mayoría la primera auditoría encuentra el dinero en otro lado: citas que se agendan y no se cumplen, presupuestos entregados que nadie volvió a tocar y pacientes antiguos que no regresan. Esas tres fugas se arreglan sin gastar un sol más en publicidad, y ninguna necesita una campaña.",
+        tabla: {
+          cabeceras: ["Fuga", "Qué la causa", "Cómo se tapa"],
+          filas: [
+            ["La cita que no se cumple", "Se agendó hace dos semanas y nadie confirmó", "Recordatorio automático la víspera y el mismo día"],
+            ["El presupuesto que no vuelve", "Se entregó y quedó esperando que el paciente llame", "Seguimiento programado a los 3, 10 y 30 días"],
+            ["El paciente que no regresa", "Nadie le avisó que tocaba control", "Recordatorio de control a los 6 meses, automático"],
+            ["El mensaje sin responder", "Llegó fuera de horario y se perdió en la bandeja", "Respuesta automática fuera de hora y revisión al abrir"],
+          ],
+          nota: "Es la cuenta que conviene hacer antes de aumentar el presupuesto: si de cada diez citas agendadas se presentan seis, llenar la agenda con más campaña significa pagar por cuatro ausencias más.",
+        },
+        dato: {
+          cifra: "La hora vacía",
+          texto: "es lo que de verdad cuesta caro en una clínica: el alquiler, el equipo y el personal se pagan igual. Cada hueco en la agenda es costo fijo sin ingreso, y por eso recuperar citas perdidas rinde más que captar pacientes nuevos.",
+        },
+      },
+      {
+        h2: "Lo que no se debe prometer, aunque convierta",
+        parrafo:
+          "En salud la línea entre captar y prometer se cruza rápido, y cruzarla sale caro en reputación y en la relación con un paciente que llegó esperando otra cosa. Estos criterios no son opcionales por mucho que un anuncio funcione mejor sin ellos.",
+        bullets: [
+          { titulo: "Ningún resultado garantizado", texto: "ningún tratamiento asegura un desenlace. Una pieza que lo insinúa crea una expectativa que alguien va a tener que sostener en consulta." },
+          { titulo: "Antes y después solo con consentimiento escrito y específico", texto: "que diga dónde se va a publicar y para qué. Un permiso verbal no es un permiso." },
+          { titulo: "Los datos del paciente no son material de marketing", texto: "nombres, diagnósticos y fotos identificables quedan fuera. La información de salud tiene una categoría propia en la protección de datos personales en Perú." },
+          { titulo: "Sin cuentas regresivas en decisiones clínicas", texto: "una oferta que presiona a decidir un procedimiento destruye en una semana la confianza que costó años." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Lo que sí funciona en su lugar",
+          texto: "Explicar el procedimiento con claridad, enseñar el consultorio y al equipo, responder las dudas frecuentes y dar un precio de referencia honesto. Convierte mejor porque llega gente que ya entendió a qué viene, y esa gente no regatea igual.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo conseguir más pacientes para una clínica dental?",
+        a: "Primero ordenando lo que ya tienes: ficha de Google verificada y completa, reseñas pedidas con rutina y respuesta rápida a los mensajes. Después, campañas por tratamiento concreto y no genéricas. Y antes de aumentar el presupuesto, revisa cuántas citas agendadas se cumplen: si se presentan seis de cada diez, más publicidad solo compra más ausencias.",
+      },
+      {
+        q: "¿Debo poner los precios en la publicidad dental?",
+        a: "Un precio de referencia o la cuota mensual sí, sobre todo en tratamientos de monto alto. Esconderlo no sube la conversión: la baja, porque el paciente escribe a tres consultorios y se queda con el que respondió con un número. Lo que no conviene es competir solo por precio, sino explicar qué incluye el tuyo.",
+      },
+      {
+        q: "¿Qué funciona mejor para una clínica dental, Google o redes sociales?",
+        a: "Dependen de la etapa. La búsqueda y el mapa captan a quien ya tiene el problema y busca solución ahora, que es lo más rentable. Las redes construyen confianza y funcionan para tratamientos de decisión lenta como ortodoncia y estética. Si hay que elegir uno para empezar, el mapa.",
+      },
+      {
+        q: "¿Puedo publicar fotos de antes y después?",
+        a: "Con consentimiento escrito y específico del paciente, que diga dónde se va a usar la imagen y para qué. Y sin presentarlo como un resultado garantizado: es un caso, no una promesa. Un permiso verbal o genérico no cubre una publicación.",
+      },
+      {
+        q: "¿Cuánto tarda en notarse el marketing en una clínica dental?",
+        a: "Lo que depende de la ficha de Google y del tiempo de respuesta se nota en semanas, porque son arreglos operativos. Las campañas por tratamiento dan señales en semanas y se estabilizan en un par de meses. Lo que tarda de verdad es la reputación local, que se construye reseña a reseña durante meses.",
+      },
+      {
+        q: "¿Sirve tener Instagram para un consultorio dental?",
+        a: "Sirve para confianza y para tratamientos que se deciden despacio, no para captar urgencias. Si el consultorio no tiene quien lo mantenga con constancia, es mejor invertir ese esfuerzo en la ficha de Google y en responder los mensajes a tiempo, que traen más pacientes por hora de trabajo.",
+      },
+    ],
+    cierre: "En Suggestion montamos la captación dental empezando por la ficha y la agenda, y recién después por la campaña.",
+    moneyPage: { label: "Agencia de marketing para clínicas", href: "/marketing-salud" },
+    relacionados: ["como-conseguir-mas-pacientes", "como-aparecer-primero-en-google-maps", "ficha-de-empresa-en-google-crear-y-verificar"],
+  },
+  {
+    slug: "como-conseguir-clientes-para-vender-terrenos",
+    categoria: "inmobiliario",
+    title: "Cómo Conseguir Clientes para Vender Terrenos | Suggestion",
+    description:
+      "De dónde salen los compradores de terrenos y lotes, cómo filtrar curiosos antes de la visita y por qué el seguimiento decide más ventas que la publicidad.",
+    h1: "Cómo conseguir clientes para vender terrenos",
+    excerpt:
+      "Conseguir interesados en un terreno es fácil y barato. Conseguir interesados que puedan comprarlo es otro oficio, y es el que separa una agenda llena de una semana de ventas.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Primero: quién compra un terreno",
+        parrafo:
+          "Un lote no se le vende a «todo el mundo con dinero». Hay tres compradores distintos, cada uno con un miedo distinto, y el anuncio que convence a uno espanta a los otros dos. Elegir a cuál le hablas es la decisión que más condiciona el costo de captación.",
+        tabla: {
+          cabeceras: ["Comprador", "Qué busca", "Qué le da miedo"],
+          filas: [
+            ["Quien va a construir su casa", "Ubicación, servicios y vecindario", "Comprar en una zona que no se desarrolle"],
+            ["Quien invierte para revender", "Plusvalía y precio por metro", "Que el terreno no suba o no se pueda revender"],
+            ["Quien compra para su familia a futuro", "Seguridad jurídica y facilidades de pago", "Perder el dinero en un papel mal hecho"],
+          ],
+          nota: "El miedo que comparten los tres es el mismo y rara vez se aborda en la publicidad: que el terreno tenga un problema legal. La campaña que lo enfrenta de frente —partida registral en orden, independización, propietario identificado— convierte mejor que la que solo muestra el precio.",
+        },
+      },
+      {
+        h2: "De dónde salen los compradores",
+        parrafo:
+          "Casi todos los proyectos de lotes gastan en un solo canal y culpan al canal cuando no vende. Estos son los cuatro que funcionan en Perú, con lo que cada uno hace bien y lo que no.",
+        tabla: {
+          cabeceras: ["Canal", "Qué trae", "Qué cuidar"],
+          filas: [
+            ["Pauta en redes por zona e interés", "Volumen de contactos, rápido y barato", "Filtra poco: hay que calificar antes de la visita"],
+            ["Búsqueda en Google", "Menos contactos pero con intención alta", "Requiere página de proyecto y paciencia"],
+            ["Portales inmobiliarios", "Compradores que ya están buscando", "Compites de frente por precio con los de al lado"],
+            ["Referidos y base de clientes anterior", "La mejor tasa de cierre de todas", "Hay que pedirlos: no llegan solos"],
+            ["Activación en el terreno o feria", "Gente que ya fue hasta el lugar", "Caro por contacto, pero el que llega va en serio"],
+          ],
+          nota: "El error más caro es medir los cuatro con la misma vara. Un contacto de redes y uno de un portal no valen lo mismo y no deberían costar lo mismo: lo que hay que comparar no es el costo por lead sino el costo por visita que llega a la sala.",
+        },
+      },
+      {
+        h2: "Filtrar antes de la visita, no después",
+        parrafo:
+          "Una agenda llena de visitas que no compran es peor que una agenda vacía: consume el tiempo del asesor, el combustible y la energía del equipo. El filtro no se hace con preguntas incómodas, se hace con información puesta en el anuncio.",
+        bullets: [
+          { titulo: "Pon el rango de precio y la inicial", texto: "es el filtro más potente y el que más gente omite por miedo a perder contactos. Pierdes contactos, sí: los que no podían comprar." },
+          { titulo: "Di la ubicación real", texto: "«a 20 minutos de la ciudad» no es una ubicación. El que llega engañado no compra y además lo cuenta." },
+          { titulo: "Explica la forma de pago desde la pieza", texto: "cuotas, plazo y si hay financiamiento directo. Es la primera pregunta de cada conversación: respóndela antes de que la hagan." },
+          { titulo: "Pregunta dos cosas al primer contacto", texto: "para cuándo lo necesita y si lo va a pagar al contado o en cuotas. Con eso ya sabes a quién llamar primero." },
+          { titulo: "Separa interesado de calificado en el registro", texto: "si todos entran como «lead», en un mes nadie sabe cuántos valían la pena." },
+        ],
+      },
+      {
+        h2: "La visita es la venta",
+        parrafo:
+          "En lotes, el cierre casi nunca ocurre por teléfono. Ocurre cuando la persona pisa el terreno, ve la zona y se imagina ahí. Por eso todo el embudo existe para una sola cosa: conseguir visitas de gente que puede comprar, y que la visita no se desperdicie.",
+        pasos: [
+          { titulo: "Confirma la víspera y el mismo día", texto: "la ausencia a la visita es la fuga más grande y la más barata de tapar. Un mensaje la noche anterior recupera buena parte." },
+          { titulo: "Lleva el expediente, no solo el discurso", texto: "partida registral, planos y el detalle de la forma de pago impresos. La seguridad jurídica es lo que más pesa y se demuestra con papeles." },
+          { titulo: "Enseña el entorno, no solo el lote", texto: "colegios, vías, obras en marcha y vecinos que ya construyeron. El comprador no compra tierra: compra el lugar donde va a estar." },
+          { titulo: "Cierra la siguiente acción antes de despedirte", texto: "una fecha, un documento que va a revisar, una llamada acordada. Dejar la visita sin siguiente paso es perderla." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Dónde se pierde la mayoría de las ventas",
+          texto: "No en la visita: en los días siguientes. El interesado se va a pensarlo, nadie lo vuelve a llamar con un motivo concreto y a las tres semanas ya compró en otro proyecto. El seguimiento con fecha y responsable escrito es lo que recupera esas ventas, y no cuesta un sol de publicidad.",
+        },
+      },
+      {
+        h2: "Qué medir para saber si funciona",
+        parrafo:
+          "En un negocio donde la venta tarda semanas, medir solo los contactos del mes engaña. Estas cuatro cifras cuentan la historia completa y se pueden llevar en una hoja.",
+        bullets: [
+          { titulo: "Contactos que quedaron registrados", texto: "no los que escribieron: los que alguien anotó con su origen. La diferencia entre ambos suele ser la primera sorpresa." },
+          { titulo: "Cuántos llegaron a visita", texto: "es el indicador que mejor predice las ventas del mes siguiente." },
+          { titulo: "Cuántas visitas cerraron", texto: "si este número es bajo con visitas abundantes, el problema es el producto o el precio, no la publicidad." },
+          { titulo: "De qué campaña venía cada venta", texto: "escrito al crear el contacto y no reconstruido después. Sin eso, al tercer mes nadie puede decir qué funcionó." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo conseguir clientes para vender terrenos?",
+        a: "Combinando pauta segmentada por zona con una página de proyecto que responda precio, ubicación y forma de pago, y un registro donde quede escrito de dónde vino cada contacto. Pero el mayor volumen de ventas perdidas no está en la captación: está en las visitas que no se confirman y en los interesados a los que nadie vuelve a llamar.",
+      },
+      {
+        q: "¿Conviene poner el precio en el anuncio de un terreno?",
+        a: "Sí, al menos un rango y la inicial. Vas a recibir menos contactos y más visitas reales. Ocultarlo llena la agenda de gente que no puede comprar y consume el tiempo del equipo comercial, que es el recurso más caro del proyecto.",
+      },
+      {
+        q: "¿Qué canal funciona mejor para vender lotes en Perú?",
+        a: "Las redes traen volumen rápido y barato pero filtran poco; la búsqueda trae menos contactos con más intención; los portales traen compradores activos pero te ponen a competir por precio. Lo que mejor cierra, en casi todos los proyectos, son los referidos, y casi nadie los pide de forma sistemática.",
+      },
+      {
+        q: "¿Cuántos leads hacen falta para vender un lote?",
+        a: "Depende tanto del precio, la zona y el equipo que un promedio ajeno no sirve. Lo útil es medir tu propia escalera: cuántos contactos llegan a visita y cuántas visitas cierran. Esas dos tasas te dicen cuántos contactos necesitas, y mejorar cualquiera de las dos es más barato que comprar más contactos.",
+      },
+      {
+        q: "¿Por qué la gente visita el terreno y no compra?",
+        a: "Por tres motivos, en este orden: llegó mal informada y el lugar no era lo que esperaba, no puede pagarlo en las condiciones ofrecidas, o se fue a pensarlo y nadie la volvió a buscar. Los tres se corrigen antes y después de la visita, no durante.",
+      },
+    ],
+    cierre: "En Suggestion montamos la captación de lotes con el origen de cada contacto escrito desde el primer mensaje, que es lo que después permite saber qué funcionó.",
+    moneyPage: { label: "Agencia de marketing inmobiliario", href: "/marketing-inmobiliario" },
+    relacionados: ["marketing-inmobiliario-ejemplos", "vender-proyecto-en-preventa", "publicidad-inmobiliaria-en-redes"],
+  },
+  {
+    slug: "como-vender-un-terreno-rapido-en-peru",
+    categoria: "inmobiliario",
+    title: "Cómo Vender un Terreno Rápido en Perú | Suggestion",
+    description:
+      "Los papeles que frenan la venta, cómo fijar un precio que no espante, dónde publicar y qué decide entre vender por tu cuenta o con corredor.",
+    h1: "Cómo vender un terreno rápido en Perú",
+    excerpt:
+      "La mayoría de terrenos que llevan meses sin venderse no tienen un problema de publicidad: tienen un problema de papeles o de precio. Y los dos se arreglan antes de publicar nada.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Lo que de verdad frena una venta",
+        parrafo:
+          "Cuando un terreno lleva meses publicado y no se vende, la reacción habitual es cambiar la foto o bajar el precio. Antes de eso conviene revisar lo que un comprador serio va a mirar en los primeros diez minutos, porque si algo de eso falla el interesado desaparece sin decirte por qué.",
+        bullets: [
+          { titulo: "El terreno no está inscrito o la partida no está clara", texto: "es el frenazo más común. Si el comprador o su abogado no pueden verificar quién es el dueño, la conversación se acaba ahí." },
+          { titulo: "Hay más de un propietario y no todos están de acuerdo", texto: "herencias sin repartir y copropiedades paralizan ventas durante años. Se resuelve antes de publicar, no cuando aparece el comprador." },
+          { titulo: "Hay cargas o gravámenes", texto: "una hipoteca o una anotación pendiente no impide vender, pero hay que saberlo y decirlo. Que lo descubra el comprador es perder la venta." },
+          { titulo: "Los linderos no coinciden con la realidad", texto: "el plano dice una cosa y el cerco está en otra. Es el problema que más negociaciones rompe en la recta final." },
+          { titulo: "Hay deudas de impuesto predial o arbitrios", texto: "se regularizan antes. Aparecer con deudas en plena negociación quita fuerza para sostener el precio." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Esto no es asesoría legal",
+          texto: "Cada caso tiene sus particularidades y la documentación exacta depende de la situación del predio y del municipio. Antes de publicar, confirma tu situación con una notaría o un abogado: una tarde de consulta puede ahorrarte meses de terreno publicado sin cerrar.",
+        },
+      },
+      {
+        h2: "El expediente que el comprador va a pedir",
+        parrafo:
+          "Tener esto listo antes de publicar acorta la venta de forma notable, porque el comprador serio puede verificar en días lo que de otro modo le toma semanas. Y mientras verifica, sigue mirando otros terrenos.",
+        tabla: {
+          cabeceras: ["Documento", "Para qué lo pide", "Dónde se consigue"],
+          filas: [
+            ["Partida registral actualizada", "Confirmar quién es el dueño y si hay cargas", "Registros públicos"],
+            ["Documento de identidad del propietario", "Que coincida con quien figura inscrito", "El propietario"],
+            ["Planos y memoria descriptiva", "Verificar área, linderos y medidas", "El propietario o un ingeniero"],
+            ["Impuesto predial y arbitrios al día", "Que no se arrastren deudas a la transferencia", "La municipalidad"],
+            ["Certificado de parámetros o zonificación", "Saber qué se puede construir ahí", "La municipalidad"],
+          ],
+          nota: "Si algo de esta lista no está en orden, el momento de arreglarlo es antes de publicar. Un comprador que descubre un problema a mitad de la negociación no solo baja la oferta: muchas veces se retira.",
+        },
+      },
+      {
+        h2: "El precio: el motivo número uno por el que no se vende",
+        parrafo:
+          "Casi todo propietario cree que su terreno vale más de lo que el mercado paga, y es comprensible: conoce su historia y lo que le costó. Pero el precio no lo fija lo que invertiste ni lo que necesitas: lo fija lo que se está vendiendo alrededor, hoy.",
+        pasos: [
+          { titulo: "Busca lo que se vende cerca, no lo que se vendió hace años", texto: "en portales y carteles de la zona, con metraje parecido. Ese es tu mercado real." },
+          { titulo: "Compara por metro cuadrado, no por total", texto: "es la única forma de comparar lotes de tamaños distintos sin engañarte." },
+          { titulo: "Descuenta lo que te falta", texto: "si los comparables tienen agua, luz o están independizados y el tuyo no, el precio no puede ser el mismo." },
+          { titulo: "Fija un precio y un piso", texto: "el publicado y el mínimo que aceptarías, decidido en frío. Negociar sin un piso definido de antemano es como se regala dinero." },
+        ],
+        dato: {
+          cifra: "Tres semanas sin consultas",
+          texto: "es la señal más clara de que el precio está fuera de mercado. Si el anuncio está bien hecho y en tres semanas no entró ninguna consulta seria, el problema no es la foto.",
+        },
+      },
+      {
+        h2: "Dónde publicarlo y cómo se ve un anuncio que funciona",
+        parrafo:
+          "Publicar en diez sitios con un anuncio malo rinde menos que publicar en tres con uno bueno. Esto es lo que mira quien está comparando terrenos, en el orden en que lo mira.",
+        bullets: [
+          { titulo: "Fotos con luz de día y del terreno completo", texto: "incluida la calle de acceso y el entorno. Un terreno fotografiado solo de cerca parece algo que se esconde." },
+          { titulo: "La ubicación, de verdad", texto: "distrito, referencia reconocible y, si puedes, el punto en el mapa. «Zona en crecimiento» no es una dirección." },
+          { titulo: "El área exacta y los linderos", texto: "en metros cuadrados, con el frente y el fondo. Es el primer dato que busca quien va a construir." },
+          { titulo: "Di que los papeles están en orden", texto: "si es cierto, es tu mejor argumento de venta y casi nadie lo pone. «Partida registral en regla» filtra y tranquiliza a la vez." },
+          { titulo: "Un número que alguien conteste", texto: "la mayoría de ventas se pierden en mensajes sin responder. Si no puedes atender, pon a alguien que lo haga." },
+        ],
+      },
+      {
+        h2: "¿Por tu cuenta o con corredor?",
+        parrafo:
+          "No hay una respuesta única y depende de cuánto vale tu tiempo y qué tan complicado está el caso. Esta es la comparación honesta.",
+        tabla: {
+          cabeceras: ["", "Por tu cuenta", "Con corredor"],
+          filas: [
+            ["Costo", "Solo la publicidad", "Una comisión sobre el precio de venta"],
+            ["Tiempo que te consume", "Atender consultas, coordinar y acompañar visitas", "Mucho menor"],
+            ["Alcance", "El de tus anuncios", "Su cartera y su red de contactos"],
+            ["Si los papeles están enredados", "Te toca resolverlo solo", "Suele saber cómo destrabarlo"],
+            ["Precio final", "Puedes ceder más por no saber negociar", "Negocia a diario, pero quiere cerrar rápido"],
+          ],
+          nota: "Si decides ir con corredor, acuerda por escrito la comisión, si es exclusiva y por cuánto tiempo, y qué pasa si el comprador lo traes tú. Son las tres cosas que después generan discusiones.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo vender un terreno rápido en Perú?",
+        a: "Con los papeles en orden antes de publicar, un precio alineado con lo que se vende hoy en la zona y un anuncio que diga ubicación real, área exacta y que la documentación está al día. En la práctica, los dos motivos por los que un terreno no se vende son casi siempre el precio y la documentación, no la publicidad.",
+      },
+      {
+        q: "¿Qué documentos necesito para vender un terreno?",
+        a: "Como mínimo, la partida registral actualizada, tu documento de identidad coincidiendo con quien figura inscrito, los planos con el área y los linderos, y los tributos municipales al día. Según el caso puede pedirse más, así que conviene confirmarlo con una notaría antes de publicar.",
+      },
+      {
+        q: "¿Puedo vender un terreno que no está inscrito?",
+        a: "Es mucho más difícil y reduce de forma drástica el número de compradores, porque quien compra no puede verificar la titularidad ni acceder a financiamiento. Si ese es tu caso, el primer paso no es publicar: es consultar cómo regularizar la situación registral.",
+      },
+      {
+        q: "¿Cómo sé cuánto vale mi terreno?",
+        a: "Comparando el precio por metro cuadrado de lo que se está vendiendo hoy en la misma zona y con metraje parecido, y descontando lo que al tuyo le falta frente a esos comparables. Lo que no sirve como referencia es lo que te costó, lo que invertiste o lo que necesitas recibir.",
+      },
+      {
+        q: "¿Conviene bajar el precio si no se vende?",
+        a: "Solo después de descartar lo demás. Si el anuncio es bueno, la documentación está en orden y en tres semanas no hubo ninguna consulta seria, entonces sí es el precio. Pero bajar primero y revisar después suele significar vender más barato un terreno que tenía otro problema.",
+      },
+      {
+        q: "¿Cuánto cobra un corredor inmobiliario en Perú?",
+        a: "Se trabaja con una comisión sobre el precio de venta que se acuerda caso por caso. Lo importante no es solo el porcentaje: es dejar por escrito si el encargo es exclusivo, por cuánto tiempo y qué pasa si el comprador lo consigues tú. Esos tres puntos son los que generan discusiones después.",
+      },
+    ],
+    cierre: "En Suggestion trabajamos con proyectos e inmobiliarias que necesitan vender lotes con el expediente y la medición en orden desde el primer día.",
+    moneyPage: { label: "Agencia de marketing inmobiliario", href: "/marketing-inmobiliario" },
+    relacionados: ["como-conseguir-clientes-para-vender-terrenos", "publicidad-inmobiliaria-en-redes", "marketing-inmobiliario-ejemplos"],
+  },
+  {
+    slug: "como-promocionar-un-hotel",
+    categoria: "sectores",
+    title: "Cómo Promocionar un Hotel y Reducir Booking | Suggestion",
+    description:
+      "Cuánto te cuesta cada canal, por qué Booking no es el enemigo sino un escaparate caro, y cómo pasar reservas a canal directo sin romper la paridad de precios.",
+    h1: "Cómo promocionar un hotel sin regalar el margen",
+    excerpt:
+      "Un hotel lleno a través de Booking y un hotel rentable no son lo mismo. La diferencia está en una cuenta que casi nadie hace: cuánto te queda de cada reserva según de dónde vino.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "La cuenta que decide todo lo demás",
+        parrafo:
+          "Antes de decidir dónde invertir, hay que saber qué te queda de cada reserva según el canal por el que entró. Es una cuenta de diez minutos que cambia por completo la conversación sobre el presupuesto de marketing, porque de pronto el gasto en captación directa deja de ser un costo y pasa a ser un ahorro de comisión.",
+        tabla: {
+          cabeceras: ["Canal", "Qué se lleva", "Qué te deja además"],
+          filas: [
+            ["Booking.com", "Alrededor del 15 % como referencia para independientes, con un rango habitual del 10 % al 20 %", "Volumen y visibilidad que tú solo no alcanzas"],
+            ["Expedia", "Comisión estándar en torno al 18 %, con un rango real del 15 % al 30 %", "Acceso a mercados y paquetes"],
+            ["Canal directo", "Solo lo que gastes en captar", "El dato del huésped, para que vuelva"],
+            ["Teléfono y recomendación", "Nada", "La mejor tasa de conversión de todas"],
+          ],
+          nota: "Rangos del mercado consultados en octubre de 2026 según guías del sector; la comisión exacta figura en tu propio contrato y los programas de visibilidad la suben. La referencia que se maneja como sana es que el canal directo represente entre el 20 % y el 40 % del total de reservas.",
+        },
+      },
+      {
+        h2: "Booking no es el enemigo: es un escaparate caro",
+        parrafo:
+          "El error de muchos hoteles pequeños es plantearlo como una guerra. Las agencias en línea hacen algo que tú no puedes hacer solo: ponerte delante de alguien en Lima, en Santiago o en Madrid que no sabe que existes. Lo que no tiene sentido es pagar esa comisión por el huésped que ya te conocía y que habría reservado igual.",
+        bullets: [
+          { titulo: "Úsalas para captar al que no te conoce", texto: "es exactamente lo que estás comprando con la comisión: descubrimiento." },
+          { titulo: "Deja de pagarlas por el que ya te conoce", texto: "el que repite, el referido y el que buscó tu nombre en Google no deberían entrar por ahí." },
+          { titulo: "Cuida tu ficha como si fuera tu web", texto: "fotos reales, descripción completa, política clara. Una ficha a medias desperdicia una comisión que igual vas a pagar." },
+          { titulo: "Mira qué programas tienes activados", texto: "las opciones de mayor visibilidad suben la comisión. Vale la pena revisar si lo que ganas en volumen compensa lo que pierdes en margen." },
+        ],
+      },
+      {
+        h2: "Cómo pasar reservas al canal directo",
+        parrafo:
+          "La paridad de precios que exigen las plataformas limita bajar la tarifa en tu web, pero no impide competir. Se compite con lo que la plataforma no puede ofrecer, y casi todo eso no cuesta dinero.",
+        pasos: [
+          { titulo: "Dale valor a reservar directo, no descuento", texto: "late checkout, desayuno incluido, upgrade según disponibilidad, traslado o una botella de pisco de la zona. Es valor percibido alto y costo real bajo." },
+          { titulo: "Pon un motor de reservas que funcione en celular", texto: "si el huésped tiene que escribir para consultar disponibilidad, va a volver a Booking, donde reserva en dos toques." },
+          { titulo: "Gana tu propio nombre en Google", texto: "mucha gente busca el hotel por su nombre después de verlo en una plataforma. Si ahí arriba aparece la agencia y no tú, estás pagando comisión por tu propia marca." },
+          { titulo: "Captura el correo del huésped", texto: "en el check-in, con permiso. Es el activo que la plataforma no te da y el que hace que el segundo viaje sea directo." },
+          { titulo: "Pídele la reserva directa al que ya se fue contento", texto: "un mensaje con un código para la próxima estadía, enviado días después de la salida, convierte mejor que cualquier anuncio." },
+        ],
+        dato: {
+          cifra: "20 % a 40 %",
+          texto: "del total de reservas es la referencia que el sector considera sana para el canal directo. Cada punto que recuperas es comisión que se queda en el hotel, y no requiere llenar más habitaciones.",
+        },
+      },
+      {
+        h2: "Las reseñas y la ficha deciden más que la campaña",
+        parrafo:
+          "Quien está eligiendo entre tu hotel y el de al lado abre las reseñas antes que tu web. En hotelería, la reputación en línea no es una métrica de marketing: es parte del producto, y se gestiona todos los días.",
+        bullets: [
+          { titulo: "La frecuencia pesa más que el total", texto: "veinte reseñas de los últimos meses transmiten un hotel vivo; doscientas de hace tres años, uno que fue bueno alguna vez." },
+          { titulo: "Responde todas, sobre todo las malas", texto: "una respuesta serena y concreta a una queja convence al siguiente huésped más que diez elogios." },
+          { titulo: "Las fotos de huéspedes mandan", texto: "se perciben como reales. Que el hotel se vea bien en una foto de celular es trabajo de operación, no de retoque." },
+          { titulo: "Tu ficha de Google es la puerta de la última búsqueda", texto: "la que hace el huésped justo antes de decidir. Horario, fotos, teléfono y enlace a reservar tienen que estar impecables." },
+        ],
+      },
+      {
+        h2: "Temporada alta y baja no se anuncian igual",
+        parrafo:
+          "Es el error de calendario más caro del rubro: usar el mismo mensaje todo el año. En temporada alta tu competencia es el hotel de al lado; en baja, tu competencia es que la persona no viaje.",
+        tabla: {
+          cabeceras: ["", "Temporada alta", "Temporada baja"],
+          filas: [
+            ["A quién le hablas", "A quien ya decidió viajar", "A quien todavía no pensaba viajar"],
+            ["Qué comunicas", "Por qué tu hotel y no otro", "Un motivo para venir: un evento, una ruta, un plan"],
+            ["Con cuánta anticipación", "Semanas antes del pico", "Meses, porque hay que crear la ocasión"],
+            ["Qué ofreces", "Disponibilidad y ventajas de reservar ya", "Paquetes, experiencias y público local o regional"],
+          ],
+          nota: "En baja, el público que mejor responde suele ser el de la propia región, que puede decidir un fin de semana con pocos días de margen. Es el segmento que más se olvida y el más barato de alcanzar.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cobra Booking.com a un hotel?",
+        a: "Las guías del sector sitúan la comisión entre el 10 % y el 20 %, con alrededor del 15 % como referencia para propiedades independientes; Expedia se mueve en torno al 18 % estándar con un rango del 15 % al 30 %. El porcentaje exacto está en tu contrato y los programas de mayor visibilidad lo aumentan. Datos de referencia consultados en octubre de 2026.",
+      },
+      {
+        q: "¿Conviene salir de Booking?",
+        a: "Para la mayoría de hoteles pequeños, no. Las plataformas hacen algo que tú no puedes hacer solo: ponerte delante de gente que no sabe que existes. Lo que sí conviene es dejar de pagar comisión por el huésped que ya te conocía, y eso se consigue fortaleciendo el canal directo, no cerrando el otro.",
+      },
+      {
+        q: "¿Puedo poner precios más baratos en mi web que en Booking?",
+        a: "Los contratos suelen incluir cláusulas de paridad que lo limitan, así que conviene revisar el tuyo. Lo que sí puedes hacer es competir con valor en lugar de precio: desayuno, late checkout, upgrade, traslado o un detalle local. Es más efectivo que una diferencia de tarifa y no entra en conflicto.",
+      },
+      {
+        q: "¿Qué porcentaje de reservas directas debería tener?",
+        a: "La referencia que maneja el sector como sana es entre el 20 % y el 40 % del total. Si estás muy por debajo, cada punto que recuperes es comisión que se queda en el hotel sin necesidad de llenar una habitación más, que suele ser la forma más rápida de mejorar la rentabilidad del mes.",
+      },
+      {
+        q: "¿Cómo consigo más reseñas para mi hotel?",
+        a: "Pidiéndolas con rutina, no por suerte: al momento de la salida, con el enlace directo y de parte de la persona que atendió. Un huésped contento rara vez reseña solo. Y responde todas, porque lo que el siguiente evalúa es cómo tratas un problema cuando aparece.",
+      },
+      {
+        q: "¿Qué hago en temporada baja?",
+        a: "Cambiar de público y de mensaje. En alta le hablas a quien ya decidió viajar; en baja tienes que crear el motivo del viaje, con anticipación de meses y mirando al público regional, que puede decidir una escapada con pocos días de margen. Repetir el mensaje de temporada alta en baja es gastar sin resultado.",
+      },
+    ],
+    cierre: "En Suggestion trabajamos el canal directo del hotel junto con la ficha y las reseñas, que es donde se recupera el margen que se va en comisiones.",
+    moneyPage: { label: "Agencia de marketing para hoteles", href: "/marketing-turismo" },
+    relacionados: ["marketing-para-restaurantes", "como-aparecer-primero-en-google-maps", "ficha-de-empresa-en-google-crear-y-verificar"],
+  },
+  {
+    slug: "como-vender-por-whatsapp-paso-a-paso",
+    categoria: "ia-automatizacion",
+    title: "Cómo Vender por WhatsApp Paso a Paso | Suggestion",
+    description:
+      "Qué versión de WhatsApp usar, el montaje mínimo que sí sirve, la estructura de conversación que cierra y los errores que terminan con la cuenta bloqueada.",
+    h1: "Cómo vender por WhatsApp paso a paso",
+    excerpt:
+      "En Perú casi toda la venta pasa por WhatsApp, y casi nadie lo tiene montado. La diferencia entre un negocio que vende ahí y uno que solo conversa son cuatro cosas, y ninguna es un bot.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Primero: qué versión necesitas",
+        parrafo:
+          "Hay tres WhatsApp distintos y elegir mal cuesta meses. La mayoría de negocios pequeños están usando el personal para vender, que es el peor de los tres para eso, y saltan directo a querer un bot, que casi nunca es lo que hace falta.",
+        tabla: {
+          cabeceras: ["Versión", "Para quién", "Qué te da y qué no"],
+          filas: [
+            ["WhatsApp personal", "Nadie que venda en serio", "No tiene catálogo, ni etiquetas, ni horario, y la conversación es del dueño del celular"],
+            ["WhatsApp Business (app)", "Negocios de una a tres personas", "Catálogo, respuestas rápidas, etiquetas y mensaje de ausencia. Un solo dispositivo principal"],
+            ["WhatsApp Business API", "Equipos que atienden en paralelo", "Varios agentes sobre el mismo número, integración con CRM y métricas. Requiere un proveedor"],
+          ],
+          nota: "El salto de la app a la API se justifica cuando hay varias personas atendiendo o cuando necesitas que la conversación quede registrada fuera del celular. Si atiende una sola persona, la app alcanza y es gratis.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "El riesgo que nadie menciona",
+          texto: "Si el número de la empresa está en el celular personal de un trabajador, el día que esa persona se va, se va con la cartera de clientes y con el historial. El número y las conversaciones tienen que ser de la empresa desde el primer día.",
+        },
+      },
+      {
+        h2: "El montaje mínimo, en una tarde",
+        parrafo:
+          "No hace falta un sistema complejo para multiplicar lo que vendes por este canal. Estas cinco configuraciones están en la propia app y casi ningún negocio las tiene puestas.",
+        pasos: [
+          { titulo: "El perfil completo", texto: "nombre del negocio, rubro, dirección, horario, web y descripción. Es lo primero que mira alguien que no te conoce antes de escribirte." },
+          { titulo: "El catálogo cargado", texto: "con foto, nombre, precio y descripción. Mandar un PDF o una foto de la lista es perder la venta de quien quería ver algo rápido." },
+          { titulo: "Respuestas rápidas para lo de siempre", texto: "precio, ubicación, horario, formas de pago y envío. Si contestas eso veinte veces al día a mano, estás perdiendo horas." },
+          { titulo: "Mensaje de ausencia con compromiso", texto: "no «te responderemos pronto», sino cuándo. «Mañana antes de las 10» retiene; «pronto» no retiene a nadie." },
+          { titulo: "Etiquetas que signifiquen algo", texto: "nuevo, cotizado, esperando, cerrado, perdido. Son tu embudo sin pagar un CRM, y permiten saber a quién toca volver a escribir." },
+        ],
+      },
+      {
+        h2: "La conversación que vende",
+        parrafo:
+          "La mayoría de conversaciones de venta por WhatsApp mueren en el mismo punto: el cliente pregunta el precio, recibe el número y desaparece. No es porque el precio sea alto: es porque la conversación terminó ahí y nadie la continuó.",
+        tabla: {
+          cabeceras: ["Momento", "Lo que hace casi todo el mundo", "Lo que convierte"],
+          filas: [
+            ["Primer mensaje", "«Hola, ¿en qué podemos ayudarte?»", "Saludar por el nombre y responder lo que preguntó, sin rodeos"],
+            ["Pregunta el precio", "Mandar solo la cifra", "La cifra, qué incluye y una pregunta de vuelta"],
+            ["Dice «lo voy a pensar»", "«Claro, cualquier cosa avísame»", "Acordar cuándo vuelves a escribir, con fecha"],
+            ["No responde", "Esperar", "Un mensaje a las 48 horas con información nueva, no con un «¿sigues interesado?»"],
+            ["Compró", "Fin", "Confirmación, fecha de entrega y pedir la reseña al terminar"],
+          ],
+          nota: "La regla que más cambia los resultados es terminar cada mensaje con una pregunta o un siguiente paso. Una conversación sin siguiente paso se enfría en horas, y recuperarla cuesta más que haberla mantenido.",
+        },
+      },
+      {
+        h2: "El tiempo de respuesta lo decide casi todo",
+        parrafo:
+          "En un canal donde la persona escribe a tres proveedores a la vez, el primero que contesta con algo útil tiene una ventaja que no se compensa con mejor precio. Y la mayoría de negocios pierde ventas no por no responder, sino por responder tarde.",
+        bullets: [
+          { titulo: "Define quién contesta y en qué horario", texto: "por escrito. «Todos» significa nadie, y es el motivo más común de mensajes sin responder." },
+          { titulo: "Mide cuántos mensajes se quedan sin respuesta", texto: "una semana contando a mano basta para llevarse la sorpresa. Suele ser el agujero más grande del negocio." },
+          { titulo: "Separa atender de vender", texto: "si la misma persona atiende el mostrador y el WhatsApp en hora punta, el WhatsApp pierde siempre." },
+          { titulo: "Los fines de semana existen", texto: "en muchos rubros es cuando más se escribe. Un mensaje de ausencia honesto es mejor que el silencio." },
+        ],
+      },
+      {
+        h2: "Lo que puede costarte la cuenta",
+        parrafo:
+          "WhatsApp restringe cuentas que se comportan como spam, y perder el número con el que vendes es un golpe del que cuesta recuperarse. Estas son las prácticas que más bloqueos provocan.",
+        bullets: [
+          { titulo: "Escribir primero a quien no te dio su número", texto: "listas compradas y números sacados de otro lado. Es la vía rápida al bloqueo y además no vende." },
+          { titulo: "Difusiones masivas a gente que no te tiene agendado", texto: "la lista de difusión solo llega a quien te tiene guardado. A los demás, no les llega y además marca tu número." },
+          { titulo: "Muchos mensajes iguales en poco tiempo", texto: "el patrón de envío importa tanto como el contenido." },
+          { titulo: "Ignorar los bloqueos de los usuarios", texto: "si mucha gente te bloquea o te reporta, la cuenta se restringe. Es la señal de que lo que mandas no se pidió." },
+        ],
+        nota: {
+          titulo: "La alternativa correcta",
+          texto: "Si necesitas mandar mensajes masivos de forma legítima, eso se hace con la API y con plantillas aprobadas, sobre contactos que aceptaron recibirlos. Es más trabajo al inicio y es la única forma que no termina con el número restringido.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo vender por WhatsApp paso a paso?",
+        a: "Pasa a WhatsApp Business, completa el perfil, carga el catálogo con precios, configura respuestas rápidas para las preguntas de siempre y pon etiquetas que funcionen como embudo. Después, define quién contesta y en qué horario, y termina cada conversación con un siguiente paso acordado. El montaje se hace en una tarde; lo que cuesta es el hábito.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre WhatsApp Business y la API?",
+        a: "La app es gratuita, funciona en un dispositivo principal y sirve para negocios de una a tres personas. La API permite que varios agentes atiendan el mismo número, se integra con un CRM y da métricas, pero requiere contratar un proveedor. El salto se justifica cuando hay equipo atendiendo en paralelo.",
+      },
+      {
+        q: "¿Puedo mandar mensajes masivos por WhatsApp?",
+        a: "Con la lista de difusión solo llegan a quienes te tienen agendado, y escribir a listas compradas es la vía rápida a que te restrinjan la cuenta. Para envíos masivos legítimos existe la API con plantillas aprobadas y contactos que aceptaron recibirlos. Perder el número con el que vendes es un golpe serio.",
+      },
+      {
+        q: "¿Necesito un chatbot para vender por WhatsApp?",
+        a: "Casi nunca es lo primero. Un bot ayuda a filtrar y a responder fuera de horario, pero no arregla el problema real de la mayoría de negocios, que es que nadie contesta a tiempo dentro del horario. Ordena primero quién responde y con qué rapidez; el bot después.",
+      },
+      {
+        q: "¿Debo poner los precios en el catálogo?",
+        a: "Sí. En WhatsApp la gente pregunta el precio en el primer mensaje, y hacerla esperar solo le da tiempo de escribirle a otro. Un catálogo con precios filtra y acelera: los que escriben después de verlos ya aceptaron el rango.",
+      },
+      {
+        q: "¿Cómo recupero a alguien que dejó de responder?",
+        a: "Con información nueva, no con un «¿sigues interesado?». Un mensaje a las 48 horas que aporte algo —disponibilidad, una opción distinta, una facilidad de pago— reabre conversaciones. El recordatorio vacío suele conseguir el efecto contrario.",
+      },
+    ],
+    cierre: "En Suggestion conectamos WhatsApp con el CRM para que la conversación quede registrada en la empresa y nadie se quede sin respuesta.",
+    moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
+    relacionados: ["como-automatizar-whatsapp", "que-es-un-crm", "que-es-un-embudo-de-ventas"],
+  },
+  {
+    slug: "como-conseguir-clientes-para-exportar",
+    categoria: "sectores",
+    title: "Cómo Conseguir Clientes para Exportar | Suggestion",
+    description:
+      "Cómo encuentra un importador a su proveedor, las tres vías que funcionan desde Perú —ferias, Promperú y prospección directa— y qué te van a pedir antes de hablar de precio.",
+    h1: "Cómo conseguir clientes para exportar",
+    excerpt:
+      "El importador no busca proveedores como un consumidor busca un producto. Y por eso la mayoría de agroexportadoras pequeñas invierte en marketing que a su cliente real no le llega nunca.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Tu cliente no te busca como un consumidor",
+        parrafo:
+          "Esta es la confusión que más presupuesto desperdicia en el rubro. Un importador europeo o asiático no entra a Instagram a descubrir proveedores de uva. Llega a ti por tres vías —una feria, una institución que lo conecta o una búsqueda muy específica— y en las tres evalúa lo mismo: si puedes cumplir, con qué volumen y con qué respaldo. Todo el esfuerzo de marketing debería servir a esa evaluación, no a generar simpatía.",
+        bullets: [
+          { titulo: "Compra contra una ventana y un volumen", texto: "necesita tantas toneladas, en tales semanas, con tal calibre. Si no puedes cumplirlo, el resto de la conversación no existe." },
+          { titulo: "Evalúa el riesgo antes que el precio", texto: "lo que más teme es un embarque que no llega o que llega fuera de especificación. El precio se negocia después de descartar ese miedo." },
+          { titulo: "Necesita verificar que existes", texto: "web, certificaciones, trazabilidad y referencias. Una empresa sin presencia verificable es un riesgo que no va a tomar." },
+          { titulo: "Decide en equipo y con lentitud", texto: "el ciclo es de meses y pasa por varias personas. Por eso el seguimiento vale más que el primer impacto." },
+        ],
+      },
+      {
+        h2: "Las tres vías que funcionan desde Perú",
+        parrafo:
+          "No son excluyentes y conviene trabajarlas en este orden, porque cada una alimenta a la siguiente: lo que consigues en una feria se sostiene con la prospección, y lo que te abre una institución se cierra con tu propio material.",
+        tabla: {
+          cabeceras: ["Vía", "Qué consigue", "Qué exige de ti"],
+          filas: [
+            ["Ferias internacionales", "Contacto directo con compradores reales, en pocos días", "Preparación previa, material en inglés y seguimiento posterior"],
+            ["Promperú y la Ruta Exportadora", "Asesoría, estudios de mercado, ruedas de negocio y pabellón oficial", "Cumplir requisitos y sostener el proceso"],
+            ["Prospección directa", "Control total sobre a quién le hablas", "Investigación, contenido técnico y constancia durante meses"],
+            ["Plataformas B2B y directorios", "Visibilidad frente a quien ya busca proveedor", "Ficha impecable y respuesta rápida en inglés"],
+          ],
+          nota: "Promperú articula la Ruta Exportadora con asesorías, capacitaciones, estudios de mercado, participación en ruedas de negocio y acompañamiento para certificaciones, además de plataformas como Perú Marketplace y exportemos.pe. Para una empresa pequeña, es la vía con mejor relación entre costo y acceso.",
+        },
+        dato: {
+          cifra: "2,600 expositores",
+          texto: "de 90 países reunió Fruit Logistica en Berlín en su edición de 2026, el encuentro de referencia del comercio de frutas y hortalizas. En Expoalimentaria 2026, en Lima, las empresas peruanas registraron 646 contactos comerciales y más de 7.3 millones de dólares en expectativas de negocio.",
+        },
+      },
+      {
+        h2: "Lo que te van a pedir antes de hablar de precio",
+        parrafo:
+          "Una conversación con un importador serio se cae casi siempre en el mismo punto: cuando pide documentación y la empresa tarda dos semanas en reunirla. Tener esto listo antes de la primera feria es lo que separa a quien consigue clientes de quien consigue tarjetas.",
+        tabla: {
+          cabeceras: ["Qué pide", "Por qué", "Cómo debe estar"],
+          filas: [
+            ["Ficha técnica del producto", "Para verificar que cumple su especificación", "En inglés, con calibres, presentación y vida útil"],
+            ["Certificaciones vigentes", "Es requisito de su propio cliente, no capricho", "Con fecha de vigencia visible y descargables"],
+            ["Volúmenes y ventanas de campaña", "Para saber si encajas en su calendario", "Por semana o por mes, con honestidad"],
+            ["Capacidad de planta y proceso", "Para evaluar el riesgo de incumplimiento", "Fotos reales, no renders ni fotos de archivo"],
+            ["Referencias de otros destinos", "Para confiar en que ya exportaste", "Mercados y años, sin romper confidencialidad"],
+          ],
+          nota: "La respuesta más potente a «¿pueden cumplir?» no es decir que sí: es mandar el expediente completo en el mismo día. La velocidad de respuesta documenta seriedad mejor que cualquier presentación.",
+        },
+      },
+      {
+        h2: "La web y el material que de verdad se usan",
+        parrafo:
+          "La web de una agroexportadora no se parece a la de un negocio de consumo, porque su trabajo es otro: no tiene que emocionar, tiene que permitir verificar. Un comprador la abre después de conocerte y antes de responderte, y lo que busca es confirmar que eres quien dijiste ser.",
+        bullets: [
+          { titulo: "En inglés, completa, no traducida a medias", texto: "una web mitad en español es una señal de que la operación de exportación también está a medias." },
+          { titulo: "Fichas de producto descargables", texto: "una por producto, con especificaciones. Es lo que el comprador reenvía dentro de su empresa, y esa es la pieza que decide." },
+          { titulo: "Certificaciones visibles y con vigencia", texto: "no en una imagen pequeña en el pie de página: en una sección propia y verificable." },
+          { titulo: "Fotos reales del fundo y la planta", texto: "el vídeo de dron del campo y la línea de proceso valen más que cualquier texto. Lo que no se puede ver, se duda." },
+          { titulo: "Un contacto que responda en horario de su huso", texto: "si el importador escribe a su mañana y recibe respuesta al día siguiente, se enfría. Es un detalle operativo que cuesta clientes." },
+        ],
+      },
+      {
+        h2: "El seguimiento posferia, donde se cae todo",
+        parrafo:
+          "Aquí se pierde la mayor parte de la inversión del rubro. Una empresa gasta en pasajes, stand y material, vuelve con sesenta tarjetas y escribe a todas la misma semana con un «fue un gusto conocerlos». Dos meses después no hay una sola negociación abierta, y la conclusión equivocada es que la feria no sirvió.",
+        pasos: [
+          { titulo: "Clasifica los contactos el mismo día", texto: "en caliente, tibio y descarte, con una nota de qué se habló. Al tercer día ya nadie recuerda quién era quién." },
+          { titulo: "Escribe en 48 horas y con algo concreto", texto: "la ficha del producto que le interesó y una propuesta de siguiente paso. El correo genérico no se responde." },
+          { titulo: "Acuerda una fecha, no una intención", texto: "una videollamada, el envío de una muestra, una cotización con fecha de validez. Sin fecha no hay proceso." },
+          { titulo: "Sostén el contacto durante meses", texto: "con información útil: inicio de campaña, resultados de calidad, una certificación nueva. El ciclo es largo y gana quien sigue presente cuando el comprador necesita cambiar de proveedor." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "La cuenta que conviene hacer",
+          texto: "Divide todo lo que te costó la feria entre el número de contactos que siguen abiertos tres meses después. Si ese número es cero, el problema no fue la feria: fue que nadie se hizo cargo del seguimiento, y eso es mucho más barato de arreglar que dejar de ir.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo conseguir clientes para exportar desde Perú?",
+        a: "Por tres vías que se complementan: ferias internacionales del rubro, los programas de Promperú —la Ruta Exportadora ofrece asesoría, estudios de mercado, ruedas de negocio y pabellón oficial— y prospección directa a importadores. Las tres exigen lo mismo de fondo: material técnico en inglés y capacidad de responder rápido cuando pidan documentación.",
+      },
+      {
+        q: "¿Vale la pena ir a una feria internacional?",
+        a: "Vale si vas preparado y si hay alguien encargado del seguimiento al volver. El gasto en pasajes y stand se justifica por los contactos que siguen abiertos tres meses después, no por las tarjetas recogidas. La mayoría de empresas que concluye que la feria no sirvió en realidad no hizo seguimiento.",
+      },
+      {
+        q: "¿Qué es la Ruta Exportadora de Promperú?",
+        a: "Es el programa con el que Promperú acompaña a empresas peruanas a exportar: asesorías personalizadas, capacitaciones, diagnóstico de capacidades, estudios de mercado, participación en ruedas de negocio y ferias internacionales, acompañamiento para certificaciones y acceso a plataformas como Perú Marketplace y exportemos.pe.",
+      },
+      {
+        q: "¿Necesito la web en inglés?",
+        a: "Sí, y completa. Una web a medias traducida transmite que la operación de exportación también está a medias. Lo más importante son las fichas técnicas descargables por producto: es la pieza que el comprador reenvía dentro de su propia empresa, y ahí se decide.",
+      },
+      {
+        q: "¿Sirven las redes sociales para una agroexportadora?",
+        a: "Sirven para credibilidad y para reclutar talento, no para captar importadores. Un comprador puede mirar tu perfil para verificar que la empresa está activa, pero no va a encontrarte ahí. El esfuerzo rinde mucho más en la web técnica, las certificaciones visibles y el seguimiento comercial.",
+      },
+      {
+        q: "¿Cuánto tarda cerrar un cliente de exportación?",
+        a: "Meses, y conviene planificarlo así desde el inicio. La decisión pasa por varias personas y suele atarse al calendario de campaña del comprador. Por eso el seguimiento constante vale más que el primer impacto: ganas cuando sigues presente en el momento en que necesita cambiar de proveedor.",
+      },
+    ],
+    cierre: "En Suggestion armamos la web técnica, el material de feria y el seguimiento comercial de agroexportadoras que necesitan que el importador pueda verificarlas.",
+    moneyPage: { label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" },
+    relacionados: ["marketing-para-agroexportadoras", "que-es-un-crm", "cuanto-cuesta-una-pagina-web-en-peru"],
+  },
 ];
 
 export const getCategoria = (slug: string): BlogCategoria | undefined =>
