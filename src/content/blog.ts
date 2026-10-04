@@ -504,6 +504,53 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
       },
     ]
   },
+  {
+    slug: "imprenta-btl",
+    nombre: "Imprenta, BTL y publicidad física",
+    metaTitle: "Imprenta y Publicidad Física: Guías y Precios | Suggestion",
+    metaDescription:
+      "Gigantografías, letreros, tarjetas, polos y material POP: medidas, materiales, cantidades mínimas y rangos de precio del mercado peruano. Para cotizar sabiendo.",
+    h1: "Imprenta y publicidad física: lo que conviene saber antes de pedir",
+    intro:
+      "Medidas, materiales, cantidades mínimas y cuánto cuesta cada cosa en el mercado peruano. Para que llegues a cotizar sabiendo lo que pides.",
+    secciones: [
+      {
+        h2: "Por qué publicamos precios de referencia",
+        parrafo:
+          "Pedir una gigantografía o un millar de tarjetas sin tener idea de lo que cuestan deja al cliente en desventaja, y el que vende lo sabe. Los rangos que aparecen en estos artículos son del mercado peruano, con su fecha de consulta y su fuente al lado: el extremo bajo sale de fichas de producto con precio listado y el alto, de referencias publicadas por proveedores del rubro. No son nuestras tarifas ni una cotización.",
+        nota: {
+          tipo: "aviso",
+          titulo: "Los precios de imprenta caducan",
+          texto: "Se mueven con el dólar y con el papel. Cada artículo lleva la fecha en que se consultó el dato; si han pasado muchos meses desde esa fecha, tómalo como orden de magnitud y pide cotización.",
+        },
+      },
+      {
+        h2: "Lo que casi nadie te dice antes de cotizar",
+        parrafo:
+          "Dos datos cambian por completo si una pieza es viable para tu negocio, y rara vez aparecen en la publicidad del proveedor.",
+        bullets: [
+          { titulo: "La cantidad mínima", texto: "muchos productos promocionales no se fabrican por debajo de 50 o 100 unidades. Enamorarte de una pieza que no puedes pedir en tu volumen es perder una semana." },
+          { titulo: "El costo de arranque", texto: "bordados, troqueles y matrices se pagan una sola vez pero se pagan. En tirajes cortos pesan más que el producto." },
+          { titulo: "El ancho del material", texto: "en gran formato, el rollo manda. Una medida que desperdicia medio rollo se paga igual." },
+          { titulo: "La instalación", texto: "en letreros y paneles puede ser una parte importante del total y casi nunca viene incluida en el precio que te muestran primero." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Los precios que publican son los de Suggestion?",
+        a: "No. Son rangos del mercado peruano, con su fuente y su fecha, para que llegues a cotizar con una referencia. Nuestras tarifas se ven en las páginas de servicio o pidiendo una cotización.",
+      },
+      {
+        q: "¿Por qué el mismo producto varía tanto de precio?",
+        a: "Por el material, el acabado y sobre todo la cantidad. En imprenta casi todo el costo está en preparar la máquina: por eso el segundo millar siempre sale mucho más barato que el primero, y pedir de a pocos es la forma más cara de comprar.",
+      },
+      {
+        q: "¿Conviene imprimir en Lima o en provincia?",
+        a: "Depende del volumen y del plazo. En tirajes grandes, Lima suele tener mejor precio por unidad; cuando se suma el flete, el plazo y la posibilidad de revisar una prueba antes de imprimir, el proveedor local gana en casi todo lo demás.",
+      },
+    ]
+  },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -3390,6 +3437,699 @@ export const BLOG_POSTS: BlogPost[] = [
     cierre: "En Suggestion construimos tu presencia B2B —web, contenido y marca— para abrir mercados desde Ica al mundo.",
     moneyPage: { label: "Abramos nuevos mercados", href: "/marketing-agroexportacion" },
     relacionados: ["como-vender-pisco-y-vino-por-internet", "posicionamiento-de-marca"],
+  },
+  {
+    slug: "gigantografias-medidas-materiales-precios",
+    categoria: "imprenta-btl",
+    title: "Gigantografías: Medidas, Materiales y Precios | Suggestion",
+    description:
+      "Qué material pedir, qué medidas aprovechan el rollo y cuánto cuesta una gigantografía en Perú: desde S/19.50 el m². Guía para cotizar sin equivocarte.",
+    h1: "Gigantografías: qué material pedir, qué medidas y cuánto cuesta",
+    excerpt:
+      "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Gigantografía, banner y lona: la misma pieza con tres nombres",
+        parrafo:
+          "En Perú los tres términos se usan casi como sinónimos, y eso provoca malentendidos al cotizar. Gigantografía es la impresión de gran formato, sin importar sobre qué. Banner es el material más común para hacerla —una lona de PVC que se mide en onzas— y lona es el nombre genérico de ese material. Cuando pidas precio, lo que define el costo no es la palabra que uses: es el material, el gramaje y los metros cuadrados.",
+      },
+      {
+        h2: "Los materiales, y cuál aguanta la calle",
+        parrafo:
+          "El error más caro es pedir material de interior para un uso de exterior. Ahorra poco y dura semanas en vez de meses. Esta es la equivalencia práctica entre lo que te ofrecen y dónde funciona cada cosa.",
+        tabla: {
+          cabeceras: ["Material", "Dónde funciona", "Qué esperar"],
+          filas: [
+            ["Lona 8 onzas", "Interior: ferias, stands, pasillos", "Liviana y barata. En la calle se vence y destiñe pronto"],
+            ["Lona 11 onzas", "Exterior de campaña corta", "El estándar de promociones y eventos de pocas semanas"],
+            ["Lona 13 onzas o frontlit", "Exterior permanente, fachadas", "Resiste sol y lluvia. Es lo que se usa en paneles"],
+            ["Vinil adhesivo", "Vidrios, paredes lisas, vehículos", "Se pega a la superficie. Pide laminado si va a recibir sol"],
+            ["Tela sublimada", "Interior de alta definición, retail", "El mejor acabado fotográfico. No es para intemperie"],
+          ],
+          nota: "Si la pieza va a estar colgada más de tres meses a la intemperie, el ahorro de bajar de 13 a 11 onzas se te va en reimprimir.",
+        },
+      },
+      {
+        h2: "Cuánto cuesta una gigantografía en Perú",
+        parrafo:
+          "El precio se cotiza por metro cuadrado y baja cuanto más metros pidas: imprimir dos metros sueltos sale bastante más caro por metro que imprimir treinta del mismo material. Estos son los rangos del mercado peruano.",
+        tabla: {
+          cabeceras: ["Material", "Precio por m²"],
+          filas: [
+            ["Lona 8 onzas (interior)", "desde S/18"],
+            ["Banner 11 onzas calidad media", "desde S/19.50"],
+            ["Lona 13 onzas / frontlit", "desde S/25, hasta S/50"],
+            ["Vinil adhesivo", "desde S/40, hasta S/70"],
+            ["Tela sublimada", "desde S/60, hasta S/100"],
+            ["Acabado premium, cualquier material", "hasta S/120"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026. El extremo bajo sale de fichas de producto con precio listado; el alto, de referencias publicadas por proveedores del rubro. No son tarifas de Suggestion ni una cotización: el precio final depende del material, los metros y los acabados.",
+        },
+        dato: {
+          cifra: "S/100 a S/400",
+          texto: "es lo que suelen sumar aparte el diseño y la instalación, y es la partida que más sorprende a quien solo pidió precio por metro cuadrado.",
+        },
+      },
+      {
+        h2: "Las medidas que no te cobran de más",
+        parrafo:
+          "Aquí está el ahorro que nadie te ofrece. El material viene en rollos —el más común mide 3.20 metros de ancho— y se cobra lo que se consume del rollo, no lo que mide tu arte. Una pieza de 1.70 metros de alto obliga a cortar un rollo de 3.20 por la mitad y deja 1.50 metros de recorte que alguien paga, y ese alguien eres tú.",
+        bullets: [
+          { titulo: "Pregunta el ancho del rollo antes de definir la medida", texto: "y ajusta tu diseño a una fracción limpia de ese ancho. Es una conversación de dos minutos que puede bajar bastante el total." },
+          { titulo: "Las medidas de banner más pedidas", texto: "1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m. No es casualidad: aprovechan bien el rollo." },
+          { titulo: "Suma el ruedo y los ojales", texto: "el dobladillo perimetral consume entre 3 y 5 cm por lado. Si tu medida es exacta por una restricción de la pared, avísalo al cotizar." },
+          { titulo: "Para fachadas, mide dos veces", texto: "y toma la medida del espacio disponible, no la del muro completo. Las tuberías, los medidores y los avisos municipales están ahí y no se mueven." },
+        ],
+      },
+      {
+        h2: "Cuatro errores que arruinan un tiraje",
+        parrafo:
+          "Todos se detectan antes de imprimir y ninguno tiene arreglo después. Son los que más veces hemos visto costar una reimpresión completa.",
+        bullets: [
+          { titulo: "Mandar un archivo de baja resolución", texto: "en gran formato se trabaja a escala: un arte a 1:10 necesita más resolución de la que parece. Una foto bajada de redes sociales se va a ver pixelada a dos metros." },
+          { titulo: "Poner texto pegado al borde", texto: "lo que queda a menos de 5 cm del filo se lo come el ruedo o el marco. Deja margen de seguridad." },
+          { titulo: "Enviar el arte en RGB", texto: "la impresión trabaja en CMYK, y los azules y naranjas intensos de pantalla no existen en tinta. Si el color de tu marca es crítico, pide una prueba antes del tiraje completo." },
+          { titulo: "Olvidar cómo se va a instalar", texto: "ojales, bolsillo para tubo, bastidor o pegado directo son decisiones de fabricación, no de instalación. Decidirlo después significa volver a cortar." },
+        ],
+        nota: {
+          titulo: "La prueba que casi nadie pide",
+          texto: "Para un tiraje grande, pide un retazo impreso del arte a tamaño real —medio metro basta— antes de mandar todo. Cuesta poco y es la única forma de ver el color real sobre ese material.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta una gigantografía en Perú?",
+        a: "Se cotiza por metro cuadrado. En octubre de 2026 el mercado peruano va desde unos S/18 por m² en lona de interior y S/19.50 en banner de 11 onzas, hasta S/120 por m² en acabados premium. El diseño y la instalación suelen sumar entre S/100 y S/400 aparte. El precio por metro baja cuanto más metros pidas.",
+      },
+      {
+        q: "¿Qué significan las onzas de una lona?",
+        a: "Son el gramaje del material: a más onzas, más cuerpo y más resistencia. Ocho onzas es para interior, once para exterior de campaña corta y trece o más para intemperie permanente. Es el dato que más influye en cuánto te va a durar la pieza.",
+      },
+      {
+        q: "¿Cuánto dura una gigantografía en la calle?",
+        a: "Depende del material y de dónde esté. Una lona de 11 onzas bien instalada aguanta una campaña de algunas semanas; una de 13 onzas o frontlit está pensada para meses de sol y lluvia. El viento y los amarres mal hechos destruyen más piezas que el clima.",
+      },
+      {
+        q: "¿Qué resolución necesita mi archivo?",
+        a: "Depende de la distancia de lectura. Una pieza que se ve de cerca necesita bastante más definición que un panel que se mira desde la calle. La regla práctica es entregar el arte a escala con la mayor resolución que tengas y preguntarle al proveedor si le sirve, antes de mandar el tiraje.",
+      },
+      {
+        q: "¿Puedo llevar mi propio diseño?",
+        a: "Sí, y casi siempre sale más barato. Pide las especificaciones antes de diseñar: medida final, margen de seguridad, modo de color y formato de archivo. Diseñar primero y adaptar después es como se pierden las tardes.",
+      },
+    ],
+    cierre: "En Suggestion imprimimos gran formato y lo instalamos, con la pieza pensada para el sitio donde va a estar.",
+    moneyPage: { label: "Imprenta y gran formato", href: "/servicios/imprenta" },
+    relacionados: ["tarjetas-de-presentacion-medidas-y-errores", "letreros-para-negocio-cual-elegir"],
+  },
+  {
+    slug: "tarjetas-de-presentacion-medidas-y-errores",
+    categoria: "imprenta-btl",
+    title: "Tarjetas de Presentación: Medidas y Precios | Suggestion",
+    description:
+      "Medidas estándar, gramajes, acabados y cuánto cuesta un millar en Perú: desde S/60. Y los errores de archivo que arruinan un tiraje entero.",
+    h1: "Tarjetas de presentación: medidas, acabados y cuánto cuesta un millar",
+    excerpt:
+      "Es la pieza más barata que vas a mandar a imprimir y la que más veces se arruina por un detalle de dos milímetros. Esto es lo que hay que revisar antes.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Las medidas estándar, y por qué conviene respetarlas",
+        parrafo:
+          "En Perú conviven dos formatos y los dos son correctos. Lo que no conviene es inventar una medida propia: las fundas, los tarjeteros y las billeteras están hechos para estas dimensiones, y una tarjeta que no entra en una billetera termina en la basura antes de llegar al escritorio de nadie.",
+        tabla: {
+          cabeceras: ["Formato", "Medida", "Dónde se usa"],
+          filas: [
+            ["Estándar peruano", "9 × 5 cm", "El más pedido en el mercado local"],
+            ["Estándar internacional", "8.5 × 5.5 cm", "Habitual en empresas con trato en el extranjero"],
+            ["Cuadrada", "5.5 × 5.5 cm", "Más memorable, pero no entra en todos los tarjeteros"],
+            ["Con bordes redondeados", "9 × 5 cm con troquel", "Mismo tamaño, acabado distinto. Lleva recargo"],
+          ],
+          nota: "Sea cual sea la medida, el arte se entrega con unos milímetros de sangrado por lado: la guillotina corta con una tolerancia y sin ese margen aparecen filos blancos.",
+        },
+      },
+      {
+        h2: "Gramaje y acabado: lo que se nota al tocarla",
+        parrafo:
+          "El gramaje es el peso del papel, y es lo primero que comunica una tarjeta antes de que nadie la lea. Por debajo de 300 gramos se siente endeble; el estándar profesional en Perú es couché de 350 gramos. El acabado decide el resto.",
+        bullets: [
+          { titulo: "Plastificado mate", texto: "el más elegido. Se ve sobrio, no deja huellas y se puede escribir encima con bolígrafo." },
+          { titulo: "Plastificado brillante", texto: "satura más los colores y aguanta mejor el manoseo, pero marca huellas y no admite escritura." },
+          { titulo: "UV sectorizado", texto: "barniz brillante solo sobre una zona —el logo, normalmente— con el resto mate. Es el truco de acabado con mejor relación entre costo y efecto." },
+          { titulo: "Stamping o letterpress", texto: "lámina metálica o relieve hundido. Se nota de verdad y multiplica el precio. Tiene sentido en perfiles donde la tarjeta es parte del servicio." },
+        ],
+      },
+      {
+        h2: "Cuánto cuesta un millar en Perú",
+        parrafo:
+          "La unidad de venta es el millar, y ahí está la trampa de la imprenta: casi todo el costo es preparar la máquina, así que medio millar no cuesta la mitad. Si vas a necesitar más en seis meses, pedirlos juntos sale mucho mejor.",
+        tabla: {
+          cabeceras: ["Qué pides", "Precio por millar"],
+          filas: [
+            ["Couché 350 g, full color ambas caras, plastificado mate", "desde S/60"],
+            ["Lo mismo con laminado y oferta de volumen", "desde S/89"],
+            ["Couché 350 g con UV sectorizado", "desde S/120"],
+            ["Bordes redondeados o troquel", "desde S/89, según el troquel"],
+            ["Stamping metálico, letterpress o papeles especiales", "hasta S/450"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto con precio listado y de referencias publicadas por imprentas del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Qué poner y qué quitar",
+        parrafo:
+          "Una tarjeta tiene espacio para unos pocos datos y la tentación es llenarla. El criterio es simple: si alguien no va a usar ese dato para contactarte, le está quitando sitio al que sí.",
+        bullets: [
+          { titulo: "Un solo canal preferente", texto: "el número por el que de verdad contestas, destacado. Tres teléfonos y dos correos obligan a elegir, y quien duda no llama." },
+          { titulo: "Qué haces, en pocas palabras", texto: "si tu marca no dice sola a qué te dedicas, una línea bajo el nombre vale más que el logo grande." },
+          { titulo: "El reverso no tiene que estar vacío ni lleno", texto: "funciona bien con una sola idea: la lista de servicios, un código QR a tu web o simplemente el logo sobre color plano." },
+          { titulo: "Cuidado con el QR", texto: "si lo pones, que lleve a algo útil y que siga funcionando dentro de dos años. Un QR roto es peor que ninguno." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "El error que más tirajes arruina",
+          texto: "Un número de teléfono equivocado. Antes de aprobar el arte, que dos personas distintas marquen el número impreso y escriban el correo. Mil tarjetas con un dígito cambiado son mil tarjetas a la basura, y pasa más de lo que parece.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta un millar de tarjetas de presentación en Perú?",
+        a: "En octubre de 2026 el mercado va desde unos S/60 el millar en couché de 350 gramos a full color por ambas caras con plastificado mate, y sube hasta unos S/450 cuando entran acabados especiales como UV sectorizado, stamping metálico o letterpress. El millar es la unidad de venta habitual.",
+      },
+      {
+        q: "¿Cuál es la medida de una tarjeta de presentación?",
+        a: "En Perú lo más pedido es 9 × 5 cm. El estándar internacional es 8.5 × 5.5 cm y también se fabrica sin problema. Cualquiera de los dos entra en billeteras y tarjeteros, que es lo que importa.",
+      },
+      {
+        q: "¿Qué gramaje conviene?",
+        a: "Couché de 350 gramos es el estándar profesional y es lo que la gente reconoce como una tarjeta seria. Por debajo de 300 se siente floja al tacto, y ese es justamente el detalle que una tarjeta comunica antes de que la lean.",
+      },
+      {
+        q: "¿Puedo pedir menos de un millar?",
+        a: "Se puede, pero rara vez conviene. El grueso del costo está en preparar la impresión, así que medio millar no cuesta la mitad. Si prevés necesitar más en los próximos meses, pedirlos de una vez es bastante más barato por unidad.",
+      },
+      {
+        q: "¿En qué formato entrego mi diseño?",
+        a: "En PDF con el modo de color en CMYK, con sangrado de unos milímetros por lado y las tipografías convertidas a curvas. Pide las especificaciones exactas a tu imprenta antes de diseñar: cada taller tiene sus tolerancias.",
+      },
+    ],
+    cierre: "En Suggestion diseñamos e imprimimos la papelería de la marca, con el archivo revisado antes de que entre a máquina.",
+    moneyPage: { label: "Imprenta y papelería", href: "/servicios/imprenta" },
+    relacionados: ["gigantografias-medidas-materiales-precios", "letreros-para-negocio-cual-elegir"],
+  },
+  {
+    slug: "letreros-para-negocio-cual-elegir",
+    categoria: "imprenta-btl",
+    title: "Letreros para Negocio: Tipos y Precios | Suggestion",
+    description:
+      "Letrero luminoso, letras corpóreas o panel simple: cuál conviene a tu local, qué cuesta en Perú desde S/1,200 y qué permisos municipales necesitas.",
+    h1: "Letreros para negocio: cuál elegir y cuánto cuesta en Perú",
+    excerpt:
+      "Es la inversión publicitaria que más tiempo va a estar trabajando para ti, y la única que no puedes apagar. Conviene acertar a la primera.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Qué tipo de letrero necesita tu local",
+        parrafo:
+          "La decisión no es de presupuesto, es de situación: desde dónde te van a ver, a qué velocidad pasa quien te mira y si necesitas que te vean de noche. Un local de avenida y uno de galería no tienen el mismo problema.",
+        tabla: {
+          cabeceras: ["Tipo", "Para qué local", "Qué resuelve"],
+          filas: [
+            ["Panel o aviso impreso", "Locales de calle con poco frente", "Lo básico: que sepan que existes. Lo más económico"],
+            ["Letras corpóreas sin luz", "Fachadas con buena luz propia o ambiental", "Volumen y seriedad, a un costo contenido"],
+            ["Letras corpóreas con LED", "Avenidas, horario nocturno, rubros de noche", "Visibilidad de día y de noche. El estándar comercial"],
+            ["Letrero luminoso de caja", "Galerías, centros comerciales, pasillos", "Se lee de lado, que es como se circula en interiores"],
+            ["Letrero de bandera o perpendicular", "Calles estrechas o veredas angostas", "Que te vean quienes caminan paralelos a la fachada, no de frente"],
+          ],
+          nota: "La pregunta que ordena todo: ¿desde qué punto exacto quieres que alguien te vea, y a qué hora? Párate ahí antes de decidir nada.",
+        },
+      },
+      {
+        h2: "Cuánto cuesta un letrero en Perú",
+        parrafo:
+          "El letrero es de las pocas piezas publicitarias donde la instalación puede ser una parte importante del total, y casi nunca viene en el primer precio que te dan. Pregunta siempre si está incluida.",
+        tabla: {
+          cabeceras: ["Concepto", "Rango"],
+          filas: [
+            ["Letras corpóreas iluminadas, formato pequeño o mediano", "desde S/1,200, hasta S/5,000"],
+            ["Letras corpóreas iluminadas, gran formato", "desde S/3,000, hasta S/15,000"],
+            ["Transporte e instalación", "desde S/200, hasta S/1,000 o más"],
+            ["Mantenimiento preventivo anual", "entre 8 % y 12 % del valor de instalación"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según referencias publicadas por proveedores de señalización del rubro. No son tarifas de Suggestion ni una cotización: el tamaño, el material y el tipo de iluminación mueven mucho el total.",
+        },
+        dato: {
+          cifra: "40 % a 60 %",
+          texto: "es lo que baja el costo un letrero de menor tamaño en acrílico con LED básico frente a un proyecto de gran formato. Para un negocio de barrio con tránsito peatonal, suele ser la decisión correcta.",
+        },
+      },
+      {
+        h2: "Lo que se lee y lo que no",
+        parrafo:
+          "Un letrero no es una página web pegada a la pared. Quien pasa dispone de un par de segundos y, si va manejando, la mitad de ellos mirando la pista. En ese tiempo no se lee un párrafo: se reconoce un nombre y se retiene una idea.",
+        bullets: [
+          { titulo: "El nombre, grande; el rubro, debajo", texto: "si tu marca no dice sola a qué te dedicas, esa segunda línea es la que trae clientes nuevos." },
+          { titulo: "Contraste antes que color de moda", texto: "lo que se lee de lejos es la diferencia de luminosidad entre letra y fondo, no el color. Gris sobre blanco desaparece a diez metros." },
+          { titulo: "Fuera el teléfono, la web y las redes", texto: "nadie los anota desde la vereda. Ese espacio vale más vacío, y el dato de contacto va en la puerta o en la vitrina, donde sí se detienen." },
+          { titulo: "Prueba el peor caso", texto: "mira el diseño al tamaño de una uña en tu celular. Si a ese tamaño no se lee el nombre, tampoco se va a leer desde la calle." },
+        ],
+      },
+      {
+        h2: "El trámite que a muchos se les olvida",
+        parrafo:
+          "La publicidad exterior está regulada por cada municipalidad y la autorización no va incluida en el letrero. Hay municipios que exigen el trámite antes de instalar, con medidas máximas según la vía, y los operativos de retiro existen: en Ica se han retirado paneles colocados sin autorización, con multas de por medio.",
+        bullets: [
+          { titulo: "Pregunta en tu municipalidad antes de fabricar", texto: "las medidas máximas y las restricciones por tipo de vía cambian de distrito a distrito, y fabricar primero es cómo se pierde el dinero." },
+          { titulo: "Si alquilas el local, revisa el contrato", texto: "muchos arrendamientos regulan qué se puede instalar en fachada y quién se queda con la estructura al salir." },
+          { titulo: "Pide la garantía por escrito", texto: "sobre todo de la parte eléctrica. Un LED que falla a los seis meses en una fachada alta cuesta más desmontar que reparar." },
+          { titulo: "Guarda el archivo del diseño", texto: "el día que haya que reponer una letra o rehacer la pieza, tener el arte original te ahorra empezar de cero." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Antes de firmar nada",
+          texto: "Pide ver dos letreros que el proveedor haya instalado hace más de un año, y ve a mirarlos. El acabado de un letrero recién hecho no dice nada; el de uno con un verano encima lo dice todo.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta un letrero luminoso para un negocio en Perú?",
+        a: "En octubre de 2026 las letras corpóreas iluminadas en acrílico o metal con LED van desde unos S/1,200 en formato pequeño o mediano y llegan hasta S/15,000 en gran formato. El transporte y la instalación suman aparte, desde S/200 y hasta S/1,000 o más según la altura y la complejidad.",
+      },
+      {
+        q: "¿Letras corpóreas o letrero de caja?",
+        a: "Las corpóreas se ven mejor de frente y dan sensación de marca establecida; el letrero de caja se lee de costado, que es como circula la gente en galerías y pasillos. Lo decide el ángulo desde el que te van a mirar, no el presupuesto.",
+      },
+      {
+        q: "¿Necesito permiso municipal para poner un letrero?",
+        a: "En general sí, y la autorización la tramita el negocio, no el proveedor del letrero. Cada municipalidad tiene sus propias medidas máximas y restricciones por tipo de vía, así que conviene preguntar antes de mandar a fabricar. Instalar sin autorización expone a retiro y a multa.",
+      },
+      {
+        q: "¿Cuánto dura un letrero con LED?",
+        a: "La estructura aguanta años; lo que falla primero suele ser la fuente de alimentación o algún módulo LED. Por eso conviene pedir garantía escrita de la parte eléctrica y presupuestar un mantenimiento preventivo anual, que en el mercado se calcula entre el 8 % y el 12 % de lo que costó instalarlo.",
+      },
+      {
+        q: "¿Puedo poner solo mi logo sin el rubro?",
+        a: "Puedes, pero solo funciona si tu marca ya es conocida en la zona. Para un negocio que está empezando, la línea que dice a qué te dedicas suele traer más clientes nuevos que el logo más grande.",
+      },
+    ],
+    cierre: "En Suggestion diseñamos, fabricamos e instalamos letreros y estructuras, pensados para el punto exacto desde el que te tienen que ver.",
+    moneyPage: { label: "Estructuras y letreros", href: "/servicios/estructuras-publicitarias" },
+    relacionados: ["gigantografias-medidas-materiales-precios", "panel-valla-bicivalla-o-vehiculo-rotulado"],
+  },
+  {
+    slug: "polos-personalizados-para-empresa",
+    categoria: "imprenta-btl",
+    title: "Polos Personalizados para Empresa: Guía y Precios | Suggestion",
+    description:
+      "Bordado, serigrafía, DTF o sublimado: cuál conviene según tu cantidad. Precios del mercado peruano desde S/8 por prenda y las cantidades mínimas reales.",
+    h1: "Polos personalizados para empresa: qué técnica pedir y cuánto cuesta",
+    excerpt:
+      "La técnica correcta no es la más bonita: es la que corresponde a tu cantidad. Pedir serigrafía para doce polos o bordado para quinientos son dos formas distintas de pagar de más.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Las cuatro técnicas, y cuándo usa cada una",
+        parrafo:
+          "Casi todo el precio de un polo personalizado lo deciden dos cosas: cuántos pides y qué técnica usas para marcarlos. Y las dos están relacionadas, porque cada técnica tiene un costo de arranque distinto que se reparte entre las prendas del pedido.",
+        tabla: {
+          cabeceras: ["Técnica", "Rinde bien desde", "Qué consigue"],
+          filas: [
+            ["Bordado", "12 unidades", "El acabado más serio y duradero. Para logos pequeños en pecho"],
+            ["DTF o vinil textil", "1 unidad", "Full color sin costo de arranque. Ideal para pedidos cortos"],
+            ["Serigrafía", "50 unidades", "El más barato por unidad en volumen. Pocos colores planos"],
+            ["Sublimado", "Depende del diseño", "Diseño que cubre toda la prenda. Solo sobre tela clara de poliéster"],
+          ],
+          nota: "La sublimación tiene una restricción que sorprende a mucha gente: no funciona sobre algodón ni sobre telas oscuras. Si tu uniforme es azul marino de algodón, esa técnica queda descartada de entrada.",
+        },
+      },
+      {
+        h2: "Cuánto cuesta en el mercado peruano",
+        parrafo:
+          "El precio por prenda baja fuerte con la cantidad, y conviene ver los dos extremos antes de decidir el tamaño del pedido.",
+        tabla: {
+          cabeceras: ["Qué pides", "Precio por prenda"],
+          filas: [
+            ["Bordado en pecho, desde 12 unidades", "desde S/8"],
+            ["DTF en pecho, una sola unidad", "hasta S/25"],
+            ["DTF en pecho, 50 prendas del mismo diseño", "desde S/12"],
+            ["Digitalización del logo para bordado, pago único", "desde S/30, hasta S/80"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de listas de precios publicadas por talleres de estampado del rubro. Son solo la marca: el costo de la prenda va aparte si no la pones tú. No son tarifas de Suggestion ni una cotización.",
+        },
+        dato: {
+          cifra: "De S/25 a S/12",
+          texto: "es lo que cae el precio por prenda del mismo estampado al pasar de una unidad a cincuenta. La cantidad es, de lejos, la variable que más mueve el total.",
+        },
+      },
+      {
+        h2: "El costo de arranque que no aparece en el precio",
+        parrafo:
+          "Hay partidas que se pagan una sola vez, da igual si pides doce polos o quinientos. En un pedido corto pueden pesar más que las prendas, y por eso un presupuesto de doce unidades parece caro por prenda sin que nadie te esté estafando.",
+        bullets: [
+          { titulo: "La digitalización del bordado", texto: "convertir tu logo al formato que entiende la máquina cuesta entre S/30 y S/80 la primera vez. Después ese archivo es tuyo y no se vuelve a pagar: pídelo." },
+          { titulo: "Los marcos de serigrafía", texto: "se prepara uno por color del diseño. Un logo de cuatro colores cuesta cuatro veces más de arrancar que uno de un color." },
+          { titulo: "La muestra física", texto: "pídela siempre en pedidos grandes. Ver el color real sobre la tela real evita el desastre de quinientas prendas con un tono que no era." },
+          { titulo: "Las tallas", texto: "manda el cuadro de tallas con nombres si es para uniformar a un equipo. Repartir después lo que llegó sin asignar es el caos garantizado." },
+        ],
+      },
+      {
+        h2: "Elegir la prenda, no solo la marca",
+        parrafo:
+          "Un polo que nadie se pone no hace publicidad. En clima costero y de trabajo, la tela decide si la prenda vive en el cuerpo del equipo o en el fondo de un cajón.",
+        bullets: [
+          { titulo: "Algodón para uso diario", texto: "más cómodo con calor y mejor percibido. Encoge algo al lavarse, así que conviene pedir la talla justa arriba." },
+          { titulo: "Poliéster o mezcla para campo y deporte", texto: "seca rápido y aguanta mejor los lavados seguidos. Es la opción obvia para cuadrillas y activaciones." },
+          { titulo: "Pique para la camiseta tipo polo con cuello", texto: "es lo que da aspecto de uniforme formal. El cuello se deforma con el uso: ahí el gramaje importa." },
+          { titulo: "Cuidado con la talla única", texto: "no existe. Un pedido sin curva de tallas termina con prendas que no se pone nadie y con gente usando la de otro." },
+        ],
+        nota: {
+          titulo: "Una prueba que vale la pena",
+          texto: "Antes de un pedido grande, lava una muestra tres veces. El estampado que se cuartea y el color que se va aparecen ahí, no en la entrega.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta personalizar un polo en Perú?",
+        a: "En octubre de 2026 el bordado en pecho va desde unos S/8 por prenda a partir de 12 unidades, más la digitalización del logo, que se paga una vez y cuesta entre S/30 y S/80. El estampado DTF está en unos S/25 si pides una sola unidad y baja a unos S/12 por prenda a partir de 50. Esos montos son por la marca; la prenda va aparte si no la pones tú.",
+      },
+      {
+        q: "¿Cuál es la cantidad mínima?",
+        a: "Depende de la técnica. Con DTF o vinil textil puedes pedir desde una unidad. El bordado suele arrancar en 12 y la serigrafía se vuelve rentable a partir de unas 50 prendas del mismo diseño. Si necesitas pocas unidades, pedir serigrafía es pagar de más.",
+      },
+      {
+        q: "¿Bordado o estampado?",
+        a: "El bordado se ve más formal, aguanta más lavados y es lo habitual en uniformes de cara al cliente, pero solo sirve para logos pequeños y de pocos detalles. El estampado permite diseños grandes y a todo color. Para un degradado o una foto, el bordado directamente no es una opción.",
+      },
+      {
+        q: "¿Puedo llevar mis propios polos?",
+        a: "Casi siempre sí, y baja bastante el precio final porque pagas solo la marca. Consúltalo antes: algunos talleres no asumen responsabilidad si la prenda que llevas se daña en el proceso, y conviene saberlo de entrada.",
+      },
+      {
+        q: "¿Cuánto tarda un pedido?",
+        a: "Un pedido corto con DTF puede salir en días; bordado y serigrafía en volumen se miden en semanas, sobre todo si hay que conseguir la prenda en todas las tallas. Si tienes una fecha de evento, cuéntala hacia atrás e incluye tiempo para aprobar una muestra.",
+      },
+    ],
+    cierre: "En Suggestion producimos uniformes y merchandising con la técnica que corresponde a tu cantidad, no a la que deja mejor margen.",
+    moneyPage: { label: "Merchandising y uniformes", href: "/servicios/merchandising" },
+    relacionados: ["merchandising-corporativo-que-regalar", "material-pop-punto-de-venta"],
+  },
+  {
+    slug: "merchandising-corporativo-que-regalar",
+    categoria: "imprenta-btl",
+    title: "Merchandising Corporativo: Qué Regalar y Precios | Suggestion",
+    description:
+      "Qué artículos promocionales se quedan en el escritorio y cuáles acaban en un cajón. Precios del mercado peruano desde S/0.60 y cantidades mínimas reales.",
+    h1: "Merchandising corporativo: qué regalar para que no acabe en un cajón",
+    excerpt:
+      "El objetivo de un regalo corporativo no es que guste al recibirlo: es que siga encima del escritorio dentro de seis meses. Son dos cosas muy distintas.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "La única pregunta que importa",
+        parrafo:
+          "No es qué regalar, es dónde va a terminar. Un artículo promocional funciona cuando se queda a la vista en el espacio donde tu cliente trabaja o vive, porque ahí es donde hace su trabajo: recordarte sin que tú estés. Todo lo demás —que sea original, que guste en el momento, que se vea caro— es secundario a eso.",
+        bullets: [
+          { titulo: "¿Se usa a diario?", texto: "un objeto que se toca todos los días supera a uno espectacular que se guarda. Esa es la regla por encima de todas." },
+          { titulo: "¿Dónde vive?", texto: "escritorio, cocina, auto o mochila. Elige el espacio donde quieres estar presente y busca el objeto que vive ahí." },
+          { titulo: "¿Lo usaría si no fuera gratis?", texto: "si la respuesta es no, ya sabes dónde va a acabar por muy bonito que sea tu logo encima." },
+          { titulo: "¿Aguanta tu marca encima?", texto: "un objeto de mala calidad con tu logo comunica exactamente eso sobre tu empresa, todos los días." },
+        ],
+      },
+      {
+        h2: "Cuánto cuesta en el mercado peruano",
+        parrafo:
+          "El merchandising se cotiza por unidad pero se vende por lotes, y la cantidad mínima es el dato que decide si una pieza es viable para un negocio pequeño. Es justo el dato que menos aparece en la publicidad del proveedor.",
+        tabla: {
+          cabeceras: ["Artículo", "Precio por unidad", "Mínimo habitual"],
+          filas: [
+            ["Lapicero plástico personalizado", "desde S/0.60", "100 unidades"],
+            ["Taza corporativa", "desde S/4.90", "50 unidades"],
+            ["Llavero, línea estándar", "desde S/1.59", "50 unidades"],
+            ["Llavero, línea premium", "hasta S/14.62", "50 unidades"],
+            ["USB grabado con láser y caja de regalo", "según capacidad", "50 unidades"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto con precio listado de proveedores de merchandising. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Qué funciona según a quién le regalas",
+        parrafo:
+          "El mismo presupuesto rinde muy distinto según el destinatario. Repartir lo mismo a un cliente grande y a quien pasa por una feria es desperdiciar por los dos lados: de más en uno, de menos en el otro.",
+        tabla: {
+          cabeceras: ["A quién", "Qué funciona", "Criterio"],
+          filas: [
+            ["Cliente de cuenta grande", "Pocas unidades, calidad alta, entrega en persona", "Aquí el objeto es una excusa para la visita"],
+            ["Equipo propio", "Uniforme y objeto de uso diario", "Lo que se pone a diario hace publicidad fuera de la oficina"],
+            ["Feria o activación", "Volumen, barato y útil al instante", "Se busca alcance, no profundidad"],
+            ["Proveedor o aliado", "Algo de consumo, compartible", "Mantiene la relación sin parecer un soborno"],
+          ],
+          nota: "El error típico es gastar un presupuesto entero en una sola categoría. Repartirlo en dos niveles —pocos buenos y muchos baratos— rinde bastante más.",
+        },
+      },
+      {
+        h2: "Los cuatro errores que se repiten",
+        parrafo:
+          "Se cometen en el momento de aprobar el pedido y se pagan durante meses, porque la caja con lo que sobró se queda en el almacén.",
+        bullets: [
+          { titulo: "Poner el logo demasiado grande", texto: "cuanto más discreta la marca, más se usa el objeto. Un logo que ocupa media taza convierte el regalo en un cartel que nadie quiere llevar." },
+          { titulo: "Pedir mucho de algo que caduca", texto: "agendas y calendarios tienen fecha de vencimiento. Lo que sobra el 15 de enero no sirve para nada." },
+          { titulo: "Comprar sin ver una muestra", texto: "la foto del catálogo y el objeto real pueden parecerse poco. En volumen, una muestra física es barata comparada con equivocarse." },
+          { titulo: "No planear la entrega", texto: "quinientas unidades en una caja en el almacén no son marketing, son inventario. Antes de comprar hay que saber quién las reparte, cuándo y a quién." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "El cálculo que conviene hacer antes",
+          texto: "Divide el presupuesto entre la cantidad de personas a las que de verdad vas a llegar, no entre la cantidad de unidades que puedes comprar. Si el número por persona es ridículo, es mejor regalar menos cosas y mejores.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta el merchandising corporativo en Perú?",
+        a: "En octubre de 2026 va desde unos S/0.60 por lapicero plástico personalizado y S/4.90 por taza corporativa, hasta unos S/14.62 en llaveros de línea premium. El precio por unidad baja con la cantidad y casi todos los artículos tienen un mínimo de 50 o 100 unidades.",
+      },
+      {
+        q: "¿Cuál es la cantidad mínima para pedir artículos promocionales?",
+        a: "La mayoría de productos arranca en 50 unidades, y los lapiceros suelen pedir 100. Tazas, llaveros y USB grabados se mueven en el mínimo de 50. Es el primer dato que conviene preguntar, porque descarta opciones antes de que te enamores de ellas.",
+      },
+      {
+        q: "¿Qué regalo corporativo funciona mejor?",
+        a: "El que se usa a diario en el espacio donde quieres estar presente. Una taza funciona porque vive en el escritorio y se ve todas las mañanas; un objeto decorativo original se guarda a la semana. Entre algo espectacular que se guarda y algo corriente que se usa, gana el segundo.",
+      },
+      {
+        q: "¿Conviene poner el logo grande?",
+        a: "No. Cuanto más discreta la marca, más se usa el objeto, y un objeto que se usa hace el trabajo que un logo enorme guardado en un cajón no hace. Un logo pequeño y bien colocado comunica más seguridad que uno que ocupa toda la pieza.",
+      },
+      {
+        q: "¿Con cuánta anticipación hay que pedirlo?",
+        a: "Para campañas de fin de año, con meses. Es la temporada en la que todos los proveedores están saturados, los plazos se estiran y el stock de los artículos más pedidos se agota. Pedir en noviembre para diciembre es cómo se termina regalando lo que quedaba.",
+      },
+    ],
+    cierre: "En Suggestion producimos merchandising elegido por dónde va a terminar, no por lo que sobraba en catálogo.",
+    moneyPage: { label: "Merchandising corporativo", href: "/servicios/merchandising" },
+    relacionados: ["polos-personalizados-para-empresa", "material-pop-punto-de-venta"],
+  },
+  {
+    slug: "material-pop-punto-de-venta",
+    categoria: "imprenta-btl",
+    title: "Material POP: Qué Funciona en Punto de Venta | Suggestion",
+    description:
+      "Jalavistas, rompetráficos, exhibidores y tótems: qué hace cada pieza, cuál conviene a tu producto y cuánto cuesta en Perú desde S/0.60 por unidad.",
+    h1: "Material POP: qué piezas funcionan de verdad en punto de venta",
+    excerpt:
+      "La decisión de compra se toma frente al estante, en segundos y casi sin pensar. El material POP existe para ganar esos segundos, y la mayoría está diseñado como si hubiera minutos.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Qué es el material POP y qué hace cada pieza",
+        parrafo:
+          "POP viene de «punto de venta»: son las piezas que trabajan dentro de la tienda, donde el cliente ya está y tiene el producto al alcance. A diferencia de la publicidad que convence antes de salir de casa, esta solo tiene que ganar la comparación contra lo que está al lado.",
+        tabla: {
+          cabeceras: ["Pieza", "Qué hace", "Dónde va"],
+          filas: [
+            ["Jalavista", "Interrumpe la mirada que recorre el estante", "Sobresaliendo del lineal, perpendicular al pasillo"],
+            ["Rompetráfico", "Detiene al que pasa de largo", "En medio del pasillo o a la entrada de la sección"],
+            ["Stopper o cenefa", "Marca el precio o la promoción en el borde", "Pegado al filo de la góndola"],
+            ["Exhibidor de mostrador", "Compra por impulso en la caja", "Junto al punto de pago"],
+            ["Tótem o display de piso", "Da espacio propio fuera del lineal", "Cabecera de góndola o zona de entrada"],
+          ],
+          nota: "Si tu producto compite dentro de un estante lleno, empieza por el jalavista. Si lo que necesitas es sacarlo del estante, el tótem es otra conversación —y otro acuerdo con la tienda—.",
+        },
+      },
+      {
+        h2: "Cuánto cuesta en Perú",
+        parrafo:
+          "El material POP se fabrica por lotes y el precio por pieza depende sobre todo del material, del troquel y de la cantidad. Estos son los órdenes de magnitud del mercado peruano.",
+        tabla: {
+          cabeceras: ["Pieza", "Precio por unidad", "Mínimo habitual"],
+          filas: [
+            ["Stopper troquelado", "desde S/0.60", "según tiraje"],
+            ["Display de mostrador en cartón", "desde S/8.50", "100 unidades"],
+            ["Tótem o display de piso", "desde S/35", "50 unidades"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según referencias publicadas por proveedores de material POP del rubro. No son tarifas de Suggestion ni una cotización: el troquel, el material y la cantidad mueven mucho el precio por pieza.",
+        },
+        dato: {
+          cifra: "El troquel",
+          texto: "es el costo de arranque que explica por qué un tiraje corto parece caro. Se paga una vez y sirve para las reposiciones siguientes: si prevés repetir la pieza, pídelo por escrito y guárdalo.",
+        },
+      },
+      {
+        h2: "Las reglas de lo que se lee en tres segundos",
+        parrafo:
+          "La diferencia entre una pieza que vende y una decorativa está en cuánto se entiende sin detenerse. Quien camina por un pasillo de supermercado no está leyendo: está escaneando.",
+        bullets: [
+          { titulo: "Una sola idea por pieza", texto: "precio, beneficio o novedad. Las tres cosas juntas no comunican tres veces más: no comunican nada." },
+          { titulo: "El número grande, si hay número", texto: "en promoción, la cifra es el mensaje. Si hay que buscarla, la promoción no existe." },
+          { titulo: "El producto reconocible", texto: "la pieza tiene que parecerse al empaque que el cliente va a buscar en el estante. Una creatividad preciosa que no se parece al producto obliga a traducir." },
+          { titulo: "Pensada para su altura real", texto: "un jalavista se mira de lado y a la altura del hombro; un display de piso, desde arriba. Diseñar todo de frente es diseñar para un ángulo que nadie tiene." },
+        ],
+      },
+      {
+        h2: "Lo que decide si la pieza llega a estar puesta",
+        parrafo:
+          "Aquí está el fracaso más común y no tiene nada que ver con el diseño: cajas enteras de material POP que nunca salieron del almacén de la tienda. Producir es la parte fácil.",
+        bullets: [
+          { titulo: "Acuerda el espacio antes de fabricar", texto: "las cadenas tienen normas de qué se puede colgar, dónde y de qué tamaño. Fabricar primero y negociar después es como se pierde un tiraje completo." },
+          { titulo: "Que se arme sin instrucciones", texto: "quien lo monta es el reponedor, de pie y con prisa. Si necesita herramientas o un manual, no se va a armar." },
+          { titulo: "Manda piezas de repuesto", texto: "en punto de venta se rompen, se mojan y desaparecen. Un porcentaje extra desde el inicio sale más barato que un segundo tiraje urgente." },
+          { titulo: "Ve a mirar", texto: "la única forma de saber si está puesto y bien puesto es ir a la tienda. Una foto pedida por teléfono siempre llega favorable." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Antes de aprobar el arte",
+          texto: "Imprime la pieza en una hoja, pégala a la altura real en la que va a estar y mírala caminando, sin detenerte. Lo que no entendiste en ese paseo tampoco lo va a entender tu cliente.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es el material POP?",
+        a: "Son las piezas publicitarias que trabajan dentro del punto de venta: jalavistas, rompetráficos, stoppers, exhibidores de mostrador y tótems de piso. Su trabajo es ganar la comparación frente al estante, en los segundos en que el cliente decide.",
+      },
+      {
+        q: "¿Cuánto cuesta el material POP en Perú?",
+        a: "En octubre de 2026 va desde unos S/0.60 por stopper troquelado y S/8.50 por display de mostrador en cartón con mínimos de 100 unidades, hasta unos S/35 por tótem de piso con mínimo de 50. El troquel es un costo de arranque que se paga una vez.",
+      },
+      {
+        q: "¿Qué pieza conviene para un producto nuevo?",
+        a: "Si va a estar dentro del estante compitiendo con marcas conocidas, el jalavista es lo que interrumpe la mirada. Si tienes acuerdo con la tienda para un espacio propio, el display de piso saca el producto de la comparación directa, que es una ventaja mayor.",
+      },
+      {
+        q: "¿Puedo poner material POP en cualquier tienda?",
+        a: "En bodegas y tiendas de barrio suele bastar con acordarlo con el dueño. En cadenas y supermercados hay normas de espacio, medidas y tiempos, y el espacio muchas veces se negocia o se paga. Conviene cerrar eso antes de mandar a fabricar.",
+      },
+      {
+        q: "¿De qué material se fabrica?",
+        a: "Lo más común es cartón corrugado o caple para piezas de campaña, que son económicos y reciclables. Para exhibidores que van a durar meses se usa PVC, acrílico o metal, que cuestan más pero aguantan el trato diario de una tienda.",
+      },
+    ],
+    cierre: "En Suggestion diseñamos y producimos material POP pensado para la altura y el ángulo desde el que lo van a ver.",
+    moneyPage: { label: "Material POP", href: "/servicios/material-pop" },
+    relacionados: ["merchandising-corporativo-que-regalar", "panel-valla-bicivalla-o-vehiculo-rotulado"],
+  },
+  {
+    slug: "panel-valla-bicivalla-o-vehiculo-rotulado",
+    categoria: "imprenta-btl",
+    title: "Panel, Valla o Publicidad Móvil: Cuál Elegir | Suggestion",
+    description:
+      "Panel fijo, bicivalla o vehículo rotulado: qué consigue cada formato, a quién llega y cuánto cuesta en Perú. Alquiler de valla desde S/2,000 al mes.",
+    h1: "Panel, valla, bicivalla o vehículo rotulado: cuál te conviene",
+    excerpt:
+      "Los cuatro formatos ponen tu marca en la calle, pero no hacen el mismo trabajo ni le hablan a la misma persona. Elegir por precio es como se desperdicia una campaña de exterior.",
+    date: "2026-10-04",
+    secciones: [
+      {
+        h2: "Qué hace cada formato",
+        parrafo:
+          "La publicidad exterior se compra de dos maneras distintas: alquilando un espacio que ya existe o fabricando algo que se mueve. La diferencia no es solo de precio, es de qué tipo de atención consigues.",
+        tabla: {
+          cabeceras: ["Formato", "Cómo se contrata", "Qué consigue"],
+          filas: [
+            ["Panel o valla de gran formato", "Alquiler mensual del espacio", "Notoriedad en una vía concreta, a quien pasa en auto"],
+            ["Bicivalla", "Por días, con recorrido elegido", "Llega al peatón, a velocidad de lectura, donde tú decidas"],
+            ["Vehículo rotulado", "Inversión única sobre tu propia flota", "Trabaja todos los días sin alquiler, por donde ya circulas"],
+            ["Letrero en fachada", "Fabricación e instalación", "Convierte tu propio local en el medio"],
+          ],
+          nota: "Una diferencia que casi nadie aprovecha: el panel de avenida lo ve alguien a 60 km/h y admite pocas palabras; la bicivalla circula a paso de peatón por calles comerciales y quien la ve puede leer bastante más y reaccionar en el momento.",
+        },
+      },
+      {
+        h2: "Cuánto cuesta la publicidad exterior en Perú",
+        parrafo:
+          "El alquiler de un panel se cotiza por mes y depende casi por completo de la ubicación. Dos paneles del mismo tamaño pueden costar muy distinto según la avenida en la que estén.",
+        tabla: {
+          cabeceras: ["Concepto", "Rango mensual"],
+          filas: [
+            ["Alquiler de valla en Perú, referencia general", "desde S/2,000, hasta más de S/10,000"],
+            ["Lima, 20 a 24 m²", "desde US$500, hasta US$2,000"],
+            ["Lima, ubicaciones premium", "más de US$3,000"],
+            ["Provincias, 24 m²", "desde US$500, hasta US$1,200"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según referencias publicadas por operadores de publicidad exterior. La impresión de la lona y la instalación suelen ir aparte. No son tarifas de Suggestion ni una cotización.",
+        },
+        dato: {
+          cifra: "Trimestral o semestral",
+          texto: "es como se contrata más barato: los acuerdos por varios meses suelen incluir descuento, mientras que el mes suelto se paga al precio más alto de la lista.",
+        },
+      },
+      {
+        h2: "Lo que se lee a 60 km/h",
+        parrafo:
+          "Es la regla de oficio que más presupuesto salva en publicidad exterior y la que más se ignora. Quien pasa en auto dispone de un par de segundos, y la mitad de ellos mirando la pista. En ese tiempo no se lee un párrafo: se reconoce una marca y se retiene una idea.",
+        bullets: [
+          { titulo: "Pocas palabras, muy grandes", texto: "el mensaje tiene que entenderse sin detenerse. Si hay que leerlo dos veces, ya se pasó de largo." },
+          { titulo: "Una sola cosa que hacer", texto: "un panel con teléfono, dirección, web, redes y tres servicios no comunica cinco cosas: no comunica ninguna." },
+          { titulo: "Contraste alto", texto: "lo que se lee de lejos es la diferencia de luminosidad entre texto y fondo, no el color de moda." },
+          { titulo: "El ángulo cambia cuánto texto admite", texto: "un panel perpendicular a la marcha se ve durante más tiempo que uno de frente, y eso permite algo más de mensaje." },
+        ],
+      },
+      {
+        h2: "Antes de firmar un alquiler",
+        parrafo:
+          "El espacio es solo una parte de lo que vas a pagar, y hay preguntas que conviene hacer antes de comprometer meses.",
+        bullets: [
+          { titulo: "¿Está incluida la impresión y el cambio de lona?", texto: "muchas veces no, y es una partida que se suma cada vez que cambias la campaña." },
+          { titulo: "¿Tiene iluminación y hasta qué hora?", texto: "un panel sin luz desaparece la mitad de las horas en las que hay gente en la calle." },
+          { titulo: "¿Qué autorización municipal tiene?", texto: "la estructura debe estar en regla. Los operativos de retiro de paneles sin autorización existen y en Ica se han hecho." },
+          { titulo: "¿Desde dónde se ve de verdad?", texto: "ve al punto y mira. Un panel tapado por un árbol o por un puente se ve perfecto en la foto del catálogo y en ninguna otra parte." },
+        ],
+        nota: {
+          titulo: "La alternativa que casi nadie evalúa",
+          texto: "Si tu negocio ya tiene vehículos circulando, rotularlos es una inversión única que trabaja todos los días sin pagar alquiler. Para muchos negocios locales rinde más por sol invertido que un mes de panel.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta alquilar un panel publicitario en Perú?",
+        a: "En octubre de 2026 la referencia general va desde unos S/2,000 hasta más de S/10,000 al mes según la ubicación. En Lima, un panel de 20 a 24 m² se mueve entre US$500 y US$2,000 mensuales, y las ubicaciones premium superan los US$3,000. En provincias, un panel de 24 m² va desde US$500 hasta US$1,200. La impresión de la lona suele ir aparte.",
+      },
+      {
+        q: "¿Panel o bicivalla?",
+        a: "El panel da notoriedad en una vía concreta a quien pasa en auto; la bicivalla lleva el mensaje hasta donde está tu público, circula a velocidad de peatón y se contrata por días en lugar de por meses. Si tu cliente camina por calles comerciales, la bicivalla suele rendir más por sol invertido.",
+      },
+      {
+        q: "¿Cuántas palabras puede tener un panel?",
+        a: "Las menos posibles. La referencia práctica es que se entienda de un vistazo a la velocidad de la vía: en avenida, poco más que la marca y una idea. Cuanto más rápido se circula, menos texto admite.",
+      },
+      {
+        q: "¿Necesito permiso para un panel publicitario?",
+        a: "La estructura necesita autorización municipal, y conviene verificar que el operador la tenga antes de alquilar. Los municipios hacen operativos de retiro de paneles instalados sin autorización, con multas de por medio, y quien pierde la campaña es el anunciante.",
+      },
+      {
+        q: "¿Sirve la publicidad exterior si vendo por internet?",
+        a: "Sirve para que te reconozcan, no para que te compren en ese momento. Funciona bien combinada con pauta digital: la gente que vio tu marca en la calle responde mejor al anuncio que le aparece después. Medirla sola y esperar ventas directas es pedirle algo que no hace.",
+      },
+    ],
+    cierre: "En Suggestion producimos publicidad exterior y la elegimos según a quién tienes que llegar, no según lo que haya disponible.",
+    moneyPage: { label: "Estructuras y publicidad exterior", href: "/servicios/estructuras-publicitarias" },
+    relacionados: ["letreros-para-negocio-cual-elegir", "gigantografias-medidas-materiales-precios"],
   },
 ];
 

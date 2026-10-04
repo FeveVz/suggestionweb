@@ -67,6 +67,13 @@ const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
     { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
     { label: "Branding e identidad de marca", href: "/servicios/branding" },
   ],
+  "imprenta-btl": [
+    { label: "Imprenta y gran formato", href: "/servicios/imprenta" },
+    { label: "Estructuras y letreros", href: "/servicios/estructuras-publicitarias" },
+    { label: "Merchandising corporativo", href: "/servicios/merchandising" },
+    { label: "Material POP", href: "/servicios/material-pop" },
+    { label: "Publicidad móvil y bicivallas", href: "/servicios/publicidad-movil" },
+  ],
   "psicologia-de-mercado": [
     { label: "Investigación de mercado", href: "/servicios/investigacion-de-mercado" },
     { label: "Consultoría de marketing", href: "/servicios/consultoria" },
