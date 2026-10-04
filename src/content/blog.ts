@@ -4733,6 +4733,564 @@ export const BLOG_POSTS: BlogPost[] = [
     moneyPage: { label: "Consultoría de marketing", href: "/servicios/consultoria" },
     relacionados: ["cuanto-cobra-una-agencia-de-marketing-digital-en-peru", "que-es-el-marketing-digital", "cuanto-invertir-en-ads-peru"],
   },
+  {
+    slug: "como-elegir-una-agencia-de-marketing-digital",
+    categoria: "performance",
+    title: "Cómo Elegir una Agencia de Marketing Digital | Suggestion",
+    description:
+      "Las preguntas que separan una agencia que trabaja de una que presenta: qué pedir en la primera reunión, cómo leer una propuesta y las señales de alarma.",
+    h1: "Cómo elegir una agencia de marketing digital",
+    excerpt:
+      "La reunión de venta la prepara su mejor gente y está diseñada para impresionarte. Estas son las preguntas que la desarman, y ninguna necesita que sepas de marketing.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Lo que se evalúa no es la presentación",
+        parrafo:
+          "Casi todas las agencias llegan con un portafolio bonito y casos de clientes conocidos. Eso no dice nada: dice que alguien les pagó, no que les haya funcionado. Lo que hay que mirar es si pueden explicar cómo midieron un resultado y qué hicieron cuando algo no funcionó.",
+        bullets: [
+          { titulo: "Pide un caso con números y con fecha", texto: "cuánto se invirtió, qué período, qué resultado comercial. Si la respuesta son impresiones y alcance, están midiendo lo que se ve bonito, no lo que vende." },
+          { titulo: "Pregunta por una campaña que salió mal", texto: "es la pregunta más reveladora de todas. Quien trabaja de verdad tiene una y la cuenta sin problema; quien no, cambia de tema." },
+          { titulo: "Pide hablar con un cliente actual", texto: "no con una referencia elegida de hace tres años. Un cliente de hoy te va a contar cómo es trabajar con ellos el martes por la tarde." },
+          { titulo: "Mira si te preguntan de tu negocio", texto: "si en la primera reunión hablaron más de ellos que de ti, la propuesta que te van a mandar es la misma que le mandaron al anterior." },
+        ],
+      },
+      {
+        h2: "Cómo leer una propuesta",
+        parrafo:
+          "Las propuestas están escritas para que compares mal. Esta tabla ordena lo que de verdad hay que buscar, y la columna de la derecha es la que te dice si vas a poder exigir algo dentro de tres meses.",
+        tabla: {
+          cabeceras: ["Lo que suele decir", "Lo que tienes que pedir"],
+          filas: [
+            ["«Gestión de redes sociales»", "Cuántas piezas al mes, de qué tipo y quién responde los mensajes"],
+            ["«Campañas de publicidad»", "Cuántas campañas, con qué objetivo y si la inversión va aparte"],
+            ["«Reportes mensuales»", "Un ejemplo del reporte real de otro cliente, aunque sea con el nombre tapado"],
+            ["«Estrategia personalizada»", "Qué preguntas te van a hacer para personalizarla, y cuándo"],
+            ["«Optimización continua»", "Cada cuánto se revisa y qué pasa si un mes no hay mejora"],
+          ],
+          nota: "Si dos propuestas cuestan muy distinto, pon los dos alcances en una tabla como esta antes de mirar el precio. La mayoría de las diferencias se explican solas, y las que no se explican son la conversación que hay que tener.",
+        },
+      },
+      {
+        h2: "Las señales de alarma",
+        parrafo:
+          "Ninguna de estas descalifica sola, pero dos o tres juntas son suficientes para seguir buscando. Son las que más caro han salido a los clientes que llegan después de haber trabajado con alguien más.",
+        bullets: [
+          { titulo: "Garantiza posiciones o resultados concretos", texto: "nadie controla Google ni el mercado. Una garantía de primer puesto o de X ventas es una promesa que no se puede cumplir, y quien la hace lo sabe." },
+          { titulo: "No quiere que la cuenta publicitaria sea tuya", texto: "es la señal más seria de todas. Si la inversión pasa por su cuenta, no vas a ver el gasto real y el día que te vayas no te llevas ni los datos ni el público." },
+          { titulo: "Habla de seguidores como resultado", texto: "los seguidores no pagan planilla. Si el objetivo que proponen se mide en comunidad y no en contactos o ventas, estás comprando presencia." },
+          { titulo: "Propone empezar sin medir nada", texto: "si nadie instala analítica antes de gastar, en tres meses la discusión va a ser de opiniones." },
+          { titulo: "Presiona con descuentos que vencen", texto: "una decisión de proveedor que se toma con prisa se lamenta durante un año de contrato." },
+        ],
+      },
+      {
+        h2: "Lo que tienes que acordar antes de firmar",
+        parrafo:
+          "Esto se conversa al empezar, cuando todo el mundo está contento. Dejarlo para el final es cómo se pierden cuentas, públicos y creatividades.",
+        pasos: [
+          { titulo: "A nombre de quién quedan las cuentas", texto: "cuenta publicitaria, perfil de empresa, píxel, analítica y dominio tienen que estar a nombre de tu empresa, con tu correo como administrador." },
+          { titulo: "Qué se entrega y con qué frecuencia", texto: "por escrito, con cantidades. «Contenido suficiente» no es una cantidad." },
+          { titulo: "Con qué se declara el éxito", texto: "un indicador comercial, no de plataforma. Y cada cuánto se revisa." },
+          { titulo: "Cómo se termina", texto: "plazo de preaviso y qué te llevas: archivos editables, accesos, públicos y el histórico de datos." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "La pregunta que casi nadie hace",
+          texto: "«¿Quién va a trabajar en mi cuenta día a día, y cuántas cuentas lleva esa persona?». Quien te vende rara vez es quien ejecuta, y una persona llevando doce cuentas no puede dedicarle a la tuya lo que la propuesta promete.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo sé si una agencia de marketing es buena?",
+        a: "Por cómo responde a lo incómodo, no por su portafolio. Pide un caso con inversión, período y resultado comercial; pregunta por una campaña que salió mal; pide hablar con un cliente actual. Una agencia que trabaja de verdad contesta esas tres cosas sin incomodarse.",
+      },
+      {
+        q: "¿Qué debo pedir en la primera reunión?",
+        a: "Que te pregunten de tu negocio antes de proponerte nada. Si salen de la reunión sin saber cuánto vale un cliente para ti, de dónde vienen hoy tus ventas y qué pasó con tus campañas anteriores, la propuesta que te manden será genérica por obligación.",
+      },
+      {
+        q: "¿Conviene la agencia más barata?",
+        a: "Conviene la que puedas exigir. Un precio bajo con un alcance difuso termina costando más que uno alto con un alcance claro, porque pasas meses discutiendo qué estaba incluido. Compara alcances antes que montos.",
+      },
+      {
+        q: "¿Debo firmar permanencia?",
+        a: "Un plazo mínimo es razonable porque el trabajo tarda en dar fruto, sobre todo en posicionamiento. Lo que no es razonable es una permanencia sin compromisos de entrega del otro lado: si tú te amarras por meses, el alcance mensual tiene que estar igual de amarrado por escrito.",
+      },
+      {
+        q: "¿Qué pasa con mis cuentas si cambio de agencia?",
+        a: "Si están a nombre de tu empresa, no pasa nada: quitas un acceso y sigues. Si están a nombre de la agencia, puedes perder el histórico, los públicos y hasta el perfil de tu negocio. Por eso se acuerda al empezar y no al terminar.",
+      },
+    ],
+    cierre: "En Suggestion las cuentas quedan siempre a tu nombre y el reporte mensual termina en qué se cambia, no en cuánto alcance hubo.",
+    moneyPage: { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
+    relacionados: ["cuanto-cobra-una-agencia-de-marketing-digital-en-peru", "cuanto-cuesta-un-plan-de-marketing-en-peru", "que-es-el-marketing-digital"],
+  },
+  {
+    slug: "como-aparecer-primero-en-google-maps",
+    categoria: "conversion",
+    title: "Cómo Aparecer Primero en Google Maps | Suggestion",
+    description:
+      "Los tres factores que Google documenta para los resultados locales —relevancia, distancia y prominencia— y qué puedes mover de cada uno. Sin trucos.",
+    h1: "Cómo aparecer primero en Google Maps",
+    excerpt:
+      "Google publica los tres factores que deciden el orden de los resultados locales. Uno de ellos no lo controla nadie, y entender eso cambia por completo en qué vale la pena invertir esfuerzo.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Los tres factores, y cuál puedes mover",
+        parrafo:
+          "Esto no es especulación: Google documenta en su propia ayuda que los resultados locales se basan sobre todo en relevancia, distancia y prominencia. Lo útil es saber cuánto control tienes sobre cada uno, porque dos de los tres se trabajan y el otro no.",
+        tabla: {
+          cabeceras: ["Factor", "Qué significa", "Cuánto lo controlas"],
+          filas: [
+            ["Relevancia", "Qué tanto coincide tu perfil con lo que la persona buscó", "Mucho: depende de lo completo y preciso que esté tu perfil"],
+            ["Distancia", "Qué tan lejos estás de quien busca, o de la zona que buscó", "Nada: no se puede mover un local desde una pantalla"],
+            ["Prominencia", "Qué tan conocido es tu negocio dentro y fuera de internet", "Bastante: reseñas, menciones y enlaces hacia tu sitio"],
+          ],
+          nota: "La distancia es la que explica por qué tu competidor aparece primero desde una esquina y tú desde otra. No hay nada que arreglar ahí: el trabajo está en relevancia y prominencia, que son las que deciden cuando la distancia es parecida.",
+        },
+      },
+      {
+        h2: "Relevancia: completar lo que casi nadie completa",
+        parrafo:
+          "La mayoría de perfiles tienen el nombre, la dirección y poco más. Cada campo vacío es una búsqueda en la que no vas a aparecer, porque Google no puede relacionarte con algo que no le dijiste.",
+        bullets: [
+          { titulo: "La categoría principal, bien elegida", texto: "es el campo que más pesa en relevancia. Elige la que describe lo que haces, no la más grande ni la que suena mejor." },
+          { titulo: "Las categorías secundarias", texto: "si atiendes varias cosas distintas, añádelas. Es la forma de aparecer en búsquedas que la categoría principal no cubre." },
+          { titulo: "Los servicios y productos, uno por uno", texto: "cada servicio listado es una posibilidad más de coincidir con lo que alguien escribió." },
+          { titulo: "Horario real, incluido el de feriados", texto: "un horario incorrecto no solo te quita visitas: genera reseñas malas de gente que llegó y encontró cerrado." },
+          { titulo: "Fotos tuyas, actuales", texto: "fachada, interior, equipo y trabajos. Es lo que mira la persona antes de decidir entre tú y el de al lado." },
+        ],
+      },
+      {
+        h2: "Prominencia: las reseñas y lo demás",
+        parrafo:
+          "Prominencia es lo conocido que eres, y se construye dentro y fuera de Google. Las reseñas pesan, pero no son lo único, y conviene saber qué más cuenta antes de obsesionarse con una sola cosa.",
+        bullets: [
+          { titulo: "Reseñas: cantidad, frecuencia y respuesta", texto: "una docena de reseñas recientes dice más que cincuenta de hace tres años. Y responderlas todas, también las malas, es parte del trabajo." },
+          { titulo: "Pídelas de forma sistemática", texto: "la mayoría de clientes contentos no deja reseña salvo que se lo pidas. Un mensaje al terminar el servicio, con el enlace directo, cambia el ritmo por completo." },
+          { titulo: "Menciones en otros sitios", texto: "directorios, cámaras de comercio, medios locales y proveedores que te listan. Cuentan aunque no enlacen." },
+          { titulo: "Que tu nombre, dirección y teléfono sean idénticos en todas partes", texto: "si en un directorio figura un teléfono viejo y en otro una dirección distinta, estás repartiendo tu propia señal." },
+          { titulo: "Tu web también cuenta", texto: "un sitio que carga rápido y menciona tu ciudad y tus servicios refuerza el perfil. Los dos trabajan juntos." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Lo que no funciona y puede costarte el perfil",
+          texto: "Comprar reseñas, meter palabras clave en el nombre del negocio o registrar direcciones donde no operas son prácticas que Google detecta y sanciona, y la sanción puede ser la suspensión del perfil. El nombre del perfil tiene que ser el nombre real del negocio.",
+        },
+      },
+      {
+        h2: "Qué revisar este mes",
+        parrafo:
+          "Si tienes poco tiempo, este es el orden. Los dos primeros puntos explican la mayoría de los casos en los que un negocio no aparece.",
+        pasos: [
+          { titulo: "Confirma que el perfil está verificado", texto: "un perfil sin verificar no compite y los cambios que hagas pueden no publicarse. Es lo primero, antes que cualquier otra cosa." },
+          { titulo: "Revisa la categoría principal", texto: "entra a ver con qué categoría estás clasificado. Es frecuente encontrar una categoría heredada que no corresponde a lo que haces hoy." },
+          { titulo: "Completa servicios, horario y fotos", texto: "una tarde de trabajo que suele dar más resultado que meses de publicaciones." },
+          { titulo: "Monta la rutina de reseñas", texto: "decide quién la pide, cuándo y con qué mensaje. Sin rutina no hay reseñas; con rutina llegan solas." },
+          { titulo: "Mira desde dónde te buscan", texto: "pide a alguien en otra zona de la ciudad que busque tu rubro y mira en qué posición sales. La distancia cambia el resultado y conviene saber cuál es tu radio real." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo aparezco primero en Google Maps?",
+        a: "Trabajando los dos factores que puedes controlar. Google documenta tres —relevancia, distancia y prominencia— y la distancia no se mueve. La relevancia se trabaja completando el perfil con precisión, sobre todo la categoría; la prominencia, con reseñas constantes, menciones en otros sitios y datos de contacto idénticos en todas partes.",
+      },
+      {
+        q: "¿Por qué mi competidor aparece primero si yo tengo mejores reseñas?",
+        a: "Casi siempre por distancia. Los resultados locales cambian según desde dónde busca la persona, así que no existe «el primer puesto» en Maps: existe el primer puesto desde cada punto. Comprueba buscando desde zonas distintas antes de concluir que tienes un problema.",
+      },
+      {
+        q: "¿Cuántas reseñas necesito?",
+        a: "No hay un número mágico, y la constancia pesa más que el total. Un negocio con reseñas recientes y respondidas transmite actividad; uno con muchas reseñas antiguas y ninguna respuesta, lo contrario. Lo importante es tener una rutina para pedirlas, no una meta.",
+      },
+      {
+        q: "¿Puedo poner palabras clave en el nombre de mi negocio?",
+        a: "No conviene. El nombre del perfil tiene que ser el nombre real con el que operas; añadirle palabras clave va contra las normas de Google y puede terminar en la suspensión del perfil. Las palabras clave van en la categoría, los servicios y la descripción.",
+      },
+      {
+        q: "¿Sirve de algo si no tengo local físico?",
+        a: "Sí, pero con otra configuración: existen los perfiles de área de servicio, para negocios que atienden a domicilio sin que el cliente vaya a una dirección. Se declara la zona que cubres y la dirección no se muestra públicamente.",
+      },
+    ],
+    cierre: "En Suggestion trabajamos el perfil de empresa junto con la web, porque el posicionamiento local se gana en los dos a la vez.",
+    moneyPage: { label: "Posicionamiento web (SEO)", href: "/servicios/seo" },
+    relacionados: ["ficha-de-empresa-en-google-crear-y-verificar", "posicionamiento-web-como-aparecer-en-google", "como-crear-una-pagina-web"],
+  },
+  {
+    slug: "ficha-de-empresa-en-google-crear-y-verificar",
+    categoria: "conversion",
+    title: "Ficha de Empresa en Google: Crear y Verificar | Suggestion",
+    description:
+      "Cómo crear el perfil de empresa en Google, los cinco métodos de verificación y qué hacer si alguien ya reclamó tu negocio o si te suspenden la ficha.",
+    h1: "Ficha de empresa en Google: cómo crearla y verificarla",
+    excerpt:
+      "Un perfil sin verificar es un perfil que no compite: no aparece en el mapa y los cambios que hagas pueden no publicarse nunca. La verificación no es un trámite, es el requisito.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Qué es y por qué no es opcional",
+        parrafo:
+          "El perfil de empresa en Google —lo que mucha gente sigue llamando Google My Business— es la ficha que aparece a la derecha cuando alguien busca tu negocio y la que te pone en el mapa. Para un negocio con local, suele traer más contactos que la propia web, porque llega a la persona en el momento exacto en que está decidiendo a dónde ir.",
+        bullets: [
+          { titulo: "Es gratis", texto: "crear y mantener el perfil no cuesta nada. Si alguien te cobra por «aparecer en Google Maps», te está cobrando por el trabajo, no por el espacio." },
+          { titulo: "Ya puede existir sin que lo hayas creado tú", texto: "Google genera fichas automáticamente a partir de información pública. Es habitual descubrir que tu negocio ya está ahí, con datos incompletos o equivocados." },
+          { titulo: "Cualquiera puede sugerir cambios", texto: "incluidos tus competidores y clientes. Un perfil que nadie administra es un perfil que alguien más puede editar." },
+          { titulo: "Sin verificar, no compite", texto: "es la diferencia entre existir y aparecer." },
+        ],
+      },
+      {
+        h2: "Los cinco métodos de verificación",
+        parrafo:
+          "Google decide automáticamente qué métodos te ofrece según el tipo de negocio, la información pública disponible, la región y el horario. No se pueden elegir: te aparecen los que te aparecen.",
+        tabla: {
+          cabeceras: ["Método", "Cómo funciona", "Cuánto tarda"],
+          filas: [
+            ["Teléfono o SMS", "Recibes un código en el número del negocio", "Minutos"],
+            ["Correo electrónico", "Código a un correo corporativo ligado a tu web", "Minutos"],
+            ["Grabación de vídeo", "Grabas un recorrido con calle, letrero e interior", "Hasta 5 días hábiles de revisión"],
+            ["Videollamada", "Un agente te pide mostrar fachada, letreros y zonas internas", "En tu horario comercial"],
+            ["Correo postal", "Google envía una postal con el código a la dirección", "La mayoría llega en hasta 14 días"],
+          ],
+          nota: "Si te ofrecen videollamada, suele ser la vía más rápida y la que menos se atasca. Un sistema de respuesta automática en el teléfono impide recibir el código por voz: ten a alguien que conteste.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "Prepara la grabación antes de empezar",
+          texto: "Para el vídeo necesitas mostrar la calle con algo que identifique la ubicación, el letrero del negocio y el interior con el equipo de trabajo, todo en una sola toma continua. Si lo cortas o te falta el letrero, suelen rechazarlo y hay que repetir.",
+        },
+      },
+      {
+        h2: "Qué completar, en orden de impacto",
+        parrafo:
+          "Una vez verificado, no todos los campos valen lo mismo. Este es el orden en que conviene llenarlos si vas a hacerlo en una sola sesión.",
+        pasos: [
+          { titulo: "Categoría principal", texto: "el campo que más decide en qué búsquedas apareces. Elige la que describe exactamente lo que haces." },
+          { titulo: "Nombre, dirección y teléfono", texto: "escritos exactamente igual que en tu web y en cualquier directorio donde figures. Las variaciones dividen tu señal." },
+          { titulo: "Horario, incluido feriados", texto: "y actualízalo. Un cliente que llega y encuentra cerrado deja una reseña de una estrella." },
+          { titulo: "Servicios y productos", texto: "listados uno por uno, con su descripción. Cada uno abre una puerta de entrada distinta." },
+          { titulo: "Fotos reales y recientes", texto: "fachada, interior, equipo y trabajos terminados. Las de banco de imágenes se notan y restan." },
+        ],
+      },
+      {
+        h2: "Los dos problemas más comunes",
+        parrafo:
+          "Casi todo lo que sale mal con un perfil cae en uno de estos dos casos, y los dos tienen solución aunque ninguna sea inmediata.",
+        bullets: [
+          { titulo: "Alguien más reclamó tu negocio", texto: "pasa cuando una agencia anterior o un exempleado verificó el perfil con su correo. Google tiene un proceso para solicitar el acceso: se pide desde el propio perfil y el administrador actual tiene un plazo para responder. Si no responde, puedes quedarte con el control." },
+          { titulo: "Te suspendieron el perfil", texto: "suele deberse a palabras clave en el nombre, una dirección donde no se atiende al público o cambios bruscos de datos. Se corrige lo que lo causó y se solicita el restablecimiento; conviene no hacer más ediciones mientras se revisa." },
+          { titulo: "Hay fichas duplicadas", texto: "dos perfiles del mismo negocio compiten entre sí y reparten las reseñas. Se reportan para que se fusionen." },
+          { titulo: "Los datos cambian solos", texto: "Google aplica sugerencias de usuarios. Si cambiaste de teléfono o de horario, revisa el perfil unas semanas después para confirmar que sigue como lo dejaste." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo creo la ficha de mi negocio en Google?",
+        a: "Desde el perfil de empresa de Google, buscando primero si tu negocio ya existe: es muy común que Google haya creado la ficha automáticamente. Si existe, se reclama; si no, se crea. En los dos casos el siguiente paso es la verificación, sin la cual el perfil no compite.",
+      },
+      {
+        q: "¿Cuánto tarda la verificación?",
+        a: "Depende del método que Google te ofrezca. Por teléfono, SMS o correo electrónico es cuestión de minutos; la grabación de vídeo se revisa en hasta cinco días hábiles; la postal es la más lenta, y la mayoría de códigos llega en un plazo de hasta catorce días.",
+      },
+      {
+        q: "¿Puedo elegir cómo verificar mi negocio?",
+        a: "No. Google determina automáticamente qué métodos están disponibles según el tipo de empresa, la información pública, la región y el horario de atención. Te aparecen los que te aparecen, y no se pueden cambiar.",
+      },
+      {
+        q: "¿Qué hago si alguien más administra mi perfil?",
+        a: "Se solicita el acceso desde el propio perfil. Google avisa al administrador actual, que tiene un plazo para responder; si no responde, puedes obtener el control. Es la situación típica cuando una agencia anterior verificó la ficha con su correo, y es el motivo por el que conviene que el perfil esté siempre a nombre del negocio.",
+      },
+      {
+        q: "¿Cuesta algo tener la ficha?",
+        a: "No. El perfil es gratuito y también lo es mantenerlo. Lo que sí tiene costo es el trabajo de configurarlo bien, conseguir reseñas de forma constante y mantenerlo actualizado, que es donde está la diferencia entre tener ficha y aparecer en el mapa.",
+      },
+    ],
+    cierre: "En Suggestion configuramos y verificamos el perfil de empresa, y lo dejamos a nombre del negocio, nunca del nuestro.",
+    moneyPage: { label: "Posicionamiento web (SEO)", href: "/servicios/seo" },
+    relacionados: ["como-aparecer-primero-en-google-maps", "posicionamiento-web-como-aparecer-en-google", "como-crear-una-pagina-web"],
+  },
+  {
+    slug: "que-es-un-embudo-de-ventas",
+    categoria: "conversion",
+    title: "Qué es un Embudo de Ventas y Cómo Armar el Tuyo | Suggestion",
+    description:
+      "Qué es un embudo de ventas, cómo se construye con las etapas de tu negocio real y por qué el que más vende es el que enseña dónde se te cae la gente.",
+    h1: "Qué es un embudo de ventas y cómo armar el tuyo",
+    excerpt:
+      "Un embudo no sirve para explicar el marketing en una lámina. Sirve para una sola cosa: ver en qué escalón se te está cayendo la gente, que casi nunca es donde crees.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Qué es, sin la lámina de siempre",
+        parrafo:
+          "Un embudo de ventas es el recorrido que hace una persona desde que descubre que existes hasta que te compra, dividido en etapas que puedes contar. Se llama embudo porque en cada paso quedan menos: eso es normal y no es el problema. El problema es no saber en cuál de los pasos se van, porque entonces se invierte a ciegas en el escalón equivocado.",
+        bullets: [
+          { titulo: "No es una teoría, es un conteo", texto: "si no puedes poner un número en cada etapa, no tienes un embudo: tienes un dibujo." },
+          { titulo: "Las etapas son las tuyas", texto: "las de un consultorio no son las de una inmobiliaria. Copiar un embudo genérico de internet es el error de arranque más común." },
+          { titulo: "Se mide hacia abajo, no hacia arriba", texto: "la métrica que importa no es cuánta gente entra, sino qué porcentaje pasa de cada escalón al siguiente." },
+          { titulo: "Sirve para decidir dónde gastar", texto: "si la caída está en la respuesta a los mensajes, invertir más en publicidad solo compra más gente a la que no vas a contestar." },
+        ],
+      },
+      {
+        h2: "Un embudo real, con sus caídas",
+        parrafo:
+          "Este es un ejemplo con números inventados, pero con la forma que suelen tener los embudos de verdad. Lo interesante no son las cifras: es dónde está el escalón que más se encoge.",
+        tabla: {
+          cabeceras: ["Etapa", "Personas", "Pasa a la siguiente"],
+          filas: [
+            ["Vieron el anuncio", "20,000", "—"],
+            ["Escribieron o dejaron su dato", "400", "2 %"],
+            ["Recibieron respuesta efectiva", "260", "65 %"],
+            ["Mostraron interés real", "90", "35 %"],
+            ["Agendaron una cita", "35", "39 %"],
+            ["Compraron", "12", "34 %"],
+          ],
+          nota: "Cifras de ejemplo para ilustrar la estructura. El escalón que salta a la vista es el segundo del cuadro: 140 personas escribieron y nadie las atendió de forma efectiva. Recuperar la mitad de esas daría más ventas que duplicar la inversión en publicidad, y cuesta bastante menos.",
+        },
+      },
+      {
+        h2: "Cómo armar el tuyo en una tarde",
+        parrafo:
+          "No hace falta software ni consultoría para empezar. Hace falta decidir las etapas y conseguir un número para cada una, aunque el primer mes sea aproximado.",
+        pasos: [
+          { titulo: "Escribe las etapas de tu venta real", texto: "las que de verdad ocurren en tu negocio, con el nombre que usa tu equipo. Entre cuatro y seis suelen bastar." },
+          { titulo: "Define cuándo alguien pasa de una a otra", texto: "es la parte que más discusiones evita. ¿«Interesado» es que respondió o que preguntó el precio? Que esté escrito." },
+          { titulo: "Consigue el número de cada etapa", texto: "del último mes. Si no lo tienes, cuenta a mano una semana: es suficiente para ver la forma." },
+          { titulo: "Calcula el paso entre escalones", texto: "en porcentaje. Ahí aparece solo el escalón que está estrangulando todo lo demás." },
+          { titulo: "Arregla uno solo", texto: "el peor. Y vuelve a medir el mes siguiente antes de tocar nada más, o no vas a saber qué funcionó." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "El escalón que casi siempre es el culpable",
+          texto: "En la mayoría de negocios pequeños que hemos medido, la caída más grande no está en la publicidad ni en el cierre: está entre el mensaje que entra y la respuesta. Gente que escribió y nadie contestó a tiempo. Es el arreglo más barato y el que más rápido se nota.",
+        },
+      },
+      {
+        h2: "Los errores que lo vuelven inútil",
+        parrafo:
+          "Un embudo mal armado es peor que no tenerlo, porque te hace tomar decisiones con confianza sobre datos que no significan lo que crees.",
+        bullets: [
+          { titulo: "Contar impresiones como primera etapa", texto: "las impresiones no son personas: la misma persona puede ver el anuncio quince veces. Empieza a contar desde donde hay alguien identificable." },
+          { titulo: "Mezclar períodos", texto: "si cuentas las ventas de este mes contra los contactos de este mes, estás comparando gente distinta. En ventas que tardan semanas, hay que seguir a la misma cohorte." },
+          { titulo: "No registrar de dónde vino cada quien", texto: "sin el origen anotado al entrar, en tres meses no vas a poder decir qué campaña trajo qué venta." },
+          { titulo: "Medir solo lo que sale bien", texto: "el valor del embudo está en las caídas. Un reporte que solo muestra el total de ventas no es un embudo, es un marcador." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es un embudo de ventas?",
+        a: "Es el recorrido que hace una persona desde que te descubre hasta que te compra, dividido en etapas que puedes contar. Su utilidad no es explicar el proceso, sino mostrar en qué escalón concreto estás perdiendo gente, para arreglar ese en lugar de gastar más arriba.",
+      },
+      {
+        q: "¿Cuántas etapas debe tener?",
+        a: "Entre cuatro y seis suele ser suficiente para un negocio pequeño o mediano. Más etapas no dan más precisión: dan más campos que nadie llena. Lo importante no es la cantidad, sino que esté escrito cuándo alguien pasa de una a la siguiente.",
+      },
+      {
+        q: "¿Necesito un software para tener un embudo?",
+        a: "Para empezar, no. Una hoja de cálculo con las etapas y un conteo semanal te muestra la forma del embudo y dónde está la caída. El software se vuelve necesario cuando el volumen hace imposible contar a mano o cuando varias personas tienen que trabajar sobre los mismos contactos.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre embudo de marketing y de ventas?",
+        a: "Suele llamarse de marketing a la parte de arriba, hasta que alguien deja su dato, y de ventas a la parte de abajo, donde interviene una persona. Separarlos sirve para repartir responsabilidades, pero el embudo que vale es el completo: si cada área mira solo su mitad, nadie ve dónde se rompe la cadena.",
+      },
+      {
+        q: "¿Qué porcentaje de conversión es bueno?",
+        a: "Depende tanto del rubro y del ticket que compararte con un promedio ajeno sirve de poco. El punto de referencia útil es tu propio mes anterior: si el paso entre dos etapas mejora, lo que hiciste funcionó. Esa comparación sí es válida porque es con tu mismo negocio.",
+      },
+    ],
+    cierre: "En Suggestion montamos el embudo con las etapas de tu operación y dejamos el seguimiento automatizado, para que la caída se vea sola.",
+    moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
+    relacionados: ["que-es-un-lead", "que-es-un-crm", "cpl-vs-roas"],
+  },
+  {
+    slug: "que-es-un-crm",
+    categoria: "ia-automatizacion",
+    title: "Qué es un CRM y Cuándo lo Necesitas | Suggestion",
+    description:
+      "Qué es un CRM, para qué sirve en ventas y marketing, cuándo deja de alcanzar la hoja de cálculo y los cuatro campos que deciden si va a servir de algo.",
+    h1: "Qué es un CRM y cuándo lo necesitas de verdad",
+    excerpt:
+      "La mayoría de negocios no necesita un CRM más potente: necesita que alguien llene el que ya tiene. Esa diferencia explica casi todas las implementaciones que no sirvieron para nada.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Qué es un CRM, en una frase",
+        parrafo:
+          "Un CRM es el lugar donde queda escrito quién te contactó, cuándo, de dónde vino, qué se habló con esa persona y en qué etapa está hoy. El nombre viene de «gestión de la relación con el cliente», pero en la práctica es más simple: es la memoria del área comercial, fuera de la cabeza de cada vendedor.",
+        bullets: [
+          { titulo: "No es una base de datos de contactos", texto: "una agenda guarda nombres y teléfonos; un CRM guarda el estado de cada conversación y qué toca hacer después." },
+          { titulo: "No es un software de facturación", texto: "se confunden a menudo. Uno gestiona oportunidades antes de la venta; el otro, documentos después." },
+          { titulo: "Sirve igual en marketing y en ventas", texto: "marketing necesita saber qué campaña trajo a quién; ventas necesita saber a quién le toca llamar hoy. El mismo registro responde las dos cosas." },
+          { titulo: "Su valor real es la continuidad", texto: "cuando un vendedor se va, con CRM se va la persona; sin CRM se van también sus clientes y todo lo que sabía de ellos." },
+        ],
+      },
+      {
+        h2: "Cuándo deja de alcanzar la hoja de cálculo",
+        parrafo:
+          "Una hoja de cálculo bien llevada es un CRM perfectamente válido durante más tiempo del que la mayoría cree. Estas son las señales de que ya se quedó corta, y conviene esperarlas en lugar de adelantarse.",
+        tabla: {
+          cabeceras: ["Señal", "Qué está pasando"],
+          filas: [
+            ["Dos personas editan y se pisan los cambios", "Necesitas registros con dueño, no celdas compartidas"],
+            ["Se pierden seguimientos por olvido", "Necesitas recordatorios automáticos, no disciplina heroica"],
+            ["Nadie sabe de dónde vino un cliente", "Necesitas que el origen se escriba solo al entrar el contacto"],
+            ["El reporte mensual se arma a mano y tarda un día", "Necesitas que los datos ya estén estructurados"],
+            ["Los mensajes de WhatsApp viven en el celular de alguien", "Necesitas que la conversación sea de la empresa, no de la persona"],
+          ],
+          nota: "Si ninguna de estas te pasa todavía, un CRM no te va a dar más ventas: te va a dar más trabajo administrativo. La herramienta tiene que llegar cuando el problema ya existe.",
+        },
+      },
+      {
+        h2: "Los cuatro campos que deciden si va a servir",
+        parrafo:
+          "Casi todas las implementaciones que fracasan lo hacen por la misma razón: se configuraron treinta campos y el equipo no llena ninguno. Estos cuatro, bien puestos y obligatorios, valen más que el resto juntos.",
+        pasos: [
+          { titulo: "Origen", texto: "de dónde vino la persona, escrito al crear el registro y no después. Sin este campo no hay forma de saber qué campaña funcionó." },
+          { titulo: "Fecha de entrada", texto: "porque una venta que cierra hoy con un contacto de hace dos meses no la pagó la campaña de este mes. Sin la fecha, los números se inflan solos." },
+          { titulo: "Etapa", texto: "con una lista corta y cerrada, no un texto libre. Si cada vendedor escribe la etapa a su manera, no hay embudo que valga." },
+          { titulo: "Responsable", texto: "una persona con nombre. Un contacto sin dueño es un contacto que nadie va a llamar." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "La regla que salva implementaciones",
+          texto: "Tres campos obligatorios y bien llenados valen más que veinte opcionales a medias. Si el equipo tarda más de treinta segundos en registrar un contacto, va a dejar de hacerlo, y un CRM a medio llenar miente con mucha seguridad.",
+        },
+      },
+      {
+        h2: "Qué mirar al elegir uno",
+        parrafo:
+          "La comparación de funcionalidades es la peor forma de elegir: todos los CRM del mercado hacen lo básico. Lo que cambia es si tu equipo lo va a usar.",
+        bullets: [
+          { titulo: "Que se conecte con WhatsApp", texto: "en Perú la mayoría de conversaciones comerciales pasa por ahí. Un CRM al que hay que copiar los mensajes a mano no se va a usar." },
+          { titulo: "Que funcione bien en celular", texto: "si tu equipo vende en calle o en sala, la app importa más que el panel de escritorio." },
+          { titulo: "Que puedas sacar tus datos", texto: "pregunta cómo se exporta todo antes de entrar. Es la pregunta que nadie hace y la que duele cuando quieres cambiar." },
+          { titulo: "Que empiece simple", texto: "es preferible arrancar con lo mínimo y crecer, que configurar un sistema completo que el equipo abandona la segunda semana." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es un CRM y para qué sirve?",
+        a: "Es el sistema donde queda registrado quién te contactó, de dónde vino, qué se conversó y en qué etapa está. Sirve para que ningún contacto se pierda por olvido, para saber qué campaña trajo qué venta y para que la información del área comercial sea de la empresa y no de la memoria de cada vendedor.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre un CRM y un ERP?",
+        a: "El CRM gestiona lo que pasa antes de la venta: contactos, oportunidades y seguimiento. El ERP gestiona la operación interna: inventario, compras, producción, contabilidad. Son sistemas distintos con públicos distintos, aunque muchas empresas terminan conectándolos.",
+      },
+      {
+        q: "¿Necesito un CRM si tengo un negocio pequeño?",
+        a: "No necesariamente. Mientras una persona pueda llevar el seguimiento sin perder nada, una hoja de cálculo ordenada funciona. El CRM se vuelve necesario cuando hay varias personas trabajando los mismos contactos, cuando se pierden seguimientos por olvido o cuando no puedes decir de dónde vino cada cliente.",
+      },
+      {
+        q: "¿Cuánto cuesta un CRM?",
+        a: "Hay opciones gratuitas con las funciones básicas y planes por usuario al mes que suben según lo que necesites. Pero el costo del software casi nunca es el costo real: la partida más grande es configurarlo bien y lograr que el equipo lo use. Un CRM caro sin adopción cuesta más que uno gratuito bien llevado.",
+      },
+      {
+        q: "¿Cuánto tarda en implementarse?",
+        a: "Una configuración básica con los campos esenciales y un pipeline simple puede estar en semanas. Lo que toma tiempo no es la herramienta: es acordar las etapas, decidir qué se registra y conseguir que el equipo lo haga todos los días. Esa parte se mide en meses de hábito, no en días de configuración.",
+      },
+    ],
+    cierre: "En Suggestion implementamos el CRM con los campos mínimos que de verdad se llenan, y conectado a WhatsApp, que es por donde entra casi todo.",
+    moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
+    relacionados: ["que-es-un-embudo-de-ventas", "como-automatizar-whatsapp", "que-es-un-lead"],
+  },
+  {
+    slug: "que-es-el-remarketing",
+    categoria: "performance",
+    title: "Qué es el Remarketing y Cómo Usarlo Bien | Suggestion",
+    description:
+      "Qué es el remarketing, cómo se arma una audiencia, por qué suele ser lo más rentable de una cuenta y los errores que lo convierten en acoso publicitario.",
+    h1: "Qué es el remarketing y cómo usarlo sin cansar a nadie",
+    excerpt:
+      "Es, casi siempre, lo más rentable de una cuenta publicitaria: le hablas a gente que ya te conoce. Y es también lo que más rápido se arruina, porque la línea entre recordar y perseguir es más fina de lo que parece.",
+    date: "2026-10-06",
+    secciones: [
+      {
+        h2: "Qué es y por qué rinde tanto",
+        parrafo:
+          "El remarketing —también llamado retargeting— consiste en mostrar anuncios a personas que ya tuvieron contacto contigo: visitaron tu web, vieron un video, escribieron por mensaje o están en tu lista de clientes. La diferencia con una campaña normal es enorme: no estás pagando por presentarte, estás pagando por volver a aparecer frente a alguien que ya sabe quién eres.",
+        bullets: [
+          { titulo: "El público es pequeño y caliente", texto: "son menos personas, pero cada una vale mucho más. Por eso el costo por venta suele ser el más bajo de la cuenta." },
+          { titulo: "Resuelve el problema real de la mayoría de webs", texto: "casi nadie compra en la primera visita. El remarketing existe para las otras visitas." },
+          { titulo: "No crea demanda", texto: "y esto es importante: solo trabaja con la gente que ya atrajiste. Si nadie llega a tu web, no hay a quién recordarle nada." },
+          { titulo: "Se nota rápido", texto: "al ser un público reducido y con intención, los resultados aparecen antes que en campañas de captación." },
+        ],
+      },
+      {
+        h2: "Con qué se arma una audiencia",
+        parrafo:
+          "Una audiencia de remarketing se construye con una señal: algo que la persona hizo. Cuanto más cerca de la compra esté esa señal, más valiosa es la audiencia y distinto debe ser el mensaje.",
+        tabla: {
+          cabeceras: ["Audiencia", "Qué hizo esa persona", "Qué mensaje corresponde"],
+          filas: [
+            ["Visitó la web", "Entró, sin más", "Recordar quién eres y qué resuelves"],
+            ["Vio una página de producto o servicio", "Mostró interés en algo concreto", "Hablar de eso, no del catálogo entero"],
+            ["Empezó un formulario y no lo terminó", "Estuvo a un paso", "Quitar la fricción: resolver la duda que lo frenó"],
+            ["Vio buena parte de un video", "Te dedicó atención", "Dar el siguiente paso, no repetir el video"],
+            ["Ya es cliente", "Te compró", "Venta cruzada o recompra, nunca la oferta de captación"],
+          ],
+          nota: "El error más común es tratar a las cinco audiencias con el mismo anuncio. Mostrarle la oferta de bienvenida a alguien que ya compró es la forma más rápida de parecer una empresa que no sabe con quién habla.",
+        },
+      },
+      {
+        h2: "Lo que hay que tener instalado antes",
+        parrafo:
+          "El remarketing no funciona retroactivamente: solo puede alcanzar a gente registrada desde que la medición está puesta. Instalarla el día que decides hacer remarketing significa esperar semanas para tener público.",
+        bullets: [
+          { titulo: "La etiqueta de medición en todo el sitio", texto: "el píxel o equivalente, en todas las páginas, desde hoy aunque todavía no vayas a pautar. Está juntando público mientras tanto." },
+          { titulo: "Los eventos importantes marcados", texto: "contacto, formulario enviado, compra. Sin eventos solo puedes segmentar por visita, que es la señal más pobre." },
+          { titulo: "El aviso de cookies y la política de privacidad", texto: "no es opcional. En Perú rige la ley de protección de datos personales y el sitio tiene que informar qué se recoge." },
+          { titulo: "Tu lista de clientes, si la tienes", texto: "se puede cargar para crear audiencias, y también para excluir. Lo segundo es tan útil como lo primero." },
+        ],
+      },
+      {
+        h2: "Los errores que lo convierten en acoso",
+        parrafo:
+          "Todo el mundo ha tenido la experiencia de ver el mismo anuncio durante tres semanas después de una visita. Eso no es remarketing bien hecho: es una campaña a la que nadie le puso límites.",
+        bullets: [
+          { titulo: "No poner tope de frecuencia", texto: "si la misma persona ve tu anuncio diez veces al día, no la estás convenciendo: la estás agotando, y además pagas por cada impresión." },
+          { titulo: "No poner fecha de caducidad a la audiencia", texto: "alguien que visitó hace seis meses ya no está decidiendo. Ventanas de días o pocas semanas suelen rendir mucho mejor que una de un año." },
+          { titulo: "No excluir a quien ya compró", texto: "es el error que más molesta a los clientes y el que más presupuesto desperdicia. Quien compró sale de la campaña de captación el mismo día." },
+          { titulo: "Repetir el mismo anuncio", texto: "si la persona no reaccionó al primero, el segundo igual tampoco va a funcionar. Cambia el ángulo, no la frecuencia." },
+          { titulo: "Hacer remarketing sin tráfico", texto: "con cien visitas al mes no hay audiencia que armar. Primero hay que llenar la parte de arriba." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Una regla simple de higiene",
+          texto: "Antes de lanzar, pregúntate cuántas veces te gustaría ver tu propio anuncio si fueras el cliente. Pon ese tope, excluye a quien ya compró y dale a la audiencia una ventana corta. Con esas tres cosas, el remarketing deja de ser molesto y sigue siendo rentable.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es el remarketing?",
+        a: "Es mostrar anuncios a personas que ya tuvieron contacto contigo: visitaron tu web, vieron un video, te escribieron o ya son clientes. Como el público ya te conoce, el costo por venta suele ser el más bajo de toda la cuenta publicitaria.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre remarketing y retargeting?",
+        a: "En la práctica se usan como sinónimos. Históricamente «remarketing» era el término de Google y «retargeting» el del resto del mercado, y a veces se distingue que remarketing incluye también el correo a clientes. Para decidir una campaña, la distinción no cambia nada.",
+      },
+      {
+        q: "¿Qué necesito para empezar a hacer remarketing?",
+        a: "La etiqueta de medición instalada en todo tu sitio, los eventos importantes marcados y suficiente tráfico para formar una audiencia. Conviene instalarla cuanto antes aunque todavía no vayas a pautar, porque solo alcanza a quien pasó después de instalarla: no funciona hacia atrás.",
+      },
+      {
+        q: "¿Es legal perseguir a la gente con anuncios?",
+        a: "La publicidad segmentada es legal, pero hay obligaciones: informar en tu sitio qué datos se recogen y para qué, y respetar la ley de protección de datos personales. Lo que sí conviene evitar, más allá de lo legal, es la frecuencia excesiva: molesta al cliente y además te cuesta dinero.",
+      },
+      {
+        q: "¿Por qué sigo viendo anuncios de algo que ya compré?",
+        a: "Porque esa cuenta no está excluyendo a sus compradores de la campaña de captación. Es un error de configuración muy común, y en tu propia cuenta se arregla en minutos: se carga la lista de clientes como exclusión y se separa la campaña de recompra.",
+      },
+    ],
+    cierre: "En Suggestion el remarketing se arma por audiencia y con tope de frecuencia, para que recuerde sin perseguir.",
+    moneyPage: { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    relacionados: ["cuanto-invertir-en-ads-peru", "cpl-vs-roas", "que-es-un-lead"],
+  },
 ];
 
 export const getCategoria = (slug: string): BlogCategoria | undefined =>
