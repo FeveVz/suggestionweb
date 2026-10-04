@@ -73,3 +73,47 @@ Si al revisar los precios se movieron más de un 15 %, se actualiza el
 artículo, se cambia la fecha de consulta y se vuelve a enviar por IndexNow.
 Un artículo de precios con fecha vieja hace más daño que no tenerlo: es la
 clase de detalle por el que un cliente deja de confiar en todo lo demás.
+
+---
+
+# Tanda 1 — «Cuánto cuesta» (servicios digitales y marca)
+
+**Consulta: 4 de octubre de 2026.** Mismas reglas que arriba.
+
+| Artículo | Desde | Hasta | Fuentes |
+|---|---|---|---|
+| Página web en Perú | **S/300** landing de una página | **S/50,000** portal o plataforma. Informativa S/800–5,000; corporativa S/2,000–10,000; e-commerce S/2,500–15,000 | hosting.com.pe, gredich.com, 3rcore.com, limadisenoweb.com (referencia) |
+| Agencia de marketing digital | **S/1,500 al mes** community manager junior | **S/60,000 al mes** retainer amplio. Full-service: mínimo S/8,000–15,000; estándar S/15,000–25,000. CM sénior S/2,500–4,500; CM lead S/4,500–8,000. Fee sobre inversión en pauta: 15–18 % bajo S/30k/mes, 12–15 % entre S/30k y S/80k | lacura.pe/cifras, tarifario 2026 del mercado peruano formal, antes de IGV |
+| Publicidad en Facebook e Instagram | **S/20 al día** mínimo técnico; **S/600 al mes** piso práctico para pyme | **S/8,000 al mes** según rubro. CPM S/8–25; CPC S/0.30–1.50 (tráfico S/0.20–0.70); costo por lead S/3–40. Alta competencia (educación, seguros) CPM S/15–25; consumo masivo S/5–12 | 3rcore.com, adsacademy.pe, flamacreators.com (referencia) |
+| Millar de volantes | **S/100** A5 couché 115 g full color ambas caras | **S/260** según gramaje, acabado e IGV. Referencias intermedias: S/120, S/140 con IGV, S/145 sin IGV, S/152. Plazo habitual 2–3 días | asdisa.com, imprentaperuana.com, peruprint.com, tarjetaspersonalesdelivery.com (fichas y referencia) |
+| Registro de marca en Indecopi | **S/401.20** tarifa MYPE con descuento | **S/534.90** primera clase (arancel 20100562). Clase adicional S/533.30. Búsqueda fonética S/30.66; figurativa S/38.46. Oposición de tercero S/378.70 | ⚠️ ver nota abajo |
+| Plan de marketing | **S/300** sesión estratégica de 2 horas | **S/15,000** plan estratégico completo. Diagnóstico con entregables hasta S/2,500; acompañamiento mensual S/1,200–4,000; CMO externo S/8,000–15,000 al mes | robertoargandona.com, flamacreators.com, limarank.pe (referencia) |
+
+## ⚠️ Nota sobre la tasa de Indecopi
+
+**No se pudo verificar en la fuente oficial.** `gob.pe` bloquea el acceso
+automatizado (HTTP 418 por API y «Acceso restringido» por navegador), así que
+la cifra de S/534.90 **no está confirmada contra el Estado**: está corroborada
+por media docena de fuentes peruanas independientes que coinciden en el monto
+y en el código de arancel (tramitesperu.com, perugestiona.pe,
+estudiotarazona.com, abogadosycontadores.pe, modelo.pe, emprendedorperuano.pe).
+
+Por eso el artículo dice que es la tasa publicada, cita el código de arancel y
+**manda al lector a confirmarla en el canal oficial** antes de pagar. Las tasas
+se actualizan por decreto —la última referida es el DS 088-2025-PCM— y la 13.ª
+edición de la Clasificación de Niza entró en vigor en enero de 2026.
+
+Si en algún momento se puede abrir gob.pe a mano, conviene confirmar el monto
+y anotar aquí la fecha de verificación oficial.
+
+## Lo que estos artículos tienen que decir siempre
+
+- En agencias: **el fee no incluye la inversión en pauta.** Es la confusión
+  más cara del rubro y hay que desmontarla en el propio artículo.
+- En pauta: **los montos son de medios**, lo que se le paga a la plataforma.
+  La gestión va aparte.
+- En web: **dominio y hosting son costo recurrente anual**, no parte del
+  precio de construcción.
+- En imprenta: **decir si el precio lleva IGV**, porque las fuentes mezclan
+  las dos cosas y es la diferencia entre dos presupuestos que parecen distintos.
+- En volantes: **el reparto cuesta aparte** y suele costar más que imprimir.

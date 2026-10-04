@@ -1076,6 +1076,28 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
+        h2: "Lo que cobran las plataformas en Perú",
+        parrafo:
+          "Antes de decidir tu presupuesto conviene saber a qué precio se compra la atención en este mercado. Estos son los costos de referencia en Perú, y varían sobre todo por rubro: cuanto más caro el ticket y más competido el sector, más alto el costo de llegar.",
+        tabla: {
+          cabeceras: ["Métrica", "Rango en Perú", "Qué significa"],
+          filas: [
+            ["CPM, costo por mil impresiones", "desde S/8, hasta S/25", "Lo que cuesta que tu anuncio se vea mil veces"],
+            ["CPC en campañas de tráfico", "desde S/0.20, hasta S/0.70", "Lo que cuesta cada clic hacia tu web"],
+            ["CPC general", "desde S/0.30, hasta S/1.50", "Varía mucho con el objetivo de campaña"],
+            ["Costo por lead", "desde S/3, hasta S/40", "Lo que cuesta un contacto registrado"],
+            ["CPM en rubros competidos (educación, seguros)", "desde S/15, hasta S/25", "Ticket alto y mucha competencia por el mismo público"],
+            ["CPM en consumo masivo (restaurantes, ropa)", "desde S/5, hasta S/12", "Público amplio y menos pujas por el mismo espacio"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según benchmarks publicados por agencias locales. Son costos de medios —lo que se le paga a la plataforma—, sin incluir la gestión. No son tarifas de Suggestion.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "El costo por lead del panel no es tu costo por lead",
+          texto: "Esas cifras cuentan lo que la plataforma registra. Tu costo real sale de dividir la inversión entre los leads que tu equipo pudo trabajar de verdad, y casi siempre es más alto. Es la diferencia que decide si una campaña rentable lo parece o no.",
+        },
+      },
+      {
         h2: "Cuánto público hay realmente en Perú",
         parrafo:
           "Antes de decidir el monto conviene saber el tamaño del terreno. Perú es un mercado digital maduro, no emergente: eso significa que tu cliente está online, pero también que tu competencia ya está pujando por él. En mercados así, la ventaja rara vez viene de pagar más por clic; viene de convertir mejor lo que ya estás pagando.",
@@ -4130,6 +4152,586 @@ export const BLOG_POSTS: BlogPost[] = [
     cierre: "En Suggestion producimos publicidad exterior y la elegimos según a quién tienes que llegar, no según lo que haya disponible.",
     moneyPage: { label: "Estructuras y publicidad exterior", href: "/servicios/estructuras-publicitarias" },
     relacionados: ["letreros-para-negocio-cual-elegir", "gigantografias-medidas-materiales-precios"],
+  },
+  {
+    slug: "cuanto-cuesta-una-pagina-web-en-peru",
+    categoria: "conversion",
+    title: "Cuánto Cuesta una Página Web en Perú 2026 | Suggestion",
+    description:
+      "Rangos reales por tipo de web: landing desde S/300, corporativa desde S/2,000, e-commerce desde S/2,500. Qué mueve el precio y qué no viene incluido.",
+    h1: "Cuánto cuesta una página web en Perú",
+    excerpt:
+      "La respuesta honesta es que depende, pero eso no sirve de nada. Estos son los rangos del mercado peruano, qué entra en cada uno y qué se paga aparte aunque nadie te lo diga al cotizar.",
+    date: "2026-10-05",
+    secciones: [
+      {
+        h2: "Los rangos del mercado peruano",
+        parrafo:
+          "El precio no se mueve por el tamaño de la empresa que te cotiza, sino por lo que la web tiene que hacer. Una página que solo informa y una que vende y cobra son dos proyectos distintos aunque las dos se llamen «página web».",
+        tabla: {
+          cabeceras: ["Tipo de web", "Precio referencial", "Para qué sirve"],
+          filas: [
+            ["Landing de una sola página", "desde S/300, hasta S/1,500", "Una campaña concreta con un solo objetivo"],
+            ["Web informativa de 5 a 10 páginas", "desde S/800, hasta S/5,000", "Presencia y credibilidad: quién eres y qué haces"],
+            ["Web corporativa", "desde S/2,000, hasta S/10,000", "Canal de venta serio, con medición y formularios que funcionan"],
+            ["Tienda virtual", "desde S/2,500, hasta S/15,000", "Vender en línea, con pagos, stock y envíos"],
+            ["Portal o plataforma a medida", "desde S/8,000, hasta S/50,000", "Sistema con usuarios, procesos o integraciones propias"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según precios publicados por agencias y desarrolladores del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Lo que mueve el precio no es lo que crees",
+        parrafo:
+          "Casi todo el mundo pregunta «¿cuánto por cinco páginas?», y esa es justo la variable que menos pesa. Añadir una página más a un sitio ya construido cuesta poco. Lo que cuesta es todo lo demás.",
+        bullets: [
+          { titulo: "Las integraciones", texto: "conectar la web con tu pasarela de pago, tu CRM, tu facturación o tu sistema de reservas es donde se va el tiempo. Una web aislada y una conectada no se parecen en nada." },
+          { titulo: "El contenido", texto: "los textos y las fotos son trabajo, y alguien los hace. Si no los pones tú, van en el presupuesto; si los pones tú y nunca llegan, el proyecto se queda parado meses." },
+          { titulo: "La velocidad y lo técnico", texto: "que cargue rápido en un celular con señal regular no sale solo. Es trabajo específico, y es la diferencia entre aparecer en Google o no." },
+          { titulo: "Si está pensada para convertir", texto: "una plantilla bonita y una página diseñada para que el visitante haga algo cuestan distinto porque son oficios distintos." },
+        ],
+      },
+      {
+        h2: "Lo que se paga aparte aunque no te lo digan",
+        parrafo:
+          "Aquí está la sorpresa más común: el precio de construir no es el precio de tener. Hay costos que se repiten todos los años y conviene conocerlos antes de firmar, no después.",
+        tabla: {
+          cabeceras: ["Concepto", "Cuándo se paga", "Qué pasa si no lo pagas"],
+          filas: [
+            ["Dominio", "Cada año", "La web deja de ser accesible por tu nombre"],
+            ["Hosting", "Mensual o anual", "La web se cae"],
+            ["Certificado de seguridad", "Normalmente incluido en el hosting", "El navegador avisa que tu sitio no es seguro"],
+            ["Correos con tu dominio", "Mensual o anual", "Sigues escribiendo desde una cuenta gratuita"],
+            ["Mantenimiento y actualizaciones", "Mensual o por bolsa de horas", "Se acumulan fallos y agujeros de seguridad"],
+          ],
+          nota: "No son letra pequeña ni trampa: son el costo real de tener un sitio en línea. Lo que sí es señal de mal proveedor es que no aparezcan en la conversación hasta después de firmar.",
+        },
+      },
+      {
+        h2: "Cómo comparar dos presupuestos que no se parecen",
+        parrafo:
+          "Cuando pides tres cotizaciones para lo mismo y vuelven con S/900, S/3,500 y S/9,000, la reacción natural es desconfiar de los tres. Estas cinco preguntas ordenan la comparación en diez minutos.",
+        pasos: [
+          { titulo: "¿La web queda a mi nombre?", texto: "el dominio, el hosting y los accesos tienen que estar a nombre de tu empresa. Si están a nombre del proveedor, no tienes una web: tienes un alquiler." },
+          { titulo: "¿Quién escribe los textos y consigue las fotos?", texto: "es la pregunta que más diferencias explica entre dos presupuestos que parecen iguales." },
+          { titulo: "¿Qué pasa cuando quiera cambiar algo?", texto: "pregunta si puedes editar tú, cuánto cuesta un cambio y con qué plazo. Una web que depende del proveedor para cada coma se vuelve cara con el tiempo." },
+          { titulo: "¿Está incluida la medición?", texto: "sin analítica instalada no vas a saber si la web funciona, y entonces la discusión del precio era la discusión equivocada." },
+          { titulo: "¿Cuánto cuesta mantenerla al año?", texto: "pide ese número por escrito junto con el de construcción. Es el que de verdad compara dos propuestas." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Cuándo conviene gastar menos",
+          texto: "Si todavía estás validando qué vendes y a quién, una landing simple y bien medida es mejor inversión que una web completa. Lo caro no es empezar pequeño: lo caro es construir grande sobre una idea que todavía no está probada.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta una página web en Perú?",
+        a: "En octubre de 2026 el mercado va desde unos S/300 por una landing de una sola página y desde S/800 por una web informativa, hasta S/10,000 o más en una corporativa y S/15,000 en una tienda virtual. Los portales a medida pueden llegar a S/50,000. El rango es amplio porque lo que mueve el precio son las integraciones y el contenido, no la cantidad de páginas.",
+      },
+      {
+        q: "¿El precio incluye el dominio y el hosting?",
+        a: "A veces el primer año sí, y después se renuevan aparte todos los años. Es la pregunta que hay que hacer antes de firmar, junto con a nombre de quién quedan registrados: si están a nombre del proveedor y un día cambias, recuperarlos puede ser un problema serio.",
+      },
+      {
+        q: "¿Cuánto tarda en estar lista?",
+        a: "Una landing puede salir en días y una web corporativa en semanas. Lo que más alarga los plazos no es el desarrollo: son los textos y las fotos que el cliente tiene que entregar. Si llegas con el contenido listo, el proyecto se acorta solo.",
+      },
+      {
+        q: "¿Conviene una web barata?",
+        a: "Conviene si lo que necesitas es estar presente y poco más. Deja de convenir cuando la web tiene que traer clientes: ahí la diferencia entre una plantilla y un sitio pensado para convertir se nota en el resultado, y rehacerlo después cuesta más que haberlo hecho bien.",
+      },
+      {
+        q: "¿Puedo hacerla yo con un constructor?",
+        a: "Sí, y para validar una idea o un negocio muy simple es una opción razonable. El límite aparece cuando necesitas velocidad, control técnico o integraciones: ahí los constructores se quedan cortos y migrar significa rehacer, con el riesgo de perder el posicionamiento que ya tenías.",
+      },
+    ],
+    cierre: "En Suggestion diseñamos webs rápidas y medidas, pensadas para que el visitante haga algo y para que tú puedas verlo.",
+    moneyPage: { label: "Diseño de páginas web profesionales", href: "/servicios/desarrollo-web" },
+    relacionados: ["crear-pagina-web-wix-vs-profesional", "como-crear-una-pagina-web", "posicionamiento-web-como-aparecer-en-google"],
+  },
+  {
+    slug: "cuanto-cobra-una-agencia-de-marketing-digital-en-peru",
+    categoria: "performance",
+    title: "Cuánto Cobra una Agencia de Marketing en Perú | Suggestion",
+    description:
+      "Modelos de cobro, rangos reales del mercado peruano desde S/1,500 al mes y la confusión más cara del rubro: el fee no incluye la inversión en pauta.",
+    h1: "Cuánto cobra una agencia de marketing digital en Perú",
+    excerpt:
+      "Hay una confusión que arruina más relaciones entre cliente y agencia que ninguna otra, y aparece en la primera reunión: creer que lo que pagas de fee es lo que se va a invertir en publicidad.",
+    date: "2026-10-05",
+    secciones: [
+      {
+        h2: "Los tres modelos de cobro",
+        parrafo:
+          "Antes del precio conviene entender cómo se cobra, porque el mismo trabajo cuesta muy distinto según el modelo y cada uno alinea los incentivos de otra forma.",
+        tabla: {
+          cabeceras: ["Modelo", "Cómo funciona", "A quién le conviene"],
+          filas: [
+            ["Fee mensual fijo", "Un monto acordado por un alcance definido", "Quien quiere previsibilidad y un equipo disponible"],
+            ["Porcentaje sobre la inversión", "La agencia cobra un porcentaje de lo que se gasta en pauta", "Cuentas con inversión alta y estable"],
+            ["Por proyecto", "Un monto cerrado por un entregable concreto", "Trabajos acotados: una web, una campaña, un plan"],
+          ],
+          nota: "El porcentaje sobre inversión tiene un problema que conviene mirar de frente: premia que gastes más, no que vendas más. Si eliges ese modelo, acuerda también qué resultado se espera, no solo cuánto se va a invertir.",
+        },
+      },
+      {
+        h2: "Los rangos del mercado peruano",
+        parrafo:
+          "Las cifras de abajo son del mercado formal peruano y van antes de IGV. Varían mucho porque «agencia» abarca desde una persona llevando dos redes hasta un equipo completo con estrategia, pauta, contenido y medición.",
+        tabla: {
+          cabeceras: ["Servicio", "Mensual"],
+          filas: [
+            ["Community manager junior, una red", "desde S/1,500, hasta S/2,500"],
+            ["Community manager sénior, varias redes y pauta básica", "desde S/2,500, hasta S/4,500"],
+            ["Community manager líder con equipo", "desde S/4,500, hasta S/8,000"],
+            ["Agencia full-service, retainer mínimo", "desde S/8,000, hasta S/15,000"],
+            ["Agencia full-service, servicio estándar", "desde S/15,000, hasta S/25,000"],
+            ["Agencia full-service, servicio amplio", "desde S/25,000, hasta S/60,000"],
+          ],
+          nota: "Rangos del mercado peruano formal consultados en octubre de 2026, antes de IGV, según tarifarios publicados del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+        dato: {
+          cifra: "12 % a 18 %",
+          texto: "es la comisión habitual cuando se cobra sobre la inversión en pauta: entre 15 % y 18 % por debajo de S/30,000 mensuales de medios, y entre 12 % y 15 % cuando la inversión está entre S/30,000 y S/80,000.",
+        },
+      },
+      {
+        h2: "El fee no incluye la pauta",
+        parrafo:
+          "Es la confusión más cara del rubro y conviene desmontarla antes de firmar nada. Lo que le pagas a la agencia es por el trabajo: estrategia, creatividades, configuración, optimización y reportes. Lo que se gasta en Meta o en Google es dinero que va directo a la plataforma y que no entra en el bolsillo de nadie más. Son dos partidas distintas y las dos salen de tu presupuesto.",
+        bullets: [
+          { titulo: "Pregúntalo literalmente", texto: "«¿este monto incluye lo que se va a invertir en anuncios?». Si la respuesta no es un sí o un no claro, ya sabes algo importante del proveedor." },
+          { titulo: "Pide las dos cifras separadas", texto: "fee y medios, en líneas distintas de la propuesta. Un presupuesto que las junta es un presupuesto que no vas a poder auditar." },
+          { titulo: "La cuenta publicitaria debe ser tuya", texto: "tú pagas la pauta, tú ves el gasto. Invertir desde la cuenta de la agencia es cómo se pierde la trazabilidad y la cuenta el día que cambias de proveedor." },
+          { titulo: "Cuidado con el fee que se come la pauta", texto: "si pagas S/2,000 de gestión y quedan S/500 para anuncios, no vas a tener campaña: vas a tener un informe mensual sobre casi nada." },
+        ],
+      },
+      {
+        h2: "Qué pedir antes de firmar",
+        parrafo:
+          "El precio es lo último que hay que mirar, y casi siempre es lo primero que se pregunta. Estas cuatro cosas separan una agencia de un proveedor de publicaciones.",
+        bullets: [
+          { titulo: "Qué se entrega cada mes, por escrito", texto: "cantidad de piezas, campañas, reuniones y reportes. Un alcance difuso termina en una discusión a los tres meses." },
+          { titulo: "Con qué se va a medir el resultado", texto: "si la respuesta son alcance y seguidores, estás comprando presencia, no ventas. Que lo diga el contrato." },
+          { titulo: "Quién va a estar en tu cuenta", texto: "quién vende y quién ejecuta rara vez son la misma persona. Pregunta por el perfil de quien va a trabajar día a día." },
+          { titulo: "Qué pasa el día que te vayas", texto: "accesos, cuentas, píxel, creatividades y datos tienen que quedarse contigo. Se acuerda al empezar, nunca al terminar." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Una cuenta que ordena la decisión",
+          texto: "Divide el fee mensual entre lo que vale un cliente nuevo para ti. Si la agencia necesita traerte quince clientes al mes solo para pagarse, y tu negocio nunca ha cerrado quince al mes, el problema no es el precio: es que ese nivel de servicio todavía no te corresponde.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cobra una agencia de marketing digital en Perú?",
+        a: "En octubre de 2026, el mercado formal va desde unos S/1,500 mensuales por un community manager junior llevando una red, hasta S/60,000 en un retainer amplio de agencia full-service. El rango habitual de una agencia completa para mediana empresa arranca entre S/8,000 y S/15,000 mensuales, antes de IGV y sin contar la inversión en pauta.",
+      },
+      {
+        q: "¿El fee incluye el presupuesto de publicidad?",
+        a: "Normalmente no, y es la confusión más cara del rubro. El fee paga el trabajo de la agencia; la inversión en anuncios va directo a Meta o a Google y sale aparte de tu bolsillo. Pide siempre las dos cifras en líneas separadas de la propuesta.",
+      },
+      {
+        q: "¿Es mejor una agencia o un freelance?",
+        a: "Depende del alcance, no del precio. Un freelance funciona bien cuando el trabajo es acotado y hay alguien en tu empresa coordinando. Una agencia tiene sentido cuando necesitas varias especialidades a la vez —estrategia, pauta, contenido, medición— y nadie internamente puede dirigirlas.",
+      },
+      {
+        q: "¿Por qué dos agencias cotizan tan distinto por lo mismo?",
+        a: "Porque casi nunca es lo mismo. Pide a cada una el alcance mensual por escrito —piezas, campañas, reuniones, reportes— y compáralos lado a lado. La mayoría de las diferencias de precio desaparecen o se explican en cuanto pones los dos alcances en la misma tabla.",
+      },
+      {
+        q: "¿Cuánto tiempo hay que darle a una agencia antes de juzgarla?",
+        a: "Lo suficiente para que haya datos: en pauta, unas semanas para salir del aprendizaje de la plataforma y un par de meses para optimizar con fundamento. Lo que sí se puede exigir desde el primer mes es orden: medición instalada, campañas bien nombradas y un reporte que diga qué se cambia el mes siguiente.",
+      },
+    ],
+    cierre: "En Suggestion separamos siempre el fee de la inversión en medios, y el reporte mensual termina en qué se cambia, no en cuánto alcance hubo.",
+    moneyPage: { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
+    relacionados: ["cuanto-invertir-en-ads-peru", "que-es-el-marketing-digital", "cpl-vs-roas"],
+  },
+  {
+    slug: "cuanto-cuesta-un-logotipo-en-peru",
+    categoria: "marca",
+    title: "Cuánto Cuesta un Logotipo en Perú 2026 | Suggestion",
+    description:
+      "Tres rangos reales, desde S/800 hasta S/25,000, y qué entra en cada uno. La diferencia entre un logo y una identidad de marca, y qué archivos exigir.",
+    h1: "Cuánto cuesta un logotipo en Perú",
+    excerpt:
+      "Entre una cotización de S/300 y una de S/15,000 no hay un estafador y un honesto: hay dos trabajos completamente distintos que se llaman igual.",
+    date: "2026-10-05",
+    secciones: [
+      {
+        h2: "Tres rangos, y qué entra en cada uno",
+        parrafo:
+          "El precio de un logo en Perú no se explica por el dibujo, que es la parte visible y la más rápida. Se explica por lo que viene antes —investigación y criterio— y por lo que viene después —el sistema con el que vas a aplicarlo—.",
+        tabla: {
+          cabeceras: ["Rango", "Quién lo hace", "Qué incluye"],
+          filas: [
+            ["desde S/800, hasta S/2,500", "Freelance o estudio pequeño", "Una o dos rondas de cambios y los archivos editables. Sin estudio de competencia ni manual"],
+            ["desde S/3,500, hasta S/9,000", "Estudio de diseño o agencia pequeña", "Investigación inicial, dos o tres propuestas, tres rondas de ajuste y un manual básico"],
+            ["desde S/10,000, hasta S/25,000", "Agencia con equipo estratégico", "Diagnóstico de marca, definición del ADN, varias rutas conceptuales, manual completo y sistema visual extendido"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según tarifarios publicados por estudios y agencias del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Un logo no es una identidad de marca",
+        parrafo:
+          "Se piden como si fueran lo mismo y son cosas distintas, y de ahí vienen la mitad de las sorpresas al cotizar. El logo es una pieza; la identidad es el sistema que hace que todo lo demás se vea como tú.",
+        tabla: {
+          cabeceras: ["Qué pides", "Qué recibes", "Desde"],
+          filas: [
+            ["Logotipo suelto", "La marca gráfica y sus archivos", "S/800"],
+            ["Identidad visual completa", "Logo, colores, tipografías y aplicaciones básicas", "S/3,500"],
+            ["Branding integral con manual", "Lo anterior más el criterio escrito de cómo usarlo", "S/6,500"],
+            ["Rebranding de empresa", "Rehacer una marca que ya existe, con su transición", "S/12,000"],
+          ],
+          nota: "Si solo tienes el logo, cada pieza nueva —un volante, un polo, una publicación— es una decisión improvisada. El manual existe para que esas decisiones ya estén tomadas y la marca se vea igual la haga quien la haga.",
+        },
+      },
+      {
+        h2: "Por qué hay tanta diferencia de precio",
+        parrafo:
+          "Cuando pides tres cotizaciones vuelven montos que no se parecen, y es tentador pensar que el caro te está viendo la cara. Esto es lo que de verdad separa un presupuesto de otro.",
+        bullets: [
+          { titulo: "Cuánto se investiga antes de dibujar", texto: "mirar a la competencia, entender a quién le hablas y decidir qué quieres parecer es trabajo que no se ve en el resultado pero lo determina." },
+          { titulo: "Cuántas rutas distintas te muestran", texto: "una propuesta única es una apuesta; tres rutas conceptuales son un proceso. Cuestan distinto porque son horas distintas." },
+          { titulo: "Cuántas rondas de cambios entran", texto: "es la letra que más discusiones provoca. Que esté por escrito y que diga qué pasa con la ronda número cuatro." },
+          { titulo: "Si te entregan el sistema o solo la pieza", texto: "colores, tipografías, versiones y reglas de uso son lo que hace que tu marca aguante fuera de la pantalla donde la aprobaste." },
+        ],
+      },
+      {
+        h2: "Qué tienes que recibir sí o sí",
+        parrafo:
+          "Da igual el rango que elijas: hay cuatro cosas que tienen que quedar en tu poder. Si no están, no compraste una marca, compraste una imagen.",
+        bullets: [
+          { titulo: "El archivo vectorial", texto: "en formato editable, no solo un PNG o un JPG. Sin el vector, cada vez que necesites el logo en grande habrá que redibujarlo." },
+          { titulo: "Las versiones que vas a necesitar", texto: "horizontal, vertical, en un solo color y en negativo para fondos oscuros. Son las que de verdad se usan en la vida real." },
+          { titulo: "Los derechos por escrito", texto: "que la marca es tuya y puedes usarla donde quieras, incluso para registrarla. Parece obvio y no siempre está en el acuerdo." },
+          { titulo: "Las tipografías y sus licencias", texto: "si tu logo usa una fuente de pago, necesitas saber cuál es y si tienes derecho a usarla. Es un problema que aparece un año después, cuando otro diseñador toma el relevo." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "El logo barato que sale caro",
+          texto: "Un logo que se parece al de otra empresa de tu rubro puede impedirte registrarlo, y entonces hay que rehacerlo con todo lo impreso ya repartido. Antes de aprobar un diseño, vale la pena verificar que no choque con una marca ya registrada.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta un logotipo en Perú?",
+        a: "En octubre de 2026 el mercado va desde unos S/800 con un freelance o estudio pequeño, pasa por un rango de S/3,500 a S/9,000 en estudios y agencias pequeñas con investigación y manual básico, y llega hasta S/25,000 en agencias con equipo estratégico. Lo que cambia entre un extremo y otro no es el dibujo: es cuánto criterio y cuánto sistema vienen con él.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre un logo y una identidad de marca?",
+        a: "El logo es una pieza; la identidad es el sistema completo: colores, tipografías, aplicaciones y las reglas de cómo usarlo todo. Con solo el logo, cada volante y cada publicación nueva es una decisión improvisada, y la marca termina viéndose distinta en cada sitio.",
+      },
+      {
+        q: "¿Conviene un logo hecho con inteligencia artificial?",
+        a: "Sirve para explorar ideas rápido y es un buen acelerador al inicio. No resuelve lo que de verdad decide un buen logo: qué quieres parecer frente a tu competencia y si la marca es registrable. Para eso hace falta criterio y una verificación, no una generación más.",
+      },
+      {
+        q: "¿Qué archivos me tienen que entregar?",
+        a: "El vectorial editable como mínimo, más las versiones horizontal, vertical, en un solo color y en negativo. Pide también por escrito que los derechos son tuyos y cuáles son las tipografías usadas con su licencia. Sin el vector, cualquier aplicación grande obliga a redibujar.",
+      },
+      {
+        q: "¿Cada cuánto conviene cambiar el logo?",
+        a: "Casi nunca por aburrimiento. Un rebranding tiene sentido cuando el negocio cambió de verdad —otro público, otra oferta, una fusión— o cuando la marca arrastra un problema real. Cambiarlo cada pocos años destruye el reconocimiento que tanto cuesta construir.",
+      },
+    ],
+    cierre: "En Suggestion trabajamos la marca como sistema, no como un dibujo: lo que te llevas es el criterio para aplicarla en todo lo demás.",
+    moneyPage: { label: "Branding e identidad de marca", href: "/servicios/branding" },
+    relacionados: ["como-crear-un-logo", "que-es-rebranding", "posicionamiento-de-marca"],
+  },
+  {
+    slug: "cuanto-cuesta-un-millar-de-volantes-en-peru",
+    categoria: "imprenta-btl",
+    title: "Cuánto Cuesta un Millar de Volantes en Perú | Suggestion",
+    description:
+      "Precios reales desde S/100 el millar en A5 couché full color, por qué el IGV explica la mitad de las diferencias y el costo de repartirlos, que nadie suma.",
+    h1: "Cuánto cuesta un millar de volantes en Perú",
+    excerpt:
+      "Pides tres cotizaciones por lo mismo y vuelven S/100, S/145 y S/260. La mayor parte de esa diferencia se explica con dos datos que casi nunca están en el precio que te mandan.",
+    date: "2026-10-05",
+    secciones: [
+      {
+        h2: "Cuánto cuesta el millar",
+        parrafo:
+          "El volante se vende por millar y el formato más pedido en Perú es A5 —media hoja A4— impreso a full color por ambas caras. Esos son los rangos del mercado.",
+        tabla: {
+          cabeceras: ["Qué pides", "Precio por millar"],
+          filas: [
+            ["A5, couché 115 g, full color ambas caras", "desde S/100"],
+            ["A5, couché 150 g, full color ambas caras", "desde S/140"],
+            ["A5 o medio oficio, según acabado y gramaje", "desde S/145, hasta S/260"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto de imprentas del rubro. Algunas fuentes publican con IGV y otras sin IGV, y eso explica buena parte de la diferencia. No son tarifas de Suggestion ni una cotización.",
+        },
+        dato: {
+          cifra: "2 a 3 días",
+          texto: "es el plazo habitual de entrega de un millar estándar. Si te prometen el mismo día, pregunta sobre qué papel van a imprimir: probablemente no sea el que pediste.",
+        },
+      },
+      {
+        h2: "El IGV, que explica la mitad de las diferencias",
+        parrafo:
+          "Es el detalle más aburrido de esta página y el que más plata ordena. En Perú conviven imprentas que publican precio con IGV incluido e imprentas que lo publican sin IGV, y la diferencia entre ambos es de un 18 %. Dos presupuestos que parecen distintos muchas veces son el mismo precio contado de dos maneras.",
+        bullets: [
+          { titulo: "Pregunta siempre «¿con IGV o sin IGV?»", texto: "antes de comparar nada. Es una pregunta de cinco segundos que corrige casi todas las comparaciones mal hechas." },
+          { titulo: "Pide factura si tu negocio la necesita", texto: "no todas las imprentas pequeñas la emiten, y descubrirlo al recoger el trabajo es tarde." },
+          { titulo: "Pregunta si el diseño está incluido", texto: "es la otra mitad de la diferencia. Un precio con arte incluido y otro solo de impresión no son comparables." },
+          { titulo: "Confirma el gramaje", texto: "115 y 150 gramos no se sienten igual en la mano, y la diferencia de precio entre ambos es real." },
+        ],
+      },
+      {
+        h2: "El costo que nadie suma: repartirlos",
+        parrafo:
+          "Aquí está el error de presupuesto más común con los volantes. Imprimir mil cuesta poco; repartirlos bien cuesta más, y es lo que decide si la campaña sirve de algo. Mil volantes en una caja debajo del mostrador no han hecho publicidad: han hecho inventario.",
+        bullets: [
+          { titulo: "Decide antes dónde y quién", texto: "volanteo en calle, reparto puerta a puerta, insertos en bolsas o entrega en mano en el local son cuatro campañas distintas con cuatro costos distintos." },
+          { titulo: "Mil volantes bien repartidos superan a cinco mil tirados", texto: "en la zona correcta y a la hora correcta. El volumen sin criterio es la forma más rápida de desperdiciar un tiraje." },
+          { titulo: "Pon algo que se pueda medir", texto: "un código, una promoción exclusiva del volante o un número distinto. Sin eso nunca vas a saber si funcionó, y el año que viene vas a estar discutiendo lo mismo." },
+          { titulo: "Revisa la normativa de tu municipio", texto: "algunos distritos regulan el volanteo en vía pública y las multas las paga el negocio, no quien reparte." },
+        ],
+      },
+      {
+        h2: "Qué hace que un volante funcione",
+        parrafo:
+          "El volante compite con la basura: quien lo recibe decide en un segundo si se lo queda o lo suelta. Todo lo que diseñes tiene que ganar ese segundo.",
+        bullets: [
+          { titulo: "Una sola oferta", texto: "un volante con ocho servicios no comunica ocho cosas. Si necesitas comunicar todo tu catálogo, eso es un folleto, no un volante." },
+          { titulo: "Un motivo para guardarlo", texto: "un descuento con fecha, un cupón recortable o algo útil al reverso. Lo que no da motivo se suelta." },
+          { titulo: "Dirección y referencia, no solo la calle", texto: "en ciudad peruana la referencia vale más que el número: «frente al mercado», «a media cuadra de la plaza»." },
+          { titulo: "Fecha de vencimiento visible", texto: "crea urgencia y además te sirve para medir: todo lo que llegue después de esa fecha ya sabes de dónde no vino." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Antes de mandar el millar",
+          texto: "Imprime uno en una hoja normal y dáselo a alguien que no sepa de qué va tu negocio. Si en cinco segundos no te puede decir qué ofreces y dónde estás, el problema no se arregla imprimiendo más.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta un millar de volantes en Perú?",
+        a: "En octubre de 2026 un millar de volantes A5 a full color por ambas caras va desde unos S/100 en couché de 115 gramos y desde unos S/140 en couché de 150 gramos, llegando hasta unos S/260 según acabado. Parte de la diferencia entre cotizaciones es simplemente que unas incluyen IGV y otras no.",
+      },
+      {
+        q: "¿Qué medida y qué papel conviene?",
+        a: "A5 es el formato más pedido y el que mejor relación da entre costo y espacio. En papel, couché de 115 gramos es suficiente para un volanteo de calle; 150 gramos se siente mejor en la mano y tiene sentido cuando el volante se entrega en el local o acompaña un producto.",
+      },
+      {
+        q: "¿Puedo pedir menos de mil?",
+        a: "Se puede, pero rara vez conviene: casi todo el costo está en preparar la impresión, así que quinientos no cuestan la mitad. Si vas a hacer varias campañas, conviene más imprimir un millar con un diseño sin fechas y guardarlo, que imprimir de a pocos.",
+      },
+      {
+        q: "¿Cuánto tarda la impresión?",
+        a: "Dos o tres días para un tiraje estándar. Si necesitas algo para mañana, se puede resolver con otra técnica de impresión, pero el papel y el acabado probablemente no serán los mismos: pregunta qué cambia antes de aceptar la urgencia.",
+      },
+      {
+        q: "¿Sirven todavía los volantes?",
+        a: "Funcionan donde hay tránsito peatonal y una oferta clara y local: un restaurante, una promoción de apertura, un servicio de barrio. Dejan de funcionar cuando se reparten sin criterio o cuando el mensaje intenta explicar todo el negocio. Como todo, lo que decide es la medición, no la opinión.",
+      },
+    ],
+    cierre: "En Suggestion imprimimos volantes y además ayudamos a decidir dónde repartirlos, que es la parte donde se gana o se pierde la campaña.",
+    moneyPage: { label: "Imprenta y volantes", href: "/servicios/imprenta" },
+    relacionados: ["gigantografias-medidas-materiales-precios", "tarjetas-de-presentacion-medidas-y-errores", "material-pop-punto-de-venta"],
+  },
+  {
+    slug: "cuanto-cuesta-registrar-una-marca-en-indecopi",
+    categoria: "marca",
+    title: "Cuánto Cuesta Registrar una Marca en Indecopi | Suggestion",
+    description:
+      "La tasa publicada por clase, el descuento MYPE, la búsqueda previa que evita perder el pago y por qué la tasa no se devuelve aunque te denieguen la solicitud.",
+    h1: "Cuánto cuesta registrar una marca en Indecopi",
+    excerpt:
+      "La tasa no se devuelve aunque te rechacen la solicitud. Por eso lo que decide cuánto te va a costar registrar tu marca no es la tasa: es lo que hagas antes de pagarla.",
+    date: "2026-10-05",
+    secciones: [
+      {
+        h2: "Las tasas publicadas",
+        parrafo:
+          "El registro de marca en Perú se tramita ante Indecopi y tiene una tasa oficial por clase. Estos son los montos vigentes según las fuentes consultadas, con el código de arancel al lado para que puedas verificarlos.",
+        tabla: {
+          cabeceras: ["Concepto", "Monto"],
+          filas: [
+            ["Solicitud de registro, primera clase (arancel 20100562)", "S/534.90"],
+            ["Cada clase adicional", "S/533.30"],
+            ["Tarifa reducida para MYPE que califican", "S/401.20"],
+            ["Búsqueda fonética previa, opcional", "S/30.66 por clase"],
+            ["Búsqueda figurativa previa, opcional", "S/38.46 por clase"],
+            ["Oposición presentada por un tercero", "S/378.70"],
+          ],
+          nota: "Montos recogidos en octubre de 2026 de fuentes peruanas especializadas que coinciden entre sí y en el código de arancel. No pudimos confirmarlos en el portal oficial del Estado, que bloquea la consulta automatizada, así que verifica el monto vigente en el canal oficial de Indecopi antes de pagar: las tasas se actualizan por decreto.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "La tasa no se devuelve",
+          texto: "Si la solicitud se deniega —porque ya existe una marca parecida, por ejemplo—, el dinero no vuelve. Ese detalle es el que convierte la búsqueda previa, que cuesta unas decenas de soles, en la mejor inversión de todo el trámite.",
+        },
+      },
+      {
+        h2: "Se paga por clase, y esa es la parte que sorprende",
+        parrafo:
+          "Las marcas no se registran «para todo»: se registran para categorías concretas de productos o servicios, agrupadas en 45 clases de la Clasificación de Niza. Registrar tu nombre para la clase de restaurantes no te protege si alguien lo usa para ropa. Y cada clase adicional se paga casi completa.",
+        bullets: [
+          { titulo: "Elige las clases que de verdad usas", texto: "no las que te gustaría usar algún día. Registrar cinco clases por si acaso multiplica el costo por cinco y no te da más protección donde sí vendes." },
+          { titulo: "Piensa en los dos o tres años siguientes", texto: "si el plan real es abrir una línea nueva pronto, puede tener sentido incluir esa clase ahora. Si es una idea vaga, no." },
+          { titulo: "La clasificación se actualiza", texto: "la 13.ª edición de la Clasificación de Niza entró en vigor en enero de 2026, así que conviene confirmar en qué clase cae tu actividad hoy, no según lo que te dijeron hace años." },
+          { titulo: "El nombre comercial y la marca no son lo mismo", texto: "tener el nombre inscrito en Sunarp o en tu licencia municipal no equivale a tener la marca registrada. Son trámites y protecciones distintas." },
+        ],
+      },
+      {
+        h2: "La búsqueda previa: lo más barato del trámite",
+        parrafo:
+          "Antes de pagar la tasa completa se puede consultar si ya existe una marca igual o parecida en la misma clase. Cuesta unas decenas de soles y es lo único que te protege de pagar S/534.90 por un rechazo.",
+        pasos: [
+          { titulo: "Búsqueda fonética", texto: "revisa nombres que suenan parecido, no solo los idénticos. Es la que atrapa los conflictos más comunes, porque la ley protege contra la confusión, no solo contra la copia literal." },
+          { titulo: "Búsqueda figurativa", texto: "revisa logos y elementos gráficos semejantes. Vale la pena cuando tu marca se apoya mucho en un símbolo." },
+          { titulo: "Lee el resultado con criterio", texto: "que exista algo parecido no siempre impide registrar; que no exista nada no garantiza que te concedan. La búsqueda reduce el riesgo, no lo elimina." },
+          { titulo: "Ajusta el nombre si hace falta", texto: "es mucho más barato cambiar una letra antes de registrar que descubrir el problema con la fachada rotulada y los volantes repartidos." },
+        ],
+      },
+      {
+        h2: "Lo que la tasa no cubre",
+        parrafo:
+          "El monto oficial es solo la tasa del Estado. Hay otras partidas que pueden aparecer y conviene tenerlas en el presupuesto desde el principio.",
+        bullets: [
+          { titulo: "El honorario de quien lo tramita", texto: "puedes presentarlo tú mismo o encargarlo a un estudio o gestor. Ese honorario va aparte y varía mucho." },
+          { titulo: "Las oposiciones", texto: "si un tercero se opone a tu solicitud, el procedimiento se alarga y puede requerir defensa legal." },
+          { titulo: "La renovación", texto: "el registro no es para siempre: vence y hay que renovarlo. Anótalo el día que te lo concedan, porque nadie te va a recordar." },
+          { titulo: "El rediseño, si sale mal", texto: "es el costo oculto más caro. Una marca que no se puede registrar y ya está en la fachada, los uniformes y la papelería se rehace entera." },
+        ],
+        nota: {
+          titulo: "El orden que ahorra dinero",
+          texto: "Verifica la disponibilidad antes de mandar a hacer el logo, no después. Diseñar una marca que después no se puede registrar es la secuencia que obliga a tirar todo lo impreso, y pasa más de lo que parece.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta registrar una marca en Indecopi?",
+        a: "Según las fuentes consultadas en octubre de 2026, la tasa de la primera clase es de S/534.90 y cada clase adicional cuesta S/533.30. Las MYPE que califican acceden a una tarifa reducida de S/401.20. Conviene confirmar el monto vigente en el canal oficial de Indecopi antes de pagar, porque las tasas se actualizan por decreto.",
+      },
+      {
+        q: "¿Qué pasa si me deniegan la solicitud?",
+        a: "La tasa no se devuelve. Ese es el motivo por el que conviene hacer la búsqueda previa, que cuesta unas decenas de soles por clase: es mucho más barato descubrir el conflicto antes de pagar el trámite completo que después.",
+      },
+      {
+        q: "¿Tengo que registrar mi marca en varias clases?",
+        a: "Solo en las que realmente vendes o vas a vender pronto. Cada clase adicional cuesta casi lo mismo que la primera, así que registrar «por si acaso» multiplica el gasto sin darte más protección donde sí operas.",
+      },
+      {
+        q: "¿Si tengo la empresa inscrita, la marca ya es mía?",
+        a: "No. Inscribir la razón social o tener la licencia municipal no equivale a tener la marca registrada: son trámites distintos y protegen cosas distintas. Alguien puede registrar como marca el nombre con el que tú operas desde hace años.",
+      },
+      {
+        q: "¿Necesito un abogado?",
+        a: "No es obligatorio y se puede presentar por cuenta propia. Encargarlo a un estudio o gestor tiene sentido sobre todo si la búsqueda previa arroja marcas parecidas o si aparece una oposición, que es cuando el trámite deja de ser un formulario y pasa a ser un procedimiento.",
+      },
+    ],
+    cierre: "En Suggestion diseñamos marcas pensando desde el primer boceto en que se puedan registrar, que es el detalle que evita rehacerlo todo después.",
+    moneyPage: { label: "Branding e identidad de marca", href: "/servicios/branding" },
+    relacionados: ["cuanto-cuesta-un-logotipo-en-peru", "como-crear-un-logo", "que-es-rebranding"],
+  },
+  {
+    slug: "cuanto-cuesta-un-plan-de-marketing-en-peru",
+    categoria: "performance",
+    title: "Cuánto Cuesta un Plan de Marketing en Perú | Suggestion",
+    description:
+      "Desde S/300 una sesión estratégica hasta S/15,000 un plan completo. Qué estás comprando en cada rango y cómo saber si el plan vale lo que cuesta.",
+    h1: "Cuánto cuesta un plan de marketing en Perú",
+    excerpt:
+      "Un plan de marketing puede costar S/300 o S/15,000, y los dos pueden ser precios justos. La diferencia no está en el documento: está en quién lo ejecuta después.",
+    date: "2026-10-05",
+    secciones: [
+      {
+        h2: "Primero: qué estás comprando exactamente",
+        parrafo:
+          "«Plan de marketing» se usa para cuatro cosas distintas, y por eso las cotizaciones no se parecen. Antes de comparar precios conviene saber en cuál de las cuatro estás.",
+        tabla: {
+          cabeceras: ["Qué compras", "Qué recibes", "Cuándo tiene sentido"],
+          filas: [
+            ["Sesión estratégica", "Un par de horas de conversación con conclusiones", "Tienes una duda concreta y necesitas criterio, no un documento"],
+            ["Diagnóstico", "Análisis de tu situación con entregables", "Sabes que algo no funciona y no sabes qué"],
+            ["Plan estratégico", "El documento completo: objetivos, público, canales, presupuesto y calendario", "Vas a invertir en serio y necesitas una hoja de ruta"],
+            ["Acompañamiento mensual", "Alguien que dirige y corrige sobre la marcha", "Tienes equipo o proveedores, pero nadie que los ordene"],
+          ],
+          nota: "La diferencia más importante no es de contenido, es de responsabilidad: en los tres primeros te entregan algo y se van; en el cuarto se quedan a responder por el resultado.",
+        },
+      },
+      {
+        h2: "Los rangos del mercado peruano",
+        parrafo:
+          "Las cifras varían mucho porque dependen de la experiencia de quien lo hace y de si hay o no acompañamiento después.",
+        tabla: {
+          cabeceras: ["Modalidad", "Rango"],
+          filas: [
+            ["Sesión estratégica de unas dos horas", "desde S/300"],
+            ["Diagnóstico con entregables completos", "hasta S/2,500"],
+            ["Plan estratégico como proyecto", "desde S/5,000, hasta S/15,000"],
+            ["Acompañamiento mensual de consultor", "desde S/1,200, hasta S/4,000 al mes"],
+            ["Dirección estratégica externa continuada", "desde S/8,000, hasta S/15,000 al mes"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según tarifarios publicados por consultores y agencias del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Qué tiene que traer para que valga lo que cuesta",
+        parrafo:
+          "Un plan de marketing no es un documento bonito con gráficos: es un conjunto de decisiones tomadas. Si al terminar de leerlo no sabes qué hacer el lunes, no era un plan.",
+        bullets: [
+          { titulo: "Un objetivo en número y con fecha", texto: "«crecer en redes» no es un objetivo. «Treinta citas al mes para diciembre» sí, porque se puede cumplir o no cumplir." },
+          { titulo: "A quién le vas a hablar, con nombre y apellido", texto: "no «hombres y mujeres de 25 a 55 años», que no excluye a nadie. Un público que no excluye a nadie no sirve para decidir nada." },
+          { titulo: "El presupuesto repartido", texto: "cuánto a medios, cuánto a producción, cuánto a gestión. Un plan sin cifras es una lista de buenas intenciones." },
+          { titulo: "Qué se mide y dónde se mira", texto: "si el plan no dice con qué herramienta vas a ver si funciona, no vas a poder saberlo." },
+          { titulo: "Qué NO se va a hacer", texto: "es la parte que distingue un plan de un catálogo. Decidir implica descartar, y un plan que lo incluye todo no decidió nada." },
+        ],
+      },
+      {
+        h2: "La señal de que no valió la pena",
+        parrafo:
+          "Casi todos los planes de marketing que hemos visto fracasar no fracasaron por estar mal pensados. Fracasaron porque nadie los ejecutó, y eso se puede anticipar desde antes de encargarlo.",
+        bullets: [
+          { titulo: "Nadie quedó como responsable", texto: "si el plan no dice quién hace cada cosa dentro de tu empresa, no va a pasar nada el lunes." },
+          { titulo: "Pide más capacidad de la que tienes", texto: "un plan que supone un equipo de cinco personas cuando tienes dos es un documento de ficción, por bien escrito que esté." },
+          { titulo: "No hay fecha de revisión", texto: "un plan anual que nadie vuelve a abrir hasta diciembre es un gasto. Los que funcionan se revisan cada mes o cada trimestre." },
+          { titulo: "Lo entregaron y se fueron", texto: "el documento es la parte fácil. Si no hay nadie que ajuste cuando la realidad no coincida con el plan —y nunca coincide—, la inversión se pierde casi entera." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Una alternativa honesta si el presupuesto es corto",
+          texto: "Si tienes que elegir entre un plan completo y tres meses de ejecución medida, elige la ejecución. Vas a aprender más de tu mercado con una campaña real y bien medida que con cualquier documento, y ese aprendizaje sí es tuyo.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta un plan de marketing en Perú?",
+        a: "En octubre de 2026 va desde unos S/300 por una sesión estratégica de un par de horas y hasta unos S/2,500 por un diagnóstico con entregables. Un plan estratégico completo como proyecto se mueve entre S/5,000 y S/15,000, y el acompañamiento mensual de un consultor va desde S/1,200 hasta S/4,000 al mes, subiendo a entre S/8,000 y S/15,000 cuando se trata de dirección estratégica continuada.",
+      },
+      {
+        q: "¿Qué debe incluir un plan de marketing?",
+        a: "Un objetivo en número y con fecha, a quién le vas a hablar de forma específica, los canales elegidos con su presupuesto repartido, un calendario, qué se mide y dónde se mira, y qué decidiste no hacer. Si falta lo último, probablemente no hubo decisiones: hubo una lista.",
+      },
+      {
+        q: "¿Vale la pena si soy un negocio pequeño?",
+        a: "Un plan completo rara vez es lo primero que necesita un negocio pequeño. Una sesión estratégica para ordenar la oferta y elegir un canal suele rendir mucho más, y cuesta una fracción. El plan grande tiene sentido cuando ya hay inversión y varios frentes que coordinar.",
+      },
+      {
+        q: "¿Cuánto tiempo toma hacerlo?",
+        a: "Un diagnóstico puede estar en una o dos semanas; un plan estratégico completo toma varias, porque buena parte del trabajo es reunir información tuya: ventas, costos, histórico de campañas y qué pasó con los clientes que no compraron.",
+      },
+      {
+        q: "¿Y si el plan no funciona?",
+        a: "Ningún plan sobrevive intacto al contacto con el mercado, y eso no es un fracaso: es la razón por la que se revisa. Lo que sí es un fracaso es descubrirlo en diciembre. Un plan serio incluye desde el inicio cuándo se revisa y qué señales obligan a cambiar de rumbo.",
+      },
+    ],
+    cierre: "En Suggestion el plan no termina en un documento: incluye quién ejecuta, qué se mide y cuándo se corrige.",
+    moneyPage: { label: "Consultoría de marketing", href: "/servicios/consultoria" },
+    relacionados: ["cuanto-cobra-una-agencia-de-marketing-digital-en-peru", "que-es-el-marketing-digital", "cuanto-invertir-en-ads-peru"],
   },
 ];
 
