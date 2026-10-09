@@ -207,14 +207,32 @@ for (const contenedor of CARPETAS) {
       const src = ordenadas[i].file;
       const n = i + 1;
 
-      const grande = await sharp(src).rotate()
-        .resize({ height: ALTO_GRANDE, withoutEnlargement: true })
-        .webp({ quality: 78 })
-        .toBuffer({ resolveWithObject: true });
-      const chica = await sharp(src).rotate()
-        .resize({ height: ALTO_CHICO, withoutEnlargement: true })
-        .webp({ quality: 74 })
-        .toBuffer();
+      // Metadatos dentro del propio archivo. No los lee Google —para eso
+      // están el alt y los datos estructurados— pero viajan con la imagen:
+      // si alguien la descarga o la reutiliza, la autoría va dentro.
+      const exif = {
+        IFD0: {
+          ImageDescription: `${carpeta.name} · Producción de Suggestion`,
+          Artist: "Suggestion",
+          Copyright: "© Agencia de Marketing Suggestion S.A.C.",
+        },
+      };
+
+      // Se pasa por píxeles crudos a propósito. `withExif` activa la
+      // conservación de metadatos, y entonces sharp arrastra también los del
+      // original: la miniatura que incrusta la cámara pesaba hasta 29 KB en
+      // archivos de 25 KB, 3,93 MB en total. Reconstruir desde crudo deja el
+      // EXIF en las tres líneas de autoría y nada más. De paso quita el GPS
+      // que traen 22 de las 160 fotos de origen.
+      const encodar = async (alto, calidad) => {
+        const { data, info } = await sharp(src).rotate()
+          .resize({ height: alto, withoutEnlargement: true })
+          .toColourspace("srgb").raw().toBuffer({ resolveWithObject: true });
+        return sharp(data, { raw: { width: info.width, height: info.height, channels: info.channels } })
+          .withExif(exif).webp({ quality: calidad }).toBuffer({ resolveWithObject: true });
+      };
+      const grande = await encodar(ALTO_GRANDE, 78);
+      const chica = (await encodar(ALTO_CHICO, 74)).data;
 
       // El nombre lleva el hash del contenido. Vercel sirve /public con
       // cache-control de 30 dias, asi que reordenar las fotos cambiaba la

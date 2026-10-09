@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
 import { CASOS_DETALLE } from "@/content/casos";
+import { PORTAFOLIO, fotosDe } from "@/content/portafolio";
 import { EQUIPO } from "@/content/equipo";
 import { allCiudadSlugs, ciudadHref } from "@/content/ciudades";
 
@@ -35,7 +36,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/nosotros"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.7 },
     { url: u("/metodo"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.8 },
     { url: u("/casos"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.7 },
-    { url: u("/portafolio"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: u("/portafolio"),
+      lastModified: GLOBAL,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      // Las 164 fotos declaradas aquí. Es el mecanismo estándar para que
+      // Google Imágenes las descubra: en la página viven dentro de un
+      // carrusel con carga diferida, así que un rastreador que no ejecute
+      // JavaScript solo ve las primeras.
+      images: PORTAFOLIO.flatMap((p) => fotosDe(p).map((f) => u(f.src))),
+    },
     { url: u("/auditoria-gratis"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.9 },
     { url: u("/privacidad"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
     { url: u("/terminos"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
@@ -99,6 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: GLOBAL,
     changeFrequency: "monthly" as const,
     priority: 0.7,
+    ...(c.imagenes?.length ? { images: c.imagenes.map((i) => u(i.src)) } : {}),
   }));
 
   const equipo: MetadataRoute.Sitemap = EQUIPO.map((t) => ({

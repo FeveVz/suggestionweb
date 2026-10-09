@@ -12,6 +12,7 @@ import { absoluteUrl } from "@/lib/site";
 import CarruselFotos from "@/components/CarruselFotos";
 import { CARRUSEL_CSS } from "@/components/carrusel-css";
 import { PORTAFOLIO, TIPOS_PORTAFOLIO, fotosDe } from "@/content/portafolio";
+import { site } from "@/lib/site";
 
 /**
  * /portafolio — el trabajo de producción BTL y ATL.
@@ -62,13 +63,50 @@ export default function PortafolioPage() {
             mainEntity: {
               "@type": "ItemList",
               numberOfItems: PIEZAS,
-              itemListElement: PORTAFOLIO.map((p, i) => ({
-                "@type": "ListItem",
-                position: i + 1,
-                name: p.titular,
-              })),
+              itemListElement: PORTAFOLIO.map((p, i) => {
+                const fotos = fotosDe(p);
+                return {
+                  "@type": "ListItem",
+                  position: i + 1,
+                  name: p.titular,
+                  // Todas las fotos de la pieza, como URL. Asocia cada
+                  // imagen con la activación a la que pertenece.
+                  image: fotos.map((f) => absoluteUrl(f.src)),
+                };
+              }),
             },
           },
+          /**
+           * ImageObject de la portada de cada pieza.
+           *
+           * Solo las 22 portadas, no las 164: el resto ya va declarada en el
+           * ItemList y en el sitemap de imágenes, y meter 164 objetos
+           * completos aquí añadiría ~40 KB al HTML a cambio de muy poco.
+           *
+           * Lleva autoría y aviso de copyright porque son fotos propias,
+           * tomadas en eventos que produjo la agencia. No lleva `license`
+           * ni `acquireLicensePage`: esas propiedades exigen una página que
+           * declare las condiciones de uso, y el sitio todavía no la tiene.
+           */
+          ...PORTAFOLIO.flatMap((p) => {
+            const f = fotosDe(p)[0];
+            if (!f) return [];
+            return [{
+              "@context": "https://schema.org",
+              "@type": "ImageObject",
+              contentUrl: absoluteUrl(f.src),
+              url: `${url}#${p.slug}`,
+              name: p.titular,
+              description: f.alt,
+              caption: f.alt,
+              width: f.w,
+              height: f.h,
+              datePublished: p.fecha,
+              creator: { "@type": "Organization", name: site.name, url: absoluteUrl("/") },
+              creditText: site.name,
+              copyrightNotice: `© ${site.legalName}`,
+            }];
+          }),
         ]}
       />
 
