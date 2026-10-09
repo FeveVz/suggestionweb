@@ -1545,6 +1545,10 @@ const SERVICIOS_LIST: Servicio[] = [
   },
   // ---------- Activación y medios físicos ----------
   {
+    pruebas: [
+      { label: "Portafolio de activaciones BTL", href: "/portafolio" },
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+    ],
     slug: "btl",
     tipo: "servicio",
     categoriaSlug: "btl-medios",
@@ -1682,6 +1686,10 @@ const SERVICIOS_LIST: Servicio[] = [
     cierre: { h2: "Activemos tu marca en la calle", cta: "Agenda tu activación" },
   },
   {
+    pruebas: [
+      { label: "Portafolio de activaciones BTL", href: "/portafolio" },
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+    ],
     slug: "publicidad-movil",
     tipo: "servicio",
     categoriaSlug: "btl-medios",
@@ -1814,6 +1822,10 @@ const SERVICIOS_LIST: Servicio[] = [
     cierre: { h2: "Lleva tu marca a la calle", cta: "Pide tu cotización" },
   },
   {
+    pruebas: [
+      { label: "Portafolio de activaciones BTL", href: "/portafolio" },
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+    ],
     slug: "estructuras-publicitarias",
     tipo: "servicio",
     categoriaSlug: "btl-medios",
@@ -1962,6 +1974,10 @@ const SERVICIOS_LIST: Servicio[] = [
     cierre: { h2: "Destaca con tu estructura", cta: "Pide tu cotización" },
   },
   {
+    pruebas: [
+      { label: "Portafolio de activaciones BTL", href: "/portafolio" },
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+    ],
     slug: "material-pop",
     tipo: "servicio",
     categoriaSlug: "btl-medios",
@@ -2100,6 +2116,10 @@ const SERVICIOS_LIST: Servicio[] = [
     cierre: { h2: "Gana el punto de venta", cta: "Pide tu cotización" },
   },
   {
+    pruebas: [
+      { label: "Portafolio de activaciones BTL", href: "/portafolio" },
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+    ],
     slug: "imprenta",
     tipo: "servicio",
     categoriaSlug: "btl-medios",
@@ -2253,6 +2273,10 @@ const SERVICIOS_LIST: Servicio[] = [
     cierre: { h2: "Tu material listo y a tiempo", cta: "Cotiza tu impresión" },
   },
   {
+    pruebas: [
+      { label: "Portafolio de activaciones BTL", href: "/portafolio" },
+      { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
+    ],
     slug: "merchandising",
     tipo: "servicio",
     categoriaSlug: "btl-medios",

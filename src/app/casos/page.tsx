@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { Section, Btn, Blot, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
@@ -152,9 +153,13 @@ export default function Casos() {
 
       {/* TRABAJO REAL — galería de piezas de campaña */}
       <Section tone="light">
-        <SectionHeading level={2} kicker="El trabajo detrás de los números" maxWidth="22ch" style={{ marginBottom: 32 }}>
+        <SectionHeading level={2} kicker="El trabajo detrás de los números" maxWidth="22ch" style={{ marginBottom: 16 }}>
           Las piezas que hicieron el resultado.
         </SectionHeading>
+        <p style={{ font: "var(--fw-light) var(--fs-sm)/1.6 var(--font-body)", color: "var(--text-body)", maxWidth: "60ch", marginBottom: 28 }}>
+          Producir el evento y vender con él son dos trabajos distintos. Las activaciones, lanzamientos y auspicios que montamos están en el{" "}
+          <Link href="/portafolio" className="hk-ulink" style={{ color: "var(--text-strong)", fontWeight: 500 }}>portafolio de producción</Link>: 20 piezas con lo que resolvía cada una y cómo se montó.
+        </p>
         <div className="hk-casos-gal">
           {GALERIA.map((g) => (
             <figure key={g.src}>

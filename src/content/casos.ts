@@ -511,7 +511,27 @@ CASOS_DETALLE.push({
     { titulo: "Cierre en piso", texto: "Asesores preparados con la oferta del día; el interesado pasa de la prueba al papeleo sin salir del evento." },
     { titulo: "Registro y contenido", texto: "Cobertura del evento (incluido drone) que alimenta la prueba social de la marca para la siguiente convocatoria." },
   ],
+  imagenes: [
+    { src: "/assets/portafolio/relanzamiento-mitsubishi-autoniza-1.webp", alt: "Fachada iluminada de la tienda Mitsubishi FUSO de Autoniza durante el relanzamiento en Ica", cap: "El relanzamiento de tienda: el primero de los dos eventos" },
+    { src: "/assets/portafolio/relanzamiento-mitsubishi-autoniza-2.webp", alt: "Unidad Mitsubishi cubierta y con moño antes del destape", cap: "La unidad, lista para el destape" },
+    { src: "/assets/portafolio/relanzamiento-mitsubishi-autoniza-3.webp", alt: "Autoridad local en el estrado durante el relanzamiento de la tienda Mitsubishi en Ica", cap: "La autoridad local en el estrado: lo que convirtió la apertura en noticia" },
+    { src: "/assets/portafolio/inauguracion-autoplan-1.webp", alt: "Unidad con moño preparada para la exhibición protocolar de un concesionario", cap: "La unidad del día, preparada antes de abrir" },
+  ],
   secciones: [
+    {
+      h2: "El problema no era el auto: era que nadie sabía que la tienda existía",
+      parrafo:
+        "Conviene decir de dónde se partía. El producto estaba, el precio era competitivo y el local estaba abierto; lo que faltaba era que Ica supiera que ese concesionario existía. Un problema de reconocimiento no se arregla subiendo el presupuesto de pauta: se arregla dándole a la ciudad un motivo para mirar.",
+      bullets: [
+        { titulo: "Se invitó a la autoridad local", texto: "y eso cambió la naturaleza del evento. Dejó de ser una apertura comercial para pasar a ser un hecho de la ciudad, que es algo que sí se cubre." },
+        { titulo: "Llegaron ocho canales de prensa", texto: "a cubrir la jornada. Esa difusión no se compró con un plan de medios: salió de una decisión de convocatoria." },
+        { titulo: "En paralelo se convocó a prospectos reales", texto: "con intención y capacidad de compra, para que el día del evento hubiera a quién venderle y no solo a quién saludar." },
+      ],
+      nota: {
+        titulo: "Las dos convocatorias",
+        texto: "Un evento así tiene dos públicos que no se mezclan: el que te da cobertura y el que te compra. Convocar solo al primero deja una buena nota de prensa y cero ventas; convocar solo al segundo deja ventas y ninguna huella en la ciudad.",
+      },
+    },
     {
       h2: "Por qué un evento sin convocatoria no vende",
       parrafo:
@@ -576,6 +596,10 @@ CASOS_DETALLE.push({
       q: "¿Conviene hacer eventos seguidos o espaciados?",
       a: "Espaciados lo suficiente para no agotar el mismo público de la zona y para poder aplicar lo aprendido en el anterior. Repetir la misma convocatoria al mismo público en semanas seguidas sube el costo y baja la asistencia.",
     },
+  ],
+  enlaces: [
+    { label: "Cómo se produjo, en el portafolio", href: "/portafolio" },
+    { label: "Cómo medimos una campaña", href: "/metodo" },
   ],
   servicios: [
     { label: "BTL y Activaciones", href: "/servicios/btl" },

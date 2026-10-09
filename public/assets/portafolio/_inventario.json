@@ -1,0 +1,200 @@
+[
+ {
+  "slug": "autoplan-portafolio-marcas",
+  "nombre": "Activación en Autoplan",
+  "total": 6,
+  "publicadas": [
+   "autoplan-portafolio-marcas-1",
+   "autoplan-portafolio-marcas-2",
+   "autoplan-portafolio-marcas-3"
+  ]
+ },
+ {
+  "slug": "grifo-repsol-jac",
+  "nombre": "Activación Grifo Repsol",
+  "total": 4,
+  "publicadas": [
+   "grifo-repsol-jac-1",
+   "grifo-repsol-jac-2",
+   "grifo-repsol-jac-3"
+  ]
+ },
+ {
+  "slug": "mercado-santo-domingo-dfsk",
+  "nombre": "Activación mercado Sto Domingo",
+  "total": 4,
+  "publicadas": [
+   "mercado-santo-domingo-dfsk-1",
+   "mercado-santo-domingo-dfsk-2",
+   "mercado-santo-domingo-dfsk-3"
+  ]
+ },
+ {
+  "slug": "subaru-plaza-barranca",
+  "nombre": "Activación Subaru Plaza Barranca",
+  "total": 2,
+  "publicadas": [
+   "subaru-plaza-barranca-1",
+   "subaru-plaza-barranca-2"
+  ]
+ },
+ {
+  "slug": "aniversario-amon-amen",
+  "nombre": "Aniversario Amon Amen",
+  "total": 5,
+  "publicadas": [
+   "aniversario-amon-amen-1",
+   "aniversario-amon-amen-2"
+  ]
+ },
+ {
+  "slug": "aniversario-paracas-gwm",
+  "nombre": "Aniversario de Paracas 2024",
+  "total": 11,
+  "publicadas": [
+   "aniversario-paracas-gwm-1",
+   "aniversario-paracas-gwm-2",
+   "aniversario-paracas-gwm-3"
+  ]
+ },
+ {
+  "slug": "test-drive-changan-ica",
+  "nombre": "Campaña Test Drive Ica",
+  "total": 4,
+  "publicadas": [
+   "test-drive-changan-ica-1",
+   "test-drive-changan-ica-2",
+   "test-drive-changan-ica-3"
+  ]
+ },
+ {
+  "slug": "caballos-de-paso-2024",
+  "nombre": "Campeonato de Caballos de Paso 24",
+  "total": 8,
+  "publicadas": [
+   "caballos-de-paso-2024-1",
+   "caballos-de-paso-2024-2",
+   "caballos-de-paso-2024-3"
+  ]
+ },
+ {
+  "slug": "caballos-de-paso-2025",
+  "nombre": "Campeonato de Caballos de Paso 25",
+  "total": 7,
+  "publicadas": [
+   "caballos-de-paso-2025-1",
+   "caballos-de-paso-2025-2",
+   "caballos-de-paso-2025-3"
+  ]
+ },
+ {
+  "slug": "campeonato-natacion-pb",
+  "nombre": "Campeonato Internacional de Natación",
+  "total": 8,
+  "publicadas": [
+   "campeonato-natacion-pb-1",
+   "campeonato-natacion-pb-2",
+   "campeonato-natacion-pb-3"
+  ]
+ },
+ {
+  "slug": "enduro-yancay-subaru",
+  "nombre": "Competencia Enduro Yancay",
+  "total": 7,
+  "publicadas": [
+   "enduro-yancay-subaru-1",
+   "enduro-yancay-subaru-2",
+   "enduro-yancay-subaru-3"
+  ]
+ },
+ {
+  "slug": "dia-del-maestro-derco",
+  "nombre": "Día del maestro en hotel San Juan",
+  "total": 7,
+  "publicadas": [
+   "dia-del-maestro-derco-1",
+   "dia-del-maestro-derco-2",
+   "dia-del-maestro-derco-3"
+  ]
+ },
+ {
+  "slug": "gala-oficiales-la-reserva",
+  "nombre": "Gala de Oficiales del Ejército",
+  "total": 8,
+  "publicadas": [
+   "gala-oficiales-la-reserva-1",
+   "gala-oficiales-la-reserva-2",
+   "gala-oficiales-la-reserva-3"
+  ]
+ },
+ {
+  "slug": "gira-conduce-tu-rumbo",
+  "nombre": "Gira y Conduce tu Rumbo",
+  "total": 11,
+  "publicadas": [
+   "gira-conduce-tu-rumbo-1",
+   "gira-conduce-tu-rumbo-2",
+   "gira-conduce-tu-rumbo-3"
+  ]
+ },
+ {
+  "slug": "inauguracion-autoplan",
+  "nombre": "Inauguración de Autoplan",
+  "total": 5,
+  "publicadas": [
+   "inauguracion-autoplan-1",
+   "inauguracion-autoplan-2",
+   "inauguracion-autoplan-3"
+  ]
+ },
+ {
+  "slug": "cabalgantes-derco",
+  "nombre": "Inauguración de evento de cabalgantes",
+  "total": 8,
+  "publicadas": [
+   "cabalgantes-derco-1",
+   "cabalgantes-derco-2",
+   "cabalgantes-derco-3"
+  ]
+ },
+ {
+  "slug": "xcmg-linea-amarilla-ica",
+  "nombre": "Lanzamiento de Linea amarilla (XCMG) en Ica",
+  "total": 18,
+  "publicadas": [
+   "xcmg-linea-amarilla-ica-1",
+   "xcmg-linea-amarilla-ica-2",
+   "xcmg-linea-amarilla-ica-3"
+  ]
+ },
+ {
+  "slug": "xcmg-linea-amarilla-nazca",
+  "nombre": "Lanzamiento de linea amarilla (XCMG) en Nazca",
+  "total": 12,
+  "publicadas": [
+   "xcmg-linea-amarilla-nazca-1",
+   "xcmg-linea-amarilla-nazca-2",
+   "xcmg-linea-amarilla-nazca-3"
+  ]
+ },
+ {
+  "slug": "relanzamiento-mitsubishi-autoniza",
+  "nombre": "Relanzamiento de tienda Mitsubishi",
+  "total": 18,
+  "publicadas": [
+   "relanzamiento-mitsubishi-autoniza-1",
+   "relanzamiento-mitsubishi-autoniza-2",
+   "relanzamiento-mitsubishi-autoniza-3"
+  ]
+ },
+ {
+  "slug": "stand-up-derco",
+  "nombre": "Stand-Up Comedy Melcocha y Barraza",
+  "total": 7,
+  "publicadas": [
+   "stand-up-derco-1",
+   "stand-up-derco-2",
+   "stand-up-derco-3"
+  ]
+ }
+]
