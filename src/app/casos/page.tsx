@@ -9,6 +9,8 @@ import { buildMetadata } from "@/lib/seo";
 import { casosReviewSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
 import { PORTAFOLIO } from "@/content/portafolio";
+import CountUp from "@/components/CountUp";
+import Grafico from "@/components/Grafico";
 
 export const metadata: Metadata = buildMetadata({
   title: "Casos de Éxito de Marketing en Ica | Suggestion",
@@ -31,6 +33,12 @@ const CASOS: {
   quote: string;
   author: string;
   shape: number;
+  /**
+   * Foto del caso. Hoteles Señor de Luren no tiene una propia y se queda sin
+   * ella a propósito: antes que un banco de imágenes, la mancha de marca.
+   */
+  img?: string;
+  alt?: string;
 }[] = [
   {
     tag: "Inmobiliario",
@@ -42,6 +50,8 @@ const CASOS: {
     quote: "",
     author: "",
     shape: 1,
+    img: "/assets/casos/ceinys-campana-1.webp",
+    alt: "Creatividad de la campaña de lotes de Grupo Inmobiliario Ceinys en Meta Ads",
   },
   {
     tag: "Consumo",
@@ -52,6 +62,8 @@ const CASOS: {
     quote: "Suggestion convierte el presupuesto en clientes reales, no en promesas.",
     author: "Jorge Saykon, Gerente General",
     shape: 5,
+    img: "/assets/casos/bonanza-granja.webp",
+    alt: "Galón de Granjas Bonanza en operación, en Ica",
   },
   {
     tag: "Turismo",
@@ -73,6 +85,8 @@ const CASOS: {
     quote: "",
     author: "",
     shape: 2,
+    img: "/assets/casos/autoniza-evento.webp",
+    alt: "Activación de Autoniza con una camioneta Mitsubishi en la Plaza de Armas de Ica",
   },
   {
     tag: "Inmobiliario",
@@ -84,6 +98,8 @@ const CASOS: {
     quote: "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
     author: "Rosario, Jefa de Ventas",
     shape: 1,
+    img: "/assets/casos/ceinys-render.webp",
+    alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys",
   },
 ];
 
@@ -120,8 +136,14 @@ export default function Casos() {
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
         <div style={{ display: "grid", gap: "var(--space-6)" }}>
           {CASOS.map((c) => (
-            <article key={c.title} className="hk-lift hk-split" style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.5rem,3vw,2.5rem)", display: "grid", gridTemplateColumns: c.quote ? "minmax(0,1fr) minmax(0,1.4fr)" : "1fr", gap: "clamp(1.5rem,4vw,3rem)", alignItems: "center" }}>
-              <div>
+            <article key={c.title} className={`hk-lift hk-caso${c.img ? " hk-caso-foto" : ""}`}>
+              {c.img && (
+                <div className="hk-caso-img">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={c.img} alt={c.alt ?? ""} loading="lazy" decoding="async" />
+                </div>
+              )}
+              <div className="hk-caso-txt">
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
                   <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{c.tag}</span>
                   <Blot shape={c.shape} tint="orange" size={44} />
@@ -129,27 +151,70 @@ export default function Casos() {
                 {c.periodo && (
                   <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 12 }}>{c.periodo}</p>
                 )}
-                <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: c.periodo ? 8 : 16 }}>{c.metric}</div>
-                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-body)", marginTop: 10 }}>
+                <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: c.periodo ? 8 : 16 }}>
+                  <CountUp to={c.metric} locale={c.metric.includes(".") ? "es-ES" : undefined} />
+                </div>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-body)", marginTop: 10, maxWidth: "58ch" }}>
                   <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
                 </p>
-              </div>
-              {c.quote ? (
-                <blockquote style={{ margin: 0, borderLeft: "2px solid var(--cyan)", paddingLeft: 22 }}>
-                  <p style={{ font: "var(--fw-light) var(--fs-lg)/1.45 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
-                  <footer style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>— {c.author}</footer>
-                  <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
-                    Ver el caso completo <ArrowRight size={15} />
-                  </a>
-                </blockquote>
-              ) : (
-                <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
+                {c.quote && (
+                  <blockquote style={{ margin: "22px 0 0", borderLeft: "2px solid var(--cyan)", paddingLeft: 20 }}>
+                    <p style={{ font: "var(--fw-light) var(--fs-md)/1.5 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>“{c.quote}”</p>
+                    <footer style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 12 }}>— {c.author}</footer>
+                  </blockquote>
+                )}
+                <a href={c.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 20, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
                   Ver el caso completo <ArrowRight size={15} />
                 </a>
-              )}
+              </div>
             </article>
           ))}
         </div>
+
+        <style>{`
+          .hk-caso {
+            background: var(--white); border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md); overflow: hidden;
+            display: grid; grid-template-columns: minmax(0, 1fr);
+          }
+          .hk-caso-img { background: var(--surface-raised); }
+          .hk-caso-img img {
+            width: 100%; height: 100%; min-height: 200px; max-height: 320px;
+            object-fit: cover; display: block;
+          }
+          .hk-caso-txt { padding: clamp(1.5rem, 3vw, 2.5rem); }
+
+          @media (min-width: 860px) {
+            /* La foto ocupa su columna entera y el texto respira al lado. */
+            .hk-caso-foto { grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); }
+            .hk-caso-img img { max-height: none; }
+          }
+        `}</style>
+      </Section>
+
+      {/* CÓMO CONTAMOS — el gráfico que hace el argumento */}
+      <Section tone="light">
+        <div style={{ maxWidth: 760, marginBottom: 8 }}>
+          <SectionHeading level={2} kicker="Cómo contamos" maxWidth="24ch" style={{ marginBottom: 16 }}>
+            La cifra que publicamos no es la más alta que podríamos publicar.
+          </SectionHeading>
+          <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)", maxWidth: "62ch" }}>
+            Con los mismos datos de una campaña se pueden titular tres cifras distintas, y las tres son ciertas. Esto es lo que pasó con Ceinys entre agosto y septiembre de 2026.
+          </p>
+        </div>
+        <Grafico
+          titulo="Tres formas de contar los mismos lotes"
+          unidad="lotes"
+          datos={[
+            { etiqueta: "Cerrados durante el período", valor: 25, texto: "25", nota: "S/165.97 de publicidad por lote" },
+            { etiqueta: "Cerrados por leads que entraron durante el período de pauta", valor: 18, texto: "18", nota: "S/230.51 por lote · es la cifra que publicamos", destacada: true },
+            { etiqueta: "De ese grupo, los que además tienen origen de anuncio en el CRM", valor: 12, texto: "12", nota: "S/345.77 por lote" },
+          ]}
+          pie="Cuanto más estricto es el criterio, menos lotes quedan y más caro sale cada uno. Elegimos el del medio: lotes cerrados por leads que entraron durante el período, sin exigir que el CRM confirme el origen."
+        />
+        <Link href="/casos/ceinys-septiembre-2026" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 26, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
+          La resta completa, en el caso de Ceinys <ArrowRight size={15} />
+        </Link>
       </Section>
 
       {/* TRABAJO REAL — galería de piezas de campaña */}

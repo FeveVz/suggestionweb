@@ -15,6 +15,18 @@ export type Tabla = {
   nota?: string;
 };
 
+/**
+ * Gráfico de barras. Para cuando una tabla de tres cifras se lee mejor
+ * mirando que leyendo: la escalera de atribución, un embudo, dos eventos
+ * comparados. No sustituye a la tabla cuando las celdas son texto.
+ */
+export type Grafico = {
+  titulo?: string;
+  barras: { etiqueta: string; valor: number; texto: string; nota?: string; destacada?: boolean }[];
+  pie?: string;
+  unidad?: string;
+};
+
 /** Proceso numerado (01, 02, 03…). El número lo pone el componente. */
 export type Paso2 = { titulo: string; texto: string };
 
@@ -31,6 +43,7 @@ export type Seccion = {
   sub?: SubSeccion[];
   /** Bloques de estructura enriquecida (todos opcionales). */
   tabla?: Tabla;
+  grafico?: Grafico;
   pasos?: Paso2[];
   dato?: Dato;
   nota?: Nota;

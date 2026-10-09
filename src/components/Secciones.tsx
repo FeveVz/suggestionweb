@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/SectionHeading";
 import type { Seccion } from "@/content/types";
+import Grafico from "@/components/Grafico";
 
 /**
  * Render de secciones de contenido.
@@ -299,6 +300,14 @@ export default function Secciones({ secciones }: { secciones: Seccion[] }) {
             </div>
           )}
           {sec.pasos && <Pasos pasos={sec.pasos} />}
+          {sec.grafico && (
+            <Grafico
+              titulo={sec.grafico.titulo}
+              datos={sec.grafico.barras}
+              pie={sec.grafico.pie}
+              unidad={sec.grafico.unidad}
+            />
+          )}
           {sec.tabla && <Tabla t={sec.tabla} />}
           {sec.bullets && (
             <ul style={{ listStyle: "none", margin: "20px 0 0", padding: 0, display: "grid", gap: 14 }}>

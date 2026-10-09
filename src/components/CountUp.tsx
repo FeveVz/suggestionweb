@@ -31,13 +31,20 @@ export default function CountUp({ to, duration = 1600, locale = "es-PE" }: { to:
       setVal(target);
       return;
     }
-    setVal(0);
+    // Aquí NO se pone la cifra a cero.
+    //
+    // Antes sí: al montar quedaba en 0 y volvía a su valor al entrar en
+    // pantalla o, como tarde, a los 3 s. El efecto colateral era que cualquier
+    // cifra por debajo del pliegue enseñaba un 0 a quien bajara despacio. Se
+    // vio con las barras de un gráfico, donde había tres ceros seguidos al
+    // lado de barras ya dibujadas. Ahora la cifra sale correcta desde el
+    // primer fotograma y solo baja a cero en el instante en que empieza a
+    // contar, que es cuando ya está a la vista.
 
     // Red de seguridad: si el observador no llega a dispararse, la cifra se
-    // queda en 0 para siempre —y "0 marcas confían en nosotros" es peor que no
-    // animar nada—. Se vio de verdad en un navegador cuyo panel estaba oculto:
-    // sin composición, IntersectionObserver no reporta intersecciones nunca.
-    // Pasados 3 s, la cifra salta a su valor final pase lo que pase.
+    // queda como está, que ya es la correcta. Se vio de verdad en un navegador
+    // cuyo panel estaba oculto: sin composición, IntersectionObserver no
+    // reporta intersecciones nunca. Pasados 3 s se da por buena y no se anima.
     const red = setTimeout(() => {
       if (!started.current) {
         started.current = true;
@@ -50,6 +57,7 @@ export default function CountUp({ to, duration = 1600, locale = "es-PE" }: { to:
         entries.forEach((e) => {
           if (e.isIntersecting && !started.current) {
             started.current = true;
+            setVal(0);
             const t0 = performance.now();
             const tick = (t: number) => {
               const p = Math.min(1, (t - t0) / duration);

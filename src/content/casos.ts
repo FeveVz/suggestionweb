@@ -96,14 +96,15 @@ export const CASOS_DETALLE: Caso[] = [
         h2: "La resta que casi nadie hace",
         parrafo:
           "Con los mismos datos se pueden titular tres cifras distintas, y las tres son ciertas. Las publicamos juntas, de la más generosa a la más estricta, y usamos la del medio.",
-        tabla: {
-          cabeceras: ["Qué se cuenta", "Lotes", "Publicidad por lote"],
-          filas: [
-            ["Cerrados durante el período", "25", "S/165.97"],
-            ["Cerrados por leads que entraron durante el período de pauta", "18", "S/230.51"],
-            ["De ese grupo, los que además tienen origen de anuncio en el CRM", "12", "S/345.77"],
+        grafico: {
+          titulo: "Tres formas de contar los mismos lotes",
+          unidad: "lotes",
+          barras: [
+            { etiqueta: "Cerrados durante el período", valor: 25, texto: "25", nota: "S/165.97 de publicidad por lote" },
+            { etiqueta: "Cerrados por leads que entraron durante el período de pauta", valor: 18, texto: "18", nota: "S/230.51 por lote · es la cifra que publicamos", destacada: true },
+            { etiqueta: "De ese grupo, los que además tienen origen de anuncio en el CRM", valor: 12, texto: "12", nota: "S/345.77 por lote" },
           ],
-          nota: "Los 25 incluyen 7 lotes que cerró gente de cartera anterior al período: esa venta la pagó el esfuerzo de meses anteriores, no esta pauta. La cifra que usamos es la de 18: lotes cerrados por leads que entraron durante el período, sin exigir que el CRM confirme el origen. La de 12 toma solo los lotes de esa misma cohorte en los que además el CRM confirma que el lead vino de un anuncio, y es la que sobrevive a cualquier auditoría.",
+          pie: "Cuanto más estricto es el criterio, menos lotes quedan y más caro sale cada uno. Las tres cifras son ciertas; la del medio es la que firmamos. Los 25 incluyen 7 lotes que cerró gente de cartera anterior al período: esa venta la pagó el esfuerzo de meses anteriores, no esta pauta. La cifra que usamos es la de 18: lotes cerrados por leads que entraron durante el período, sin exigir que el CRM confirme el origen. La de 12 toma solo los lotes de esa misma cohorte en los que además el CRM confirma que el lead vino de un anuncio, y es la que sobrevive a cualquier auditoría.",
         },
         nota: {
           tipo: "aviso",
@@ -237,15 +238,14 @@ export const CASOS_DETALLE: Caso[] = [
         h2: "Los números, en contexto",
         parrafo:
           "Las cifras sueltas impresionan poco hasta que se ponen en cadena. Dividiendo la inversión entre cada etapa aparece lo que de verdad explica el resultado, y también lo que sorprende a casi todo el mundo: solo 1 de cada 17 leads llegó a pisar el terreno, y aun así la campaña fue muy rentable.",
-        tabla: {
-          cabeceras: ["Etapa", "Resultado", "Costo por unidad"],
-          filas: [
-            ["Inversión en pauta", "S/3,000", "—"],
-            ["Leads calificados", "350", "S/8.57 por lead"],
-            ["Visitas a sala de ventas", "20", "S/150 por visita"],
-            ["Lotes vendidos", "8", "S/375 por venta"],
+        grafico: {
+          titulo: "De 350 contactos a 8 firmas",
+          barras: [
+            { etiqueta: "Leads calificados", valor: 350, texto: "350", nota: "S/8.57 por lead" },
+            { etiqueta: "Visitas a la sala de ventas", valor: 20, texto: "20", nota: "S/150 por visita" },
+            { etiqueta: "Lotes vendidos", valor: 8, texto: "8", nota: "S/375 por venta", destacada: true },
           ],
-          nota: "Costos calculados dividiendo la inversión entre el resultado de cada etapa. No incluyen el trabajo del equipo comercial del cliente.",
+          pie: "S/3,000 de inversión en pauta. Los costos salen de dividir esa inversión entre el resultado de cada etapa y no incluyen el trabajo del equipo comercial del cliente. La caída entre la primera barra y la última es la forma del negocio inmobiliario, no un fallo de la campaña.",
         },
         dato: {
           cifra: "S/375",
