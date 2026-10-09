@@ -10,9 +10,13 @@
  * en el caso de Autoniza por lo que vendió. Ninguna repite la cifra de la
  * otra, y las dos se enlazan.
  *
- * Fuente: Notion «Portafolio BTL | Suggestion», 20 eventos entre febrero de
- * 2024 y julio de 2025. El reto y la solución de cada pieza vienen de ahí;
+ * Fuente: Notion «Portafolio BTL | Suggestion», 22 piezas entre febrero de
+ * 2024 y mayo de 2026. El reto y la solución de cada pieza vienen de ahí;
  * aquí están reescritos sin el inflado de agencia del original.
+ *
+ * El campo `detalle` lo dictó el owner el 9 de octubre de 2026: promotores,
+ * horas de montaje, aforos, datos recogidos y unidades en piso. No sale del
+ * Notion —el Notion no registra un solo número— y por eso no se inventa.
  *
  * Imágenes: generadas por scripts/portafolio-imagenes.mjs desde la
  * exportación de Notion. Dos tamaños por foto (1000 y 500 px).
@@ -65,26 +69,6 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
     ],
   },
   {
-    slug: "test-drive-changan-ica",
-    titular: "Pruebas de manejo a la salida del restaurante",
-    cliente: "Derco Center · Changan",
-    fecha: "2025-08-01",
-    fechaLabel: "2025",
-    tipo: "Campaña de prueba",
-    sector: "Automotriz",
-    reto:
-      "Changan traía estacionamiento autónomo y control por voz, y en Ica nadie se lo creía. La tecnología no se vende explicándola: se vende dejando que el cliente la use.",
-    hicimos:
-      "Llevamos la unidad a la puerta de los restaurantes Cordón y la Rosa y ofrecimos la prueba a los comensales al salir. Sin cita previa, sin sala de ventas y sin formulario: el auto en la calle, delante de quien acababa de cenar.",
-    detalle:
-      "En muchos casos la prueba terminó llevando al cliente hasta su casa. Es el formato que más confianza genera y el que nadie usa, porque exige logística: unidad disponible, conductor acompañante y permiso del local.",
-    fotos: [
-      F("test-drive-changan-ica", 1, "Unidad Changan UNI-T rotulada para pruebas de manejo en una activación en Ica"),
-      F("test-drive-changan-ica", 2, "Equipo de Suggestion durante la campaña de pruebas de manejo de Changan en Ica"),
-      F("test-drive-changan-ica", 3, "Activación de pruebas de manejo de Changan en la vía pública de Ica"),
-    ],
-  },
-  {
     slug: "mercado-santo-domingo-dfsk",
     titular: "Captación a pie de puesto en el mercado de Santo Domingo",
     cliente: "DFSK · Pacífico Motors",
@@ -96,10 +80,51 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Hacer visible la marca y alimentar el embudo donde de verdad hay tránsito: un mercado en hora punta, no una sala de ventas vacía.",
     hicimos:
       "Montaje de módulos en el mercado y equipo de promotoría abordando a pie de puesto, con registro de datos en el momento. El perfil del comprador de mercado se cruzó con la oferta de la marca antes de salir a campo, para que el abordaje tuviera argumento y no un volante.",
+    detalle:
+      "Cuatro promotores y un supervisor, tres horas de mercado, 167 datos. Son 56 registros por hora sostenidos: ese ritmo no lo da el volante, lo da salir con un argumento preparado para ese comprador.",
     fotos: [
       F("mercado-santo-domingo-dfsk", 1, "Módulos de activación de DFSK montados en el mercado de Santo Domingo, en Ica"),
       F("mercado-santo-domingo-dfsk", 2, "Equipo de promotoría de Suggestion captando datos para DFSK en el mercado de Santo Domingo"),
       F("mercado-santo-domingo-dfsk", 3, "Activación de marca de DFSK y Pacífico Motors en zona de alto tránsito comercial"),
+    ],
+  },
+  {
+    slug: "ahorra-o-nunca-despliegue",
+    titular: "Una campaña impresa desplegada en todos los soportes del local",
+    cliente: "Derco Center · Pacífico Motors",
+    fecha: "2025-06-20",
+    fechaLabel: "junio 2025",
+    tipo: "Difusión de campaña",
+    sector: "Automotriz",
+    reto:
+      "Una promoción con fecha de caducidad no se comunica con una pieza: se comunica con un sistema. Si el cliente ve la oferta en la fachada y no la vuelve a ver adentro, la olvida entre la puerta y el mostrador.",
+    hicimos:
+      "Producción e instalación del sistema gráfico completo de la campaña: gigantografía de fachada, colgantes de techo en sala de ventas, banderolas y roll-ups, con el mismo mensaje en cada punto del recorrido del visitante. El despliegue fue regional; estas fotos son de uno de los locales.",
+    detalle:
+      "Es el mismo arte impreso en varios formatos y ninguno es un reescalado del anterior: la pieza de fachada se arma para leerse desde la avenida y las de sala para leerse a la altura de la vista, caminando. Reescalar en vez de rearmar es lo que produce ese cartel que nadie entiende a tres metros.",
+    fotos: [
+      F("ahorra-o-nunca-despliegue", 1, "Colgantes, banderolas y roll-ups de la campaña Ahorra o Nunca instalados en la sala de ventas del concesionario"),
+      F("ahorra-o-nunca-despliegue", 2, "Gigantografía de la campaña Ahorra o Nunca instalada en la fachada de vidrio del concesionario"),
+    ],
+  },
+  {
+    slug: "changan-cs15-presentacion",
+    titular: "Un lanzamiento de auto montado en el pasillo de un centro comercial",
+    cliente: "Changan Motors",
+    fecha: "2025-06-09",
+    fechaLabel: "junio 2025",
+    tipo: "Lanzamiento de producto",
+    sector: "Automotriz",
+    reto:
+      "Presentar un modelo nuevo fuera del concesionario, en un pasillo por el que la gente pasa camino a otra cosa. Sin asesor al lado y sin folleto en la mano, la unidad tiene que explicarse sola.",
+    hicimos:
+      "Puesta en escena de la unidad en el centro comercial —corona de PVC, vinilo de piso y cordón de acceso— y producción de la ficha impresa que va sobre el techo: nombre del modelo, tres características y un QR para quien quiera seguir.",
+    detalle:
+      "La ficha de techo es la que trabaja cuando no hay nadie. Está a la altura de los ojos del que pasa, dice tres cosas y ni una más, y el QR recoge al interesado sin obligarlo a entrar a ningún sitio ni a dar la cara.",
+    fotos: [
+      F("changan-cs15-presentacion", 1, "Unidad Changan CS15 con corona de PVC y cordón de acceso en el pasillo de un centro comercial"),
+      F("changan-cs15-presentacion", 2, "Ficha impresa sobre el techo del Changan CS15 con las características del modelo y un código QR"),
+      F("changan-cs15-presentacion", 3, "Puesta en escena del Changan CS15 en centro comercial, con vinilo de piso y moño de PVC"),
     ],
   },
   {
@@ -154,6 +179,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Exhibir el portafolio completo del grupo en un mismo espacio sin que las marcas se canibalicen entre sí ni aquello se vuelva un estacionamiento.",
     hicimos:
       "Coordinación de montaje y reparto del espacio para que cada marca tuviera su zona de protagonismo, con un recorrido pensado para que el visitante pudiera comparar sin tener que preguntar.",
+    detalle:
+      "Noventa metros cuadrados, cuatro horas de montaje, tres unidades en piso. Con ese ratio el plano no es dónde va cada auto: es por dónde camina el visitante y qué ve al girar la cabeza.",
     fotos: [
       F("autoplan-portafolio-marcas", 1, "Exhibición de varias marcas de vehículos coordinada por Suggestion en Autoplan, Ica"),
       F("autoplan-portafolio-marcas", 2, "Montaje de exhibición vehicular con zonas diferenciadas por marca"),
@@ -172,6 +199,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Vincular una inmobiliaria con vida saludable, familia y esfuerzo, ante un público que iba a estar varias horas en el mismo sitio.",
     hicimos:
       "Patrocinio con un stand que funcionó como punto de encuentro de las familias —no como mostrador—, con visibilidad sostenida durante toda la competencia y captación de interesados en inversión.",
+    detalle:
+      "Tres días, un aforo de 500 personas y 146 prospectos registrados. De ahí salieron 12 visitas al proyecto y 2 ventas: el auspicio no se quedó en el stand.",
     fotos: [
       F("campeonato-natacion-pb", 1, "Auspicio de PB Inversiones Inmobiliarias en el campeonato internacional de natación de Ica"),
       F("campeonato-natacion-pb", 2, "Stand informativo de la marca inmobiliaria durante la competencia"),
@@ -210,6 +239,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Repetir el lanzamiento en un mercado más pequeño, donde el comprador quiere ver la máquina trabajando y no escuchar una presentación.",
     hicimos:
       "Tres días de exhibición adaptados al entorno local, enfocados en demostrar capacidad operativa en terreno. La convocatoria apuntó a contratistas y empresarios de la zona, no a público general.",
+    detalle:
+      "La maquinaria viajó en cigüeñas contratadas para el traslado. La demostración se montó en un grifo concurrido de Nazca y en la plaza de armas, con publimanes cubriendo el perímetro. Llegaron empresarios del sector minero y salió una venta.",
     fotos: [
       F("xcmg-linea-amarilla-nazca", 1, "Exhibición de maquinaria XCMG durante tres días en Nazca"),
       F("xcmg-linea-amarilla-nazca", 2, "Maquinaria pesada y unidades JAC en el lanzamiento de Nazca"),
@@ -248,6 +279,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Interceptar al comprador familiar en su momento de ocio, en un entorno donde se compite con todo lo demás que hay en una plaza.",
     hicimos:
       "Módulo de exhibición de alta visibilidad con promotoría enfocada en seguridad y tecnología, que son los dos argumentos que mueven a ese comprador y no el precio.",
+    detalle:
+      "Un día y una sola unidad: la Crosstrek. En plaza, meter más vehículos resta espacio de circulación y parte la conversación en dos; con una unidad bien puesta el promotor habla una vez y se le escucha.",
     fotos: [
       F("subaru-plaza-barranca", 1, "Módulo de exhibición de Subaru Motors en la plazuela de Barranca"),
       F("subaru-plaza-barranca", 2, "Activación de marca de Subaru con arco inflable y unidad en exhibición"),
@@ -265,6 +298,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Dar presencia de marca en una inauguración con invitados y prensa, donde una activación mal calibrada se nota y molesta.",
     hicimos:
       "Exhibición vehicular alineada con la estética del evento inaugural, reforzando la alianza entre la marca y el concesionario ante el público que importaba ese día.",
+    detalle:
+      "Cien invitados y la prensa local de Ica cubriendo: La Lupa, Ica Noticias, Noticias en Ica, El Cuervo, entre otros. En una inauguración la lista de invitados es la mitad del trabajo, y se arma semanas antes.",
     fotos: [
       F("inauguracion-autoplan", 1, "Unidad Subaru Forester con moño durante la inauguración del local de Autoplan"),
       F("inauguracion-autoplan", 2, "Exhibición vehicular protocolar en la apertura del concesionario"),
@@ -303,6 +338,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Dos decisiones de inversión que el mismo público toma por separado, y un evento social donde nadie quiere que le vendan.",
     hicimos:
       "Activación sutil que conectó la compra del lote con la necesidad del vehículo mientras la gente disfrutaba del aniversario. Un solo montaje trabajando para dos clientes a la vez.",
+    detalle:
+      "Unas 200 personas. El contacto elegía él mismo hacia cuál de las dos ofertas quería que lo derivaran, vehículo o lote. Así un montaje alimentó dos embudos sin que el invitado sintiera que lo pasaban de mano en mano.",
     fotos: [
       F("aniversario-amon-amen", 1, "Punto de marca de Pacífico Motors en el aniversario de Amon Amen"),
       F("aniversario-amon-amen", 2, "Activación conjunta de Urb. La Reserva y Pacífico Motors en un evento social"),
@@ -320,6 +357,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Una audiencia de alta jerarquía y de nicho, a la que no se llega comprando medios, dentro de un entorno social cerrado.",
     hicimos:
       "Auspicio con obsequio corporativo y una dinámica calibrada al perfil de los asistentes, con equipo de protocolo gestionando la interacción. La exclusividad del proyecto se asoció al estatus del invitado.",
+    detalle:
+      "Ochenta oficiales en sala. El obsequio fue una caja de madera con un pisco y piezas de la marca: en ese tipo de evento el regalo es lo que decide si al día siguiente alguien se acuerda de quién auspiciaba.",
     fotos: [
       F("gala-oficiales-la-reserva", 1, "Stands de Urb. La Reserva en la gala de oficiales del Ejército"),
       F("gala-oficiales-la-reserva", 2, "Activación de marca inmobiliaria en un evento institucional"),
@@ -338,6 +377,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Una celebración gremial masiva, con público que tiene capacidad de crédito, y el riesgo de convertirse en el intruso que arruina la tarde.",
     hicimos:
       "Punto de contacto dentro del recinto con una dinámica relajada que invitaba a acercarse a las unidades entre momentos de la celebración. Los datos se capturaron sin abordaje.",
+    detalle:
+      "Unas mil personas en el recinto y 238 datos recogidos: uno de cada cuatro asistentes, sin que nadie saliera a abordar. Las unidades en piso fueron la Changan X7 Plus y la CS15.",
     fotos: [
       F("dia-del-maestro-derco", 1, "Activación de Derco Center durante la celebración del Día del Maestro en Ica"),
       F("dia-del-maestro-derco", 2, "Punto de contacto de marca dentro del recinto de la celebración"),
@@ -356,6 +397,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Captar datos en ocio nocturno, donde el público pagó por divertirse y rechaza de inmediato cualquier cosa que parezca publicidad.",
     hicimos:
       "Integración como presentador oficial del show y activación en el foyer, trabajando los tiempos de espera a la entrada y el intermedio. La marca se asoció a una experiencia que la gente ya estaba disfrutando.",
+    detalle:
+      "Aforo de 150 y 67 datos: casi uno de cada dos asistentes. En sala estuvieron la Haval Dargo y la Changan X7 Plus. El foyer rinde porque la espera y el intermedio son los dos únicos momentos en que ese público no está mirando el escenario.",
     fotos: [
       F("stand-up-derco", 1, "Activación de Derco Center en el foyer de un show de stand-up comedy en Ica"),
       F("stand-up-derco", 2, "Presencia de marca como presentador oficial del espectáculo"),
@@ -374,6 +417,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Entrar por primera vez a un evento tradicionalista con dos marcas a la vez, sin saber todavía cómo reaccionaría ese público.",
     hicimos:
       "Exhibición vehicular y punto inmobiliario integrados en el circuito durante los tres días. Lo que funcionó aquí es lo que permitió repetir en 2025 con el formato ya probado.",
+    detalle:
+      "Lo que se aprendió: manda la experiencia. Conseguir que la gente subiera al vehículo y lo probara posicionó más que cualquier argumento dicho de pie, y eso es lo que se trasladó al montaje de 2025.",
     fotos: [
       F("caballos-de-paso-2024", 1, "Exhibición de Pacífico Motors y Urb. La Reserva en el campeonato de caballos de paso 2024"),
       F("caballos-de-paso-2024", 2, "Montaje de marca en el circuito de caballos de paso de Ica"),
@@ -392,10 +437,32 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Un evento nocturno exclusivo, con público que valora la privacidad y la atmósfera, y que castiga la publicidad agresiva.",
     hicimos:
       "Branding ambiental: el vehículo integrado en la escenografía como un elemento más de la noche, y el equipo en modo acompañamiento. El interés por la marca salió del relacionamiento, no del abordaje.",
+    detalle:
+      "Una Subaru Crosstrek y una Mazda CX5, iluminadas con led indirecto, ante más de 120 invitados. La luz es la decisión del montaje: directa convierte el auto en un stand, indirecta lo deja ser parte del salón.",
     fotos: [
       F("cabalgantes-derco", 1, "Vehículo integrado en la escenografía de un evento nocturno de cabalgantes en Ica"),
       F("cabalgantes-derco", 2, "Branding ambiental de Derco Center en un evento nocturno"),
       F("cabalgantes-derco", 3, "Presencia de marca discreta en un evento social exclusivo"),
+    ],
+  },
+  {
+    slug: "test-drive-changan-ica",
+    titular: "Pruebas de manejo a la salida del restaurante",
+    cliente: "Derco Center · Changan",
+    fecha: "2024-03-01",
+    fechaLabel: "marzo 2024",
+    tipo: "Campaña de prueba",
+    sector: "Automotriz",
+    reto:
+      "Changan traía estacionamiento autónomo y control por voz, y en Ica nadie se lo creía. La tecnología no se vende explicándola: se vende dejando que el cliente la use.",
+    hicimos:
+      "Llevamos la unidad a la puerta de los restaurantes Cordón y la Rosa y ofrecimos la prueba a los comensales al salir. Sin cita previa, sin sala de ventas y sin formulario: el auto en la calle, delante de quien acababa de cenar.",
+    detalle:
+      "En muchos casos la prueba terminó llevando al cliente hasta su casa. Es el formato que más confianza genera y el que nadie usa, porque exige logística: unidad disponible, conductor acompañante y permiso del local.",
+    fotos: [
+      F("test-drive-changan-ica", 1, "Unidad Changan UNI-T rotulada para pruebas de manejo en una activación en Ica"),
+      F("test-drive-changan-ica", 2, "Equipo de Suggestion durante la campaña de pruebas de manejo de Changan en Ica"),
+      F("test-drive-changan-ica", 3, "Activación de pruebas de manejo de Changan en la vía pública de Ica"),
     ],
   },
   {
@@ -410,6 +477,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Testear cómo recibía un mercado costero y turístico a los modelos robustos de la marca, antes de comprometer inversión en el canal.",
     hicimos:
       "Montaje de un showroom al aire libre aprovechando el flujo masivo del aniversario distrital, con la exhibición centrada en la capacidad todoterreno, que es lo que pide la geografía de la zona.",
+    detalle:
+      "Dos días con la Haval Dargo y la GWM Poer. La gente se subió a conocerlas y de ahí salieron agendamientos de prueba de manejo en el concesionario: en un evento de distrito el cierre nunca ocurre ahí, ocurre después.",
     fotos: [
       F("aniversario-paracas-gwm", 1, "Showroom a cielo abierto de GWM Motors en el aniversario del distrito de Paracas"),
       F("aniversario-paracas-gwm", 2, "Exhibición de unidades GWM durante el aniversario de Paracas"),

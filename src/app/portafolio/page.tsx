@@ -17,7 +17,7 @@ import { PORTAFOLIO, TIPOS_PORTAFOLIO } from "@/content/portafolio";
  * Separado de /casos a propósito. Los casos prueban RESULTADO: inversión,
  * período y cifra. Esta página prueba EJECUCIÓN: dirección, coordinación,
  * montaje y logística. Son dos servicios distintos y mezclarlos rebaja el
- * primero, porque el lector promedia: veinte fotos sin cifras al lado de
+ * primero, porque el lector promedia: veintidós fichas sin cifras al lado de
  * «18 lotes a S/230.51» convierten el conjunto en un álbum.
  *
  * El filtro es CSS puro (radio + :checked). Sin JavaScript: si algo falla,
@@ -27,7 +27,7 @@ import { PORTAFOLIO, TIPOS_PORTAFOLIO } from "@/content/portafolio";
 export const metadata: Metadata = buildMetadata({
   title: "Portafolio de Activaciones BTL | Suggestion",
   description:
-    "20 activaciones, lanzamientos y auspicios producidos entre 2024 y 2025 para marcas automotrices e inmobiliarias: qué resolvía cada uno y cómo se montó.",
+    "22 activaciones, lanzamientos y piezas de gran formato producidos entre 2024 y 2026 para marcas automotrices e inmobiliarias: qué resolvía cada uno y cómo se montó.",
   path: "/portafolio",
 });
 
@@ -50,7 +50,7 @@ export default function PortafolioPage() {
             "@type": "CollectionPage",
             name: "Portafolio de activaciones BTL de Suggestion",
             description:
-              "Activaciones de marca, lanzamientos de producto y auspicios producidos por Suggestion entre 2024 y 2025.",
+              "Activaciones de marca, lanzamientos de producto, auspicios y producción gráfica de Suggestion entre 2024 y 2026.",
             url,
             mainEntity: {
               "@type": "ItemList",
@@ -75,7 +75,7 @@ export default function PortafolioPage() {
               El trabajo de calle, montado y documentado
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "58ch" }}>
-              Activaciones, lanzamientos y auspicios producidos entre 2024 y 2025. Cada pieza dice qué problema resolvía y cómo se montó. Lo que vendieron —cuando hay cifra— vive en los casos, no aquí.
+              Activaciones, lanzamientos, auspicios y producción gráfica entre 2024 y 2026. Cada pieza dice qué problema resolvía, cómo se montó y el dato de oficio que solo sabe quien estuvo ahí: promotores, horas de montaje, aforo, datos recogidos.
             </p>
           </div>
         </div>
@@ -86,9 +86,9 @@ export default function PortafolioPage() {
         <span className="hk-grain-layer" aria-hidden />
         <div style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2rem,4vw,3rem) var(--gutter)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "var(--space-5)" }}>
           {[
-            { v: String(PIEZAS), l: "Activaciones y eventos documentados" },
+            { v: String(PIEZAS), l: "Piezas producidas y documentadas" },
             { v: String(MARCAS), l: "Marcas y proyectos atendidos" },
-            { v: "2024–2025", l: "Período que cubre este portafolio" },
+            { v: "2024–2026", l: "Período que cubre este portafolio" },
             { v: String(TIPOS_PORTAFOLIO.length), l: "Tipos de intervención distintos" },
           ].map((s) => (
             <div key={s.l}>
