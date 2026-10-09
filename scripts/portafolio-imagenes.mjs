@@ -105,8 +105,10 @@ const EXCLUIR = new Set(["INVITACIN_XCMG_reducida.png"]);
  */
 const PORTADAS = {
   "Relanzamiento de tienda Mitsubishi": ["IMG_0231.jpg", "IMG_1106.jpg", "Fuso_4.JPG.jpg"],
-  // La 105238 era la portada y es cielo en tres cuartas partes: pasa al final.
-  "Activación mercado Sto Domingo": ["IMG_20250709_105204.jpg", "IMG_20250709_105221.jpg"],
+  // Abre la toma abierta: es la única donde se ven los puestos y la calle del
+  // mercado, que es de lo que habla la pieza. La 105238 es cielo en tres
+  // cuartas partes y pasa al final.
+  "Activación mercado Sto Domingo": ["IMG_20250709_105221.jpg", "IMG_20250709_105204.jpg"],
   "Activación Grifo Repsol": ["IMG_20250526_164224.jpg", "IMG_20250526_164313.jpg", "IMG_20250520_165212.jpg"],
   "Inauguración de evento de cabalgantes": ["IMG_20240607_201335.jpg", "IMG_20240607_230939.jpg", "IMG_20240607_231144.jpg"],
   "Aniversario Amon Amen": ["IMG_20240816_232323.jpg", "IMG_20240816_232344.jpg"],

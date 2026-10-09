@@ -108,9 +108,9 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Cuatro promotores y un supervisor, tres horas de mercado, 167 datos. Son 56 registros por hora sostenidos: ese ritmo no lo da el volante, lo da salir con un argumento preparado para ese comprador.",
     altBase: "Activación de marca de DFSK en el mercado de Santo Domingo, en Ica",
     alts: [
+      "Módulo de DFSK montado en la calle del mercado de Santo Domingo, entre los puestos",
       "Equipo de promotoría de Suggestion captando datos para DFSK en el mercado de Santo Domingo",
       "Activación de marca de DFSK y Pacífico Motors en zona de alto tránsito comercial",
-      "Módulos de activación de DFSK montados en el mercado de Santo Domingo, en Ica",
     ],
   },
   {
