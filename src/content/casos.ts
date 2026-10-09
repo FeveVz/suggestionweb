@@ -10,6 +10,8 @@
  * una métrica nueva.
  */
 
+import { fotoPortafolio } from "./portafolio-fotos";
+
 import type { Seccion, Faq } from "./types";
 
 export type Caso = {
@@ -512,10 +514,10 @@ CASOS_DETALLE.push({
     { titulo: "Registro y contenido", texto: "Cobertura del evento (incluido drone) que alimenta la prueba social de la marca para la siguiente convocatoria." },
   ],
   imagenes: [
-    { src: "/assets/portafolio/relanzamiento-mitsubishi-autoniza-1.webp", alt: "Fachada iluminada de la tienda Mitsubishi FUSO de Autoniza durante el relanzamiento en Ica", cap: "El relanzamiento de tienda: el primero de los dos eventos" },
-    { src: "/assets/portafolio/relanzamiento-mitsubishi-autoniza-2.webp", alt: "Unidad Mitsubishi cubierta y con moño antes del destape", cap: "La unidad, lista para el destape" },
-    { src: "/assets/portafolio/relanzamiento-mitsubishi-autoniza-3.webp", alt: "Autoridad local en el estrado durante el relanzamiento de la tienda Mitsubishi en Ica", cap: "La autoridad local en el estrado: lo que convirtió la apertura en noticia" },
-    { src: "/assets/portafolio/inauguracion-autoplan-1.webp", alt: "Unidad con moño preparada para la exhibición protocolar de un concesionario", cap: "La unidad del día, preparada antes de abrir" },
+    { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 1), alt: "Fachada iluminada de la tienda Mitsubishi FUSO de Autoniza durante el relanzamiento en Ica", cap: "El relanzamiento de tienda: el primero de los dos eventos" },
+    { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 2), alt: "Unidad Mitsubishi cubierta y con moño antes del destape", cap: "La unidad, lista para el destape" },
+    { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 3), alt: "Autoridad local en el estrado durante el relanzamiento de la tienda Mitsubishi en Ica", cap: "La autoridad local en el estrado: lo que convirtió la apertura en noticia" },
+    { src: fotoPortafolio("inauguracion-autoplan", 1), alt: "Unidad con moño preparada para la exhibición protocolar de un concesionario", cap: "La unidad del día, preparada antes de abrir" },
   ],
   secciones: [
     {

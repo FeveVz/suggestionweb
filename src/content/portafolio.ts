@@ -24,7 +24,7 @@
  * generado: este solo guarda el texto.
  */
 
-import { FOTOS_PORTAFOLIO } from "./portafolio-fotos";
+import { FOTOS_PORTAFOLIO, fotoPortafolio } from "./portafolio-fotos";
 
 export type PiezaPortafolio = {
   slug: string;
@@ -62,8 +62,8 @@ export type FotoPieza = { src: string; srcChica: string; alt: string; w: number;
  */
 export const fotosDe = (p: PiezaPortafolio): FotoPieza[] =>
   (FOTOS_PORTAFOLIO[p.slug] ?? []).map(([w, h], i) => ({
-    src: `/assets/portafolio/${p.slug}-${i + 1}.webp`,
-    srcChica: `/assets/portafolio/${p.slug}-${i + 1}-s.webp`,
+    src: fotoPortafolio(p.slug, i + 1),
+    srcChica: fotoPortafolio(p.slug, i + 1, true),
     alt: p.alts?.[i] ?? p.altBase,
     w,
     h,

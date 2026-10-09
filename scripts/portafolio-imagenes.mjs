@@ -24,6 +24,7 @@
  * Uso: node scripts/portafolio-imagenes.mjs
  */
 import sharp from "sharp";
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -205,15 +206,28 @@ for (const contenedor of CARPETAS) {
     for (let i = 0; i < ordenadas.length; i++) {
       const src = ordenadas[i].file;
       const n = i + 1;
+
       const grande = await sharp(src).rotate()
         .resize({ height: ALTO_GRANDE, withoutEnlargement: true })
         .webp({ quality: 78 })
-        .toFile(path.join(DESTINO, `${slug}-${n}.webp`));
-      await sharp(src).rotate()
+        .toBuffer({ resolveWithObject: true });
+      const chica = await sharp(src).rotate()
         .resize({ height: ALTO_CHICO, withoutEnlargement: true })
         .webp({ quality: 74 })
-        .toFile(path.join(DESTINO, `${slug}-${n}-s.webp`));
-      fotos.push({ w: grande.width, h: grande.height });
+        .toBuffer();
+
+      // El nombre lleva el hash del contenido. Vercel sirve /public con
+      // cache-control de 30 dias, asi que reordenar las fotos cambiaba la
+      // imagen pero no su URL: el navegador de quien ya hubiera entrado
+      // seguia mostrando la vieja durante un mes. Con el hash en el nombre,
+      // cambiar la foto cambia la URL y el navegador no tiene nada que
+      // reutilizar. Las dos variantes comparten el hash de la grande: salen
+      // del mismo original y cambian juntas.
+      const hash = crypto.createHash("sha256").update(grande.data).digest("hex").slice(0, 8);
+      fs.writeFileSync(path.join(DESTINO, `${slug}-${n}.${hash}.webp`), grande.data);
+      fs.writeFileSync(path.join(DESTINO, `${slug}-${n}-s.${hash}.webp`), chica);
+
+      fotos.push({ w: grande.info.width, h: grande.info.height, hash });
     }
     manifiesto[slug] = fotos;
     console.log(`  ${slug.padEnd(36)} ${String(fotos.length).padStart(2)} fotos`);
@@ -222,7 +236,7 @@ for (const contenedor of CARPETAS) {
 
 // ── manifiesto ────────────────────────────────────────────────────────────
 const lineas = Object.entries(manifiesto)
-  .map(([slug, fotos]) => `  "${slug}": [${fotos.map((f) => `[${f.w},${f.h}]`).join(", ")}],`)
+  .map(([slug, fotos]) => `  "${slug}": [${fotos.map((f) => `[${f.w},${f.h},"${f.hash}"]`).join(", ")}],`)
   .join("\n");
 
 fs.writeFileSync(
@@ -230,19 +244,32 @@ fs.writeFileSync(
   `/**
  * GENERADO por scripts/portafolio-imagenes.mjs — no editar a mano.
  *
- * Medidas reales de cada foto publicada, en el tamaño grande. La página las
- * usa para dos cosas: reservar el espacio antes de que cargue la imagen (sin
- * esto el carrusel salta) y calcular qué variante pedir, porque con fotos de
- * proporción libre el ancho renderizado depende de cada una.
+ * Medidas y hash de cada foto publicada. La página lo usa para tres cosas:
+ * reservar el espacio antes de que cargue la imagen (sin esto el carrusel
+ * salta), elegir la variante —con proporción libre el ancho renderizado
+ * depende de cada foto— y construir la URL.
  *
- * Archivos por foto: \`{slug}-{n}.webp\` (alto ${ALTO_GRANDE}) y
- * \`{slug}-{n}-s.webp\` (alto ${ALTO_CHICO}).
+ * Archivos por foto: \`{slug}-{n}.{hash}.webp\` (alto ${ALTO_GRANDE}) y
+ * \`{slug}-{n}-s.{hash}.webp\` (alto ${ALTO_CHICO}).
  */
 
-/** [ancho, alto] de la variante grande, en orden de publicación. */
-export const FOTOS_PORTAFOLIO: Record<string, [number, number][]> = {
+/** [ancho, alto, hash] de la variante grande, en orden de publicación. */
+export const FOTOS_PORTAFOLIO: Record<string, [number, number, string][]> = {
 ${lineas}
 };
+
+/**
+ * URL de una foto del portafolio.
+ *
+ * Siempre a través de aquí, nunca escribiendo la ruta a mano: el hash del
+ * nombre cambia cada vez que cambia la imagen, y una ruta escrita a mano se
+ * queda apuntando a un archivo que ya no existe.
+ */
+export function fotoPortafolio(slug: string, n: number, chica = false): string {
+  const f = FOTOS_PORTAFOLIO[slug]?.[n - 1];
+  if (!f) return "";
+  return \`/assets/portafolio/\${slug}-\${n}\${chica ? "-s" : ""}.\${f[2]}.webp\`;
+}
 `,
   "utf8"
 );
