@@ -80,7 +80,11 @@ export const SECTORS: NavLink[] = [
 export const MAIN_NAV: NavLink[] = [
   { label: "Servicios", href: "/servicios" },
   { label: "Sectores", href: "/sectores" },
-  { label: "Casos", href: "/casos" },
+  // Mismo criterio que abajo: "Casos" nombra el formato —un caso de
+  // estudio—, no lo que el visitante se lleva. El H1 de la página ya dice
+  // "Resultados de negocio", así que el menú solo recoge su propia palabra.
+  // La URL, el título y la palabra clave siguen siendo "casos de éxito".
+  { label: "Resultados", href: "/casos" },
   // "Portafolio" al lado de "Casos" se lee como lo mismo: en jerga de agencia
   // son sinónimos y ninguna de las dos palabras dice QUÉ prueba cada una.
   // "Activaciones" nombra el oficio, no el formato, y nadie lo confunde con

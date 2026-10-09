@@ -460,6 +460,18 @@ img { max-width: 100%; display: block; }
   .hk-perc { grid-template-columns: 1fr !important; }
   .hk-stats, .hk-sectores, .hk-casos, .hk-pasos, .hk-porque, .hk-test, .hk-foot { grid-template-columns: 1fr 1fr !important; }
   .hk-serv, .hk-cta, .hk-form { grid-template-columns: 1fr !important; }
+}
+
+/*
+ * La barra de enlaces se retira antes que el resto del diseño de 920 px.
+ *
+ * Con "Resultados" y "Activaciones" en vez de "Casos" y "Portafolio", los
+ * seis enlaces más el botón llegaban a 921 px con 17 px de holgura: entraba,
+ * pero cualquier rótulo más largo lo parte en dos líneas. A 1000 px la
+ * holgura vuelve a ser cómoda. No se pierde nada: el menú flotante está
+ * siempre, en todos los anchos.
+ */
+@media (max-width: 1000px) {
   .hk-nav { display: none !important; }
 }
 @media (max-width: 560px) {
