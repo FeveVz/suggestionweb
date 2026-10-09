@@ -43,10 +43,11 @@ const PIEZAS = [
     fotos: [
       // Portada: el interior, donde se ve el sistema completo de soportes.
       { file: "IMG_20250620_091439.jpg" },
-      // Fachada. RECORTE OBLIGADO: deja fuera la franja inferior de logos del
-      // grupo. Si algún día se autoriza publicarla entera, basta con quitar
-      // esta línea; no hay nada más que tocar.
-      { file: "IMG_20250620_091416.jpg", recorte: { left: 950, top: 1020, width: 1850, height: 1156 } },
+      // Fachada completa. El owner levantó el recorte el 9/10/2026: los logos
+      // del grupo ya están en el marquee de clientes de la propia home, así
+      // que no había nada que proteger. El encuadre es explícito igual, para
+      // que entre la gigantografía entera y no lo que decida la saliencia.
+      { file: "IMG_20250620_091416.jpg", recorte: { left: 452, top: 610, width: 2976, height: 1860 } },
     ],
   },
 ];

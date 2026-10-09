@@ -30,17 +30,27 @@ que es justo lo que acordamos no publicar nunca.
 El copy de abajo dice «varias marcas del grupo» sin número ni lista. La
 capacidad queda demostrada igual y no se expone la cartera de Derco.
 
-**El mismo guardarraíl se aplicó a una foto.** La gigantografía de fachada de la
-campaña «Ahorra o Nunca» lleva impresa, en su franja inferior, la lista completa
-de logos del grupo. La foto se publica recortada por encima de esa franja. El
-recorte es explícito y está en `scripts/portafolio-atl.mjs`: si algún día se
-autoriza publicarla entera, se borra una línea y se vuelve a correr el script.
+## El alcance real de la regla (owner, 9 de octubre de 2026)
 
-**Pendiente de decisión del owner.** Los detalles de oficio nombran modelos en
-piso (Changan X7 Plus, CS15, Haval Dargo, Subaru Crosstrek, Mazda CX5). Evento a
-evento es lo que había en el montaje y sale en las fotos; leídos en conjunto,
-permiten reconstruir parte de la cartera del concesionario. Se publicaron porque
-el owner los entregó para eso, y basta una palabra suya para quitarlos.
+Se le plantearon las tres dudas que roían este guardarraíl y las resolvió todas
+en el mismo sentido: **mostrar**.
+
+1. **La gigantografía de fachada de «Ahorra o Nunca» se publica entera**, con la
+   franja de logos del grupo incluida. Se había recortado por precaución; el
+   propio marquee de clientes de la home ya muestra esos logos
+   (`src/components/ClientLogos.tsx`), así que el recorte no protegía nada.
+   El encuadre en `scripts/portafolio-atl.mjs` sigue siendo explícito, pero
+   ahora es para que entre la pieza completa, no para quitarle nada.
+2. **Los modelos en piso se nombran** (Changan X7 Plus, CS15, Haval Dargo,
+   Subaru Crosstrek, Mazda CX5). Es lo que había en cada montaje y sale en las
+   fotos.
+3. **Las ventas se publican**: las 12 visitas y 2 ventas del campeonato de
+   natación y la venta de maquinaria en Nazca. Sin cifra de dinero.
+
+Lo que la regla sigue prohibiendo es **declarar el conteo o la cartera de marcas
+de un concesionario concreto como dato** —el «múltiples marcas (Mazda, Renault,
+GWM, DFSK, Changan)» del Reto original—. Esa línea no se publica, y el copy de
+Autoplan sigue diciendo «varias marcas del grupo».
 
 ---
 
