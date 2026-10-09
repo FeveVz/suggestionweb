@@ -9,7 +9,9 @@ import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/site";
-import { PORTAFOLIO, TIPOS_PORTAFOLIO } from "@/content/portafolio";
+import CarruselFotos from "@/components/CarruselFotos";
+import { CARRUSEL_CSS } from "@/components/carrusel-css";
+import { PORTAFOLIO, TIPOS_PORTAFOLIO, fotosDe } from "@/content/portafolio";
 
 /**
  * /portafolio — el trabajo de producción BTL y ATL.
@@ -22,6 +24,11 @@ import { PORTAFOLIO, TIPOS_PORTAFOLIO } from "@/content/portafolio";
  *
  * El filtro es CSS puro (radio + :checked). Sin JavaScript: si algo falla,
  * se ven todas las piezas, que es el estado correcto por defecto.
+ *
+ * Las fotos van en carrusel (CarruselFotos). Antes se publicaban 3 por evento
+ * recortadas a 16/10 y en móvil solo se veía una: de 165 fotos del archivo
+ * llegaban 60 a la web. Ahora están las 164 —una por evento era el arte de
+ * una invitación, no una foto— y ninguna va recortada.
  */
 
 export const metadata: Metadata = buildMetadata({
@@ -121,23 +128,7 @@ export default function PortafolioPage() {
           <div className="hk-pf-lista">
             {PORTAFOLIO.map((p) => (
               <article key={p.slug} className="hk-pf-item hk-lift" data-tipo={p.tipo}>
-                <div className="hk-pf-fotos">
-                  {p.fotos.map((f, i) => (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      key={f.src}
-                      src={f.src}
-                      srcSet={`${f.src.replace(/\.webp$/, "-500.webp")} 500w, ${f.src} 1000w`}
-                      sizes={i === 0 ? "(max-width: 860px) 100vw, 620px" : "(max-width: 860px) 50vw, 300px"}
-                      alt={f.alt}
-                      width={1000}
-                      height={625}
-                      loading="lazy"
-                      decoding="async"
-                      className={i === 0 ? "hk-pf-hero" : "hk-pf-sec"}
-                    />
-                  ))}
-                </div>
+                <CarruselFotos fotos={fotosDe(p)} titulo={p.titular} />
 
                 <div className="hk-pf-texto">
                   <div className="hk-pf-meta">
@@ -164,6 +155,7 @@ export default function PortafolioPage() {
         </form>
 
         <style>{`
+          ${CARRUSEL_CSS}
           .hk-sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
           .hk-pf-chips { display:flex; flex-wrap:wrap; gap:10px; }
           .hk-pf-chips input { position:absolute; opacity:0; width:1px; height:1px; }
@@ -182,9 +174,6 @@ export default function PortafolioPage() {
             background:var(--white); border:1px solid var(--border-subtle);
             border-radius:var(--radius-md); overflow:hidden;
           }
-          .hk-pf-fotos { display:grid; grid-template-columns:1fr; gap:2px; background:var(--border-subtle); }
-          .hk-pf-fotos img { width:100%; height:auto; display:block; aspect-ratio:16/10; object-fit:cover; }
-          .hk-pf-fotos .hk-pf-sec { display:none; }
           .hk-pf-texto { padding:clamp(1.25rem,3vw,2rem); }
           .hk-pf-meta {
             display:flex; gap:12px; align-items:center; flex-wrap:wrap;
@@ -213,10 +202,9 @@ export default function PortafolioPage() {
           }
 
           @media (min-width: 860px) {
-            .hk-pf-item { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); }
-            .hk-pf-fotos { grid-template-columns:1fr 1fr; grid-template-rows:auto auto; align-content:start; }
-            .hk-pf-hero { grid-column:1 / -1; }
-            .hk-pf-fotos .hk-pf-sec { display:block; }
+            /* El carrusel trae su propia altura: align-items start evita
+               que la columna oscura se estire para igualar al texto. */
+            .hk-pf-item { display:grid; grid-template-columns:minmax(0,1.06fr) minmax(0,1fr); align-items:start; }
           }
 
           /* Filtro CSS puro: el radio marcado oculta lo que no corresponde. */
