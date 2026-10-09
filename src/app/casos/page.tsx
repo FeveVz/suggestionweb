@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
 import { casosReviewSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
+import { PORTAFOLIO } from "@/content/portafolio";
 
 export const metadata: Metadata = buildMetadata({
   title: "Casos de Éxito de Marketing en Ica | Suggestion",
@@ -158,7 +159,7 @@ export default function Casos() {
         </SectionHeading>
         <p style={{ font: "var(--fw-light) var(--fs-sm)/1.6 var(--font-body)", color: "var(--text-body)", maxWidth: "60ch", marginBottom: 28 }}>
           Producir el evento y vender con él son dos trabajos distintos. Las activaciones, lanzamientos y auspicios que montamos están en el{" "}
-          <Link href="/portafolio" className="hk-ulink" style={{ color: "var(--text-strong)", fontWeight: 500 }}>portafolio de producción</Link>: 20 piezas con lo que resolvía cada una y cómo se montó.
+          <Link href="/portafolio" className="hk-ulink" style={{ color: "var(--text-strong)", fontWeight: 500 }}>portafolio de activaciones</Link>: {PORTAFOLIO.length} piezas con lo que resolvía cada una y cómo se montó.
         </p>
         <div className="hk-casos-gal">
           {GALERIA.map((g) => (

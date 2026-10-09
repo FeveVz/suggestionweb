@@ -115,7 +115,7 @@ export default function PortafolioPage() {
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2rem,4vw,3rem)" }}>
           <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Portafolio", href: "/portafolio" }]} />
           <div style={{ marginTop: "clamp(1.5rem,3vw,2.5rem)", maxWidth: 780 }}>
-            <Label dot>Portafolio</Label>
+            <Label dot>Portafolio de activaciones</Label>
             <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "18ch" }}>
               El trabajo de calle, montado y documentado
             </h1>

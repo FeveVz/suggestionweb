@@ -81,7 +81,11 @@ export const MAIN_NAV: NavLink[] = [
   { label: "Servicios", href: "/servicios" },
   { label: "Sectores", href: "/sectores" },
   { label: "Casos", href: "/casos" },
-  { label: "Portafolio", href: "/portafolio" },
+  // "Portafolio" al lado de "Casos" se lee como lo mismo: en jerga de agencia
+  // son sinónimos y ninguna de las dos palabras dice QUÉ prueba cada una.
+  // "Activaciones" nombra el oficio, no el formato, y nadie lo confunde con
+  // un caso. La URL y el título de la página siguen siendo /portafolio.
+  { label: "Activaciones", href: "/portafolio" },
   { label: "Blog", href: "/blog" },
   { label: "Nosotros", href: "/nosotros" },
 ];
