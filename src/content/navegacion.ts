@@ -111,6 +111,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
       { label: "Nosotros", href: "/nosotros" },
       { label: "Cómo medimos", href: "/metodo" },
       { label: "Casos", href: "/casos" },
+      { label: "Portafolio BTL", href: "/portafolio" },
       { label: "Blog", href: "/blog" },
       { label: "Contacto", href: "/contacto" },
     ],

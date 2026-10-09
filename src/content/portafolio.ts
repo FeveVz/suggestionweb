@@ -134,6 +134,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "El conductor que espera en un grifo está quieto, aburrido y con el vehículo en la cabeza. Es tránsito cautivo y casi nadie lo aprovecha.",
     hicimos:
       "Exhibición de unidades en el punto de espera, con captación de datos en sitio y agendamiento de prueba de manejo en el momento, sin pedirle a nadie que fuera después al concesionario.",
+    detalle:
+      "Dos días consecutivos en el mismo punto, el 26 y el 27. Volver al día siguiente es lo que permite ajustar el horario al pico real de afluencia del grifo en vez de adivinarlo.",
     fotos: [
       F("grifo-repsol-jac", 1, "Exhibición de unidades JAC Motors con equipo de promotoría durante una activación en Ica"),
       F("grifo-repsol-jac", 2, "Activación de marca de JAC Motors en punto de tránsito cautivo"),
@@ -219,13 +221,15 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
     titular: "QR y ruleta: el dato se entrega jugando",
     cliente: "Pacífico Motors",
     fecha: "2025-01-01",
-    fechaLabel: "2025",
+    fechaLabel: "enero 2025",
     tipo: "Campaña digital",
     sector: "Automotriz",
     reto:
       "Subir la tasa de registro sin pedirle a nadie que llene un formulario de papel apoyado en el capó.",
     hicimos:
       "Dinámica phygital con código QR y ruleta de premios virtual. El registro deja de ser un trámite y pasa a ser el precio de jugar, que es una fricción que la gente sí acepta.",
+    detalle:
+      "La dinámica estuvo activa todo el mes de enero, no un fin de semana. Ese plazo lo aguanta un QR; un formulario de papel apoyado en el capó, no.",
     fotos: [
       F("gira-conduce-tu-rumbo", 1, "Dinámica de ruleta virtual con registro por código QR en la gira de Pacífico Motors"),
       F("gira-conduce-tu-rumbo", 2, "Módulo de activación de la campaña Conduce tu Rumbo"),

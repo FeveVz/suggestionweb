@@ -49,6 +49,9 @@ export default function WorkWall() {
             <Btn as="a" href="/casos" variant="onDark" size="lg">
               Ver los casos <ArrowRight size={18} />
             </Btn>
+            <Btn as="a" href="/portafolio" variant="ghostDark" size="lg">
+              Ver el portafolio
+            </Btn>
           </div>
         </div>
 
