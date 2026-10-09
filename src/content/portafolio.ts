@@ -108,9 +108,9 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Cuatro promotores y un supervisor, tres horas de mercado, 167 datos. Son 56 registros por hora sostenidos: ese ritmo no lo da el volante, lo da salir con un argumento preparado para ese comprador.",
     altBase: "Activación de marca de DFSK en el mercado de Santo Domingo, en Ica",
     alts: [
-      "Módulos de activación de DFSK montados en el mercado de Santo Domingo, en Ica",
       "Equipo de promotoría de Suggestion captando datos para DFSK en el mercado de Santo Domingo",
       "Activación de marca de DFSK y Pacífico Motors en zona de alto tránsito comercial",
+      "Módulos de activación de DFSK montados en el mercado de Santo Domingo, en Ica",
     ],
   },
   {
@@ -129,8 +129,8 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Es el mismo arte impreso en varios formatos y ninguno es un reescalado del anterior: la pieza de fachada se arma para leerse desde la avenida y las de sala para leerse a la altura de la vista, caminando. Reescalar en vez de rearmar es lo que produce ese cartel que nadie entiende a tres metros.",
     altBase: "Piezas impresas de la campaña Ahorra o Nunca instaladas en el concesionario",
     alts: [
-      "Colgantes, banderolas y roll-ups de la campaña Ahorra o Nunca instalados en la sala de ventas del concesionario",
       "Gigantografía de la campaña Ahorra o Nunca instalada en la fachada de vidrio del concesionario",
+      "Colgantes, banderolas y roll-ups de la campaña Ahorra o Nunca instalados en la sala de ventas del concesionario",
     ],
   },
   {
@@ -212,9 +212,9 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Noventa metros cuadrados, cuatro horas de montaje, tres unidades en piso. Con ese ratio el plano no es dónde va cada auto: es por dónde camina el visitante y qué ve al girar la cabeza.",
     altBase: "Exhibición de varias marcas del grupo coordinada por Suggestion en Ica",
     alts: [
-      "Exhibición de varias marcas de vehículos coordinada por Suggestion en Autoplan, Ica",
+      "Exhibición de varias marcas del grupo frente al local de Autoplan, en Ica",
+      "Unidad exhibida con moño y paneles de marca en la activación de Autoplan",
       "Montaje de exhibición vehicular con zonas diferenciadas por marca",
-      "Activación de portafolio de marcas de Derco Center en Ica",
     ],
   },
   {
@@ -441,9 +441,9 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
       "Aforo de 150 y 67 datos: casi uno de cada dos asistentes. En sala estuvieron la Haval Dargo y la Changan X7 Plus. El foyer rinde porque la espera y el intermedio son los dos únicos momentos en que ese público no está mirando el escenario.",
     altBase: "Activación de Derco Center en un show de stand-up comedy en Ica",
     alts: [
-      "Activación de Derco Center en el foyer de un show de stand-up comedy en Ica",
-      "Presencia de marca como presentador oficial del espectáculo",
-      "Montaje de marca en el ingreso del evento nocturno",
+      "Unidad Haval Dargo bajo el toldo de Pacífico Motors en la activación del show de stand-up en Ica",
+      "Activación nocturna de Derco Center en el ingreso del espectáculo",
+      "Presencia de marca de Derco Center en el foyer del show de stand-up comedy",
     ],
   },
   {

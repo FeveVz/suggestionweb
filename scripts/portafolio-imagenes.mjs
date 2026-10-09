@@ -85,7 +85,19 @@ const EXCLUIR = new Set(["INVITACIN_XCMG_reducida.png"]);
  * Existe porque la puntuación automática premia la foto apaisada, nítida y
  * bien expuesta pero no sabe si la imagen ENSEÑA EL TRABAJO: en el
  * relanzamiento de Mitsubishi eligió una sala vacía y bien iluminada,
- * técnicamente la mejor foto del lote y la peor portada posible.
+ * técnicamente la mejor foto del lote y la peor portada posible. En el mercado
+ * de Santo Domingo eligió una que es cielo en sus tres cuartas partes.
+ *
+ * No se intente automatizar esto. Se midieron dos heurísticas sobre las 164
+ * fotos y ninguna separa una cosa de la otra:
+ *   - "tercio superior plano y claro" (cielo): 0 de 164 fotos lo activan, por
+ *     poco que un poste o un cable crucen el encuadre.
+ *   - densidad de detalle (bordes Laplacianos sobre la imagen entera): las
+ *     malas caen entre 70,9 % y 78,8 % de superficie plana y las buenas entre
+ *     65,1 % y 72,2 %. Se solapan: la sala vacía del stand-up puntuaba MEJOR
+ *     que dos portadas buenas.
+ * Lo que distingue una portada no es cuánto detalle tiene, es si lo que se ve
+ * es el trabajo. Eso hoy lo decide un ojo, y queda escrito aquí.
  *
  * Las tres primeras de Mitsubishi y la primera de la inauguración de Autoplan
  * están además enlazadas desde el caso de Autoniza (src/content/casos.ts) por
@@ -93,12 +105,20 @@ const EXCLUIR = new Set(["INVITACIN_XCMG_reducida.png"]);
  */
 const PORTADAS = {
   "Relanzamiento de tienda Mitsubishi": ["IMG_0231.jpg", "IMG_1106.jpg", "Fuso_4.JPG.jpg"],
-  "Activación mercado Sto Domingo": ["IMG_20250709_105238.jpg", "IMG_20250709_105204.jpg", "IMG_20250709_105221.jpg"],
+  // La 105238 era la portada y es cielo en tres cuartas partes: pasa al final.
+  "Activación mercado Sto Domingo": ["IMG_20250709_105204.jpg", "IMG_20250709_105221.jpg"],
   "Activación Grifo Repsol": ["IMG_20250526_164224.jpg", "IMG_20250526_164313.jpg", "IMG_20250520_165212.jpg"],
   "Inauguración de evento de cabalgantes": ["IMG_20240607_201335.jpg", "IMG_20240607_230939.jpg", "IMG_20240607_231144.jpg"],
   "Aniversario Amon Amen": ["IMG_20240816_232323.jpg", "IMG_20240816_232344.jpg"],
   "Presentación Changan CS15": ["IMG_20250526_210414.jpg", "IMG_20250609_185155.jpg"],
-  "Campaña Ahorra o Nunca": ["IMG_20250620_091439.jpg"],
+  // Abre la unidad bajo el toldo, no la sala del local antes de que llegue nadie.
+  "Stand-Up Comedy Melcocha y Barraza": ["IMG_20240615_223956.jpg", "IMG_20240615_205430.jpg"],
+  // Abre el rótulo del local con las unidades y el equipo, no la pared naranja.
+  "Activación en Autoplan": ["IMG_20250512_170334.jpg"],
+  // Protege el orden: esta foto la enlaza el caso de Autoniza por su nombre.
+  "Inauguración de Autoplan": ["IMG_20240920_214032.jpg"],
+  // La gigantografía de fachada abre mejor que el interior: se lee de un vistazo.
+  "Campaña Ahorra o Nunca": ["IMG_20250620_091416.jpg"],
 };
 
 /**
