@@ -173,6 +173,7 @@ export default function MetodoPage() {
             columns={3}
             links={[
               { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+              { label: "Portafolio de activaciones", href: "/portafolio" },
               { label: "Publicidad digital", href: "/servicios/publicidad-digital" },
               { label: "CRM y automatización", href: "/servicios/crm-automatizacion" },
             ]}

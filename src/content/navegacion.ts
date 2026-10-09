@@ -81,6 +81,7 @@ export const MAIN_NAV: NavLink[] = [
   { label: "Servicios", href: "/servicios" },
   { label: "Sectores", href: "/sectores" },
   { label: "Casos", href: "/casos" },
+  { label: "Portafolio", href: "/portafolio" },
   { label: "Blog", href: "/blog" },
   { label: "Nosotros", href: "/nosotros" },
 ];

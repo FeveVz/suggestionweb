@@ -155,6 +155,7 @@ export default function Nosotros() {
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap" }}>
               <Btn as="a" href="/contacto" size="lg">Agenda una llamada <ArrowRight size={18} /></Btn>
               <Btn as="a" href="/casos" variant="secondary" size="lg">Ver casos</Btn>
+              <Btn as="a" href="/portafolio" variant="secondary" size="lg">Ver el portafolio</Btn>
             </div>
           </div>
         </div>

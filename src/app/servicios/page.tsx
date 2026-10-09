@@ -35,6 +35,18 @@ export default function ServiciosPilar() {
       columns: 2,
     }))
     .filter((b) => b.links.length > 0);
+
+  // La prueba, antes del listado por categorías: el pilar de servicios es la
+  // página con más autoridad del sitio después de la portada.
+  related.unshift({
+    title: "Dónde ver esto hecho",
+    columns: 3,
+    links: [
+      { label: "Portafolio de activaciones", href: "/portafolio" },
+      { label: "Casos con cifras", href: "/casos" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
+  });
   return (
     <HubLanding
       breadcrumbs={[

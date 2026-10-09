@@ -8,6 +8,7 @@ export default function NotFound() {
     { label: "Servicios", href: "/servicios" },
     { label: "Sectores", href: "/sectores" },
     { label: "Casos de éxito", href: "/casos" },
+    { label: "Portafolio", href: "/portafolio" },
     { label: "Blog", href: "/blog" },
   ];
   return (

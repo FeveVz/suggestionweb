@@ -77,6 +77,7 @@ ${ciudades}
 ## Casos y equipo
 
 - [Casos de éxito](${u("/casos")}): resultados reales con cifras verificables.
+- [Portafolio](${u("/portafolio")}): 22 activaciones, lanzamientos y piezas de gran formato producidos entre 2024 y 2026, con el dato de oficio de cada uno.
 - [Nosotros](${u("/nosotros")}): cómo trabajamos y quiénes somos.
 - [Auditoría gratis](${u("/auditoria-gratis")}): revisión de la cuenta en 48 h.
 

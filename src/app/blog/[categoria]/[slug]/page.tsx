@@ -73,6 +73,7 @@ const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
     { label: "Merchandising corporativo", href: "/servicios/merchandising" },
     { label: "Material POP", href: "/servicios/material-pop" },
     { label: "Publicidad móvil y bicivallas", href: "/servicios/publicidad-movil" },
+    { label: "Portafolio de activaciones", href: "/portafolio" },
   ],
   "psicologia-de-mercado": [
     { label: "Investigación de mercado", href: "/servicios/investigacion-de-mercado" },

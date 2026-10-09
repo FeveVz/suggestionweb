@@ -192,9 +192,12 @@ export default function Header() {
               </span>
             </Link>
           </div>
-          <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)" }}>
+          <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)", display: "flex", gap: 28, flexWrap: "wrap" }}>
             <Link href="/servicios" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan)" }}>
               Ver todos los servicios →
+            </Link>
+            <Link href="/portafolio" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-muted)" }}>
+              Ver el portafolio →
             </Link>
           </div>
         </MegaPanel>
@@ -215,9 +218,12 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)" }}>
+          <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)", display: "flex", gap: 28, flexWrap: "wrap" }}>
             <Link href="/sectores" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan)" }}>
               Ver todos los sectores →
+            </Link>
+            <Link href="/portafolio" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-muted)" }}>
+              Ver el portafolio →
             </Link>
           </div>
         </MegaPanel>

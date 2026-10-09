@@ -20,6 +20,7 @@ export const SECTORES_HUB = {
 export const SECTORES: Sector[] = [
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
@@ -144,6 +145,7 @@ export const SECTORES: Sector[] = [
   },
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
@@ -272,6 +274,7 @@ export const SECTORES: Sector[] = [
   },
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Caso Hoteles Señor de Luren · 75 reservas", href: "/casos/hoteles-senor-de-luren" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
@@ -407,6 +410,7 @@ export const SECTORES: Sector[] = [
   },
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Caso Granjas Bonanza · 15 contratos", href: "/casos/granjas-bonanza" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
@@ -540,6 +544,7 @@ export const SECTORES: Sector[] = [
   },
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
       { label: "Todos los casos publicados", href: "/casos" },
     ],
@@ -685,6 +690,7 @@ export const SECTORES: Sector[] = [
   },
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
       { label: "Todos los casos publicados", href: "/casos" },
     ],
@@ -815,6 +821,7 @@ export const SECTORES: Sector[] = [
   },
   {
     pruebas: [
+      { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
       { label: "Todos los casos publicados", href: "/casos" },
     ],

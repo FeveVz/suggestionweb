@@ -24,6 +24,17 @@ export default function CiudadPage({ slug }: { slug: string }) {
   const related: RelatedBlock[] = links.length
     ? [{ title: `Lo que ponemos a trabajar en ${c.nombre}`, links, columns: 2 }]
     : [];
+  // La prueba va en todas las ciudades: el trabajo que se enseña se produjo
+  // en Ica y alrededores, que es de donde sale el equipo que viaja.
+  related.push({
+    title: "El trabajo, documentado",
+    columns: 3,
+    links: [
+      { label: "Portafolio de activaciones", href: "/portafolio" },
+      { label: "Casos con cifras", href: "/casos" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
+  });
 
   return (
     <LandingArticle

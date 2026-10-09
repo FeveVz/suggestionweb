@@ -30,6 +30,17 @@ export default function SectoresHub() {
       columns={3}
       gridKicker="Elige tu industria"
       gridHeading="Un playbook propio por sector."
+      related={[
+        {
+          title: "La prueba, para cualquier sector",
+          columns: 3,
+          links: [
+            { label: "Portafolio de activaciones", href: "/portafolio" },
+            { label: "Casos con cifras", href: "/casos" },
+            { label: "Cómo medimos una campaña", href: "/metodo" },
+          ],
+        },
+      ]}
       shape={6}
       extraSchema={collectionPageSchema({
         name: SECTORES_HUB.metaTitle,
