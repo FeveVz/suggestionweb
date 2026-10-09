@@ -20,6 +20,7 @@ import { buildMetadata } from "@/lib/seo";
 import { faqPageSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
+import { fotoPortafolio } from "@/content/portafolio-fotos";
 
 export const metadata: Metadata = buildMetadata({
   // Frase exacta al inicio: la portada es la única que debe competir por
@@ -43,10 +44,10 @@ const SECTORES = [
 ];
 
 const CASOS: { tag: string; title: string; metric: string; metricLocale?: string; note: string; img: string; alt: string }[] = [
-  { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350,000", metricLocale: "es-ES", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", img: "/assets/casos/ceinys-render.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
+  { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350,000", metricLocale: "es-ES", note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.", img: "/assets/casos/ceinys-campana-2.webp", alt: "Anuncio del bono por WhatsApp de Ceinys, la pieza que captaba los leads de la campaña" },
   { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 en campañas de demanda directa.", img: "/assets/casos/bonanza-granja.webp", alt: "Galpón de Granjas Bonanza en operación" },
   { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas generadas en una sola campaña, dentro y fuera de temporada.", img: "/assets/sectores/turismo.webp", alt: "Destino turístico en Ica (sector turismo)" },
-  { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos con convocatoria, activación y cierre en piso.", img: "/assets/casos/autoniza-evento.webp", alt: "Activación de Autoniza con camioneta Mitsubishi en la Plaza de Armas de Ica" },
+  { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos con convocatoria, activación y cierre en piso.", img: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 18), alt: "Unidad Mitsubishi con moño en el evento de Autoniza, en Ica" },
 ];
 
 const POR_QUE = [

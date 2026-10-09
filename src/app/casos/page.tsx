@@ -11,6 +11,7 @@ import { site, whatsappLink } from "@/lib/site";
 import { PORTAFOLIO } from "@/content/portafolio";
 import CountUp from "@/components/CountUp";
 import Grafico from "@/components/Grafico";
+import { fotoPortafolio } from "@/content/portafolio-fotos";
 
 export const metadata: Metadata = buildMetadata({
   title: "Casos de Éxito de Marketing en Ica | Suggestion",
@@ -85,8 +86,10 @@ const CASOS: {
     quote: "",
     author: "",
     shape: 2,
-    img: "/assets/casos/autoniza-evento.webp",
-    alt: "Activación de Autoniza con una camioneta Mitsubishi en la Plaza de Armas de Ica",
+    // La foto anterior era de una activación en la Plaza de Armas, no de los
+    // dos eventos que mide este caso. Esta sí: es del 22 de mayo.
+    img: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 15),
+    alt: "Cliente y asesores junto a una unidad Mitsubishi durante el evento de Autoniza en Ica",
   },
   {
     tag: "Inmobiliario",
@@ -98,8 +101,10 @@ const CASOS: {
     quote: "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
     author: "Rosario, Jefa de Ventas",
     shape: 1,
-    img: "/assets/casos/ceinys-render.webp",
-    alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys",
+    // El render no enseña nada de la campaña; este caso va de captar leads por
+    // WhatsApp y vender 8 lotes, y esta es la pieza que lo hizo.
+    img: "/assets/casos/ceinys-campana-2.webp",
+    alt: "Anuncio del bono por WhatsApp de Ceinys, la pieza que captaba los leads de la campaña",
   },
 ];
 
