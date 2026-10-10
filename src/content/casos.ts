@@ -517,7 +517,11 @@ CASOS_DETALLE.push({
     { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 1), alt: "Fachada iluminada de la tienda Mitsubishi FUSO de Autoniza durante el relanzamiento en Ica", cap: "El relanzamiento de tienda: el primero de los dos eventos" },
     { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 2), alt: "Unidad Mitsubishi cubierta y con moño antes del destape", cap: "La unidad, lista para el destape" },
     { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 3), alt: "Autoridad local en el estrado durante el relanzamiento de la tienda Mitsubishi en Ica", cap: "La autoridad local en el estrado: lo que convirtió la apertura en noticia" },
-    { src: fotoPortafolio("inauguracion-autoplan", 1), alt: "Unidad con moño preparada para la exhibición protocolar de un concesionario", cap: "La unidad del día, preparada antes de abrir" },
+    // Aquí había una foto de la inauguración de Autoplan: otro concesionario,
+    // otra marca, otro cliente. Se puso cuando del relanzamiento solo había
+    // tres fotos publicadas. Ahora hay dieciocho y no hace falta pedir
+    // prestado a otro evento.
+    { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 15), alt: "Cliente y asesores junto a una unidad Mitsubishi durante el evento de Autoniza", cap: "El cierre en piso: lo que el evento existía para que pasara" },
   ],
   secciones: [
     {

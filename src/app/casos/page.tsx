@@ -113,7 +113,10 @@ const GALERIA = [
   { src: "/assets/casos/ceinys-campana-2.webp", alt: "Campaña de bono por WhatsApp de Ceinys", cap: "Ceinys — bono de cierre por WhatsApp" },
   { src: "/assets/casos/ceinys-render.webp", alt: "Render del proyecto inmobiliario de Ceinys", cap: "Ceinys — render del proyecto" },
   { src: "/assets/casos/ceinys-campana-3.webp", alt: "Campaña del proyecto Casa de Playa de Ceinys", cap: "Ceinys — proyecto Casa de Playa" },
-  { src: "/assets/casos/pacifico-campana.webp", alt: "Campaña de concesionario para Pacífico Motors", cap: "Pacífico Motors — campaña de concesionario" },
+  // Aquí estaba una creatividad de Pacífico Motors, que no corresponde a
+  // ninguno de los casos de esta página. La sección dice “las piezas que
+  // hicieron el resultado”, así que solo entran piezas de esos resultados.
+  { src: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 4), alt: "Fachada de la tienda Mitsubishi FUSO de Autoniza iluminada durante el relanzamiento", cap: "Autoniza — el relanzamiento de tienda del 22 de mayo" },
 ];
 
 export default function Casos() {
