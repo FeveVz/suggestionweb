@@ -772,6 +772,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     pruebas: [
       { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+      { label: "Caso Ceinys · agosto 2026", href: "/casos/ceinys-agosto-2026" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     categoriaSlug: "marketing-digital-publicidad",
@@ -1233,6 +1234,7 @@ const SERVICIOS_LIST: Servicio[] = [
   {
     pruebas: [
       { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+      { label: "Caso Ceinys · agosto 2026", href: "/casos/ceinys-agosto-2026" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "crm-automatizacion",

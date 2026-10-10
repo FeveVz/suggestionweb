@@ -869,7 +869,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "¿Tu marca ya no te representa? En Suggestion hacemos rebranding con estrategia, no por moda.",
     moneyPage: { label: "Evaluemos tu marca", href: "/servicios/branding" },
-    relacionados: ["posicionamiento-de-marca", "como-crear-un-logo"],
+    relacionados: ["posicionamiento-de-marca", "como-crear-un-logo", "cuanto-cuesta-registrar-una-marca-en-indecopi"],
   },
   {
     slug: "que-es-el-marketing-digital",
@@ -1145,7 +1145,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "¿Quieres saber cuánto necesitas invertir para tu objetivo? Te damos un número honesto.",
     moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
-    relacionados: ["cpl-vs-roas", "que-es-el-marketing-digital"],
+    relacionados: ["cpl-vs-roas", "que-es-el-marketing-digital", "que-es-el-remarketing"],
   },
   {
     slug: "como-crear-una-pagina-web",
@@ -1772,7 +1772,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion reportamos CPL, ROAS y cierres con transparencia. Sin humo.",
     moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
-    relacionados: ["cuanto-invertir-en-ads-peru", "que-es-el-marketing-digital"],
+    relacionados: ["cuanto-invertir-en-ads-peru", "que-es-el-marketing-digital", "como-elegir-una-agencia-de-marketing-digital"],
   },
   {
     slug: "crear-pagina-web-wix-vs-profesional",
@@ -1994,7 +1994,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion montamos tu automatización de WhatsApp conectada al CRM, para que ningún lead se enfríe.",
     moneyPage: { label: "Agenda una demo", href: "/servicios/crm-automatizacion" },
-    relacionados: ["que-es-un-lead", "ia-en-el-marketing"],
+    relacionados: ["que-es-un-lead", "ia-en-el-marketing", "como-vender-por-whatsapp-paso-a-paso"],
   },
   {
     slug: "comportamiento-del-consumidor-peruano",
@@ -2438,7 +2438,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion hacemos marketing para restaurantes y turismo enfocado en llenar, no en likes.",
     moneyPage: { label: "Llena tus mesas", href: "/marketing-turismo" },
-    relacionados: ["como-conseguir-mas-pacientes"],
+    relacionados: ["como-conseguir-mas-pacientes", "como-promocionar-un-hotel"],
   },
   {
     slug: "como-conseguir-mas-pacientes",
@@ -2525,7 +2525,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion captamos pacientes con publicidad segmentada, web de confianza y seguimiento.",
     moneyPage: { label: "Llena tu agenda", href: "/marketing-salud" },
-    relacionados: ["marketing-para-restaurantes"],
+    relacionados: ["marketing-para-restaurantes", "marketing-para-clinicas-dentales"],
   },
   {
     slug: "posicionamiento-de-marca",
@@ -2921,7 +2921,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion armamos la preventa completa: mensaje de lanzamiento, campañas separadas por tipo de comprador, página del proyecto y seguimiento hasta que el interesado se sienta en tu sala de ventas. Si vas a vender un proyecto inmobiliario en preventa, conversemos antes del lanzamiento.",
     moneyPage: { label: "Hablemos de tu proyecto", href: "/marketing-inmobiliario" },
-    relacionados: ["marketing-inmobiliario-ejemplos", "publicidad-inmobiliaria-en-redes"],
+    relacionados: ["marketing-inmobiliario-ejemplos", "publicidad-inmobiliaria-en-redes", "como-vender-un-terreno-rapido-en-peru"],
   },
   {
     slug: "marketing-automotriz-ejemplos",
@@ -3458,7 +3458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion construimos tu presencia B2B —web, contenido y marca— para abrir mercados desde Ica al mundo.",
     moneyPage: { label: "Abramos nuevos mercados", href: "/marketing-agroexportacion" },
-    relacionados: ["como-vender-pisco-y-vino-por-internet", "posicionamiento-de-marca"],
+    relacionados: ["como-vender-pisco-y-vino-por-internet", "posicionamiento-de-marca", "como-conseguir-clientes-para-exportar"],
   },
   {
     slug: "gigantografias-medidas-materiales-precios",
@@ -3660,7 +3660,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion diseñamos e imprimimos la papelería de la marca, con el archivo revisado antes de que entre a máquina.",
     moneyPage: { label: "Imprenta y papelería", href: "/servicios/imprenta" },
-    relacionados: ["gigantografias-medidas-materiales-precios", "letreros-para-negocio-cual-elegir"],
+    relacionados: ["gigantografias-medidas-materiales-precios", "letreros-para-negocio-cual-elegir", "cuanto-cuesta-un-millar-de-volantes-en-peru"],
   },
   {
     slug: "letreros-para-negocio-cual-elegir",
@@ -4053,7 +4053,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion diseñamos y producimos material POP pensado para la altura y el ángulo desde el que lo van a ver.",
     moneyPage: { label: "Material POP", href: "/servicios/material-pop" },
-    relacionados: ["merchandising-corporativo-que-regalar", "panel-valla-bicivalla-o-vehiculo-rotulado"],
+    relacionados: ["merchandising-corporativo-que-regalar", "panel-valla-bicivalla-o-vehiculo-rotulado", "cuanto-cuesta-un-millar-de-volantes-en-peru"],
   },
   {
     slug: "panel-valla-bicivalla-o-vehiculo-rotulado",

@@ -22,6 +22,7 @@ export const SECTORES: Sector[] = [
     pruebas: [
       { label: "Portafolio: el trabajo de calle, en fotos", href: "/portafolio" },
       { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
+      { label: "Caso Ceinys · agosto 2026", href: "/casos/ceinys-agosto-2026" },
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "marketing-inmobiliario",
