@@ -11,6 +11,11 @@
  *   npm run indexnow -- /a /b   → envía solo esas rutas (más cortés tras un
  *                                 cambio pequeño; no satures el protocolo)
  *
+ * Ojo en Git Bash: convierte los argumentos que empiezan por «/» en rutas de
+ * Windows, así que `-- /casos` llega como `C:/Program Files/Git/casos` y se
+ * envía una URL inventada. Bing responde 200 igual y no te enteras. Llámalo
+ * desde PowerShell, o antepón MSYS_NO_PATHCONV=1.
+ *
  * La clave NO es un secreto: el protocolo exige publicarla en texto plano en
  * https://suggestion.pe/<clave>.txt para demostrar que el dominio es tuyo.
  */
