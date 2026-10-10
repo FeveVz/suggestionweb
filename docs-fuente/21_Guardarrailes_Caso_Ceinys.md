@@ -22,6 +22,33 @@
 
 ---
 
+## Que imagen ilustra cada corte
+
+**Agosto usa la creatividad del propio período** (`ceinys-agosto-creatividad.webp`),
+elegida por el dueño el 10 de octubre de 2026 entre el material de la carpeta
+del cliente. Lo que la fecha: el brief del anuncio es del 7 de agosto, el spot
+del 12 y este estático del 20, el mismo día en que se cerró el reporte.
+
+Pasó el filtro de esta página porque **no lleva nombre de proyecto, ni precio,
+ni cifra del reporte, ni asesora, ni comprador.** Solo la marca del cliente y
+las tres garantías que anuncia en público.
+
+Lo que se descartó del mismo lote, y por qué:
+
+| Pieza | Motivo |
+|---|---|
+| Las de «publicidad agosto» con logo de proyecto arriba | Nombre de proyecto del cliente |
+| La del collage de entregas de lote | Caras de compradores identificables |
+| Las fotos de la carpeta de asesoras | Prohibidas sin excepción |
+| El render anterior (`ceinys-render.webp`) | No es del período; sigue en la tira de `/casos` |
+
+Pendiente de una línea del dueño: confirmar que la presentadora de la pieza es
+modelo contratada y no una de las asesoras. Viste camisa lisa con micrófono de
+solapa, no el polo con logo que llevan ellas en sus fotos, pero conviene que lo
+diga él.
+
+---
+
 ## El corte de septiembre
 
 **Documento interno. No se publica.** Es para quien escriba, diseñe, grabe o

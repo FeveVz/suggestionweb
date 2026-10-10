@@ -64,10 +64,11 @@ const CASOS: {
     quote: "",
     author: "",
     shape: 3,
-    // El render no reclama ninguna campa\u00f1a concreta, que es justo lo que hace
-    // falta aqu\u00ed: no s\u00e9 cu\u00e1l de las creatividades corri\u00f3 en agosto.
-    img: "/assets/casos/ceinys-render.webp",
-    alt: "Render del proyecto inmobiliario de Grupo Inmobiliario Ceinys",
+    // La pieza del per\u00edodo, no un render gen\u00e9rico. El brief es del 7 de agosto,
+    // el spot del 12 y este est\u00e1tico del 20, la misma fecha de corte del
+    // reporte. No lleva nombre de proyecto, ni precio, ni dato del reporte.
+    img: "/assets/casos/ceinys-agosto-creatividad.webp",
+    alt: "Pieza de la campa\u00f1a de agosto de 2026 de Grupo Inmobiliario Ceinys: lote propio con financiamiento directo, sin evaluaci\u00f3n crediticia y con t\u00edtulo de propiedad",
   },
   {
     tag: "Consumo",
