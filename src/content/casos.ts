@@ -198,6 +198,111 @@ export const CASOS_DETALLE: Caso[] = [
     ],
   },
   {
+    slug: "ceinys-agosto-2026",
+    grupo: "ceinys",
+    publicado: "2026-10-10",
+    revisado: "2026-10-10",
+    cliente: "Grupo Inmobiliario Ceinys",
+    sector: "Inmobiliario",
+    sectorHref: "/marketing-inmobiliario",
+    metaTitle: "Caso Ceinys: 14 Lotes a S/225.17 de Pauta | Suggestion",
+    metaDescription:
+      "Del 1 al 20 de agosto de 2026: S/3,152.43 en Meta Ads y 14 lotes cerrados por campa\u00f1as pagadas del per\u00edodo. La resta, el reparto y el corte a mitad de mes.",
+    h1: "Ceinys: 14 lotes cerrados a S/225.17 de publicidad por lote",
+    resumen:
+      "Del 1 al 20 de agosto de 2026 el Grupo Inmobiliario Ceinys cerr\u00f3 17 lotes. No nos atribuimos los 17: tres los cerraron leads que entraron con campa\u00f1as de junio, mayo y abril, y esas ventas las pag\u00f3 el esfuerzo de esos meses. Quedan 14, cerrados por campa\u00f1as pagadas durante el per\u00edodo, y esa es la cifra que usamos. El corte es el 20 de agosto: el mes todav\u00eda no estaba cerrado cuando se midi\u00f3.",
+    stats: [
+      { valor: "S/3,152.43", label: "Invertido en Meta Ads del 01 al 20/08/2026" },
+      { valor: "14", label: "Lotes cerrados por campa\u00f1as pagadas del per\u00edodo" },
+      { valor: "S/225.17", label: "Publicidad por lote vendido" },
+      { valor: "8", label: "Compradores atribuidos a campa\u00f1as del per\u00edodo" },
+    ],
+    reto: "En agosto Ceinys ten\u00eda varios proyectos abiertos a la vez y la atribuci\u00f3n no se sosten\u00eda sola: una parte de las ventas llegaba al CRM sin campa\u00f1a asociada. Sin resolver eso, cualquier n\u00famero que report\u00e1ramos habr\u00eda sido una estimaci\u00f3n con buena cara. La pregunta no era cu\u00e1nto vendi\u00f3 el mes, sino cu\u00e1nto de lo vendido pod\u00eda demostrarse que ven\u00eda de la pauta de ese mes.",
+    solucion: [
+      { titulo: "Conciliar antes de contar", texto: "Las ventas que entraron al CRM sin campa\u00f1a asociada se revisaron una a una contra el registro comercial y se cerr\u00f3 su origen con el equipo del cliente. Hasta que eso no estuvo hecho no se calcul\u00f3 ning\u00fan costo por lote: un denominador construido sobre atribuciones a medias no sirve para decidir presupuesto." },
+      { titulo: "La resta, antes del reporte", texto: "De los 17 lotes del per\u00edodo se separan los 3 que vinieron de campa\u00f1as de junio, mayo y abril. Lo que reportamos es el resultado de 14, no el de 17." },
+      { titulo: "El corte se dice, no se esconde", texto: "El reporte se cerr\u00f3 el 20 de agosto, con once d\u00edas de mes por delante. Las cifras son de veinte d\u00edas y as\u00ed est\u00e1n etiquetadas en cada l\u00ednea de esta p\u00e1gina." },
+      { titulo: "Medici\u00f3n contra el CRM, no contra el administrador", texto: "Meta dice cu\u00e1nto se gast\u00f3. El CRM dice en qu\u00e9 se convirti\u00f3. El reporte cruza las dos fuentes y manda la segunda." },
+    ],
+    servicios: [
+      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "CRM y Automatizaci\u00f3n", href: "/servicios/crm-automatizacion" },
+    ],
+    enlaces: [{ label: "C\u00f3mo medimos una campa\u00f1a", href: "/metodo" }],
+    secciones: [
+      {
+        h2: "La resta que casi nadie hace",
+        parrafo:
+          "Con los mismos datos se pueden titular dos cifras distintas, y las dos son ciertas. Publicamos las dos y usamos la estricta.",
+        grafico: {
+          titulo: "Dos formas de contar los mismos lotes",
+          unidad: "lotes",
+          barras: [
+            { etiqueta: "Cerrados durante el per\u00edodo", valor: 17, texto: "17", nota: "S/185.44 de publicidad por lote" },
+            { etiqueta: "Cerrados por campa\u00f1as pagadas del per\u00edodo", valor: 14, texto: "14", nota: "S/225.17 por lote \u00b7 es la cifra que publicamos", destacada: true },
+          ],
+          pie: "Los 17 incluyen 3 lotes que cerraron leads entrados con campa\u00f1as de junio, mayo y abril: esa venta la pag\u00f3 el esfuerzo de esos meses, no la pauta de agosto. La cifra que usamos es la de 14. Todo medido al 20 de agosto de 2026, con once d\u00edas de mes por delante.",
+        },
+      },
+      {
+        h2: "De d\u00f3nde vino lo que se vendi\u00f3",
+        parrafo:
+          "Tras conciliar el origen de cada venta con el equipo comercial, no qued\u00f3 ning\u00fan lote del per\u00edodo sin campa\u00f1a de origen identificada. Este es el reparto.",
+        tabla: {
+          cabeceras: ["Origen de la venta", "Compradores", "Lotes", "% de lotes"],
+          filas: [
+            ["Campa\u00f1as pagadas del per\u00edodo", "8", "14", "82%"],
+            ["Campa\u00f1as de meses anteriores (jun, may, abr)", "3", "3", "18%"],
+            ["Ventas sin origen identificado", "0", "0", "0%"],
+          ],
+          nota: "El 82% no es una estimaci\u00f3n: es 14 de 17 lotes, contados uno a uno. La fila de cero es la que cuesta trabajo y es la que casi nunca se ense\u00f1a; est\u00e1 en cero porque las ventas que llegaron sin campa\u00f1a se revisaron contra el registro comercial antes de cerrar el reporte, no porque no las hubiera.",
+        },
+      },
+      {
+        h2: "Lo mismo, contado en personas",
+        parrafo:
+          "Un comprador puede llevarse m\u00e1s de un lote, as\u00ed que la misma inversi\u00f3n se puede leer por persona. Cambia el denominador, no el criterio.",
+        grafico: {
+          titulo: "Compradores del per\u00edodo",
+          unidad: "compradores",
+          barras: [
+            { etiqueta: "Compradores del per\u00edodo", valor: 11, texto: "11", nota: "S/286.58 de publicidad por comprador" },
+            { etiqueta: "Atribuidos a campa\u00f1as pagadas del per\u00edodo", valor: 8, texto: "8", nota: "S/394.05 por comprador \u00b7 la cifra estricta", destacada: true },
+          ],
+          pie: "Los mismos S/3,152.43 divididos entre personas en vez de entre lotes. Nunca se cruzan bloques: la inversi\u00f3n del per\u00edodo se divide por cifras del per\u00edodo, no por las de otro corte.",
+        },
+      },
+      {
+        h2: "Lo que no vas a encontrar en esta p\u00e1gina",
+        parrafo:
+          "El reporte del que salen estas cifras tiene diez hojas y la mayor parte no es publicable. No por adorno: hay nombres de compradores, nombres y desempe\u00f1o de las asesoras, nombres de campa\u00f1as y de proyectos, y el detalle de c\u00f3mo est\u00e1 montada la cuenta del cliente. Nada de eso sale, ni siquiera con iniciales.",
+        bullets: [
+          { titulo: "Ninguna cifra de facturaci\u00f3n", texto: "En las diez hojas del reporte no existe una sola cifra de ingreso. Derivarla multiplicando lotes por un precio ser\u00eda inventarla, y se nota." },
+          { titulo: "Ning\u00fan n\u00famero redondeado", texto: "No vas a leer \u00abcasi 20 lotes\u00bb ni \u00abtres de cada cuatro\u00bb. Son 14 de 17, que es el 82%, y la inversi\u00f3n son S/3,152.43." },
+          { titulo: "Ninguna cifra sin su fecha de corte", texto: "Todo lo de esta p\u00e1gina est\u00e1 medido al 20 de agosto de 2026. Un n\u00famero sin corte no se puede auditar, y uno que no se puede auditar no vale nada." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "\u00bfPor qu\u00e9 el per\u00edodo termina el 20 de agosto y no el 31?",
+        a: "Porque es la fecha en que se cerr\u00f3 el reporte cruzado con el CRM, con once d\u00edas de mes por delante. Publicar \u00abagosto\u00bb a secas dar\u00eda a entender un mes completo que estas cifras no cubren, as\u00ed que el corte va pegado a cada n\u00famero.",
+      },
+      {
+        q: "\u00bfPor qu\u00e9 14 lotes y no 17?",
+        a: "Porque tres de los diecisiete los cerraron leads que entraron con campa\u00f1as de junio, mayo y abril. Esas ventas ocurrieron en el per\u00edodo, pero las pag\u00f3 el esfuerzo de meses anteriores. Las dos cifras est\u00e1n publicadas; la que usamos es la de 14.",
+      },
+      {
+        q: "\u00bfC\u00f3mo s\u00e9 que la atribuci\u00f3n es real y no una estimaci\u00f3n?",
+        a: "Porque las ventas que llegaron al CRM sin campa\u00f1a asociada no se completaron de memoria: se revisaron contra el registro comercial del cliente y su origen se confirm\u00f3 con el equipo antes de cerrar el reporte. Por eso la fila de \u00abventas sin origen identificado\u00bb est\u00e1 en cero.",
+      },
+      {
+        q: "\u00bfEste resultado se puede comparar con el de otro per\u00edodo?",
+        a: "Con cuidado y solo si el criterio es el mismo. Cada corte tiene su propio per\u00edodo, su propia inversi\u00f3n y su propia resta; comparar la cifra estricta de un corte con la generosa de otro no dice nada \u00fatil. En esta p\u00e1gina est\u00e1n las dos, para que la comparaci\u00f3n la pueda hacer usted con los mismos criterios.",
+      },
+    ],
+  },
+  {
     slug: "inmobiliaria-ceinys",
     grupo: "ceinys",
     publicado: "2026-07-01",

@@ -1,4 +1,28 @@
-# Guardarraíles del caso Ceinys — septiembre 2026
+# Guardarraíles de los casos Ceinys — agosto y septiembre de 2026
+
+> **Dos cortes publicados, mismas reglas.** Lo de abajo se escribió para el
+> corte de septiembre y se aplica igual al de agosto, publicado el 10 de
+> octubre de 2026 a partir del reporte cruzado Meta × CRM **del 1 al 20 de
+> agosto**: S/3,152.43 de inversión, 17 lotes en el período y 14 atribuidos a
+> campañas pagadas del período (S/225.17 por lote), 11 compradores y 8
+> atribuidos. Los tres lotes restantes vinieron de campañas de junio, mayo y
+> abril.
+>
+> **Dos avisos propios de agosto:**
+> 1. El corte es el 20, no el 31: el mes no estaba cerrado. Esa fecha va
+>    pegada a cada cifra, igual que el 29 de septiembre en el otro caso.
+> 2. La regla 8 prohibía comparar con el caso de S/3,000. Ahora hay un
+>    segundo corte del mismo cliente a cinco días de distancia, y la
+>    comparación entre agosto y septiembre la va a hacer el lector solo.
+>    Ninguna de las dos páginas la hace por él: cada una publica su período,
+>    su inversión y su resta, y nada más.
+>
+> Entre el 21 y el 25 de agosto no hay cobertura: el corte de agosto termina
+> el 20 y el de septiembre empieza el 26. Ninguna página afirma continuidad.
+
+---
+
+## El corte de septiembre
 
 **Documento interno. No se publica.** Es para quien escriba, diseñe, grabe o
 corte cualquier pieza con el material de este reporte: web, redes, propuesta

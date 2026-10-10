@@ -45,7 +45,7 @@ const CASOS: {
     tag: "Inmobiliario",
     href: "/casos/ceinys-septiembre-2026",
     title: "Grupo Inmobiliario Ceinys",
-    periodo: "Del 26 de agosto al 29 de septiembre de 2026",
+    periodo: "Campaña de septiembre · del 26 de agosto al 29 de septiembre de 2026",
     metric: "18",
     note: "lotes cerrados a S/230.51 de publicidad por lote, con S/4,149.21 en Meta Ads. Ya descontados los que cerró cartera anterior al período.",
     quote: "",
@@ -53,6 +53,21 @@ const CASOS: {
     shape: 1,
     img: "/assets/casos/ceinys-campana-1.webp",
     alt: "Creatividad de la campaña de lotes de Grupo Inmobiliario Ceinys en Meta Ads",
+  },
+  {
+    tag: "Inmobiliario",
+    href: "/casos/ceinys-agosto-2026",
+    title: "Grupo Inmobiliario Ceinys",
+    periodo: "Campa\u00f1a de agosto \u00b7 del 1 al 20 de agosto de 2026",
+    metric: "14",
+    note: "lotes cerrados a S/225.17 de publicidad por lote, con S/3,152.43 en Meta Ads. Ya descontados los 3 que cerraron leads de campa\u00f1as anteriores.",
+    quote: "",
+    author: "",
+    shape: 3,
+    // El render no reclama ninguna campa\u00f1a concreta, que es justo lo que hace
+    // falta aqu\u00ed: no s\u00e9 cu\u00e1l de las creatividades corri\u00f3 en agosto.
+    img: "/assets/casos/ceinys-render.webp",
+    alt: "Render del proyecto inmobiliario de Grupo Inmobiliario Ceinys",
   },
   {
     tag: "Consumo",
