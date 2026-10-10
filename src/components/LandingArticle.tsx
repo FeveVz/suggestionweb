@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Phone, Check } from "lucide-react";
 import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
@@ -53,6 +54,7 @@ export default function LandingArticle({
   h1,
   hero,
   heroImage,
+  galeria,
   ctaLabel,
   proof,
   secciones,
@@ -71,7 +73,9 @@ export default function LandingArticle({
   kicker: string;
   h1: string;
   hero: string;
-  heroImage?: { src: string; alt: string };
+  heroImage?: { src: string; alt: string; w?: number; h?: number };
+  /** Fotos del trabajo real, con su pie. Van tras las secciones. */
+  galeria?: { src: string; alt: string; cap: string }[];
   ctaLabel: string;
   proof?: string;
   secciones: Seccion[];
@@ -165,7 +169,24 @@ export default function LandingArticle({
             {heroImage ? (
               <aside style={{ minWidth: 0 }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={heroImage.src} alt={heroImage.alt} loading="lazy" className="hk-heroimg" style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }} />
+                {/*
+                  Carga inmediata y con medidas, no diferida y sin ellas.
+                  Iba con loading="lazy" y sin width/height: es la imagen más
+                  importante de la página —la que suele ser el LCP— y el
+                  navegador la aplazaba, y mientras no cargaba su caja medía
+                  2 px, así que al llegar empujaba todo hacia abajo.
+                */}
+                <img
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  width={heroImage.w}
+                  height={heroImage.h}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="hk-heroimg"
+                  style={{ width: "100%", height: "auto", aspectRatio: heroImage.w && heroImage.h ? `${heroImage.w} / ${heroImage.h}` : undefined, borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }}
+                />
               </aside>
             ) : heroItems.length > 0 ? (
               <aside style={{ minWidth: 0 }}>
@@ -230,6 +251,50 @@ export default function LandingArticle({
           <Secciones secciones={secciones} />
         </div>
       </Section>
+
+      {/* EL TRABAJO, EN FOTO — fotografía propia, no banco de imágenes */}
+      {galeria && galeria.length > 0 && (
+        <Section tone="light" style={{ background: "var(--surface-raised)", paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
+          <div style={{ maxWidth: 760, marginBottom: "var(--space-6)" }}>
+            <Label dot>El trabajo, en foto</Label>
+            <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "14px 0 0", maxWidth: "58ch" }}>
+              Todas son nuestras, tomadas en el montaje. Ninguna viene de un banco de imágenes.
+            </p>
+          </div>
+          <div className="hk-serv-gal">
+            {galeria.map((g) => (
+              <figure key={g.src} style={{ margin: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={g.src} alt={g.alt} loading="lazy" decoding="async" />
+                <figcaption>{g.cap}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <Link href="/portafolio" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: "var(--space-6)", font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
+            Las 22 activaciones, con el dato de oficio de cada una <ArrowRight size={15} />
+          </Link>
+          <style>{`
+            .hk-serv-gal { display:grid; gap:var(--space-4); grid-template-columns:1fr; }
+            /* Marco cuadrado y sin recorte, no apaisado y recortado.
+               El archivo del portafolio es 62 % vertical: un marco 4/3 con
+               recorte se come la mitad de esas fotos. Con el cuadrado y sin
+               recortar, la vertical llena a lo alto, la apaisada a lo ancho y
+               la fila sigue cuadrando. */
+            .hk-serv-gal img {
+              width:100%; aspect-ratio:1/1; object-fit:contain; display:block;
+              border-radius:var(--radius-md); border:1px solid var(--border-subtle);
+              background:var(--white);
+            }
+            .hk-serv-gal figcaption {
+              font:var(--fw-light) var(--fs-xs)/1.45 var(--font-body);
+              color:var(--text-muted); margin-top:10px;
+            }
+            @media (min-width: 720px) {
+              .hk-serv-gal { grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
+            }
+          `}</style>
+        </Section>
+      )}
 
       {/* AST — qué incluye / beneficios / proceso (transaccional) */}
       <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} tema={tema} />
