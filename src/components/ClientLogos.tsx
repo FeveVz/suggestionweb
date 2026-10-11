@@ -44,7 +44,12 @@ export default function ClientLogos() {
           <Label>Más de 50 marcas confían en nosotros</Label>
         </div>
         <div style={{ overflow: "hidden", maskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)", WebkitMaskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)" }}>
-          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(2rem,4vw,3.75rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 55s linear infinite", willChange: "transform" }}>
+          {/* 32s, no 55. La fila duplicada mide ~5.400 px en escritorio, así que
+              translateX(-50%) recorre ~2.700: a 55s eran 49 px/s, 3,2 segundos
+              por logo, y la banda parecía quieta. A 32s van ~84 px/s, menos de
+              dos segundos por logo. Sigue pausándose al pasar el mouse y sigue
+              apagada con prefers-reduced-motion. */}
+          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(2rem,4vw,3.75rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 32s linear infinite", willChange: "transform" }}>
             {row.map((logo, i) => (
               // Altura balanceada por logo (área visual pareja), ancho natural.
               // eslint-disable-next-line @next/next/no-img-element
