@@ -5,6 +5,16 @@
  */
 
 import type { Seccion, Faq } from "./types";
+import { FOTOS_PORTAFOLIO, fotoPortafolio } from "./portafolio-fotos";
+
+/**
+ * Foto del archivo propio, con sus medidas reales para que el navegador
+ * reserve el hueco antes de cargarla y el texto no salte.
+ */
+const foto = (slug: string, n: number, alt: string, cap: string) => {
+  const m = FOTOS_PORTAFOLIO[slug]?.[n - 1];
+  return { src: fotoPortafolio(slug, n), alt, cap, w: m?.[0], h: m?.[1] };
+};
 
 export type BlogCategoria = {
   slug: string;
@@ -3473,6 +3483,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "Gigantografía, banner y lona: la misma pieza con tres nombres",
+        foto: foto("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada sobre la fachada de vidrio de un local comercial en Ica", "Una gigantografía de fachada, impresa en una sola pieza y montada sobre la estructura de vidrio. A ese tamaño el material importa más que la resolución: se mira de lejos y aguanta sol todo el día."),
         parrafo:
           "En Perú los tres términos se usan casi como sinónimos, y eso provoca malentendidos al cotizar. Gigantografía es la impresión de gran formato, sin importar sobre qué. Banner es el material más común para hacerla —una lona de PVC que se mide en onzas— y lona es el nombre genérico de ese material. Cuando pidas precio, lo que define el costo no es la palabra que uses: es el material, el gramaje y los metros cuadrados.",
       },
@@ -3675,6 +3686,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "Qué tipo de letrero necesita tu local",
+        foto: foto("xcmg-linea-amarilla-ica", 12, "Letras corpóreas iluminadas montadas sobre la fachada de un local comercial", "Letras corpóreas retroiluminadas sobre fachada. Es el formato que se sigue leyendo de noche sin depender del alumbrado de la calle, y el que más encarece el mantenimiento."),
         parrafo:
           "La decisión no es de presupuesto, es de situación: desde dónde te van a ver, a qué velocidad pasa quien te mira y si necesitas que te vean de noche. Un local de avenida y uno de galería no tienen el mismo problema.",
         tabla: {
@@ -3775,6 +3787,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "Las cuatro técnicas, y cuándo usa cada una",
+        foto: foto("mercado-santo-domingo-dfsk", 1, "Equipo de campo con uniforme de marca atendiendo un módulo en la calle", "Uniforme de campo en una activación a pie de calle. Aquí manda que resista el lavado y el sol, no el acabado más fino: la prenda sale a trabajar todos los días."),
         parrafo:
           "Casi todo el precio de un polo personalizado lo deciden dos cosas: cuántos pides y qué técnica usas para marcarlos. Y las dos están relacionadas, porque cada técnica tiene un costo de arranque distinto que se reparte entre las prendas del pedido.",
         tabla: {
@@ -3873,6 +3886,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "La única pregunta que importa",
+        foto: foto("xcmg-linea-amarilla-ica", 2, "Entrega de una réplica a escala de una máquina como obsequio corporativo", "Una réplica a escala del propio producto como obsequio. Funciona porque se queda en el escritorio de quien decide, que es exactamente donde un regalo corporativo tiene que durar."),
         parrafo:
           "No es qué regalar, es dónde va a terminar. Un artículo promocional funciona cuando se queda a la vista en el espacio donde tu cliente trabaja o vive, porque ahí es donde hace su trabajo: recordarte sin que tú estés. Todo lo demás —que sea original, que guste en el momento, que se vea caro— es secundario a eso.",
         bullets: [
@@ -3969,6 +3983,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "Qué es el material POP y qué hace cada pieza",
+        foto: foto("gira-conduce-tu-rumbo", 6, "Tótem impreso con código QR instalado en un punto de venta durante una campaña", "Un tótem con QR en punto de venta. La pieza no vende sola: lo que hace es dar una razón para escanear, y ahí el que pasaba se vuelve un contacto."),
         parrafo:
           "POP viene de «punto de venta»: son las piezas que trabajan dentro de la tienda, donde el cliente ya está y tiene el producto al alcance. A diferencia de la publicidad que convence antes de salir de casa, esta solo tiene que ganar la comparación contra lo que está al lado.",
         tabla: {
@@ -4068,6 +4083,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "Qué hace cada formato",
+        foto: foto("xcmg-linea-amarilla-nazca", 3, "Banderolas de marca instaladas junto a maquinaria en una demostración al aire libre", "Banderolas en el perímetro de una demostración al aire libre. Es el exterior más barato de la lista y el único que se monta y se retira el mismo día."),
         parrafo:
           "La publicidad exterior se compra de dos maneras distintas: alquilando un espacio que ya existe o fabricando algo que se mueve. La diferencia no es solo de precio, es de qué tipo de atención consigues.",
         tabla: {

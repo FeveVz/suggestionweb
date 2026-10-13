@@ -47,6 +47,11 @@ export type Seccion = {
   pasos?: Paso2[];
   dato?: Dato;
   nota?: Nota;
+  /**
+   * Foto del trabajo real dentro de la sección. Fotografía propia, nunca banco
+   * de imágenes: si no hay una foto honesta del asunto, la sección va sin foto.
+   */
+  foto?: { src: string; alt: string; cap: string; w?: number; h?: number };
 };
 
 export type Faq = { q: string; a: string };

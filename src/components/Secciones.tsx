@@ -323,8 +323,51 @@ export default function Secciones({ secciones }: { secciones: Seccion[] }) {
             </ul>
           )}
           {sec.nota && <NotaAlMargen n={sec.nota} />}
+          {sec.foto && <FotoSeccion f={sec.foto} />}
         </div>
       ))}
     </div>
+  );
+}
+
+/**
+ * Foto del trabajo real dentro de una sección.
+ *
+ * Va con `width`/`height` siempre que se conocen: sin ellos el navegador no
+ * sabe cuánto hueco reservar y el texto salta cuando la imagen carga. Ya pasó
+ * en las páginas de servicio, donde la foto de cabecera colapsaba a 2 px.
+ */
+function FotoSeccion({ f }: { f: NonNullable<Seccion["foto"]> }) {
+  return (
+    <figure style={{ margin: "26px 0 0" }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={f.src}
+        alt={f.alt}
+        width={f.w}
+        height={f.h}
+        loading="lazy"
+        decoding="async"
+        style={{
+          width: "100%",
+          height: "auto",
+          aspectRatio: f.w && f.h ? `${f.w} / ${f.h}` : undefined,
+          display: "block",
+          borderRadius: "var(--radius-md)",
+          border: "1px solid var(--border-subtle)",
+          background: "var(--surface-raised)",
+        }}
+      />
+      <figcaption
+        style={{
+          font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)",
+          color: "var(--text-muted)",
+          marginTop: 10,
+          maxWidth: "62ch",
+        }}
+      >
+        {f.cap}
+      </figcaption>
+    </figure>
   );
 }

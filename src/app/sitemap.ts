@@ -97,13 +97,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
-    url: u(`/blog/${p.categoria}/${p.slug}`),
-    // La fecha del post si es posterior; si no, la del cambio global.
-    lastModified: new Date(`${p.date}T00:00:00`) > GLOBAL ? new Date(`${p.date}T00:00:00`) : GLOBAL,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => {
+    // Las fotos propias que ilustran el artículo, para que Google las indexe
+    // asociadas a él y no solo sueltas en /portafolio.
+    const fotos = p.secciones.flatMap((s) => (s.foto ? [u(s.foto.src)] : []));
+    return {
+      url: u(`/blog/${p.categoria}/${p.slug}`),
+      // La fecha del post si es posterior; si no, la del cambio global.
+      lastModified: new Date(`${p.date}T00:00:00`) > GLOBAL ? new Date(`${p.date}T00:00:00`) : GLOBAL,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+      ...(fotos.length ? { images: fotos } : {}),
+    };
+  });
 
   const casos: MetadataRoute.Sitemap = CASOS_DETALLE.map((c) => ({
     url: u(`/casos/${c.slug}`),
