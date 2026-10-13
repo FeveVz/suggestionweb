@@ -133,8 +133,9 @@ export default function Home() {
         <TaglineStrip items={["Marketing que se mide en ventas", "Resultados que puedes contar", "Una estrategia para cada rubro"]} />
       </section>
 
-      {/* PROOF BAR (sin la fila del funnel: ya aparece en el panel del hero) */}
-      <ProofBar funnel={false} />
+      {/* PROOF BAR (sin la fila del funnel: ya aparece en el panel del hero).
+          Con el equipo: las cifras dicen cuánto, las siete personas dicen quién. */}
+      <ProofBar funnel={false} equipo />
 
       {/* LOGOS DE CLIENTES */}
       <ClientLogos />
