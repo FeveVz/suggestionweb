@@ -31,6 +31,9 @@ export const site = {
   region: "Ica",
   country: "PE",
 
+  /** Año de fundación. Lo usa `aniosActivos()` y el `foundingDate` del JSON-LD. */
+  fundacion: 2019,
+
   // Imágenes de marca.
   // logo/logoWhite (PNG 7118px) son SOLO para JSON-LD y metadatos: los leen los
   // rastreadores, no viajan al navegador. Lo que se pinta en pantalla usa las
@@ -59,4 +62,18 @@ export function whatsappLink(message?: string): string {
 /** URL absoluta a partir de una ruta relativa. */
 export function absoluteUrl(path = "/"): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+/**
+ * Años de actividad, contados desde la fundación.
+ *
+ * El "7 años" estaba escrito a mano en nueve sitios. Escrito así, el 1 de
+ * enero del año que viene el sitio entero miente a la vez y nadie se entera:
+ * es el tipo de dato que envejece en silencio. Calculado, se corrige solo.
+ *
+ * Se recalcula en cada compilación, no en el navegador, porque las 92 páginas
+ * son estáticas; cada despliegue lo deja al día.
+ */
+export function aniosActivos(): number {
+  return new Date().getFullYear() - site.fundacion;
 }

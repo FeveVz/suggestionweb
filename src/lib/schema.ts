@@ -17,6 +17,11 @@ export function organizationSchema(): Json {
     name: site.name,
     legalName: site.legalName,
     taxID: site.ruc,
+    // Año de fundación. Lo lee el grafo de conocimiento de Google y lo citan
+    // los asistentes cuando alguien pregunta desde cuándo existe la agencia:
+    // antes esa respuesta dependía de que el modelo encontrara "7 años"
+    // suelto en una frase, que además caduca cada enero.
+    foundingDate: String(site.fundacion),
     description: site.description,
     url: SITE_URL,
     logo: absoluteUrl(site.logo),

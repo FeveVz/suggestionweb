@@ -3,6 +3,7 @@ import { Stat } from "@/components/brand/parts";
 import CountUp from "@/components/CountUp";
 import { EQUIPO } from "@/content/equipo";
 import { SECTORES } from "@/content/sectores";
+import { aniosActivos, site } from "@/lib/site";
 
 /**
  * Barra de prueba social (doc 16 §5). Banda oscura con la línea del funnel
@@ -19,7 +20,9 @@ const DEFAULT_STATS: ProofStat[] = [
   { value: "19", label: "Marcas de vehículos atendidas", href: "/marketing-automotriz" },
   { value: "+50", label: "Marcas que confían en nosotros", href: "/casos" },
   { value: String(SECTORES.length), label: "Sectores con estrategia propia", href: "/sectores" },
-  { value: "7", label: "Años ayudando a marcas de Ica y Perú a vender más", href: "/nosotros" },
+  // "7 años" es una afirmación; "desde 2019" es un dato que se puede
+  // comprobar. Y el número se calcula, así que no caduca en enero.
+  { value: String(aniosActivos()), label: `Años en Ica y Perú, desde ${site.fundacion}`, href: "/nosotros" },
 ];
 
 const FUNNEL = ["Lead", "Cita", "Cierre"];
@@ -98,7 +101,7 @@ export default function ProofBar({
               ))}
             </ul>
             <a href="/nosotros" className="hk-equipo-mas">
-              Siete años, más de 50 marcas y los datos de la agencia <ArrowRight size={15} aria-hidden />
+              Desde {site.fundacion}, más de 50 marcas y los datos de la agencia <ArrowRight size={15} aria-hidden />
             </a>
           </div>
         )}

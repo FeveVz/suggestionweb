@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
-import { site, whatsappLink, absoluteUrl, ORG_ID } from "@/lib/site";
+import { site, whatsappLink, absoluteUrl, ORG_ID, aniosActivos } from "@/lib/site";
 import Secciones from "@/components/Secciones";
 import Faq from "@/components/Faq";
 import type { Seccion, Faq as FaqItem } from "@/content/types";
@@ -29,12 +29,12 @@ const SECCIONES: Seccion[] = [
   {
     h2: "Qué somos, en datos",
     parrafo:
-      "Somos una agencia de marketing de performance con base en Ica y clientes en todo el Perú. No es una descripción de folleto: significa que el trabajo se mide en leads, citas y cierres, y que el reporte del mes trae esos números aunque no favorezcan. Llevamos siete años haciéndolo, y en ese tiempo han pasado por aquí más de cincuenta marcas de sectores muy distintos.",
+      `Somos una agencia de marketing de performance con base en Ica y clientes en todo el Perú. No es una descripción de folleto: significa que el trabajo se mide en leads, citas y cierres, y que el reporte del mes trae esos números aunque no favorezcan. Abrimos en ${site.fundacion} y llevamos ${aniosActivos()} años haciéndolo; en ese tiempo han pasado por aquí más de cincuenta marcas de sectores muy distintos.`,
     tabla: {
       cabeceras: ["", ""],
       filas: [
         ["Dónde estamos", "Ica, Perú · operamos en todo el país"],
-        ["Desde cuándo", "7 años trabajando marcas de Ica y del Perú"],
+        ["Desde cuándo", `${site.fundacion} · ${aniosActivos()} años trabajando marcas de Ica y del Perú`],
         ["Marcas atendidas", "Más de 50"],
         ["Sectores con estrategia propia", "7, cada uno con su método"],
         ["Automotriz", "19 marcas de vehículos, de livianos a línea amarilla"],

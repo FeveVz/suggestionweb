@@ -73,6 +73,12 @@ const nextConfig: NextConfig = {
       // /about llegaba a la 404 desde algún enlace externo antiguo (visto en
       // Clarity). La página equivalente es /nosotros.
       { source: "/about", destination: "/nosotros", permanent: true },
+      // Ficha de alguien que ya no trabaja aquí. Esa URL estaba indexada y va
+      // impresa en el QR de sus tarjetas, así que no puede quedar en 404.
+      // Apunta a /nosotros y no a quien ocupa hoy el cargo: quien escanea esa
+      // tarjeta la buscaba a ella, y mandarlo a la ficha de otra persona sin
+      // avisar sería confuso.
+      { source: "/equipo/maria-teresa", destination: "/nosotros", permanent: true },
     ];
   },
 

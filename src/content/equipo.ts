@@ -43,12 +43,15 @@ export const EQUIPO: Talento[] = [
     ...T,
   },
   {
-    slug: "maria-teresa",
-    nombre: "María Teresa Vera",
-    corto: "María Teresa",
+    slug: "carolina",
+    nombre: "Carolina Jorge",
+    corto: "Carolina",
     rol: "Administradora",
+    // La biografía y las especialidades describen el cargo, no a la persona,
+    // igual que en el resto de las fichas. Se conservan del traspaso: lo que
+    // cambia es quién lo ocupa.
     bio: "Administración y operación: que cada proyecto salga a tiempo, en orden y con los números claros.",
-    iniciales: "MV",
+    iniciales: "CJ",
     especialidades: ["Administración", "Operaciones", "Gestión de proyectos"],
     ...T,
   },
