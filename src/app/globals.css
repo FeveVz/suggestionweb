@@ -553,6 +553,34 @@ img, svg, video { max-width: 100%; }
 .hk-btn svg, .hk-ulink svg { transition: transform var(--dur-fast) var(--ease-out); }
 .hk-btn:hover svg, .hk-ulink:hover svg { transform: translateX(4px); }
 
+/* ── Servicios de la home ──────────────────────────────────────────────────
+   Los 16 servicios eran enlaces .hk-ulink en gris #696969 a 15 px: más claros
+   y más pequeños que el texto normal de la página, y .hk-ulink solo subraya al
+   hover, que en un teléfono no existe. Es decir, dieciséis puertas que no
+   parecían puertas. Ahora son pastillas con borde: se leen como tocables en
+   reposo, con el dedo y con el teclado. */
+.hk-serv-meta {
+  font: var(--fw-light) var(--fs-xs)/1.4 var(--font-body);
+  color: var(--text-muted); margin: 8px 0 0;
+}
+.hk-serv-meta strong { font-weight: 700; color: var(--text-strong); }
+
+.hk-serv-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.hk-serv-chip {
+  display: inline-flex; align-items: center; min-height: 40px;
+  padding: 8px 15px; border-radius: 999px;
+  border: 1px solid var(--border-subtle); background: var(--white);
+  font: var(--fw-light) var(--fs-sm)/1.2 var(--font-body);
+  color: var(--text-body); text-decoration: none;
+  transition: border-color var(--dur-base) var(--ease-out),
+              background-color var(--dur-base) var(--ease-out),
+              color var(--dur-base) var(--ease-out);
+}
+.hk-serv-chip:hover, .hk-serv-chip:focus-visible {
+  border-color: var(--cyan); background: var(--surface-raised); color: var(--text-strong);
+}
+@media (prefers-reduced-motion: reduce) { .hk-serv-chip { transition: none; } }
+
 /* Logos de clientes: escala de grises -> color al hover */
 .hk-logo { filter: grayscale(1); opacity: 0.75; transition: filter var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
 .hk-logo:hover { filter: none; opacity: 1; }

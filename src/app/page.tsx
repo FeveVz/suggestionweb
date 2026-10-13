@@ -20,6 +20,7 @@ import { buildMetadata } from "@/lib/seo";
 import { faqPageSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
+import { desdeCategoria } from "@/content/precios";
 import { fotoPortafolio } from "@/content/portafolio-fotos";
 
 export const metadata: Metadata = buildMetadata({
@@ -175,9 +176,20 @@ export default function Home() {
                   <Link href={`/servicios/${cat.slug}`} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", letterSpacing: "var(--tracking-snug)", color: "var(--text-strong)" }}>
                     {cat.label}
                   </Link>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 14px", marginTop: 12 }}>
+                  {/* Cuántos servicios y desde cuánto. Dos preguntas que el
+                      visitante se hace y que la lista de nombres no contestaba:
+                      "¿qué incluye esto?" y "¿me alcanza?". El precio sale de
+                      PRECIOS, así que no se desincroniza. */}
+                  <p className="hk-serv-meta">
+                    {cat.children.length} servicios
+                    {(() => {
+                      const desde = desdeCategoria(cat.children.map((c) => c.href.replace("/servicios/", "")));
+                      return desde ? <> · desde <strong>{desde}</strong></> : <> · a cotizar</>;
+                    })()}
+                  </p>
+                  <div className="hk-serv-chips">
                     {cat.children.map((c) => (
-                      <Link key={c.href} href={c.href} className="hk-ulink hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-muted)" }}>
+                      <Link key={c.href} href={c.href} className="hk-serv-chip">
                         {c.label}
                       </Link>
                     ))}

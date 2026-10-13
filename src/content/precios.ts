@@ -263,3 +263,36 @@ export const PRECIOS: Record<string, PlanPrecio[]> = {
 };
 
 export const getPrecios = (slug: string): PlanPrecio[] | undefined => PRECIOS[slug];
+
+/** "S/1,500" → 1500. Devuelve null si el texto no es un importe. */
+const aNumero = (precio: string): number | null => {
+  const n = Number(precio.replace(/[^0-9]/g, ""));
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
+
+/**
+ * Precio de entrada de una categoría, para la home.
+ *
+ * La regla es deliberadamente estricta: **solo da una cifra cuando TODOS los
+ * servicios de la categoría tienen precio publicado.** Si alguno va por
+ * cotización, la categoría entera dice "a cotizar".
+ *
+ * No es purismo. "Activación y medios físicos" tiene cuatro de seis servicios
+ * por cotización, y su plan más barato es S/120 de publicidad móvil —que son
+ * cuatro horas, con contrato mínimo de quince días. Anunciar "desde S/120"
+ * sería poner un piso que no existe, justo lo que /nosotros promete no hacer.
+ * Con esta regla esa categoría cae sola en "a cotizar" y no hace falta
+ * mantener ninguna excepción a mano.
+ */
+export function desdeCategoria(slugs: string[]): string | null {
+  const minimos: number[] = [];
+  for (const slug of slugs) {
+    const planes = PRECIOS[slug];
+    if (!planes?.length) return null; // alguno va por cotización
+    const n = planes.map((p) => aNumero(p.precio)).filter((x): x is number => x !== null);
+    if (!n.length) return null;
+    minimos.push(Math.min(...n));
+  }
+  if (!minimos.length) return null;
+  return `S/${Math.min(...minimos).toLocaleString("es-PE")}`;
+}
