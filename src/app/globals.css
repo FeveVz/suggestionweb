@@ -565,6 +565,26 @@ img, svg, video { max-width: 100%; }
 }
 .hk-serv-meta strong { font-weight: 700; color: var(--text-strong); }
 
+/* Entrada por el problema. Los enlaces van subrayados SIEMPRE, no solo al
+   hover: en un teléfono el hover no existe y un enlace que solo se delata al
+   pasar el mouse es, en la práctica, texto. */
+.hk-entradas { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 1px; background: var(--hairline); border-block: 1px solid var(--hairline); }
+.hk-entradas li { background: var(--white); padding: 13px 0; display: grid; gap: 4px; }
+.hk-entrada-p { font: var(--fw-light) var(--fs-sm)/1.35 var(--font-body); color: var(--text-muted); }
+.hk-entrada-s { font: var(--fw-medium) var(--fs-sm)/1.35 var(--font-body); color: var(--text-strong); }
+.hk-entrada-s::before { content: "→ "; color: var(--cyan-text-sm); }
+.hk-entrada-s a {
+  /* El padding negativo agranda el área que acepta el dedo sin mover nada:
+     de 19 px de alto a 31, que en un teléfono es la diferencia entre acertar
+     y abrir el enlace de al lado. */
+  display: inline-block; padding-block: 6px; margin-block: -6px;
+  color: var(--text-strong); text-decoration: underline;
+  text-decoration-color: var(--border-subtle); text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+.hk-entrada-s a:hover, .hk-entrada-s a:focus-visible { color: var(--cyan-text); text-decoration-color: var(--cyan); }
+@media (prefers-reduced-motion: reduce) { .hk-entrada-s a { transition: none; } }
+
 .hk-serv-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .hk-serv-chip {
   display: inline-flex; align-items: center; min-height: 40px;

@@ -23,6 +23,27 @@ import { SERVICE_CATEGORIES } from "@/content/navegacion";
 import { desdeCategoria } from "@/content/precios";
 import { fotoPortafolio } from "@/content/portafolio-fotos";
 
+/**
+ * Entrada por el problema, no por el servicio.
+ *
+ * Es la versión corta de la tabla que ya vive en /servicios ("Lo que te pasa ·
+ * Dónde suele estar la causa · Por dónde empezar"), que es la pieza más clara
+ * que hay escrita en el sitio y estaba a un clic de distancia de la home.
+ * Aquí se queda la primera y la tercera columna: el porqué de cada causa es la
+ * capa explicativa y sigue en /servicios, que es donde toca leerla.
+ *
+ * La diferencia útil respecto a la tabla original: ahí la columna "por dónde
+ * empezar" es texto muerto. Aquí lleva a la página del servicio.
+ */
+const ENTRADAS: { problema: string; lleva: { label: string; href: string }[] }[] = [
+  { problema: "No llegan contactos", lleva: [{ label: "Publicidad Digital", href: "/servicios/publicidad-digital" }, { label: "SEO", href: "/servicios/seo" }] },
+  { problema: "Llegan contactos que no compran", lleva: [{ label: "Estrategia", href: "/servicios/estrategia" }, { label: "CRM", href: "/servicios/crm-automatizacion" }] },
+  { problema: "Contactan y se enfrían", lleva: [{ label: "CRM y Automatización", href: "/servicios/crm-automatizacion" }] },
+  { problema: "Compiten contigo por precio", lleva: [{ label: "Branding", href: "/servicios/branding" }, { label: "Contenido", href: "/servicios/marca-contenido" }] },
+  { problema: "La web no convierte", lleva: [{ label: "Desarrollo Web", href: "/servicios/desarrollo-web" }] },
+  { problema: "Nadie te ve en la calle", lleva: [{ label: "BTL", href: "/servicios/btl" }, { label: "Imprenta", href: "/servicios/imprenta" }] },
+];
+
 export const metadata: Metadata = buildMetadata({
   // Frase exacta al inicio: la portada es la única que debe competir por
   // "agencia de marketing en Ica" (keyword comercial nº1). Se quita "Digital"
@@ -162,8 +183,23 @@ export default function Home() {
               Todo el funnel, bajo un mismo método.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "36ch" }}>
-              No vendemos piezas sueltas. Nos encargamos de todo el proceso que convierte interesados en clientes: estrategia, anuncios, web, CRM y material en la calle.
+              No vendemos piezas sueltas. Pero casi nadie llega pidiendo «una campaña de publicidad digital»: se llega con un problema. Entra por el tuyo.
             </p>
+            <ul className="hk-entradas">
+              {ENTRADAS.map((e) => (
+                <li key={e.problema}>
+                  <span className="hk-entrada-p">{e.problema}</span>
+                  <span className="hk-entrada-s">
+                    {e.lleva.map((s, i) => (
+                      <span key={s.href}>
+                        {i > 0 && <span aria-hidden> · </span>}
+                        <Link href={s.href}>{s.label}</Link>
+                      </span>
+                    ))}
+                  </span>
+                </li>
+              ))}
+            </ul>
             <a href="/servicios" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 22, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
               Ver todos los servicios <ArrowRight size={16} />
             </a>
