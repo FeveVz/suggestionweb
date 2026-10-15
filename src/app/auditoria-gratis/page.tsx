@@ -62,7 +62,7 @@ export default function AuditoriaGratis() {
       {/* HERO + QUÉ RECIBES */}
       <section style={{ background: "var(--white)" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4rem) var(--gutter) clamp(2.5rem,5vw,3.5rem)" }}>
-          <div className="hk-enter"><Label dot>Consultoría cero · gratis</Label></div>
+          <div className="hk-enter"><Label dot>Auditoría gratuita</Label></div>
           <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "17ch" }}>
             Te decimos dónde se escapa tu venta. Gratis, en 48 horas.
           </h1>
@@ -86,7 +86,7 @@ export default function AuditoriaGratis() {
         <span className="hk-grain-layer" aria-hidden />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 880, margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>
           <h2 style={{ font: "var(--fw-bold) var(--fs-2xl)/1.1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "0 0 10px" }}>
-            Agenda tu consultoría cero
+            Pide tu auditoría
           </h2>
           <p style={{ font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", margin: "0 0 30px", maxWidth: "54ch" }}>
             2 minutos. Mientras más contexto nos des, más útil será el diagnóstico.

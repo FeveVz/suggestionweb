@@ -103,7 +103,7 @@ export default function FloatingMenu() {
               </div>
 
               <div className="hk-fab-foot">
-                <Link href="/contacto" onClick={() => setOpen(false)} className="hk-fab-cta">
+                <Link href={CTA_PRIMARY.href} onClick={() => setOpen(false)} className="hk-fab-cta">
                   {CTA_PRIMARY.label} <ArrowRight size={16} />
                 </Link>
                 <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hk-fab-wa">

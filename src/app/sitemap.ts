@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // JavaScript solo ve las primeras.
       images: PORTAFOLIO.flatMap((p) => fotosDe(p).map((f) => u(f.src))),
     },
+    { url: u("/consultoria-cero"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.9 },
     { url: u("/auditoria-gratis"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.9 },
     { url: u("/privacidad"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
     { url: u("/terminos"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },

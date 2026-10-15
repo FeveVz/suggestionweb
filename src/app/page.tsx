@@ -69,13 +69,15 @@ const PROBLEMAS: { problema: string; causa: string; Icono: typeof Car; lleva: { 
   { problema: "En la calle nadie me ve", causa: "Toda tu inversión está en la pantalla y tu local no se nota.", Icono: EyeOff, lleva: [{ label: "BTL y activaciones", href: "/servicios/btl" }, { label: "Imprenta", href: "/servicios/imprenta" }] },
 ];
 
-/** La consultoría cero, en tres pasos. Los datos son los que ya promete
- *  /auditoria-gratis: 20 minutos, en 48 horas hábiles, por videollamada o
- *  WhatsApp, sin accesos y con tres mejoras que son del cliente. */
+/** La consultoría cero, en tres pasos. Definición del owner (2026-10-15):
+ *  30 minutos en los que el cliente cuenta su problema o lo que quiere
+ *  mejorar, para entender su necesidad y proponerle los caminos y servicios
+ *  que encajan con su objetivo. No es la auditoría de /auditoria-gratis:
+ *  aquí no hay revisión previa ni "tres mejoras", y no se promete. */
 const PASOS_CONSULTORIA = [
-  { Icono: MessageCircle, t: "Nos escribes", d: "Por WhatsApp o con un formulario de dos minutos. Te respondemos en menos de 24 horas hábiles para elegir el día." },
-  { Icono: Video, t: "Conversamos 20 minutos", d: "Por videollamada o WhatsApp, dentro de 48 horas hábiles. Antes ya habremos mirado tu web, tus redes y tus anuncios." },
-  { Icono: ClipboardCheck, t: "Te llevas 3 mejoras concretas", d: "Las tres que más moverían tus ventas. Las aplicas con nosotros o por tu cuenta: son tuyas." },
+  { Icono: MessageCircle, t: "Nos escribes", d: "Por WhatsApp o con un formulario de dos minutos. Te respondemos en menos de 24 horas hábiles para elegir el día y la hora." },
+  { Icono: Video, t: "Nos cuentas tu caso en 30 minutos", d: "Tu problema o lo que quieres mejorar, con tus palabras. Escuchamos y preguntamos hasta entender lo que necesitas." },
+  { Icono: ClipboardCheck, t: "Te proponemos el camino", d: "Los caminos y los servicios de Suggestion que mejor encajan con tu objetivo, adaptados a tu negocio y no sacados de un paquete." },
 ];
 
 export const metadata: Metadata = buildMetadata({
@@ -115,7 +117,7 @@ const FAQ = [
   // consultoría y cuánto cuesta. Van arriba por eso.
   {
     q: "¿Qué es la consultoría cero y cuánto cuesta?",
-    a: "No cuesta nada. Es una conversación de 20 minutos, por videollamada o WhatsApp, en la que revisamos cómo te llegan hoy los clientes y dónde se pierden las ventas. Te llevas tres mejoras concretas que puedes aplicar con nosotros o por tu cuenta. No necesitas darnos acceso a tus cuentas: trabajamos con lo que es público y con lo que nos cuentes.",
+    a: "No cuesta nada. Es una conversación de 30 minutos en la que nos cuentas tu problema o lo que quieres mejorar. Con eso entendemos lo que necesitas y te proponemos los caminos y los servicios de Suggestion que mejor encajan con tu objetivo. No te compromete a contratar nada.",
   },
   {
     q: "¿Cuánto cuesta trabajar con ustedes?",
@@ -183,7 +185,7 @@ export default function Home() {
             </div>
             {/* Lo que quita el miedo a tocar el botón, pegado al botón. */}
             <p className="hk-enter-4 hk-hero-garantia">
-              <span><strong>Gratis</strong> · 20 minutos · sin compromiso</span>
+              <span><strong>Gratis</strong> · 30 minutos · sin compromiso</span>
               <Link href="/casos">
                 <strong>Más de 50 marcas</strong> ya trabajaron con nosotros
               </Link>
@@ -286,15 +288,15 @@ export default function Home() {
         <div className="hk-cons reveal">
           <div className="hk-cons-intro">
             <SectionHeading level={2} kicker="Consultoría cero · gratis" maxWidth="16ch">
-              Empieza por una conversación de 20 minutos.
+              Empieza por una conversación de 30 minutos.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "44ch" }}>
-              Antes de proponerte nada, miramos cómo te llegan hoy los clientes y dónde se te escapan las ventas.
+              Antes de proponerte nada, te escuchamos: nos cuentas tu problema o lo que quieres mejorar, y con eso te proponemos el camino que encaja con tu objetivo.
             </p>
             <ul className="hk-cons-gar">
               <li>Sin costo</li>
               <li>Sin compromiso</li>
-              <li>Sin darnos accesos a tus cuentas</li>
+              <li>Pensada para tu negocio</li>
             </ul>
           </div>
           <ol className="hk-cons-pasos">
@@ -315,7 +317,7 @@ export default function Home() {
                 Agenda tu consultoría cero <ArrowRight size={18} />
               </Btn>
             </Magnetic>
-            <Link href="/auditoria-gratis" className="hk-ulink">Prefiero dejar mis datos en un formulario</Link>
+            <Link href="/consultoria-cero#agendar" className="hk-ulink">Prefiero dejar mis datos en un formulario</Link>
           </div>
         </div>
       </Section>
@@ -423,10 +425,10 @@ export default function Home() {
         <div className="hk-cta" style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(2rem,5vw,4.5rem)", alignItems: "center" }}>
           <div>
             <SectionHeading level={2} kicker="Consultoría cero · gratis" tone="dark" maxWidth="14ch">
-              ¿Hablamos 20 minutos?
+              ¿Hablamos 30 minutos?
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 20, maxWidth: "40ch" }}>
-              Cuéntanos de tu negocio y agenda tu consultoría cero: vemos dónde se te escapan las ventas y te llevas tres mejoras concretas. Sin costo y sin compromiso.
+              Agenda tu consultoría cero: nos cuentas tu problema o lo que quieres mejorar, entendemos lo que necesitas y te proponemos el camino que mejor encaja con tu objetivo. Sin costo y sin compromiso.
             </p>
             <div style={{ display: "flex", gap: 26, marginTop: 30, flexWrap: "wrap" }}>
               <a href={WA_CONSULTORIA} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>
