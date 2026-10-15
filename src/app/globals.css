@@ -565,25 +565,110 @@ img, svg, video { max-width: 100%; }
 }
 .hk-serv-meta strong { font-weight: 700; color: var(--text-strong); }
 
-/* Entrada por el problema. Los enlaces van subrayados SIEMPRE, no solo al
-   hover: en un teléfono el hover no existe y un enlace que solo se delata al
-   pasar el mouse es, en la práctica, texto. */
-.hk-entradas { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 1px; background: var(--hairline); border-block: 1px solid var(--hairline); }
-.hk-entradas li { background: var(--white); padding: 13px 0; display: grid; gap: 4px; }
-.hk-entrada-p { font: var(--fw-light) var(--fs-sm)/1.35 var(--font-body); color: var(--text-muted); }
-.hk-entrada-s { font: var(--fw-medium) var(--fs-sm)/1.35 var(--font-body); color: var(--text-strong); }
-.hk-entrada-s::before { content: "→ "; color: var(--cyan-text-sm); }
-.hk-entrada-s a {
-  /* El padding negativo agranda el área que acepta el dedo sin mover nada:
-     de 19 px de alto a 31, que en un teléfono es la diferencia entre acertar
-     y abrir el enlace de al lado. */
-  display: inline-block; padding-block: 6px; margin-block: -6px;
-  color: var(--text-strong); text-decoration: underline;
-  text-decoration-color: var(--border-subtle); text-underline-offset: 3px;
-  transition: text-decoration-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+/* ── Home: piezas del orden nuevo (octubre de 2026) ───────────────────────
+   Regla común: los enlaces de texto van subrayados SIEMPRE, no solo al
+   hover. En un teléfono el hover no existe y un enlace que solo se delata al
+   pasar el mouse es, en la práctica, texto. Y llevan padding negativo, que
+   agranda el área que acepta el dedo sin mover nada de sitio. */
+
+/* Debajo del botón del hero: lo que quita el miedo a tocarlo. */
+.hk-hero-garantia {
+  display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 16px;
+  font: var(--fw-light) var(--fs-xs)/1.4 var(--font-body); color: var(--text-muted);
 }
-.hk-entrada-s a:hover, .hk-entrada-s a:focus-visible { color: var(--cyan-text); text-decoration-color: var(--cyan); }
-@media (prefers-reduced-motion: reduce) { .hk-entrada-s a { transition: none; } }
+.hk-hero-garantia strong { font-weight: 700; color: var(--text-strong); }
+.hk-hero-garantia a { color: inherit; }
+
+/* ¿Qué te está pasando? */
+.hk-prob { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .hk-prob { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .hk-prob { grid-template-columns: repeat(3, 1fr); } }
+.hk-prob-c {
+  display: grid; gap: 8px; align-content: start;
+  padding: 20px 22px; background: var(--white);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.hk-prob-c:hover { border-color: var(--cyan); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.hk-prob-ico {
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--surface-raised); color: var(--cyan-text); border: 1px solid var(--border-subtle);
+  transition: background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+.hk-prob-c:hover .hk-prob-ico { background: var(--cyan); color: #04121a; border-color: var(--cyan); }
+/* Ícono al lado del título y no encima: en el celular, seis tarjetas con el
+   ícono en su propia fila sumaban casi dos pantallas y media. */
+.hk-prob-cab { display: flex; align-items: center; gap: 12px; }
+.hk-prob-ico { flex-shrink: 0; }
+.hk-prob-c h3 { font: var(--fw-medium) var(--fs-lg)/1.2 var(--font-display); letter-spacing: var(--tracking-snug); color: var(--text-strong); margin: 0; }
+@media (max-width: 640px) { .hk-prob-c { padding: 16px 18px; gap: 6px; } .hk-prob-c h3 { font-size: var(--fs-md); } }
+.hk-prob-causa { font: var(--fw-light) var(--fs-sm)/1.5 var(--font-body); color: var(--text-muted); margin: 0; }
+.hk-prob-sol { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin: 6px 0 0; font: var(--fw-medium) var(--fs-sm)/1.4 var(--font-body); color: var(--text-strong); }
+.hk-prob-sol > span[aria-hidden] { color: var(--cyan-text-sm); }
+.hk-prob-sol a { padding-block: 6px; margin-block: -6px; color: var(--text-strong); text-decoration: underline; text-decoration-color: var(--border-subtle); text-underline-offset: 3px; }
+.hk-prob-sol a:hover, .hk-prob-sol a:focus-visible { color: var(--cyan-text); text-decoration-color: var(--cyan); }
+.hk-prob-cta, .hk-serv-duda { font: var(--fw-light) var(--fs-md)/1.5 var(--font-body); color: var(--text-body); }
+.hk-prob-cta { margin: clamp(1.5rem,3vw,2.25rem) 0 0; }
+.hk-serv-duda { margin: 16px 0 0; font-size: var(--fs-sm); }
+.hk-prob-cta a, .hk-serv-duda a {
+  display: inline-flex; align-items: center; gap: 6px; padding-block: 6px; margin-block: -6px;
+  font-weight: 700; color: var(--text-strong); text-decoration: underline;
+  text-decoration-color: var(--cyan); text-underline-offset: 4px;
+}
+.hk-prob-cta a:hover, .hk-serv-duda a:hover { color: var(--cyan-text); }
+
+/* Casos: rejilla en escritorio; en el celular se deslizan de lado. */
+.hk-casos-fila { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4); }
+.hk-case-ver {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: auto;
+  font: var(--fw-bold) var(--fs-xs)/1 var(--font-accent); color: var(--text-strong);
+  text-decoration: underline; text-decoration-color: var(--border-subtle); text-underline-offset: 3px;
+}
+.hk-case:hover .hk-case-ver { color: var(--cyan-text); text-decoration-color: var(--cyan); }
+@media (max-width: 700px) {
+  .hk-casos-fila {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px;
+    margin-inline: calc(var(--gutter) * -1); padding: 4px var(--gutter) 12px;
+    scroll-padding-inline: var(--gutter);
+    overscroll-behavior-x: contain; scrollbar-width: none;
+  }
+  .hk-casos-fila::-webkit-scrollbar { display: none; }
+  .hk-casos-fila > * { flex: 0 0 82%; scroll-snap-align: start; }
+}
+
+/* Consultoría cero: una tarjeta que se distingue del resto de la página,
+   porque es el paso al que lleva todo lo demás. */
+.hk-cons {
+  display: grid; gap: clamp(1.5rem,3vw,2.5rem); grid-template-columns: 1fr;
+  grid-template-areas: "intro" "pasos" "ctas";
+  padding: clamp(1.5rem,4vw,3rem);
+  background: var(--surface-raised); border: 1px solid var(--border-subtle);
+  border-top: 4px solid var(--cyan); border-radius: var(--radius-md);
+}
+@media (min-width: 900px) {
+  .hk-cons { grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); grid-template-areas: "intro pasos" "ctas pasos"; align-items: start; }
+}
+.hk-cons-intro { grid-area: intro; }
+.hk-cons-gar { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.hk-cons-gar li { font: var(--fw-medium) var(--fs-sm)/1.3 var(--font-body); color: var(--text-strong); }
+.hk-cons-gar li::before { content: "\2713"; color: var(--cyan-text); font-weight: 700; margin-right: 6px; }
+.hk-cons-pasos { grid-area: pasos; list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; position: relative; }
+.hk-cons-pasos::before {
+  content: ""; position: absolute; left: 36px; top: 30px; bottom: 30px; width: 2px;
+  background: linear-gradient(var(--cyan), var(--orange)); border-radius: 2px; opacity: 0.55;
+}
+.hk-cons-pasos li { position: relative; display: flex; gap: 16px; align-items: flex-start; background: var(--white); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 18px 16px 14px; }
+.hk-cons-n { position: relative; z-index: 1; width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; background: var(--cyan); color: #04121a; }
+.hk-cons-paso { font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent); text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-muted); }
+.hk-cons-pasos h3 { font: var(--fw-medium) var(--fs-md)/1.25 var(--font-display); color: var(--text-strong); margin: 6px 0 0; }
+.hk-cons-pasos p { font: var(--fw-light) var(--fs-sm)/1.5 var(--font-body); color: var(--text-body); margin: 6px 0 0; }
+.hk-cons-ctas { grid-area: ctas; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.hk-cons-ctas .hk-ulink { font: var(--fw-bold) var(--fs-sm)/1.2 var(--font-accent); color: var(--text-strong); text-decoration: underline; text-decoration-color: var(--border-subtle); text-underline-offset: 3px; padding-block: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hk-prob-c, .hk-prob-ico { transition: none; }
+  .hk-prob-c:hover { transform: none; }
+}
 
 .hk-serv-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .hk-serv-chip {

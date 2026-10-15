@@ -97,7 +97,7 @@ ${casos}
 - [Cómo medimos una campaña](${u("/metodo")}): qué cuenta como resultado, qué se descuenta antes de reportar y qué no se publica nunca.
 - [Portafolio](${u("/portafolio")}): 22 activaciones, lanzamientos y piezas de gran formato producidos entre 2024 y 2026, con el dato de oficio de cada uno.
 - [Nosotros](${u("/nosotros")}): cómo trabajamos y quiénes somos.
-- [Auditoría gratis](${u("/auditoria-gratis")}): revisión de la cuenta en 48 h.
+- [Consultoría cero, gratis](${u("/auditoria-gratis")}): la forma de empezar. 20 minutos por videollamada o WhatsApp, en 48 horas hábiles, sin costo ni compromiso; el cliente se lleva tres mejoras concretas.
 
 ## Blog
 

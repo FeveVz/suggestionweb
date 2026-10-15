@@ -179,6 +179,18 @@ export default function ProofBar({
         @media (min-width: 700px) {
           .hk-equipo-nom { min-height: 2.5em; }
         }
+        /* En el celular, las siete personas en una fila que se desliza:
+           en dos columnas eran cuatro filas, más de una pantalla entera solo
+           de caras, justo antes de lo que el visitante vino a buscar. */
+        @media (max-width: 560px) {
+          .hk-equipo-fila {
+            display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 6px;
+            margin-inline: calc(var(--gutter) * -1); padding: 2px var(--gutter) 10px;
+            scroll-padding-inline: var(--gutter); overscroll-behavior-x: contain; scrollbar-width: none;
+          }
+          .hk-equipo-fila::-webkit-scrollbar { display: none; }
+          .hk-equipo-fila > li { flex: 0 0 112px; scroll-snap-align: start; }
+        }
         .hk-equipo-p:hover .hk-equipo-aro,
         .hk-equipo-p:focus-visible .hk-equipo-aro { transform: translateY(-3px); }
         .hk-equipo-p:hover .hk-equipo-nom { color: var(--cyan); }

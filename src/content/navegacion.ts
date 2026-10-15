@@ -94,7 +94,9 @@ export const MAIN_NAV: NavLink[] = [
   { label: "Nosotros", href: "/nosotros" },
 ];
 
-export const CTA_PRIMARY: NavLink = { label: "Agenda una llamada", href: "/contacto" };
+// La cabecera lleva a la misma oferta que toda la home: la consultoría cero.
+// /contacto sigue en el pie ("Agenda una llamada") para quien lo busque.
+export const CTA_PRIMARY: NavLink = { label: "Consultoría cero", href: "/auditoria-gratis" };
 
 /** Columnas del footer (doc 02 §7). */
 export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [

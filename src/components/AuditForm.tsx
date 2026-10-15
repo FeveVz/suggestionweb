@@ -36,7 +36,7 @@ export default function AuditForm() {
     setAviso(null);
     const f = new FormData(e.currentTarget);
     const msg = [
-      `Hola Suggestion, quiero mi auditoría gratis. Soy ${f.get("nombre")}.`,
+      `Hola Suggestion, quiero agendar mi consultoría cero. Soy ${f.get("nombre")}.`,
       `Negocio: ${f.get("negocio")}`,
       f.get("web") ? `Web/IG: ${f.get("web")}` : null,
       `Inversión mensual en publicidad: ${f.get("inversion")}`,
@@ -115,7 +115,7 @@ export default function AuditForm() {
         </select>
       </F>
       <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-        <Btn type="submit" variant="insight" size="lg">{sent ? "¡Abriendo WhatsApp!" : "Quiero mi auditoría gratis"}</Btn>
+        <Btn type="submit" variant="insight" size="lg">{sent ? "¡Abriendo WhatsApp!" : "Agendar mi consultoría cero"}</Btn>
         <span style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>Sin compromiso · Respuesta en 48 h hábiles</span>
       </div>
     </form>
