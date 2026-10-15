@@ -140,9 +140,10 @@ export default function Home() {
             </div>
             <p className="hk-enter-4" style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 18 }}>
               <Link href="/casos" style={{ color: "inherit" }}>
-                <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>+50</strong> marcas confiaron
+                <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>Más de 50 marcas</strong> ya trabajaron con nosotros
               </Link>
-              <span>Respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>&lt;24 h</strong></span>
+              {/* "<24 h" es un símbolo de programador: quien no lo conoce no lo lee. */}
+              <span>Te respondemos en <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>menos de 24 horas</strong></span>
             </p>
           </div>
           <div className="hk-enter-3" style={{ minWidth: 0, display: "flex", justifyContent: "center" }}>

@@ -16,10 +16,13 @@ export type ProofStat = { value: string; label: string; href?: string };
 
 // Cada cifra lleva a la página que la demuestra. Antes eran texto plano y
 // concentraban el 29% de los clics de la home sin llevar a ninguna parte.
+// Etiquetas en palabras de la calle: "atendidas" o "estrategia propia" son
+// frases de informe. Quien llega quiere saber con quién trabajamos y en qué
+// rubros sabemos moverlos.
 const DEFAULT_STATS: ProofStat[] = [
-  { value: "19", label: "Marcas de vehículos atendidas", href: "/marketing-automotriz" },
-  { value: "+50", label: "Marcas que confían en nosotros", href: "/casos" },
-  { value: String(SECTORES.length), label: "Sectores con estrategia propia", href: "/sectores" },
+  { value: "19", label: "Marcas de autos y maquinaria con las que trabajamos", href: "/marketing-automotriz" },
+  { value: "+50", label: "Marcas que ya confiaron en nosotros", href: "/casos" },
+  { value: String(SECTORES.length), label: "Rubros que conocemos a fondo: inmobiliario, autos, turismo y más", href: "/sectores" },
   // "7 años" es una afirmación; "desde 2019" es un dato que se puede
   // comprobar. Y el número se calcula, así que no caduca en enero.
   { value: String(aniosActivos()), label: `Años en Ica y Perú, desde ${site.fundacion}`, href: "/nosotros" },

@@ -22,11 +22,14 @@ import { Eye, MousePointerClick, MessageCircle, Handshake } from "lucide-react";
  * cuenta en imagen.
  */
 
+// Verbos de la calle, no etapas de manual. "Atención" y "conversión" son
+// palabras de agencia; quien llega a la home sabe lo que es que lo vean, que
+// le hagan clic, que le escriban y que le compren.
 const PASOS = [
-  { Icon: Eye, label: "atención", cls: "fv-n1" },
-  { Icon: MousePointerClick, label: "clic", cls: "fv-n2" },
-  { Icon: MessageCircle, label: "WhatsApp", cls: "fv-n3" },
-  { Icon: Handshake, label: "venta", cls: "fv-n4" },
+  { Icon: Eye, label: "te ven", cls: "fv-n1" },
+  { Icon: MousePointerClick, label: "hacen clic", cls: "fv-n2" },
+  { Icon: MessageCircle, label: "te escriben", cls: "fv-n3" },
+  { Icon: Handshake, label: "te compran", cls: "fv-n4" },
 ];
 
 const HIDDEN: React.CSSProperties = {
@@ -38,7 +41,7 @@ export default function FunnelVivo() {
   return (
     <div style={{ margin: "clamp(20px,2.6vw,30px) 0 0" }}>
       <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", margin: "0 0 clamp(18px,2.2vw,26px)", maxWidth: "46ch" }}>
-        Tu problema no es el alcance: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>es que los clics no se vuelven clientes</strong>.
+        Tu problema no es que no te vean: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>es que los que te ven no terminan comprando</strong>.
       </p>
       <p style={HIDDEN}>
         Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: la atención se
@@ -107,12 +110,18 @@ export default function FunnelVivo() {
           display: grid; place-items: center;
           transition: none;
         }
+        /* Las etiquetas son frases cortas ("te escriben", "te compran"), no una
+           palabra: en un teléfono de 320 px dos de ellas se tocaban. Pueden
+           bajar a dos líneas dentro de su columna en vez de pisarse. */
         .fv-lbl {
-          font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent);
+          font: var(--fw-bold) var(--fs-micro)/1.15 var(--font-accent);
           text-transform: uppercase;
           letter-spacing: var(--tracking-label);
-          white-space: nowrap;
+          text-align: center;
+          width: max-content;
+          max-width: 9ch;
         }
+        @media (min-width: 420px) { .fv-lbl { max-width: none; white-space: nowrap; } }
         .fv-n1 { animation: fv-n1 var(--fv-loop) ease-out infinite; }
         .fv-n2 { animation: fv-n2 var(--fv-loop) ease-out infinite; }
         .fv-n3 { animation: fv-n3 var(--fv-loop) ease-out infinite; }

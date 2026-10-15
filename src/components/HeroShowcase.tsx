@@ -1,158 +1,357 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, CalendarCheck, CheckCircle2, TrendingUp } from "lucide-react";
+import { ArrowRight, CalendarCheck, Car, Eye, Handshake, MessageCircle } from "lucide-react";
 import CountUp from "@/components/CountUp";
 import { usePrefersReduced } from "@/components/brand/interactive";
 
 /**
- * Pieza del hero: "así se ve tu funnel con nosotros".
- * (1) Feed de notificaciones estilo WhatsApp que se va llenando de leads,
- * citas y ventas (ilustrativo). (2) Panel con las métricas REALES del caso
- * Ceinys (CountUp) + sparkline que se dibuja sola. Decorativo para SEO
- * (aria-hidden en lo animado); el mensaje vive en el texto del hero.
- * Reduced-motion: todo estático y visible.
+ * Pieza del hero, en dos tarjetas: cómo llega un cliente y qué resultados
+ * reales tenemos.
+ *
+ * ── Por qué se rehízo (octubre de 2026) ────────────────────────────────────
+ * La versión anterior era un feed negro de notificaciones titulado "Así se ve
+ * tu funnel con nosotros". Tres problemas, señalados por el owner y medidos:
+ *
+ *   1. Hablaba en jerga: funnel, lead, CPL, Meta Ads. Quien busca una agencia
+ *      no tiene por qué saber qué es un CPL, y esto está en la pantalla 1.
+ *   2. Sus cifras eran inventadas —"Venta cerrada S/37,000 · lote F-17",
+ *      "CPL bajó a S/3.70"— y no decía que fueran un ejemplo. En un sitio cuyo
+ *      argumento es "números reales", una cifra de mentira sin etiqueta es lo
+ *      último que puede ir arriba del todo.
+ *   3. Los tres "gráficos" de casos eran la misma línea decorativa: la curva
+ *      de "19 marcas" era idéntica a la de "S/350,000". Parecían datos y no
+ *      representaban nada, que para alguien que no domina el tema es peor que
+ *      no poner gráfico.
+ *
+ * Ahora la primera tarjeta cuenta el recorrido de un cliente en frases
+ * normales, y dice desde el título que es un ejemplo. La segunda dibuja los
+ * números reales de cada caso: el embudo de Ceinys es 350 → 20 → 8 de verdad,
+ * con barras proporcionales, y "19 marcas" son 19 íconos.
  */
 
-type Item = { Icon: typeof MessageCircle; iconBg: string; titulo: string; detalle: string };
+/* ── 1. El recorrido de un cliente ─────────────────────────────────────────
+   El texto se lee siempre entero: la animación solo enciende el ícono de cada
+   paso y rellena la línea, para llevar la vista de arriba abajo. Apagar el
+   texto mientras "no le toca" haría la tarjeta más bonita y menos legible. */
+const PASOS = [
+  { Icon: Eye, titulo: "Ve tu anuncio", detalle: "en Facebook o Instagram, desde su celular" },
+  { Icon: MessageCircle, titulo: "Te escribe por WhatsApp", burbuja: "Hola, ¿me dan más información? 🙂" },
+  { Icon: CalendarCheck, titulo: "Agenda una visita", detalle: "a tu tienda, oficina o sala de ventas" },
+  { Icon: Handshake, titulo: "Te compra", detalle: "y sabes qué anuncio lo trajo hasta ti" },
+] as const;
 
-const FEED: Item[] = [
-  { Icon: MessageCircle, iconBg: "#25D366", titulo: "Nuevo lead por WhatsApp", detalle: "María · “Quiero cotizar el proyecto”" },
-  { Icon: CalendarCheck, iconBg: "var(--orange)", titulo: "Cita agendada", detalle: "Mañana 10:30 · sala de ventas" },
-  { Icon: CheckCircle2, iconBg: "var(--cyan)", titulo: "Venta cerrada", detalle: "S/37,000 · lote F-17" },
-  { Icon: MessageCircle, iconBg: "#25D366", titulo: "Nuevo lead por WhatsApp", detalle: "Junior · “Info del plan de redes”" },
-  { Icon: TrendingUp, iconBg: "var(--cyan)", titulo: "CPL bajó a S/3.70", detalle: "Meta Ads · esta semana" },
-  { Icon: CalendarCheck, iconBg: "var(--orange)", titulo: "Cita agendada", detalle: "Hoy 4:15 p.m. · showroom" },
-  { Icon: MessageCircle, iconBg: "#25D366", titulo: "Nuevo lead por WhatsApp", detalle: "Carla · “¿Atienden clínicas?”" },
-  { Icon: CheckCircle2, iconBg: "var(--cyan)", titulo: "Venta cerrada", detalle: "S/8,900 · campaña de temporada" },
+/* ── 2. Resultados reales ──────────────────────────────────────────────────
+   Las cifras son las publicadas en cada caso, con su etiqueta en palabras de
+   la calle. Las barras son proporcionales al número: si 8 de 350 se ve
+   diminuto, es porque lo es, y eso es justo lo que el gráfico tiene que
+   enseñar. */
+type Caso = {
+  kicker: string;
+  big: string;
+  bigLocale?: string;
+  bigUnidad: string;
+  sub: string;
+  barras?: { valor: number; etiqueta: string; resultado?: boolean }[];
+  unidades?: { n: number; pie: string };
+  href: string;
+  enlace: string;
+};
+
+const CASOS: Caso[] = [
+  {
+    kicker: "Caso real · Inmobiliaria Ceinys",
+    big: "S/350,000",
+    bigLocale: "es-ES",
+    bigUnidad: "en ventas",
+    sub: "con S/3,000 invertidos en anuncios de Facebook e Instagram.",
+    barras: [
+      { valor: 350, etiqueta: "personas pidieron información" },
+      { valor: 20, etiqueta: "visitaron la sala de ventas" },
+      { valor: 8, etiqueta: "compraron un lote", resultado: true },
+    ],
+    href: "/casos/inmobiliaria-ceinys",
+    enlace: "Ver cómo se hizo",
+  },
+  {
+    kicker: "Caso real · Autoniza",
+    big: "8",
+    bigUnidad: "autos vendidos",
+    sub: "en dos eventos de venta, los dos con autos vendidos el mismo día.",
+    barras: [
+      { valor: 3, etiqueta: "autos · evento del 22 de mayo", resultado: true },
+      { valor: 5, etiqueta: "autos · evento del 25 de junio", resultado: true },
+    ],
+    href: "/casos/autoniza-eventos",
+    enlace: "Ver cómo se hizo",
+  },
+  {
+    kicker: "Experiencia en autos",
+    big: "19",
+    bigUnidad: "marcas de vehículos",
+    sub: "autos, camionetas, camiones y maquinaria pesada, con tres concesionarios de la región.",
+    unidades: { n: 19, pie: "Cada ícono es una marca distinta con la que trabajamos." },
+    href: "/marketing-automotriz",
+    enlace: "Ver marketing automotriz",
+  },
 ];
 
-const VISIBLE = 4;
-
-/** Panel de resultados ROTATORIO: la prueba no se apoya en un solo caso. */
-const CASES: { k: string; big: string; sub: string; cells: [string, string][] }[] = [
-  { k: "Caso real · Inmobiliaria Ceinys", big: "S/350,000", sub: "en ventas con S/3,000 de pauta", cells: [["350", "leads"], ["20", "citas"], ["8", "cierres"]] },
-  { k: "Eventos · Autoniza", big: "8 autos", sub: "vendidos en 2 eventos (may–jun)", cells: [["3", "autos · 22 may"], ["5", "autos · 25 jun"], ["2", "eventos"]] },
-  { k: "Automotriz · Pacífico, Autoniza y Yonda", big: "19 marcas", sub: "de vehículos atendidas", cells: [["19", "marcas"], ["3", "concesionarios"], ["7", "años"]] },
-];
+/** Tiempo por caso. Es largo a propósito: hay que leer la frase y el gráfico. */
+const ROTACION_MS = 9000;
 
 export default function HeroShowcase() {
   const reduce = usePrefersReduced();
-  const [head, setHead] = useState(VISIBLE); // cuántos items "han llegado"
-
-  useEffect(() => {
-    if (reduce) return;
-    const id = setInterval(() => setHead((h) => h + 1), 2600);
-    return () => clearInterval(id);
-  }, [reduce]);
-
-  // Rotación del panel de resultados (Ceinys → Autoniza → Pacífico)
   const [ci, setCi] = useState(0);
-  useEffect(() => {
-    if (reduce) return;
-    const id = setInterval(() => setCi((c) => (c + 1) % CASES.length), 5600);
-    return () => clearInterval(id);
-  }, [reduce]);
-  const caso = CASES[ci];
+  const [pausa, setPausa] = useState(false);
+  // Cuenta los toques en los puntos. Tocar el punto del caso que ya está en
+  // pantalla no cambia `ci`, y sin esto el temporizador seguía corriendo: el
+  // caso se iba aunque la persona acabara de pedir quedarse en él.
+  const [toques, setToques] = useState(0);
+  const elegir = (i: number) => {
+    setCi(i);
+    setToques((t) => t + 1);
+  };
 
-  // Ventana de los últimos VISIBLE items (loop infinito sobre FEED)
-  const window_ = Array.from({ length: VISIBLE }, (_, k) => {
-    const idx = head - VISIBLE + k;
-    return { key: idx, item: FEED[((idx % FEED.length) + FEED.length) % FEED.length] };
-  });
+  // Un temporizador por caso, no un intervalo fijo: depende de `ci`, así que
+  // cada cambio —también el que hace la persona al tocar un punto— vuelve a
+  // dar los nueve segundos enteros. Con setInterval, el caso que alguien
+  // acababa de elegir podía irse un segundo después.
+  useEffect(() => {
+    if (reduce || pausa) return;
+    const id = setTimeout(() => setCi((c) => (c + 1) % CASOS.length), ROTACION_MS);
+    return () => clearTimeout(id);
+  }, [reduce, pausa, ci, toques]);
 
   return (
-    <div style={{ width: "100%", maxWidth: 520, display: "flex", flexDirection: "column", gap: 14 }}>
-      {/* Feed de notificaciones */}
-      <div aria-hidden style={{ background: "var(--black)", border: "1px solid var(--ink-600)", borderRadius: "var(--radius-md)", padding: "14px 14px 9px", boxShadow: "var(--shadow-lg)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-          <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", boxShadow: "0 0 0 0 rgba(0,191,255,0.5)", animation: reduce ? undefined : "hk-pulse 2.4s var(--ease-out) infinite" }} />
-          <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>
-            Así se ve tu funnel con nosotros
-          </span>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 7, minHeight: VISIBLE * 57 - 7 }}>
-          <AnimatePresence initial={false} mode="popLayout">
-            {window_.map(({ key, item }) => (
-              <motion.div
-                key={key}
-                layout
-                initial={reduce ? false : { opacity: 0, y: -16, scale: 0.97 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={reduce ? undefined : { opacity: 0, y: 18, scale: 0.97 }}
-                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                style={{ display: "flex", alignItems: "center", gap: 12, background: "var(--ink-800)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-sm)", padding: "9px 13px" }}
-              >
-                <span style={{ width: 32, height: 32, borderRadius: "50%", background: item.iconBg, display: "grid", placeItems: "center", flexShrink: 0 }}>
-                  <item.Icon size={16} color={item.iconBg === "#25D366" ? "#fff" : "#000"} strokeWidth={2.4} />
-                </span>
-                <span style={{ minWidth: 0 }}>
-                  <span style={{ display: "block", font: "var(--fw-medium) var(--fs-sm)/1.2 var(--font-body)", color: "var(--white)" }}>{item.titulo}</span>
-                  <span style={{ display: "block", font: "var(--fw-light) var(--fs-xs)/1.3 var(--font-body)", color: "var(--text-on-inverse-mut)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{item.detalle}</span>
-                </span>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-      </div>
-
-      {/* Panel de métricas reales (caso Ceinys) */}
-      <div style={{ background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "14px 16px", boxShadow: "var(--shadow-md)", position: "relative", overflow: "hidden" }}>
-        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
-          <motion.div key={`h${ci}`} initial={reduce ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }} style={{ minWidth: 0 }}>
-            <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
-              {caso.k}
-            </span>
-            <div style={{ font: "var(--fw-bold) var(--fs-2xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: 8 }}>
-              <CountUp to={caso.big} locale="es-ES" /> <span style={{ font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)" }}>{caso.sub}</span>
-            </div>
-          </motion.div>
-          {/* Sparkline que se dibuja */}
-          <svg width="120" height="44" viewBox="0 0 120 44" fill="none" aria-hidden style={{ flexShrink: 0 }}>
-            <polyline
-              points="2,40 22,34 38,36 56,26 74,22 92,12 118,4"
-              stroke="var(--cyan)"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              pathLength={1}
-              style={reduce ? undefined : { strokeDasharray: 1, strokeDashoffset: 1, animation: "hk-draw 2.2s var(--ease-out) 0.4s forwards" }}
-            />
-            <circle cx="118" cy="4" r="3.5" fill="var(--orange)" style={reduce ? undefined : { opacity: 0, animation: "hk-fadein 0.4s var(--ease-out) 2.5s forwards" }} />
-          </svg>
-        </div>
-        <motion.div key={`c${ci}`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45 }} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 14, paddingTop: 12, borderTop: "1px solid var(--hairline)" }}>
-          {caso.cells.map(([v, l], i) => (
-            <div key={l} style={{ textAlign: "center" }}>
-              <div style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-display)", color: i === 2 ? "var(--cyan-text)" : "var(--text-strong)" }}>
-                <CountUp to={v} />
-              </div>
-              <span style={{ font: "var(--fw-bold) var(--fs-micro)/1.25 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{l}</span>
-            </div>
+    <div className="hs" style={{ width: "100%", maxWidth: 520, display: "flex", flexDirection: "column", gap: 14 }}>
+      {/* ── Tarjeta 1: el recorrido ─────────────────────────────────────── */}
+      <section className="hs-card hs-viaje" aria-labelledby="hs-viaje-t">
+        <p id="hs-viaje-t" className="hs-kicker">
+          <span className="hs-chip">Ejemplo</span> Así te llega un cliente
+        </p>
+        <ol className="hs-pasos">
+          {PASOS.map((p, i) => (
+            <li key={p.titulo} className={`hs-paso hs-p${i + 1}`}>
+              <span className="hs-ico" aria-hidden>
+                <p.Icon size={17} strokeWidth={2.2} />
+              </span>
+              <span className="hs-txt">
+                <strong>{p.titulo}</strong>
+                {"burbuja" in p ? (
+                  <span className="hs-burbuja">{p.burbuja}</span>
+                ) : (
+                  <span className="hs-det">{p.detalle}</span>
+                )}
+              </span>
+            </li>
           ))}
-        </motion.div>
-        {/* Indicador de casos (también navegable) */}
-        {/* El punto se ve de 7 px, pero el boton mide 24x24: era el unico fallo
-            de accesibilidad que Lighthouse encontraba en la home (WCAG 2.2
-            pide 24x24 de area tactil). El gap negativo compensa el ancho nuevo
-            para que el grupo de puntos siga viendose igual de junto. */}
-        <div style={{ display: "flex", justifyContent: "center", gap: 0, marginTop: 2 }}>
-          {CASES.map((c, i) => (
-            <button
-              key={c.k}
-              onClick={() => setCi(i)}
-              aria-label={c.k}
-              aria-current={i === ci}
-              style={{ width: 24, height: 24, border: "none", padding: 0, background: "none", cursor: "pointer", display: "grid", placeItems: "center" }}
-            >
-              <span aria-hidden style={{ width: 7, height: 7, borderRadius: "50%", background: i === ci ? "var(--cyan)" : "var(--ink-200)", transition: "background var(--dur-base)" }} />
+        </ol>
+      </section>
+
+      {/* ── Tarjeta 2: resultados reales ────────────────────────────────── */}
+      <section
+        className="hs-card hs-casos"
+        aria-roledescription="carrusel"
+        aria-label="Resultados reales"
+        onMouseEnter={() => setPausa(true)}
+        onMouseLeave={() => setPausa(false)}
+        onFocus={() => setPausa(true)}
+        onBlur={() => setPausa(false)}
+      >
+        {/* Los tres casos ocupan la misma celda de la rejilla: la tarjeta toma
+            la altura del más alto y no salta al rotar, que en el móvil movía
+            todo lo de abajo cada nueve segundos. */}
+        <div className="hs-pila">
+          {CASOS.map((c, i) => {
+            const activo = i === ci;
+            const max = c.barras ? Math.max(...c.barras.map((b) => b.valor)) : 1;
+            return (
+              <div key={c.kicker} className={`hs-slide${activo ? " is-on" : ""}`} aria-hidden={!activo}>
+                <span className="hs-kicker">{c.kicker}</span>
+                <p className="hs-big">
+                  {/* La clave cambia al activarse: así el número vuelve a
+                      contar cada vez que el caso entra, no solo la primera. */}
+                  <CountUp key={activo ? `on${ci}` : "off"} to={c.big} locale={c.bigLocale} />{" "}
+                  <span className="hs-big-u">{c.bigUnidad}</span>
+                </p>
+                <p className="hs-sub">{c.sub}</p>
+
+                {c.barras && (
+                  <ul className="hs-barras">
+                    {c.barras.map((b) => (
+                      <li key={b.etiqueta} className={b.resultado ? "is-res" : undefined}>
+                        <span className="hs-b-txt">
+                          <strong>{b.valor}</strong> {b.etiqueta}
+                        </span>
+                        <span className="hs-b-pista" aria-hidden>
+                          <span className="hs-b-barra" style={{ width: `${Math.max(3, (b.valor / max) * 100)}%` }} />
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {c.unidades && (
+                  <div className="hs-unidades">
+                    <span className="hs-u-grid" aria-hidden>
+                      {Array.from({ length: c.unidades.n }, (_, k) => (
+                        <span key={k} className="hs-u" style={{ transitionDelay: `${k * 35}ms` }}>
+                          <Car size={15} strokeWidth={2} />
+                        </span>
+                      ))}
+                    </span>
+                    <span className="hs-u-pie">{c.unidades.pie}</span>
+                  </div>
+                )}
+
+                <a href={c.href} className="hs-enlace" tabIndex={activo ? 0 : -1}>
+                  {c.enlace} <ArrowRight size={14} aria-hidden />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* El punto se ve de 8 px, pero el botón mide 24×24: es el área táctil
+            mínima que pide WCAG 2.2 y era el único fallo que Lighthouse
+            encontraba en la home. */}
+        <div className="hs-puntos">
+          {CASOS.map((c, i) => (
+            <button key={c.kicker} type="button" onClick={() => elegir(i)} aria-label={`Ver: ${c.kicker}`} aria-current={i === ci}>
+              <span aria-hidden className={i === ci ? "is-on" : undefined} />
             </button>
           ))}
         </div>
-      </div>
+      </section>
 
-      <style>{`@keyframes hk-draw { to { stroke-dashoffset: 0; } }`}</style>
+      <style>{`
+        .hs-card {
+          background: var(--white);
+          border: 1px solid var(--border-subtle);
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-md);
+          padding: 16px 18px;
+        }
+        .hs-kicker {
+          display: flex; align-items: center; gap: 8px; margin: 0;
+          font: var(--fw-bold) var(--fs-micro)/1.3 var(--font-accent);
+          text-transform: uppercase; letter-spacing: var(--tracking-label);
+          color: var(--text-muted);
+        }
+        .hs-chip {
+          display: inline-block; padding: 3px 8px; border-radius: 999px;
+          background: var(--surface-raised); border: 1px solid var(--border-subtle);
+          color: var(--text-strong); letter-spacing: 0.04em;
+        }
+
+        /* ── Recorrido ───────────────────────────────────────────────────── */
+        .hs-viaje { --hs-loop: 9s; }
+        .hs-pasos { list-style: none; margin: 14px 0 0; padding: 0; position: relative; display: grid; gap: 12px; }
+        /* La línea que une los cuatro íconos, y su relleno animado. */
+        .hs-pasos::before, .hs-pasos::after {
+          content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; border-radius: 2px;
+        }
+        .hs-pasos::before { background: var(--border-subtle); }
+        .hs-pasos::after {
+          background: var(--cyan); transform-origin: top; transform: scaleY(0);
+          animation: hs-linea var(--hs-loop) linear infinite;
+        }
+        .hs-paso { position: relative; z-index: 1; display: flex; gap: 12px; align-items: flex-start; }
+        .hs-ico {
+          width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%;
+          display: grid; place-items: center;
+          background: var(--surface-raised); color: var(--text-muted);
+          border: 1.5px solid var(--border-subtle);
+        }
+        .hs-txt { display: grid; gap: 3px; padding-top: 1px; min-width: 0; }
+        .hs-txt strong { font: var(--fw-medium) var(--fs-sm)/1.3 var(--font-display); color: var(--text-strong); }
+        .hs-det { font: var(--fw-light) var(--fs-xs)/1.4 var(--font-body); color: var(--text-body); }
+        .hs-burbuja {
+          justify-self: start; margin-top: 3px;
+          padding: 7px 11px; border-radius: 4px 14px 14px 14px;
+          background: #dcf8c6; color: #1f2c1a;
+          font: var(--fw-light) var(--fs-xs)/1.35 var(--font-body);
+          box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+        }
+
+        /* Cada paso se enciende cuando la línea llega: 0 / 25 / 50 / 75 %. */
+        .hs-p1 .hs-ico { animation: hs-p1 var(--hs-loop) ease-out infinite; }
+        .hs-p2 .hs-ico { animation: hs-p2 var(--hs-loop) ease-out infinite; }
+        .hs-p3 .hs-ico { animation: hs-p3 var(--hs-loop) ease-out infinite; }
+        .hs-p4 .hs-ico { animation: hs-p4 var(--hs-loop) ease-out infinite; }
+        .hs-p2 .hs-burbuja { animation: hs-burbuja var(--hs-loop) ease-out infinite; transform-origin: left top; }
+
+        @keyframes hs-linea { 0% { transform: scaleY(0); } 75% { transform: scaleY(1); } 92% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+        @keyframes hs-p1 { 0%, 92% { background: var(--cyan); border-color: var(--cyan); color: #04121a; } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } }
+        @keyframes hs-p2 { 0%, 23% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } 27%, 92% { background: #25d366; border-color: #25d366; color: #fff; } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } }
+        @keyframes hs-p3 { 0%, 48% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } 52%, 92% { background: var(--orange); border-color: var(--orange); color: #1a0d00; } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } }
+        @keyframes hs-p4 { 0%, 73% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); transform: scale(1); } 77% { background: var(--cyan); border-color: var(--cyan); color: #04121a; transform: scale(1.12); } 81%, 92% { background: var(--cyan); border-color: var(--cyan); color: #04121a; transform: scale(1); } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); transform: scale(1); } }
+        @keyframes hs-burbuja { 0%, 24% { transform: scale(0.9); opacity: 0.55; } 29%, 100% { transform: scale(1); opacity: 1; } }
+
+        /* ── Resultados ──────────────────────────────────────────────────── */
+        .hs-casos { padding-bottom: 8px; }
+        .hs-pila { display: grid; }
+        /* Primero se va el caso que sale y después entra el siguiente. Si se
+           cruzan, durante medio segundo hay dos textos uno encima del otro en
+           la misma celda, y eso se lee como un error. */
+        .hs-slide {
+          grid-area: 1 / 1; min-width: 0;
+          opacity: 0; visibility: hidden;
+          transition: opacity 0.25s var(--ease-out), visibility 0s linear 0.25s;
+        }
+        .hs-slide.is-on { opacity: 1; visibility: visible; transition: opacity 0.35s var(--ease-out) 0.25s, visibility 0s linear 0.25s; }
+        .hs-big { margin: 8px 0 0; font: var(--fw-bold) var(--fs-2xl)/1.05 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); }
+        .hs-big-u { font: var(--fw-medium) var(--fs-md)/1 var(--font-display); letter-spacing: var(--tracking-snug); color: var(--text-strong); }
+        .hs-sub { margin: 6px 0 0; font: var(--fw-light) var(--fs-sm)/1.45 var(--font-body); color: var(--text-body); max-width: 44ch; }
+
+        .hs-barras { list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--hairline); display: grid; gap: 10px; }
+        .hs-barras li { display: grid; gap: 5px; }
+        .hs-b-txt { font: var(--fw-light) var(--fs-xs)/1.35 var(--font-body); color: var(--text-body); }
+        .hs-b-txt strong { font: var(--fw-bold) var(--fs-md)/1 var(--font-display); color: var(--text-strong); margin-right: 2px; }
+        .is-res .hs-b-txt strong { color: var(--cyan-text); }
+        .hs-b-pista { display: block; height: 8px; border-radius: 999px; background: var(--surface-raised); overflow: hidden; }
+        .hs-b-barra {
+          display: block; height: 100%; border-radius: 999px; background: var(--text-strong);
+          transform-origin: left; transform: scaleX(0);
+          transition: transform 0.8s var(--ease-out) 0.15s;
+        }
+        .is-res .hs-b-barra { background: var(--cyan); }
+        .is-on .hs-b-barra { transform: scaleX(1); }
+
+        .hs-unidades { margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--hairline); display: grid; gap: 8px; }
+        .hs-u-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+        .hs-u {
+          width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center;
+          background: var(--surface-raised); color: var(--cyan-text-sm); border: 1px solid var(--border-subtle);
+          opacity: 0; transform: translateY(4px);
+          transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+        }
+        .is-on .hs-u { opacity: 1; transform: none; }
+        .hs-u-pie { font: var(--fw-light) var(--fs-xs)/1.4 var(--font-body); color: var(--text-muted); }
+
+        .hs-enlace {
+          display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+          font: var(--fw-bold) var(--fs-xs)/1 var(--font-accent); color: var(--text-strong);
+          text-decoration: underline; text-decoration-color: var(--border-subtle); text-underline-offset: 3px;
+          padding-block: 6px;
+        }
+        .hs-enlace:hover, .hs-enlace:focus-visible { color: var(--cyan-text); text-decoration-color: var(--cyan); }
+
+        .hs-puntos { display: flex; justify-content: center; margin-top: 2px; }
+        .hs-puntos button { width: 24px; height: 24px; border: none; padding: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+        .hs-puntos button span { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-200); transition: background var(--dur-base), transform var(--dur-base); }
+        .hs-puntos button span.is-on { background: var(--cyan); transform: scale(1.15); }
+
+        /* Sin movimiento: todo encendido y quieto, las barras ya dibujadas. */
+        @media (prefers-reduced-motion: reduce) {
+          .hs-pasos::after { animation: none; transform: scaleY(1); }
+          .hs-p1 .hs-ico, .hs-p4 .hs-ico { animation: none; background: var(--cyan); border-color: var(--cyan); color: #04121a; }
+          .hs-p2 .hs-ico { animation: none; background: #25d366; border-color: #25d366; color: #fff; }
+          .hs-p3 .hs-ico { animation: none; background: var(--orange); border-color: var(--orange); color: #1a0d00; }
+          .hs-p2 .hs-burbuja { animation: none; }
+          .hs-slide, .hs-b-barra, .hs-u { transition: none; }
+        }
+      `}</style>
     </div>
   );
 }
