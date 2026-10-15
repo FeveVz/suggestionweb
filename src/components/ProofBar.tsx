@@ -8,7 +8,7 @@ import { aniosActivos, site } from "@/lib/site";
 /**
  * Barra de prueba social (doc 16 §5). Banda oscura con la línea del funnel
  * (Lead → Cita → Cierre) y 3–4 métricas reales en grande.
- * Por defecto (agregado, sin repetir los casos): 19 marcas de vehículos · +50 marcas · sectores · 7 años.
+ * Por defecto (agregado, sin repetir los casos): 24 marcas inmobiliarias · 19 marcas de vehículos · +50 marcas · rubros · años.
  * El conteo de sectores se deriva de SECTORES para que nunca se desincronice al añadir verticales.
  */
 
@@ -20,6 +20,9 @@ export type ProofStat = { value: string; label: string; href?: string };
 // frases de informe. Quien llega quiere saber con quién trabajamos y en qué
 // rubros sabemos moverlos.
 const DEFAULT_STATS: ProofStat[] = [
+  // Dato del owner (2026-10-15). Va primero: inmobiliario es el primer rubro
+  // de la home y el de más marcas que conocemos.
+  { value: "24", label: "Marcas inmobiliarias para las que trabajamos", href: "/marketing-inmobiliario" },
   { value: "19", label: "Marcas de autos y maquinaria con las que trabajamos", href: "/marketing-automotriz" },
   { value: "+50", label: "Marcas que ya confiaron en nosotros", href: "/casos" },
   { value: String(SECTORES.length), label: "Rubros que conocemos a fondo: inmobiliario, autos, turismo y más", href: "/sectores" },
@@ -112,6 +115,9 @@ export default function ProofBar({
       <style>{`
         @media (max-width: 900px) {
           .hk-proof-stats { grid-template-columns: 1fr 1fr !important; gap: var(--space-5) !important; }
+          /* Con un número impar de cifras, la última ocupa la fila entera en
+             vez de quedarse sola en media columna con un hueco al lado. */
+          .hk-proof-stats > :last-child:nth-child(odd) { grid-column: 1 / -1; }
         }
         /* La pista "Ver →" aparece al pasar por encima o al enfocar con
            teclado: en reposo la banda se mantiene limpia. En táctil no hay

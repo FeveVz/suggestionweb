@@ -73,6 +73,11 @@ Base en Ica (Perú), con atención a todo el país. La cobertura fuerte es la
 región de Ica y sus cinco provincias; también hay páginas propias para otras
 ciudades donde trabajamos.
 
+Experiencia por rubro: hemos trabajado para 24 marcas inmobiliarias. En
+automotriz hemos atendido 19 marcas de vehículos —livianos, camiones y
+maquinaria pesada— a través de tres concesionarios. Son conteos distintos:
+el primero son clientes; el segundo, marcas de vehículos.
+
 ## Servicios
 
 ${servicios}

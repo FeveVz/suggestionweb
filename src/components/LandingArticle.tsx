@@ -37,7 +37,7 @@ const COBERTURA: Record<string, string> = {
   "/servicios/produccion-audiovisual": "Producimos video y foto en Ica y sus provincias —de las dunas de Ocucaje a los geoglifos de Palpa y las líneas de Nazca— con spots, drone y contenido para redes, y viajamos a donde tu marca lo necesite.",
   "/servicios/material-pop": "Producimos material POP para puntos de venta de Ica, Parcona y La Tinguiña, y despachamos a tiendas y campañas de todo el Perú.",
   "/servicios/merchandising": "Merchandising publicitario para empresas de Ica con entrega en toda la región —Subtanjalla, Parcona, Chincha, Pisco y Nazca— y envíos corporativos a nivel nacional.",
-  "/marketing-inmobiliario": "Vendemos lotes y proyectos en Ica, donde el crecimiento inmobiliario se está dando sobre todo en Subtanjalla, La Tinguiña, Parcona y Los Aquijes, y operamos campañas para desarrolladoras de otras regiones del Perú.",
+  "/marketing-inmobiliario": "Hemos trabajado para 24 marcas inmobiliarias. Vendemos lotes y proyectos en Ica, donde el crecimiento inmobiliario se está dando sobre todo en Subtanjalla, La Tinguiña, Parcona y Los Aquijes, y operamos campañas para desarrolladoras de otras regiones del Perú.",
   "/marketing-automotriz": "Trabajamos con concesionarios de Ica —19 marcas de vehículos atendidas, de livianos a línea amarilla para faenas de Marcona— y llevamos el mismo método a pisos de venta de cualquier ciudad del país.",
   "/marketing-turismo": "Ica vive del turismo: la Huacachina, las bodegas de Ocucaje, Paracas a un paso, y más al sur los geoglifos de Palpa y las líneas de Nazca. Sabemos llenar hoteles y tours aquí, y en el resto del Perú.",
   "/marketing-marcas-consumo": "Movemos marcas de consumo en Ica y sus provincias —del comercio de Parcona a las bodegas de Chincha— y escalamos distribución y demanda a nivel nacional.",
@@ -95,7 +95,7 @@ export default function LandingArticle({
   const waMsg = `Hola Suggestion, me interesa: ${h1}.`;
   const proofText =
     proof ??
-    "Ceinys: S/350K en ventas con S/3,000 · Autoniza: 8 autos vendidos en 2 eventos · 19 marcas de vehículos atendidas, de livianos a línea amarilla.";
+    "Ceinys: S/350K en ventas con S/3,000 · Autoniza: 8 autos vendidos en 2 eventos · 24 marcas inmobiliarias · 19 marcas de vehículos, de livianos a línea amarilla.";
   const heroItems = (incluye?.length ? incluye : beneficios ?? []).slice(0, 5).map((x) => x.titulo);
   const heroLabel = incluye?.length ? "Qué incluye" : "Lo que logras";
   return (

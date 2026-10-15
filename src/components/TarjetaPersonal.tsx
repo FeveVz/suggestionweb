@@ -153,10 +153,13 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
         </Rise>
 
         {/* Prueba breve de la agencia */}
-        <Rise reduce={reduce} delay={0.74} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 38, paddingTop: 26, borderTop: "1px solid var(--hairline-inverse)" }}>
+        {/* Dos por fila: con cuatro cifras, tres columnas dejaban una sola
+            colgando en la segunda fila de una tarjeta pensada para el celular. */}
+        <Rise reduce={reduce} delay={0.74} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "18px 12px", marginTop: 38, paddingTop: 26, borderTop: "1px solid var(--hairline-inverse)" }}>
           {[
             ["7", "años"],
             ["+50", "marcas"],
+            ["24", "marcas inmobiliarias"],
             ["19", "marcas de vehículos"],
           ].map(([v, l]) => (
             <div key={l} style={{ textAlign: "center" }}>

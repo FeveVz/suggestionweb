@@ -37,6 +37,7 @@ const SECCIONES: Seccion[] = [
         ["Desde cuándo", `${site.fundacion} · ${aniosActivos()} años trabajando marcas de Ica y del Perú`],
         ["Marcas atendidas", "Más de 50"],
         ["Sectores con estrategia propia", "7, cada uno con su método"],
+        ["Inmobiliario", "24 marcas inmobiliarias para las que hemos trabajado"],
         ["Automotriz", "19 marcas de vehículos, de livianos a línea amarilla"],
         ["Equipo", "7 personas, todas con nombre y cara en esta web"],
       ],

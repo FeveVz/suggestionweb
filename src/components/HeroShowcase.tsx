@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, CalendarCheck, Car, Eye, Handshake, MessageCircle } from "lucide-react";
+import { ArrowRight, Building2, CalendarCheck, Car, Eye, Handshake, MessageCircle } from "lucide-react";
 import CountUp from "@/components/CountUp";
 import { usePrefersReduced } from "@/components/brand/interactive";
 
@@ -53,14 +53,19 @@ type Caso = {
   bigUnidad: string;
   sub: string;
   barras?: { valor: number; etiqueta: string; resultado?: boolean }[];
-  unidades?: { n: number; pie: string };
+  unidades?: { n: number; pie: string; Icono: typeof Car };
   href: string;
   enlace: string;
 };
 
+/* Orden: cada caso va seguido de la experiencia de su rubro. Ceinys y luego
+   las 24 marcas inmobiliarias; Autoniza y luego las 19 marcas de vehículos.
+   Así el número grande nunca va solo: viene detrás de un caso que lo prueba.
+   El "Caso" o "Experiencia" de cada etiqueta distingue un resultado medido de
+   un conteo, porque no son lo mismo. */
 const CASOS: Caso[] = [
   {
-    kicker: "Caso real · Inmobiliaria Ceinys",
+    kicker: "Caso · Inmobiliaria Ceinys",
     big: "S/350,000",
     bigLocale: "es-ES",
     bigUnidad: "en ventas",
@@ -74,7 +79,19 @@ const CASOS: Caso[] = [
     enlace: "Ver cómo se hizo",
   },
   {
-    kicker: "Caso real · Autoniza",
+    // Dato del owner (2026-10-15). La frase no describe cómo se reparten las
+    // 24 —lotes, casas, preventa— porque eso no lo sabemos; solo dice lo que
+    // él dijo y lo ata al caso que se acaba de ver.
+    kicker: "Experiencia · Inmobiliario",
+    big: "24",
+    bigUnidad: "marcas inmobiliarias",
+    sub: "para las que hemos trabajado. Ceinys, el caso anterior, es una de ellas.",
+    unidades: { n: 24, pie: "Cada ícono es una marca inmobiliaria distinta.", Icono: Building2 },
+    href: "/marketing-inmobiliario",
+    enlace: "Ver marketing inmobiliario",
+  },
+  {
+    kicker: "Caso · Autoniza",
     big: "8",
     bigUnidad: "autos vendidos",
     sub: "en dos eventos de venta, los dos con autos vendidos el mismo día.",
@@ -86,11 +103,11 @@ const CASOS: Caso[] = [
     enlace: "Ver cómo se hizo",
   },
   {
-    kicker: "Experiencia en autos",
+    kicker: "Experiencia · Autos",
     big: "19",
     bigUnidad: "marcas de vehículos",
     sub: "autos, camionetas, camiones y maquinaria pesada, con tres concesionarios de la región.",
-    unidades: { n: 19, pie: "Cada ícono es una marca distinta con la que trabajamos." },
+    unidades: { n: 19, pie: "Cada ícono es una marca de vehículos distinta.", Icono: Car },
     href: "/marketing-automotriz",
     enlace: "Ver marketing automotriz",
   },
@@ -152,12 +169,19 @@ export default function HeroShowcase() {
       <section
         className="hs-card hs-casos"
         aria-roledescription="carrusel"
-        aria-label="Resultados reales"
+        aria-labelledby="hs-casos-t"
         onMouseEnter={() => setPausa(true)}
         onMouseLeave={() => setPausa(false)}
         onFocus={() => setPausa(true)}
         onBlur={() => setPausa(false)}
       >
+        {/* Título de la tarjeta, pedido por el owner: sin él, los números se
+            leían sueltos y no quedaba claro de quién eran. El sello "Real"
+            contesta al "Ejemplo" de la tarjeta de arriba: una es ilustrativa,
+            la otra es trabajo hecho para clientes de verdad. */}
+        <p id="hs-casos-t" className="hs-kicker hs-cab">
+          <span className="hs-chip hs-chip-real">Real</span> Resultados de clientes de Suggestion
+        </p>
         {/* Los tres casos ocupan la misma celda de la rejilla: la tarjeta toma
             la altura del más alto y no salta al rotar, que en el móvil movía
             todo lo de abajo cada nueve segundos. */}
@@ -165,9 +189,11 @@ export default function HeroShowcase() {
           {CASOS.map((c, i) => {
             const activo = i === ci;
             const max = c.barras ? Math.max(...c.barras.map((b) => b.valor)) : 1;
+            // JSX solo acepta como etiqueta un nombre que empiece en mayúscula.
+            const Icono = c.unidades?.Icono;
             return (
               <div key={c.kicker} className={`hs-slide${activo ? " is-on" : ""}`} aria-hidden={!activo}>
-                <span className="hs-kicker">{c.kicker}</span>
+                <span className="hs-cual">{c.kicker}</span>
                 <p className="hs-big">
                   {/* La clave cambia al activarse: así el número vuelve a
                       contar cada vez que el caso entra, no solo la primera. */}
@@ -195,8 +221,8 @@ export default function HeroShowcase() {
                   <div className="hs-unidades">
                     <span className="hs-u-grid" aria-hidden>
                       {Array.from({ length: c.unidades.n }, (_, k) => (
-                        <span key={k} className="hs-u" style={{ transitionDelay: `${k * 35}ms` }}>
-                          <Car size={15} strokeWidth={2} />
+                        <span key={k} className="hs-u" style={{ transitionDelay: `${k * 30}ms` }}>
+                          {Icono && <Icono size={15} strokeWidth={2} />}
                         </span>
                       ))}
                     </span>
@@ -243,6 +269,14 @@ export default function HeroShowcase() {
           background: var(--surface-raised); border: 1px solid var(--border-subtle);
           color: var(--text-strong); letter-spacing: 0.04em;
         }
+        /* "Real" en cian y "Ejemplo" en gris: la diferencia tiene que verse
+           antes de leerla. El texto va en --cyan-text, no en el cian de marca,
+           que sobre blanco no llega al contraste mínimo para letra pequeña. */
+        .hs-chip-real { background: rgba(0,191,255,0.12); border-color: rgba(0,191,255,0.4); color: var(--cyan-text); }
+        .hs-cab { padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid var(--hairline); }
+        /* Qué caso es: debajo del título de la tarjeta, en minúscula y oscuro,
+           para que no compita con él como si fueran dos títulos iguales. */
+        .hs-cual { display: block; font: var(--fw-bold) var(--fs-xs)/1.3 var(--font-body); color: var(--text-strong); }
 
         /* ── Recorrido ───────────────────────────────────────────────────── */
         .hs-viaje { --hs-loop: 9s; }

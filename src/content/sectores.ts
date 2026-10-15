@@ -42,9 +42,9 @@ export const SECTORES: Sector[] = [
           "Campañas pensadas para el comprador peruano: el que busca su primer lote, el que invierte por plusvalía y el que valida estatus. A cada uno, su mensaje.",
       },
       {
-        h2: "Para inmobiliarias y constructoras",
+        h2: "Para inmobiliarias y constructoras: 24 marcas trabajadas",
         parrafo:
-          "Trabajamos el funnel completo de un proyecto: del lanzamiento a la separación, con material que vende la valorización antes que el ladrillo.",
+          "Hemos trabajado para 24 marcas inmobiliarias. Llevamos el recorrido completo de un proyecto, del lanzamiento a la separación, con material que vende la valorización antes que el ladrillo.",
       },
       {
         h2: "Dónde se pierde de verdad una venta inmobiliaria",
