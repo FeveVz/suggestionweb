@@ -125,6 +125,7 @@ export async function POST(req: Request) {
       email: row.email,
       phone: row.telefono,
       nombre: row.nombre,
+      externalId: s(b.external_id, 64),
       fbp: s(b.fbp, 200),
       fbc: s(b.fbc, 400),
       ip,

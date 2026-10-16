@@ -1,3 +1,5 @@
+import { EID_KEY, esExternalId } from "@/lib/meta-match";
+
 /**
  * IDs de medición — ÚNICO lugar donde pegarlos.
  *
@@ -48,6 +50,21 @@ export const GADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL || "";
  * Vacío = no se inyecta nada.
  */
 export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "y2utjzo8p3";
+
+/**
+ * Tráfico interno. Abrir cualquier página con `?interno=1` marca ese
+ * navegador y desde entonces no carga GA4, el Píxel ni Clarity; `?interno=0`
+ * lo desmarca. Se hace dentro de los propios scripts de arranque, antes de
+ * que midan nada.
+ *
+ * Por qué: en los 28 días al 15-oct-2026, cerca de un tercio de los PageView
+ * de Meta llegaron en cuatro ráfagas de 14 a 46 páginas en una hora: con toda
+ * probabilidad, revisiones nuestras del sitio. Inflaban las visitas, hundían la tasa de
+ * contacto que sirve de línea base para la pauta y metían al equipo en los
+ * públicos de retargeting.
+ */
+export const INTERNO_KEY = "sg_interno";
+export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location.search).get('interno');if(q==='1')localStorage.setItem('${INTERNO_KEY}','1');if(q==='0')localStorage.removeItem('${INTERNO_KEY}');return localStorage.getItem('${INTERNO_KEY}')==='1'}catch(e){return false}})()`;
 
 type Gtag = (...args: unknown[]) => void;
 type Fbq = (...args: unknown[]) => void;
@@ -114,6 +131,8 @@ export function captureAttribution(): void {
       const v = sp.get(k);
       if (v) record[k] = v.slice(0, 200);
     }
+    // Momento del clic en el anuncio: Meta lo pide dentro del fbc (ver leadDedup).
+    if (record.fbclid) record.fbclid_ts = String(Date.now());
     record.landing_page = window.location.pathname;
     record.referrer = (document.referrer || "").slice(0, 300);
     sessionStorage.setItem(ATTR_STORE, JSON.stringify(record));
@@ -133,17 +152,38 @@ export function getAttribution(): Record<string, string> {
   }
 }
 
-/** Datos de deduplicación/enriquecimiento del Lead; se hace spread al body del POST a /api/lead. */
-export function leadDedup(): { event_id: string; event_source_url: string; fbp: string; fbc: string } {
+/** El identificador anónimo de este navegador (lo crea el arranque del Píxel en Analytics.tsx). */
+export function externalId(): string {
+  try {
+    const v = localStorage.getItem(EID_KEY);
+    return esExternalId(v) ? v : "";
+  } catch {
+    return "";
+  }
+}
+
+/**
+ * Datos de deduplicación/enriquecimiento del Lead; se hace spread al body del POST a /api/lead.
+ *
+ * fbc: lo normal es que lo deje el Píxel en la cookie `_fbc` al llegar desde
+ * un anuncio. Si el Píxel cargó tarde o lo bloquearon, se reconstruye con el
+ * fbclid guardado en la atribución, en el formato de Meta
+ * `fb.1.<ms del clic>.<fbclid>`. Sin fbc, Meta no puede atribuir el lead al
+ * anuncio que lo trajo.
+ */
+export function leadDedup(): { event_id: string; event_source_url: string; fbp: string; fbc: string; external_id: string } {
   const cookie = (name: string) => {
     if (typeof document === "undefined") return "";
     const m = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
     return m ? decodeURIComponent(m[1]) : "";
   };
+  const attr = getAttribution();
+  const fbc = cookie("_fbc") || (attr.fbclid ? `fb.1.${attr.fbclid_ts || Date.now()}.${attr.fbclid}` : "");
   return {
     event_id: newEventId(),
     event_source_url: typeof location !== "undefined" ? location.href : "",
     fbp: cookie("_fbp"),
-    fbc: cookie("_fbc"),
+    fbc,
+    external_id: externalId(),
   };
 }

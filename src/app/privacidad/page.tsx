@@ -20,7 +20,7 @@ export default function Privacidad() {
         <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 8px" }}>
           Política de Privacidad
         </h1>
-        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: junio de 2026</p>
+        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: octubre de 2026</p>
 
         <h2 style={H2}>1. Responsable del tratamiento</h2>
         <p style={P}>
@@ -30,6 +30,13 @@ export default function Privacidad() {
         <h2 style={H2}>2. Datos que recopilamos</h2>
         <p style={P}>
           Recopilamos los datos que nos entregas voluntariamente en nuestros formularios: nombre, nombre de tu negocio, correo electrónico, teléfono/WhatsApp y el mensaje u objetivo que describas. Además, con fines estadísticos, usamos herramientas de analítica (Google Analytics y Meta Pixel) que registran datos de navegación de forma agregada mediante cookies.
+        </p>
+        <p style={P}>
+          Para saber qué anuncios nos traen contactos, el Meta Pixel guarda en tu navegador un
+          identificador aleatorio que no contiene ningún dato tuyo. Y cuando envías un formulario,
+          compartimos con Meta tu teléfono, tu correo y tu nombre cifrados con un hash irreversible
+          (SHA-256): Meta no recibe el dato legible, solo lo compara con el de sus propios usuarios
+          para saber si llegaste desde un anuncio.
         </p>
         <p style={P}>
           También usamos <strong>Microsoft Clarity</strong>, una herramienta que registra cómo se
@@ -53,7 +60,7 @@ export default function Privacidad() {
 
         <h2 style={H2}>5. Transferencias</h2>
         <p style={P}>
-          No vendemos ni cedemos tus datos a terceros. Nuestros proveedores tecnológicos (hosting, base de datos y analítica) pueden procesar datos en servidores ubicados fuera del Perú, bajo sus propias garantías de seguridad.
+          No vendemos ni cedemos tus datos a terceros. Nuestros proveedores tecnológicos (hosting, base de datos, analítica y Meta, para la medición de anuncios descrita en el punto 2) pueden procesar datos en servidores ubicados fuera del Perú, bajo sus propias garantías de seguridad.
         </p>
 
         <h2 style={H2}>6. Tus derechos (ARCO)</h2>

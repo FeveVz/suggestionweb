@@ -1,4 +1,5 @@
 import { createHash } from "crypto";
+import { esExternalId, nombreMeta, telefonoMeta } from "@/lib/meta-match";
 
 /**
  * Meta Conversions API (server-side). Envía el evento Lead directamente a Meta,
@@ -22,6 +23,7 @@ type LeadInput = {
   email?: string | null;
   phone?: string | null;
   nombre?: string | null;
+  externalId?: string;
   fbp?: string;
   fbc?: string;
   ip?: string;
@@ -38,10 +40,18 @@ export async function sendLeadCapi(i: LeadInput): Promise<void> {
   const user: Record<string, unknown> = {};
   if (i.email) user.em = [sha256(i.email.trim().toLowerCase())];
   if (i.phone) {
-    const digits = i.phone.replace(/[^0-9]/g, "");
-    if (digits) user.ph = [sha256(digits)];
+    const ph = telefonoMeta(i.phone);
+    if (ph) user.ph = [sha256(ph)];
+    if (ph.startsWith("51")) user.country = [sha256("pe")];
   }
-  if (i.nombre) user.fn = [sha256(i.nombre.trim().toLowerCase())];
+  if (i.nombre) {
+    const { fn, ln } = nombreMeta(i.nombre);
+    if (fn) user.fn = [sha256(fn)];
+    if (ln) user.ln = [sha256(ln)];
+  }
+  // Ya tiene forma de hash (ver meta-match.ts): va tal cual, para que sea el
+  // mismo valor que el Píxel manda en cada visita de ese navegador.
+  if (esExternalId(i.externalId)) user.external_id = [i.externalId];
   if (i.fbp) user.fbp = i.fbp;
   if (i.fbc) user.fbc = i.fbc;
   if (i.ip) user.client_ip_address = i.ip;
