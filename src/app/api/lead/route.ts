@@ -102,23 +102,47 @@ export async function POST(req: Request) {
     extra,
   };
 
-  const r = await fetch(`${url}/rest/v1/leads`, {
-    method: "POST",
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-      "Content-Type": "application/json",
-      Prefer: "return=representation",
-    },
-    body: JSON.stringify(row),
-    cache: "no-store",
-  });
+  // Cada fallo devuelve un código que dice DÓNDE falló, sin datos sensibles.
+  // Antes, si Supabase no respondía, el fetch lanzaba una excepción y la ruta
+  // caía con un 500 vacío: el formulario decía "no pudimos guardar" y no
+  // había forma de saber por qué sin entrar a los registros de Vercel.
+  let r: Response;
+  try {
+    r = await fetch(`${url}/rest/v1/leads`, {
+      method: "POST",
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify(row),
+      cache: "no-store",
+      signal: AbortSignal.timeout(8000),
+    });
+  } catch (e) {
+    const err = e as { name?: string; cause?: { code?: string } };
+    console.error("[lead] Supabase no responde:", e);
+    return NextResponse.json(
+      { ok: false, error: "db-red", causa: err.cause?.code || err.name || "desconocida" },
+      { status: 502 },
+    );
+  }
 
-  if (!r.ok) return NextResponse.json({ ok: false, error: "db" }, { status: 502 });
-  const data = (await r.json()) as { id?: string }[];
+  if (!r.ok) {
+    console.error("[lead] Supabase rechazó el registro:", r.status, await r.text().catch(() => ""));
+    return NextResponse.json({ ok: false, error: "db", status: r.status }, { status: 502 });
+  }
+  let id: string | null = null;
+  try {
+    id = ((await r.json()) as { id?: string }[])[0]?.id ?? null;
+  } catch {
+    /* el registro ya está guardado; solo falta el id */
+  }
 
   // Meta CAPI: evento Lead server-side, deduplicado con el Pixel vía event_id.
   // Solo leads reales (no reclamos). Si falta META_CAPI_TOKEN, sendLeadCapi es no-op.
+  // Nunca debe convertir un lead guardado en un error para quien lo envió.
   if (row.tipo !== "reclamo" && s(b.event_id, 100)) {
     await sendLeadCapi({
       eventId: s(b.event_id, 100),
@@ -131,8 +155,8 @@ export async function POST(req: Request) {
       ip,
       ua: req.headers.get("user-agent") || "",
       sourceUrl: s(b.event_source_url, 500),
-    });
+    }).catch((e) => console.error("[lead] CAPI:", e));
   }
 
-  return NextResponse.json({ ok: true, id: data[0]?.id ?? null });
+  return NextResponse.json({ ok: true, id });
 }
