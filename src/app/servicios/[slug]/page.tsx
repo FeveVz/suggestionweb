@@ -147,6 +147,10 @@ export default async function ServicioPage({ params }: Params) {
     related.push({ title: "La prueba", links: s.pruebas, columns: 2 });
   }
 
+  if (s.lecturas?.length) {
+    related.push({ title: "Para decidir mejor", links: s.lecturas, columns: 2 });
+  }
+
   const serviceLinks: RelatedLink[] = s.enlazaA.flatMap((sl) => {
     const r = getServicio(sl);
     return r ? [{ label: r.nombre, href: `/servicios/${r.slug}` }] : [];
@@ -200,6 +204,7 @@ export default async function ServicioPage({ params }: Params) {
       beneficios={s.beneficios}
       proceso={s.proceso}
       tema={s.nombre}
+      especificaciones={s.especificaciones}
       precios={getPrecios(s.slug)}
       related={related}
       faq={s.faq}

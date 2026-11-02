@@ -106,6 +106,7 @@ export const SECTORES: Sector[] = [
       "produccion-audiovisual",
     ],
     lecturas: [
+      { label: "Cómo vender un terreno rápido en Perú", href: "/blog/inmobiliario/como-vender-un-terreno-rapido-en-peru" },
       { label: "Cómo vender un proyecto en preventa", href: "/blog/inmobiliario/vender-proyecto-en-preventa" },
       { label: "Ejemplos de campañas que venden lotes", href: "/blog/inmobiliario/marketing-inmobiliario-ejemplos" },
       { label: "Publicidad inmobiliaria en redes", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
@@ -378,6 +379,7 @@ export const SECTORES: Sector[] = [
     lecturas: [
       { label: "Cómo aparecer primero en Google Maps", href: "/blog/conversion/como-aparecer-primero-en-google-maps" },
       { label: "Ficha de empresa en Google: crearla y verificarla", href: "/blog/conversion/ficha-de-empresa-en-google-crear-y-verificar" },
+      { label: "Cómo promocionar un hotel", href: "/blog/sectores/como-promocionar-un-hotel" },
       { label: "Marketing para restaurantes", href: "/blog/sectores/marketing-para-restaurantes" },
       { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
     ],
@@ -656,6 +658,7 @@ export const SECTORES: Sector[] = [
       "crm-automatizacion",
     ],
     lecturas: [
+      { label: "Marketing para clínicas dentales", href: "/blog/sectores/marketing-para-clinicas-dentales" },
       { label: "Cómo conseguir más pacientes", href: "/blog/sectores/como-conseguir-mas-pacientes" },
       { label: "Cómo aparecer primero en Google Maps", href: "/blog/conversion/como-aparecer-primero-en-google-maps" },
       { label: "Ficha de empresa en Google: crearla y verificarla", href: "/blog/conversion/ficha-de-empresa-en-google-crear-y-verificar" },
@@ -783,6 +786,7 @@ export const SECTORES: Sector[] = [
       "produccion-audiovisual",
     ],
     lecturas: [
+      { label: "Cómo conseguir clientes para exportar", href: "/blog/sectores/como-conseguir-clientes-para-exportar" },
       { label: "Cómo abrir mercados internacionales", href: "/blog/sectores/marketing-para-agroexportadoras" },
       { label: "Cuánto cuesta una página web en Perú", href: "/blog/conversion/cuanto-cuesta-una-pagina-web-en-peru" },
       { label: "Merchandising corporativo: qué regalar", href: "/blog/imprenta-btl/merchandising-corporativo-que-regalar" },

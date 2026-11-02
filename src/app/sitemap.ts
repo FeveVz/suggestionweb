@@ -56,7 +56,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/publicidad-movil": "2026-10-09",
   "/servicios/estructuras-publicitarias": "2026-10-09",
   "/servicios/material-pop": "2026-10-09",
-  "/servicios/imprenta": "2026-10-09",
+  "/servicios/imprenta": "2026-11-02",
   "/marketing-inmobiliario": "2026-10-15",
   "/marketing-automotriz": "2026-10-09",
   "/marketing-turismo": "2026-10-09",
@@ -69,6 +69,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/casos/inmobiliaria-ceinys": "2026-10-09",
   "/casos/autoniza-eventos": "2026-10-09",
   "/equipo/carolina": "2026-10-13",
+  "/blog/imprenta-btl/gigantografias-medidas-materiales-precios": "2026-11-02",
 };
 const fecha = (path: string) => (ACTUALIZADA[path] ? new Date(`${ACTUALIZADA[path]}T12:00:00Z`) : GLOBAL);
 /** Los artículos con fotos propias se ilustraron el 13-oct. */
@@ -151,8 +152,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const publicado = new Date(`${p.date}T00:00:00`);
     return {
       url: u(`/blog/${p.categoria}/${p.slug}`),
-      // La más reciente de: publicación, cambio global y fotos añadidas.
-      lastModified: new Date(Math.max(publicado.getTime(), GLOBAL.getTime(), fotos.length ? FOTOS_BLOG.getTime() : 0)),
+      // La más reciente de: publicación, cambio global, fotos añadidas y texto revisado.
+      lastModified: new Date(Math.max(publicado.getTime(), GLOBAL.getTime(), fotos.length ? FOTOS_BLOG.getTime() : 0, fecha(`/blog/${p.categoria}/${p.slug}`).getTime())),
       changeFrequency: "monthly" as const,
       priority: 0.6,
       ...(fotos.length ? { images: fotos } : {}),

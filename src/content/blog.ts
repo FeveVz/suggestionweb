@@ -3152,9 +3152,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "publicidad-para-venta-de-autos",
     categoria: "automotriz",
-    title: "Publicidad para Venta de Autos que Funciona | Suggestion",
+    title: "Publicidad para Venta de Autos: Ideas y Medios | Suggestion",
     description:
-      "Ideas de publicidad para venta de autos que generan interés y citas: formatos, mensajes y ofertas que mueven al comprador. Guía práctica 2026.",
+      "Qué mensaje mueve al comprador, dónde pautar y cómo medir si tu publicidad para venta de autos trajo test drives y ventas, no solo curiosos.",
     h1: "Publicidad para venta de autos: ideas que funcionan",
     excerpt:
       "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que sí mueve al comprador a actuar.",
@@ -3473,14 +3473,24 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gigantografias-medidas-materiales-precios",
     categoria: "imprenta-btl",
-    title: "Gigantografías: Medidas, Materiales y Precios | Suggestion",
+    title: "Medidas y Precios de Gigantografías en Perú | Suggestion",
     description:
-      "Qué material pedir, qué medidas aprovechan el rollo y cuánto cuesta una gigantografía en Perú: desde S/19.50 el m². Guía para cotizar sin equivocarte.",
+      "Las medidas más pedidas, qué material aguanta la calle y cuánto cuesta una gigantografía en Perú: desde S/18 el m². Guía para cotizar sin equivocarte.",
     h1: "Gigantografías: qué material pedir, qué medidas y cuánto cuesta",
     excerpt:
       "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
     date: "2026-10-04",
     secciones: [
+      {
+        h2: "Medidas, material y precio: la respuesta corta",
+        parrafo:
+          "Una gigantografía no tiene una medida única: se imprime al tamaño que necesites y se cotiza por metro cuadrado. Esto es lo que conviene saber antes de pedir precio.",
+        bullets: [
+          { titulo: "Medidas más pedidas", texto: "1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m. El rollo más común mide 3.20 m de ancho, y ajustar la pieza a ese ancho evita pagar recorte." },
+          { titulo: "Material", texto: "lona de 8 onzas para interior, de 11 para exterior de campaña corta y de 13 o frontlit para exterior permanente." },
+          { titulo: "Precio", texto: "en el mercado peruano va desde S/18 el m² en lona de interior hasta S/120 en acabados premium (rangos consultados en octubre de 2026). El diseño y la instalación suelen ir aparte." },
+        ],
+      },
       {
         h2: "Gigantografía, banner y lona: la misma pieza con tres nombres",
         foto: foto("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada sobre la fachada de vidrio de un local comercial en Ica", "Una gigantografía de fachada, impresa en una sola pieza y montada sobre la estructura de vidrio. A ese tamaño el material importa más que la resolución: se mira de lejos y aguanta sol todo el día."),
@@ -3573,7 +3583,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Sí, y casi siempre sale más barato. Pide las especificaciones antes de diseñar: medida final, margen de seguridad, modo de color y formato de archivo. Diseñar primero y adaptar después es como se pierden las tardes.",
       },
     ],
-    cierre: "En Suggestion imprimimos gran formato y lo instalamos, con la pieza pensada para el sitio donde va a estar.",
+    cierre: "En Suggestion imprimimos gran formato y lo instalamos, con la pieza pensada para el sitio donde va a estar. Cotizamos según medida, material y cantidad.",
     moneyPage: { label: "Imprenta y gran formato", href: "/servicios/imprenta" },
     relacionados: ["tarjetas-de-presentacion-medidas-y-errores", "letreros-para-negocio-cual-elegir"],
   },
@@ -3973,7 +3983,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "material-pop-punto-de-venta",
     categoria: "imprenta-btl",
-    title: "Material POP: Qué Funciona en Punto de Venta | Suggestion",
+    title: "Material POP: Qué Es, Tipos y Precios en Perú | Suggestion",
     description:
       "Jalavistas, rompetráficos, exhibidores y tótems: qué hace cada pieza, cuál conviene a tu producto y cuánto cuesta en Perú desde S/0.60 por unidad.",
     h1: "Material POP: qué piezas funcionan de verdad en punto de venta",

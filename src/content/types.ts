@@ -102,6 +102,13 @@ export type Servicio = {
   /** slugs de servicios relacionados (enlazado interno / silo). */
   enlazaA: string[];
   cierre: Cierre;
+  /** Artículos del blog que ayudan a decidir. Mismo puente que en Sector. */
+  lecturas?: { label: string; href: string }[];
+  /**
+   * Datos que pedimos para cotizar. Van escritos en el mensaje de WhatsApp para
+   * que el cliente solo los rellene: el precio sale de la especificación.
+   */
+  especificaciones?: string[];
   /** schema dominante de la página. */
   schema?: "service" | "localbusiness";
   noindex?: boolean;

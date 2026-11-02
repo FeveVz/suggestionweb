@@ -77,6 +77,7 @@ export default function LandingArticle({
   beneficios,
   proceso,
   tema,
+  especificaciones,
   precios,
   related = [],
   faq,
@@ -98,6 +99,8 @@ export default function LandingArticle({
   beneficios?: ItemTT[];
   proceso?: Paso[];
   tema?: string;
+  /** Datos a rellenar en el mensaje de cotización. */
+  especificaciones?: string[];
   precios?: PlanPrecio[];
   related?: RelatedBlock[];
   faq: FaqType[];
@@ -110,7 +113,8 @@ export default function LandingArticle({
   // Producto a cotizar → WhatsApp con el servicio escrito. Todo lo demás → la
   // consultoría, recordando de qué página viene (ver lib/cta.ts).
   const cotiza = esCotizacion(ctaLabel);
-  const waMsg = cotiza ? `Hola Suggestion, quiero cotizar ${tema ?? h1}.` : `Hola Suggestion, me interesa: ${h1}.`;
+  const plantilla = especificaciones?.length ? `\n\n${especificaciones.map((d) => `${d}: `).join("\n")}` : "";
+  const waMsg = cotiza ? `Hola Suggestion, quiero cotizar ${tema ?? h1}.${plantilla}` : `Hola Suggestion, me interesa: ${h1}.`;
   const wa = whatsappLink(waMsg);
   const consultoria = consultoriaHref(tema);
   const destino = cotiza
@@ -118,7 +122,7 @@ export default function LandingArticle({
     : { href: consultoria };
   const banda = (pregunta: string) => (
     <CtaBanda
-      texto={cotiza ? `${pregunta} Pásanos medidas y cantidad, y te cotizamos por WhatsApp.` : `${pregunta} En 30 minutos nos cuentas tu caso y te proponemos el camino. Gratis.`}
+      texto={cotiza ? `${pregunta} Pásanos las especificaciones y te cotizamos por WhatsApp.` : `${pregunta} En 30 minutos nos cuentas tu caso y te proponemos el camino. Gratis.`}
       label={ctaLabel}
       destino={destino}
     />

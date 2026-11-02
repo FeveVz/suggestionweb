@@ -509,6 +509,11 @@ const SERVICIOS_LIST: Servicio[] = [
   // ---------- Estrategia y datos ----------
   {
     slug: "consultoria",
+    lecturas: [
+      { label: "Cuánto cobra una agencia de marketing en Perú", href: "/blog/performance/cuanto-cobra-una-agencia-de-marketing-digital-en-peru" },
+      { label: "Cómo elegir una agencia de marketing digital", href: "/blog/performance/como-elegir-una-agencia-de-marketing-digital" },
+      { label: "Cuánto cuesta un plan de marketing en Perú", href: "/blog/performance/cuanto-cuesta-un-plan-de-marketing-en-peru" },
+    ],
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Consultoría",
@@ -677,6 +682,10 @@ const SERVICIOS_LIST: Servicio[] = [
   // ---------- Marketing y publicidad digital ----------
   {
     slug: "marketing-digital",
+    lecturas: [
+      { label: "Cuánto cobra una agencia de marketing en Perú", href: "/blog/performance/cuanto-cobra-una-agencia-de-marketing-digital-en-peru" },
+      { label: "Cómo elegir una agencia de marketing digital", href: "/blog/performance/como-elegir-una-agencia-de-marketing-digital" },
+    ],
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Marketing Digital",
@@ -769,6 +778,10 @@ const SERVICIOS_LIST: Servicio[] = [
   },
   {
     slug: "publicidad-digital",
+    lecturas: [
+      { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
+      { label: "Cuánto invertir en Google y Meta Ads en Perú", href: "/blog/performance/cuanto-invertir-en-ads-peru" },
+    ],
     tipo: "servicio",
     pruebas: [
       { label: "Caso Ceinys · septiembre 2026", href: "/casos/ceinys-septiembre-2026" },
@@ -1109,6 +1122,10 @@ const SERVICIOS_LIST: Servicio[] = [
   },
   {
     slug: "seo",
+    lecturas: [
+      { label: "Ficha de empresa en Google: crearla y verificarla", href: "/blog/conversion/ficha-de-empresa-en-google-crear-y-verificar" },
+      { label: "Cómo aparecer primero en Google Maps", href: "/blog/conversion/como-aparecer-primero-en-google-maps" },
+    ],
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "SEO",
@@ -1343,6 +1360,11 @@ const SERVICIOS_LIST: Servicio[] = [
   // ---------- Marca y contenido ----------
   {
     slug: "branding",
+    lecturas: [
+      { label: "Cuánto cuesta un logotipo en Perú", href: "/blog/marca/cuanto-cuesta-un-logotipo-en-peru" },
+      { label: "Cuánto cuesta registrar una marca en Indecopi", href: "/blog/marca/cuanto-cuesta-registrar-una-marca-en-indecopi" },
+      { label: "Crear un logo con IA", href: "/blog/marca/crear-logo-con-ia" },
+    ],
     tipo: "servicio",
     categoriaSlug: "marca-contenido",
     nombre: "Branding",
@@ -2123,18 +2145,39 @@ const SERVICIOS_LIST: Servicio[] = [
       { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
     ],
     slug: "imprenta",
+    lecturas: [
+      { label: "Gigantografías: medidas, materiales y precios", href: "/blog/imprenta-btl/gigantografias-medidas-materiales-precios" },
+      { label: "Tarjetas de presentación: medidas y errores", href: "/blog/imprenta-btl/tarjetas-de-presentacion-medidas-y-errores" },
+      { label: "Cuánto cuesta un millar de volantes en Perú", href: "/blog/imprenta-btl/cuanto-cuesta-un-millar-de-volantes-en-peru" },
+      { label: "Letreros para negocio: cuál elegir", href: "/blog/imprenta-btl/letreros-para-negocio-cual-elegir" },
+    ],
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Imprenta Corporativa",
-    metaTitle: "Imprenta en Ica | Impresión Publicitaria | Suggestion",
+    metaTitle: "Imprenta en Ica | Impresión por Pedido | Suggestion",
     metaDescription:
-      "Imprenta en Ica: impresión digital, gigantografías, banners y tarjetas de calidad. Producción rápida. Pide tu cotización por WhatsApp hoy.",
-    h1: "Imprenta en Ica: impresión de calidad que vende",
-    hero: "Material impreso que se ve profesional y llega a tiempo. Somos tu imprenta en Ica para todo: desde una tarjeta hasta una gigantografía. Calidad, rapidez y diseño incluido.",
+      "Imprenta en Ica por pedido: gigantografías, banners, tarjetas y más. Cotizamos por WhatsApp según medida, material y cantidad. Recojo solo coordinado.",
+    h1: "Imprenta en Ica: impresión por pedido para tu negocio",
+    hero: "Imprimimos desde una tarjeta hasta una gigantografía. Cuéntanos qué necesitas, en qué medida, material y cantidad, y te cotizamos por WhatsApp. Trabajamos por pedido: no atendemos al paso y cualquier visita se coordina antes.",
     cta: "Cotiza tu impresión",
     keyword: "imprenta ica",
     schema: "localbusiness",
+    especificaciones: ["Qué necesito imprimir", "Medida", "Material (si lo sabes)", "Cantidad", "Fecha y lugar de entrega"],
     secciones: [
+      {
+        h2: "Cuánto cuesta imprimir: qué necesitamos para cotizarte",
+        parrafo:
+          "No manejamos una lista de precios fijos, porque hay muchos materiales y tamaños y el mismo pedido cambia bastante de uno a otro. El precio sale de la descripción exacta de lo que vas a imprimir. Por eso, antes de darte un número te pedimos estas especificaciones. Si alguna no la tienes clara, dinos para qué es la pieza y te orientamos.",
+        bullets: [
+          { titulo: "Qué vas a imprimir", texto: "tarjetas, volantes, banner, vinil, etiquetas o lo que necesites." },
+          { titulo: "Medida", texto: "el tamaño final de la pieza, ancho por alto." },
+          { titulo: "Material", texto: "si no lo sabes, dinos dónde va a estar y cuánto tiene que durar." },
+          { titulo: "Cantidad", texto: "cuántas piezas necesitas, porque de eso depende también la técnica que conviene." },
+          { titulo: "Acabados", texto: "por ejemplo ojales, laminado o corte, si ya sabes que los necesitas." },
+          { titulo: "Archivo", texto: "si ya tienes el diseño listo o necesitas que lo hagamos." },
+          { titulo: "Fecha y lugar de entrega", texto: "para confirmarte si llegamos y cómo te lo hacemos llegar." },
+        ],
+      },
       {
         h2: "Servicios de impresión",
         sub: [
@@ -2162,9 +2205,9 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
       {
-        h2: "Imprenta con entrega rápida",
+        h2: "Trabajamos por pedido, sin atención al paso",
         parrafo:
-          "Atendemos en Ica con tiempos claros y opción de recojo. Te decimos la fecha de entrega antes de empezar, y la cumplimos.",
+          "No atendemos al público en el local a menos que se coordine antes. Los pedidos se cotizan con sus especificaciones y te decimos la fecha de entrega antes de empezar. Si necesitas recoger tu pedido o revisar algo en persona, lo coordinamos. Si buscas copias o impresiones al momento y sin cita, te conviene un centro de copiado cercano.",
       },
       {
         h2: "Impresiones por tiraje corto o largo",
@@ -2213,7 +2256,7 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         h2: "Dónde entregamos",
         parrafo:
-          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos entrega o recojo el mismo día en que el pedido está listo. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización, no después.",
+          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos la entrega, o el recojo si lo acordamos antes, el mismo día en que el pedido está listo. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización, no después.",
       },
     ],
     incluye: [
@@ -2240,6 +2283,14 @@ const SERVICIOS_LIST: Servicio[] = [
       { paso: "04", titulo: "Entrega", texto: "Empacado y logística de envío." },
     ],
     faq: [
+      {
+        q: "¿Cuánto cuesta imprimir?",
+        a: "No hay un precio fijo: depende de la descripción exacta de lo que vas a imprimir, y hay muchos materiales y tamaños. Pásanos qué necesitas, la medida, el material y la cantidad, y te cotizamos por WhatsApp.",
+      },
+      {
+        q: "¿Puedo ir al local sin cita?",
+        a: "No. Trabajamos por pedido y no atendemos al público en el local a menos que se coordine antes. Escríbenos y acordamos la entrega o el recojo.",
+      },
       {
         q: "¿Cuánto demora un pedido?",
         a: "Depende del producto y la cantidad; siempre con fecha comprometida.",
@@ -2280,6 +2331,10 @@ const SERVICIOS_LIST: Servicio[] = [
       { label: "Caso Autoniza · 8 autos en 2 eventos", href: "/casos/autoniza-eventos" },
     ],
     slug: "merchandising",
+    lecturas: [
+      { label: "Merchandising corporativo: qué regalar", href: "/blog/imprenta-btl/merchandising-corporativo-que-regalar" },
+      { label: "Polos personalizados para empresa", href: "/blog/imprenta-btl/polos-personalizados-para-empresa" },
+    ],
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Merchandising",
