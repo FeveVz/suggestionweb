@@ -35,7 +35,7 @@ export default function Gracias() {
           </Btn>
         </div>
         <p style={{ display: "inline-flex", alignItems: "center", gap: 8, font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 22 }}>
-          <Clock size={14} style={{ color: "var(--cyan)" }} /> Horario de atención: lunes a sábado, 9:00–19:00 (hora de Perú) · {site.phoneDisplay}
+          <Clock size={14} style={{ color: "var(--cyan)" }} /> Atención las 24 horas con nuestro agente de IA · {site.phoneDisplay}
         </p>
       </div>
     </section>

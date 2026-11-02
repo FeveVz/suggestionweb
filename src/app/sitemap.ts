@@ -54,8 +54,8 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/produccion-audiovisual": "2026-10-09",
   "/servicios/btl": "2026-10-09",
   "/servicios/publicidad-movil": "2026-10-09",
-  "/servicios/estructuras-publicitarias": "2026-10-09",
-  "/servicios/material-pop": "2026-10-09",
+  "/servicios/estructuras-publicitarias": "2026-11-02",
+  "/servicios/material-pop": "2026-11-02",
   "/servicios/imprenta": "2026-11-02",
   "/marketing-inmobiliario": "2026-10-15",
   "/marketing-automotriz": "2026-10-09",
@@ -69,6 +69,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/casos/inmobiliaria-ceinys": "2026-10-09",
   "/casos/autoniza-eventos": "2026-10-09",
   "/equipo/carolina": "2026-10-13",
+  "/servicios/merchandising": "2026-11-02",
   "/blog/imprenta-btl/gigantografias-medidas-materiales-precios": "2026-11-02",
 };
 const fecha = (path: string) => (ACTUALIZADA[path] ? new Date(`${ACTUALIZADA[path]}T12:00:00Z`) : GLOBAL);

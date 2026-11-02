@@ -61,6 +61,7 @@ export function WaConsultoria({ children }: { children: React.ReactNode }) {
 export default function AuditForm({ variante = "auditoria" }: { variante?: "auditoria" | "consultoria" }) {
   const [sent, setSent] = useState(false);
   const [aviso, setAviso] = useState<string | null>(null);
+  const [waUrl, setWaUrl] = useState<string | null>(null);
   const tema = useTema();
   const consultoria = variante === "consultoria";
 
@@ -82,7 +83,9 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
           `Inversión mensual en publicidad: ${f.get("inversion")}`,
           `Objetivo: ${f.get("objetivo")}`,
         ];
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg.filter(Boolean).join("\n"))}`, "_blank", "noopener,noreferrer");
+    const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg.filter(Boolean).join("\n"))}`;
+    setWaUrl(wa);
+    window.open(wa, "_blank", "noopener,noreferrer");
     const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
     const guardado = fetch("/api/lead", {
       method: "POST",
@@ -125,15 +128,20 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
       return;
     }
     setSent(false);
-    setAviso(r && r.status === 429 ? "Ya recibimos tu solicitud hace unos minutos. Si es urgente, escríbenos directamente por WhatsApp." : "No pudimos guardar tus datos, pero ya te abrimos WhatsApp con el mensaje escrito: envíalo desde ahí y te respondemos igual.");
+    setAviso(r && r.status === 429 ? "Ya recibimos tu solicitud hace unos minutos. Si es urgente, escríbenos directamente por WhatsApp." : "Tu mensaje ya está escrito en WhatsApp. Envíalo desde ahí para que te respondamos.");
   };
 
   return (
     <form onSubmit={onSubmit} className="hk-form" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-4)" }}>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
       {aviso && (
-        <p role="status" style={{ gridColumn: "1 / -1", margin: 0, font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "#ffb4ab" }}>
-          {aviso}
+        <p role="status" style={{ gridColumn: "1 / -1", margin: 0, font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--white)" }}>
+          {aviso}{" "}
+          {waUrl && (
+            <a href={waUrl} target="_blank" rel="noopener noreferrer" style={{ color: "var(--cyan)", textDecoration: "underline" }}>
+              ¿No se abrió? Abrir WhatsApp
+            </a>
+          )}
         </p>
       )}
       {consultoria && tema && (

@@ -44,6 +44,14 @@ export function organizationSchema(): Json {
         availableLanguage: ["Spanish"],
         email: site.email,
         url: `${SITE_URL}/contacto`,
+        // Atención 24 h con el agente de IA. Es del canal de contacto, no del local,
+        // que no recibe público sin coordinar: por eso ya no hay horario de apertura.
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
       },
     ],
     priceRange: "$$",
@@ -55,12 +63,6 @@ export function organizationSchema(): Json {
       addressCountry: site.country,
     },
     geo: { "@type": "GeoCoordinates", latitude: -14.0678, longitude: -75.7286 },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:00",
-      closes: "19:00",
-    },
     knowsAbout: ["Marketing digital", "Publicidad digital", "Meta Ads", "Google Ads", "Desarrollo web", "Branding", "BTL y activaciones"],
     areaServed: [
       { "@type": "City", name: site.city },

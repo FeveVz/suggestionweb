@@ -1861,7 +1861,20 @@ const SERVICIOS_LIST: Servicio[] = [
     hero: "Presencia física que no se ignora. Diseñamos y fabricamos las estructuras que ponen tu marca en grande, donde tu cliente la ve sí o sí.",
     cta: "Pide tu cotización",
     keyword: "estructuras publicitarias",
+    especificaciones: ["Qué estructura necesito", "Medida", "Dónde va a ir", "Si necesito diseño e instalación", "Fecha"],
     secciones: [
+      {
+        h2: "Cuánto cuesta una estructura publicitaria: qué necesitamos para cotizarte",
+        parrafo:
+          "No manejamos precios fijos: cotizamos cada pedido según lo que necesitas, porque el tipo de estructura, su tamaño, el material y el lugar donde va cambian el costo. Para darte un precio te pedimos estos datos. Si todavía no lo tienes claro, cuéntanos para qué es y te orientamos.",
+        bullets: [
+          { titulo: "Qué estructura", texto: "panel, tótem, letrero o módulo." },
+          { titulo: "Medida", texto: "el tamaño que buscas, o el espacio que tienes disponible." },
+          { titulo: "Dónde va a ir", texto: "la dirección o la zona, y si es interior o exterior." },
+          { titulo: "Diseño e instalación", texto: "si ya tienes el arte y si necesitas que la instalemos." },
+          { titulo: "Fecha", texto: "para cuándo la necesitas funcionando." },
+        ],
+      },
       {
         h2: "Paneles publicitarios",
         parrafo: "Gran formato para dominar el espacio.",
@@ -1961,6 +1974,10 @@ const SERVICIOS_LIST: Servicio[] = [
     ],
     faq: [
       {
+        q: "¿Cuánto cuesta una estructura publicitaria?",
+        a: "No hay un precio fijo: se cotiza según tu necesidad, porque depende del tipo de estructura, la medida, el material y la ubicación. Pásanos esos datos y te cotizamos por WhatsApp.",
+      },
+      {
         q: "¿Con qué materiales trabajan?",
         a: "Según la pieza: acrílico, PVC, metal, LED y más.",
       },
@@ -2013,7 +2030,20 @@ const SERVICIOS_LIST: Servicio[] = [
     hero: "La decisión de compra se gana en el último metro. Diseñamos y producimos material POP que hace que tu producto sea el primero que el cliente ve —y elige.",
     cta: "Pide tu cotización",
     keyword: "material pop",
+    especificaciones: ["Qué pieza necesito", "Medida", "Material (si lo sabes)", "Cantidad", "Fecha y lugar de entrega"],
     secciones: [
+      {
+        h2: "Cuánto cuesta el material POP: qué necesitamos para cotizarte",
+        parrafo:
+          "No manejamos precios fijos: cotizamos cada pedido según lo que necesitas, porque la pieza, su tamaño, el material y la cantidad cambian el costo. Para darte un precio te pedimos estos datos. Si todavía no lo tienes claro, cuéntanos para qué es y te orientamos.",
+        bullets: [
+          { titulo: "Qué pieza", texto: "display, exhibidor, letras volumétricas u otra pieza de punto de venta." },
+          { titulo: "Medida", texto: "el tamaño final, o el espacio que tienes disponible en la tienda." },
+          { titulo: "Material", texto: "si no lo sabes, dinos cuánto tiempo tiene que estar en pie y dónde." },
+          { titulo: "Cantidad", texto: "cuántas piezas y para cuántos puntos de venta." },
+          { titulo: "Fecha y lugar de entrega", texto: "y si necesitas que la instalemos." },
+        ],
+      },
       {
         h2: "Displays y exhibidores",
         parrafo: "Piezas que ordenan tu producto y lo ponen al frente.",
@@ -2104,6 +2134,10 @@ const SERVICIOS_LIST: Servicio[] = [
     ],
     faq: [
       {
+        q: "¿Cuánto cuesta el material POP?",
+        a: "No hay un precio fijo: se cotiza según tu necesidad, porque depende de la pieza, la medida, el material y la cantidad. Pásanos esos datos y te cotizamos por WhatsApp.",
+      },
+      {
         q: "¿Qué tipos de material POP hay?",
         a: "Exhibidores, displays, cubos, letras volumétricas, señalética y más. Te asesoramos según tu producto y punto de venta.",
       },
@@ -2113,7 +2147,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
       {
         q: "¿Cuánto tiempo toma producir?",
-        a: "Displays de cartón: 2-3 semanas. Estructuras complejas: 4-6 semanas.",
+        a: "Depende de la cantidad y la dificultad de la pieza. Te damos la fecha al cotizar, antes de empezar a producir.",
       },
       {
         q: "¿Qué significa POP en publicidad?",
@@ -2273,7 +2307,7 @@ const SERVICIOS_LIST: Servicio[] = [
     beneficios: [
       { titulo: "Calidad premium", texto: "Papeles, tintas y acabados de primera." },
       { titulo: "Asesoría técnica", texto: "Te guiamos en formatos, papeles y acabados óptimos." },
-      { titulo: "Tiempos competitivos", texto: "Producción ágil sin sacrificar calidad." },
+      { titulo: "Plazos claros", texto: "La fecha depende de la cantidad y la dificultad, y la conoces antes de empezar." },
       { titulo: "Precios justos", texto: "Cotización transparente, sin sorpresas." },
     ],
     proceso: [
@@ -2293,7 +2327,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
       {
         q: "¿Cuánto demora un pedido?",
-        a: "Depende del producto y la cantidad; siempre con fecha comprometida.",
+        a: "Varía según la cantidad y la dificultad del pedido. Te damos la fecha al cotizar, antes de empezar.",
       },
       { q: "¿Diseñan el material?", a: "Sí, ofrecemos diseño además de la impresión." },
       { q: "¿Atienden fuera de Ica?", a: "Sí, coordinamos envíos a otras regiones." },
@@ -2345,7 +2379,20 @@ const SERVICIOS_LIST: Servicio[] = [
     hero: "Tu marca en las manos de tus clientes, todos los días. Diseñamos y producimos merchandising publicitario que la gente sí quiere usar —y que mantiene tu nombre presente.",
     cta: "Pide tu cotización",
     keyword: "merchandising publicitario",
+    especificaciones: ["Qué producto necesito", "Cantidad", "Cómo va la marca (si lo sabes)", "Para qué es", "Fecha y lugar de entrega"],
     secciones: [
+      {
+        h2: "Cuánto cuesta tu merchandising: qué necesitamos para cotizarte",
+        parrafo:
+          "No manejamos precios fijos: cotizamos cada pedido según lo que necesitas, porque el producto, la cantidad y la forma de personalizarlo cambian el costo. Para darte un precio te pedimos estos datos. Si todavía no lo tienes claro, cuéntanos para qué es y te orientamos.",
+        bullets: [
+          { titulo: "Qué producto", texto: "llaveros, gorras, tazas, polos o lo que tengas en mente." },
+          { titulo: "Cantidad", texto: "cuántas unidades necesitas, porque también define la técnica que conviene." },
+          { titulo: "Cómo va la marca", texto: "si ya tienes el logo listo o necesitas que lo diseñemos, y dónde va." },
+          { titulo: "Para qué es", texto: "un evento, un regalo a clientes o el uso diario del equipo." },
+          { titulo: "Fecha y lugar de entrega", texto: "para confirmarte si llegamos y cómo te lo hacemos llegar." },
+        ],
+      },
       {
         h2: "Productos de merchandising publicitario",
         sub: [
@@ -2418,6 +2465,10 @@ const SERVICIOS_LIST: Servicio[] = [
       { paso: "04", titulo: "Entrega", texto: "Producción y logística hasta tu puerta." },
     ],
     faq: [
+      {
+        q: "¿Cuánto cuesta el merchandising?",
+        a: "No hay un precio fijo: se cotiza según tu necesidad, porque depende del producto, la cantidad y la personalización. Pásanos esos datos y te cotizamos por WhatsApp.",
+      },
       { q: "¿Cuál es el pedido mínimo?", a: "Depende del producto; te lo confirmamos al cotizar." },
       { q: "¿Ustedes hacen el diseño?", a: "Sí, podemos diseñar la pieza o trabajar con tu arte." },
       {
