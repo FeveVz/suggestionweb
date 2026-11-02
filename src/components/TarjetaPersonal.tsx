@@ -183,14 +183,14 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
         <Rise reduce={reduce} delay={0.9} style={{ marginTop: 40 }}>
           <div style={{ padding: "var(--space-6)", border: "1px solid var(--border-on-inverse)", borderRadius: "var(--radius-md)", background: "var(--ink-800)" }}>
             <p style={{ font: "var(--fw-medium) var(--fs-lg)/1.3 var(--font-display)", letterSpacing: "var(--tracking-snug)" }}>
-              ¿Tienes un negocio? Te decimos qué ve tu mercado.
+              ¿Tienes un negocio? Hablemos 30 minutos.
             </p>
             <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>
-              Auditoría gratis de tu marketing, respuesta en 48 h hábiles.
+              Consultoría cero, gratis: nos cuentas tu problema o lo que quieres mejorar y te proponemos el camino.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
-              <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">
-                Pedir mi auditoría <ArrowRight size={16} />
+              <Btn as="a" href="/consultoria-cero" variant="insight" size="md">
+                Agenda tu consultoría cero <ArrowRight size={16} />
               </Btn>
               <Btn as="a" href="/casos" variant="ghostDark" size="md">
                 Ver resultados

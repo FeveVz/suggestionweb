@@ -5,7 +5,8 @@ import {
   SearchX, UserX, Hourglass, BadgeDollarSign, MonitorX, EyeOff, MessageCircle, Video, ClipboardCheck,
 } from "lucide-react";
 import { Section, Btn, TaglineStrip } from "@/components/brand/parts";
-import { CtaForm, Percepcion } from "@/components/brand/interactive";
+import { Percepcion } from "@/components/brand/interactive";
+import AuditForm from "@/components/AuditForm";
 import HeroShowcase from "@/components/HeroShowcase";
 import FunnelVivo from "@/components/FunnelVivo";
 import ProofBar from "@/components/ProofBar";
@@ -87,7 +88,7 @@ export const metadata: Metadata = buildMetadata({
   // /servicios/marketing-digital, su dueña natural.
   title: "Agencia de Marketing en Ica y Perú | Suggestion",
   description:
-    "Suggestion es la agencia de marketing en Ica que convierte atención en ventas: clientes, citas y cierres medibles, en Ica y todo el Perú. Agenda tu consultoría gratis.",
+    "Agencia de marketing en Ica que convierte atención en ventas: clientes, citas y cierres medibles, en Ica y todo el Perú. Agenda tu consultoría gratis.",
   path: "/",
 });
 
@@ -439,7 +440,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <CtaForm />
+          <AuditForm variante="consultoria" />
         </div>
       </section>
     </>

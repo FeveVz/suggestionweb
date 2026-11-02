@@ -16,7 +16,7 @@ export const SERVICIOS_PILAR = {
   h1: "Servicios de marketing que convierten en ventas",
   intro:
     "No vendemos piezas sueltas. Nos encargamos de todo el proceso —digital, marca, web y calle— bajo un mismo método: de la estrategia al cierre.",
-  cta: "Hablemos de tu negocio",
+  cta: "Agenda tu consultoría cero",
 } as const;
 
 /**
@@ -123,10 +123,10 @@ const CATEGORIAS_RAW: Servicio[] = [
     nombre: "Estrategia y datos",
     metaTitle: "Estrategia y Datos de Marketing | Suggestion",
     metaDescription:
-      "Estrategia y datos para crecer con certeza: consultoría e investigación de mercado antes de invertir. Ordena tu marketing. Agenda una llamada.",
+      "Estrategia y datos para crecer con certeza: consultoría e investigación de mercado antes de invertir. Ordena tu marketing. Consultoría gratis.",
     h1: "Estrategia y datos para crecer con certeza",
     hero: "Antes de gastar en marketing, entiende el terreno. Aquí vive el “pensar” que hace rentable todo lo demás.",
-    cta: "Ordenemos tu estrategia",
+    cta: "Agenda tu consultoría cero",
     keyword: "estrategia de marketing",
     secciones: [
       {
@@ -188,7 +188,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       },
     ],
     enlazaA: ["consultoria", "investigacion-de-mercado"],
-    cierre: { h2: "Ordenemos tu estrategia", cta: "Ordenemos tu estrategia" },
+    cierre: { h2: "Ordenemos tu estrategia", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "marketing-digital-publicidad",
@@ -199,7 +199,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       "Marketing y publicidad digital de performance: estrategia, pauta y comunidad conectadas en un solo embudo que vende. Quiero más leads.",
     h1: "Marketing y publicidad digital de performance",
     hero: "Atraer al cliente correcto y convertirlo en venta. Estrategia, pauta y comunidad, conectadas en un solo embudo.",
-    cta: "Quiero más leads",
+    cta: "Agenda tu consultoría cero",
     keyword: "marketing y publicidad digital",
     secciones: [
       {
@@ -256,7 +256,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       },
     ],
     enlazaA: ["marketing-digital", "publicidad-digital", "redes-sociales"],
-    cierre: { h2: "Quiero más leads", cta: "Quiero más leads" },
+    cierre: { h2: "Quiero más leads", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "web-seo",
@@ -267,7 +267,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       "Web, SEO y automatización que venden: una web que convierte, posicionamiento que te hace visible y CRM que no deja caer ningún lead.",
     h1: "Web, SEO y automatización que venden",
     hero: "Tu activo digital trabajando 24/7: una web que convierte, posicionamiento que te hace visible y automatización que no deja caer ningún lead.",
-    cta: "Construyamos tu máquina de ventas",
+    cta: "Agenda tu consultoría cero",
     keyword: "web seo y automatización",
     secciones: [
       {
@@ -331,7 +331,7 @@ const CATEGORIAS_RAW: Servicio[] = [
     enlazaA: ["desarrollo-web", "seo", "crm-automatizacion"],
     cierre: {
       h2: "Construyamos tu máquina de ventas",
-      cta: "Construyamos tu máquina de ventas",
+      cta: "Agenda tu consultoría cero",
     },
   },
   {
@@ -343,7 +343,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       "Marca y contenido que dejan huella: branding que justifica el precio y producción audiovisual que mueve a la acción. Construyamos tu marca.",
     h1: "Marca y contenido que dejan huella",
     hero: "La marca que se recuerda y el contenido que mueve a la acción. Lo que hace que te elijan a ti y paguen más.",
-    cta: "Construyamos tu marca",
+    cta: "Agenda tu consultoría cero",
     keyword: "marca y contenido",
     secciones: [
       {
@@ -404,7 +404,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       },
     ],
     enlazaA: ["branding", "produccion-audiovisual"],
-    cierre: { h2: "Construyamos tu marca", cta: "Construyamos tu marca" },
+    cierre: { h2: "Construyamos tu marca", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "btl-medios",
@@ -517,7 +517,7 @@ const SERVICIOS_LIST: Servicio[] = [
       "Consultoría de marketing: diagnóstico, estrategia y detección de fugas para que tu negocio venda más. Agenda tu sesión de diagnóstico hoy.",
     h1: "Consultoría de marketing que ordena tu crecimiento",
     hero: "Invertir más en marketing sin estrategia es acelerar en la dirección equivocada. Primero ordenamos: dónde estás, a dónde vas y qué te está frenando. Después, ejecutas con foco.",
-    cta: "Agenda tu diagnóstico",
+    cta: "Agenda tu consultoría cero",
     keyword: "consultoría de marketing",
     secciones: [
       {
@@ -594,7 +594,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["investigacion-de-mercado", "marketing-digital"],
-    cierre: { h2: "Ordenemos tu estrategia", cta: "Agenda tu diagnóstico" },
+    cierre: { h2: "Ordenemos tu estrategia", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "investigacion-de-mercado",
@@ -603,10 +603,10 @@ const SERVICIOS_LIST: Servicio[] = [
     nombre: "Investigación de Mercado",
     metaTitle: "Investigación de Mercado en Ica y Perú | Suggestion",
     metaDescription:
-      "Investigación de mercado con datos e insights para decidir con certeza: demanda, competencia y consumidor. Pide tu estudio. Agenda una llamada.",
+      "Investigación de mercado con datos e insights para decidir con certeza: demanda, competencia y consumidor. Pide tu estudio. Consultoría gratis.",
     h1: "Investigación de mercado que guía tus decisiones",
     hero: "Decidir por intuición es caro. Te damos datos e insights reales sobre tu demanda, tu competencia y tu consumidor, para que inviertas donde sí hay oportunidad.",
-    cta: "Pide tu estudio",
+    cta: "Agenda tu consultoría cero",
     keyword: "investigación de mercado",
     secciones: [
       {
@@ -672,7 +672,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["consultoria", "seo"],
-    cierre: { h2: "Decide con datos", cta: "Pide tu estudio" },
+    cierre: { h2: "Decide con datos", cta: "Agenda tu consultoría cero" },
   },
   // ---------- Marketing y publicidad digital ----------
   {
@@ -685,7 +685,7 @@ const SERVICIOS_LIST: Servicio[] = [
       "Agencia de marketing digital en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
     h1: "Marketing digital integral que genera ventas, no vanidad",
     hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el funnel conectado.",
-    cta: "Agenda tu diagnóstico",
+    cta: "Agenda tu consultoría cero",
     keyword: "agencia de marketing digital",
     proof:
       "El mismo método que llevó a Ceinys a S/350K en ventas con S/3,000 de inversión.",
@@ -765,7 +765,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["publicidad-digital", "redes-sociales", "seo"],
-    cierre: { h2: "Lleva tu marketing a resultados", cta: "Agenda tu diagnóstico gratuito" },
+    cierre: { h2: "Lleva tu marketing a resultados", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "publicidad-digital",
@@ -779,10 +779,10 @@ const SERVICIOS_LIST: Servicio[] = [
     nombre: "Publicidad Digital",
     metaTitle: "Agencia de Google Ads y Meta Ads en Perú | Suggestion",
     metaDescription:
-      "Publicidad digital con ROI medible: campañas de Google Ads y Meta Ads orientadas a leads y ventas, no a alcance. Pide tu propuesta. Agenda hoy.",
+      "Publicidad digital con ROI medible: campañas de Google Ads y Meta Ads orientadas a leads y ventas, no a alcance. Consultoría gratis.",
     h1: "Publicidad digital con ROI, no con likes",
     hero: "Pauta que se paga sola. Gestionamos tus campañas en Google y Meta con un solo norte: que cada sol invertido vuelva en leads y ventas, no en alcance que no cierra.",
-    cta: "Pide tu propuesta",
+    cta: "Agenda tu consultoría cero",
     keyword: "agencia de google ads",
     // Barra de prueba propia: la de por defecto abre con el caso de Ceinys de
     // S/3,000 → S/350K, y en esta página queda a tres líneas del bloque del
@@ -874,7 +874,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["marketing-digital", "redes-sociales", "crm-automatizacion"],
-    cierre: { h2: "Pongamos tu inversión a vender", cta: "Pide tu propuesta" },
+    cierre: { h2: "Pongamos tu inversión a vender", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "redes-sociales",
@@ -883,10 +883,10 @@ const SERVICIOS_LIST: Servicio[] = [
     nombre: "Redes Sociales",
     metaTitle: "Gestión de Redes Sociales para Empresas | Suggestion",
     metaDescription:
-      "Gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Agenda una llamada.",
+      "Gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Consultoría gratis.",
     h1: "Redes que traen clientes, no solo seguidores",
     hero: "Tus redes no son un mural de fotos bonitas: son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
-    cta: "Crezcamos en redes",
+    cta: "Agenda tu consultoría cero",
     keyword: "gestión de redes sociales",
     secciones: [
       {
@@ -1003,7 +1003,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["marketing-digital", "publicidad-digital", "produccion-audiovisual"],
-    cierre: { h2: "Hagamos que tus redes vendan", cta: "Crezcamos en redes" },
+    cierre: { h2: "Hagamos que tus redes vendan", cta: "Agenda tu consultoría cero" },
   },
   // ---------- Web, SEO y automatización ----------
   {
@@ -1013,10 +1013,10 @@ const SERVICIOS_LIST: Servicio[] = [
     nombre: "Desarrollo Web",
     metaTitle: "Diseño de Páginas Web Profesionales | Suggestion",
     metaDescription:
-      "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Agenda una llamada.",
+      "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Consultoría gratis.",
     h1: "Diseño de páginas web que convierten visitas en clientes",
     hero: "Una web bonita que no vende es un gasto. Diseñamos páginas web rápidas, claras y pensadas para una sola cosa: que el visitante haga lo que tú necesitas —comprar, escribir o agendar.",
-    cta: "Quiero una web que venda",
+    cta: "Agenda tu consultoría cero",
     keyword: "diseño de páginas web",
     secciones: [
       {
@@ -1105,7 +1105,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["seo", "crm-automatizacion", "publicidad-digital"],
-    cierre: { h2: "Tu web debería traerte clientes", cta: "Quiero una web que venda" },
+    cierre: { h2: "Tu web debería traerte clientes", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "seo",
@@ -1117,7 +1117,7 @@ const SERVICIOS_LIST: Servicio[] = [
       "Agencia SEO en Perú: posicionamiento web que te hace visible cuando tu cliente busca. SEO técnico y de contenidos. Agenda tu auditoría gratuita.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
     hero: "El mejor lugar para esconder un cadáver es la segunda página de Google. Te llevamos a la primera, justo cuando tu cliente busca lo que ofreces —sin pagar por cada clic.",
-    cta: "Agenda tu auditoría",
+    cta: "Agenda tu consultoría cero",
     keyword: "posicionamiento web",
     secciones: [
       {
@@ -1229,7 +1229,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["desarrollo-web", "marketing-digital", "crm-automatizacion"],
-    cierre: { h2: "Aparece primero en Google", cta: "Agenda tu auditoría" },
+    cierre: { h2: "Aparece primero en Google", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -1246,7 +1246,7 @@ const SERVICIOS_LIST: Servicio[] = [
       "CRM para ventas y WhatsApp: captura cada lead, automatiza el seguimiento y califica solo. Con el campo de origen bien puesto desde el primer contacto.",
     h1: "CRM y automatización que escala tus ventas",
     hero: "¿Cuántos leads se te enfrían por no responder a tiempo? Automatizamos la captura, el seguimiento y la calificación para que ningún cliente potencial se pierda —y tu equipo cierre más.",
-    cta: "Agenda una demo",
+    cta: "Agenda tu consultoría cero",
     keyword: "crm para ventas",
     secciones: [
       {
@@ -1338,7 +1338,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["desarrollo-web", "publicidad-digital", "redes-sociales"],
-    cierre: { h2: "Automatiza y vende más", cta: "Agenda una demo" },
+    cierre: { h2: "Automatiza y vende más", cta: "Agenda tu consultoría cero" },
   },
   // ---------- Marca y contenido ----------
   {
@@ -1348,10 +1348,10 @@ const SERVICIOS_LIST: Servicio[] = [
     nombre: "Branding",
     metaTitle: "Branding e Identidad de Marca en Ica | Suggestion",
     metaDescription:
-      "Branding estratégico que deja huella y vende: naming, logotipo, manual de marca e identidad visual. Construyamos tu marca. Agenda una llamada.",
+      "Branding estratégico que deja huella y vende: naming, logotipo, manual de marca e identidad visual. Construyamos tu marca. Consultoría gratis.",
     h1: "Branding que deja huella y vende",
     hero: "Una marca no es un logo bonito. Es la razón por la que alguien te elige y paga más. Construimos branding estratégico que se queda en la mente de tu cliente y empuja la decisión de compra.",
-    cta: "Construyamos tu marca",
+    cta: "Agenda tu consultoría cero",
     keyword: "branding",
     secciones: [
       {
@@ -1434,7 +1434,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["produccion-audiovisual", "desarrollo-web", "merchandising"],
-    cierre: { h2: "Tu marca merece vender", cta: "Construyamos tu marca" },
+    cierre: { h2: "Tu marca merece vender", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "produccion-audiovisual",
@@ -1447,10 +1447,10 @@ const SERVICIOS_LIST: Servicio[] = [
     // clics por sí solo; sirve para cuando el contenido haga subir la página.
     metaTitle: "Productora Audiovisual en Ica | Postproducción | Suggestion",
     metaDescription:
-      "Servicios de producción audiovisual y postproducción en Ica: spots, video sell, fotografía y drone. Productora propia. Agenda una llamada.",
+      "Servicios de producción audiovisual y postproducción en Ica: spots, video sell, fotografía y drone. Productora propia. Consultoría gratis.",
     h1: "Producción audiovisual que cuenta y vende",
     hero: "El video es lo que más se ve y lo que más vende —si está bien hecho. Producimos contenido audiovisual de alto impacto que cuenta tu historia y mueve a la acción.",
-    cta: "Contemos tu historia",
+    cta: "Agenda tu consultoría cero",
     keyword: "producción audiovisual",
     secciones: [
       {
@@ -1543,7 +1543,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["branding", "redes-sociales", "publicidad-digital"],
-    cierre: { h2: "Contemos tu historia", cta: "Contemos tu historia" },
+    cierre: { h2: "Contemos tu historia", cta: "Agenda tu consultoría cero" },
   },
   // ---------- Activación y medios físicos ----------
   {
@@ -1560,7 +1560,7 @@ const SERVICIOS_LIST: Servicio[] = [
       "BTL y activaciones que conectan: marketing experiencial, sampling y presencia en punto clave con captación de datos. Agenda tu activación hoy.",
     h1: "BTL y activaciones que conectan y captan",
     hero: "Lo digital atrae; lo presencial convence. Diseñamos activaciones que hacen vivir tu marca y, a la vez, capturan datos para seguir vendiendo después del evento.",
-    cta: "Agenda tu activación",
+    cta: "Agenda tu consultoría cero",
     keyword: "btl y activaciones",
     secciones: [
       {
@@ -1685,7 +1685,7 @@ const SERVICIOS_LIST: Servicio[] = [
       },
     ],
     enlazaA: ["publicidad-movil", "material-pop", "merchandising"],
-    cierre: { h2: "Activemos tu marca en la calle", cta: "Agenda tu activación" },
+    cierre: { h2: "Activemos tu marca en la calle", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [

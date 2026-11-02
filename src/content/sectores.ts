@@ -14,7 +14,7 @@ export const SECTORES_HUB = {
   h1: "Cada mercado tiene su perspectiva. Nosotros la entendemos.",
   intro:
     "No hacemos el mismo marketing para todos. Cada industria tiene su cliente, su ciclo y su forma de cerrar. Por eso trabajamos con un playbook propio por sector.",
-  cta: "Hablemos de tu caso",
+  cta: "Agenda tu consultoría cero",
 } as const;
 
 export const SECTORES: Sector[] = [
@@ -29,10 +29,10 @@ export const SECTORES: Sector[] = [
     nombre: "Inmobiliario",
     metaTitle: "Agencia de Marketing Inmobiliario en Perú | Suggestion",
     metaDescription:
-      "Agencia de marketing inmobiliario en Perú: citas calificadas, no curiosos. Performance, drone y CRM con el origen de cada lead escrito. Agenda una llamada.",
+      "Agencia de marketing inmobiliario en Perú: citas calificadas, no curiosos. Performance, drone y CRM con el origen de cada lead escrito. Consultoría gratis.",
     h1: "Marketing inmobiliario que llena tu pipeline de citas",
     hero: "Tu problema no es la falta de interesados; es la falta de citas que cierran. Generamos leads calificados, los filtramos y los llevamos a tu sala de ventas listos para decidir.",
-    cta: "Llenemos tu sala de ventas",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Caso Inmobiliaria Ceinys: S/350K en ventas, 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
     secciones: [
@@ -142,7 +142,7 @@ export const SECTORES: Sector[] = [
         a: "Trabajamos en las dos formas: llevando la parte de captación y medición mientras tu equipo se ocupa del contenido y la marca, o al revés. Lo que no funciona es duplicar decisiones sobre la misma campaña sin que nadie tenga la última palabra.",
       },
     ],
-    cierre: { h2: "Llenemos tu sala de ventas", cta: "Agenda una llamada" },
+    cierre: { h2: "Llenemos tu sala de ventas", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -157,7 +157,7 @@ export const SECTORES: Sector[] = [
       "Marketing automotriz que lleva del clic al test drive: leads listos para cierre en piso. Campañas para concesionarios y autos. Agenda hoy.",
     h1: "Marketing automotriz: del clic al test drive",
     hero: "Un lead de auto que no llega al piso no sirve. Diseñamos campañas que no solo generan interesados: los califican y los empujan a la prueba de manejo, donde tu equipo cierra.",
-    cta: "Llena tu piso de prospectos",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Caso Pacífico Motors: operamos los planes de marketing de su red de concesionarios (Mazda, Suzuki, Subaru, Changan, JAC, Renault y más) en Ica y Cusco.",
     secciones: [
@@ -271,7 +271,7 @@ export const SECTORES: Sector[] = [
         a: "Las tres líneas. Entre livianos, camiones y línea amarilla llevamos 19 marcas de vehículos, incluida XCMG. El comprador de maquinaria pesada pide otra conversación —ficha técnica, repuestos, respaldo del taller y financiamiento— y ese contenido lo preparamos con tu equipo técnico.",
       },
     ],
-    cierre: { h2: "Del clic al cierre en piso", cta: "Agenda una llamada" },
+    cierre: { h2: "Del clic al cierre en piso", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -283,10 +283,10 @@ export const SECTORES: Sector[] = [
     nombre: "Turismo",
     metaTitle: "Agencia de Marketing para Hoteles y Turismo | Suggestion",
     metaDescription:
-      "Agencia de marketing para hoteles, restaurantes y agencias de viaje: reservas reales en temporada y fuera de ella, y la ficha de Google trabajando. Agenda una llamada.",
+      "Agencia de marketing para hoteles, restaurantes y agencias de viaje: reservas reales en temporada y fuera de ella, y la ficha de Google trabajando.",
     h1: "Marketing turístico que genera reservas reales",
     hero: "El reto del turismo no es solo llenar en temporada alta: es no vaciarse en la baja. Diseñamos campañas que generan reservas todo el año, con costo medido.",
-    cta: "Llena tu temporada",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Caso Hoteles Señor de Luren: 75 reservas generadas en una sola campaña, dentro y fuera de temporada.",
     secciones: [
@@ -407,7 +407,7 @@ export const SECTORES: Sector[] = [
         a: "Por reservas y su costo, no por alcance. Y con dos matices que suelen olvidarse: cuántas noches trae cada reserva y qué porcentaje de huéspedes repite, que es el canal más barato que existe.",
       },
     ],
-    cierre: { h2: "Llena tu temporada (y la baja también)", cta: "Agenda una llamada" },
+    cierre: { h2: "Llena tu temporada (y la baja también)", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -419,10 +419,10 @@ export const SECTORES: Sector[] = [
     nombre: "Marcas y consumo",
     metaTitle: "Agencia de Marketing para Marcas de Consumo | Suggestion",
     metaDescription:
-      "Marketing para marcas y consumo: demanda que se convierte en venta, no en likes. Posicionamiento, performance y activación. Agenda una llamada.",
+      "Marketing para marcas y consumo: demanda que se convierte en venta, no en likes. Posicionamiento, performance y activación. Consultoría gratis.",
     h1: "Marcas y consumo: demanda que se vuelve venta",
     hero: "Construir marca y vender no son cosas opuestas. Generamos demanda que se convierte en venta —no likes prestados— combinando posicionamiento, performance y presencia física.",
-    cta: "Hagamos crecer tu marca",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Caso Granjas Bonanza: 15 contratos cerrados con S/2,500 en campañas de demanda directa.",
     secciones: [
@@ -541,7 +541,7 @@ export const SECTORES: Sector[] = [
         a: "Depende de qué estés midiendo. Una campaña de demanda directa se lee en días; el efecto de marca, en meses. Mezclar los dos plazos es lo que hace que se apaguen inversiones justo cuando empezaban a funcionar.",
       },
     ],
-    cierre: { h2: "Demanda que se vuelve venta", cta: "Agenda una llamada" },
+    cierre: { h2: "Demanda que se vuelve venta", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -553,10 +553,10 @@ export const SECTORES: Sector[] = [
     nombre: "Salud",
     metaTitle: "Agencia de Marketing para Clínicas en Perú | Suggestion",
     metaDescription:
-      "Agencia de marketing para clínicas dentales, estéticas y médicas: capta pacientes sin quemar presupuesto, con la agenda y la ficha de Google medidas. Agenda una llamada.",
+      "Agencia de marketing para clínicas dentales, estéticas y médicas: capta pacientes sin quemar presupuesto, con la agenda y la ficha de Google medidas.",
     h1: "Marketing para clínicas que capta pacientes",
     hero: "Más pacientes, sin quemar tu presupuesto en clics que no agendan. Diseñamos campañas para clínicas, consultorios y profesionales de la salud, enfocadas en llenar la agenda.",
-    cta: "Llena tu agenda",
+    cta: "Agenda tu consultoría cero",
     secciones: [
       {
         h2: "Marketing y publicidad dental",
@@ -687,7 +687,7 @@ export const SECTORES: Sector[] = [
         a: "En salud la web pesa, porque es donde el paciente comprueba que existes y que eres quien dices ser. No hace falta que sea grande: horarios, especialidades, credenciales verificables, ubicación y una forma clara de agendar resuelven casi todo.",
       },
     ],
-    cierre: { h2: "Llena tu agenda de pacientes", cta: "Agenda una llamada" },
+    cierre: { h2: "Llena tu agenda de pacientes", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -699,10 +699,10 @@ export const SECTORES: Sector[] = [
     nombre: "Agroexportación",
     metaTitle: "Marketing para Agroexportadoras de Ica y Perú | Suggestion",
     metaDescription:
-      "Marketing y web B2B para agroexportadoras: presencia internacional, fichas de producto, ferias y CRM para cerrar con importadores. Agenda una llamada.",
+      "Marketing y web B2B para agroexportadoras: presencia internacional, fichas de producto, ferias y CRM para cerrar con importadores. Consultoría gratis.",
     h1: "Marketing para agroexportadoras que abren mercados",
     hero: "Tu producto ya compite en calidad; falta que el importador correcto te encuentre y confíe. Construimos tu presencia B2B —web, catálogo y contenido institucional— para abrir mercados en EE.UU., Europa y Asia desde Ica.",
-    cta: "Abramos nuevos mercados",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Operamos desde Ica, segunda región agroexportadora del Perú: conocemos el calendario de campaña, las ferias del rubro y al comprador internacional.",
     secciones: [
@@ -818,7 +818,7 @@ export const SECTORES: Sector[] = [
         a: "Sí. El método es el mismo en cualquier región agroexportadora; lo que cambia es el calendario de campaña y los productos. Lo que aportamos de Ica es conocer de cerca cómo opera el sector y su ritmo.",
       },
     ],
-    cierre: { h2: "Llevemos tu marca al mundo", cta: "Agenda una llamada" },
+    cierre: { h2: "Llevemos tu marca al mundo", cta: "Agenda tu consultoría cero" },
   },
   {
     pruebas: [
@@ -830,10 +830,10 @@ export const SECTORES: Sector[] = [
     nombre: "Pisco y Vino",
     metaTitle: "Marketing para Bodegas de Pisco y Vino en Ica | Suggestion",
     metaDescription:
-      "Marketing para bodegas de pisco y vino: branding premium, e-commerce, enoturismo y contenido que cuenta tu tradición y vende. Agenda una llamada.",
+      "Marketing para bodegas de pisco y vino: branding premium, e-commerce, enoturismo y contenido que cuenta tu tradición y vende. Consultoría gratis.",
     h1: "Marketing para bodegas de pisco y vino",
     hero: "Tu pisco tiene historia y medallas; falta que más gente la conozca y la compre. Unimos branding premium, e-commerce y enoturismo para que tu bodega venda dentro y fuera de Ica.",
-    cta: "Hagamos crecer tu bodega",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Desde Ica, tierra del pisco: conocemos la tradición, la ruta del pisco y al consumidor que busca lo auténtico.",
     secciones: [
@@ -932,7 +932,7 @@ export const SECTORES: Sector[] = [
         a: "Sí, en todo el Perú. Operamos desde Ica, así que para bodegas de la región el trabajo de grabación es más fácil de agendar; fuera de la región viajamos para el rodaje y el resto se maneja a distancia con reuniones fijas.",
       },
     ],
-    cierre: { h2: "Tu bodega merece más mesas", cta: "Agenda una llamada" },
+    cierre: { h2: "Tu bodega merece más mesas", cta: "Agenda tu consultoría cero" },
   },
 ];
 

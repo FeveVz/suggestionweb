@@ -69,6 +69,11 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
   ],
 };
 
+/** Prueba para quien compra producción física: el trabajo hecho, no cifras de ventas ajenas a su pedido. */
+const PROOF_PRODUCCION =
+  "22 activaciones documentadas con fotos propias, tomadas en el montaje: gigantografías, módulos de marca, estructuras y unidades rotuladas.";
+const SERVICIOS_PRODUCCION = new Set(["imprenta", "material-pop", "estructuras-publicitarias", "publicidad-movil", "merchandising", "btl"]);
+
 const shapeFor = (slug: string) => ((slug.charCodeAt(0) + slug.length) % 6) + 1;
 
 export function generateStaticParams() {
@@ -189,7 +194,7 @@ export default async function ServicioPage({ params }: Params) {
       heroImage={SERVICE_IMG[s.slug]}
       galeria={SERVICE_GAL[s.slug]}
       ctaLabel={s.cta}
-      proof={s.proof}
+      proof={s.proof ?? (SERVICIOS_PRODUCCION.has(s.slug) ? PROOF_PRODUCCION : undefined)}
       secciones={s.secciones}
       incluye={s.incluye}
       beneficios={s.beneficios}

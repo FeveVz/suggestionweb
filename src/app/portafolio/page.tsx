@@ -35,8 +35,9 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Portafolio de Activaciones BTL | Suggestion",
   description:
-    "22 activaciones, lanzamientos y piezas de gran formato producidos entre 2024 y 2026 para marcas automotrices e inmobiliarias: qué resolvía cada uno y cómo se montó.",
+    "22 activaciones y piezas de gran formato producidas entre 2024 y 2026 para marcas automotrices e inmobiliarias: qué resolvía cada una y cómo se montó.",
   path: "/portafolio",
+  ogImage: "/assets/og/portafolio.png",
 });
 
 const MARCAS = 11;
@@ -295,8 +296,8 @@ export default function PortafolioPage() {
             ¿Tienes un evento que producir?
           </SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Btn as="a" href="/contacto" variant="onDark" size="lg">
-              Hablemos del tuyo <ArrowRight size={18} />
+            <Btn as="a" href="/consultoria-cero#tema=activaci%C3%B3n%20BTL" variant="onDark" size="lg">
+              Agenda tu consultoría cero <ArrowRight size={18} />
             </Btn>
             <Btn as="a" href="/servicios/btl" variant="ghostDark" size="lg">
               Ver el servicio de BTL

@@ -12,6 +12,7 @@ import TransactionalSections from "@/components/TransactionalSections";
 import PricingSection from "@/components/PricingSection";
 import JsonLd from "@/components/JsonLd";
 import { site, whatsappLink } from "@/lib/site";
+import { consultoriaHref, esCotizacion } from "@/lib/cta";
 import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "@/content/types";
 
 /**
@@ -47,6 +48,20 @@ const COBERTURA: Record<string, string> = {
 };
 
 type Json = Record<string, unknown>;
+
+/** Salida a mitad de página: una frase y un botón, sin alargar más de lo necesario. */
+function CtaBanda({ texto, label, destino }: { texto: string; label: string; destino: { href: string; target?: string; rel?: string } }) {
+  return (
+    <aside style={{ background: "var(--surface-raised)", borderTop: "1px solid var(--border-subtle)", borderBottom: "1px solid var(--border-subtle)" }}>
+      <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.5rem,3vw,2rem) var(--gutter)", display: "flex", gap: "16px 32px", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}>
+        <p style={{ font: "var(--fw-medium) var(--fs-base)/1.45 var(--font-body)", color: "var(--text-strong)", margin: 0, maxWidth: "56ch" }}>{texto}</p>
+        <Btn as="a" {...destino} size="md">
+          {label} <ArrowRight size={16} />
+        </Btn>
+      </div>
+    </aside>
+  );
+}
 
 export default function LandingArticle({
   breadcrumbs,
@@ -92,7 +107,22 @@ export default function LandingArticle({
   shape?: number;
   extraSchema?: Json | Json[];
 }) {
-  const waMsg = `Hola Suggestion, me interesa: ${h1}.`;
+  // Producto a cotizar → WhatsApp con el servicio escrito. Todo lo demás → la
+  // consultoría, recordando de qué página viene (ver lib/cta.ts).
+  const cotiza = esCotizacion(ctaLabel);
+  const waMsg = cotiza ? `Hola Suggestion, quiero cotizar ${tema ?? h1}.` : `Hola Suggestion, me interesa: ${h1}.`;
+  const wa = whatsappLink(waMsg);
+  const consultoria = consultoriaHref(tema);
+  const destino = cotiza
+    ? { href: wa, target: "_blank", rel: "noopener noreferrer" }
+    : { href: consultoria };
+  const banda = (pregunta: string) => (
+    <CtaBanda
+      texto={cotiza ? `${pregunta} Pásanos medidas y cantidad, y te cotizamos por WhatsApp.` : `${pregunta} En 30 minutos nos cuentas tu caso y te proponemos el camino. Gratis.`}
+      label={ctaLabel}
+      destino={destino}
+    />
+  );
   const proofText =
     proof ??
     "Ceinys: S/350K en ventas con S/3,000 · Autoniza: 8 autos vendidos en 2 eventos · 24 marcas inmobiliarias · 19 marcas de vehículos, de livianos a línea amarilla.";
@@ -151,19 +181,25 @@ export default function LandingArticle({
                 className="hk-enter-4"
                 style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}
               >
-                <Btn as="a" href="/contacto" size="lg">
+                <Btn as="a" {...destino} size="lg">
                   {ctaLabel} <ArrowRight size={18} />
                 </Btn>
-                <Btn
-                  as="a"
-                  href={whatsappLink(waMsg)}
-                  variant="secondary"
-                  size="lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </Btn>
+                {cotiza ? (
+                  <Btn as="a" href={consultoria} variant="secondary" size="lg">
+                    Consultoría cero gratis
+                  </Btn>
+                ) : (
+                  <Btn
+                    as="a"
+                    href={wa}
+                    variant="secondary"
+                    size="lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WhatsApp
+                  </Btn>
+                )}
               </div>
             </div>
             {heroImage ? (
@@ -252,6 +288,10 @@ export default function LandingArticle({
         </div>
       </Section>
 
+      {/* En móvil estas páginas miden hasta 18 pantallas y, entre el hero y el
+          cierre, no había ninguna salida salvo el botón flotante. */}
+      {banda("¿Ya te hiciste una idea?")}
+
       {/* EL TRABAJO, EN FOTO — fotografía propia, no banco de imágenes */}
       {galeria && galeria.length > 0 && (
         <Section tone="light" style={{ background: "var(--surface-raised)", paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
@@ -301,6 +341,8 @@ export default function LandingArticle({
 
       {/* PLANES Y PRECIOS */}
       <PricingSection planes={precios} />
+
+      {banda("¿Es lo que estabas buscando?")}
 
       {/* ENLAZADO INTERNO (silo) */}
       {related.length > 0 && (
@@ -362,11 +404,11 @@ export default function LandingArticle({
             {cierre.h2}
           </SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-            <Btn as="a" href="/contacto" variant="onDark" size="lg">
+            <Btn as="a" {...destino} variant="onDark" size="lg">
               {cierre.cta} <ArrowRight size={18} />
             </Btn>
             <a
-              href={whatsappLink(waMsg)}
+              href={wa}
               target="_blank"
               rel="noopener noreferrer"
               style={{

@@ -174,7 +174,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     nombre: "Marca & contenidos",
     metaTitle: "Marca y Contenidos que Dejan Huella | Suggestion",
     metaDescription:
-      "Branding que vende vs. branding bonito, y contenido que mueve a la acción. Guías de marca y posicionamiento.",
+      "Branding que vende vs. branding bonito, y contenido que mueve a la acción. Guías de marca y posicionamiento para negocios en Perú.",
     h1: "Marca y contenidos que dejan huella",
     intro: "Branding que vende vs. branding bonito, y contenido que mueve a la acción.",
     secciones: [
@@ -3777,7 +3777,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "polos-personalizados-para-empresa",
     categoria: "imprenta-btl",
-    title: "Polos Personalizados para Empresa: Guía y Precios | Suggestion",
+    title: "Polos Personalizados para Empresa y Precios | Suggestion",
     description:
       "Bordado, serigrafía, DTF o sublimado: cuál conviene según tu cantidad. Precios del mercado peruano desde S/8 por prenda y las cantidades mínimas reales.",
     h1: "Polos personalizados para empresa: qué técnica pedir y cuánto cuesta",
@@ -3876,7 +3876,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "merchandising-corporativo-que-regalar",
     categoria: "imprenta-btl",
-    title: "Merchandising Corporativo: Qué Regalar y Precios | Suggestion",
+    title: "Merchandising Corporativo: Qué Regalar, Precios | Suggestion",
     description:
       "Qué artículos promocionales se quedan en el escritorio y cuáles acaban en un cajón. Precios del mercado peruano desde S/0.60 y cantidades mínimas reales.",
     h1: "Merchandising corporativo: qué regalar para que no acabe en un cajón",
@@ -5312,7 +5312,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "sectores",
     title: "Marketing para Clínicas Dentales en Perú | Suggestion",
     description:
-      "Cómo capta pacientes una clínica dental: qué tratamiento se busca, cuánto cuesta traer cada uno, por qué la ficha de Google decide más que la campaña y cómo se llena la silla.",
+      "Cómo capta pacientes una clínica dental: qué tratamiento se busca, cuánto cuesta traer cada uno y por qué la ficha de Google decide más que la campaña.",
     h1: "Marketing para clínicas dentales: cómo llenar la silla",
     excerpt:
       "El problema de casi ninguna clínica dental es que no llegan pacientes. Es que llegan, preguntan el precio y desaparecen. Eso no se arregla con más publicidad.",
@@ -5878,7 +5878,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "sectores",
     title: "Cómo Conseguir Clientes para Exportar | Suggestion",
     description:
-      "Cómo encuentra un importador a su proveedor, las tres vías que funcionan desde Perú —ferias, Promperú y prospección directa— y qué te van a pedir antes de hablar de precio.",
+      "Cómo encuentra un importador a su proveedor, las tres vías que funcionan desde Perú (ferias, Promperú y prospección directa) y qué te pedirán primero.",
     h1: "Cómo conseguir clientes para exportar",
     excerpt:
       "El importador no busca proveedores como un consumidor busca un producto. Y por eso la mayoría de agroexportadoras pequeñas invierte en marketing que a su cliente real no le llega nunca.",

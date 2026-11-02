@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, Compass, MessageCircle, Route } from "lucide-react";
-import { Btn, Label } from "@/components/brand/parts";
-import AuditForm from "@/components/AuditForm";
+import { Label } from "@/components/brand/parts";
+import AuditForm, { WaConsultoria } from "@/components/AuditForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import ClientLogos from "@/components/ClientLogos";
 import Faq from "@/components/Faq";
+import ProofBar from "@/components/ProofBar";
 import { buildMetadata } from "@/lib/seo";
-import { whatsappLink } from "@/lib/site";
 
 /**
- * /consultoria-cero — la puerta de entrada de la home.
+ * /consultoria-cero — la puerta de entrada de todo el sitio.
  *
  * Definición del owner (2026-10-15): "una consultoría de 30 minutos, donde el
  * cliente habla de su problema o lo que quiere mejorar, para nosotros entender
@@ -20,16 +23,19 @@ import { whatsappLink } from "@/lib/site";
  * cliente y lo que se lleva es un camino. Por eso esta página no promete
  * revisiones previas, plazos de entrega ni mejoras concretas: no forman parte
  * de lo que el owner describió.
+ *
+ * El formulario va en la primera sección y la prueba justo después. En móvil
+ * antes medía 6 pantallas, con el botón de enviar en la 2,9 y sin una sola
+ * marca ni cifra que respaldara la oferta (auditoría del 2026-11-01).
  */
 
 export const metadata: Metadata = buildMetadata({
   title: "Consultoría Cero: 30 Minutos Gratis | Suggestion",
   description:
-    "30 minutos para contarnos tu problema o lo que quieres mejorar. Entendemos tu caso y te proponemos el camino y los servicios que encajan con tu objetivo. Gratis.",
+    "30 minutos para contarnos tu problema o lo que quieres mejorar. Entendemos tu caso y te proponemos el camino y los servicios que encajan contigo. Gratis.",
   path: "/consultoria-cero",
+  ogImage: "/assets/og/consultoria-cero.png",
 });
-
-const WA = whatsappLink("Hola Suggestion, quiero agendar mi consultoría cero.");
 
 const COMO = [
   { Icon: MessageCircle, t: "Nos cuentas tu caso", d: "Tu problema o lo que quieres mejorar, con tus palabras. No hace falta que sepas de marketing: para eso estamos nosotros." },
@@ -48,25 +54,50 @@ const FAQ = [
 export default function ConsultoriaCero() {
   return (
     <>
-      {/* HERO */}
       <section style={{ background: "var(--white)" }}>
-        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4rem) var(--gutter) clamp(2.5rem,5vw,3.5rem)" }}>
-          <div className="hk-enter"><Label dot>Consultoría cero · gratis</Label></div>
-          <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "18ch" }}>
-            30 minutos para entender tu negocio y proponerte el camino.
-          </h1>
-          <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "54ch" }}>
-            Nos cuentas tu problema o lo que quieres mejorar. Con eso entendemos lo que necesitas y te proponemos los caminos y los servicios de Suggestion que mejor encajan con tu objetivo. Sin costo y sin compromiso.
-          </p>
-          <div className="hk-enter-4" style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center", marginTop: 28 }}>
-            <Btn as="a" href={WA} size="lg">Agendar por WhatsApp <ArrowRight size={18} /></Btn>
-            <Btn as="a" href="#agendar" variant="secondary" size="lg">Prefiero el formulario</Btn>
-          </div>
+        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2.5rem,5vw,3.5rem)" }}>
+          <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Consultoría cero", href: "/consultoria-cero" }]} />
+          <div className="hk-cta" style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(2rem,5vw,4rem)", alignItems: "start", marginTop: "clamp(1.25rem,3vw,2rem)" }}>
+            <div>
+              <div className="hk-enter"><Label dot>Consultoría cero · gratis</Label></div>
+              <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "18ch" }}>
+                30 minutos para entender tu negocio y proponerte el camino.
+              </h1>
+              <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "54ch" }}>
+                Nos cuentas tu problema o lo que quieres mejorar. Con eso entendemos lo que necesitas y te proponemos los caminos y los servicios de Suggestion que mejor encajan con tu objetivo. Sin costo y sin compromiso.
+              </p>
+              <div className="hk-enter-4" style={{ marginTop: 26 }}>
+                <WaConsultoria>Agendar por WhatsApp <ArrowRight size={18} /></WaConsultoria>
+              </div>
+            </div>
 
-          <h2 className="hk-enter-4" style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)", margin: "48px 0 0" }}>
+            <div id="agendar" className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", borderRadius: "var(--radius-md)", padding: "clamp(1.25rem,3vw,2rem)", scrollMarginTop: 80, overflow: "hidden" }}>
+              <span className="hk-grain-layer" aria-hidden />
+              <div style={{ position: "relative", zIndex: 1 }}>
+                <h2 style={{ font: "var(--fw-bold) var(--fs-xl)/1.15 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "0 0 8px" }}>
+                  O déjanos tus datos
+                </h2>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", margin: "0 0 22px" }}>
+                  Un minuto. Te escribimos para elegir el día y la hora.
+                </p>
+                <AuditForm variante="consultoria" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LA PRUEBA: quién está detrás de la oferta */}
+      <ProofBar funnel={false} />
+      <ClientLogos />
+
+      {/* CÓMO ES */}
+      <section style={{ background: "var(--white)" }}>
+        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y-tight) var(--gutter)" }}>
+          <h2 style={{ font: "var(--fw-bold) var(--fs-2xl)/1.1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: 0 }}>
             Cómo es la consultoría
           </h2>
-          <ol className="hk-enter-4" style={{ listStyle: "none", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "var(--space-4)", margin: "18px 0 0" }}>
+          <ol style={{ listStyle: "none", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "var(--space-4)", margin: "24px 0 0" }}>
             {COMO.map(({ Icon, t, d }, i) => (
               <li key={t} style={{ padding: "var(--space-6)", background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)" }}>
                 <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -81,20 +112,6 @@ export default function ConsultoriaCero() {
         </div>
       </section>
 
-      {/* FORMULARIO */}
-      <section id="agendar" className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", scrollMarginTop: 80 }}>
-        <span className="hk-grain-layer" aria-hidden />
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 880, margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>
-          <h2 style={{ font: "var(--fw-bold) var(--fs-2xl)/1.1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "0 0 10px" }}>
-            Agenda tu consultoría cero
-          </h2>
-          <p style={{ font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", margin: "0 0 30px", maxWidth: "54ch" }}>
-            Dos minutos. Te escribimos por WhatsApp para elegir el día y la hora.
-          </p>
-          <AuditForm variante="consultoria" />
-        </div>
-      </section>
-
       {/* PREGUNTAS */}
       <section style={{ background: "var(--surface-raised)" }}>
         <div style={{ maxWidth: 860, margin: "0 auto", padding: "var(--section-y-tight) var(--gutter)" }}>
@@ -102,6 +119,13 @@ export default function ConsultoriaCero() {
             Lo que sueles preguntarte.
           </h2>
           <Faq items={FAQ} />
+          <div style={{ display: "flex", gap: "14px 22px", flexWrap: "wrap", alignItems: "center", marginTop: 28 }}>
+            <WaConsultoria>Agendar por WhatsApp <ArrowRight size={18} /></WaConsultoria>
+            {/* La otra oferta sigue viva y este es su enlace de entrada. */}
+            <Link href="/auditoria-gratis" className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-muted)" }}>
+              ¿Prefieres que revisemos primero tu marketing? Pide la auditoría
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -272,7 +272,7 @@ export default function Casos() {
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 24 }}>
           <SectionHeading level={2} tone="dark" maxWidth="16ch">Hablemos de tu caso.</SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-            <Btn as="a" href="/contacto" variant="onDark" size="lg">Hablemos de tu caso <ArrowRight size={18} /></Btn>
+            <Btn as="a" href="/consultoria-cero" variant="onDark" size="lg">Agenda tu consultoría cero <ArrowRight size={18} /></Btn>
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>
               <Phone size={16} style={{ color: "var(--cyan)" }} /> {site.phoneDisplay}
             </a>

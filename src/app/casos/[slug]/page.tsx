@@ -11,7 +11,8 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import CountUp from "@/components/CountUp";
 import { buildMetadata } from "@/lib/seo";
-import { absoluteUrl, ORG_ID, site } from "@/lib/site";
+import { absoluteUrl, ORG_ID, site, whatsappLink } from "@/lib/site";
+import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
 import { CASOS_DETALLE, getCaso, allCasoSlugs } from "@/content/casos";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const c = getCaso(slug);
   if (!c) return {};
-  return buildMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/casos/${c.slug}`, type: "article" });
+  return buildMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/casos/${c.slug}`, type: "article", ogImage: `/assets/og/caso-${c.slug}.png` });
 }
 
 export default async function CasoPage({ params }: Params) {
@@ -185,11 +186,11 @@ export default async function CasoPage({ params }: Params) {
             ¿Quieres resultados así en tu negocio?
           </SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Btn as="a" href="/auditoria-gratis" variant="onDark" size="lg">
-              Auditoría gratis en 48 h <ArrowRight size={18} />
+            <Btn as="a" href={consultoriaHref()} variant="onDark" size="lg">
+              {CTA_CONSULTORIA} <ArrowRight size={18} />
             </Btn>
-            <Btn as="a" href="/contacto" variant="ghostDark" size="lg">
-              Agenda una llamada
+            <Btn as="a" href={whatsappLink("Hola Suggestion, quiero agendar mi consultoría cero.")} variant="ghostDark" size="lg" target="_blank" rel="noopener noreferrer">
+              WhatsApp
             </Btn>
           </div>
         </div>

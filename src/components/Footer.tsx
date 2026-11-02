@@ -24,7 +24,7 @@ const contactLinks = [
   { label: site.email, href: `mailto:${site.email}` },
   { label: site.phoneDisplay, href: whatsappLink() },
   { label: "Llamar", href: `tel:${site.phoneE164}` },
-  { label: "Agenda una llamada", href: "/contacto" },
+  { label: "Formulario de contacto", href: "/contacto" },
 ];
 
 export default function Footer() {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Search, Target, Zap } from "lucide-react";
 import { Label } from "@/components/brand/parts";
 import AuditForm from "@/components/AuditForm";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Faq from "@/components/Faq";
 import Secciones from "@/components/Secciones";
 import type { Seccion } from "@/content/types";
@@ -61,8 +62,9 @@ export default function AuditoriaGratis() {
     <>
       {/* HERO + QUÉ RECIBES */}
       <section style={{ background: "var(--white)" }}>
-        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,5vw,4rem) var(--gutter) clamp(2.5rem,5vw,3.5rem)" }}>
-          <div className="hk-enter"><Label dot>Auditoría gratuita</Label></div>
+        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2.5rem,5vw,3.5rem)" }}>
+          <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Auditoría gratis", href: "/auditoria-gratis" }]} />
+          <div className="hk-enter" style={{ marginTop: "clamp(1.25rem,3vw,2rem)" }}><Label dot>Auditoría gratuita</Label></div>
           <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "17ch" }}>
             Te decimos dónde se escapa tu venta. Gratis, en 48 horas.
           </h1>

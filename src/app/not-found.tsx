@@ -26,8 +26,8 @@ export default function NotFound() {
             <Btn as="a" href="/" size="lg">
               Ir al inicio <ArrowRight size={18} />
             </Btn>
-            <Btn as="a" href="/contacto" variant="secondary" size="lg">
-              Hablar con el equipo
+            <Btn as="a" href="/consultoria-cero" variant="secondary" size="lg">
+              Consultoría cero gratis
             </Btn>
           </div>
           <nav aria-label="Enlaces útiles" style={{ display: "flex", gap: "10px 22px", flexWrap: "wrap", marginTop: 26 }}>

@@ -4,10 +4,8 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Label, Btn, Blot } from './parts';
-import { leadDedup, getAttribution } from '@/lib/tracking';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
-const WHATSAPP = '51920010308';
 
 export function usePrefersReduced() {
   const [r, setR] = React.useState(false);
@@ -399,7 +397,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                   Nuestra estrategia empieza ahí: <strong style={{ color: 'var(--white)', fontWeight: 700 }}>identificamos los perfiles que deciden tu venta</strong> y construimos el mensaje que cada uno necesita ver. Es el mismo método detrás de {sel!.prueba}.
                 </p>
                 <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                  <Btn as="a" href="/auditoria-gratis" variant="insight" size="md">Analizar mi mercado — gratis (48 h)</Btn>
+                  <Btn as="a" href="/consultoria-cero" variant="insight" size="md">Agenda tu consultoría cero</Btn>
                   <button onClick={() => { setFase('ask'); setSel(null); }} className="hk-chip" style={chip}>
                     Probar con otro rubro
                   </button>
@@ -425,122 +423,5 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
         @media (prefers-reduced-motion: reduce) { .hk-perc-dot { animation: none; } .hk-perc-blink { animation: none; } .hk-perc-cell img { filter: none; } }
       `}</style>
     </section>
-  );
-}
-
-/* ============================================================
-   Formulario de contacto → WhatsApp
-   ============================================================ */
-/**
- * Autorrelleno del móvil. Sin esto, quien escribe desde el teléfono teclea su
- * nombre y su correo enteros, que es justo donde se abandona un formulario.
- * El campo trampa (`website`) va aparte, con autoComplete="off" a propósito.
- */
-const AUTOCOMPLETAR: Record<string, string> = {
-  nombre: 'name',
-  email: 'email',
-  negocio: 'organization',
-  telefono: 'tel',
-  web: 'url',
-};
-
-function Field({ label, name, type = 'text', textarea = false, required = false, placeholder, style }: { label: string; name: string; type?: string; textarea?: boolean; required?: boolean; placeholder?: string; style?: React.CSSProperties }) {
-  const common = {
-    name, required, placeholder,
-    autoComplete: AUTOCOMPLETAR[name],
-    className: 'hk-input',
-    style: {
-      font: 'var(--fw-light) var(--fs-base)/1.4 var(--font-body)', color: 'var(--white)', background: 'var(--ink-800)',
-      border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-sm)', padding: '13px 16px', outline: 'none', width: '100%',
-      transition: 'border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out)',
-    } as React.CSSProperties,
-  };
-  return (
-    <label style={{ display: 'flex', flexDirection: 'column', gap: 8, ...style }}>
-      <span style={{ font: 'var(--fw-medium) var(--fs-sm)/1 var(--font-body)', color: 'var(--white)' }}>{label}</span>
-      {textarea
-        ? <textarea rows={4} {...common} style={{ ...common.style, resize: 'vertical' }} />
-        : <input type={type} {...common} />}
-    </label>
-  );
-}
-
-export function CtaForm() {
-  const [sent, setSent] = React.useState(false);
-  const [aviso, setAviso] = React.useState<string | null>(null);
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setAviso(null);
-    const f = new FormData(e.currentTarget);
-    const lines = [
-      `Hola Suggestion, soy ${f.get('nombre') || ''}.`,
-      f.get('negocio') ? `Negocio: ${f.get('negocio')}` : null,
-      f.get('email') ? `Email: ${f.get('email')}` : null,
-      '',
-      (f.get('objetivo') as string) || 'Quiero más leads / citas / cierres.',
-    ].filter((l) => l !== null);
-    // 1) WhatsApp primero (síncrono: mantiene el gesto del usuario → no lo bloquea el navegador)
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
-    // 2) Guardar el lead (keepalive: sobrevive a la navegación)
-    const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
-    const guardado = fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      keepalive: true,
-      body: JSON.stringify({
-        tipo: 'contacto',
-        nombre: f.get('nombre'),
-        negocio: f.get('negocio'),
-        email: f.get('email'),
-        mensaje: f.get('objetivo'),
-        pagina: window.location.pathname,
-        website: f.get('website'),
-        attribution: getAttribution(),
-        ...dedup,
-      }),
-    });
-    // 3) Evento de conversión (GA4 + Pixel dedup con la CAPI vía event_id)
-    import('@/lib/tracking').then((m) => m.track('generate_lead', { origen: 'cta-form' }, dedup.event_id)).catch(() => {});
-    setSent(true);
-
-    // 4) Página de gracias — pero solo si el lead se guardó de verdad. Antes se
-    // saltaba a /gracias a los 700 ms con el error tragado, así que un fallo del
-    // servidor se veía igual que un éxito.
-    const r = await Promise.race([
-      guardado.catch(() => null),
-      new Promise<'timeout'>((res) => setTimeout(() => res('timeout'), 2500)),
-    ]);
-
-    if (r === 'timeout') {
-      window.location.assign('/gracias');
-      return;
-    }
-    if (r && r.ok) {
-      window.location.assign('/gracias');
-      return;
-    }
-    setSent(false);
-    setAviso(r && r.status === 429 ? 'Ya recibimos tu solicitud hace unos minutos. Si es urgente, escríbenos directamente por WhatsApp.' : 'No pudimos guardar tus datos, pero ya te abrimos WhatsApp con el mensaje escrito: envíalo desde ahí y te respondemos igual.');
-  };
-  return (
-    <form onSubmit={onSubmit} className="hk-form" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
-      {/* Honeypot anti-spam: invisible para humanos, los bots lo rellenan */}
-      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
-      {aviso && (
-        <p role="status" style={{ gridColumn: '1 / -1', margin: 0, font: 'var(--fw-light) var(--fs-sm)/1.5 var(--font-body)', color: '#ffb4ab' }}>
-          {aviso}
-        </p>
-      )}
-      <Field label="Nombre" name="nombre" placeholder="Tu nombre" required />
-      <Field label="Negocio" name="negocio" placeholder="Empresa / rubro" />
-      <Field label="Email" name="email" type="email" placeholder="hola@tunegocio.com" required style={{ gridColumn: '1 / -1' }} />
-      <div style={{ gridColumn: '1 / -1' }}>
-        <Field label="¿Qué quieres lograr?" name="objetivo" textarea placeholder="Vendo… y necesito más citas / leads / cierres." />
-      </div>
-      <div style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-        <Btn type="submit" variant="insight" size="lg">{sent ? '¡Abriendo WhatsApp!' : 'Enviar por WhatsApp'}</Btn>
-        <span style={{ font: 'var(--fw-light) var(--fs-xs)/1.4 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>Respondemos en menos de 24 h hábiles.</span>
-      </div>
-    </form>
   );
 }

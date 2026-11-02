@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { Label } from "@/components/brand/parts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import { CtaForm } from "@/components/brand/interactive";
+import AuditForm from "@/components/AuditForm";
 import { buildMetadata } from "@/lib/seo";
 import { contactPageSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
@@ -13,8 +13,9 @@ export const metadata: Metadata = buildMetadata({
   // que Google muestre para "agencia de marketing en Ica" (esa es la portada).
   title: "Contacto | Hablemos de tu Proyecto | Suggestion",
   description:
-    "Cuéntanos de tu negocio y te damos un diagnóstico honesto y claro de tu marketing. Agenda una llamada o escríbenos por WhatsApp hoy mismo.",
+    "Agenda tu consultoría cero: 30 minutos gratis para contarnos tu problema o lo que quieres mejorar. Escríbenos por WhatsApp, llámanos o déjanos tus datos.",
   path: "/contacto",
+  ogImage: "/assets/og/consultoria-cero.png",
 });
 
 export default function Contacto() {
@@ -33,12 +34,12 @@ export default function Contacto() {
         <span className="hk-grain-layer" aria-hidden />
         <div className="hk-cta" style={{ position: "relative", zIndex: 1, maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(2rem,5vw,4.5rem)", alignItems: "center" }}>
           <div>
-            <Label tone="onDark" dot>Agenda una llamada</Label>
+            <Label tone="onDark" dot>Contacto</Label>
             <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.06 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "14px 0 0", maxWidth: "14ch" }}>
-              Convirtamos tu atención en ventas.
+              Hablemos de tu negocio.
             </h1>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 20, maxWidth: "42ch" }}>
-              Cuéntanos de tu negocio. Te respondemos con un diagnóstico honesto y claro de tu proceso de venta.
+              Déjanos tus datos y agendamos tu consultoría cero: 30 minutos gratis en los que nos cuentas tu problema o lo que quieres mejorar, y te proponemos el camino que mejor encaja con tu objetivo.
             </p>
             <div style={{ display: "grid", gap: 16, marginTop: 30 }}>
               <a href={`tel:${site.phoneE164}`} style={{ display: "inline-flex", alignItems: "center", gap: 12, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>
@@ -56,7 +57,7 @@ export default function Contacto() {
               <span style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>Agencia formal · RUC {site.ruc}</span>
             </div>
           </div>
-          <CtaForm />
+          <AuditForm variante="consultoria" />
         </div>
       </section>
     </>

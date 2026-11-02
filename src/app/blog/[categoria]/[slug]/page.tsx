@@ -8,6 +8,7 @@ import Faq from "@/components/Faq";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
+import { consultoriaHref } from "@/lib/cta";
 import { blogPostingSchema } from "@/lib/schema";
 import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
@@ -184,10 +185,15 @@ export default async function BlogPostPage({ params }: Params) {
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", maxWidth: "54ch" }}>
               {post.cierre}
             </p>
-            <div style={{ marginTop: 20 }}>
+            <div style={{ marginTop: 20, display: "flex", gap: "14px 22px", flexWrap: "wrap", alignItems: "center" }}>
               <Btn as="a" href={post.moneyPage.href} variant="insight" size="lg">
                 {post.moneyPage.label} <ArrowRight size={18} />
               </Btn>
+              {/* El cierre es el único sitio del artículo donde se deriva: solo 4
+                  de 52 tenían un enlace para hablar con nosotros. */}
+              <a href={consultoriaHref(cat?.nombre)} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
+                O cuéntanos tu caso: consultoría cero, gratis
+              </a>
             </div>
           </div>
 

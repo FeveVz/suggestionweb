@@ -11,6 +11,7 @@ import MetodoSection from "@/components/MetodoSection";
 import PorQueSection from "@/components/PorQueSection";
 import JsonLd from "@/components/JsonLd";
 import { site, whatsappLink } from "@/lib/site";
+import { consultoriaHref, esCotizacion } from "@/lib/cta";
 
 /**
  * Página hub (pilar de servicios, categorías y hub de sectores):
@@ -55,6 +56,13 @@ export default function HubLanding({
   /** Preguntas frecuentes del hub; emiten el FAQPage de esta URL. */
   faq?: FaqItem[];
 }) {
+  // Los pilares no tienen un tema concreto; las categorías sí.
+  const tema = breadcrumbs.length > 2 ? breadcrumbs[breadcrumbs.length - 1]?.name : undefined;
+  const cotiza = esCotizacion(cta);
+  const wa = whatsappLink(cotiza ? `Hola Suggestion, quiero cotizar ${tema ?? "un servicio"}.` : undefined);
+  const destino = cotiza
+    ? { href: wa, target: "_blank", rel: "noopener noreferrer" }
+    : { href: consultoriaHref(tema) };
   return (
     <>
       {extraSchema && <JsonLd data={extraSchema} />}
@@ -95,19 +103,25 @@ export default function HubLanding({
                 {intro}
               </p>
               <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap" }}>
-                <Btn as="a" href="/contacto" size="lg">
+                <Btn as="a" {...destino} size="lg">
                   {cta} <ArrowRight size={18} />
                 </Btn>
-                <Btn
-                  as="a"
-                  href={whatsappLink()}
-                  variant="secondary"
-                  size="lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </Btn>
+                {cotiza ? (
+                  <Btn as="a" href={consultoriaHref(tema)} variant="secondary" size="lg">
+                    Consultoría cero gratis
+                  </Btn>
+                ) : (
+                  <Btn
+                    as="a"
+                    href={wa}
+                    variant="secondary"
+                    size="lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WhatsApp
+                  </Btn>
+                )}
               </div>
           </div>
         </div>
@@ -166,11 +180,11 @@ export default function HubLanding({
             Convirtamos tu atención en ventas.
           </SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-            <Btn as="a" href="/contacto" variant="onDark" size="lg">
+            <Btn as="a" {...destino} variant="onDark" size="lg">
               {cta} <ArrowRight size={18} />
             </Btn>
             <a
-              href={whatsappLink()}
+              href={wa}
               target="_blank"
               rel="noopener noreferrer"
               style={{

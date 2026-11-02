@@ -29,7 +29,15 @@ import { EID_KEY } from "@/lib/meta-match";
  * enviar un formulario, etc.): el Píxel solo acepta un segundo init si el
  * primero no llevaba datos, y como este lleva el external_id lo rechazaría
  * con "Duplicate Pixel ID". El teléfono del lead viaja por /api/lead.
+ *
+ * Las tres librerías se piden tarde (DIFERIR_JS): con la primera interacción o
+ * a los 3,5 s de cargar. Pesan 451 KB y Lighthouse midió la home con LCP de
+ * 11,6 s con ellas y 6,3 s sin ellas (2026-11-01). Mientras tanto gtag y fbq ya
+ * existen como colas, así que ningún evento se pierde: se envían al llegar la
+ * librería. El coste: quien se va antes sin tocar nada no se cuenta.
  */
+const DIFERIR_JS = `function(fn){var h=0,ev=['pointerdown','keydown','scroll','touchstart'];function go(){if(h)return;h=1;ev.forEach(function(e){removeEventListener(e,go)});fn()}ev.forEach(function(e){addEventListener(e,go,{passive:true})});function t(){setTimeout(go,3500)}if(document.readyState==='complete')t();else addEventListener('load',t)}`;
+
 export default function Analytics() {
   const pathname = usePathname();
 
@@ -73,7 +81,6 @@ export default function Analytics() {
     <>
       {GA_ID && (
         <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
           <Script id="ga4-init" strategy="afterInteractive">
             {`if (!${ES_INTERNO_JS}) {
               window.dataLayer = window.dataLayer || [];
@@ -81,6 +88,11 @@ export default function Analytics() {
               window.gtag = gtag;
               gtag('js', new Date());
               gtag('config', '${GA_ID}', { send_page_view: false });${GADS_ID ? `\n              gtag('config', '${GADS_ID}');` : ""}
+              (${DIFERIR_JS})(function(){
+                var s = document.createElement('script'); s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
+                document.head.appendChild(s);
+              });
             }`}
           </Script>
         </>
@@ -88,10 +100,10 @@ export default function Analytics() {
       {META_PIXEL_ID && (
         <Script id="meta-pixel" strategy="afterInteractive">
           {`if (!${ES_INTERNO_JS}) {
-            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            !function(f,b,e,v,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+            (${DIFERIR_JS})(function(){var t=b.createElement(e);t.async=!0;t.src=v;b.head.appendChild(t)})}(window,
             document,'script','https://connect.facebook.net/en_US/fbevents.js');
             var eid = '';
             try {
@@ -109,10 +121,12 @@ export default function Analytics() {
       )}
       {CLARITY_ID && (
         <Script id="ms-clarity" strategy="afterInteractive">
-          {`if (!${ES_INTERNO_JS}) (function(c,l,a,r,i,t,y){
+          {`if (!${ES_INTERNO_JS}) (function(c,l,a,r,i){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              (${DIFERIR_JS})(function(){
+                var t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                l.head.appendChild(t);
+              });
             })(window, document, "clarity", "script", "${CLARITY_ID}");`}
         </Script>
       )}

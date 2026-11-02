@@ -18,6 +18,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Somos Suggestion, agencia de performance en Ica. Convertimos atención en ventas con un método propio por vertical. Conoce cómo trabajamos.",
   path: "/nosotros",
+  ogImage: "/assets/og/nosotros.png",
 });
 
 /**
@@ -154,7 +155,7 @@ export default function Nosotros() {
               Nacimos para una cosa: convertir la atención de tu mercado en ventas. Mostramos números reales y trabajamos todo el proceso, de la estrategia al cierre.
             </p>
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap" }}>
-              <Btn as="a" href="/contacto" size="lg">Agenda una llamada <ArrowRight size={18} /></Btn>
+              <Btn as="a" href="/consultoria-cero" size="lg">Agenda tu consultoría cero <ArrowRight size={18} /></Btn>
               <Btn as="a" href="/casos" variant="secondary" size="lg">Ver casos</Btn>
               <Btn as="a" href="/portafolio" variant="secondary" size="lg">Ver el portafolio</Btn>
             </div>
@@ -265,7 +266,7 @@ export default function Nosotros() {
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 24 }}>
           <SectionHeading level={2} tone="dark" maxWidth="16ch">Trabajemos juntos.</SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-            <Btn as="a" href="/contacto" variant="onDark" size="lg">Agenda una llamada <ArrowRight size={18} /></Btn>
+            <Btn as="a" href="/consultoria-cero" variant="onDark" size="lg">Agenda tu consultoría cero <ArrowRight size={18} /></Btn>
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>
               <Phone size={16} style={{ color: "var(--cyan)" }} /> {site.phoneDisplay}
             </a>

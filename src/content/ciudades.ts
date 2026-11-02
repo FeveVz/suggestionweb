@@ -19,10 +19,10 @@ export const CIUDADES: Ciudad[] = [
     nombre: "Chincha",
     metaTitle: "Agencia de Marketing en Chincha | Suggestion",
     metaDescription:
-      "Agencia de marketing para negocios de Chincha: agroindustria, avícolas, concesionarios y comercio. Campañas que se miden en ventas. Agenda una llamada.",
+      "Agencia de marketing para negocios de Chincha: agroindustria, avícolas, concesionarios y comercio. Campañas que se miden en ventas. Consultoría gratis.",
     h1: "Agencia de marketing en Chincha",
     hero: "Chincha vende, pero compite con Lima a una hora de distancia. Armamos campañas que capturan al comprador local antes de que se le ocurra buscar afuera, y que le llegan también al cliente de Lima que compra aquí.",
-    cta: "Hablemos de tu negocio en Chincha",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Trabajamos desde Ica con más de 50 marcas y llevamos 7 años en el mercado de la región.",
     cobertura:
@@ -77,17 +77,17 @@ export const CIUDADES: Ciudad[] = [
         a: "Sí. No obligamos a contratar el paquete completo. Ahora bien, si haces una web y nadie la ve, o traes visitas a una web que no convierte, el dinero se va igual. En el diagnóstico te decimos por dónde conviene empezar según tu caso.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Chincha", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Chincha", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "pisco",
     nombre: "Pisco",
     metaTitle: "Agencia de Marketing en Pisco | Suggestion",
     metaDescription:
-      "Marketing para empresas de Pisco: industria portuaria, pesca, turismo en Paracas y bodegas. Campañas medibles en ventas. Agenda una llamada hoy.",
+      "Marketing para empresas de Pisco: industria portuaria, pesca, turismo en Paracas y bodegas. Campañas medibles en ventas. Consultoría gratis.",
     h1: "Agencia de marketing en Pisco",
     hero: "Pisco tiene dos economías distintas: la industrial del puerto y la turística de Paracas. Cada una necesita un marketing diferente, y meterlas en la misma campaña es la forma más rápida de quemar presupuesto.",
-    cta: "Hablemos de tu negocio en Pisco",
+    cta: "Agenda tu consultoría cero",
     proof:
       "En turismo, Hoteles Señor de Luren generó 75 reservas en una sola campaña, dentro y fuera de temporada.",
     cobertura:
@@ -142,17 +142,17 @@ export const CIUDADES: Ciudad[] = [
         a: "Las redes son alquiladas: si mañana se cae tu cuenta o cambia el algoritmo, te quedas sin canal. La web es lo único que controlas y es donde te encuentra quien te busca en Google. Si vendes bien por redes, la web es el siguiente paso, no el primero.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Pisco", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Pisco", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "nazca",
     nombre: "Nazca",
     metaTitle: "Agencia de Marketing en Nazca | Suggestion",
     metaDescription:
-      "Marketing para negocios de Nazca: hoteles, agencias de turismo, comercio y proveedores mineros. Reservas y clientes medibles. Agenda una llamada.",
+      "Marketing para negocios de Nazca: hoteles, agencias de turismo, comercio y proveedores mineros. Reservas y clientes medibles. Consultoría gratis.",
     h1: "Agencia de marketing en Nazca",
     hero: "Nazca recibe visitantes de todo el mundo y aun así muchos negocios de la zona dependen de que el turista aparezca solo. Se puede captar antes: cuando todavía está planeando el viaje.",
-    cta: "Hablemos de tu negocio en Nazca",
+    cta: "Agenda tu consultoría cero",
     proof:
       "En turismo trabajamos con resultados concretos: 75 reservas generadas para un hotel en una sola campaña.",
     cobertura:
@@ -207,7 +207,7 @@ export const CIUDADES: Ciudad[] = [
         a: "Sí. Tenemos siete sectores con estrategia propia: inmobiliario, automotriz, turismo, marcas y consumo, salud, agroexportación y pisco y vino. Y si tu rubro no está en la lista, la primera llamada sirve para ver si podemos aportar de verdad.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Nazca", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Nazca", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "arequipa",
@@ -217,7 +217,7 @@ export const CIUDADES: Ciudad[] = [
       "Agencia de marketing para empresas de Arequipa: automotriz, inmobiliario, salud y comercio. Campañas que se miden en ventas, no en likes. Agenda hoy.",
     h1: "Agencia de marketing en Arequipa",
     hero: "Arequipa es la plaza más competida del sur. Con más oferta, ganar no es gritar más fuerte: es tener un embudo que convierta mejor que el del vecino, y medirlo hasta el cierre.",
-    cta: "Hablemos de tu empresa en Arequipa",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Atendemos 19 marcas de vehículos y operamos planes de marketing para una red de concesionarios presente en Ica y Cusco.",
     cobertura:
@@ -272,17 +272,17 @@ export const CIUDADES: Ciudad[] = [
         a: "En cuentas que compiten directamente en la misma ciudad y el mismo rubro sí lo conversamos antes de empezar, porque no tendría sentido optimizar dos campañas que pelean entre sí. Es una decisión que se toma al inicio, no sobre la marcha.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu empresa en Arequipa", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu empresa en Arequipa", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "tacna",
     nombre: "Tacna",
     metaTitle: "Agencia de Marketing en Tacna | Suggestion",
     metaDescription:
-      "Marketing para negocios de Tacna: turismo médico, comercio fronterizo, automotriz y agro. Campañas que traen clientes, no likes. Agenda una llamada.",
+      "Marketing para negocios de Tacna: turismo médico, comercio fronterizo, automotriz y agro. Campañas que traen clientes, no likes. Consultoría gratis.",
     h1: "Agencia de marketing en Tacna",
     hero: "En Tacna una parte del cliente llega desde el otro lado de la frontera. Eso cambia todo: el idioma del anuncio, la moneda de la comparación y el momento en que se toma la decisión.",
-    cta: "Hablemos de tu negocio en Tacna",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Siete años trabajando con más de 50 marcas, en siete sectores con estrategia propia para cada uno.",
     cobertura:
@@ -337,17 +337,17 @@ export const CIUDADES: Ciudad[] = [
         a: "Como mínimo, capacidad de responder rápido las consultas que van a llegar y claridad sobre tu oferta y tus precios. Sin eso, la publicidad solo hace que más gente se entere de que no respondes. Si falta algo de eso, te lo decimos en el diagnóstico.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Tacna", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Tacna", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "ayacucho",
     nombre: "Ayacucho",
     metaTitle: "Agencia de Marketing en Ayacucho | Suggestion",
     metaDescription:
-      "Marketing para negocios de Ayacucho: turismo, artesanía, hotelería y comercio. Campañas medibles en reservas y ventas. Agenda una llamada hoy.",
+      "Marketing para negocios de Ayacucho: turismo, artesanía, hotelería y comercio. Campañas medibles en reservas y ventas. Consultoría gratis.",
     h1: "Agencia de marketing en Ayacucho",
     hero: "Ayacucho tiene un activo que pocas ciudades pueden comprar: identidad. El problema es que la identidad no se vende sola, y muchos negocios de la zona compiten por precio cuando podrían competir por lo que son.",
-    cta: "Hablemos de tu negocio en Ayacucho",
+    cta: "Agenda tu consultoría cero",
     proof:
       "En turismo generamos 75 reservas para un hotel en una sola campaña, dentro y fuera de temporada.",
     cobertura:
@@ -402,7 +402,7 @@ export const CIUDADES: Ciudad[] = [
         a: "Depende del rubro y del margen. Lo que sí decimos siempre: es preferible sostener un presupuesto modesto durante tres meses que hacer un mes fuerte y cortar. Las campañas necesitan datos para optimizarse, y eso toma tiempo.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Ayacucho", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Ayacucho", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "huaraz",
@@ -412,7 +412,7 @@ export const CIUDADES: Ciudad[] = [
       "Marketing para negocios de Huaraz: hoteles, agencias de trekking, restaurantes y proveedores. Más reservas directas y menos comisión. Agenda hoy.",
     h1: "Agencia de marketing en Huaraz",
     hero: "Huaraz vive del viajero que planifica con semanas de anticipación y compara desde otro país. Si tu negocio solo aparece cuando ya está en el jirón, llegaste tarde a la decisión.",
-    cta: "Hablemos de tu negocio en Huaraz",
+    cta: "Agenda tu consultoría cero",
     proof:
       "En turismo trabajamos con números concretos: 75 reservas para un hotel en una sola campaña.",
     cobertura:
@@ -467,17 +467,17 @@ export const CIUDADES: Ciudad[] = [
         a: "Te ofrecemos una auditoría gratuita: revisamos tu publicidad, tu web y tu seguimiento, y te decimos las tres cosas que más moverían tus resultados. Puedes aplicarlas con nosotros o por tu cuenta, sin compromiso.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Huaraz", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Huaraz", cta: "Agenda tu consultoría cero" },
   },
   {
     slug: "palpa",
     nombre: "Palpa",
     metaTitle: "Agencia de Marketing en Palpa | Suggestion",
     metaDescription:
-      "Marketing para negocios de Palpa: agro y cítricos, turismo de geoglifos y comercio local. Campañas medibles operadas desde Ica. Agenda una llamada.",
+      "Marketing para negocios de Palpa: agro y cítricos, turismo de geoglifos y comercio local. Campañas medibles operadas desde Ica. Consultoría gratis.",
     h1: "Agencia de marketing en Palpa",
     hero: "Palpa es un mercado pequeño con dos activos que pocos tienen: una fruta con nombre propio y unos geoglifos más antiguos que los de Nazca. Ninguno de los dos está bien contado, y ahí es donde hay negocio.",
-    cta: "Hablemos de tu negocio en Palpa",
+    cta: "Agenda tu consultoría cero",
     proof:
       "Siete años trabajando desde Ica con más de 50 marcas, en siete sectores con estrategia propia.",
     cobertura:
@@ -537,7 +537,7 @@ export const CIUDADES: Ciudad[] = [
         a: "No compitiendo de frente, sino apareciendo antes: el viajero planifica con semanas de anticipación y busca qué ver en el camino. Una propuesta clara —qué se visita, cuánto dura, por qué vale la pena— colocada donde busca esa persona, convierte mejor que intentar disputarle el nombre a Nazca.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Palpa", cta: "Agenda una llamada" },
+    cierre: { h2: "Hagamos crecer tu negocio en Palpa", cta: "Agenda tu consultoría cero" },
   },
 ];
 

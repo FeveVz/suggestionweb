@@ -24,8 +24,9 @@ import type { Seccion, Faq as FaqItem } from "@/content/types";
 export const metadata: Metadata = buildMetadata({
   title: "Cómo Medimos una Campaña | Método | Suggestion",
   description:
-    "Cómo contamos los resultados de una campaña: medición contra el CRM, no contra el administrador de Meta; la venta se cuenta cuando cierra y se dice de dónde venía el lead.",
+    "Cómo contamos los resultados de una campaña: medimos contra el CRM, no contra Meta. La venta se cuenta cuando cierra y se dice de dónde venía el lead.",
   path: "/metodo",
+  ogImage: "/assets/og/metodo.png",
 });
 
 const SECCIONES: Seccion[] = [
@@ -145,7 +146,7 @@ export default function MetodoPage() {
               <Btn as="a" href="/casos/ceinys-septiembre-2026" size="lg">
                 Ver un reporte aplicado <ArrowRight size={18} />
               </Btn>
-              <Btn as="a" href="/auditoria-gratis" variant="secondary" size="lg">Auditoría gratis (48 h)</Btn>
+              <Btn as="a" href="/consultoria-cero" variant="secondary" size="lg">Consultoría cero gratis</Btn>
             </div>
           </div>
         </div>
