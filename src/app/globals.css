@@ -711,9 +711,10 @@ img, svg, video { max-width: 100%; }
   .js .hk-reveal-text .hk-word > span { transform: none !important; }
 }
 
-/* Textura de partículas (profundidad en fondos oscuros) */
+/* Textura de partículas (profundidad en fondos oscuros). Sin mix-blend-mode: al
+   6 % de opacidad sobre negro no se distingue, y obliga a recomponer cada capa. */
 .hk-grain { position: relative; }
-.hk-grain > .hk-grain-layer { position: absolute; inset: 0; background-image: url("/assets/textures/particles.webp"); background-size: 480px; opacity: 0.06; pointer-events: none; mix-blend-mode: screen; z-index: 0; }
+.hk-grain > .hk-grain-layer { position: absolute; inset: 0; background-image: url("/assets/textures/particles.webp"); background-size: 480px; opacity: 0.06; pointer-events: none; z-index: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .hk-enter, .hk-enter-2, .hk-enter-3, .hk-enter-4, .hk-blot-in, .hk-float { animation: none !important; opacity: 1 !important; transform: none !important; }
