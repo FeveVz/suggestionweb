@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Btn } from "@/components/brand/parts";
 import { track, leadDedup, getAttribution } from "@/lib/tracking";
-import { temaDeUrl } from "@/lib/cta";
+import { GUARDAR_EN_BASE, temaDeUrl } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
 
 /**
@@ -20,7 +20,8 @@ import { whatsappLink } from "@/lib/site";
  *   nuevo podría hacer fallar el guardado. Para separarlo en el panel hay que
  *   dar de alta el valor primero en la base y en TIPOS.
  *
- * En los dos casos abre WhatsApp con el resumen y redirige a /gracias.
+ * En los dos casos abre WhatsApp con el resumen y redirige a /gracias. Mientras
+ * GUARDAR_EN_BASE sea false no se llama a /api/lead (ver lib/cta.ts).
  */
 
 const WHATSAPP = "51920010308";
@@ -69,15 +70,19 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
     e.preventDefault();
     setAviso(null);
     const f = new FormData(e.currentTarget);
+    if (f.get("website")) return; // honeypot: un bot no debe abrir WhatsApp
     const quiere = String(f.get("quiere") || "").trim();
     const msg = consultoria
       ? [
           `Hola Suggestion, quiero agendar mi consultoría cero. Soy ${f.get("nombre")}.`,
+          `Mi WhatsApp: ${f.get("telefono")}`,
           tema ? `Sobre: ${tema}` : null,
           quiere ? `Lo que quiero resolver o mejorar: ${quiere}` : null,
+          `Desde: ${window.location.pathname}`,
         ]
       : [
           `Hola Suggestion, quiero mi auditoría gratis. Soy ${f.get("nombre")}.`,
+          `Mi WhatsApp: ${f.get("telefono")}`,
           `Negocio: ${f.get("negocio")}`,
           f.get("web") ? `Web/IG: ${f.get("web")}` : null,
           `Inversión mensual en publicidad: ${f.get("inversion")}`,
@@ -85,8 +90,20 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
         ];
     const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg.filter(Boolean).join("\n"))}`;
     setWaUrl(wa);
+    try {
+      sessionStorage.setItem("sg_wa", wa); // para reabrirlo desde /gracias si el navegador lo bloqueó
+    } catch {
+      /* /gracias usa entonces un mensaje general */
+    }
     window.open(wa, "_blank", "noopener,noreferrer");
     const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
+    if (!GUARDAR_EN_BASE) {
+      track("generate_lead", { origen: consultoria ? "consultoria-cero" : "auditoria" }, dedup.event_id);
+      setSent(true);
+      // Un momento para que salga el evento antes de cambiar de página.
+      setTimeout(() => window.location.assign("/gracias"), 500);
+      return;
+    }
     const guardado = fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

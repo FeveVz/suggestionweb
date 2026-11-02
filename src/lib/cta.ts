@@ -14,6 +14,14 @@
  */
 export const CTA_CONSULTORIA = "Agenda tu consultoría cero";
 
+/**
+ * Los formularios van solo a WhatsApp mientras Supabase siga pausado (decisión
+ * del owner, 2026-11-02). Al reactivar la base: ponerlo en true y devolver a
+ * /gracias su texto de "datos recibidos". Sin base, un dato solo llega si la
+ * persona envía el mensaje, y no se guarda de dónde vino (utm, gclid).
+ */
+export const GUARDAR_EN_BASE = false;
+
 export const esCotizacion = (label: string) => /cotiz/i.test(label);
 
 /**

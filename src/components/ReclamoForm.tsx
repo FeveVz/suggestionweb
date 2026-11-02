@@ -2,11 +2,16 @@
 
 import { useState } from "react";
 import { Btn } from "@/components/brand/parts";
+import { GUARDAR_EN_BASE } from "@/lib/cta";
+import { site, whatsappLink } from "@/lib/site";
 
 /**
  * Formulario del Libro de Reclamaciones virtual (DS 011-2011-PCM).
  * Guarda el reclamo en /api/lead (tipo "reclamo") y muestra el código
  * de registro. Respuesta al consumidor: máx. 15 días hábiles.
+ *
+ * Mientras GUARDAR_EN_BASE sea false (lib/cta.ts) no hay base: el reclamo sale por
+ * WhatsApp o correo y solo queda constancia si la persona lo envía.
  */
 
 const label: React.CSSProperties = { font: "var(--fw-medium) var(--fs-sm)/1 var(--font-body)", color: "var(--text-strong)" };
@@ -28,12 +33,36 @@ export default function ReclamoForm() {
   const [codigo, setCodigo] = useState<string | null>(null);
   const [error, setError] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  const [salida, setSalida] = useState<{ wa: string; mail: string } | null>(null);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setEnviando(true);
     setError(false);
     const f = new FormData(e.currentTarget);
+    if (!GUARDAR_EN_BASE) {
+      if (f.get("website")) return; // honeypot
+      const cod = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 4)}`.slice(-8).toUpperCase();
+      const texto = [
+        `Libro de Reclamaciones · Código REC-${cod}`,
+        `Tipo: ${f.get("clase")}`,
+        `Nombre: ${f.get("nombre")}`,
+        `DNI / CE: ${f.get("documento")}`,
+        `Teléfono: ${f.get("telefono")}`,
+        `Correo: ${f.get("email")}`,
+        f.get("direccion") ? `Dirección: ${f.get("direccion")}` : null,
+        `Servicio o producto: ${f.get("bien")}`,
+        f.get("monto") ? `Monto reclamado: ${f.get("monto")}` : null,
+        `Detalle: ${f.get("detalle")}`,
+        `Pedido: ${f.get("pedido")}`,
+      ].filter(Boolean).join("\n");
+      const wa = whatsappLink(texto);
+      setSalida({ wa, mail: `mailto:${site.email}?subject=${encodeURIComponent(`Libro de Reclamaciones REC-${cod}`)}&body=${encodeURIComponent(texto)}` });
+      setCodigo(cod);
+      setEnviando(false);
+      window.open(wa, "_blank", "noopener,noreferrer");
+      return;
+    }
     try {
       const r = await fetch("/api/lead", {
         method: "POST",
@@ -65,6 +94,21 @@ export default function ReclamoForm() {
       setEnviando(false);
     }
   };
+
+  if (codigo && salida) {
+    return (
+      <div style={{ padding: "var(--space-6)", background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", maxWidth: 640 }}>
+        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Falta un paso: envía tu reclamo</h2>
+        <p style={{ font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-body)", marginTop: 10 }}>
+          Tu código es <strong style={{ fontWeight: 700 }}>REC-{codigo}</strong>. Tu reclamo ya está escrito en WhatsApp. <strong style={{ fontWeight: 700 }}>Hasta que lo envíes no nos llega.</strong> Si prefieres, envíalo por correo. Te responderemos al correo o teléfono indicado en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>, conforme al Código de Protección y Defensa del Consumidor.
+        </p>
+        <div style={{ display: "flex", gap: 14, marginTop: 20, flexWrap: "wrap" }}>
+          <Btn as="a" href={salida.wa} target="_blank" rel="noopener noreferrer" size="lg">Abrir WhatsApp</Btn>
+          <Btn as="a" href={salida.mail} variant="secondary" size="lg">Enviarlo por correo</Btn>
+        </div>
+      </div>
+    );
+  }
 
   if (codigo) {
     return (
