@@ -1,6 +1,7 @@
 // Imágenes para compartir (1200×630) de las páginas que usaban la genérica.
 // Se ven al pegar el enlace en WhatsApp. Usa el Chrome local para que salgan con
-// las fuentes del sitio: node scripts/og-paginas.mjs
+// las fuentes del sitio: node scripts/og-paginas.mjs [prefijo...]
+// Con prefijos solo genera esas, por ejemplo: node scripts/og-paginas.mjs equipo- blog
 //
 // En los casos no va ninguna cifra a propósito: fuera de la página, sin su fecha
 // de corte, incumplirían docs-fuente/21.
@@ -22,6 +23,25 @@ const PAGINAS = [
   ["caso-granjas-bonanza", "Caso:", "Granjas Bonanza"],
   ["caso-hoteles-senor-de-luren", "Caso:", "Hoteles Señor de Luren"],
   ["caso-autoniza-eventos", "Caso:", "Autoniza, eventos"],
+  ["servicios", "Servicios de marketing", "y producción"],
+  ["sectores", "Marketing", "por sector"],
+  ["blog", "Blog de marketing", "para vender más"],
+  ["blog-performance", "Blog:", "performance y pauta"],
+  ["blog-conversion", "Blog:", "conversión y CRO"],
+  ["blog-marca", "Blog:", "marca y contenidos"],
+  ["blog-ia-automatizacion", "Blog:", "IA y automatización"],
+  ["blog-psicologia-de-mercado", "Blog:", "psicología de mercado"],
+  ["blog-inmobiliario", "Blog:", "marketing inmobiliario"],
+  ["blog-automotriz", "Blog:", "marketing automotriz"],
+  ["blog-sectores", "Blog:", "turismo, consumo y salud"],
+  ["blog-imprenta-btl", "Blog: imprenta, BTL", "y publicidad física"],
+  ["equipo-abraham", "Abraham Velásquez", "Gerente General"],
+  ["equipo-carolina", "Carolina Jorge", "Administradora"],
+  ["equipo-cristofer", "Cristofer Amable", "Análisis de mercado"],
+  ["equipo-diego", "Diego Urday", "Desarrollo web"],
+  ["equipo-yurayma", "Yurayma Vásquez", "Diseño"],
+  ["equipo-jose-carlos", "José Carlos Muñoz", "Audiovisual y edición"],
+  ["equipo-nicolas", "Nicolás Montoya", "Logística y eventos"],
 ];
 
 const CHROME = [
@@ -36,7 +56,9 @@ const fuente = pathToFileURL(path.join(raiz, "public/fonts/Geomanist-Bold.woff2"
 const mancha = pathToFileURL(path.join(raiz, "public/assets/blots/blot-3-cyan.png")).href;
 const tmp = mkdtempSync(path.join(tmpdir(), "og-"));
 
+const prefijos = process.argv.slice(2);
 for (const [archivo, l1, l2] of PAGINAS) {
+  if (prefijos.length && !prefijos.some((p) => archivo.startsWith(p))) continue;
   const html = `<!doctype html><meta charset="utf-8"><style>
     @font-face { font-family: G; src: url("${fuente}"); font-weight: 700; }
     * { margin: 0; box-sizing: border-box; }

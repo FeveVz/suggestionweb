@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { categoria } = await params;
   const c = getCategoria(categoria);
   if (!c) return {};
-  return buildMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/blog/${c.slug}` });
+  return buildMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/blog/${c.slug}`, ogImage: `/assets/og/blog-${c.slug}.png` });
 }
 
 export default async function BlogCategoria({ params }: Params) {

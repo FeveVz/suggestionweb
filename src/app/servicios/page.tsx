@@ -8,6 +8,7 @@ export const metadata: Metadata = buildMetadata({
   title: SERVICIOS_PILAR.metaTitle,
   description: SERVICIOS_PILAR.metaDescription,
   path: "/servicios",
+  ogImage: "/assets/og/servicios.png",
 });
 
 export default function ServiciosPilar() {

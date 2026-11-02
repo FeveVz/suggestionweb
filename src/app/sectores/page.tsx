@@ -8,6 +8,7 @@ export const metadata: Metadata = buildMetadata({
   title: SECTORES_HUB.metaTitle,
   description: SECTORES_HUB.metaDescription,
   path: "/sectores",
+  ogImage: "/assets/og/sectores.png",
 });
 
 export default function SectoresHub() {

@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: `${t.nombre} | ${t.rolSeo ?? t.rol} | ${site.name}`,
     description,
     path: `/equipo/${t.slug}`,
+    ogImage: `/assets/og/equipo-${t.slug}.png`,
   });
 }
 
