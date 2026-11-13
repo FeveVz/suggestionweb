@@ -611,6 +611,12 @@ const SERVICIOS_LIST: Servicio[] = [
       "Investigación de mercado con datos e insights para decidir con certeza: demanda, competencia y consumidor. Pide tu estudio. Consultoría gratis.",
     h1: "Investigación de mercado que guía tus decisiones",
     hero: "Decidir por intuición es caro. Te damos datos e insights reales sobre tu demanda, tu competencia y tu consumidor, para que inviertas donde sí hay oportunidad.",
+    enCorto: [
+      "Un estudio de mercado responde una pregunta de negocio concreta: si hay demanda, a qué precio, qué hace tu competencia y qué quiere tu cliente.",
+      "Hay tres planes por proyecto: S/1,500 con 50 encuestas, S/3,000 con 150 y S/6,000 con 300 encuestas más 10 a 15 entrevistas a clientes reales.",
+      "Combinamos encuestas y análisis de datos con entrevistas y focus groups, según lo que necesites responder.",
+      "Entregamos un informe ejecutivo con hallazgos y recomendaciones que puedes ejecutar, no un PDF para archivar.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "investigación de mercado",
     secciones: [
@@ -899,6 +905,12 @@ const SERVICIOS_LIST: Servicio[] = [
       "Gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Consultoría gratis.",
     h1: "Redes que traen clientes, no solo seguidores",
     hero: "Tus redes no son un mural de fotos bonitas: son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
+    enCorto: [
+      "La gestión de redes cuesta S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias.",
+      "Medimos conversaciones iniciadas y clics al WhatsApp, no seguidores ni me gusta.",
+      "El contenido orgánico construye confianza con quien ya te sigue; el volumen de clientes nuevos llega con pauta.",
+      "Si el presupuesto obliga a elegir: primero pauta con una oferta clara y alguien que responda rápido, y el orgánico después.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "gestión de redes sociales",
     secciones: [

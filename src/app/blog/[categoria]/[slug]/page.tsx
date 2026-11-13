@@ -7,8 +7,9 @@ import Secciones from "@/components/Secciones";
 import Faq from "@/components/Faq";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
+import EnCorto from "@/components/EnCorto";
 import { buildMetadata } from "@/lib/seo";
-import { consultoriaHref } from "@/lib/cta";
+import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
 import { blogPostingSchema } from "@/lib/schema";
 import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
@@ -163,6 +164,13 @@ export default async function BlogPostPage({ params }: Params) {
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "64ch" }}>
               {post.excerpt}
             </p>
+            {/* Con enlace a la consultoría por decisión del owner (2026-11-13):
+                quien llega desde un asistente ya tiene la respuesta aquí arriba. */}
+            {post.enCorto && post.enCorto.length > 0 && (
+              <div style={{ marginTop: 24 }}>
+                <EnCorto puntos={post.enCorto} enlace={{ href: consultoriaHref(cat?.nombre), label: CTA_CONSULTORIA }} />
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -189,8 +197,9 @@ export default async function BlogPostPage({ params }: Params) {
               <Btn as="a" href={post.moneyPage.href} variant="insight" size="lg">
                 {post.moneyPage.label} <ArrowRight size={18} />
               </Btn>
-              {/* El cierre es el único sitio del artículo donde se deriva: solo 4
-                  de 52 tenían un enlace para hablar con nosotros. */}
+              {/* El cierre es el sitio del artículo donde se deriva (solo 4 de 52
+                  tenían un enlace para hablar con nosotros); la única otra salida
+                  es el bloque «En corto», en los posts que lo tienen. */}
               <a href={consultoriaHref(cat?.nombre)} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
                 O cuéntanos tu caso: consultoría cero, gratis
               </a>

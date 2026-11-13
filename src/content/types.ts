@@ -87,6 +87,8 @@ export type Servicio = {
   metaDescription: string;
   h1: string;
   hero: string;
+  /** Respuesta corta bajo el hero (ver components/EnCorto.tsx). Solo datos ya publicados en la página. */
+  enCorto?: string[];
   cta: string;
   keyword: string;
   /** barra de prueba social opcional. */

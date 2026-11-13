@@ -48,7 +48,8 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/publicidad-digital": "2026-10-10",
   "/servicios/seo": "2026-10-10",
   "/servicios/marketing-digital": "2026-10-04",
-  "/servicios/redes-sociales": "2026-10-04",
+  "/servicios/redes-sociales": "2026-11-13",
+  "/servicios/investigacion-de-mercado": "2026-11-13",
   "/servicios/desarrollo-web": "2026-10-04",
   "/servicios/crm-automatizacion": "2026-10-04",
   "/servicios/produccion-audiovisual": "2026-10-09",
@@ -71,6 +72,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/equipo/carolina": "2026-10-13",
   "/servicios/merchandising": "2026-11-02",
   "/blog/imprenta-btl/gigantografias-medidas-materiales-precios": "2026-11-02",
+  "/blog/performance/cuanto-invertir-en-ads-peru": "2026-11-13",
 };
 const fecha = (path: string) => (ACTUALIZADA[path] ? new Date(`${ACTUALIZADA[path]}T12:00:00Z`) : GLOBAL);
 /** Los artículos con fotos propias se ilustraron el 13-oct. */

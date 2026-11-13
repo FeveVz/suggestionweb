@@ -11,8 +11,9 @@ import PorQueSection from "@/components/PorQueSection";
 import TransactionalSections from "@/components/TransactionalSections";
 import PricingSection from "@/components/PricingSection";
 import JsonLd from "@/components/JsonLd";
+import EnCorto from "@/components/EnCorto";
 import { site, whatsappLink } from "@/lib/site";
-import { consultoriaHref, esCotizacion } from "@/lib/cta";
+import { CTA_CONSULTORIA, consultoriaHref, esCotizacion } from "@/lib/cta";
 import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "@/content/types";
 
 /**
@@ -68,6 +69,7 @@ export default function LandingArticle({
   kicker,
   h1,
   hero,
+  enCorto,
   heroImage,
   galeria,
   ctaLabel,
@@ -89,6 +91,8 @@ export default function LandingArticle({
   kicker: string;
   h1: string;
   hero: string;
+  /** Respuesta corta, primera cosa tras el hero y su barra de prueba. */
+  enCorto?: string[];
   heroImage?: { src: string; alt: string; w?: number; h?: number };
   /** Fotos del trabajo real, con su pie. Van tras las secciones. */
   galeria?: { src: string; alt: string; cap: string }[];
@@ -282,6 +286,9 @@ export default function LandingArticle({
       {/* SECCIONES */}
       <Section tone="light">
         <div style={{ display: "grid", gap: "var(--space-8)", maxWidth: 880 }}>
+          {enCorto && enCorto.length > 0 && (
+            <EnCorto puntos={enCorto} enlace={{ href: consultoria, label: CTA_CONSULTORIA }} />
+          )}
           {/* Un solo render de secciones para todo el sitio: antes esta
               plantilla repetia su propia version (parrafo, sub, bullets) y por
               eso las paginas de servicio, sector y ciudad ignoraban EN SILENCIO

@@ -37,6 +37,8 @@ export type BlogPost = {
   description: string;
   h1: string;
   excerpt: string;
+  /** Respuesta corta bajo la entradilla (ver components/EnCorto.tsx). Solo datos del propio artículo. */
+  enCorto?: string[];
   date: string;
   secciones: Seccion[];
   /** Preguntas frecuentes del post. Emiten FAQPage (rich snippet) y capturan
@@ -1015,6 +1017,12 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "¿Cuánto invertir en Google Ads y Meta Ads en Perú?",
     excerpt:
       "La respuesta honesta no es una cifra: es “depende, y aquí está de qué depende”. Cualquiera que te dé un número sin conocer tu negocio te está vendiendo humo. Esto es lo que sí determina tu presupuesto.",
+    enCorto: [
+      "No hay una cifra que sirva para todos: el presupuesto se calcula al revés, desde tu meta de ventas.",
+      "La cuenta es ventas que quieres, entre tu tasa de cierre, por tu costo por lead. Con 10 ventas al mes, 1 cierre de cada 5 leads y S/15 por lead, la pauta base es S/750.",
+      "Meta necesita unos 50 eventos de optimización por semana en cada conjunto de anuncios para salir de la fase de aprendizaje. Si tu presupuesto no llega, optimiza por un evento más frecuente.",
+      "En Perú el costo por lead va de S/3 a S/40 según el rubro (rangos de mercado de octubre de 2026, sin la gestión).",
+    ],
     date: "2026-02-11",
     secciones: [
       {

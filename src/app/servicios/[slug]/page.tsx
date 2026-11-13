@@ -195,6 +195,7 @@ export default async function ServicioPage({ params }: Params) {
       kicker={parent?.nombre ?? "Servicio"}
       h1={s.h1}
       hero={s.hero}
+      enCorto={s.enCorto}
       heroImage={SERVICE_IMG[s.slug]}
       galeria={SERVICE_GAL[s.slug]}
       ctaLabel={s.cta}
