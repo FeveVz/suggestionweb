@@ -41,16 +41,17 @@ function ogDelPost(moneyHref: string): string {
 const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
   inmobiliario: [
     { label: "Marketing inmobiliario", href: "/marketing-inmobiliario" },
-    { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    { label: "Agencia de Meta Ads", href: "/servicios/meta-ads" },
     { label: "Gestión de redes sociales", href: "/servicios/redes-sociales" },
   ],
   automotriz: [
     { label: "Marketing automotriz", href: "/marketing-automotriz" },
-    { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    { label: "Agencia de Google Ads", href: "/servicios/publicidad-digital" },
     { label: "BTL y activaciones para eventos", href: "/servicios/btl" },
   ],
   performance: [
-    { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    { label: "Agencia de Google Ads", href: "/servicios/publicidad-digital" },
+    { label: "Agencia de Meta Ads", href: "/servicios/meta-ads" },
     { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
     { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
   ],
@@ -71,6 +72,7 @@ const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
   ],
   "imprenta-btl": [
     { label: "Imprenta y gran formato", href: "/servicios/imprenta" },
+    { label: "Gigantografías en Ica", href: "/servicios/gigantografias" },
     { label: "Estructuras y letreros", href: "/servicios/estructuras-publicitarias" },
     { label: "Merchandising corporativo", href: "/servicios/merchandising" },
     { label: "Material POP", href: "/servicios/material-pop" },

@@ -3988,7 +3988,138 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion producimos merchandising elegido por dónde va a terminar, no por lo que sobraba en catálogo.",
     moneyPage: { label: "Merchandising corporativo", href: "/servicios/merchandising" },
-    relacionados: ["polos-personalizados-para-empresa", "material-pop-punto-de-venta"],
+    relacionados: ["regalos-corporativos-de-navidad", "polos-personalizados-para-empresa", "material-pop-punto-de-venta"],
+  },
+  {
+    // Keyword research del 2026-11-14: «regalos corporativos de navidad» (CPC hasta
+    // S/7.43, temporada nov-dic). No canibaliza a merchandising-corporativo-que-regalar:
+    // aquella es todo el año y por artículo; esta es la temporada, el plazo y el reparto.
+    // Los precios son los mismos de aquella (octubre 2026, con su fuente): no hay cifras nuevas.
+    slug: "regalos-corporativos-de-navidad",
+    categoria: "imprenta-btl",
+    title: "Regalos Corporativos de Navidad para Clientes | Suggestion",
+    description:
+      "Qué regalar a clientes y a tu equipo esta Navidad, cómo repartir el presupuesto en dos niveles y qué todavía llegas a personalizar si pides en noviembre.",
+    h1: "Regalos corporativos de Navidad: qué regalar y cómo llegar a tiempo",
+    excerpt:
+      "En diciembre tu regalo no compite con nada del resto del año: compite con todos los demás regalos que tu cliente recibe esa misma semana. Gana el que llega antes, se usa y dice algo de quien lo manda.",
+    enCorto: [
+      "Reparte el presupuesto en dos niveles: pocos regalos buenos para los clientes que más pesan y uno útil y sencillo para el resto.",
+      "A mediados de noviembre conviene elegir artículos que el proveedor ya tiene en stock y personalizarlos con grabado o impresión, no fabricar desde cero ni importar.",
+      "Lo que más se recuerda no es el precio: es un objeto de uso diario con la marca discreta, una tarjeta escrita a mano y una entrega antes de la última semana del año.",
+    ],
+    date: "2026-11-14",
+    secciones: [
+      {
+        h2: "Por qué diciembre es distinto",
+        parrafo:
+          "El resto del año un regalo corporativo sorprende. En diciembre se espera, y tu cliente recibe varios en la misma semana: el tuyo se compara con todos los demás. Por eso la Navidad premia otras cosas que el merchandising de todo el año.",
+        bullets: [
+          { titulo: "Llegar antes", texto: "lo que llega a inicios de diciembre se abre con calma y se usa. Lo que llega el 23 se apila con todo lo demás o encuentra la oficina cerrada." },
+          { titulo: "Que se use después de enero", texto: "lo que se come o se bebe se termina en las fiestas. Lo que se usa a diario sigue recordándote en marzo." },
+          { titulo: "Que se note quién lo manda", texto: "una tarjeta con dos líneas escritas a mano por alguien que el cliente conoce pesa más que subir de categoría el regalo." },
+          { titulo: "Que no parezca un compromiso", texto: "un regalo demasiado caro incomoda, y en muchas empresas el personal no puede aceptarlo. Moderado y bien pensado funciona mejor." },
+        ],
+      },
+      {
+        h2: "Qué regalar según a quién",
+        parrafo:
+          "El error de diciembre es mandar lo mismo a todos. El mismo presupuesto rinde mucho más si cada grupo recibe lo que le corresponde.",
+        tabla: {
+          cabeceras: ["A quién", "Qué funciona", "Por qué"],
+          filas: [
+            ["Clientes que más pesan", "Pocos regalos de calidad alta, con tarjeta personal y entrega en mano", "La entrega es la excusa para una visita de cierre de año"],
+            ["Resto de clientes", "Un objeto útil de escritorio o de uso diario: taza, tomatodo, libreta", "Llega a muchos con un costo por persona razonable"],
+            ["Tu propio equipo", "Polo, casaca o mochila de buena calidad, o la canasta navideña", "Lo que tu equipo usa fuera de la oficina también es tu marca"],
+            ["Proveedores y aliados", "Algo para compartir en su oficina", "Agradece la relación sin parecer un pago"],
+          ],
+          nota: "Si tu empresa es de Ica, un detalle de la región —pisco, vino o tejas— junto al objeto con tu marca suele recordarse más que cualquier artículo de catálogo. Con el alcohol, mejor confirmar antes que la persona lo recibe sin problema.",
+        },
+      },
+      {
+        h2: "Si pides en noviembre: qué todavía llegas a hacer",
+        parrafo:
+          "A estas alturas del año los proveedores están saturados y lo más pedido empieza a agotarse. Todavía se llega, pero cambiando el enfoque: se elige entre lo que hay en stock y se personaliza, en lugar de fabricar algo desde cero.",
+        pasos: [
+          { titulo: "Decide hoy la lista y el presupuesto", texto: "cuántas personas, en qué nivel va cada una y cuánto por persona. Sin esa lista nadie te puede cotizar en serio." },
+          { titulo: "Elige de lo que hay en stock", texto: "pregunta qué artículos tiene el proveedor disponibles en la cantidad que necesitas. Lo importado a pedido y los empaques fabricados a medida ya no llegan." },
+          { titulo: "Personaliza con técnicas rápidas", texto: "grabado láser, tampografía, sublimación o impresión sobre artículos existentes. Son las que permiten tener tu marca sin esperar fabricación." },
+          { titulo: "Aprueba el arte y una muestra de inmediato", texto: "cada día que el arte espera aprobación es un día que se pierde en la producción. Una muestra física evita sorpresas en el lote." },
+          { titulo: "Planifica la entrega antes de recibir las cajas", texto: "quién reparte, en qué orden y con qué direcciones. Revisa la lista: siempre hay contactos que cambiaron de empresa durante el año." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Para el próximo año",
+          texto: "La Navidad sale mejor cuando se decide en septiembre: hay más opciones, se puede fabricar algo propio y los precios todavía no son de temporada alta. Anota la fecha en el calendario de este año.",
+        },
+      },
+      {
+        h2: "Cuánto presupuestar",
+        parrafo:
+          "No hay una cifra correcta: hay una forma correcta de calcularla. Divide el presupuesto entre las personas a las que de verdad vas a llegar, no entre las unidades que alcanzas a comprar. Si el número por persona sale ridículo, es mejor regalar a menos gente y mejor.",
+        tabla: {
+          cabeceras: ["Artículo", "Precio por unidad", "Mínimo habitual"],
+          filas: [
+            ["Lapicero plástico personalizado", "desde S/0.60", "100 unidades"],
+            ["Taza corporativa", "desde S/4.90", "50 unidades"],
+            ["Llavero, línea estándar", "desde S/1.59", "50 unidades"],
+            ["Llavero, línea premium", "hasta S/14.62", "50 unidades"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto con precio listado de proveedores de merchandising. En temporada alta pueden subir. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Lo que conviene preguntarle a tu contador",
+        parrafo:
+          "No todos los regalos se tratan igual en el Impuesto a la Renta, y la diferencia se decide al comprar, no al declarar.",
+        bullets: [
+          { titulo: "Regalos a clientes concretos", texto: "suelen tratarse como gastos de representación, que solo se deducen hasta el 0.5% de los ingresos brutos del año, con un tope de 40 UIT. Hay que poder demostrar a quién se entregó cada uno." },
+          { titulo: "Artículos con tu marca repartidos en volumen", texto: "pueden calificar como gasto de publicidad, que no tiene ese tope. La cantidad, el valor y a quién se reparte inclinan la balanza." },
+          { titulo: "Canasta o agasajo para tu equipo", texto: "va por otra regla: los gastos recreativos del personal tienen su propio límite del 0.5% de los ingresos netos, también con tope de 40 UIT." },
+        ],
+        nota: {
+          tipo: "info",
+          titulo: "Fuente",
+          texto: "Ley del Impuesto a la Renta, artículo 37 (incisos q y ll), y su reglamento, artículo 21. Es una orientación general: cómo se aplica a tu empresa lo define tu contador.",
+        },
+      },
+      {
+        h2: "Los errores que se repiten cada diciembre",
+        parrafo: "Ninguno es caro de evitar. Todos se pagan con un regalo que nadie recuerda.",
+        bullets: [
+          { titulo: "Pedir la última semana de noviembre", texto: "y terminar regalando lo que quedaba en el almacén del proveedor, no lo que elegiste." },
+          { titulo: "Poner el logo enorme", texto: "en Navidad todavía más: un regalo que parece un volante no se usa. La marca discreta se queda en el escritorio." },
+          { titulo: "Mandar sin tarjeta", texto: "un paquete sin nombre se confunde con los otros diez de la semana. Dos líneas personales cambian cómo se recibe." },
+          { titulo: "Olvidar a tu propio equipo", texto: "regalar a clientes y no a quien los atiende manda un mensaje que se nota todo el año siguiente." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué regalar a los clientes en Navidad?",
+        a: "Algo que se use a diario después de las fiestas, con la marca discreta y una tarjeta personal: una taza, un tomatodo o una libreta de buena calidad para la mayoría, y un regalo mejor, entregado en mano, para los clientes que más pesan. Lo que se come o se bebe gusta, pero se termina en diciembre.",
+      },
+      {
+        q: "¿Todavía estoy a tiempo si pido en noviembre?",
+        a: "Sí, si eliges entre lo que el proveedor ya tiene en stock y lo personalizas con grabado, tampografía, sublimación o impresión. Lo que ya no conviene es importar a pedido o fabricar empaques a medida. Decide la lista y el presupuesto de inmediato y aprueba el arte el mismo día que te lo envían.",
+      },
+      {
+        q: "¿Cuánto gastar por regalo corporativo?",
+        a: "Depende de a quién se lo das. Lo más eficiente es repartir el presupuesto en dos niveles: pocos regalos buenos para los clientes clave y uno sencillo y útil para el resto. Como referencia, en octubre de 2026 una taza corporativa partía de S/4.90 por unidad con un mínimo de 50, y un lapicero personalizado de S/0.60 con un mínimo de 100.",
+      },
+      {
+        q: "¿Los regalos a clientes se pueden deducir del Impuesto a la Renta?",
+        a: "En general sí, como gastos de representación, hasta el 0.5% de los ingresos brutos del año y con un tope de 40 UIT, siempre que puedas demostrar a quién se entregaron. Los artículos con tu marca repartidos en volumen pueden calificar como publicidad. Confírmalo con tu contador antes de comprar.",
+      },
+      {
+        q: "¿Conviene regalar canastas navideñas a los clientes?",
+        a: "Son una tradición y se agradecen, sobre todo si se comparten en la oficina. Su límite es que se terminan en las fiestas. Si quieres que el regalo te recuerde el resto del año, acompaña la canasta con un objeto de uso diario con tu marca.",
+      },
+    ],
+    cierre:
+      "En Suggestion producimos regalos corporativos con tu marca para clientes y equipo, y coordinamos contigo la entrega para que lleguen antes de que cierre el año.",
+    moneyPage: { label: "Merchandising y regalos corporativos", href: "/servicios/merchandising" },
+    relacionados: ["merchandising-corporativo-que-regalar", "polos-personalizados-para-empresa"],
   },
   {
     slug: "material-pop-punto-de-venta",
@@ -5324,7 +5455,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion el remarketing se arma por audiencia y con tope de frecuencia, para que recuerde sin perseguir.",
-    moneyPage: { label: "Agencia de Google Ads y Meta Ads", href: "/servicios/publicidad-digital" },
+    moneyPage: { label: "Agencia de Google Ads", href: "/servicios/publicidad-digital" },
     relacionados: ["cuanto-invertir-en-ads-peru", "cpl-vs-roas", "que-es-un-lead"],
   },
   {

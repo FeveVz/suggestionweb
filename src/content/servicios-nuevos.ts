@@ -410,7 +410,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     lecturas: [
       { label: "Marketing automotriz: ejemplos que funcionan", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
-      { label: "Merchandising corporativo: qué regalar", href: "/blog/imprenta-btl/merchandising-corporativo-que-regalar" },
+      { label: "Regalos corporativos de Navidad", href: "/blog/imprenta-btl/regalos-corporativos-de-navidad" },
     ],
     proof: "Autoniza: 8 autos vendidos en 2 eventos · un relanzamiento de tienda que cubrieron ocho canales de prensa · 22 activaciones documentadas con fotos propias.",
     metaTitle: "Eventos Corporativos y de Fin de Año en Ica | Suggestion",

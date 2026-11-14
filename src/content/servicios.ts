@@ -2403,6 +2403,7 @@ const SERVICIOS_BASE: Servicio[] = [
     ],
     slug: "merchandising",
     lecturas: [
+      { label: "Regalos corporativos de Navidad", href: "/blog/imprenta-btl/regalos-corporativos-de-navidad" },
       { label: "Merchandising corporativo: qué regalar", href: "/blog/imprenta-btl/merchandising-corporativo-que-regalar" },
       { label: "Polos personalizados para empresa", href: "/blog/imprenta-btl/polos-personalizados-para-empresa" },
     ],
