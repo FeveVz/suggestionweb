@@ -2369,11 +2369,10 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Impresiones por tiraje corto o largo",
         parrafo:
-          "No hay pedido demasiado pequeño. Una caja de tarjetas, cincuenta volantes para una activación del sábado o el catálogo completo de temporada: la diferencia está en la máquina que conviene, no en si te atendemos o no. Por debajo de unos cientos de ejemplares la impresión digital sale más barata y se entrega antes, porque no hay que preparar planchas. A partir de ahí el offset empieza a compensar y el costo por unidad baja cuanto más subes. Si no sabes en qué punto está tu pedido, dinos cuántos necesitas y te decimos cuál de las dos te conviene —incluso cuando la respuesta es la que factura menos.",
+          "Lo que cambia de un pedido a otro es la máquina que conviene. Por debajo de unos cientos de ejemplares la impresión digital sale más barata y se entrega antes, porque no hay que preparar planchas. A partir de ahí el offset empieza a compensar y el costo por unidad baja cuanto más subes. Si no sabes en qué punto está tu pedido, dinos cuántos necesitas y te decimos cuál de las dos te conviene —incluso cuando la respuesta es la que factura menos.",
         bullets: [
-          { titulo: "Tirajes cortos", texto: "digital: entrega rápida, sin costo de arranque, ideal para pruebas, personalización o pedidos de última hora." },
+          { titulo: "Tirajes cortos", texto: "digital: sin costo de arranque, ideal para pruebas y piezas personalizadas." },
           { titulo: "Tirajes largos", texto: "offset: el costo por unidad cae con el volumen y el color se mantiene idéntico de la primera hoja a la última." },
-          { titulo: "Reimpresiones", texto: "guardamos el archivo aprobado, así que repetir un pedido es confirmar la cantidad y nada más." },
         ],
       },
       {
@@ -2413,7 +2412,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Dónde entregamos",
         parrafo:
-          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos la entrega, o el recojo si lo acordamos antes, el mismo día en que el pedido está listo. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización, no después.",
+          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos la entrega, o el recojo si lo acordamos antes. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización, no después.",
       },
     ],
     incluye: [
@@ -2460,7 +2459,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Hay una cantidad mínima para imprimir?",
-        a: "No. Imprimimos desde una unidad en digital. Lo que cambia con la cantidad es la técnica que conviene: digital para tirajes cortos, offset cuando el volumen hace que baje el costo por unidad.",
+        a: "Depende del producto y de la técnica. Con la cantidad cambia la técnica que conviene: digital para tirajes cortos, offset cuando el volumen hace que baje el costo por unidad. Al cotizar te decimos el mínimo de cada opción.",
       },
       {
         q: "¿Cuánto dura una gigantografía en exterior?",
