@@ -523,6 +523,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Consultoría de marketing: diagnóstico, estrategia y detección de fugas para que tu negocio venda más. Agenda tu sesión de diagnóstico hoy.",
     h1: "Consultoría de marketing digital que ordena tu crecimiento",
     hero: "Invertir más en marketing sin estrategia es acelerar en la dirección equivocada. Primero ordenamos: dónde estás, a dónde vas y qué te está frenando. Después, ejecutas con foco.",
+    enCorto: [
+      "La consultoría ordena antes de invertir: dónde estás, a dónde vas y qué te está frenando, con un plan atado a metas de venta.",
+      "Hay tres formatos: Diagnóstico por S/1,500 en pago único, Plan Completo por S/3,500 con 2 meses de seguimiento y Retainer de S/2,000 al mes con un consultor dedicado.",
+      "Una consultoría puntual dura de 2 a 4 horas; un proyecto completo de auditoría y plan estratégico, de 2 a 4 semanas.",
+      "Para empezar necesitamos acceso a tus cuentas de marketing, a la analítica y a tus datos de ventas.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "consultoría de marketing",
     secciones: [
@@ -704,6 +710,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Agencia de marketing digital para empresas y pymes en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
     h1: "Marketing digital para empresas que genera ventas, no vanidad",
     hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el funnel conectado.",
+    enCorto: [
+      "Una sola estrategia con todo el embudo conectado, medida en leads, citas y cierres, no en likes.",
+      "Planes mensuales: Starter S/1,500 con 2 redes y 8 publicaciones, Pro S/2,500 con 4 redes, 15 publicaciones y una campaña, y Enterprise S/4,500 con redes ilimitadas, varias campañas y SEO avanzado.",
+      "La pauta puede traer leads en días; el posicionamiento y la marca, en meses.",
+      "No hace falta contratar todo junto: se empieza por lo esencial y se escala con resultados.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "agencia de marketing digital",
     proof:
@@ -768,7 +780,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánto cuesta?",
-        a: "Depende de tus objetivos y tu mercado. En la llamada de diagnóstico te damos un rango honesto, sin inflar.",
+        a: "Los planes mensuales van de S/1,500 a S/4,500 según canales, publicaciones y campañas, y la inversión en anuncios se paga aparte. En la consultoría cero te decimos cuál encaja con tu objetivo, sin inflar.",
       },
       {
         q: "¿En cuánto tiempo veo resultados?",
@@ -807,6 +819,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Agencia de Google Ads en Perú: campañas de búsqueda, display y YouTube medidas en leads y ventas, no en clics. Aparece cuando tu cliente te busca. Consultoría gratis.",
     h1: "Agencia de Google Ads: campañas que se miden en ventas",
     hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas con un solo norte: que cada sol invertido vuelva en leads y ventas, no en clics que no cierran.",
+    enCorto: [
+      "Google Ads te muestra a quien ya está buscando lo que vendes, en la Búsqueda de Google, en Display y en YouTube.",
+      "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas.",
+      "Medimos hasta la venta, con costo por lead y ROAS, no por clics.",
+      "Si te buscan por nombre o por servicio, empieza por Google; si primero tienen que conocerte, por Meta.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "agencia de google ads",
     // Barra de prueba propia: la de por defecto abre con el caso de Ceinys de
@@ -1050,6 +1068,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Consultoría gratis.",
     h1: "Diseño de páginas web que convierten visitas en clientes",
     hero: "Una web bonita que no vende es un gasto. Diseñamos páginas web rápidas, claras y pensadas para una sola cosa: que el visitante haga lo que tú necesitas —comprar, escribir o agendar.",
+    enCorto: [
+      "Tres formatos por proyecto: landing page por S/1,500, web corporativa por S/4,000 y tienda virtual por S/8,000.",
+      "Si vendes un producto o cierras por WhatsApp, muchas veces basta una landing page: una sola página pensada para una sola acción.",
+      "Una landing está en pocos días; una web corporativa o una tienda, en algunas semanas.",
+      "Después del lanzamiento hay planes de mantenimiento mensual: actualizaciones, copias de seguridad y soporte.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "diseño de páginas web",
     secciones: [
@@ -1128,7 +1152,7 @@ const SERVICIOS_BASE: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto cuesta una página web?",
-        a: "Depende del tipo y el alcance; en la llamada te damos un rango honesto.",
+        a: "La landing page cuesta S/1,500, la web corporativa S/4,000 y la tienda virtual S/8,000, por proyecto. El precio final depende del alcance y te lo confirmamos en la consultoría cero.",
       },
       {
         q: "¿En cuánto tiempo está lista?",
@@ -1160,6 +1184,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Agencia SEO en Perú: posicionamiento web que te hace visible cuando tu cliente busca. SEO técnico y de contenidos. Agenda tu auditoría gratuita.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
     hero: "El mejor lugar para esconder un cadáver es la segunda página de Google. Te llevamos a la primera, justo cuando tu cliente busca lo que ofreces —sin pagar por cada clic.",
+    enCorto: [
+      "Planes mensuales: Básico S/1,200 con 5 palabras clave, Profesional S/2,500 con 15 y contenido mensual, y Enterprise S/5,000 sin límite de palabras clave.",
+      "Los primeros movimientos se ven en semanas y los resultados sólidos en meses. Nadie honesto puede garantizar el primer puesto.",
+      "Empezamos por una auditoría: qué tienes indexado de verdad, qué te frena en lo técnico y para qué búsquedas te encuentran hoy.",
+      "Si tu equipo ya escribe y edita la web, también trabajamos como consultor SEO: auditamos, priorizamos y revisamos lo que publica.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "posicionamiento web",
     secciones: [
@@ -1298,6 +1328,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "CRM para ventas y WhatsApp: captura cada lead, automatiza el seguimiento y califica solo. Con el campo de origen bien puesto desde el primer contacto.",
     h1: "CRM para pequeñas empresas que no deja caer ningún lead",
     hero: "¿Cuántos leads se te enfrían por no responder a tiempo? Automatizamos la captura, el seguimiento y la calificación para que ningún cliente potencial se pierda —y tu equipo cierre más.",
+    enCorto: [
+      "La implementación es en pago único: Starter S/1,800, Business S/3,500 con integración de WhatsApp y correo, y Enterprise S/6,500 con automatizaciones multicanal y lead scoring.",
+      "La campaña queda guardada en cada lead desde el primer contacto, para saber qué publicidad trajo cada venta.",
+      "Un proyecto típico de CRM con automatizaciones básicas toma de 4 a 8 semanas.",
+      "Un CRM ordena y recuerda, pero no vende: si nadie contesta los leads, solo documenta cuántos se enfriaron.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "crm para pequeñas empresas",
     secciones: [
@@ -1408,6 +1444,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Branding estratégico que deja huella y vende: naming, logotipo, manual de marca e identidad visual. Construyamos tu marca. Consultoría gratis.",
     h1: "Branding que deja huella y vende",
     hero: "Una marca no es un logo bonito. Es la razón por la que alguien te elige y paga más. Construimos branding estratégico que se queda en la mente de tu cliente y empuja la decisión de compra.",
+    enCorto: [
+      "Tres alcances en pago único: Starter S/1,800 con logotipo, paleta, tipografías y manual básico; Business S/3,500 con sistema visual completo y aplicaciones; Enterprise S/6,500 con la estrategia de marca completa.",
+      "Primero definimos qué debe sentir y pensar tu cliente; el diseño viene después.",
+      "Un proyecto completo de identidad toma de 4 a 8 semanas.",
+      "Entregamos archivos vectoriales y en PNG y JPG de todas las versiones, el manual de marca y una sesión de presentación.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "branding",
     secciones: [
@@ -1479,7 +1521,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánto cuesta un manual de marca?",
-        a: "Depende del alcance. En la llamada definimos qué necesitas realmente, sin venderte de más.",
+        a: "El manual básico va incluido desde el plan Starter, de S/1,800 en pago único; Business (S/3,500) y Enterprise (S/6,500) suman el sistema visual completo y la estrategia de marca. En la consultoría cero definimos qué necesitas realmente, sin venderte de más.",
       },
       {
         q: "¿Cuánto tiempo toma un proyecto de branding?",
@@ -1507,6 +1549,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Servicios de producción audiovisual y postproducción en Ica: spots, video sell, fotografía y drone. Productora propia. Consultoría gratis.",
     h1: "Productora audiovisual: videos corporativos que cuentan y venden",
     hero: "El video es lo que más se ve y lo que más vende —si está bien hecho. Producimos contenido audiovisual de alto impacto que cuenta tu historia y mueve a la acción.",
+    enCorto: [
+      "Planes mensuales: Starter S/1,200 con 1 jornada de grabación y 8 piezas, Business S/2,500 con 3 jornadas y 16 piezas, y Enterprise S/4,500 con 5 jornadas y 31 piezas.",
+      "De un solo rodaje salen el video principal, los cortes verticales para redes, fotos y material de recurso para meses.",
+      "Hacemos videos corporativos, spots, fotografía publicitaria y postproducción, en Ica y en todo el país.",
+      "Si ya tienes material grabado, podemos encargarnos solo de la postproducción.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "producción audiovisual",
     secciones: [
@@ -1622,6 +1670,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "BTL y activaciones que conectan: marketing experiencial, sampling y presencia en punto clave con captación de datos. Agenda tu activación hoy.",
     h1: "Activaciones BTL que conectan y captan datos",
     hero: "Lo digital atrae; lo presencial convence. Diseñamos activaciones que hacen vivir tu marca y, a la vez, capturan datos para seguir vendiendo después del evento.",
+    enCorto: [
+      "Activaciones de 3 horas: Starter S/1,050, Business S/1,800 y Enterprise S/2,400, con personal de animación, supervisor y captación de leads.",
+      "Antes de montar definimos qué cuenta como resultado: muestras entregadas, datos capturados, ventas del día o citas.",
+      "Una activación sin datos es una fiesta: preparamos la captura y damos seguimiento en las 48 horas siguientes.",
+      "Operamos desde Ica y hacemos activaciones y roadshows en Lima y otras regiones.",
+    ],
     cta: "Agenda tu consultoría cero",
     keyword: "activaciones btl",
     secciones: [
@@ -1763,6 +1817,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Publicidad móvil en Ica: bicivallas, publicidad rodante y volanteo con captura de datos. Tu marca donde está tu cliente. Pide tu cotización.",
     h1: "Publicidad móvil y bicivallas: tu marca en movimiento",
     hero: "La publicidad que no espera a que te encuentren: va a donde está tu cliente. Llevamos tu marca por las calles de Ica con bicivallas, rotulación y volanteo.",
+    enCorto: [
+      "Bicivalla luminosa desde S/120 por jornada de 4 horas, S/190 con una bicipluma y S/250 con dos, con contrato mínimo de 15 días.",
+      "La ruta se diseña según dónde está tu público y a qué hora, no según dónde hay más gente.",
+      "Circula a velocidad de peatón, así que admite más texto que un panel de avenida, y en su versión luminosa se ve de noche.",
+      "Rinde más junto con volanteo con captura de datos: la bicivalla da el reconocimiento y el volanteo convierte el interés en contactos.",
+    ],
     cta: "Pide tu cotización",
     keyword: "publicidad móvil ica",
     schema: "localbusiness",
@@ -1899,6 +1959,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Paneles publicitarios y estructuras de alto impacto: paneles LED, tótems, toldos, stands y módulos para tu marca. Diseño, fabricación e instalación. Cotiza hoy.",
     h1: "Paneles publicitarios y estructuras de alto impacto",
     hero: "Presencia física que no se ignora. Diseñamos y fabricamos las estructuras que ponen tu marca en grande, donde tu cliente la ve sí o sí.",
+    enCorto: [
+      "Diseñamos, fabricamos e instalamos paneles, paneles LED, tótems, letreros, módulos y stands para ferias, y toldos.",
+      "No hay precio fijo: cotizamos según la estructura, la medida, el lugar y si necesitas diseño e instalación.",
+      "En vía pública suele hacer falta autorización municipal, y las condiciones cambian por distrito: lo verificamos contigo antes de producir.",
+      "Una idea por pieza: quien pasa en auto tiene un par de segundos para leerla.",
+    ],
     cta: "Pide tu cotización",
     keyword: "paneles publicitarios",
     especificaciones: ["Qué estructura necesito", "Medida", "Dónde va a ir", "Si necesito diseño e instalación", "Fecha"],
@@ -2073,6 +2139,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Material POP que destaca en el punto de venta: exhibidores, displays y letras volumétricas. Diseño y producción a medida. Pide tu cotización.",
     h1: "Material POP que destaca en el punto de venta",
     hero: "La decisión de compra se gana en el último metro. Diseñamos y producimos material POP que hace que tu producto sea el primero que el cliente ve —y elige.",
+    enCorto: [
+      "Displays, exhibidores, letras volumétricas y cartelería para el punto de venta, diseñados según el espacio real de la tienda.",
+      "No hay precio fijo: cotizamos según la pieza, la medida, el material y la cantidad.",
+      "El material se elige por cuánto tiene que durar: cartón corrugado para semanas, PVC y foam para meses, acrílico, metal o madera para años.",
+      "Coordinamos la instalación en tienda y el envío a otras regiones.",
+    ],
     cta: "Pide tu cotización",
     keyword: "material pop",
     especificaciones: ["Qué pieza necesito", "Medida", "Material (si lo sabes)", "Cantidad", "Fecha y lugar de entrega"],
@@ -2238,6 +2310,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Imprenta en Ica por pedido: gigantografías, banners, tarjetas y más. Cotizamos por WhatsApp según medida, material y cantidad. Recojo solo coordinado.",
     h1: "Imprenta en Ica: impresión por pedido para tu negocio",
     hero: "Imprimimos desde una tarjeta hasta una gigantografía. Cuéntanos qué necesitas, en qué medida, material y cantidad, y te cotizamos por WhatsApp. Trabajamos por pedido: no atendemos al paso y cualquier visita se coordina antes.",
+    enCorto: [
+      "Imprimimos por pedido: tarjetas, volantes, banners, vinil, etiquetas y gigantografías.",
+      "No hay lista de precios fija: cotizamos por WhatsApp con lo que vas a imprimir, la medida, el material, la cantidad y la fecha.",
+      "No atendemos al paso: la entrega o el recojo se coordinan antes.",
+      "Para tirajes cortos conviene la impresión digital; para tirajes largos, el offset, porque el costo por unidad baja con el volumen.",
+    ],
     cta: "Cotiza tu impresión",
     keyword: "imprenta ica",
     schema: "localbusiness",
@@ -2423,6 +2501,12 @@ const SERVICIOS_BASE: Servicio[] = [
       "Merchandising que refuerza tu marca: llaveros, gorras, tazas y regalos corporativos personalizados. Pide tu cotización por WhatsApp hoy.",
     h1: "Merchandising y regalos corporativos que refuerzan tu marca",
     hero: "Tu marca en las manos de tus clientes, todos los días. Diseñamos y producimos merchandising publicitario que la gente sí quiere usar —y que mantiene tu nombre presente.",
+    enCorto: [
+      "Llaveros, gorras, tazas, polos y regalos corporativos con tu marca, para clientes, eventos o tu propio equipo.",
+      "No hay precio fijo: cotizamos según el producto, la cantidad y cómo va la marca.",
+      "La cantidad mínima cambia según el producto y la técnica: en la cotización te decimos el mínimo de cada opción.",
+      "Aprobamos el arte antes de producir y trabajamos con fecha de entrega comprometida desde la cotización.",
+    ],
     cta: "Pide tu cotización",
     keyword: "merchandising publicitario",
     especificaciones: ["Qué producto necesito", "Cantidad", "Cómo va la marca (si lo sabes)", "Para qué es", "Fecha y lugar de entrega"],
@@ -2515,12 +2599,7 @@ const SERVICIOS_BASE: Servicio[] = [
         q: "¿Cuánto cuesta el merchandising?",
         a: "No hay un precio fijo: se cotiza según tu necesidad, porque depende del producto, la cantidad y la personalización. Pásanos esos datos y te cotizamos por WhatsApp.",
       },
-      { q: "¿Cuál es el pedido mínimo?", a: "Depende del producto; te lo confirmamos al cotizar." },
       { q: "¿Ustedes hacen el diseño?", a: "Sí, podemos diseñar la pieza o trabajar con tu arte." },
-      {
-        q: "¿Cuánto demora la entrega?",
-        a: "Según cantidad y producto; siempre con fecha comprometida.",
-      },
       {
         q: "¿Pueden crear productos personalizados?",
         a: "Sí: desarrollamos productos a medida desde cero si ningún catálogo cubre tu necesidad.",
