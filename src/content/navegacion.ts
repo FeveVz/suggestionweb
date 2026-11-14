@@ -15,7 +15,7 @@ export type ServiceCategory = {
   children: NavLink[]; // servicios hijos (href absoluto)
 };
 
-/** 5 categorías → 16 servicios (slugs exactos del doc 18). */
+/** 5 categorías → 22 servicios (16 del doc 18 + 6 del keyword research de nov-2026). */
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     label: "Estrategia y datos",
@@ -30,7 +30,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     slug: "marketing-digital-publicidad",
     children: [
       { label: "Marketing Digital", href: "/servicios/marketing-digital" },
-      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "Google Ads", href: "/servicios/publicidad-digital" },
+      { label: "Meta Ads", href: "/servicios/meta-ads" },
       { label: "Redes Sociales", href: "/servicios/redes-sociales" },
     ],
   },
@@ -39,8 +40,10 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     slug: "web-seo",
     children: [
       { label: "Desarrollo Web", href: "/servicios/desarrollo-web" },
+      { label: "Tienda Virtual", href: "/servicios/tienda-virtual" },
       { label: "SEO", href: "/servicios/seo" },
       { label: "CRM y Automatización", href: "/servicios/crm-automatizacion" },
+      { label: "Agente de IA para WhatsApp", href: "/servicios/chatbot-whatsapp" },
     ],
   },
   {
@@ -56,10 +59,13 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     slug: "btl-medios",
     children: [
       { label: "BTL y Activaciones", href: "/servicios/btl" },
+      { label: "Eventos Corporativos", href: "/servicios/eventos-corporativos" },
       { label: "Publicidad Móvil", href: "/servicios/publicidad-movil" },
       { label: "Estructuras Publicitarias", href: "/servicios/estructuras-publicitarias" },
+      { label: "Letreros Luminosos", href: "/servicios/letreros-luminosos" },
       { label: "Material POP", href: "/servicios/material-pop" },
       { label: "Imprenta Corporativa", href: "/servicios/imprenta" },
+      { label: "Gigantografías", href: "/servicios/gigantografias" },
       { label: "Merchandising", href: "/servicios/merchandising" },
     ],
   },

@@ -5,6 +5,7 @@
  */
 
 import type { Servicio, Seccion, Faq } from "./types";
+import { SERVICIOS_NUEVOS } from "./servicios-nuevos";
 
 /** Pilar /servicios (doc 09 §A0). Página propia, no [slug]. */
 export const SERVICIOS_PILAR = {
@@ -505,7 +506,7 @@ const CATEGORIAS_RAW: Servicio[] = [
  */
 const CATEGORIAS: Servicio[] = CATEGORIAS_RAW;
 
-const SERVICIOS_LIST: Servicio[] = [
+const SERVICIOS_BASE: Servicio[] = [
   // ---------- Estrategia y datos ----------
   {
     slug: "consultoria",
@@ -517,10 +518,10 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Consultoría",
-    metaTitle: "Consultoría de Marketing en Ica y Perú | Suggestion",
+    metaTitle: "Consultoría de Marketing Digital para Empresas | Suggestion",
     metaDescription:
       "Consultoría de marketing: diagnóstico, estrategia y detección de fugas para que tu negocio venda más. Agenda tu sesión de diagnóstico hoy.",
-    h1: "Consultoría de marketing que ordena tu crecimiento",
+    h1: "Consultoría de marketing digital que ordena tu crecimiento",
     hero: "Invertir más en marketing sin estrategia es acelerar en la dirección equivocada. Primero ordenamos: dónde estás, a dónde vas y qué te está frenando. Después, ejecutas con foco.",
     cta: "Agenda tu consultoría cero",
     keyword: "consultoría de marketing",
@@ -606,10 +607,10 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "estrategia",
     nombre: "Investigación de Mercado",
-    metaTitle: "Investigación de Mercado en Ica y Perú | Suggestion",
+    metaTitle: "Empresa de Investigación de Mercados en Perú | Suggestion",
     metaDescription:
       "Investigación de mercado con datos e insights para decidir con certeza: demanda, competencia y consumidor. Pide tu estudio. Consultoría gratis.",
-    h1: "Investigación de mercado que guía tus decisiones",
+    h1: "Investigación de mercados que guía tus decisiones",
     hero: "Decidir por intuición es caro. Te damos datos e insights reales sobre tu demanda, tu competencia y tu consumidor, para que inviertas donde sí hay oportunidad.",
     enCorto: [
       "Un estudio de mercado responde una pregunta de negocio concreta: si hay demanda, a qué precio, qué hace tu competencia y qué quiere tu cliente.",
@@ -695,10 +696,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Marketing Digital",
-    metaTitle: "Agencia de Marketing Digital en Perú | Suggestion",
+    // Dueña de «agencia de marketing digital» (la home va por «agencia de
+    // marketing en Ica»). «Para empresas» suma la búsqueda «marketing digital
+    // para empresas» sin quitarle la principal (keyword research 2026-11-14).
+    metaTitle: "Agencia de Marketing Digital para Empresas en Perú | Suggestion",
     metaDescription:
-      "Agencia de marketing digital en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
-    h1: "Marketing digital integral que genera ventas, no vanidad",
+      "Agencia de marketing digital para empresas y pymes en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
+    h1: "Marketing digital para empresas que genera ventas, no vanidad",
     hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el funnel conectado.",
     cta: "Agenda tu consultoría cero",
     keyword: "agencia de marketing digital",
@@ -795,12 +799,14 @@ const SERVICIOS_LIST: Servicio[] = [
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     categoriaSlug: "marketing-digital-publicidad",
-    nombre: "Publicidad Digital",
-    metaTitle: "Agencia de Google Ads y Meta Ads en Perú | Suggestion",
+    // Desde el 2026-11-14 esta URL es la de Google Ads; Meta Ads tiene página
+    // propia (/servicios/meta-ads). La URL se mantiene para no perder lo ganado.
+    nombre: "Google Ads",
+    metaTitle: "Agencia de Google Ads en Perú | Suggestion",
     metaDescription:
-      "Publicidad digital con ROI medible: campañas de Google Ads y Meta Ads orientadas a leads y ventas, no a alcance. Consultoría gratis.",
-    h1: "Publicidad digital con ROI, no con likes",
-    hero: "Pauta que se paga sola. Gestionamos tus campañas en Google y Meta con un solo norte: que cada sol invertido vuelva en leads y ventas, no en alcance que no cierra.",
+      "Agencia de Google Ads en Perú: campañas de búsqueda, display y YouTube medidas en leads y ventas, no en clics. Aparece cuando tu cliente te busca. Consultoría gratis.",
+    h1: "Agencia de Google Ads: campañas que se miden en ventas",
+    hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas con un solo norte: que cada sol invertido vuelva en leads y ventas, no en clics que no cierran.",
     cta: "Agenda tu consultoría cero",
     keyword: "agencia de google ads",
     // Barra de prueba propia: la de por defecto abre con el caso de Ceinys de
@@ -813,7 +819,7 @@ const SERVICIOS_LIST: Servicio[] = [
       {
         h2: "Un resultado medido, no una promesa",
         parrafo:
-          "Del 26 de agosto al 29 de septiembre de 2026, Grupo Inmobiliario Ceinys, venta de lotes. Es el último reporte que publicamos con autorización del cliente, y está entero —con la resta de lo que no nos corresponde— en la página del caso.",
+          "Del 26 de agosto al 29 de septiembre de 2026, Grupo Inmobiliario Ceinys, venta de lotes. Esa campaña fue en Meta Ads; en Google Ads medimos igual, hasta la venta. Es el último reporte que publicamos con autorización del cliente, y está entero —con la resta de lo que no nos corresponde— en la página del caso.",
         tabla: {
           cabeceras: ["", ""],
           filas: [
@@ -829,21 +835,20 @@ const SERVICIOS_LIST: Servicio[] = [
         parrafo: "Aparece justo cuando tu cliente está buscando lo que vendes.",
         sub: [
           {
-            h3: "Anuncios en Búsqueda y Display",
+            h3: "Anuncios en Búsqueda",
             texto:
-              "Captura la intención en Búsqueda y recupera al indeciso en Display.",
+              "Captura la intención de quien escribe tu servicio en Google: es el clic que más vale, porque esa persona ya quiere comprar.",
+          },
+          {
+            h3: "Display y YouTube",
+            texto: "Recupera al indeciso que ya te visitó y te mantiene presente mientras decide.",
           },
         ],
       },
       {
-        h2: "Publicidad en redes sociales (Meta Ads)",
-        parrafo: "Generamos demanda donde tu cliente pasa el día.",
-        sub: [
-          {
-            h3: "Anuncios en Instagram y Facebook",
-            texto: "Creatividad y segmentación que convierten scroll en leads.",
-          },
-        ],
+        h2: "Google Ads o Meta Ads: cuál te conviene",
+        parrafo:
+          "Google recoge la demanda que ya existe: aparece cuando alguien busca. Meta la crea: interrumpe con una oferta a quien todavía no buscaba. Si te buscan por nombre o por servicio, empieza por Google. Si tienes que darte a conocer o vendes algo que se decide mirando, empieza por Meta. La mayoría de negocios termina usando los dos; lo que cambia es el reparto. Para Facebook e Instagram tenemos una página propia: Meta Ads.",
       },
       {
         h2: "Gestión y optimización de campañas",
@@ -892,7 +897,7 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Sí: diseño de las piezas (imágenes, video corto y copy). Para producción audiovisual completa, está nuestro servicio aparte.",
       },
     ],
-    enlazaA: ["marketing-digital", "redes-sociales", "crm-automatizacion"],
+    enlazaA: ["meta-ads", "marketing-digital", "crm-automatizacion"],
     cierre: { h2: "Pongamos tu inversión a vender", cta: "Agenda tu consultoría cero" },
   },
   {
@@ -900,10 +905,10 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Redes Sociales",
-    metaTitle: "Gestión de Redes Sociales para Empresas | Suggestion",
+    metaTitle: "Community Manager y Gestión de Redes Sociales | Suggestion",
     metaDescription:
-      "Gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Consultoría gratis.",
-    h1: "Redes que traen clientes, no solo seguidores",
+      "Community manager y gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Consultoría gratis.",
+    h1: "Community manager para empresas: redes que traen clientes",
     hero: "Tus redes no son un mural de fotos bonitas: son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
     enCorto: [
       "La gestión de redes cuesta S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias.",
@@ -912,7 +917,7 @@ const SERVICIOS_LIST: Servicio[] = [
       "Si el presupuesto obliga a elegir: primero pauta con una oferta clara y alguien que responda rápido, y el orgánico después.",
     ],
     cta: "Agenda tu consultoría cero",
-    keyword: "gestión de redes sociales",
+    keyword: "community manager",
     secciones: [
       {
         h2: "Community manager profesional",
@@ -1036,7 +1041,7 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "Desarrollo Web",
-    metaTitle: "Diseño de Páginas Web Profesionales | Suggestion",
+    metaTitle: "Diseño de Páginas Web para Empresas en Perú | Suggestion",
     metaDescription:
       "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Consultoría gratis.",
     h1: "Diseño de páginas web que convierten visitas en clientes",
@@ -1072,6 +1077,11 @@ const SERVICIOS_LIST: Servicio[] = [
               "Carga rápida y bases de SEO desde el día uno (Core Web Vitals), porque una web lenta pierde clientes y posiciones.",
           },
         ],
+      },
+      {
+        h2: "Landing page: cuando basta una sola página",
+        parrafo:
+          "Si vendes un producto o un servicio, o cierras por WhatsApp, muchas veces no necesitas una web completa: necesitas una landing page, una sola página pensada para que el visitante haga una cosa. Es la que mejor rinde con publicidad, porque no distrae con menús ni secciones. Nuestro plan Landing cuesta S/1,500 por proyecto; si después necesitas más, la web crece desde ahí. Y si vendes muchos productos con pago en línea, lo tuyo es una tienda virtual.",
       },
       {
         h2: "Tipos de web que desarrollamos",
@@ -1129,7 +1139,7 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Planes de mantenimiento mensual: actualizaciones, backups, soporte y mejoras continuas.",
       },
     ],
-    enlazaA: ["seo", "crm-automatizacion", "publicidad-digital"],
+    enlazaA: ["tienda-virtual", "seo", "crm-automatizacion"],
     cierre: { h2: "Tu web debería traerte clientes", cta: "Agenda tu consultoría cero" },
   },
   {
@@ -1164,6 +1174,11 @@ const SERVICIOS_LIST: Servicio[] = [
             texto: "Optimizamos para cómo busca tu cliente en Perú, no para un manual genérico.",
           },
         ],
+      },
+      {
+        h2: "Consultor SEO para tu equipo",
+        parrafo:
+          "No todas las empresas necesitan que les hagan el SEO: algunas tienen quien escriba y quien toque la web, y lo que les falta es criterio. Para ellas trabajamos como consultor SEO: auditamos, priorizamos qué hacer primero y revisamos lo que tu equipo publica, sin que tengas que tercerizar la ejecución.",
       },
       {
         h2: "Consultoría y auditoría SEO",
@@ -1270,13 +1285,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "CRM y Automatización",
-    metaTitle: "CRM para Ventas y WhatsApp | Suggestion",
+    metaTitle: "CRM para Pequeñas Empresas y WhatsApp | Suggestion",
     metaDescription:
       "CRM para ventas y WhatsApp: captura cada lead, automatiza el seguimiento y califica solo. Con el campo de origen bien puesto desde el primer contacto.",
-    h1: "CRM y automatización que escala tus ventas",
+    h1: "CRM para pequeñas empresas que no deja caer ningún lead",
     hero: "¿Cuántos leads se te enfrían por no responder a tiempo? Automatizamos la captura, el seguimiento y la calificación para que ningún cliente potencial se pierda —y tu equipo cierre más.",
     cta: "Agenda tu consultoría cero",
-    keyword: "crm para ventas",
+    keyword: "crm para pequeñas empresas",
     secciones: [
       {
         h2: "Automatización de WhatsApp y chatbots",
@@ -1366,7 +1381,7 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Un proyecto típico de CRM + automatizaciones básicas toma de 4 a 8 semanas; los complejos, algo más.",
       },
     ],
-    enlazaA: ["desarrollo-web", "publicidad-digital", "redes-sociales"],
+    enlazaA: ["chatbot-whatsapp", "desarrollo-web", "publicidad-digital"],
     cierre: { h2: "Automatiza y vende más", cta: "Agenda tu consultoría cero" },
   },
   // ---------- Marca y contenido ----------
@@ -1479,14 +1494,19 @@ const SERVICIOS_LIST: Servicio[] = [
     // producción audiovisual" (130 impresiones en 52 días), pero ni el título ni
     // la descripción usaban esas palabras. Ojo: en posición 53-73 esto no trae
     // clics por sí solo; sirve para cuando el contenido haga subir la página.
-    metaTitle: "Productora Audiovisual en Ica | Postproducción | Suggestion",
+    metaTitle: "Productora Audiovisual en Ica y Videos Corporativos | Suggestion",
     metaDescription:
       "Servicios de producción audiovisual y postproducción en Ica: spots, video sell, fotografía y drone. Productora propia. Consultoría gratis.",
-    h1: "Producción audiovisual que cuenta y vende",
+    h1: "Productora audiovisual: videos corporativos que cuentan y venden",
     hero: "El video es lo que más se ve y lo que más vende —si está bien hecho. Producimos contenido audiovisual de alto impacto que cuenta tu historia y mueve a la acción.",
     cta: "Agenda tu consultoría cero",
     keyword: "producción audiovisual",
     secciones: [
+      {
+        h2: "Videos corporativos para empresas",
+        parrafo:
+          "El video que presenta tu empresa a un cliente, a un inversionista o a tu propio equipo: quiénes son, qué hacen y por qué confiar. Lo grabamos pensando en dónde se va a ver —la web, una reunión, LinkedIn, una feria— porque de eso depende cuánto debe durar y cómo debe empezar.",
+      },
       {
         h2: "Spots publicitarios",
         parrafo:
@@ -1589,13 +1609,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "BTL y Activaciones",
-    metaTitle: "BTL y Activaciones de Marca en Ica y Perú | Suggestion",
+    metaTitle: "Activaciones BTL y Campañas BTL en Perú | Suggestion",
     metaDescription:
       "BTL y activaciones que conectan: marketing experiencial, sampling y presencia en punto clave con captación de datos. Agenda tu activación hoy.",
-    h1: "BTL y activaciones que conectan y captan",
+    h1: "Activaciones BTL que conectan y captan datos",
     hero: "Lo digital atrae; lo presencial convence. Diseñamos activaciones que hacen vivir tu marca y, a la vez, capturan datos para seguir vendiendo después del evento.",
     cta: "Agenda tu consultoría cero",
-    keyword: "btl y activaciones",
+    keyword: "activaciones btl",
     secciones: [
       {
         h2: "Marketing experiencial",
@@ -1718,7 +1738,7 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Es lo que recomendamos. La campaña digital previa llena el punto con la gente correcta —igual que en un evento automotriz— y los datos capturados en la activación alimentan después el seguimiento. Hacer las dos cosas por separado desaprovecha la mitad del trabajo.",
       },
     ],
-    enlazaA: ["publicidad-movil", "material-pop", "merchandising"],
+    enlazaA: ["eventos-corporativos", "publicidad-movil", "material-pop"],
     cierre: { h2: "Activemos tu marca en la calle", cta: "Agenda tu consultoría cero" },
   },
   {
@@ -1733,7 +1753,7 @@ const SERVICIOS_LIST: Servicio[] = [
     metaTitle: "Publicidad Móvil y Bicivallas en Ica | Suggestion",
     metaDescription:
       "Publicidad móvil en Ica: bicivallas, publicidad rodante y volanteo con captura de datos. Tu marca donde está tu cliente. Pide tu cotización.",
-    h1: "Publicidad móvil: tu marca en movimiento",
+    h1: "Publicidad móvil y bicivallas: tu marca en movimiento",
     hero: "La publicidad que no espera a que te encuentren: va a donde está tu cliente. Llevamos tu marca por las calles de Ica con bicivallas, rotulación y volanteo.",
     cta: "Pide tu cotización",
     keyword: "publicidad móvil ica",
@@ -1866,13 +1886,13 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Estructuras Publicitarias",
-    metaTitle: "Estructuras y Paneles Publicitarios en Ica | Suggestion",
+    metaTitle: "Paneles Publicitarios y Estructuras en Ica | Suggestion",
     metaDescription:
-      "Estructuras publicitarias de alto impacto: paneles, tótems, letreros y módulos para tu marca. Diseño y fabricación. Pide tu cotización hoy.",
-    h1: "Estructuras publicitarias de alto impacto",
+      "Paneles publicitarios y estructuras de alto impacto: paneles LED, tótems, toldos, stands y módulos para tu marca. Diseño, fabricación e instalación. Cotiza hoy.",
+    h1: "Paneles publicitarios y estructuras de alto impacto",
     hero: "Presencia física que no se ignora. Diseñamos y fabricamos las estructuras que ponen tu marca en grande, donde tu cliente la ve sí o sí.",
     cta: "Pide tu cotización",
-    keyword: "estructuras publicitarias",
+    keyword: "paneles publicitarios",
     especificaciones: ["Qué estructura necesito", "Medida", "Dónde va a ir", "Si necesito diseño e instalación", "Fecha"],
     secciones: [
       {
@@ -1912,9 +1932,14 @@ const SERVICIOS_LIST: Servicio[] = [
         ],
       },
       {
-        h2: "Módulos publicitarios",
+        h2: "Módulos y stands para ferias",
         parrafo:
-          "Tu punto de marca móvil para ferias, centros comerciales y activaciones.",
+          "Tu punto de marca para ferias, centros comerciales y activaciones: un stand que se ve desde el pasillo y deja espacio para atender y registrar a los visitantes.",
+      },
+      {
+        h2: "Toldos publicitarios",
+        parrafo:
+          "Sombra en la entrada, la terraza o la vitrina, con tu marca impresa. Es publicidad que además le sirve al cliente, y por eso se queda años en la fachada.",
       },
       {
         h2: "Cuántas palabras caben de verdad",
@@ -2023,7 +2048,7 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Sí: diseño, fabricación e instalación salen del mismo sitio. Eso evita el problema habitual de que la pieza llegue con medidas que no encajan en la estructura o en el espacio autorizado.",
       },
     ],
-    enlazaA: ["material-pop", "imprenta", "publicidad-movil"],
+    enlazaA: ["letreros-luminosos", "gigantografias", "eventos-corporativos"],
     cierre: { h2: "Destaca con tu estructura", cta: "Pide tu cotización" },
   },
   {
@@ -2065,7 +2090,7 @@ const SERVICIOS_LIST: Servicio[] = [
         parrafo: "Marca con cuerpo y presencia, imposible de ignorar.",
       },
       {
-        h2: "Publicidad en punto de venta",
+        h2: "Publicidad POP en el punto de venta",
         parrafo: "Todo lo que comunica y vende dentro de la tienda.",
         sub: [
           {
@@ -2368,7 +2393,7 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Sí. Atendemos toda la región —Chincha, Pisco, Nazca, Palpa y los distritos de la ciudad— con fecha de entrega comprometida, y coordinamos envíos al resto del país.",
       },
     ],
-    enlazaA: ["material-pop", "merchandising", "estructuras-publicitarias"],
+    enlazaA: ["gigantografias", "material-pop", "merchandising"],
     cierre: { h2: "Tu material listo y a tiempo", cta: "Cotiza tu impresión" },
   },
   {
@@ -2384,10 +2409,10 @@ const SERVICIOS_LIST: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Merchandising",
-    metaTitle: "Merchandising Publicitario en Ica | Suggestion",
+    metaTitle: "Merchandising y Regalos Corporativos en Ica | Suggestion",
     metaDescription:
       "Merchandising que refuerza tu marca: llaveros, gorras, tazas y regalos corporativos personalizados. Pide tu cotización por WhatsApp hoy.",
-    h1: "Merchandising que refuerza tu marca",
+    h1: "Merchandising y regalos corporativos que refuerzan tu marca",
     hero: "Tu marca en las manos de tus clientes, todos los días. Diseñamos y producimos merchandising publicitario que la gente sí quiere usar —y que mantiene tu nombre presente.",
     cta: "Pide tu cotización",
     keyword: "merchandising publicitario",
@@ -2504,12 +2529,15 @@ const SERVICIOS_LIST: Servicio[] = [
         a: "Algo liviano, útil y que no estorbe: en una feria la gente ya carga bolsas y folletos. Lo pesado o frágil se abandona en el stand. Si quieres dejar una pieza de más valor, es mejor entregarla solo a los contactos calificados en lugar de repartirla a todo el que pasa.",
       },
     ],
-    enlazaA: ["imprenta", "material-pop", "branding"],
+    enlazaA: ["imprenta", "eventos-corporativos", "branding"],
     cierre: { h2: "Tu marca en manos de tus clientes", cta: "Pide tu cotización" },
   },
 ];
 
-/** Todos los nodos de /servicios/[slug]: 5 categorías + 16 servicios. */
+/** Los 16 servicios originales más los 6 del keyword research de nov-2026 (servicios-nuevos.ts). */
+const SERVICIOS_LIST: Servicio[] = [...SERVICIOS_BASE, ...SERVICIOS_NUEVOS];
+
+/** Todos los nodos de /servicios/[slug]: 5 categorías + 22 servicios. */
 export const SERVICIOS: Servicio[] = [...CATEGORIAS, ...SERVICIOS_LIST];
 
 export const getServicio = (slug: string): Servicio | undefined =>

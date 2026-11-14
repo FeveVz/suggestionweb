@@ -262,6 +262,9 @@ export const PRECIOS: Record<string, PlanPrecio[]> = {
   ],
 };
 
+// Meta Ads es la misma gestión de pauta, contada por plataformas: mismos planes.
+PRECIOS["meta-ads"] = PRECIOS["publicidad-digital"];
+
 export const getPrecios = (slug: string): PlanPrecio[] | undefined => PRECIOS[slug];
 
 /** "S/1,500" → 1500. Devuelve null si el texto no es un importe. */

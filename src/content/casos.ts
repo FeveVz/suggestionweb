@@ -87,7 +87,7 @@ export const CASOS_DETALLE: Caso[] = [
       { titulo: "Medición contra el CRM, no contra el administrador", texto: "Meta dice cuántas conversaciones pagó. El CRM dice cuántas se convirtieron en algo. El reporte cruza las dos fuentes y manda la segunda." },
     ],
     servicios: [
-      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "Meta Ads", href: "/servicios/meta-ads" },
       { label: "CRM y Automatización", href: "/servicios/crm-automatizacion" },
     ],
     enlaces: [{ label: "Cómo medimos una campaña", href: "/metodo" }],
@@ -225,7 +225,7 @@ export const CASOS_DETALLE: Caso[] = [
       { titulo: "Medici\u00f3n contra el CRM, no contra el administrador", texto: "Meta dice cu\u00e1nto se gast\u00f3. El CRM dice en qu\u00e9 se convirti\u00f3. El reporte cruza las dos fuentes y manda la segunda." },
     ],
     servicios: [
-      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "Meta Ads", href: "/servicios/meta-ads" },
       { label: "CRM y Automatizaci\u00f3n", href: "/servicios/crm-automatizacion" },
     ],
     enlaces: [{ label: "C\u00f3mo medimos una campa\u00f1a", href: "/metodo" }],
@@ -333,7 +333,7 @@ export const CASOS_DETALLE: Caso[] = [
       "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
     autor: "Rosario, Jefa de Ventas de Ceinys",
     servicios: [
-      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "Meta Ads", href: "/servicios/meta-ads" },
       { label: "CRM y Automatización", href: "/servicios/crm-automatizacion" },
       { label: "Producción Audiovisual", href: "/servicios/produccion-audiovisual" },
     ],

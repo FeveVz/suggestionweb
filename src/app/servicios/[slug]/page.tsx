@@ -35,6 +35,9 @@ const SERVICE_IMG: Record<string, { src: string; alt: string; w?: number; h?: nu
   "material-pop": delPortafolio("ahorra-o-nunca-despliegue", 2, "Colgantes, banderolas y roll-ups de campaña instalados en una sala de ventas"),
   "estructuras-publicitarias": delPortafolio("relanzamiento-mitsubishi-autoniza", 4, "Letras corpóreas iluminadas y estructura de marca montadas en la fachada de una tienda en Ica"),
   "publicidad-movil": delPortafolio("test-drive-changan-ica", 1, "Vehículo rotulado circulando por la vía pública durante una campaña en Ica"),
+  gigantografias: delPortafolio("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada en la fachada de vidrio de un concesionario en Ica"),
+  "letreros-luminosos": delPortafolio("relanzamiento-mitsubishi-autoniza", 4, "Letras corpóreas iluminadas y estructura de marca montadas en la fachada de una tienda en Ica"),
+  "eventos-corporativos": delPortafolio("inauguracion-autoplan", 2, "Exhibición vehicular protocolar en la inauguración del local de Autoplan"),
 };
 
 /**
@@ -72,7 +75,7 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
 /** Prueba para quien compra producción física: el trabajo hecho, no cifras de ventas ajenas a su pedido. */
 const PROOF_PRODUCCION =
   "22 activaciones documentadas con fotos propias, tomadas en el montaje: gigantografías, módulos de marca, estructuras y unidades rotuladas.";
-const SERVICIOS_PRODUCCION = new Set(["imprenta", "material-pop", "estructuras-publicitarias", "publicidad-movil", "merchandising", "btl"]);
+const SERVICIOS_PRODUCCION = new Set(["imprenta", "material-pop", "estructuras-publicitarias", "publicidad-movil", "merchandising", "btl", "gigantografias", "letreros-luminosos"]);
 
 const shapeFor = (slug: string) => ((slug.charCodeAt(0) + slug.length) % 6) + 1;
 

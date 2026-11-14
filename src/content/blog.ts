@@ -3592,7 +3592,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion imprimimos gran formato y lo instalamos, con la pieza pensada para el sitio donde va a estar. Cotizamos según medida, material y cantidad.",
-    moneyPage: { label: "Imprenta y gran formato", href: "/servicios/imprenta" },
+    // La página comercial de gigantografías existe desde el 2026-11-14: este
+    // artículo tiene 3,441 apariciones en top 10 y no tenía dónde cotizar.
+    moneyPage: { label: "Cotiza tu gigantografía", href: "/servicios/gigantografias" },
     relacionados: ["tarjetas-de-presentacion-medidas-y-errores", "letreros-para-negocio-cual-elegir"],
   },
   {
