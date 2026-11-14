@@ -111,7 +111,7 @@ export const SECTORES: Sector[] = [
       { label: "Ejemplos de campañas que venden lotes", href: "/blog/inmobiliario/marketing-inmobiliario-ejemplos" },
       { label: "Publicidad inmobiliaria en redes", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
       { label: "Qué es un embudo de ventas", href: "/blog/conversion/que-es-un-embudo-de-ventas" },
-      { label: "Qué es un CRM y cuándo lo necesitas", href: "/blog/ia-automatizacion/que-es-un-crm" },
+      { label: "CRM inmobiliario: qué debe tener", href: "/blog/inmobiliario/crm-inmobiliario" },
     ],
     faq: [
       {
@@ -236,6 +236,7 @@ export const SECTORES: Sector[] = [
       "btl",
     ],
     lecturas: [
+      { label: "Cómo vender maquinaria pesada", href: "/blog/automotriz/como-vender-maquinaria-pesada" },
       { label: "Leads para concesionarios que sí cierran", href: "/blog/automotriz/leads-para-concesionarios" },
       { label: "Publicidad para venta de autos", href: "/blog/automotriz/publicidad-para-venta-de-autos" },
       { label: "Del clic al test drive: ejemplos", href: "/blog/automotriz/marketing-automotriz-ejemplos" },

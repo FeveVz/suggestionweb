@@ -902,6 +902,10 @@ const SERVICIOS_BASE: Servicio[] = [
   },
   {
     slug: "redes-sociales",
+    lecturas: [
+      { label: "Cuánto cobra un community manager en Perú", href: "/blog/marca/cuanto-cobra-un-community-manager-en-peru" },
+      { label: "Cuánto cuesta la publicidad en Facebook e Instagram", href: "/blog/performance/cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru" },
+    ],
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
     nombre: "Redes Sociales",
@@ -1282,6 +1286,10 @@ const SERVICIOS_BASE: Servicio[] = [
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "crm-automatizacion",
+    lecturas: [
+      { label: "CRM inmobiliario: qué debe tener", href: "/blog/inmobiliario/crm-inmobiliario" },
+      { label: "Qué es un CRM y cuándo lo necesitas", href: "/blog/ia-automatizacion/que-es-un-crm" },
+    ],
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "CRM y Automatización",

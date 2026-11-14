@@ -75,6 +75,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/merchandising": "2026-11-14",
   "/blog/imprenta-btl/gigantografias-medidas-materiales-precios": "2026-11-02",
   "/blog/performance/cuanto-invertir-en-ads-peru": "2026-11-13",
+  "/blog/inmobiliario/como-conseguir-clientes-para-vender-terrenos": "2026-11-14",
   // Keyword research del 2026-11-14: títulos nuevos y 6 páginas nuevas.
   "/servicios/meta-ads": "2026-11-14",
   "/servicios/tienda-virtual": "2026-11-14",

@@ -1163,7 +1163,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "¿Quieres saber cuánto necesitas invertir para tu objetivo? Te damos un número honesto.",
     moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
-    relacionados: ["cpl-vs-roas", "que-es-el-marketing-digital", "que-es-el-remarketing"],
+    relacionados: ["cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru", "cpl-vs-roas", "que-es-el-remarketing"],
   },
   {
     slug: "como-crear-una-pagina-web",
@@ -5363,7 +5363,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion implementamos el CRM con los campos mínimos que de verdad se llenan, y conectado a WhatsApp, que es por donde entra casi todo.",
     moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
-    relacionados: ["que-es-un-embudo-de-ventas", "como-automatizar-whatsapp", "que-es-un-lead"],
+    relacionados: ["crm-inmobiliario", "que-es-un-lead", "como-automatizar-whatsapp"],
   },
   {
     slug: "que-es-el-remarketing",
@@ -5613,6 +5613,28 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Activación en el terreno o feria", "Gente que ya fue hasta el lugar", "Caro por contacto, pero el que llega va en serio"],
           ],
           nota: "El error más caro es medir los cuatro con la misma vara. Un contacto de redes y uno de un portal no valen lo mismo y no deberían costar lo mismo: lo que hay que comparar no es el costo por lead sino el costo por visita que llega a la sala.",
+        },
+      },
+      {
+        // Sección añadida el 2026-11-14 (keyword research: «publicidad para vender lotes»).
+        // Caso Ceinys con sus salvaguardas de docs-fuente/21.
+        h2: "Publicidad para vender lotes: cómo armar la campaña",
+        parrafo:
+          "En lotes, la publicidad que funciona no es la que más gente alcanza, sino la que llena la agenda de visitas con personas que pueden pagar. Eso se decide en cuatro piezas de la campaña.",
+        pasos: [
+          { titulo: "Un anuncio que muestre el lugar", texto: "video recorriendo el terreno, el plano de la lotización y lo que hay alrededor. El precio desde y la inicial, escritos en la pieza." },
+          { titulo: "Un formulario que califique", texto: "dos o tres preguntas antes de enviar: para cuándo lo necesita, si paga al contado o en cuotas, desde qué ciudad escribe. Llegan menos contactos y mejores." },
+          { titulo: "Un público por zona", texto: "personas que viven o trabajan cerca del proyecto, y ciudades de donde suelen venir los compradores. El interés por «bienes raíces» filtra mucho menos que la ubicación." },
+          { titulo: "Una respuesta en minutos", texto: "el lead que escribe un sábado por la noche también está mirando otros proyectos. Quien contesta primero suele quedarse con la visita." },
+        ],
+        tabla: {
+          cabeceras: ["Grupo Inmobiliario Ceinys", "26 ago – 29 sep 2026"],
+          filas: [
+            ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
+            ["Lotes cerrados por leads que entraron durante el período", "18"],
+            ["Publicidad por lote vendido", "S/230.51"],
+          ],
+          nota: "Resultado medido al 29 de septiembre de 2026, publicado con autorización del cliente. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",
         },
       },
       {
@@ -6139,6 +6161,587 @@ export const BLOG_POSTS: BlogPost[] = [
     cierre: "En Suggestion armamos la web técnica, el material de feria y el seguimiento comercial de agroexportadoras que necesitan que el importador pueda verificarlas.",
     moneyPage: { label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" },
     relacionados: ["marketing-para-agroexportadoras", "que-es-un-crm", "cuanto-cuesta-una-pagina-web-en-peru"],
+  },
+  // ------------------------------------------------------------------
+  // Keyword research del 2026-11-14 (lote 2). Reglas de siempre: rangos de
+  // mercado con fecha y fuente, nunca tarifas de Suggestion en el cuerpo; la
+  // derivación va en `cierre` y `moneyPage`. Los rangos que ya estaban
+  // publicados (octubre 2026) se reutilizan tal cual para no contradecirnos.
+  // ------------------------------------------------------------------
+  {
+    // «crm inmobiliario» (100–1K) y «mejor crm inmobiliario» (CPC S/20.86).
+    slug: "crm-inmobiliario",
+    categoria: "inmobiliario",
+    title: "CRM Inmobiliario: Qué Debe Tener y Cómo Elegirlo | Suggestion",
+    description:
+      "Qué debe tener un CRM para inmobiliarias: leads que entran solos, inventario de lotes, etapas hasta la separación y el origen de cada venta. Cómo elegirlo.",
+    h1: "CRM inmobiliario: qué debe tener para que no se pierda ningún lead",
+    excerpt:
+      "Una inmobiliaria no pierde ventas por falta de interesados. Las pierde en el WhatsApp personal de un asesor, en un cuaderno o en un lead que entró un sábado a las once de la noche y nadie vio hasta el lunes.",
+    enCorto: [
+      "Un CRM inmobiliario tiene que hacer cinco cosas: recibir los leads solo, repartirlos a los asesores, registrar cada contacto, saber qué lotes quedan y decir de qué campaña vino cada venta.",
+      "Las etapas mínimas son: lead, contactado, visita agendada, visita realizada, separación y venta. Sin ellas no hay embudo, hay una lista de nombres.",
+      "Antes de elegir, pregunta si se conecta solo con tus formularios de Meta y con WhatsApp, si tu asesor lo usa desde el celular y si los datos se pueden exportar.",
+    ],
+    date: "2026-11-14",
+    secciones: [
+      {
+        h2: "Por qué un CRM genérico se queda corto en inmobiliaria",
+        parrafo:
+          "Un CRM de ventas genérico sirve para ordenar contactos. La venta inmobiliaria tiene tres cosas que lo complican: vendes unidades que se agotan, la decisión tarda semanas y el cierre pasa por una visita al proyecto.",
+        bullets: [
+          { titulo: "El inventario manda", texto: "el lote 14 de la manzana B no se puede ofrecer dos veces. El CRM tiene que saber qué está disponible, qué está separado y qué ya se vendió." },
+          { titulo: "Los leads llegan a cualquier hora", texto: "los formularios de Meta y los mensajes de WhatsApp entran de noche y en fin de semana. Si nadie los ve hasta el lunes, ya los atendió otro proyecto." },
+          { titulo: "Hay varios asesores", texto: "sin un reparto claro, unos se quedan con los mejores contactos y otros con ninguno, y los leads se pisan." },
+          { titulo: "La venta tarda", texto: "entre el primer mensaje y la separación pasan semanas. Si el seguimiento depende de la memoria del asesor, la mitad se enfría." },
+        ],
+      },
+      {
+        h2: "Lo que debe tener",
+        parrafo:
+          "No hace falta un sistema enorme. Hace falta que estas funciones existan y que el equipo las use todos los días.",
+        tabla: {
+          cabeceras: ["Función", "Para qué sirve", "Si no la tiene"],
+          filas: [
+            ["Captura automática de leads", "Los formularios de Meta, la web y WhatsApp entran solos, con su campaña de origen", "Alguien copia a mano y se pierden contactos y orígenes"],
+            ["Reparto entre asesores", "Cada lead tiene un responsable desde el primer minuto, con aviso", "Leads que nadie atiende o que atienden dos"],
+            ["Historial y próxima acción", "Cada llamada, mensaje y visita queda anotada, con la siguiente tarea y su fecha", "El seguimiento depende de la memoria"],
+            ["Inventario por proyecto", "Estado de cada lote o departamento: disponible, separado, vendido", "Se ofrece lo que ya no está"],
+            ["Etapas del embudo", "Saber cuántos contactos hay en cada paso y dónde se caen", "Una lista de nombres sin diagnóstico"],
+            ["Origen de cada venta", "La campaña queda guardada en el lead y llega hasta la venta", "Nadie puede decir qué publicidad funcionó"],
+          ],
+          nota: "Si solo pudieras exigir una, exige la última. Es la que permite decidir dónde poner la plata del mes siguiente.",
+        },
+      },
+      {
+        h2: "Las etapas que conviene usar",
+        parrafo:
+          "Las etapas tienen que describir lo que pasa de verdad en una venta inmobiliaria, no lo que trae el sistema por defecto. Estas seis alcanzan para casi cualquier proyecto de lotes o departamentos.",
+        pasos: [
+          { titulo: "Lead", texto: "dejó sus datos o escribió. Todavía nadie habló con él." },
+          { titulo: "Contactado", texto: "un asesor habló con la persona y sabe para cuándo lo necesita y cómo piensa pagar." },
+          { titulo: "Visita agendada", texto: "hay fecha y hora para ir al proyecto o a la sala de ventas." },
+          { titulo: "Visita realizada", texto: "la persona fue. Es el número que mejor anticipa las ventas del mes siguiente." },
+          { titulo: "Separación", texto: "dejó un monto para reservar una unidad concreta, que pasa a figurar como separada en el inventario." },
+          { titulo: "Venta", texto: "se firmó. Aquí se cierra el ciclo con la campaña que trajo el lead." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Separa lo nuevo de lo antiguo",
+          texto: "Un lead de hace tres meses que cierra hoy no es una venta de la publicidad de este mes. Si el CRM guarda la fecha de entrada de cada contacto, puedes separar lo que trajo la campaña de lo que cerró la cartera anterior, y tus números dejan de engordar solos.",
+        },
+      },
+      {
+        h2: "Cómo elegir el tuyo",
+        parrafo:
+          "Hay CRM generales muy conocidos, como HubSpot, Zoho o Pipedrive, y sistemas pensados solo para inmobiliarias. El nombre importa menos que las respuestas a estas cinco preguntas.",
+        bullets: [
+          { titulo: "¿Se conecta solo con tus formularios y con WhatsApp?", texto: "si cada lead hay que pasarlo a mano, en un mes el equipo deja de hacerlo." },
+          { titulo: "¿Maneja inventario por proyecto?", texto: "si no, vas a tener el stock en una hoja aparte y las dos versiones nunca van a coincidir." },
+          { titulo: "¿Tu asesor lo usa desde el celular?", texto: "el asesor está en el proyecto, no frente a una computadora. Registrar tiene que tomarle menos tiempo que no registrar." },
+          { titulo: "¿Los datos son tuyos?", texto: "pregunta cómo se exportan los contactos y el historial. Tu base de clientes es lo más valioso que tienes." },
+          { titulo: "¿Cuánto cuesta cuando crece el equipo?", texto: "muchos se cobran por usuario al mes. Haz la cuenta con el equipo que vas a tener, no con el de hoy." },
+        ],
+      },
+      {
+        h2: "Los errores que hacen fracasar un CRM",
+        parrafo: "Casi ningún CRM falla por el software. Falla por cómo se implementa.",
+        bullets: [
+          { titulo: "Instalarlo sin definir las etapas", texto: "si cada asesor entiende «interesado» a su manera, los reportes no significan nada." },
+          { titulo: "Dejar que los leads entren al celular del asesor", texto: "cuando el asesor renuncia, se lleva la cartera. El número de WhatsApp tiene que ser de la empresa." },
+          { titulo: "No medir el tiempo de primera respuesta", texto: "en lotes y departamentos, quien contesta primero suele quedarse con la visita." },
+          { titulo: "Revisarlo solo a fin de mes", texto: "un CRM sirve si el jefe de ventas lo mira cada día: quién no tiene próxima acción, qué visita no se confirmó." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es un CRM inmobiliario?",
+        a: "Es el sistema donde una inmobiliaria registra a cada interesado desde que deja sus datos hasta que compra: quién lo atiende, qué conversaciones tuvo, si visitó el proyecto, qué unidad separó y de qué campaña vino. Se diferencia de un CRM genérico en que maneja inventario de lotes o departamentos y etapas pensadas para la venta inmobiliaria.",
+      },
+      {
+        q: "¿Cuál es el mejor CRM inmobiliario?",
+        a: "El que tu equipo use todos los días y que reciba solos los leads de tus formularios y de WhatsApp. Antes que la marca, revisa cinco cosas: conexión automática con tus canales, inventario por proyecto, uso desde el celular, exportación de datos y costo por usuario cuando el equipo crezca.",
+      },
+      {
+        q: "¿Puedo empezar con una hoja de cálculo?",
+        a: "Para un proyecto pequeño con uno o dos asesores, sí, si tiene columnas de origen, fecha de entrada, etapa y próxima acción. El límite llega cuando los leads entran solos de varias campañas y hay que repartirlos al instante: ahí la hoja ya no alcanza.",
+      },
+      {
+        q: "¿Qué etapas debe tener el embudo inmobiliario?",
+        a: "Seis alcanzan para casi cualquier proyecto: lead, contactado, visita agendada, visita realizada, separación y venta. La más importante para anticipar ventas es la visita realizada.",
+      },
+      {
+        q: "¿El CRM sirve para medir la publicidad?",
+        a: "Es lo único que permite medirla hasta la venta. Si la campaña queda guardada en el lead desde el primer contacto, al final del mes puedes dividir lo invertido entre las ventas que trajo cada campaña, en lugar de mirar solo cuántos formularios llegaron.",
+      },
+    ],
+    cierre:
+      "En Suggestion configuramos el CRM de inmobiliarias con el origen de cada lead guardado desde el primer contacto, para que al cerrar el mes sepas qué campaña vendió.",
+    moneyPage: { label: "CRM para inmobiliarias", href: "/servicios/crm-automatizacion" },
+    relacionados: ["que-es-un-crm", "como-conseguir-clientes-para-vender-terrenos", "publicidad-inmobiliaria-en-redes"],
+  },
+  {
+    // «paquetes de community manager» (CPC S/6.21). Los rangos de agencia son los
+    // de cuanto-cobra-una-agencia (octubre 2026); el cálculo de planilla es aritmética
+    // sobre un sueldo de ejemplo con las reglas del régimen general.
+    slug: "cuanto-cobra-un-community-manager-en-peru",
+    categoria: "marca",
+    title: "Cuánto Cobra un Community Manager en Perú 2026 | Suggestion",
+    description:
+      "Rangos del mercado peruano por nivel, cuánto cuesta de verdad tenerlo en planilla y qué debe incluir un plan de community manager para comparar bien.",
+    h1: "Cuánto cobra un community manager en Perú",
+    excerpt:
+      "Hay avisos que piden planificar, diseñar, grabar y editar video por S/600 al mes, y hay equipos que cobran diez veces más. Las dos cosas se llaman community manager, y no son el mismo trabajo.",
+    enCorto: [
+      "En el mercado formal peruano, en octubre de 2026, un community manager junior para una red cobraba de S/1,500 a S/2,500 al mes, y uno sénior con varias redes y pauta básica de S/2,500 a S/4,500, antes de IGV.",
+      "En planilla, en el régimen general, un sueldo de S/2,000 le cuesta a la empresa unos S/2,738 al mes, casi 37 % más, por gratificaciones, CTS y EsSalud.",
+      "La inversión en anuncios no va incluida en el fee: se paga aparte, directo a la plataforma.",
+    ],
+    date: "2026-11-14",
+    secciones: [
+      {
+        h2: "Los rangos del mercado peruano",
+        parrafo:
+          "El precio depende de cuánto trabajo hay detrás. No es lo mismo publicar en una red con piezas que tú mandas que llevar tres redes, producir video, responder mensajes y manejar la pauta.",
+        tabla: {
+          cabeceras: ["Nivel", "Mensual"],
+          filas: [
+            ["Community manager junior, una red", "desde S/1,500, hasta S/2,500"],
+            ["Community manager sénior, varias redes y pauta básica", "desde S/2,500, hasta S/4,500"],
+            ["Community manager líder con equipo", "desde S/4,500, hasta S/8,000"],
+          ],
+          nota: "Rangos del mercado peruano formal consultados en octubre de 2026, antes de IGV, según tarifarios publicados del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "Cuando el precio es demasiado bajo",
+          texto: "En mayo de 2026 un aviso freelance en Lima ofrecía S/600 al mes por planificar contenidos, grabar y editar video y diseñar piezas. A ese precio alguien está haciendo cuatro trabajos a medias, o ninguno con el tiempo que necesita.",
+        },
+      },
+      {
+        h2: "Lo que cuesta tenerlo en planilla",
+        parrafo:
+          "Contratar a alguien en planilla parece más barato porque se compara el sueldo con el fee de una agencia. Pero el sueldo no es el costo. En el régimen laboral general, la empresa paga además dos gratificaciones al año, la CTS y el aporte a EsSalud. Así queda con un sueldo de ejemplo de S/2,000.",
+        tabla: {
+          cabeceras: ["Concepto", "Al año"],
+          filas: [
+            ["12 sueldos, incluido el mes de vacaciones", "S/24,000"],
+            ["2 gratificaciones, julio y diciembre", "S/4,000"],
+            ["Bonificación extraordinaria del 9 % sobre las gratificaciones", "S/360"],
+            ["EsSalud, 9 % de los sueldos", "S/2,160"],
+            ["CTS, un sueldo más un sexto de la gratificación", "S/2,333"],
+            ["Total para la empresa", "S/32,853, unos S/2,738 al mes"],
+          ],
+          nota: "Cálculo propio sobre un sueldo de ejemplo, con las reglas del régimen general: gratificaciones (Ley 27735), bonificación extraordinaria (Ley 30334), CTS (D. S. 001-97-TR) y EsSalud (Ley 26790). No incluye asignación familiar, seguro de vida ley, equipo ni software. En los regímenes de micro y pequeña empresa las cargas son menores: tu contador te dice cuál te corresponde.",
+        },
+      },
+      {
+        h2: "Qué debe incluir un plan",
+        parrafo:
+          "Dos propuestas con el mismo precio pueden traer cosas muy distintas. Pide que el plan diga esto por escrito antes de comparar.",
+        bullets: [
+          { titulo: "Cuántas publicaciones y de qué tipo", texto: "no es lo mismo una imagen fija que un video corto grabado y editado. El video es lo que más trabajo lleva y lo que más alcance consigue." },
+          { titulo: "Quién produce las fotos y los videos", texto: "si el plan solo diseña con lo que tú mandas, alguien en tu empresa va a tener que grabar todas las semanas." },
+          { titulo: "Si responde mensajes y comentarios, y en qué horario", texto: "en muchas empresas por ahí entran los clientes. Si nadie contesta, la publicación no sirvió de nada." },
+          { titulo: "Si maneja la pauta", texto: "publicar sin invertir llega a pocas personas. Pregunta si el plan incluye configurar y optimizar anuncios, y recuerda que la inversión va aparte." },
+          { titulo: "Qué reporte vas a recibir", texto: "pide que muestre mensajes, contactos o ventas, no solo «me gusta» y seguidores." },
+        ],
+      },
+      {
+        h2: "Freelance, planilla o agencia",
+        parrafo: "Las tres funcionan. Lo que cambia es quién cubre lo que una sola persona no alcanza a hacer.",
+        tabla: {
+          cabeceras: ["Opción", "Le conviene a", "Qué cuidar"],
+          filas: [
+            ["Freelance", "Un negocio con una o dos redes y contenido sencillo", "Que no dependa todo de una persona que puede irse o enfermarse"],
+            ["En planilla", "Empresas con mucho volumen de contenido y de mensajes diarios", "El costo real y quién lo supervisa"],
+            ["Agencia", "Quien necesita estrategia, diseño, video y pauta juntos", "Que el fee no se coma lo que queda para anuncios"],
+          ],
+          nota: "La pregunta útil no es cuál es más barata, sino cuánto te cuesta cada cliente que llega por redes con cada opción.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cobra un community manager en Perú?",
+        a: "En octubre de 2026, en el mercado formal, un community manager junior para una red cobraba de S/1,500 a S/2,500 al mes; uno sénior con varias redes y pauta básica, de S/2,500 a S/4,500; y un líder con equipo, de S/4,500 a S/8,000. Son montos antes de IGV y sin la inversión en anuncios.",
+      },
+      {
+        q: "¿El precio incluye la publicidad pagada?",
+        a: "No. El fee paga el trabajo: planificar, diseñar, publicar, responder y optimizar. Lo que se invierte en anuncios se le paga directo a la plataforma y conviene que salga de una cuenta publicitaria a nombre de tu empresa.",
+      },
+      {
+        q: "¿Es más barato contratar un community manager en planilla?",
+        a: "No siempre. En el régimen general, un sueldo de S/2,000 le cuesta a la empresa unos S/2,738 al mes por gratificaciones, CTS y EsSalud, sin contar equipo, software ni supervisión. En los regímenes de micro y pequeña empresa las cargas son menores.",
+      },
+      {
+        q: "¿Cuántas publicaciones debe hacer al mes?",
+        a: "No hay un número correcto: depende de tu rubro y de lo que tengas para mostrar. Es mejor pocas publicaciones constantes y buenas que muchas de relleno. Lo que sí conviene fijar por escrito es la cantidad, los formatos y quién produce las fotos y los videos.",
+      },
+      {
+        q: "¿Qué diferencia hay entre un community manager y una agencia?",
+        a: "Un community manager es una persona que gestiona tus redes. Una agencia suma estrategia, diseño, producción de video y manejo de pauta con un equipo. Para una o dos redes con contenido sencillo puede bastar una persona; cuando las redes tienen que traer clientes medibles, suele hacer falta más.",
+      },
+    ],
+    cierre:
+      "En Suggestion llevamos las redes de empresas con contenido, respuesta a mensajes y pauta en un mismo plan, medido en clientes y no en seguidores.",
+    moneyPage: { label: "Community manager para empresas", href: "/servicios/redes-sociales" },
+    relacionados: ["cuanto-cobra-una-agencia-de-marketing-digital-en-peru", "cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru"],
+  },
+  {
+    // «publicidad en facebook precios», «facebook ads precios». Los costos de medios son
+    // los mismos de cuanto-invertir-en-ads-peru (octubre 2026). El presupuesto mínimo
+    // sale de la regla de Meta de ~50 resultados por semana. Caso Ceinys con sus
+    // salvaguardas de docs-fuente/21: el 18 con su definición y fecha de corte, el 25 con el 7.
+    slug: "cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru",
+    categoria: "performance",
+    title: "Publicidad en Facebook e Instagram: Precios en Perú | Suggestion",
+    description:
+      "Cuánto cuesta anunciar en Facebook e Instagram en Perú: costos de referencia por mil impresiones, clic y lead, el presupuesto mínimo que funciona y el IGV.",
+    h1: "Cuánto cuesta la publicidad en Facebook e Instagram en Perú",
+    excerpt:
+      "Meta no tiene una lista de precios. Tú decides cuánto gastar y una subasta decide cuánto te cuesta cada resultado. Por eso la pregunta útil no es cuánto cuesta un anuncio, sino cuánto necesitas invertir para que funcione.",
+    enCorto: [
+      "No hay tarifa fija: cada anuncio entra en una subasta. En octubre de 2026 el costo de referencia en Perú iba de S/8 a S/25 por mil impresiones y de S/3 a S/40 por lead, según el rubro.",
+      "El presupuesto mínimo útil sale de multiplicar tu costo por resultado por 50, que son los resultados semanales que Meta necesita para aprender: con un lead de S/10, unos S/500 por semana.",
+      "Aparte de los anuncios se paga la gestión, la producción de las piezas y el IGV.",
+    ],
+    date: "2026-11-14",
+    secciones: [
+      {
+        h2: "No hay tarifa: hay subasta",
+        parrafo:
+          "Cada vez que alguien abre Facebook o Instagram, Meta decide qué anuncio mostrarle entre todos los que compiten por esa persona. Tú no pagas un precio de lista: pones un presupuesto y la subasta define cuánto te cuesta cada impresión, clic o contacto.",
+        bullets: [
+          { titulo: "La competencia por tu público", texto: "si muchos anunciantes quieren a las mismas personas, el costo sube. Por eso educación o seguros pagan más que un restaurante." },
+          { titulo: "La calidad del anuncio", texto: "Meta favorece los anuncios que la gente mira y con los que interactúa. Un mal anuncio cuesta más por resultado, no solo vende menos." },
+          { titulo: "El objetivo que eliges", texto: "pagar por que te vean es barato; pagar por que te dejen sus datos cuesta más, porque es un resultado más difícil." },
+          { titulo: "La época del año", texto: "cuando todos anuncian a la vez, como en campañas de fin de año, la subasta se encarece." },
+        ],
+      },
+      {
+        h2: "Los costos de referencia en Perú",
+        parrafo: "Estos son los costos de medios —lo que se le paga a la plataforma— que publican las agencias locales. Sirven para hacer números antes de empezar, no como promesa de lo que te va a costar a ti.",
+        tabla: {
+          cabeceras: ["Métrica", "Rango en Perú", "Qué significa"],
+          filas: [
+            ["CPM, costo por mil impresiones", "desde S/8, hasta S/25", "Lo que cuesta que tu anuncio se vea mil veces"],
+            ["CPC en campañas de tráfico", "desde S/0.20, hasta S/0.70", "Lo que cuesta cada clic hacia tu web"],
+            ["Costo por lead", "desde S/3, hasta S/40", "Lo que cuesta un contacto registrado"],
+            ["CPM en rubros competidos (educación, seguros)", "desde S/15, hasta S/25", "Ticket alto y mucha competencia por el mismo público"],
+            ["CPM en consumo masivo (restaurantes, ropa)", "desde S/5, hasta S/12", "Público amplio y menos pujas por el mismo espacio"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según benchmarks publicados por agencias locales. Son costos de medios, sin la gestión. No son tarifas de Suggestion.",
+        },
+      },
+      {
+        h2: "El presupuesto mínimo que de verdad funciona",
+        parrafo:
+          "Con muy poco se puede encender una campaña, pero no aprender. Meta necesita unos 50 resultados por semana en cada conjunto de anuncios para salir de la fase de aprendizaje y estabilizar el costo. De ahí sale la cuenta: tu costo por resultado por 50 es el presupuesto semanal mínimo de cada conjunto.",
+        tabla: {
+          cabeceras: ["Costo por lead", "Por semana", "Por día"],
+          filas: [
+            ["S/3", "S/150", "S/21"],
+            ["S/10", "S/500", "S/71"],
+            ["S/20", "S/1,000", "S/143"],
+            ["S/40", "S/2,000", "S/286"],
+          ],
+          nota: "Cálculo propio: costo por lead multiplicado por 50 resultados semanales; el monto por día está redondeado. Si tu presupuesto no llega, es mejor optimizar por un resultado más frecuente, como iniciar una conversación por WhatsApp, que dividir poco dinero en muchos conjuntos.",
+        },
+      },
+      {
+        h2: "Lo que se paga además de los anuncios",
+        parrafo: "El presupuesto de anuncios es la parte más visible, pero no la única. Conviene tener las cuatro cifras antes de decidir.",
+        bullets: [
+          { titulo: "La gestión", texto: "si la lleva una agencia, se cobra aparte: un fee mensual o un porcentaje de la inversión, que en el mercado peruano suele ir del 12 % al 18 %." },
+          { titulo: "Las piezas", texto: "fotos, videos y diseños. Un buen video corto suele rendir más que subir el presupuesto." },
+          { titulo: "El IGV", texto: "si compras con RUC, el IGV de un servicio que te presta una empresa extranjera lo declaras y pagas tú, y normalmente lo usas como crédito fiscal. Sin RUC, revisa tu factura de Meta: desde 2025 la ley grava con IGV los servicios digitales que empresas extranjeras prestan a personas en el Perú." },
+          { titulo: "El tipo de cambio", texto: "si la cuenta publicitaria está en dólares, tu banco convierte cada cobro. Una cuenta en soles evita esa diferencia." },
+        ],
+        nota: {
+          tipo: "info",
+          titulo: "Fuente del IGV",
+          texto: "Ley del IGV (utilización de servicios prestados por no domiciliados) y Decreto Legislativo 1623, publicado en agosto de 2024. Es una orientación general: cómo se aplica a tu caso lo confirma tu contador.",
+        },
+      },
+      {
+        h2: "El costo que importa: cuánto cuesta cada venta",
+        parrafo:
+          "El costo por lead que muestra Meta es una cifra intermedia. La que decide si la publicidad funciona es cuánto se invirtió por cada venta, y solo se puede calcular si cada contacto queda registrado con la campaña que lo trajo. Este es un resultado real, medido así: Grupo Inmobiliario Ceinys, venta de lotes, del 26 de agosto al 29 de septiembre de 2026.",
+        tabla: {
+          cabeceras: ["Grupo Inmobiliario Ceinys", "26 ago – 29 sep 2026"],
+          filas: [
+            ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
+            ["Lotes cerrados por leads que entraron durante el período", "18"],
+            ["Publicidad por lote vendido", "S/230.51"],
+          ],
+          nota: "Resultado medido al 29 de septiembre de 2026, publicado con autorización del cliente. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",
+        },
+      },
+      {
+        h2: "Los errores que encarecen la publicidad",
+        parrafo: "La mayoría de campañas caras no lo son por la plataforma, sino por cómo se armaron.",
+        bullets: [
+          { titulo: "Usar el botón «Promocionar»", texto: "suele optimizar para interacciones, no para contactos. Es la forma más rápida de pagar por «me gusta»." },
+          { titulo: "Dividir poco dinero en muchos conjuntos", texto: "ninguno llega a los resultados que necesita para aprender y todos se quedan caros." },
+          { titulo: "Apagar a los tres días", texto: "los primeros días son de aprendizaje y el costo es inestable. Evaluar ahí es apagar lo que iba a funcionar." },
+          { titulo: "Medir solo el costo por lead", texto: "un lead barato que no contesta el teléfono es caro. Lo que hay que comparar es el costo por visita o por venta." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta un anuncio en Facebook en Perú?",
+        a: "No tiene un precio fijo: tú defines el presupuesto y una subasta decide cuánto te cuesta cada resultado. En octubre de 2026 el costo de referencia en Perú iba de S/8 a S/25 por mil impresiones, de S/0.20 a S/0.70 por clic en campañas de tráfico y de S/3 a S/40 por lead, según el rubro.",
+      },
+      {
+        q: "¿Cuál es el presupuesto mínimo para anunciar en Facebook e Instagram?",
+        a: "Para encender una campaña alcanza con poco, pero para que Meta aprenda necesita unos 50 resultados por semana en cada conjunto de anuncios. Multiplica tu costo por resultado por 50: con un lead de S/10 son unos S/500 por semana. Si no llegas, optimiza por un resultado más frecuente, como iniciar una conversación.",
+      },
+      {
+        q: "¿Instagram cuesta distinto que Facebook?",
+        a: "Se compran en la misma subasta y desde la misma cuenta publicitaria. El costo cambia según la ubicación del anuncio y el público. Con las ubicaciones automáticas, Meta reparte el presupuesto donde consigue resultados más baratos.",
+      },
+      {
+        q: "¿La publicidad en Facebook paga IGV?",
+        a: "Sí. Si compras con RUC, el IGV de un servicio prestado por una empresa extranjera lo declaras y pagas tú, y normalmente lo puedes usar como crédito fiscal. Sin RUC, desde 2025 la ley grava con IGV los servicios digitales que empresas extranjeras prestan a personas en el Perú. Confírmalo con tu contador.",
+      },
+      {
+        q: "¿Conviene usar el botón «Promocionar publicación»?",
+        a: "Para que más gente vea una publicación, puede servir. Para conseguir clientes, no es lo ideal: suele optimizar para interacciones. Una campaña creada desde el Administrador de anuncios, con objetivo de clientes potenciales o mensajes, mide y optimiza lo que de verdad te interesa.",
+      },
+    ],
+    cierre:
+      "En Suggestion armamos campañas de Meta Ads medidas hasta la venta, con la campaña de origen guardada en cada lead desde el primer contacto.",
+    moneyPage: { label: "Agencia de Meta Ads", href: "/servicios/meta-ads" },
+    relacionados: ["cuanto-invertir-en-ads-peru", "cpl-vs-roas", "cuanto-cobra-una-agencia-de-marketing-digital-en-peru"],
+  },
+  {
+    // «tienda virtual precio». El rango de construcción es el de
+    // cuanto-cuesta-una-pagina-web-en-peru (octubre 2026). Shopify y pasarelas: rangos
+    // publicados en 2026 por guías y comparativas, sin nombrar tarifas de cada pasarela.
+    slug: "cuanto-cuesta-una-tienda-virtual-en-peru",
+    categoria: "conversion",
+    title: "Cuánto Cuesta una Tienda Virtual en Perú 2026 | Suggestion",
+    description:
+      "Cuánto cuesta hacer una tienda virtual en Perú y cuánto mantenerla: construcción, plataforma, comisiones por venta, facturación electrónica y lo que se olvida.",
+    h1: "Cuánto cuesta una tienda virtual en Perú",
+    excerpt:
+      "El precio de construir una tienda virtual es la mitad de la cuenta. La otra mitad se paga cada mes y con cada venta, y casi nunca aparece en la primera cotización.",
+    enCorto: [
+      "En octubre de 2026 construir una tienda virtual en Perú iba desde S/2,500 hasta S/15,000, según productos, integraciones y diseño.",
+      "Cada venta paga una comisión a la pasarela de pago: en Perú las guías publicadas en 2026 la ubican entre 2.99 % y 5.50 % más IGV, según proveedor y volumen.",
+      "Si usas una plataforma de suscripción como Shopify, suma su cuota mensual y, con una pasarela externa, su propia comisión por venta.",
+    ],
+    date: "2026-11-14",
+    secciones: [
+      {
+        h2: "Lo que cuesta construirla",
+        parrafo:
+          "La diferencia entre una tienda de S/2,500 y una de S/15,000 casi nunca es el diseño. Es cuántos productos y variantes maneja, con qué sistemas se conecta y cuánto trabajo hay en fotos y textos.",
+        tabla: {
+          cabeceras: ["Tipo de web", "Precio referencial", "Para qué sirve"],
+          filas: [
+            ["Landing de una sola página", "desde S/300, hasta S/1,500", "Vender un producto o captar pedidos por WhatsApp"],
+            ["Tienda virtual", "desde S/2,500, hasta S/15,000", "Vender en línea, con pagos, stock y envíos"],
+            ["Plataforma a medida", "desde S/8,000, hasta S/50,000", "Procesos propios, usuarios o integraciones complejas"],
+          ],
+          nota: "Rangos del mercado peruano consultados en octubre de 2026, según precios publicados por agencias y desarrolladores del rubro. No son tarifas de Suggestion ni una cotización.",
+        },
+      },
+      {
+        h2: "Lo que cuesta tenerla funcionando",
+        parrafo: "Una vez en línea, la tienda tiene costos que se repiten. Estos son los que conviene sumar antes de decidir.",
+        tabla: {
+          cabeceras: ["Concepto", "Cómo se paga", "Referencia"],
+          filas: [
+            ["Pasarela de pago", "Comisión por cada venta con tarjeta", "De 2.99 % a 5.50 % más IGV, según proveedor y volumen"],
+            ["Plataforma de suscripción", "Cuota mensual en dólares", "Shopify Basic: US$39 al mes, o US$29 con pago anual"],
+            ["Comisión de la plataforma", "Por venta, si no usas su pasarela propia", "Shopify Basic: 2 % por venta"],
+            ["Dominio y hosting", "Cada año", "En plataformas de suscripción el hosting va incluido"],
+            ["Envíos", "Por pedido", "Depende del courier, el peso y el destino"],
+            ["Mantenimiento", "Mensual o por bolsa de horas", "Actualizaciones, cambios y soporte"],
+          ],
+          nota: "Comisiones de pasarelas según guías del mercado peruano publicadas en 2026; precios de Shopify según comparativas publicadas entre marzo y abril de 2026. Confírmalos con cada proveedor antes de decidir: cambian y se negocian por volumen.",
+        },
+        dato: {
+          cifra: "S/6.71",
+          texto: "pagaría en comisiones una venta de S/100 en Shopify Basic con una pasarela externa que cobre 3.99 % más IGV: S/4.71 de la pasarela y S/2 de Shopify. Es un ejemplo con una tarifa dentro del rango publicado.",
+          fuente: "Cálculo propio con los rangos de la tabla.",
+        },
+      },
+      {
+        h2: "Plataforma de suscripción, WordPress o a medida",
+        parrafo: "Las tres sirven para vender. Cambian en cuánto pagas al inicio, cuánto pagas cada mes y cuánto control tienes.",
+        tabla: {
+          cabeceras: ["Opción", "Le conviene a", "Qué cuidar"],
+          filas: [
+            ["Plataforma de suscripción (Shopify y similares)", "Quien quiere empezar rápido sin preocuparse del servidor", "La cuota en dólares y la comisión por venta suben con el tiempo"],
+            ["WordPress con WooCommerce", "Quien quiere control y no pagar cuota de plataforma", "Hosting, seguridad y actualizaciones corren por tu cuenta"],
+            ["A medida", "Negocios con procesos que ninguna plataforma resuelve", "Cuesta más al inicio y depende de quien la programó"],
+          ],
+          nota: "Para la mayoría de negocios que recién empiezan a vender en línea, una plataforma estándar bien configurada es mejor inversión que un desarrollo a medida.",
+        },
+      },
+      {
+        h2: "Lo que casi nadie presupuesta",
+        parrafo: "Estos costos no aparecen en la cotización de la web, pero deciden si la tienda vende o se queda vacía.",
+        bullets: [
+          { titulo: "Las fotos de producto", texto: "una tienda con fotos de celular vende menos que la misma tienda con fotos buenas. Alguien tiene que hacerlas, una por producto y por variante." },
+          { titulo: "La carga del catálogo", texto: "subir cien productos con descripción, precio, medidas y stock es trabajo de días. Si no lo haces tú, va en el presupuesto." },
+          { titulo: "La facturación electrónica", texto: "cada venta necesita su boleta o factura electrónica. Conectar la tienda con tu sistema de facturación ahorra horas cada semana." },
+          { titulo: "La publicidad", texto: "una tienda nueva no recibe visitas sola. Sin un presupuesto para traer tráfico, la tienda existe pero nadie la ve." },
+          { titulo: "La atención por WhatsApp", texto: "muchos clientes preguntan antes de comprar. Si nadie contesta rápido, el carrito se abandona." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Antes de construir",
+          texto: "Si todavía no sabes qué productos se venden más, empieza con un catálogo en WhatsApp o una landing y mide. Construir una tienda completa sobre productos que no rotan es la forma más cara de averiguarlo.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cuánto cuesta una tienda virtual en Perú?",
+        a: "En octubre de 2026 construirla iba desde S/2,500 hasta S/15,000 según productos, integraciones y diseño, y una plataforma a medida podía llegar a S/50,000. A eso se suman costos que se repiten: la comisión de la pasarela por cada venta, la cuota de la plataforma si es de suscripción, el dominio, el hosting y el mantenimiento.",
+      },
+      {
+        q: "¿Cuánto cobra una pasarela de pago por venta en Perú?",
+        a: "Las guías del mercado peruano publicadas en 2026 ubican la comisión entre 2.99 % y 5.50 % más IGV por venta con tarjeta, según el proveedor y el volumen. Algunas cobran además un monto fijo por transacción. Pide la tarifa por escrito: con volumen se negocia.",
+      },
+      {
+        q: "¿Cuánto cuesta Shopify al mes?",
+        a: "Según comparativas publicadas en 2026, el plan Basic cuesta US$39 al mes, o US$29 al mes con pago anual. Si cobras con una pasarela externa en lugar de Shopify Payments, Shopify suma una comisión del 2 % por venta en ese plan. Confírmalo en su página de precios, porque cambian.",
+      },
+      {
+        q: "¿Qué es mejor, Shopify o WooCommerce?",
+        a: "Shopify es más rápido de poner en marcha y no te preocupas del servidor, pero cobra cuota mensual en dólares y comisión por venta si usas otra pasarela. WooCommerce no tiene cuota de plataforma, pero el hosting, la seguridad y las actualizaciones corren por tu cuenta. Depende de cuánto quieras controlar y de quién la va a mantener.",
+      },
+      {
+        q: "¿Necesito facturación electrónica para vender en línea?",
+        a: "Si vendes como empresa, cada venta necesita su comprobante electrónico, boleta o factura. Conviene que la tienda se conecte con tu sistema de facturación para que el comprobante salga solo con cada pedido.",
+      },
+    ],
+    cierre:
+      "En Suggestion diseñamos tiendas virtuales listas para vender, con pagos, catálogo y medición configurados, y te decimos qué costos vas a tener cada mes antes de empezar.",
+    moneyPage: { label: "Diseño de tienda virtual", href: "/servicios/tienda-virtual" },
+    relacionados: ["cuanto-cuesta-una-pagina-web-en-peru", "crear-pagina-web-wix-vs-profesional", "como-vender-por-whatsapp-paso-a-paso"],
+  },
+  {
+    // «como vender maquinaria pesada». Lo propio que se puede decir está publicado:
+    // 19 marcas de vehículos con línea amarilla e XCMG (sectores.ts) y el lanzamiento
+    // XCMG · Dercomaq en Ica (portafolio). Sin cifras de ventas de ningún cliente.
+    slug: "como-vender-maquinaria-pesada",
+    categoria: "automotriz",
+    title: "Cómo Vender Maquinaria Pesada en Perú | Suggestion",
+    description:
+      "Cómo vender maquinaria pesada: quién decide la compra, qué canales traen compradores reales, qué contenido piden y cómo hacer que la demostración cierre.",
+    h1: "Cómo vender maquinaria pesada: del primer contacto a la demostración",
+    excerpt:
+      "Quien compra una excavadora no compra un vehículo: compra horas de trabajo, repuestos disponibles y un servicio técnico que conteste. El marketing que vende maquinaria habla de eso, no de la pintura.",
+    enCorto: [
+      "La compra de maquinaria pesada la decide una empresa, casi siempre en comité, y toma meses. El marketing tiene que acompañar todo ese tiempo, no solo el primer contacto.",
+      "Los compradores buscan ficha técnica, consumo, repuestos, servicio técnico y financiamiento. El contenido que responde eso vende más que la foto de la máquina.",
+      "La demostración o el evento con la máquina presente es donde se decide la compra: todo lo anterior existe para llevar ahí a quien puede comprar.",
+    ],
+    date: "2026-11-14",
+    secciones: [
+      {
+        h2: "Quién compra y cómo decide",
+        parrafo:
+          "El comprador de línea amarilla no se parece al de un auto. Es una empresa constructora, minera, agrícola o municipal, y la decisión pasa por varias personas que miran cosas distintas.",
+        tabla: {
+          cabeceras: ["Quién", "Qué le importa", "Qué necesita ver"],
+          filas: [
+            ["El dueño o gerente", "Retorno de la inversión y financiamiento", "Costo por hora de trabajo y opciones de pago"],
+            ["El jefe de operaciones", "Rendimiento en su tipo de obra", "Ficha técnica y la máquina trabajando"],
+            ["El jefe de mantenimiento", "Repuestos y servicio técnico", "Taller, stock de repuestos y tiempos de atención"],
+            ["Compras o finanzas", "Precio, garantía y condiciones", "Una cotización clara y comparable"],
+          ],
+          nota: "Si tu marketing solo le habla a uno, los otros tres frenan la compra. Una buena campaña tiene una pieza para cada uno.",
+        },
+      },
+      {
+        h2: "Los canales que traen compradores reales",
+        parrafo:
+          "Hay pocos compradores y cada uno vale mucho. Por eso importa menos llegar a mucha gente y más llegar a las empresas correctas en el momento en que están evaluando.",
+        bullets: [
+          { titulo: "Búsqueda en Google", texto: "quien busca «excavadora 20 toneladas precio» o «retroexcavadora en venta» ya está evaluando. Es el contacto más caliente que existe en este rubro." },
+          { titulo: "Redes por zona y actividad", texto: "sirven para que las empresas de tu región te conozcan antes de necesitarte, y para volver a mostrarte a quien ya visitó tu web." },
+          { titulo: "Ferias y eventos del sector", texto: "ahí está el comprador que vino a comparar. Una máquina bien exhibida y un equipo que sabe de números vale más que cualquier volante." },
+          { titulo: "Visita directa a obra", texto: "para cuentas grandes, el vendedor que llega con la propuesta y la demostración agendada sigue siendo insustituible." },
+          { titulo: "Tu base de clientes", texto: "quien ya te compró una máquina es el candidato más probable para la siguiente, y para recomendarte." },
+        ],
+      },
+      {
+        h2: "El contenido que el comprador busca",
+        parrafo:
+          "En este rubro la gente no quiere que la convenzan: quiere comparar. El contenido que gana es el que le da los datos que necesita para defender la compra frente a su comité.",
+        bullets: [
+          { titulo: "Ficha técnica completa", texto: "potencia, peso operativo, capacidad, consumo. Escrita, descargable y sin tener que pedirla por formulario." },
+          { titulo: "Video de la máquina trabajando", texto: "en una obra real y en condiciones parecidas a las del comprador. Vale más que cualquier foto de catálogo." },
+          { titulo: "Repuestos y servicio técnico", texto: "dónde está el taller, qué repuestos hay en stock y cómo se pide atención. Es lo que decide al jefe de mantenimiento." },
+          { titulo: "Financiamiento", texto: "leasing, crédito directo o con bancos. Es la primera pregunta del gerente: respóndela antes de que la haga." },
+          { titulo: "Testimonios de empresas parecidas", texto: "una constructora de tu zona contando cómo le fue convence más que cualquier anuncio." },
+        ],
+      },
+      {
+        h2: "La demostración es donde se vende",
+        foto: foto("xcmg-linea-amarilla-ica", 7, "Maquinaria XCMG exhibida con su ficha técnica al pie durante el lanzamiento de línea amarilla en Ica", "Lanzamiento de la línea amarilla XCMG en Ica: cada máquina con su ficha técnica a la vista. Quien viene a comparar números tiene que encontrarlos delante, no pedirlos."),
+        parrafo:
+          "La maquinaria se decide cuando el comprador la ve, la escucha y, si se puede, la opera. Por eso todo el embudo existe para llevar a la demostración a las personas que pueden comprar.",
+        pasos: [
+          { titulo: "Convoca a quien decide, no a cualquiera", texto: "una lista corta de empresas que tienen obra y presupuesto rinde más que un evento lleno de curiosos." },
+          { titulo: "Pon los números en el centro", texto: "ficha técnica visible junto a cada máquina, y alguien que sepa responder de consumo, rendimiento y repuestos." },
+          { titulo: "Resuelve la logística antes", texto: "mover y posicionar maquinaria de ese porte condiciona el acceso, el piso y la hora de montaje. Se planifica antes del evento o no se resuelve." },
+          { titulo: "Registra a cada asistente", texto: "nombre, empresa, qué máquina le interesó y para cuándo. Sin ese registro, el evento fue una fiesta y no una venta." },
+          { titulo: "Haz seguimiento en los días siguientes", texto: "una cotización concreta y una llamada con fecha. El interés del evento se enfría rápido si nadie lo retoma." },
+        ],
+      },
+      {
+        h2: "Cómo medir si funciona",
+        parrafo:
+          "Con ciclos de meses, medir las ventas del mes engaña. Lo que conviene seguir son las señales que anticipan la venta.",
+        bullets: [
+          { titulo: "Contactos calificados", texto: "empresas con obra, presupuesto y fecha, no cualquier formulario." },
+          { titulo: "Demostraciones y visitas realizadas", texto: "es el número que mejor predice las ventas del trimestre siguiente." },
+          { titulo: "Cotizaciones enviadas y en evaluación", texto: "cuántas hay abiertas y hace cuánto. Una cotización sin seguimiento es una venta que se está perdiendo." },
+          { titulo: "Origen de cada venta", texto: "anotado desde el primer contacto. Meses después nadie recuerda si vino de la feria, de Google o de un referido." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Dale tiempo a la medición",
+          texto: "En camiones y maquinaria el cierre llega meses después del primer contacto. Evaluar una campaña a los siete días es apagar lo que estaba funcionando.",
+        },
+      },
+    ],
+    faq: [
+      {
+        q: "¿Cómo vender maquinaria pesada?",
+        a: "Llegando a las empresas que tienen obra y presupuesto, dándoles los datos que necesitan para comparar —ficha técnica, consumo, repuestos, servicio técnico y financiamiento— y llevándolas a una demostración con la máquina presente. Después, seguimiento con cotización concreta y fecha.",
+      },
+      {
+        q: "¿Sirve la publicidad digital para vender maquinaria?",
+        a: "Sí, sobre todo la búsqueda en Google, porque quien busca un modelo o un tipo de máquina ya está evaluando. Las redes sirven para que las empresas de tu zona te conozcan y para volver a mostrarte a quien visitó tu web. Lo digital trae al comprador; la demostración cierra.",
+      },
+      {
+        q: "¿Cuánto tarda en venderse una máquina?",
+        a: "En maquinaria pesada el cierre suele llegar meses después del primer contacto, porque decide una empresa, a menudo en comité, y muchas veces hay financiamiento de por medio. Por eso conviene medir contactos calificados, demostraciones y cotizaciones, no solo ventas del mes.",
+      },
+      {
+        q: "¿Qué debe tener una ficha de maquinaria en la web?",
+        a: "Potencia, peso operativo, capacidad, consumo, fotos y video trabajando, garantía, disponibilidad de repuestos, ubicación del servicio técnico y opciones de financiamiento. Mejor si se puede descargar sin dejar datos: el comprador la va a reenviar a su comité.",
+      },
+      {
+        q: "¿Conviene hacer un evento de lanzamiento?",
+        a: "Si tienes una línea nueva o llegas a una región nueva, sí: es la forma más directa de que los compradores vean la máquina. Funciona si la convocatoria es dirigida, la ficha técnica está en el centro y cada asistente queda registrado para el seguimiento.",
+      },
+    ],
+    cierre:
+      "En Suggestion hemos trabajado 19 marcas de vehículos entre livianos, camiones y línea amarilla, incluido el lanzamiento de XCMG en Ica: campañas, eventos con la máquina presente y el seguimiento que los convierte en ventas.",
+    moneyPage: { label: "Marketing automotriz y de maquinaria", href: "/marketing-automotriz" },
+    relacionados: ["leads-para-concesionarios", "publicidad-para-venta-de-autos", "marketing-automotriz-ejemplos"],
   },
 ];
 

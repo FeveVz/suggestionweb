@@ -56,7 +56,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     lecturas: [
       { label: "Cuánto invertir en Google y Meta Ads en Perú", href: "/blog/performance/cuanto-invertir-en-ads-peru" },
       { label: "Publicidad inmobiliaria en redes: qué funciona", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
-      { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
+      { label: "Cuánto cuesta la publicidad en Facebook e Instagram", href: "/blog/performance/cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru" },
     ],
     metaTitle: "Agencia de Meta Ads: Facebook e Instagram | Suggestion",
     metaDescription:
@@ -174,7 +174,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     nombre: "Tienda Virtual",
     lecturas: [
       { label: "Cuánto cuesta una página web en Perú", href: "/blog/conversion/cuanto-cuesta-una-pagina-web-en-peru" },
-      { label: "Crear tu web en Wix o con un profesional", href: "/blog/conversion/crear-pagina-web-wix-vs-profesional" },
+      { label: "Cuánto cuesta una tienda virtual en Perú", href: "/blog/conversion/cuanto-cuesta-una-tienda-virtual-en-peru" },
       { label: "Cómo vender por WhatsApp paso a paso", href: "/blog/ia-automatizacion/como-vender-por-whatsapp-paso-a-paso" },
     ],
     metaTitle: "Diseño de Tienda Virtual para Empresas en Perú | Suggestion",
@@ -285,7 +285,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     lecturas: [
       { label: "Cómo automatizar WhatsApp en tu negocio", href: "/blog/ia-automatizacion/como-automatizar-whatsapp" },
       { label: "Cómo vender por WhatsApp paso a paso", href: "/blog/ia-automatizacion/como-vender-por-whatsapp-paso-a-paso" },
-      { label: "Qué es un CRM", href: "/blog/ia-automatizacion/que-es-un-crm" },
+      { label: "CRM inmobiliario: qué debe tener", href: "/blog/inmobiliario/crm-inmobiliario" },
     ],
     metaTitle: "Chatbot de WhatsApp con IA para Empresas | Suggestion",
     metaDescription:
