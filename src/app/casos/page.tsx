@@ -17,7 +17,10 @@ import { fotoPortafolio } from "@/content/portafolio-fotos";
 export const metadata: Metadata = buildMetadata({
   title: "Casos de Éxito de Marketing en Ica | Suggestion",
   description:
-    "Resultados de negocio, no capturas de likes: 18 lotes a S/230.51 de pauta, S/350K en ventas, 75 reservas, 15 contratos. Mira nuestros casos.",
+    // Sin las cifras de los cortes de Ceinys: en 155 caracteres no cabe su
+    // etiqueta ni su fecha de corte (docs-fuente/21), y «18 lotes» junto a
+    // «S/350K» invitaba a comparar dos casos medidos con criterios distintos.
+    "Resultados de negocio, no capturas de likes: S/350K en ventas, 75 reservas, 15 contratos y 8 autos en 2 eventos. Cada caso con su período.",
   path: "/casos",
   ogImage: "/assets/og/casos.png",
 });
