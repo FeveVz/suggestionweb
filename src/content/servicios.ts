@@ -1317,6 +1317,7 @@ const SERVICIOS_BASE: Servicio[] = [
     ],
     slug: "crm-automatizacion",
     lecturas: [
+      { label: "CRM para WhatsApp: qué debe tener", href: "/blog/ia-automatizacion/crm-para-whatsapp" },
       { label: "CRM inmobiliario: qué debe tener", href: "/blog/inmobiliario/crm-inmobiliario" },
       { label: "Qué es un CRM y cuándo lo necesitas", href: "/blog/ia-automatizacion/que-es-un-crm" },
     ],

@@ -80,9 +80,9 @@ const ACTUALIZADA: Record<string, string> = {
   // Keyword research del 2026-11-14: títulos nuevos y 6 páginas nuevas.
   "/servicios/meta-ads": "2026-11-14",
   "/servicios/tienda-virtual": "2026-11-14",
-  "/servicios/chatbot-whatsapp": "2026-11-14",
+  "/servicios/chatbot-whatsapp": "2026-11-16",
   "/servicios/eventos-corporativos": "2026-11-14",
-  "/servicios/gigantografias": "2026-11-14",
+  "/servicios/gigantografias": "2026-11-16",
   "/servicios/letreros-luminosos": "2026-11-14",
 };
 const fecha = (path: string) => (ACTUALIZADA[path] ? new Date(`${ACTUALIZADA[path]}T12:00:00Z`) : GLOBAL);

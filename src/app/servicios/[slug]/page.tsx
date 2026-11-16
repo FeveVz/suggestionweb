@@ -11,6 +11,7 @@ import {
   allServicioSlugs,
 } from "@/content/servicios";
 import { SECTORES } from "@/content/sectores";
+import { BLOG_POSTS } from "@/content/blog";
 import { CIUDADES, ciudadHref } from "@/content/ciudades";
 import { getPrecios } from "@/content/precios";
 import { fotoPortafolio, FOTOS_PORTAFOLIO } from "@/content/portafolio-fotos";
@@ -150,8 +151,17 @@ export default async function ServicioPage({ params }: Params) {
     related.push({ title: "La prueba", links: s.pruebas, columns: 2 });
   }
 
-  if (s.lecturas?.length) {
-    related.push({ title: "Para decidir mejor", links: s.lecturas, columns: 2 });
+  // Lecturas escritas a mano + los artículos que derivan a este servicio
+  // (moneyPage) y aún no estaban. Cada artículo enlazaba a su servicio, pero
+  // el servicio no le devolvía el enlace: 21 artículos dependían solo del blog
+  // y de otros artículos, y en noviembre de 2026 Search Console mostraba
+  // varios de ellos sin rastrear desde julio. Sin tope, branding sumaría 8.
+  const guias: RelatedLink[] = BLOG_POSTS.filter((p) => p.moneyPage.href === `/servicios/${s.slug}`)
+    .map((p) => ({ label: p.h1, href: `/blog/${p.categoria}/${p.slug}` }))
+    .filter((g) => !s.lecturas?.some((l) => l.href === g.href));
+  const lecturas = [...(s.lecturas ?? []), ...guias].slice(0, 8);
+  if (lecturas.length) {
+    related.push({ title: "Para decidir mejor", links: lecturas, columns: 2 });
   }
 
   const serviceLinks: RelatedLink[] = s.enlazaA.flatMap((sl) => {

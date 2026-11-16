@@ -287,10 +287,12 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       { label: "Cómo vender por WhatsApp paso a paso", href: "/blog/ia-automatizacion/como-vender-por-whatsapp-paso-a-paso" },
       { label: "CRM inmobiliario: qué debe tener", href: "/blog/inmobiliario/crm-inmobiliario" },
     ],
-    metaTitle: "Chatbot de WhatsApp con IA para Empresas | Suggestion",
+    // 16-nov: «agente de ia para whatsapp» tiene más sugerencias comerciales
+    // (precio, business, meta) que «chatbot whatsapp»; el título lleva los dos.
+    metaTitle: "Agente de IA para WhatsApp: Chatbot para Empresas | Suggestion",
     metaDescription:
       "Agente de IA para WhatsApp que responde a cualquier hora, califica a cada contacto y agenda por tu equipo, conectado a tu CRM. Lo usamos en Suggestion.",
-    h1: "Chatbot de WhatsApp con IA que responde, califica y agenda",
+    h1: "Agente de IA para WhatsApp: el chatbot que responde, califica y agenda",
     hero: "La mayoría de ventas por WhatsApp se pierde en los mensajes que nadie contestó a tiempo. Configuramos un agente de inteligencia artificial que responde al instante y a cualquier hora, hace las preguntas que haría tu vendedor y le pasa la conversación cuando hay alguien listo para comprar.",
     enCorto: [
       "Un agente de IA responde en WhatsApp al instante y a cualquier hora, con la información de tu negocio que tú apruebas.",
@@ -607,7 +609,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       {
         h2: "Entrega en Ica y envíos",
         parrafo:
-          "Trabajamos por pedido y no atendemos al paso. Coordinamos la entrega o el recojo en Ica y sus distritos, y hacemos envíos a otras regiones con la fecha confirmada en la cotización. Si necesitas la instalación, dínoslo al pedir y la incluimos en el precio.",
+          "Trabajamos por pedido y no atendemos al paso. Coordinamos la entrega o el recojo en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe—, y hacemos envíos a otras regiones con la fecha confirmada en la cotización. Si necesitas la instalación, dínoslo al pedir y la incluimos en el precio.",
       },
     ],
     incluye: [

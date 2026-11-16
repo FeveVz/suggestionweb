@@ -6279,7 +6279,7 @@ export const BLOG_POSTS: BlogPost[] = [
     cierre:
       "En Suggestion configuramos el CRM de inmobiliarias con el origen de cada lead guardado desde el primer contacto, para que al cerrar el mes sepas qué campaña vendió.",
     moneyPage: { label: "CRM para inmobiliarias", href: "/servicios/crm-automatizacion" },
-    relacionados: ["que-es-un-crm", "como-conseguir-clientes-para-vender-terrenos", "publicidad-inmobiliaria-en-redes"],
+    relacionados: ["chatbot-whatsapp-inmobiliaria", "que-es-un-crm", "como-conseguir-clientes-para-vender-terrenos"],
   },
   {
     // «paquetes de community manager» (CPC S/6.21). Los rangos de agencia son los
@@ -6742,6 +6742,263 @@ export const BLOG_POSTS: BlogPost[] = [
       "En Suggestion hemos trabajado 19 marcas de vehículos entre livianos, camiones y línea amarilla, incluido el lanzamiento de XCMG en Ica: campañas, eventos con la máquina presente y el seguimiento que los convierte en ventas.",
     moneyPage: { label: "Marketing automotriz y de maquinaria", href: "/marketing-automotriz" },
     relacionados: ["leads-para-concesionarios", "publicidad-para-venta-de-autos", "marketing-automotriz-ejemplos"],
+  },
+  // ------------------------------------------------------------------
+  // 2026-11-16: WhatsApp con IA y CRM. Demanda comprobada con el
+  // autocompletado de Google (gl=pe): «chatbot para inmobiliarias», «chatbot
+  // whatsapp inmobiliaria», «agente ia para inmobiliarias», «crm para whatsapp»
+  // (+ business, gratis, api, con ia, precios). «chatbot para concesionarios»
+  // no devuelve sugerencias: va como pregunta frecuente, no como página.
+  // Sin tarifas ni cifras: las reglas de WhatsApp citadas son las de Meta
+  // (precio por mensaje desde el 1-jul-2025; asistentes de uso general fuera
+  // de la API desde el 15-ene-2026).
+  // ------------------------------------------------------------------
+  {
+    slug: "chatbot-whatsapp-inmobiliaria",
+    categoria: "inmobiliario",
+    title: "Chatbot de WhatsApp para Inmobiliarias con IA | Suggestion",
+    description:
+      "Qué debe preguntar un agente de IA en el WhatsApp de una inmobiliaria, cuándo pasarle el lead al asesor y qué nunca debe prometer por su cuenta.",
+    h1: "Chatbot de WhatsApp para inmobiliarias: qué debe hacer un agente de IA",
+    excerpt:
+      "Los interesados en un lote o un departamento escriben de noche y en fin de semana, justo cuando no hay asesores. Un agente de IA puede atenderlos al instante, pero solo sirve si sabe qué preguntar y cuándo pasarle la conversación a una persona.",
+    enCorto: [
+      "Un agente de IA en el WhatsApp de una inmobiliaria responde al instante y a cualquier hora, con la información del proyecto que tú apruebas.",
+      "Su trabajo es calificar —qué busca, para cuándo y cómo piensa pagar— y agendar la visita. El cierre lo hace el asesor.",
+      "Nunca debe dar descuentos, separar una unidad ni prometer plazos o financiamiento por su cuenta.",
+      "Cada conversación tiene que quedar en el CRM con la campaña de origen; si no, no sabrás qué anuncio trajo la venta.",
+    ],
+    date: "2026-11-16",
+    secciones: [
+      {
+        h2: "Por qué una inmobiliaria pierde leads en WhatsApp",
+        parrafo:
+          "Los anuncios de un proyecto generan mensajes a cualquier hora, y quien busca lote o departamento suele escribirle a varios proyectos la misma noche. El que contesta primero, y con información útil, se queda con la visita. El que contesta el lunes a media mañana le escribe a alguien que ya agendó en otro lado.",
+        bullets: [
+          { titulo: "Escriben fuera de horario", texto: "los anuncios corren de noche y en fin de semana; el equipo, no." },
+          { titulo: "Preguntan lo mismo", texto: "ubicación, medidas, precio, servicios y forma de pago. Son respuestas que no necesitan a un asesor." },
+          { titulo: "Se atiende por orden de llegada", texto: "el asesor responde de arriba abajo, no según quién está más cerca de comprar." },
+          { titulo: "Se pierde el origen", texto: "si el chat entra al celular de un asesor, nadie sabe después qué anuncio lo trajo." },
+        ],
+      },
+      {
+        h2: "Qué hace el agente y qué hace el asesor",
+        parrafo:
+          "El error más común es pedirle al agente que venda. Su trabajo es otro: responder lo que ya está decidido, ordenar al interesado y dejarle al asesor una conversación lista para avanzar.",
+        tabla: {
+          cabeceras: ["Tarea", "Lo hace el agente", "Lo hace el asesor"],
+          filas: [
+            ["Dudas del proyecto", "Ubicación, medidas, servicios, documentos y formas de pago, con la información aprobada", "Lo que no está en esa información"],
+            ["Calificar", "Pregunta qué busca, para cuándo, cómo piensa pagar y si ya conoce el proyecto", "Profundiza con quien está listo para avanzar"],
+            ["Agendar la visita", "Ofrece los horarios disponibles y confirma la cita", "Recibe al cliente en el proyecto o en la sala de ventas"],
+            ["Precios y descuentos", "Solo los precios que la empresa decidió publicar", "Cualquier descuento, campaña especial o negociación"],
+            ["Separar una unidad", "Nunca", "Siempre, con el inventario al día"],
+            ["Financiamiento", "Explica las opciones generales que ofrece la empresa", "Evalúa cada caso y confirma las condiciones"],
+          ],
+          nota: "La regla práctica: el agente informa y ordena; todo lo que compromete a la empresa lo confirma una persona.",
+        },
+      },
+      {
+        h2: "Las preguntas de calificación para lotes y departamentos",
+        parrafo:
+          "Cinco preguntas alcanzan para saber si el interesado está para visitar este mes o para recibir información y volver a escribirle más adelante. El agente las hace en conversación, no como un formulario.",
+        pasos: [
+          { titulo: "Qué busca", texto: "lote, departamento o casa; para vivir o para invertir. Cambia por completo lo que conviene contarle." },
+          { titulo: "Dónde y de qué tamaño", texto: "confirma que el proyecto le sirve antes de seguir. Si busca otra zona, mejor decírselo pronto." },
+          { titulo: "Para cuándo", texto: "comprar este mes y «el próximo año» son dos clientes distintos, con seguimientos distintos." },
+          { titulo: "Cómo piensa pagar", texto: "al contado, con financiamiento directo o con crédito bancario. Define qué información necesita después." },
+          { titulo: "Cuándo puede visitar", texto: "la visita es el paso que más acerca a la venta. Si hay interés, el agente propone horarios ahí mismo." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "No lo conviertas en un interrogatorio",
+          texto: "Si el agente dispara cinco preguntas seguidas, la persona deja de responder. Primero contesta lo que le preguntaron y después hace una pregunta a la vez.",
+        },
+      },
+      {
+        h2: "Cuándo pasarle la conversación a una persona",
+        parrafo:
+          "El traspaso es el momento más delicado. Tiene que llegarle al asesor con un resumen —qué busca, para cuándo, cómo paga, qué preguntó— para que no vuelva a empezar desde cero. Conviene que el agente se presente como asistente desde el primer mensaje: nadie se molesta por hablar con un asistente, sí por descubrirlo tarde.",
+        bullets: [
+          { titulo: "Pide hablar con alguien", texto: "se respeta al instante, sin insistir con más preguntas." },
+          { titulo: "Quiere visitar o separar", texto: "es la señal de compra: el asesor tiene que tomarla en minutos, no en horas." },
+          { titulo: "Pregunta algo fuera de la información aprobada", texto: "mejor «te lo confirma un asesor» que una respuesta inventada." },
+          { titulo: "Negocia o reclama", texto: "descuentos, quejas o problemas con un pago siempre van a una persona." },
+          { titulo: "Escribe fuera de horario", texto: "el agente lo dice con honestidad, deja agendada la llamada o la visita, y el asesor encuentra el resumen al empezar el día." },
+        ],
+      },
+      {
+        h2: "Lo que pide WhatsApp para usar un agente de IA",
+        parrafo:
+          "Un agente de IA no funciona sobre el WhatsApp personal de un asesor. Necesita la plataforma de WhatsApp Business (la API), conectada al número de la empresa. Tres reglas que conviene conocer antes de empezar:",
+        bullets: [
+          { titulo: "El número es de la empresa", texto: "cuando un asesor se va, las conversaciones y los clientes se quedan." },
+          { titulo: "La ventana de 24 horas", texto: "durante las 24 horas siguientes al último mensaje del cliente puedes responder con texto libre sin costo. Pasado ese plazo, solo puedes escribirle con plantillas aprobadas por Meta, que se cobran por mensaje." },
+          { titulo: "Un agente de tu negocio, no un asistente general", texto: "desde el 15 de enero de 2026, las condiciones de la API no permiten ofrecer asistentes de IA de uso general. Un agente que atiende sobre tu proyecto sí está permitido." },
+        ],
+      },
+      {
+        h2: "Cómo saber si está funcionando",
+        parrafo:
+          "La cantidad de mensajes respondidos no dice nada. Lo que importa es si más interesados llegan a la visita y si esas visitas terminan en ventas. Compara contra las semanas anteriores al agente, con el mismo presupuesto de publicidad.",
+        bullets: [
+          { titulo: "Tiempo de primera respuesta", texto: "incluido el de noche y fin de semana, que es donde el agente cambia las cosas." },
+          { titulo: "Conversaciones calificadas", texto: "cuántas terminan con las cinco respuestas y cuántas se cortan, y en qué pregunta." },
+          { titulo: "Visitas agendadas y realizadas", texto: "las que agendó el agente, separadas de las que agendó el equipo." },
+          { titulo: "Ventas por campaña", texto: "solo se pueden contar si el CRM guarda el origen de cada conversación desde el primer mensaje." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es un chatbot para inmobiliarias?",
+        a: "Es un asistente que responde en el WhatsApp de la inmobiliaria, a cualquier hora, las dudas frecuentes sobre un proyecto, hace preguntas para saber qué busca cada interesado y agenda visitas. Los de botones siguen un menú fijo; un agente de IA entiende lo que la persona escribe con sus palabras y responde con la información que la empresa aprobó.",
+      },
+      {
+        q: "¿Un chatbot puede reemplazar al asesor inmobiliario?",
+        a: "No, y no debería intentarlo. La compra de un lote o un departamento se decide con confianza y casi siempre después de una visita. El agente se encarga de que ningún interesado espere y de que el asesor reciba la conversación ordenada; la negociación y el cierre siguen siendo del asesor.",
+      },
+      {
+        q: "¿Necesito WhatsApp Business?",
+        a: "Para un agente de IA, sí: se conecta a la API de WhatsApp Business con el número de la empresa. La aplicación gratuita de WhatsApp Business trae mensajes de bienvenida, de ausencia y respuestas rápidas, que ayudan, pero no califican ni agendan.",
+      },
+      {
+        q: "¿Qué pasa con los leads que escriben de noche?",
+        a: "El agente responde en el momento, contesta las dudas del proyecto, hace las preguntas de calificación y propone horarios de visita. Al empezar el día, el asesor encuentra el resumen de cada conversación y sabe a quién llamar primero.",
+      },
+      {
+        q: "¿Sirve también para concesionarios?",
+        a: "Sí, con la misma lógica y otras preguntas: qué modelo y versión le interesa, si paga al contado o con crédito vehicular, si deja un auto en parte de pago y cuándo puede venir a una prueba de manejo. Igual que en inmobiliaria, el precio final y la negociación quedan en manos del asesor.",
+      },
+      {
+        q: "¿Cuánto cuesta un agente de IA para una inmobiliaria?",
+        a: "Depende del volumen de conversaciones, de las integraciones —CRM, calendario, formularios— y del costo de los mensajes de plantilla que cobra Meta. Al comparar propuestas, pide que te separen la implementación, la mensualidad y el costo de los mensajes.",
+      },
+    ],
+    cierre:
+      "En Suggestion configuramos agentes de IA para WhatsApp —con uno atendemos nuestra propia línea las 24 horas— y los conectamos al CRM para que cada visita quede ligada a la campaña que la trajo.",
+    moneyPage: { label: "Agente de IA para WhatsApp", href: "/servicios/chatbot-whatsapp" },
+    relacionados: ["crm-inmobiliario", "como-automatizar-whatsapp", "como-conseguir-clientes-para-vender-terrenos"],
+  },
+  {
+    slug: "crm-para-whatsapp",
+    categoria: "ia-automatizacion",
+    title: "CRM para WhatsApp: Qué Es y Cómo Elegirlo | Suggestion",
+    description:
+      "Qué es un CRM para WhatsApp y qué funciones importan —bandeja compartida, reparto de chats, etapas y el anuncio de origen— antes de pagar por uno.",
+    h1: "CRM para WhatsApp: qué es, qué debe tener y cómo elegirlo",
+    excerpt:
+      "Si tu negocio vende por WhatsApp, tu cartera de clientes vive en un chat. Un CRM para WhatsApp la saca del celular de cada vendedor y la convierte en una lista que se puede repartir, seguir y medir.",
+    enCorto: [
+      "Un CRM para WhatsApp junta las conversaciones de la empresa en una sola bandeja, las reparte entre vendedores y registra en qué etapa está cada cliente.",
+      "Lo que más importa: que el número sea de la empresa, que cada chat tenga responsable y etapa, y que guarde de qué anuncio vino.",
+      "Casi todos se conectan a la API de WhatsApp Business: además de la licencia del CRM, Meta cobra por los mensajes de plantilla.",
+      "Los planes gratuitos sirven para empezar; el límite aparece cuando hay varios vendedores o necesitas medir la publicidad.",
+    ],
+    date: "2026-11-16",
+    secciones: [
+      {
+        h2: "Qué es un CRM para WhatsApp",
+        parrafo:
+          "Es un sistema de gestión de clientes cuya puerta de entrada es WhatsApp. Cada conversación se convierte en una ficha con nombre, responsable, etapa, historial y próxima acción. La aplicación de WhatsApp Business ya trae etiquetas, respuestas rápidas y catálogo, y para un negocio que atiende una sola persona puede alcanzar. Lo que no hace es repartir chats entre un equipo, avisar cuando alguien lleva horas sin respuesta ni decirte cuántas conversaciones terminaron en venta.",
+      },
+      {
+        h2: "Cuándo lo necesitas",
+        parrafo: "No hace falta por tener muchos mensajes. Hace falta cuando empiezan a pasar estas cosas:",
+        bullets: [
+          { titulo: "Más de una persona responde", texto: "y dos vendedores le contestan al mismo cliente, o ninguno porque cada uno creyó que lo hacía el otro." },
+          { titulo: "Los clientes viven en celulares personales", texto: "cuando un vendedor se va, se lleva sus conversaciones." },
+          { titulo: "No sabes cuántos compraron", texto: "a fin de mes hay muchos chats y ningún número de ventas por canal." },
+          { titulo: "Pagas anuncios que abren WhatsApp", texto: "y no puedes decir cuál de ellos trajo a los clientes que compraron." },
+          { titulo: "Nadie vuelve a escribir", texto: "a quien preguntó precio y dejó de responder, que suele ser la venta más fácil de recuperar." },
+        ],
+      },
+      {
+        h2: "Las funciones que importan",
+        parrafo:
+          "Todos los proveedores muestran listas largas de funciones. Estas son las que deciden si el sistema sirve, con la pregunta que conviene hacer antes de pagar.",
+        tabla: {
+          cabeceras: ["Función", "Para qué sirve", "Pregunta antes de contratar"],
+          filas: [
+            ["Bandeja compartida", "Varias personas atienden el mismo número desde su computadora o su celular", "¿Cuántos usuarios incluye y cuánto cuesta cada uno adicional?"],
+            ["Reparto de chats", "Cada conversación tiene un responsable; nadie responde dos veces ni se queda sin respuesta", "¿Reparte de forma automática? ¿Avisa cuando un chat lleva tiempo sin atender?"],
+            ["Etapas del embudo", "Ver cuántos clientes hay en cada paso: nuevo, cotizado, en negociación, vendido", "¿Puedo definir mis propias etapas?"],
+            ["Origen del contacto", "Saber de qué anuncio o campaña llegó cada chat", "¿Guarda los datos del anuncio cuando el cliente escribe desde Meta?"],
+            ["Plantillas y seguimiento", "Volver a escribir a quien dejó de responder, con mensajes aprobados por Meta", "¿El costo de los mensajes de Meta va incluido o aparte?"],
+            ["Respuestas automáticas o agente de IA", "Atender fuera de horario y calificar antes de pasar al vendedor", "¿Puedo revisar y corregir lo que responde?"],
+            ["Exportación", "Llevarte contactos e historial si mañana cambias de sistema", "¿En qué formato se exportan y quién puede hacerlo?"],
+          ],
+          nota: "La función que más se subestima es el origen del contacto: sin ella, el CRM ordena conversaciones pero no te ayuda a decidir dónde invertir.",
+        },
+      },
+      {
+        h2: "El dato que casi nadie guarda: de qué anuncio vino",
+        parrafo:
+          "Cuando alguien escribe desde un anuncio de Facebook o Instagram que abre WhatsApp, el primer mensaje llega con los datos de ese anuncio, siempre que el número esté conectado por la API. Si el CRM los guarda en la ficha del cliente, al cerrar el mes puedes dividir lo invertido en cada campaña entre las ventas que trajo. Si el chat cae en el celular de un vendedor, ese dato se pierde y la publicidad vuelve a medirse por intuición.",
+        nota: {
+          tipo: "info",
+          titulo: "Guarda también la fecha de entrada",
+          texto: "Un cliente que escribió hace tres meses y compra hoy no es una venta de la campaña de este mes. Con la fecha de entrada en cada ficha puedes separar lo que trajo la publicidad reciente de lo que cerró la cartera antigua.",
+        },
+      },
+      {
+        h2: "Gratis, por usuario o a medida: cómo se cobra",
+        parrafo:
+          "Los precios cambian según el proveedor y el plan, pero la estructura casi siempre es la misma. Para comparar bien, separa estas cuatro partes:",
+        bullets: [
+          { titulo: "Planes gratuitos o de inicio", texto: "sirven para un número y pocos usuarios. Suelen limitar contactos, automatizaciones o reportes." },
+          { titulo: "Licencia por usuario al mes", texto: "el modelo más común. Haz la cuenta con el equipo que vas a tener en un año, no con el de hoy." },
+          { titulo: "Mensajes de Meta", texto: "van aparte de la licencia. Responder con texto libre dentro de las 24 horas desde el último mensaje del cliente no tiene costo; las plantillas se cobran por mensaje, según su tipo." },
+          { titulo: "Implementación", texto: "conectar el número, definir las etapas, enlazar formularios y anuncios, y capacitar al equipo. Pregunta si está incluida o se cobra aparte." },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Nunca sobre el número personal de un vendedor",
+          texto: "El CRM tiene que conectarse a un número de la empresa. Es la única forma de que los clientes sigan siendo tuyos cuando alguien del equipo cambia de trabajo.",
+        },
+      },
+      {
+        h2: "Cómo implementarlo sin que el equipo lo abandone",
+        parrafo: "Casi ningún CRM fracasa por el software. Fracasa porque el equipo deja de usarlo a las tres semanas.",
+        pasos: [
+          { titulo: "Define las etapas antes de elegir el sistema", texto: "si cada vendedor entiende «interesado» a su manera, los reportes no van a significar nada." },
+          { titulo: "Conecta el número de la empresa y los anuncios", texto: "para que cada chat entre solo, con su origen, sin que nadie copie datos a mano." },
+          { titulo: "Reparte con reglas claras", texto: "por turnos, por producto o por zona. Lo importante es que cada chat tenga dueño desde el primer minuto." },
+          { titulo: "Mide el tiempo de primera respuesta", texto: "desde el primer día. Es el número que más rápido muestra si el sistema está mejorando la atención." },
+          { titulo: "Revísalo cada semana", texto: "quién tiene chats sin próxima acción, qué cotizaciones nadie siguió y en qué etapa se caen más clientes." },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "¿Qué es un CRM para WhatsApp?",
+        a: "Es un sistema que reúne las conversaciones de WhatsApp de la empresa en una sola bandeja y convierte cada una en la ficha de un cliente, con responsable, etapa de venta, historial y próxima acción. Sirve para que varias personas atiendan el mismo número sin pisarse y para medir cuántos chats terminan en venta.",
+      },
+      {
+        q: "¿Hay CRM para WhatsApp gratis?",
+        a: "Sí, varios proveedores tienen planes gratuitos o de inicio, con límites de usuarios, contactos o automatizaciones. Ten en cuenta que los mensajes de plantilla los cobra Meta, aparte del CRM, aunque el plan sea gratuito.",
+      },
+      {
+        q: "¿Necesito la API de WhatsApp Business?",
+        a: "Para una bandeja compartida con varios usuarios, reparto automático y guardar el anuncio de origen, en la práctica sí. La mayoría de CRM se conecta por la API, directamente o a través de un proveedor autorizado por Meta.",
+      },
+      {
+        q: "¿Puedo usar mi número actual?",
+        a: "Normalmente sí, pero el proceso depende del proveedor. Antes de conectarlo, pregunta qué pasa con el historial de chats y si podrás seguir usando la aplicación en ese número.",
+      },
+      {
+        q: "¿Qué diferencia hay entre un CRM para WhatsApp y un chatbot?",
+        a: "El chatbot o agente de IA responde los mensajes; el CRM ordena a los clientes y mide qué pasa con ellos. Se complementan: el agente atiende y califica a cualquier hora, y el CRM guarda el resultado de cada conversación con su responsable y su etapa.",
+      },
+      {
+        q: "¿Sirve para medir la publicidad?",
+        a: "Es la forma más directa de medirla hasta la venta, siempre que guarde el anuncio de origen de cada chat. Con ese dato, al final del mes sabes cuánto costó cada venta por campaña, en lugar de contar solo cuántos mensajes llegaron.",
+      },
+    ],
+    cierre:
+      "En Suggestion conectamos tu WhatsApp a un CRM con etapas, reparto entre vendedores y el anuncio de origen guardado en cada chat, para que la publicidad se mida en ventas y no en mensajes.",
+    moneyPage: { label: "CRM para WhatsApp", href: "/servicios/crm-automatizacion" },
+    relacionados: ["que-es-un-crm", "como-vender-por-whatsapp-paso-a-paso", "como-automatizar-whatsapp"],
   },
 ];
 

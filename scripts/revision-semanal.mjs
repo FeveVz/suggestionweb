@@ -23,23 +23,30 @@ const FLACA = 600; // por debajo de esto, la página pide contenido
 
 /** Términos que el sitio DEBERÍA cubrir, y en qué páginas tiene sentido. */
 const OBJETIVOS = [
-  // Zonas: la región Ica no es solo la ciudad de Ica.
-  { termino: "Parcona", donde: /\/(servicios|marketing)-?/, grupo: "zonas" },
-  { termino: "Subtanjalla", donde: /\/(servicios|marketing)-?/, grupo: "zonas" },
-  { termino: "La Tinguiña", donde: /\/(servicios|marketing)-?/, grupo: "zonas" },
-  { termino: "Los Aquijes", donde: /\/(servicios|marketing)-?/, grupo: "zonas" },
-  { termino: "Salas Guadalupe", donde: /\/(servicios|marketing)-?/, grupo: "zonas" },
-  { termino: "Ocucaje", donde: /marketing-(pisco-vino|turismo|agroexportacion)/, grupo: "zonas" },
-  { termino: "Palpa", donde: /\/(servicios|marketing)-?/, grupo: "zonas" },
-  { termino: "Marcona", donde: /marketing-(agroexportacion|automotriz)|servicios\/(btl|publicidad-movil)/, grupo: "zonas" },
-  { termino: "Paracas", donde: /marketing-turismo|agencia-de-marketing-en-pisco/, grupo: "zonas" },
-  { termino: "Huacachina", donde: /marketing-turismo/, grupo: "zonas" },
+  // Zonas: la región Ica no es solo la ciudad de Ica. Desde el 16-nov-2026 cada
+  // término apunta solo a las páginas donde es verdad: los distritos van en los
+  // servicios que entregan en ellos (imprenta y gigantografías comparten taller
+  // y reparto). Antes apuntaban a los 40 servicios y sectores, incluidos los
+  // digitales, que el owner decidió enfocar a nivel nacional (4-oct-2026), y el
+  // informe pedía meter "Parcona" en páginas de SEO o de CRM.
+  // Las rutas van ancladas (^…$): sin ancla, /marketing-automotriz también
+  // atrapaba /blog/automotriz/marketing-automotriz-ejemplos.
+  { termino: "Parcona", donde: /^\/servicios\/(imprenta|gigantografias)$/, grupo: "zonas" },
+  { termino: "Subtanjalla", donde: /^\/(servicios\/(imprenta|gigantografias)|marketing-pisco-vino)$/, grupo: "zonas" },
+  { termino: "La Tinguiña", donde: /^\/servicios\/(imprenta|gigantografias)$/, grupo: "zonas" },
+  { termino: "Los Aquijes", donde: /^\/servicios\/(imprenta|gigantografias)$/, grupo: "zonas" },
+  { termino: "Salas Guadalupe", donde: /^\/(servicios\/(imprenta|gigantografias)|marketing-agroexportacion)$/, grupo: "zonas" },
+  { termino: "Ocucaje", donde: /^\/marketing-(pisco-vino|turismo)$/, grupo: "zonas" },
+  { termino: "Palpa", donde: /^\/(servicios\/(imprenta|produccion-audiovisual)|marketing-turismo)$/, grupo: "zonas" },
+  { termino: "Marcona", donde: /^\/marketing-(agroexportacion|automotriz)$/, grupo: "zonas" },
+  { termino: "Paracas", donde: /^\/(marketing-turismo|agencia-de-marketing-en-pisco)$/, grupo: "zonas" },
+  { termino: "Huacachina", donde: /^\/marketing-turismo$/, grupo: "zonas" },
   // Búsquedas comerciales confirmadas en Search Console.
-  { termino: "gigantograf", donde: /servicios\/(imprenta|estructuras-publicitarias)/, grupo: "comercial" },
-  { termino: "souvenir", donde: /servicios\/merchandising/, grupo: "comercial" },
-  { termino: "productora", donde: /servicios\/produccion-audiovisual/, grupo: "comercial" },
-  { termino: "postproducc", donde: /servicios\/produccion-audiovisual/, grupo: "comercial" },
-  { termino: "activaci", donde: /servicios\/btl/, grupo: "comercial" },
+  { termino: "gigantograf", donde: /^\/servicios\/(imprenta|estructuras-publicitarias)$/, grupo: "comercial" },
+  { termino: "souvenir", donde: /^\/servicios\/merchandising$/, grupo: "comercial" },
+  { termino: "productora", donde: /^\/servicios\/produccion-audiovisual$/, grupo: "comercial" },
+  { termino: "postproducc", donde: /^\/servicios\/produccion-audiovisual$/, grupo: "comercial" },
+  { termino: "activaci", donde: /^\/servicios\/btl$/, grupo: "comercial" },
 ];
 
 const soloZonas = process.argv.slice(2).includes("zonas");

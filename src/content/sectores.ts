@@ -112,6 +112,7 @@ export const SECTORES: Sector[] = [
       { label: "Publicidad inmobiliaria en redes", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
       { label: "Qué es un embudo de ventas", href: "/blog/conversion/que-es-un-embudo-de-ventas" },
       { label: "CRM inmobiliario: qué debe tener", href: "/blog/inmobiliario/crm-inmobiliario" },
+      { label: "Chatbot de WhatsApp para inmobiliarias", href: "/blog/inmobiliario/chatbot-whatsapp-inmobiliaria" },
     ],
     faq: [
       {
