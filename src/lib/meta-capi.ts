@@ -2,10 +2,15 @@ import { createHash } from "crypto";
 import { esExternalId, nombreMeta, telefonoMeta } from "@/lib/meta-match";
 
 /**
- * Meta Conversions API (server-side). Envía el evento Lead directamente a Meta,
- * DEDUPLICADO con el Pixel del navegador vía event_id compartido. La PII se
+ * Meta Conversions API (server-side). Envía eventos directamente a Meta,
+ * DEDUPLICADOS con el Pixel del navegador vía event_id compartido. La PII se
  * hashea con SHA-256 (requisito de Meta). Falla en silencio: la medición nunca
- * rompe el guardado del lead.
+ * rompe nada de cara a quien visita.
+ *
+ * Desde el 16-nov-2026 reemplaza a la pasarela de Stape (capig.stape.pm), que
+ * fue una prueba gratis de 7 días (4 al 11-jul-2026) y desde entonces solo
+ * devolvía 422. La usan /api/lead (lead guardado en la base) y /api/evento
+ * (clic a WhatsApp/teléfono/correo y formularios que van directo a WhatsApp).
  *
  * Requiere en el entorno (Vercel):
  *   - NEXT_PUBLIC_META_PIXEL_ID  mismo dataset del Pixel (2487100898472593)
@@ -18,7 +23,7 @@ const GRAPH_VERSION = "v21.0";
 
 const sha256 = (v: string) => createHash("sha256").update(v).digest("hex");
 
-type LeadInput = {
+export type CapiInput = {
   eventId: string;
   email?: string | null;
   phone?: string | null;
@@ -29,12 +34,19 @@ type LeadInput = {
   ip?: string;
   ua?: string;
   sourceUrl?: string;
+  /** Solo para verificar en "Probar eventos"; no cuenta en las estadísticas. */
+  testCode?: string;
+  customData?: Record<string, string>;
 };
 
-export async function sendLeadCapi(i: LeadInput): Promise<void> {
+/**
+ * Envía un evento. Devuelve cuántos eventos aceptó Meta (0 si no se envió o
+ * falló), para poder verificar con un código de prueba sin mirar los registros.
+ */
+export async function sendCapiEvent(eventName: "Lead" | "Contact", i: CapiInput): Promise<number> {
   const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
   const token = process.env.META_CAPI_TOKEN;
-  if (!pixelId || !token || !i.eventId) return; // sin token → no-op (seguro)
+  if (!pixelId || !token || !i.eventId) return 0; // sin token → no-op (seguro)
 
   // user_data: PII hasheada + señales de match (fbp/fbc/ip/ua) sin hashear.
   const user: Record<string, unknown> = {};
@@ -58,19 +70,21 @@ export async function sendLeadCapi(i: LeadInput): Promise<void> {
   if (i.ua) user.client_user_agent = i.ua;
 
   const event: Record<string, unknown> = {
-    event_name: "Lead",
+    event_name: eventName,
     event_time: Math.floor(Date.now() / 1000),
     event_id: i.eventId, // ← mismo id que el Pixel: Meta los une en uno solo
     action_source: "website",
     user_data: user,
   };
   if (i.sourceUrl) event.event_source_url = i.sourceUrl;
+  if (i.customData && Object.keys(i.customData).length) event.custom_data = i.customData;
 
   const payload: Record<string, unknown> = { data: [event] };
-  if (process.env.META_CAPI_TEST_CODE) payload.test_event_code = process.env.META_CAPI_TEST_CODE;
+  const testCode = i.testCode || process.env.META_CAPI_TEST_CODE;
+  if (testCode) payload.test_event_code = testCode;
 
   try {
-    await fetch(
+    const r = await fetch(
       `https://graph.facebook.com/${GRAPH_VERSION}/${pixelId}/events?access_token=${encodeURIComponent(token)}`,
       {
         method: "POST",
@@ -80,7 +94,18 @@ export async function sendLeadCapi(i: LeadInput): Promise<void> {
         signal: AbortSignal.timeout(2500),
       },
     );
+    if (!r.ok) {
+      console.error("[capi] Meta rechazó el evento:", eventName, r.status, (await r.text().catch(() => "")).slice(0, 300));
+      return 0;
+    }
+    const j = (await r.json().catch(() => ({}))) as { events_received?: number };
+    return j.events_received ?? 0;
   } catch {
-    /* nunca romper la respuesta del lead */
+    return 0; /* nunca romper la respuesta */
   }
+}
+
+/** Compatibilidad con /api/lead. */
+export async function sendLeadCapi(i: CapiInput): Promise<void> {
+  await sendCapiEvent("Lead", i);
 }

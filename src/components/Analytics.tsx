@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
-import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, ES_INTERNO_JS, captureAttribution, track } from "@/lib/tracking";
+import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, ES_INTERNO_JS, captureAttribution, track, newEventId, metaServidor } from "@/lib/tracking";
 import { EID_KEY } from "@/lib/meta-match";
 
 /**
@@ -18,12 +18,16 @@ import { EID_KEY } from "@/lib/meta-match";
  * interno no cargan (ver tracking.ts).
  *
  * El Píxel arranca con un external_id: un identificador anónimo y aleatorio
- * que se guarda en este navegador y acompaña a cada evento. La pasarela de
- * Stape (capig.stape.pm) copia cada evento del Píxel a la API de
- * Conversiones con los datos que el Píxel tenga, así que lo que se pase aquí
- * llega por las dos vías. Antes solo viajaban IP, navegador y fbp, y la
- * calidad de coincidencias del PageView se quedaba en 6,1/10 (diagnóstico del
- * 15-oct-2026).
+ * que se guarda en este navegador y acompaña a cada evento. Antes solo
+ * viajaban IP, navegador y fbp, y la calidad de coincidencias del PageView se
+ * quedaba en 6,1/10 (diagnóstico del 15-oct-2026).
+ *
+ * API de Conversiones: la pasarela de Stape (capig.stape.pm) fue una prueba
+ * de 7 días (4 al 11-jul-2026) y murió ahí. Desde el 16-nov-2026 los eventos
+ * que importan (Contact y Lead) se copian desde nuestro propio servidor
+ * (/api/evento, ver metaServidor en tracking.ts), con el mismo event_id que
+ * el Píxel. El PageView queda solo en el Píxel. Si en Events Manager sigue
+ * conectada la pasarela de Stape, se puede desconectar: no hace nada.
  *
  * ⚠️ No llamar a fbq('init') por segunda vez para añadir datos (teléfono al
  * enviar un formulario, etc.): el Píxel solo acepta un segundo init si el
@@ -67,7 +71,10 @@ export default function Analytics() {
       else if (href.startsWith("tel:")) method = "phone";
       else if (href.startsWith("mailto:")) method = "email";
       if (!method) return;
-      track("contact", { method, page_path: window.location.pathname });
+      // Mismo id para el Píxel y para la copia del servidor: Meta los une.
+      const id = newEventId();
+      track("contact", { method, page_path: window.location.pathname }, id);
+      metaServidor("Contact", id, { method });
     };
 
     // Captura: dispara aunque un hijo del <a> (icono/span) sea el objetivo real.

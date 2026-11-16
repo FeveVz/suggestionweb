@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Btn } from "@/components/brand/parts";
-import { track, leadDedup, getAttribution } from "@/lib/tracking";
+import { track, leadDedup, getAttribution, metaServidor } from "@/lib/tracking";
 import { GUARDAR_EN_BASE, temaDeUrl } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
 
@@ -99,6 +99,12 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
     const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
     if (!GUARDAR_EN_BASE) {
       track("generate_lead", { origen: consultoria ? "consultoria-cero" : "auditoria" }, dedup.event_id);
+      // Sin base no pasa por /api/lead: la copia server-side del Lead sale de aquí.
+      metaServidor("Lead", dedup.event_id, {
+        origen: consultoria ? "consultoria-cero" : "auditoria",
+        nombre: String(f.get("nombre") || ""),
+        telefono: String(f.get("telefono") || ""),
+      });
       setSent(true);
       // Un momento para que salga el evento antes de cambiar de página.
       setTimeout(() => window.location.assign("/gracias"), 500);

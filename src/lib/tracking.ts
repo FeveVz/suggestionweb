@@ -187,3 +187,33 @@ export function leadDedup(): { event_id: string; event_source_url: string; fbp: 
     external_id: externalId(),
   };
 }
+
+/** ¿Navegador marcado como interno (`?interno=1`)? Entonces no se mide nada. */
+function esInterno(): boolean {
+  try {
+    return localStorage.getItem(INTERNO_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Copia server-side (API de Conversiones) del evento que el Píxel acaba de
+ * mandar con `eventId`: Meta une los dos por ese id. Va por sendBeacon para
+ * que sobreviva aunque la página se vaya a WhatsApp en ese mismo instante.
+ * `datos`: method/origen y, solo en el Lead del formulario, nombre y teléfono
+ * (el servidor los hashea antes de enviarlos a Meta).
+ */
+export function metaServidor(evento: "Contact" | "Lead", eventId: string, datos?: Record<string, string>): void {
+  if (!META_PIXEL_ID || typeof window === "undefined" || esInterno()) return;
+  try {
+    const base = leadDedup();
+    const body = JSON.stringify({ ...base, ...datos, event_name: evento, event_id: eventId });
+    const blob = new Blob([body], { type: "application/json" });
+    if (!navigator.sendBeacon?.("/api/evento", blob)) {
+      fetch("/api/evento", { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true }).catch(() => {});
+    }
+  } catch {
+    /* la medición nunca rompe la UX */
+  }
+}
