@@ -6,11 +6,13 @@ import { getSector, getSectorAst } from "@/content/sectores";
 import { getServicio } from "@/content/servicios";
 
 /** Imagen de hero por sector (cuando existe foto/render real). */
-const SECTOR_IMG: Record<string, { src: string; alt: string }> = {
-  "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys" },
-  "marketing-automotriz": { src: "/assets/sectores/automotriz.webp", alt: "Campaña de marketing para el concesionario Pacífico Motors" },
-  "marketing-turismo": { src: "/assets/sectores/turismo.webp", alt: "Oasis de Huacachina en Ica, principal destino turístico de la región" },
-  "marketing-marcas-consumo": { src: "/assets/sectores/marcas.webp", alt: "Producto de marca: chorizos artesanales de El Charcutero" },
+// w/h: medidas reales del archivo. Sin ellas la imagen no puede servirse en
+// tamaños adaptados (ver LandingArticle) y el móvil descarga el original.
+const SECTOR_IMG: Record<string, { src: string; alt: string; w: number; h: number }> = {
+  "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys", w: 1000, h: 562 },
+  "marketing-automotriz": { src: "/assets/sectores/automotriz.webp", alt: "Campaña de marketing para el concesionario Pacífico Motors", w: 1000, h: 1778 },
+  "marketing-turismo": { src: "/assets/sectores/turismo.webp", alt: "Oasis de Huacachina en Ica, principal destino turístico de la región", w: 1100, h: 766 },
+  "marketing-marcas-consumo": { src: "/assets/sectores/marcas.webp", alt: "Producto de marca: chorizos artesanales de El Charcutero", w: 1000, h: 1000 },
 };
 
 /** Renderiza una landing de sector (a raíz) desde su slug. */

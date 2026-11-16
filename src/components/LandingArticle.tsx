@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, Check } from "lucide-react";
 import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
@@ -212,25 +213,41 @@ export default function LandingArticle({
             </div>
             {heroImage ? (
               <aside style={{ minWidth: 0 }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 {/*
                   Carga inmediata y con medidas, no diferida y sin ellas.
                   Iba con loading="lazy" y sin width/height: es la imagen más
                   importante de la página —la que suele ser el LCP— y el
                   navegador la aplazaba, y mientras no cargaba su caja medía
                   2 px, así que al llegar empujaba todo hacia abajo.
+
+                  Con medidas va por next/image (16-nov-2026): el móvil
+                  descargaba el original de 1.000-1.200 px para mostrarlo a
+                  ~360, y Lighthouse marcaba ~100 KiB de sobra por página.
+                  `preload` equivale al eager + fetchPriority="high" de antes.
                 */}
-                <img
-                  src={heroImage.src}
-                  alt={heroImage.alt}
-                  width={heroImage.w}
-                  height={heroImage.h}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="hk-heroimg"
-                  style={{ width: "100%", height: "auto", aspectRatio: heroImage.w && heroImage.h ? `${heroImage.w} / ${heroImage.h}` : undefined, borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }}
-                />
+                {heroImage.w && heroImage.h ? (
+                  <Image
+                    src={heroImage.src}
+                    alt={heroImage.alt}
+                    width={heroImage.w}
+                    height={heroImage.h}
+                    sizes="(min-width: 860px) 42vw, 100vw"
+                    preload
+                    className="hk-heroimg"
+                    style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }}
+                  />
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={heroImage.src}
+                    alt={heroImage.alt}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    className="hk-heroimg"
+                    style={{ width: "100%", height: "auto", borderRadius: "var(--radius-md)", border: "1px solid var(--border-subtle)", display: "block", boxShadow: "var(--shadow-md)" }}
+                  />
+                )}
               </aside>
             ) : heroItems.length > 0 ? (
               <aside style={{ minWidth: 0 }}>

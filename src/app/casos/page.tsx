@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 import { Section, Btn, Blot, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
@@ -40,6 +41,9 @@ const CASOS: {
    */
   img?: string;
   alt?: string;
+  /** Medidas reales del archivo: next/image las necesita para servir tamaños adaptados. */
+  w?: number;
+  h?: number;
 }[] = [
   {
     tag: "Inmobiliario",
@@ -52,6 +56,8 @@ const CASOS: {
     author: "",
     shape: 1,
     img: "/assets/casos/ceinys-campana-1.webp",
+    w: 1000,
+    h: 1250,
     alt: "Creatividad de la campaña de lotes de Grupo Inmobiliario Ceinys en Meta Ads",
   },
   {
@@ -68,6 +74,8 @@ const CASOS: {
     // el spot del 12 y este est\u00e1tico del 20, la misma fecha de corte del
     // reporte. No lleva nombre de proyecto, ni precio, ni dato del reporte.
     img: "/assets/casos/ceinys-agosto-creatividad.webp",
+    w: 1000,
+    h: 1000,
     alt: "Pieza de la campa\u00f1a de agosto de 2026 de Grupo Inmobiliario Ceinys: lote propio con financiamiento directo, sin evaluaci\u00f3n crediticia y con t\u00edtulo de propiedad",
   },
   {
@@ -80,6 +88,8 @@ const CASOS: {
     author: "Jorge Saykon, Gerente General",
     shape: 5,
     img: "/assets/casos/bonanza-granja.webp",
+    w: 720,
+    h: 450,
     alt: "Galón de Granjas Bonanza en operación, en Ica",
   },
   {
@@ -105,6 +115,8 @@ const CASOS: {
     // La foto anterior era de una activación en la Plaza de Armas, no de los
     // dos eventos que mide este caso. Esta sí: es del 22 de mayo.
     img: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 15),
+    w: 1173,
+    h: 880,
     alt: "Cliente y asesores junto a una unidad Mitsubishi durante el evento de Autoniza en Ica",
   },
   {
@@ -120,6 +132,8 @@ const CASOS: {
     // El render no enseña nada de la campaña; este caso va de captar leads por
     // WhatsApp y vender 8 lotes, y esta es la pieza que lo hizo.
     img: "/assets/casos/ceinys-campana-2.webp",
+    w: 1000,
+    h: 1332,
     alt: "Anuncio del bono por WhatsApp de Ceinys, la pieza que captaba los leads de la campaña",
   },
 ];
@@ -159,12 +173,17 @@ export default function Casos() {
       {/* CASOS */}
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
         <div style={{ display: "grid", gap: "var(--space-6)" }}>
-          {CASOS.map((c) => (
-            <article key={c.title} className={`hk-lift hk-caso${c.img ? " hk-caso-foto" : ""}`}>
-              {c.img && (
+          {CASOS.map((c, i) => (
+            <article key={c.href} className={`hk-lift hk-caso${c.img ? " hk-caso-foto" : ""}`}>
+              {c.img && c.w && c.h && (
                 <div className="hk-caso-img">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={c.img} alt={c.alt ?? ""} loading="lazy" decoding="async" />
+                  {/*
+                    La primera foto es el LCP de la página en móvil: iba diferida
+                    y a tamaño completo (1.000 px para una tarjeta de ~360), y
+                    Lighthouse midió un LCP de 5,5 s el 16-nov-2026. Ahora la
+                    primera se precarga y todas llegan en el tamaño de la pantalla.
+                  */}
+                  <Image src={c.img} alt={c.alt ?? ""} width={c.w} height={c.h} sizes="(min-width: 860px) 38vw, 100vw" preload={i === 0} />
                 </div>
               )}
               <div className="hk-caso-txt">
