@@ -13,7 +13,7 @@ import { ArrowRight, Check } from "lucide-react";
  * Solo datos que la página ya publica más abajo: precios de content/precios.ts
  * o el cálculo del propio artículo. Nada que no esté escrito en la página.
  */
-export default function EnCorto({ puntos, enlace }: { puntos: string[]; enlace?: { href: string; label: string } }) {
+export default function EnCorto({ puntos, enlace }: { puntos: string[]; enlace?: { href: string; label: string; externo?: boolean } }) {
   return (
     <aside
       aria-label="En corto"
@@ -38,6 +38,7 @@ export default function EnCorto({ puntos, enlace }: { puntos: string[]; enlace?:
       {enlace && (
         <a
           href={enlace.href}
+          {...(enlace.externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
           className="hk-ulink"
           style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-bold) var(--fs-sm)/1.3 var(--font-accent)", color: "var(--text-strong)" }}
         >

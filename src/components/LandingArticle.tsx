@@ -193,11 +193,11 @@ export default function LandingArticle({
                 <Btn as="a" {...destino} size="lg">
                   {ctaLabel} <ArrowRight size={18} />
                 </Btn>
-                {cotiza ? (
-                  <Btn as="a" href={consultoria} variant="secondary" size="lg">
-                    Consultoría cero gratis
-                  </Btn>
-                ) : (
+                {/* En las páginas de producto no hay segundo botón: el de la
+                    consultoría llevaba pedidos de producción al formulario de una
+                    reunión de 30 minutos (una gigantografía entró así el 17-nov) y
+                    el agente de WhatsApp los agendaba como estrategia. */}
+                {cotiza ? null : (
                   <Btn
                     as="a"
                     href={wa}
@@ -304,7 +304,10 @@ export default function LandingArticle({
       <Section tone="light">
         <div style={{ display: "grid", gap: "var(--space-8)", maxWidth: 880 }}>
           {enCorto && enCorto.length > 0 && (
-            <EnCorto puntos={enCorto} enlace={{ href: consultoria, label: CTA_CONSULTORIA }} />
+            <EnCorto
+              puntos={enCorto}
+              enlace={cotiza ? { href: wa, label: ctaLabel, externo: true } : { href: consultoria, label: CTA_CONSULTORIA }}
+            />
           )}
           {/* Un solo render de secciones para todo el sitio: antes esta
               plantilla repetia su propia version (parrafo, sub, bullets) y por

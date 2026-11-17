@@ -106,11 +106,9 @@ export default function HubLanding({
                 <Btn as="a" {...destino} size="lg">
                   {cta} <ArrowRight size={18} />
                 </Btn>
-                {cotiza ? (
-                  <Btn as="a" href={consultoriaHref(tema)} variant="secondary" size="lg">
-                    Consultoría cero gratis
-                  </Btn>
-                ) : (
+                {/* Igual que en LandingArticle: en los hubs de producto, sin el
+                    segundo botón a la consultoría (ver el comentario de allí). */}
+                {cotiza ? null : (
                   <Btn
                     as="a"
                     href={wa}
