@@ -832,7 +832,7 @@ const SERVICIOS_BASE: Servicio[] = [
     // caso nuevo del MISMO cliente. Dos períodos distintos, medidos con
     // criterios distintos, invitando a una comparación que no se sostiene.
     proof:
-      "Autoniza: 8 autos vendidos en 2 eventos · Granjas Bonanza: 15 contratos con S/2,500 de inversión · Señor de Luren: 75 reservas en una sola campaña.",
+      "Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · Granjas Bonanza: 15 contratos con S/2,500 de inversión · Señor de Luren: 75 reservas en una sola campaña.",
     secciones: [
       {
         h2: "Un resultado medido, no una promesa",

@@ -134,7 +134,7 @@ export default function LandingArticle({
   );
   const proofText =
     proof ??
-    "Ceinys: S/350K en ventas con S/3,000 · Autoniza: 8 autos vendidos en 2 eventos · 24 marcas inmobiliarias · 19 marcas de vehículos, de livianos a línea amarilla.";
+    "Ceinys: S/350K en ventas con S/3,000 · Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · 24 marcas inmobiliarias · 19 marcas de vehículos, de livianos a línea amarilla.";
   const heroItems = (incluye?.length ? incluye : beneficios ?? []).slice(0, 5).map((x) => x.titulo);
   const heroLabel = incluye?.length ? "Qué incluye" : "Lo que logras";
   return (

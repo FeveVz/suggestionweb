@@ -71,6 +71,10 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     cta: "Agenda tu consultoría cero",
     keyword: "agencia de meta ads",
+    // Barra propia, sin Ceinys: más abajo va el bloque del corte de septiembre
+    // y la barra por defecto pondría el caso de julio a su lado (CON-02).
+    proof:
+      "Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · Granjas Bonanza: 15 contratos con S/2,500 de inversión · Señor de Luren: 75 reservas en una sola campaña.",
     secciones: [
       CASO_CEINYS_SEPTIEMBRE,
       {
@@ -414,7 +418,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       { label: "Marketing automotriz: ejemplos que funcionan", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
       { label: "Regalos corporativos de Navidad", href: "/blog/imprenta-btl/regalos-corporativos-de-navidad" },
     ],
-    proof: "Autoniza: 8 autos vendidos en 2 eventos · un relanzamiento de tienda que cubrieron ocho canales de prensa · 22 activaciones documentadas con fotos propias.",
+    proof: "Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · un relanzamiento de tienda que cubrieron ocho canales de prensa · 22 activaciones documentadas con fotos propias.",
     metaTitle: "Eventos Corporativos y de Fin de Año en Ica | Suggestion",
     metaDescription:
       "Producimos eventos corporativos en Ica y el Perú: lanzamientos, inauguraciones, eventos con clientes y de fin de año. Convocatoria, montaje y registro. Cotiza.",

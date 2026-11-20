@@ -11,6 +11,11 @@ import { PORTAFOLIO } from "@/content/portafolio";
 import CountUp from "@/components/CountUp";
 import Grafico from "@/components/Grafico";
 import { fotoPortafolio } from "@/content/portafolio-fotos";
+import { getCaso } from "@/content/casos";
+
+// El gráfico de las tres cifras sale del caso de septiembre: una sola fuente,
+// para que /casos no se desalinee de la ficha del caso (auditoría CON-01).
+const GRAFICO_SEP = getCaso("ceinys-septiembre-2026")?.secciones?.find((s) => s.grafico)?.grafico;
 
 export const metadata: Metadata = buildMetadata({
   title: "Casos de Éxito de Marketing en Ica | Suggestion",
@@ -18,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
     // Sin las cifras de los cortes de Ceinys: en 155 caracteres no cabe su
     // etiqueta ni su fecha de corte (docs-fuente/21), y «18 lotes» junto a
     // «S/350K» invitaba a comparar dos casos medidos con criterios distintos.
-    "Resultados de negocio, no capturas de likes: S/350K en ventas, 75 reservas, 15 contratos y 8 autos en 2 eventos. Los recientes, con período y fecha de corte.",
+    "Resultados de negocio, no capturas de likes: S/350K en ventas, 75 reservas, 15 contratos y autos vendidos en dos eventos. Los recientes, con período y fecha de corte.",
   path: "/casos",
   ogImage: "/assets/og/casos.png",
 });
@@ -32,6 +37,7 @@ const CASOS: {
   title: string;
   periodo?: string;
   metric: string;
+  metricLocale?: string;
   note: string;
   quote: string;
   author: string;
@@ -125,7 +131,8 @@ const CASOS: {
     href: "/casos/inmobiliaria-ceinys",
     title: "Inmobiliaria Ceinys",
     periodo: "Caso publicado en julio de 2026",
-    metric: "S/350.000",
+    metric: "S/350,000",
+    metricLocale: "es-ES",
     note: "en ventas: 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
     quote: "Con S/3,000 en Meta Ads captamos 350 leads, concretamos 20 visitas y vendimos 8 lotes. La inversión se pagó sola.",
     author: "Rosario, Jefa de Ventas",
@@ -195,7 +202,7 @@ export default function Casos() {
                   <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 12 }}>{c.periodo}</p>
                 )}
                 <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: c.periodo ? 8 : 16 }}>
-                  <CountUp to={c.metric} locale={c.metric.includes(".") ? "es-ES" : undefined} />
+                  <CountUp to={c.metric} locale={c.metricLocale ?? (c.metric.includes(".") ? "es-ES" : undefined)} />
                 </div>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-body)", marginTop: 10, maxWidth: "58ch" }}>
                   <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
@@ -242,19 +249,17 @@ export default function Casos() {
             La cifra que publicamos no es la más alta que podríamos publicar.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)", maxWidth: "62ch" }}>
-            Con los mismos datos de una campaña se pueden titular tres cifras distintas, y las tres son ciertas. Esto es lo que pasó con Ceinys entre agosto y septiembre de 2026.
+            Con los mismos datos de una campaña se pueden titular tres cifras distintas, y las tres son ciertas. Esto es lo que pasó con Ceinys del 26 de agosto al 29 de septiembre de 2026.
           </p>
         </div>
-        <Grafico
-          titulo="Tres formas de contar los mismos lotes"
-          unidad="lotes"
-          datos={[
-            { etiqueta: "Cerrados durante el período", valor: 25, texto: "25", nota: "S/165.97 de publicidad por lote" },
-            { etiqueta: "Cerrados por leads que entraron durante el período de pauta", valor: 18, texto: "18", nota: "S/230.51 por lote · es la cifra que publicamos", destacada: true },
-            { etiqueta: "De ese grupo, los que además tienen origen de anuncio en el CRM", valor: 12, texto: "12", nota: "S/345.77 por lote" },
-          ]}
-          pie="Cuanto más estricto es el criterio, menos lotes quedan y más caro sale cada uno. Elegimos el del medio: lotes cerrados por leads que entraron durante el período, sin exigir que el CRM confirme el origen."
-        />
+        {GRAFICO_SEP && (
+          <Grafico
+            titulo={GRAFICO_SEP.titulo}
+            unidad={GRAFICO_SEP.unidad}
+            datos={GRAFICO_SEP.barras}
+            pie={`${GRAFICO_SEP.pie} Período: del 26 de agosto al 29 de septiembre de 2026. Resultado medido al 29 de septiembre de 2026.`}
+          />
+        )}
         <Link href="/casos/ceinys-septiembre-2026" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 26, font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
           La resta completa, en el caso de Ceinys <ArrowRight size={15} />
         </Link>

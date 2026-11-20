@@ -36,7 +36,18 @@ export default async function CasoPage({ params }: Params) {
   // Se excluyen los casos del mismo cliente: dos períodos del mismo proyecto,
   // medidos con criterios distintos, invitan a una comparación que no se
   // sostiene. Siguen publicados y accesibles desde /casos.
-  const otros = CASOS_DETALLE.filter((x) => x.slug !== c.slug && !(c.grupo && x.grupo === c.grupo)).map((x) => ({
+  // Y en las demás fichas, como máximo un caso por cliente (el primero de la
+  // lista, el corte más reciente): antes salían los tres de Ceinys seguidos
+  // (auditoría CON-02).
+  const gruposVistos = new Set<string>();
+  const otros = CASOS_DETALLE.filter((x) => x.slug !== c.slug && !(c.grupo && x.grupo === c.grupo))
+    .filter((x) => {
+      if (!x.grupo) return true;
+      if (gruposVistos.has(x.grupo)) return false;
+      gruposVistos.add(x.grupo);
+      return true;
+    })
+    .map((x) => ({
     label: x.cliente,
     href: `/casos/${x.slug}`,
     description: x.h1,

@@ -1047,7 +1047,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "La métrica que importa: ROAS, no gasto",
         parrafo:
-          "No preguntes “¿cuánto gasto?” sino “¿cuánto me devuelve cada sol?”. Con S/3,000 bien invertidos, una inmobiliaria que asesoramos generó S/350K. El monto importa menos que la estrategia detrás.",
+          "No preguntes “¿cuánto gasto?” sino “¿cuánto me devuelve cada sol?”. Como referencia, una inmobiliaria de Ica llegó a S/350K en ventas con S/3,000 bien invertidos. El monto importa menos que la estrategia detrás.",
       },
       {
         h2: "El método, paso a paso",
@@ -2258,7 +2258,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Del lead a la cita",
         parrafo:
-          "La publicidad genera el interés; el seguimiento lo convierte en cita. Sin un CRM y respuesta rápida, pagas por leads que se enfrían. Así llevamos a una inmobiliaria a 8 lotes vendidos con S/3,000.",
+          "La publicidad genera el interés; el seguimiento lo convierte en cita. Sin un CRM y respuesta rápida, pagas por leads que se enfrían. Es lo que explica el caso de una inmobiliaria de Ica que vendió 8 lotes con S/3,000 de pauta.",
       },
       {
         h2: "Cómo segmentar sin tirar el presupuesto",
@@ -2756,7 +2756,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Un caso real",
         parrafo:
-          "Inmobiliaria Ceinys: con S/3,000 en Meta Ads generamos 350 leads, 20 visitas y 8 lotes vendidos. La clave no fue solo el anuncio: fue segmentar bien, una landing que agenda y un seguimiento que no dejó enfriar al interesado.",
+          "Inmobiliaria Ceinys: con S/3,000 en Meta Ads, la campaña trajo 350 leads, 20 visitas y 8 lotes vendidos. La clave no fue solo el anuncio: fue segmentar bien, una landing que agenda y un seguimiento que no dejó enfriar al interesado.",
       },
       {
         h2: "El patrón detrás de todo ejemplo que vende",
@@ -2907,7 +2907,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Caso real: 8 lotes vendidos con S/3,000 de pauta",
         parrafo:
-          "Inmobiliaria Ceinys tenía buen producto y un proceso desordenado: interesados sí, citas pocas. Separamos los dos públicos, piezas centradas en la etapa inicial y el precio de lanzamiento, captura por formulario y WhatsApp con respuesta inmediata, y seguimiento hasta la visita. Con S/3,000 en Meta Ads: 350 leads, 20 visitas a sala de ventas y 8 lotes vendidos, equivalentes a S/350K. De 350 interesados, solo 20 se sentaron: esto no se gana por volumen de contactos, sino por lo que haces con ellos.",
+          "Inmobiliaria Ceinys tenía buen producto y un proceso desordenado: interesados sí, citas pocas. La campaña separó los dos públicos, con piezas centradas en la etapa inicial y el precio de lanzamiento, captura por formulario y WhatsApp con respuesta inmediata, y seguimiento hasta la visita. Con S/3,000 en Meta Ads: 350 leads, 20 visitas a sala de ventas y 8 lotes vendidos, equivalentes a S/350K. De 350 interesados, solo 20 se sentaron: esto no se gana por volumen de contactos, sino por lo que haces con ellos.",
       },
       {
         h2: "¿Cambia algo vender en preventa en un mercado como Ica?",
