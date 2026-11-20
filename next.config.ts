@@ -12,7 +12,6 @@ import type { NextConfig } from "next";
  * Quién es cada dominio:
  * - googletagmanager + google-analytics + analytics.google.com → GA4 (GT-NNQW6GPS).
  * - connect.facebook.net + facebook.com → Píxel de Meta.
- * - capig.stape.pm → pasarela server-side de Stape (API de Conversiones).
  * - clarity.ms + bing.com → Clarity (es de Microsoft y carga su propio tag).
  *
  * `unsafe-inline` en script-src es obligatorio hoy: Next inyecta su arranque
@@ -30,11 +29,11 @@ const CSP = [
   // violates..." y ese evento se perdía. Detectado en local antes de subirlo.
   "form-action 'self' https://www.facebook.com",
   "frame-ancestors 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms https://capig.stape.pm https://bat.bing.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms https://bat.bing.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://capig.stape.pm https://*.bing.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://*.bing.com",
   "frame-src 'self' https://www.facebook.com https://td.doubleclick.net https://www.googletagmanager.com",
   "media-src 'self'",
   "worker-src 'self' blob:",
