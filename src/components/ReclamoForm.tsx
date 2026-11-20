@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Btn } from "@/components/brand/parts";
-import { GUARDAR_EN_BASE } from "@/lib/cta";
+import { RECLAMOS_EN_BASE } from "@/lib/cta";
 import { site } from "@/lib/site";
 import { DEF_QUEJA, DEF_RECLAMO, LEYENDA_INDECOPI, LEYENDA_PLAZO } from "@/lib/reclamos";
 
@@ -12,7 +12,7 @@ import { DEF_QUEJA, DEF_RECLAMO, LEYENDA_INDECOPI, LEYENDA_PLAZO } from "@/lib/r
  * Hoja de Reclamación oficial: consumidor (con padre, madre o apoderado si es
  * menor de edad), bien contratado, tipo, detalle y pedido.
  *
- * Mientras GUARDAR_EN_BASE sea false (lib/cta.ts) no hay base: la hoja se arma
+ * Mientras RECLAMOS_EN_BASE sea false (lib/cta.ts) no hay base: la hoja se arma
  * en el navegador y sale por CORREO a hola@. Antes salía por WhatsApp, donde
  * la atiende el agente de IA, que no debe tramitar reclamos (auditoría
  * MED-04, tarea 2.07). El correo enviado y la copia impresa o en PDF le
@@ -64,7 +64,7 @@ export default function ReclamoForm() {
     if (f.get("website")) return; // honeypot
     const g = (k: string) => String(f.get(k) ?? "").trim();
 
-    if (!GUARDAR_EN_BASE) {
+    if (!RECLAMOS_EN_BASE) {
       const ahora = new Date();
       const fecha = ahora.toLocaleDateString("es-PE", { timeZone: "America/Lima", day: "2-digit", month: "2-digit", year: "numeric" });
       const hora = ahora.toLocaleTimeString("es-PE", { timeZone: "America/Lima", hour: "2-digit", minute: "2-digit" });

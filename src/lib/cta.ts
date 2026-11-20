@@ -15,12 +15,19 @@
 export const CTA_CONSULTORIA = "Agenda tu consultoría cero";
 
 /**
- * Los formularios van solo a WhatsApp mientras Supabase siga pausado (decisión
- * del owner, 2026-11-02). Al reactivar la base: ponerlo en true y devolver a
- * /gracias su texto de "datos recibidos". Sin base, un dato solo llega si la
- * persona envía el mensaje, y no se guarda de dónde vino (utm, gclid).
+ * Los formularios de consultoría y auditoría se guardan en el servidor antes
+ * de contar el Lead (tarea 2.01, decisión 5 del dueño, 20-nov-2026): una Hoja
+ * de Google vía /api/lead. Si el servidor aún no tiene dónde guardar (503
+ * «sin-almacen»), el formulario sigue como antes: WhatsApp y Lead contado
+ * desde el navegador.
  */
-export const GUARDAR_EN_BASE = false;
+export const GUARDAR_EN_BASE = true;
+
+/**
+ * El Libro de Reclamaciones sigue por correo (tarea 2.07) hasta tener
+ * correlativo y constancia automática validados por un abogado (tarea 2.08).
+ */
+export const RECLAMOS_EN_BASE = false;
 
 export const esCotizacion = (label: string) => /cotiz/i.test(label);
 

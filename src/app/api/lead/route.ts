@@ -2,10 +2,16 @@ import { NextResponse } from "next/server";
 import { sendLeadCapi } from "@/lib/meta-capi";
 
 /**
- * Captura de leads → tabla `leads` en Supabase (la misma BD del dashboard
- * admin). Tipos: contacto | auditoria | reclamo. Dos capas contra abuso:
- * honeypot `website` (bots) y límite de 5 envíos por IP cada 10 min (flood).
- * Nunca expone la service key (solo server-side).
+ * Captura de leads. Tipos: contacto | auditoria | reclamo. Dos capas contra
+ * abuso: honeypot `website` (bots) y límite de 5 envíos por IP cada 10 min.
+ *
+ * Dónde se guarda (decisión 5 del dueño, 20-nov-2026; tarea 2.01):
+ *   - LEADS_SHEET_URL → Hoja de Google vía Apps Script (scripts/apps-script-leads.gs).
+ *     Es el destino normal mientras Supabase siga pausado.
+ *   - LEADS_DESTINO=supabase → tabla `leads` de Supabase (la del dashboard admin).
+ *   - Ninguno → 503 «sin-almacen»: el formulario sigue como antes (WhatsApp y
+ *     Lead contado desde el navegador), sin romper nada mientras se configura.
+ * La URL de la hoja y la service key solo viven en el servidor.
  */
 
 const TIPOS = new Set(["contacto", "auditoria", "reclamo"]);
@@ -78,17 +84,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "faltan datos" }, { status: 400 });
   }
 
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) return NextResponse.json({ ok: false, error: "config" }, { status: 500 });
-
-  // extra (jsonb) reúne los datos del formulario + la atribución de campaña
-  // (de qué anuncio vino el lead). Se acota el tamaño para no dejar un vector de
-  // llenado de BD por el campo abierto.
+  // extra reúne los datos del formulario + la atribución de campaña (de qué
+  // anuncio vino el lead). Se acota el tamaño para no dejar un vector de
+  // llenado por el campo abierto.
   const baseExtra = b.extra && typeof b.extra === "object" ? (b.extra as Record<string, unknown>) : null;
   const attribution = b.attribution && typeof b.attribution === "object" ? (b.attribution as Record<string, unknown>) : null;
+  const atribucionOk = attribution && JSON.stringify(attribution).length <= 2000 ? attribution : null;
   let extra: Record<string, unknown> | null =
-    baseExtra || attribution ? { ...(baseExtra || {}), ...(attribution ? { attribution } : {}) } : null;
+    baseExtra || atribucionOk ? { ...(baseExtra || {}), ...(atribucionOk ? { attribution: atribucionOk } : {}) } : null;
   if (extra && JSON.stringify(extra).length > 4000) extra = baseExtra; // descarta atribución anómala, conserva el formulario
 
   const row = {
@@ -102,42 +105,78 @@ export async function POST(req: Request) {
     extra,
   };
 
-  // Cada fallo devuelve un código que dice DÓNDE falló, sin datos sensibles.
-  // Antes, si Supabase no respondía, el fetch lanzaba una excepción y la ruta
-  // caía con un 500 vacío: el formulario decía "no pudimos guardar" y no
-  // había forma de saber por qué sin entrar a los registros de Vercel.
-  let r: Response;
-  try {
-    r = await fetch(`${url}/rest/v1/leads`, {
-      method: "POST",
-      headers: {
-        apikey: key,
-        Authorization: `Bearer ${key}`,
-        "Content-Type": "application/json",
-        Prefer: "return=representation",
-      },
-      body: JSON.stringify(row),
-      cache: "no-store",
-      signal: AbortSignal.timeout(8000),
-    });
-  } catch (e) {
-    const err = e as { name?: string; cause?: { code?: string } };
-    console.error("[lead] Supabase no responde:", e);
-    return NextResponse.json(
-      { ok: false, error: "db-red", causa: err.cause?.code || err.name || "desconocida" },
-      { status: 502 },
-    );
+  const hoja = process.env.LEADS_SHEET_URL;
+  const supabase = process.env.LEADS_DESTINO === "supabase";
+  if (!hoja && !supabase) {
+    return NextResponse.json({ ok: false, error: "sin-almacen" }, { status: 503 });
   }
 
-  if (!r.ok) {
-    console.error("[lead] Supabase rechazó el registro:", r.status, await r.text().catch(() => ""));
-    return NextResponse.json({ ok: false, error: "db", status: r.status }, { status: 502 });
-  }
+  // Cada fallo devuelve un código que dice DÓNDE falló, sin datos sensibles.
   let id: string | null = null;
-  try {
-    id = ((await r.json()) as { id?: string }[])[0]?.id ?? null;
-  } catch {
-    /* el registro ya está guardado; solo falta el id */
+  if (hoja) {
+    let r: Response;
+    try {
+      // Apps Script responde con una redirección a googleusercontent.com:
+      // fetch la sigue y ahí está el JSON.
+      r = await fetch(hoja, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...row, extra: baseExtra, attribution: atribucionOk }),
+        redirect: "follow",
+        cache: "no-store",
+        signal: AbortSignal.timeout(10000),
+      });
+    } catch (e) {
+      const err = e as { name?: string; cause?: { code?: string } };
+      console.error("[lead] La hoja no responde:", e);
+      return NextResponse.json({ ok: false, error: "hoja-red", causa: err.cause?.code || err.name || "desconocida" }, { status: 502 });
+    }
+    let data: { ok?: boolean; fila?: number; error?: string } = {};
+    try {
+      data = await r.json();
+    } catch {
+      /* respuesta que no es JSON: se trata como fallo abajo */
+    }
+    if (!r.ok || !data.ok) {
+      console.error("[lead] La hoja rechazó el registro:", r.status, data.error || "");
+      return NextResponse.json({ ok: false, error: "hoja", status: r.status }, { status: 502 });
+    }
+    id = data.fila ? `F${data.fila}` : null;
+  } else {
+    const url = process.env.SUPABASE_URL;
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!url || !key) return NextResponse.json({ ok: false, error: "config" }, { status: 500 });
+    let r: Response;
+    try {
+      r = await fetch(`${url}/rest/v1/leads`, {
+        method: "POST",
+        headers: {
+          apikey: key,
+          Authorization: `Bearer ${key}`,
+          "Content-Type": "application/json",
+          Prefer: "return=representation",
+        },
+        body: JSON.stringify(row),
+        cache: "no-store",
+        signal: AbortSignal.timeout(8000),
+      });
+    } catch (e) {
+      const err = e as { name?: string; cause?: { code?: string } };
+      console.error("[lead] Supabase no responde:", e);
+      return NextResponse.json(
+        { ok: false, error: "db-red", causa: err.cause?.code || err.name || "desconocida" },
+        { status: 502 },
+      );
+    }
+    if (!r.ok) {
+      console.error("[lead] Supabase rechazó el registro:", r.status, await r.text().catch(() => ""));
+      return NextResponse.json({ ok: false, error: "db", status: r.status }, { status: 502 });
+    }
+    try {
+      id = ((await r.json()) as { id?: string }[])[0]?.id ?? null;
+    } catch {
+      /* el registro ya está guardado; solo falta el id */
+    }
   }
 
   // Meta CAPI: evento Lead server-side, deduplicado con el Pixel vía event_id.

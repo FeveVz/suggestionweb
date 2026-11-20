@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { ArrowRight, Clock } from "lucide-react";
 import { Btn, Label } from "@/components/brand/parts";
 import { buildMetadata } from "@/lib/seo";
-import GraciasWa from "@/components/GraciasWa";
+import GraciasWa, { GraciasGuardado } from "@/components/GraciasWa";
 import { site } from "@/lib/site";
 
 /**
- * Tras enviar un formulario. Mientras GUARDAR_EN_BASE sea false (lib/cta.ts) los
- * datos solo llegan si la persona envía el WhatsApp: por eso no dice "recibido" y
- * su page_view no confirma un lead.
+ * Tras enviar un formulario. Pide enviar el WhatsApp igual; si el formulario
+ * se guardó en el servidor (llega con ?g=1, tarea 2.01), GraciasGuardado
+ * añade que ya tenemos los datos. Su page_view no confirma un lead.
  * noindex: no debe rankear ni recibir tráfico orgánico.
  */
 export const metadata: Metadata = buildMetadata({
@@ -27,7 +27,7 @@ export default function Gracias() {
           Envía el mensaje en WhatsApp para terminar.
         </h1>
         <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "20px 0 0", maxWidth: "52ch" }}>
-          Tu mensaje ya está escrito en WhatsApp. <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>Hasta que lo envíes no nos llega.</strong> Si no se abrió, ábrelo aquí:
+          Tu mensaje ya está escrito en WhatsApp. <GraciasGuardado /> Si no se abrió, ábrelo aquí:
         </p>
         <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}>
           <GraciasWa />

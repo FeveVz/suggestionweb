@@ -131,7 +131,6 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
         ...dedup,
       }),
     });
-    track("generate_lead", { origen: consultoria ? "consultoria-cero" : "auditoria" }, dedup.event_id);
     setSent(true);
 
     // Antes esto era `.catch(() => {})` + salto a /gracias a los 700 ms: si el
@@ -143,13 +142,26 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
       new Promise<"timeout">((res) => setTimeout(() => res("timeout"), 2500)),
     ]);
 
+    const origen = consultoria ? "consultoria-cero" : "auditoria";
     if (r === "timeout") {
-      // WhatsApp ya está abierto y `keepalive` termina el guardado igual.
+      // WhatsApp ya está abierto y `keepalive` termina el guardado igual; si se
+      // guarda, el servidor manda el Lead a Meta (CAPI). Aquí no se cuenta nada.
       window.location.assign("/gracias");
       return;
     }
     if (r && r.ok) {
-      window.location.assign("/gracias");
+      // Se guardó: ahora sí se cuenta el Lead (tarea 2.01). Mismo event_id que
+      // la copia que manda el servidor, así Meta los une.
+      track("generate_lead", { origen }, dedup.event_id);
+      setTimeout(() => window.location.assign("/gracias?g=1"), 400);
+      return;
+    }
+    if (r && r.status === 503) {
+      // El servidor todavía no tiene dónde guardar: como antes, el Lead sale del
+      // navegador y su copia por /api/evento.
+      track("generate_lead", { origen }, dedup.event_id);
+      metaServidor("Lead", dedup.event_id, { origen, nombre: String(f.get("nombre") || ""), telefono: String(f.get("telefono") || "") });
+      setTimeout(() => window.location.assign("/gracias"), 500);
       return;
     }
     setSent(false);
