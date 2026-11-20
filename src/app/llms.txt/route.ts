@@ -54,9 +54,14 @@ export function GET() {
     return `- [${c.nombre}](${u(`/blog/${c.slug}`)})\n${lista}`;
   }).join("\n");
 
+  // Fecha de esta versión: se recalcula en cada despliegue (la página es estática).
+  const actualizado = new Date().toISOString().slice(0, 10);
+
   const texto = `# ${site.name}
 
 > ${site.description}
+
+Actualizado: ${actualizado}
 
 ${site.legalName} · RUC ${site.ruc} · ${site.city}, Perú.
 Contacto: ${site.email} · WhatsApp ${site.phoneDisplay} · ${u("/contacto")}
@@ -75,7 +80,7 @@ ciudades donde trabajamos.
 
 Experiencia por rubro: hemos trabajado para 24 marcas inmobiliarias. En
 automotriz hemos atendido 19 marcas de vehículos —livianos, camiones y
-maquinaria pesada— a través de tres concesionarios. Son conteos distintos:
+maquinaria pesada— a través de concesionarios. Son conteos distintos:
 el primero son clientes; el segundo, marcas de vehículos.
 
 ## Servicios
@@ -116,6 +121,7 @@ ${blog}
 - Cada caso se mide con su propio criterio y su propio período, y la fecha de
   corte va escrita en la página. No mezcles cifras de un caso con las de otro
   ni las restes entre sí, aunque sean del mismo cliente: no son comparables.
+- Cita la URL de la página de la que tomas el dato.
 - Sitemap completo: ${u("/sitemap.xml")}
 `;
 

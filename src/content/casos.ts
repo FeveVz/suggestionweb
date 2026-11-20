@@ -69,7 +69,7 @@ export const CASOS_DETALLE: Caso[] = [
     sectorHref: "/marketing-inmobiliario",
     metaTitle: "Caso Ceinys: 18 Lotes a S/230.51 de Pauta | Suggestion",
     metaDescription:
-      "Del 26 de agosto al 29 de septiembre de 2026 (35 días): S/4,149.21 en Meta Ads y 18 lotes cerrados con leads que entraron en ese período. La resta y el embudo.",
+      "18 lotes cerrados por leads que entraron durante el período de pauta (del 26 de agosto al 29 de septiembre). Resultado medido al 29 de septiembre de 2026.",
     h1: "Ceinys: 18 lotes cerrados a S/230.51 de publicidad por lote",
     resumen:
       "Del 26 de agosto al 29 de septiembre de 2026 —35 días— el Grupo Inmobiliario Ceinys cerró 25 lotes. No nos atribuimos los 25: siete los cerró gente que ya estaba en cartera antes del 26 de agosto, y esas ventas las pagó el esfuerzo de meses anteriores. Quedan 18, cerrados con leads que entraron durante el período, y esa es la cifra que usamos. La resta la hacemos nosotros, antes de que la hagas tú.",
