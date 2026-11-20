@@ -468,11 +468,40 @@ img { max-width: 100%; display: block; }
  * Con "Resultados" y "Activaciones" en vez de "Casos" y "Portafolio", los
  * seis enlaces más el botón llegaban a 921 px con 17 px de holgura: entraba,
  * pero cualquier rótulo más largo lo parte en dos líneas. A 1000 px la
- * holgura vuelve a ser cómoda. No se pierde nada: el menú flotante está
- * siempre, en todos los anchos.
+ * holgura vuelve a ser cómoda. En ese mismo ancho aparece el botón de menú
+ * de la cabecera (.hk-menu-btn), así que nunca queda una franja sin menú
+ * (auditoría UX-03: antes, entre 921 y 1000 px no había ni menú ni botón).
  */
 @media (max-width: 1000px) {
   .hk-nav { display: none !important; }
+}
+
+/* Botón de menú de la cabecera: hasta 1000 px. 44 px, el mínimo cómodo para el dedo. */
+.hk-menu-btn {
+  display: none; place-items: center; width: 44px; height: 44px;
+  border: 1px solid var(--border-subtle); border-radius: 50%;
+  background: var(--white); color: var(--black); cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.hk-menu-btn:hover { background: var(--surface-raised); }
+.hk-menu-btn:focus-visible { outline: 2px solid var(--black); outline-offset: 2px; }
+@media (max-width: 1000px) {
+  .hk-menu-btn { display: grid; }
+}
+/* Celulares: logo, botón principal y menú en una fila de 335 px. «Cotiza por
+   WhatsApp» pasa a «Cotizar»; «Consultoría cero» cabe entero. */
+.hk-cta-corto { display: none; }
+@media (max-width: 420px) {
+  .hk-cta-largo { display: none; }
+  .hk-cta-corto { display: inline; }
+  header > div { gap: 10px !important; }
+  header a[aria-label^="Suggestion"] img { height: 20px !important; }
+  .hk-menu-btn { width: 40px; height: 40px; }
+}
+/* En los celulares más angostos el botón principal no cabe junto al logo y al menú:
+   queda en el panel del menú y en la burbuja de WhatsApp. */
+@media (max-width: 359px) {
+  .hk-head-cta { display: none !important; }
 }
 @media (max-width: 560px) {
   .hk-stats, .hk-sectores, .hk-casos, .hk-pasos, .hk-porque, .hk-test, .hk-foot { grid-template-columns: 1fr !important; }
@@ -766,6 +795,27 @@ html { scrollbar-width: thin; scrollbar-color: var(--ink-300) transparent; }
 footer:hover .hk-foot-ghost { opacity: 0.9; -webkit-text-stroke-color: var(--ink-500); }
 
 /* Header con elevación al scrollear */
+/* Pie: columnas plegables en el celular (FooterColumna.tsx, auditoría UX-09). */
+.hk-foot-col > summary { list-style: none; font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent); text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-on-inverse-mut); }
+.hk-foot-col > summary::-webkit-details-marker { display: none; }
+.hk-foot-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+@media (min-width: 921px) {
+  .hk-foot-col > summary { pointer-events: none; }
+}
+@media (max-width: 920px) {
+  footer .hk-foot { grid-template-columns: 1fr !important; row-gap: 0 !important; }
+  .hk-foot-brand { margin-bottom: 20px; }
+  .hk-foot-col { border-top: 1px solid var(--hairline-inverse); }
+  .hk-foot-col > summary { display: flex; align-items: center; justify-content: space-between; min-height: 52px; cursor: pointer; font-size: var(--fs-xs); color: var(--white); }
+  .hk-foot-col > summary::after { content: "+"; font: var(--fw-light) 1.5rem/1 var(--font-body); color: var(--cyan); }
+  .hk-foot-col[open] > summary::after { content: "\2212"; }
+  .hk-foot-list { gap: 0; margin: 0 0 10px; }
+  .hk-foot-list a, .hk-foot-contact a { display: flex; align-items: center; min-height: 44px; }
+  .hk-foot-contact { gap: 0 !important; border-top: 1px solid var(--hairline-inverse); padding-top: 18px; }
+  .hk-foot-ghost-wrap { margin-top: 28px !important; }
+  /* Que la burbuja de WhatsApp no tape la última línea del pie. */
+  footer { padding-bottom: 84px; }
+}
 .hk-header-solid { box-shadow: 0 1px 0 var(--hairline), 0 10px 30px rgba(0, 0, 0, 0.07); }
 
 /* CTAs del hero a ancho completo en pantallas chicas (feel de app) */

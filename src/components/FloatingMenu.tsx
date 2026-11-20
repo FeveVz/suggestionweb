@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
+import { X, ArrowRight, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SERVICE_CATEGORIES, SECTORS, MAIN_NAV, CTA_PRIMARY, CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza } from "@/content/navegacion";
 import { whatsappLink } from "@/lib/site";
@@ -20,6 +20,13 @@ export default function FloatingMenu() {
   const pathname = usePathname();
 
   useEffect(() => setOpen(false), [pathname]);
+
+  // El botón de menú vive en la cabecera (Header.tsx) y avisa con este evento.
+  useEffect(() => {
+    const abrir = () => setOpen(true);
+    window.addEventListener("hk:menu", abrir);
+    return () => window.removeEventListener("hk:menu", abrir);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -128,27 +135,14 @@ export default function FloatingMenu() {
             <MessageCircle size={24} color="#fff" />
           </a>
         )}
-        {!open && (
-        <button
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={open}
-          className="hk-fab-btn hk-fab-menu"
-          style={{ background: open ? "var(--ink-700)" : "var(--black)" }}
-        >
-          {open ? <X size={24} color="#fff" /> : <Menu size={24} color="#fff" />}
-        </button>
-        )}
       </div>
 
       <style>{`
-        /* WhatsApp flota SIEMPRE (desktop incluido); el botón de menú solo en móvil */
+        /* Solo WhatsApp flota, en todos los anchos. El menú está en la cabecera. */
         .hk-fab { display: flex; position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 1002; flex-direction: column; gap: 12px; align-items: center; }
         .hk-fab-btn { width: 54px; height: 54px; border-radius: 50%; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: var(--shadow-lg); transition: transform var(--dur-fast) var(--ease-out); }
         .hk-fab-btn:hover { transform: translateY(-2px) scale(1.04); }
         .hk-fab-btn:active { transform: scale(0.94); }
-        .hk-fab-menu { display: none; }
-        @media (max-width: 920px) { .hk-fab-menu { display: grid; } }
         .hk-fab-panel { position: fixed; inset: 0; width: 100%; height: 100dvh; overflow-y: auto; background: var(--black); color: var(--white); z-index: 1001; display: flex; flex-direction: column; }
         .hk-fab-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; background: var(--black); border-bottom: 1px solid var(--hairline-inverse); }
         .hk-fab-close { width: 34px; height: 34px; border-radius: 50%; background: var(--ink-700); border: none; color: var(--white); display: grid; place-items: center; cursor: pointer; }
@@ -161,7 +155,7 @@ export default function FloatingMenu() {
         .hk-fab-link { display: block; padding: 13px 0; color: var(--white); font: var(--fw-medium) var(--fs-md)/1 var(--font-body); text-decoration: none; }
         .hk-fab-foot { position: sticky; bottom: 0; background: var(--black); border-top: 1px solid var(--hairline-inverse); padding: 14px 20px calc(14px + env(safe-area-inset-bottom)); display: grid; gap: 10px; }
         .hk-fab-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; border-radius: var(--radius-pill); background: var(--white); color: var(--black); font: var(--fw-bold) var(--fs-sm)/1 var(--font-accent); text-decoration: none; }
-        .hk-fab-wa { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; border-radius: var(--radius-pill); background: #25D366; color: #fff; font: var(--fw-bold) var(--fs-sm)/1 var(--font-accent); text-decoration: none; }
+        .hk-fab-wa { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; border-radius: var(--radius-pill); background: #25D366; color: var(--black); font: var(--fw-bold) var(--fs-sm)/1 var(--font-accent); text-decoration: none; }
       `}</style>
     </div>
   );

@@ -3,6 +3,7 @@ import { MapPin, Instagram, Facebook } from "lucide-react";
 import { Dot } from "@/components/brand/parts";
 import { FOOTER_COLUMNS } from "@/content/navegacion";
 import { site, whatsappLink } from "@/lib/site";
+import FooterColumna from "@/components/FooterColumna";
 
 const socials = [
   { name: "Instagram", Icon: Instagram, href: site.social.instagram },
@@ -33,7 +34,7 @@ export default function Footer() {
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y-tight) var(--gutter)" }}>
         <div className="hk-foot" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr 1fr 1fr", gap: "var(--space-6)" }}>
           {/* Bloque de marca */}
-          <div>
+          <div className="hk-foot-brand">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={site.logoWhiteImg} alt="Suggestion" width={800} height={135} loading="lazy" decoding="async" style={{ height: 24, width: "auto" }} />
             <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 18, maxWidth: "30ch" }}>
@@ -55,16 +56,15 @@ export default function Footer() {
 
           {/* Columnas de navegación */}
           {FOOTER_COLUMNS.map((col) => (
-            <nav key={col.title} style={{ display: "flex", flexDirection: "column", gap: 12 }} aria-label={col.title}>
-              <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>{col.title}</span>
+            <FooterColumna key={col.title} titulo={col.title}>
               {col.links.map((l) => (
                 <Link key={l.href} href={l.href} className="hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</Link>
               ))}
-            </nav>
+            </FooterColumna>
           ))}
 
           {/* Columna de contacto */}
-          <nav style={{ display: "flex", flexDirection: "column", gap: 12 }} aria-label="Contacto">
+          <nav className="hk-foot-contact" style={{ display: "flex", flexDirection: "column", gap: 12 }} aria-label="Contacto">
             <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>Contacto</span>
             {contactLinks.map((l) => (
               <a key={l.href} href={l.href} className="hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</a>
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* Firma editorial: wordmark fantasma */}
-        <div aria-hidden style={{ overflow: "hidden", marginTop: 56 }}>
+        <div aria-hidden className="hk-foot-ghost-wrap" style={{ overflow: "hidden", marginTop: 56 }}>
           <div className="hk-foot-ghost">Suggestion</div>
         </div>
 

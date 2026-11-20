@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { Btn } from "@/components/brand/parts";
 import {
   SERVICE_CATEGORIES,
@@ -143,10 +143,11 @@ export default function Header() {
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
-          <span className="hk-nav" style={{ display: "flex" }}>
+          <span className="hk-head-cta" style={{ display: "flex" }}>
             {COTIZA_PRODUCCION[pathname] ? (
               <Btn as="a" href={whatsappLink(mensajeCotiza(COTIZA_PRODUCCION[pathname]))} target="_blank" rel="noopener noreferrer" size="sm">
-                {CTA_COTIZA}
+                <span className="hk-cta-largo">{CTA_COTIZA}</span>
+                <span className="hk-cta-corto">Cotizar</span>
               </Btn>
             ) : (
               <Btn as="a" href={CTA_PRIMARY.href} size="sm">
@@ -154,6 +155,19 @@ export default function Header() {
               </Btn>
             )}
           </span>
+          {/* Menú del celular y de pantallas de hasta 1000 px (auditoría UX-03 y
+              UX-07, tarea 2.06). Antes era un botón negro flotante que se perdía
+              sobre las secciones negras y tapaba texto; ahora vive aquí, a la
+              vista, y abre el mismo panel de FloatingMenu por un evento. */}
+          <button
+            type="button"
+            className="hk-menu-btn"
+            aria-label="Abrir menú"
+            aria-haspopup="dialog"
+            onClick={() => window.dispatchEvent(new Event("hk:menu"))}
+          >
+            <Menu size={22} aria-hidden />
+          </button>
         </div>
       </div>
 
@@ -171,7 +185,7 @@ export default function Header() {
                   >
                     {cat.label}
                   </Link>
-                  <p style={{ font: "var(--fw-light) var(--fs-xs)/1.35 var(--font-body)", color: "var(--ink-400)", margin: "6px 0 12px" }}>
+                  <p style={{ font: "var(--fw-light) var(--fs-xs)/1.35 var(--font-body)", color: "var(--text-muted)", margin: "6px 0 12px" }}>
                     {CAT_DESC[cat.slug]}
                   </p>
                   <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
@@ -203,7 +217,7 @@ export default function Header() {
             </Link>
           </div>
           <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)", display: "flex", gap: 28, flexWrap: "wrap" }}>
-            <Link href="/servicios" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan)" }}>
+            <Link href="/servicios" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan-text-sm)" }}>
               Ver todos los servicios →
             </Link>
             <Link href="/portafolio" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-muted)" }}>
@@ -229,7 +243,7 @@ export default function Header() {
             ))}
           </div>
           <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--hairline)", display: "flex", gap: 28, flexWrap: "wrap" }}>
-            <Link href="/sectores" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan)" }}>
+            <Link href="/sectores" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--cyan-text-sm)" }}>
               Ver todos los sectores →
             </Link>
             <Link href="/portafolio" onClick={() => setOpen(null)} style={{ font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-muted)" }}>

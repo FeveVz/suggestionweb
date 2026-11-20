@@ -373,7 +373,7 @@ export default function HeroShowcase() {
 
         .hs-puntos { display: flex; justify-content: center; margin-top: 2px; }
         .hs-puntos button { width: 24px; height: 24px; border: none; padding: 0; background: none; cursor: pointer; display: grid; place-items: center; }
-        .hs-puntos button span { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-200); transition: background var(--dur-base), transform var(--dur-base); }
+        .hs-puntos button span { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-400); transition: background var(--dur-base), transform var(--dur-base); }
         .hs-puntos button span.is-on { background: var(--cyan); transform: scale(1.15); }
 
         /* Sin movimiento: todo encendido y quieto, las barras ya dibujadas. */

@@ -62,7 +62,7 @@ export default function Faq({
                   }}
                 >
                   <span>{item.q}</span>
-                  <span aria-hidden style={{ color: "var(--cyan)", flexShrink: 0 }}>
+                  <span aria-hidden style={{ color: tone === "dark" ? "var(--cyan)" : "var(--cyan-text)", flexShrink: 0 }}>
                     {open ? <Minus size={20} /> : <Plus size={20} />}
                   </span>
                 </button>
