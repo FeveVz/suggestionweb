@@ -277,7 +277,7 @@ export default function Home() {
               </div>
               <div style={{ padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 14 }}>
                 {/* Las cifras largas (S/350.000) se salían de la tarjeta en escritorio. */}
-                <div style={{ font: `var(--fw-bold) ${c.metric.length > 6 ? "var(--fs-3xl)" : "var(--fs-4xl)"}/0.95 var(--font-display)`, letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
+                <div style={{ font: `var(--fw-bold) ${c.metric.length > 6 ? "clamp(1.9rem, 1.2rem + 1.6vw, 2.4rem)" : "var(--fs-4xl)"}/0.95 var(--font-display)`, letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
                   <CountUp to={c.metric} locale={c.metricLocale} />
                 </div>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>

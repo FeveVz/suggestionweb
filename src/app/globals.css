@@ -773,3 +773,26 @@ footer:hover .hk-foot-ghost { opacity: 0.9; -webkit-text-stroke-color: var(--ink
   .hk-hero-ctas > * { width: 100%; }
   .hk-hero-ctas .hk-btn { width: 100%; justify-content: center; }
 }
+
+/* ── Tablas de contenido (Secciones.tsx) ────────────────────────────────
+   Escritorio: tabla con scroll propio si no cabe. Celular: cada fila es una
+   tarjeta; la primera celda es el título y cada dato lleva su cabecera al
+   lado. Las celdas traen estilos en línea, por eso el !important. */
+.hk-tabla table { min-width: 460px; }
+@media (max-width: 640px) {
+  .hk-tabla { overflow-x: visible !important; }
+  .hk-tabla table { min-width: 0; }
+  .hk-tabla table, .hk-tabla tbody, .hk-tabla tr, .hk-tabla th, .hk-tabla td { display: block; width: 100%; }
+  .hk-tabla thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .hk-tabla tbody tr { padding: 14px 16px; border-bottom: 1px solid var(--border-subtle); }
+  .hk-tabla tbody tr:last-child { border-bottom: 0; }
+  .hk-tabla tbody th { padding: 0 0 8px !important; border: 0 !important; }
+  .hk-tabla tbody td { padding: 4px 0 !important; border: 0 !important; }
+  .hk-tabla tbody td[data-label] { display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 1fr); gap: 12px; }
+  .hk-tabla tbody td[data-label]::before {
+    content: attr(data-label);
+    font: var(--fw-bold) var(--fs-micro)/1.5 var(--font-accent);
+    text-transform: uppercase; letter-spacing: var(--tracking-label);
+    color: var(--text-muted);
+  }
+}

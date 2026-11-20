@@ -37,9 +37,12 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
   const filas = t.filas.map((f) => [...f, ...Array(Math.max(0, ancho - f.length)).fill("")]);
   return (
     <figure style={{ margin: "24px 0 0" }}>
-      {/* La caja hace el scroll, nunca la página: en móvil una tabla de 3-4
-          columnas no cabe y sin esto rompe el layout entero. */}
+      {/* En escritorio, tabla. En el celular (hasta 640 px) cada fila se lee
+          como una tarjeta con la cabecera junto a cada dato (globals.css,
+          .hk-tabla): antes la columna de cifras quedaba fuera de pantalla en
+          80 páginas (auditoría UX-01, 20-nov-2026). Solo CSS, sin JS. */}
       <div
+        className="hk-tabla"
         style={{
           overflowX: "auto",
           border: "1px solid var(--border-subtle)",
@@ -47,7 +50,7 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
           WebkitOverflowScrolling: "touch",
         }}
       >
-        <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 460 }}>
+        <table style={{ borderCollapse: "collapse", width: "100%" }}>
           {conCabeceras && (
           <thead>
             <tr>
@@ -91,7 +94,7 @@ function Tabla({ t }: { t: NonNullable<Seccion["tabla"]> }) {
                       {celda}
                     </th>
                   ) : (
-                    <td key={j} style={CELDA}>
+                    <td key={j} style={CELDA} data-label={conCabeceras && t.cabeceras[j]?.trim() ? t.cabeceras[j] : undefined}>
                       {celda}
                     </td>
                   ),
