@@ -88,7 +88,7 @@ export const metadata: Metadata = buildMetadata({
   // /servicios/marketing-digital, su dueña natural.
   title: "Agencia de Marketing en Ica y Perú | Suggestion",
   description:
-    "Agencia de marketing en Ica: marketing digital, publicidad y producción que convierten atención en ventas, en Ica y todo el Perú. Agenda tu consultoría gratis.",
+    "Marketing digital y publicidad en Ica y todo el Perú, más producción local, para convertir atención en ventas. Agenda tu consultoría cero, gratis.",
   path: "/",
 });
 

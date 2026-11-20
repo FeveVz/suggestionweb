@@ -1815,7 +1815,7 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Publicidad Móvil",
     metaTitle: "Publicidad Móvil y Bicivallas en Ica | Suggestion",
     metaDescription:
-      "Publicidad móvil en Ica: bicivallas, publicidad rodante y volanteo con captura de datos. Tu marca donde está tu cliente. Pide tu cotización.",
+      "Publicidad móvil en Ica: bicivallas, publicidad rodante y volanteo con captura de datos. Cotiza bicivallas y publicidad rodante por WhatsApp.",
     h1: "Publicidad móvil y bicivallas: tu marca en movimiento",
     hero: "La publicidad que no espera a que te encuentren: va a donde está tu cliente. Llevamos tu marca por las calles de Ica con bicivallas, rotulación y volanteo.",
     enCorto: [
@@ -1971,7 +1971,7 @@ const SERVICIOS_BASE: Servicio[] = [
     especificaciones: ["Qué estructura necesito", "Medida", "Dónde va a ir", "Si necesito diseño e instalación", "Fecha"],
     secciones: [
       {
-        h2: "Cuánto cuesta una estructura publicitaria: qué necesitamos para cotizarte",
+        h2: "Cuánto cuestan las estructuras publicitarias: qué necesitamos para cotizarte",
         parrafo:
           "No manejamos precios fijos: cotizamos cada pedido según lo que necesitas, porque el tipo de estructura, su tamaño, el material y el lugar donde va cambian el costo. Para darte un precio te pedimos estos datos. Si todavía no lo tienes claro, cuéntanos para qué es y te orientamos.",
         bullets: [
@@ -2337,7 +2337,7 @@ const SERVICIOS_BASE: Servicio[] = [
         ],
       },
       {
-        h2: "Servicios de impresión",
+        h2: "Impresiones en Ica: servicios de impresión por pedido",
         sub: [
           {
             h3: "Impresión digital y láser",

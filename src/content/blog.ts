@@ -3481,9 +3481,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gigantografias-medidas-materiales-precios",
     categoria: "imprenta-btl",
-    title: "Medidas y Precios de Gigantografías en Perú | Suggestion",
+    title: "Gigantografías: Tamaños, Medidas y Precios en Perú | Suggestion",
     description:
-      "Las medidas más pedidas, qué material aguanta la calle y cuánto cuesta una gigantografía en Perú: desde S/18 el m². Guía para cotizar sin equivocarte.",
+      "Tamaños y medidas de gigantografía más pedidos, qué material aguanta la calle y cuánto cuesta el m² en Perú, con rangos de octubre de 2026.",
     h1: "Gigantografías: qué material pedir, qué medidas y cuánto cuesta",
     excerpt:
       "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
@@ -3495,7 +3495,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Una gigantografía no tiene una medida única: se imprime al tamaño que necesites y se cotiza por metro cuadrado. Esto es lo que conviene saber antes de pedir precio.",
         bullets: [
           { titulo: "Medidas más pedidas", texto: "1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m. El rollo más común mide 3.20 m de ancho, y ajustar la pieza a ese ancho evita pagar recorte." },
-          { titulo: "Material", texto: "lona de 8 onzas para interior, de 11 para exterior de campaña corta y de 13 o frontlit para exterior permanente." },
+          { titulo: "Material", texto: "lona de 8 onzas para interior, de 11 para exterior de campaña corta y de 13 o frontlit para exterior permanente. En zonas con mucho viento, malla (mesh), que deja pasar el aire." },
           { titulo: "Precio", texto: "en el mercado peruano va desde S/18 el m² en lona de interior hasta S/120 en acabados premium (rangos consultados en octubre de 2026). El diseño y la instalación suelen ir aparte." },
         ],
       },
@@ -3543,7 +3543,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "Las medidas que no te cobran de más",
+        h2: "Tamaños y medidas de gigantografía que no te cobran de más",
         parrafo:
           "Aquí está el ahorro que nadie te ofrece. El material viene en rollos —el más común mide 3.20 metros de ancho— y se cobra lo que se consume del rollo, no lo que mide tu arte. Una pieza de 1.70 metros de alto obliga a cortar un rollo de 3.20 por la mitad y deja 1.50 metros de recorte que alguien paga, y ese alguien eres tú.",
         bullets: [
@@ -3552,6 +3552,17 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Suma el ruedo y los ojales", texto: "el dobladillo perimetral consume entre 3 y 5 cm por lado. Si tu medida es exacta por una restricción de la pared, avísalo al cotizar." },
           { titulo: "Para fachadas, mide dos veces", texto: "y toma la medida del espacio disponible, no la del muro completo. Las tuberías, los medidores y los avisos municipales están ahí y no se mueven." },
         ],
+        tabla: {
+          cabeceras: ["Medida", "En centímetros", "Área que se cobra"],
+          filas: [
+            ["1 × 2 m", "100 × 200 cm", "2 m²"],
+            ["2 × 1 m", "200 × 100 cm", "2 m²"],
+            ["3 × 1 m", "300 × 100 cm", "3 m²"],
+            ["1 × 3 m", "100 × 300 cm", "3 m²"],
+            ["3.20 × 2 m, el ancho completo del rollo", "320 × 200 cm", "6.40 m²"],
+          ],
+          nota: "El ruedo y los ojales suman entre 3 y 5 cm por lado: avísalo al cotizar si la medida es exacta.",
+        },
       },
       {
         h2: "Cuatro errores que arruinan un tiraje",
@@ -3570,6 +3581,14 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     faq: [
+      {
+        q: "¿Cuánto mide una gigantografía estándar?",
+        a: "No hay una medida estándar: se imprime al tamaño que necesites. Las más pedidas son 1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m, porque aprovechan bien el rollo, que suele medir 3.20 m de ancho.",
+      },
+      {
+        q: "¿Banner y gigantografía es lo mismo?",
+        a: "En el uso diario, sí: gigantografía, banner y lona nombran la misma pieza impresa en gran formato. Lo que cambia es el material y el acabado según dónde va a estar.",
+      },
       {
         q: "¿Cuánto cuesta una gigantografía en Perú?",
         a: "Se cotiza por metro cuadrado. En octubre de 2026 el mercado peruano va desde unos S/18 por m² en lona de interior y S/19.50 en banner de 11 onzas, hasta S/120 por m² en acabados premium. El diseño y la instalación suelen sumar entre S/100 y S/400 aparte. El precio por metro baja cuanto más metros pidas.",
@@ -3594,7 +3613,7 @@ export const BLOG_POSTS: BlogPost[] = [
     cierre: "En Suggestion imprimimos gran formato y lo instalamos, con la pieza pensada para el sitio donde va a estar. Cotizamos según medida, material y cantidad.",
     // La página comercial de gigantografías existe desde el 2026-11-14: este
     // artículo tiene 3,441 apariciones en top 10 y no tenía dónde cotizar.
-    moneyPage: { label: "Cotiza tu gigantografía", href: "/servicios/gigantografias" },
+    moneyPage: { label: "Gigantografías en Ica: cotiza la tuya", href: "/servicios/gigantografias" },
     relacionados: ["tarjetas-de-presentacion-medidas-y-errores", "letreros-para-negocio-cual-elegir"],
   },
   {
@@ -4133,7 +4152,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-10-04",
     secciones: [
       {
-        h2: "Qué es el material POP y qué hace cada pieza",
+        h2: "Material POP en punto de venta: qué es y qué hace cada pieza",
         foto: foto("gira-conduce-tu-rumbo", 6, "Tótem impreso con código QR instalado en un punto de venta durante una campaña", "Un tótem con QR en punto de venta. La pieza no vende sola: lo que hace es dar una razón para escanear, y ahí el que pasaba se vuelve un contacto."),
         parrafo:
           "POP viene de «punto de venta»: son las piezas que trabajan dentro de la tienda, donde el cliente ya está y tiene el producto al alcance. A diferencia de la publicidad que convence antes de salir de casa, esta solo tiene que ganar la comparación contra lo que está al lado.",
@@ -4168,7 +4187,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "Las reglas de lo que se lee en tres segundos",
+        h2: "Piezas POP: las reglas de lo que se lee en tres segundos",
         parrafo:
           "La diferencia entre una pieza que vende y una decorativa está en cuánto se entiende sin detenerse. Quien camina por un pasillo de supermercado no está leyendo: está escaneando.",
         bullets: [
@@ -4197,7 +4216,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faq: [
       {
-        q: "¿Qué es el material POP?",
+        q: "¿Qué es el material POP en ventas?",
         a: "Son las piezas publicitarias que trabajan dentro del punto de venta: jalavistas, rompetráficos, stoppers, exhibidores de mostrador y tótems de piso. Su trabajo es ganar la comparación frente al estante, en los segundos en que el cliente decide.",
       },
       {
@@ -5191,7 +5210,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-10-06",
     secciones: [
       {
-        h2: "Qué es, sin la lámina de siempre",
+        h2: "Qué es un embudo de ventas, sin la lámina de siempre",
         parrafo:
           "Un embudo de ventas es el recorrido que hace una persona desde que descubre que existes hasta que te compra, dividido en etapas que puedes contar. Se llama embudo porque en cada paso quedan menos: eso es normal y no es el problema. El problema es no saber en cuál de los pasos se van, porque entonces se invierte a ciegas en el escalón equivocado.",
         bullets: [
@@ -6663,7 +6682,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "Los canales que traen compradores reales",
+        h2: "Cómo vender maquinaria: los canales que traen compradores reales",
         parrafo:
           "Hay pocos compradores y cada uno vale mucho. Por eso importa menos llegar a mucha gente y más llegar a las empresas correctas en el momento en que están evaluando.",
         bullets: [
