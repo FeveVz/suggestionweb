@@ -29,14 +29,11 @@ const CSP = [
   // violates..." y ese evento se perdía. Detectado en local antes de subirlo.
   "form-action 'self' https://www.facebook.com",
   "frame-ancestors 'self'",
-  // TEMPORAL (20-nov-2026): www.facebook.com, graph.facebook.com y *.fbcdn.net
-  // solo para que cargue el panel de la herramienta de configuración de eventos
-  // de Meta (/signals/iwl.js) y borrar sus 3 reglas viejas. Quitar al terminar.
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://www.facebook.com https://*.fbcdn.net https://*.clarity.ms https://bat.bing.com",
-  "style-src 'self' 'unsafe-inline' https://*.fbcdn.net",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms https://bat.bing.com",
+  "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
-  "font-src 'self' data: https://*.fbcdn.net",
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://graph.facebook.com https://*.bing.com",
+  "font-src 'self' data:",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://*.bing.com",
   "frame-src 'self' https://www.facebook.com https://td.doubleclick.net https://www.googletagmanager.com",
   "media-src 'self'",
   "worker-src 'self' blob:",
