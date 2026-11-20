@@ -30,7 +30,7 @@ export type RelatedBlock = { title: string; links: RelatedLink[]; columns?: numb
 const COBERTURA: Record<string, string> = {
   "/servicios/consultoria": "¿Buscas consultoría de marketing en Ica? Ordenamos la estrategia de negocios de Ica, Parcona y Chincha antes de invertir un sol en pauta, y acompañamos a empresas de Lima y todo el Perú a distancia.",
   "/servicios/marketing-digital": "Hacemos marketing digital para negocios de Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña— que quieren vender más, y llevamos campañas nacionales desde nuestra base en la región, con reporte de leads, citas y cierres.",
-  "/servicios/publicidad-digital": "Corremos pauta en Google y Meta Ads para empresas de Ica, Chincha, Pisco, Nazca y Palpa, y escalamos campañas a Lima y provincias cuando el negocio lo pide.",
+  "/servicios/publicidad-digital": "Gestionamos Google Ads para empresas de todo el Perú desde nuestra base en Ica, con campañas segmentadas por la ciudad o región donde vendes: de Ica y Chincha a Lima, Arequipa o Trujillo.",
   "/servicios/investigacion-de-mercado": "Estudiamos el mercado iqueño en campo, de Parcona a Ocucaje, y también mercados de otras regiones del Perú, para que decidas con datos y no con intuición.",
   "/servicios/seo": "Posicionamos negocios de Ica, Subtanjalla y Chincha en Google — y sabemos de lo que hablamos: así como llegaste tú a esta página, tus clientes también buscan. Atendemos proyectos SEO de todo el Perú.",
   "/servicios/redes-sociales": "Gestionamos las redes de marcas de Ica, La Tinguiña y Los Aquijes, y de clientes en Lima y el resto del país: contenido, comunidad y pauta con objetivos de venta.",

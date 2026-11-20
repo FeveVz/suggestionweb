@@ -75,7 +75,7 @@ export const CASOS_DETALLE: Caso[] = [
       "Del 26 de agosto al 29 de septiembre de 2026 —35 días— el Grupo Inmobiliario Ceinys cerró 25 lotes. No nos atribuimos los 25: siete los cerró gente que ya estaba en cartera antes del 26 de agosto, y esas ventas las pagó el esfuerzo de meses anteriores. Quedan 18, cerrados con leads que entraron durante el período, y esa es la cifra que usamos. La resta la hacemos nosotros, antes de que la hagas tú.",
     stats: [
       { valor: "S/4,149.21", label: "Invertido en Meta Ads del 26/08 al 29/09/2026" },
-      { valor: "18", label: "Lotes cerrados por leads que entraron durante el período" },
+      { valor: "18", label: "Lotes cerrados por leads que entraron durante el período de pauta" },
       { valor: "S/230.51", label: "Publicidad por lote vendido" },
       { valor: "12", label: "De esos 18, los que además tienen origen de anuncio en el CRM" },
     ],

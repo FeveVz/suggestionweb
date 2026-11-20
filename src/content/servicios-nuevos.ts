@@ -34,7 +34,7 @@ const CASO_CEINYS_SEPTIEMBRE = {
     cabeceras: ["", ""],
     filas: [
       ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
-      ["Lotes cerrados por leads que entraron durante el período", "18"],
+      ["Lotes cerrados por leads que entraron durante el período de pauta", "18"],
       ["Publicidad por lote vendido", "S/230.51"],
     ],
     nota: "Resultado medido al 29 de septiembre de 2026. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",

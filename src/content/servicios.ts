@@ -817,7 +817,7 @@ const SERVICIOS_BASE: Servicio[] = [
     metaTitle: "Agencia de Google Ads en Perú | Suggestion",
     metaDescription:
       "Agencia de Google Ads en Perú: campañas de búsqueda, display y YouTube medidas en leads y ventas, no en clics. Aparece cuando tu cliente te busca. Consultoría gratis.",
-    h1: "Agencia de Google Ads: campañas que se miden en ventas",
+    h1: "Agencia de Google Ads en Perú: campañas que se miden en ventas",
     hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas con un solo norte: que cada sol invertido vuelva en leads y ventas, no en clics que no cierran.",
     enCorto: [
       "Google Ads te muestra a quien ya está buscando lo que vendes, en la Búsqueda de Google, en Display y en YouTube.",
@@ -842,7 +842,7 @@ const SERVICIOS_BASE: Servicio[] = [
           cabeceras: ["", ""],
           filas: [
             ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
-            ["Lotes cerrados por leads que entraron durante el período", "18"],
+            ["Lotes cerrados por leads que entraron durante el período de pauta", "18"],
             ["Publicidad por lote vendido", "S/230.51"],
           ],
           nota: "Resultado medido al 29 de septiembre de 2026. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",
@@ -874,41 +874,66 @@ const SERVICIOS_BASE: Servicio[] = [
           "No “prendemos y olvidamos”. Optimizamos pauta, segmentación y creatividades con pruebas A/B, mirando CPL y ROAS.",
       },
     ],
+    // Solo Google Ads (auditoría EXT3-02, tarea 2.05 del plan): antes
+    // listaba Meta, TikTok y LinkedIn Ads, que compiten con /servicios/meta-ads
+    // y no constan como servicio.
     incluye: [
-      { titulo: "Google Ads", texto: "Search, Display, Shopping y YouTube: campañas que capturan intención." },
-      { titulo: "Meta Ads", texto: "Facebook e Instagram con segmentación avanzada y formatos múltiples." },
-      { titulo: "TikTok Ads", texto: "Audiencias jóvenes con contenido nativo que convierte." },
-      { titulo: "LinkedIn Ads", texto: "B2B de alto valor: decision makers y profesionales." },
-      { titulo: "Remarketing", texto: "Recupera a quien visitó tu sitio con anuncios personalizados." },
-      { titulo: "A/B testing", texto: "Probamos creatividades, audiencias y ofertas constantemente." },
-      { titulo: "Landing pages", texto: "Páginas de destino optimizadas para conversión." },
-      { titulo: "Analytics avanzado", texto: "Configuración de conversiones, eventos y atribución." },
-      { titulo: "Automatizaciones", texto: "Reglas que optimizan la pauta 24/7." },
+      { titulo: "Anuncios en Búsqueda", texto: "Apareces cuando escriben tu servicio en Google, con palabras clave elegidas por intención de compra." },
+      { titulo: "Display y YouTube", texto: "Imagen y video para que el indeciso te recuerde mientras decide." },
+      { titulo: "Performance Max y Shopping", texto: "Campañas que reparten el presupuesto entre los espacios de Google; Shopping, si vendes productos con catálogo." },
+      { titulo: "Remarketing", texto: "Recupera a quien visitó tu web con anuncios personalizados." },
+      { titulo: "Medición de conversiones", texto: "Definimos qué cuenta como contacto o venta —formulario, WhatsApp o llamada— para optimizar hacia eso y no hacia clics." },
+      { titulo: "Palabras clave negativas", texto: "Cortamos las búsquedas que gastan sin vender, como las de quien busca empleo o algo gratis." },
+      { titulo: "A/B testing", texto: "Probamos anuncios, mensajes y páginas de destino." },
+      { titulo: "Landing pages", texto: "Páginas de destino hechas para convertir el clic en contacto." },
     ],
     beneficios: [
       { titulo: "ROI medible", texto: "Cada conversión se rastrea: sabes cuánto cuesta cada cliente y tu retorno." },
-      { titulo: "Segmentación precisa", texto: "Llegamos a tu audiencia ideal por comportamiento, intereses y más." },
+      { titulo: "Intención de compra", texto: "Pagas por aparecer ante quien ya busca lo que vendes, en la zona donde vendes." },
       { titulo: "Optimización constante", texto: "No “prendemos y olvidamos”: optimizamos a diario." },
-      { titulo: "Reportes transparentes", texto: "Dashboards en tiempo real; tú decides qué métricas priorizar." },
+      { titulo: "Reportes claros", texto: "Cuánto costó cada contacto y cada venta, y qué cambiamos por eso." },
     ],
     proceso: [
       { paso: "01", titulo: "Estrategia", texto: "Definimos objetivos, presupuesto y canales según tu negocio." },
-      { paso: "02", titulo: "Setup", texto: "Configuramos cuentas, píxeles, audiencias y campañas." },
+      { paso: "02", titulo: "Setup", texto: "Configuramos la cuenta, la medición de conversiones, las palabras clave y las campañas." },
       { paso: "03", titulo: "Lanzamiento", texto: "Activamos con testing inicial de variables." },
       { paso: "04", titulo: "Escala", texto: "Escalamos lo que funciona y cortamos lo que no." },
     ],
+    // 8 preguntas comerciales escritas como se buscan (auditoría EXT3-02 y
+    // benchmark, movimiento 5). Cifras: planes de precios.ts, el método del
+    // artículo de inversión y pujas del Planificador de Google (oct-2026).
     faq: [
       {
-        q: "¿Qué es la pauta digital?",
-        a: "Es la inversión publicitaria en plataformas digitales (Google, Meta) para llegar a públicos específicos de forma medible.",
+        q: "¿Cuánto cuesta una agencia de Google Ads?",
+        a: "Nuestra gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas. El detalle de cada plan está en la tabla de precios de esta página.",
       },
       {
-        q: "¿Cuánto debo invertir?",
-        a: "Depende de tu objetivo y tu mercado. Te proponemos un presupuesto realista y lo escalamos según resultados.",
+        q: "¿La inversión en anuncios está incluida en el precio?",
+        a: "No. Los planes son la gestión. Lo que inviertes en anuncios lo cobra Google aparte, según lo que gasten tus campañas, y tú decides el tope diario.",
       },
       {
-        q: "¿Qué plataformas manejan?",
-        a: "Google Ads (Search, Display, Shopping, YouTube), Meta (Facebook, Instagram), TikTok y LinkedIn.",
+        q: "¿Cuánto debo invertir al mes en Google Ads?",
+        a: "Se calcula al revés, desde tu meta de ventas: ventas que quieres, entre tu tasa de cierre, por lo que te cuesta cada contacto. Con 10 ventas al mes, 1 cierre de cada 5 contactos y S/15 por contacto, la pauta base es S/750. Lo explicamos paso a paso en el artículo «Cuánto invertir en Google y Meta Ads en Perú».",
+      },
+      {
+        q: "¿Cuánto cuesta un clic en Google Ads en Perú?",
+        a: "Depende de la búsqueda. Según el Planificador de palabras clave de Google para Perú, consultado en octubre de 2026, la puja alta sugerida para salir arriba fue de S/2.10 en «gigantografías», S/2.80 en «imprenta», S/6.60 en «marketing inmobiliario» y S/12.12 en «agencia de marketing digital». Son estimaciones de Google, no tarifas de Suggestion: lo que pagas sale de la subasta y puede quedar por debajo.",
+      },
+      {
+        q: "¿La cuenta de Google Ads queda a mi nombre?",
+        a: "Sí. La cuenta publicitaria es tuya y nosotros trabajamos con acceso de administrador, igual que en Meta Ads.",
+      },
+      {
+        q: "¿En cuánto tiempo veo resultados?",
+        a: "Las búsquedas traen clics desde el primer día. El costo por contacto se estabiliza en dos a cuatro semanas, y el costo por venta real se lee entre el segundo y el tercer mes, según lo largo que sea tu ciclo de cierre.",
+      },
+      {
+        q: "¿Necesito una landing page?",
+        a: "Ayuda mucho: el anuncio promete algo y la página tiene que cumplirlo de un vistazo, con un solo botón. Puede ser una página de tu web si ya convierte; si no, el plan Business incluye una landing.",
+      },
+      {
+        q: "¿Trabajan con empresas fuera de Ica?",
+        a: "Sí. Gestionamos Google Ads para empresas de todo el Perú desde Ica: la campaña se segmenta por la ciudad o región donde vendes, sea Ica, Lima o cualquier otra.",
       },
       {
         q: "¿Incluye la creación de los anuncios?",

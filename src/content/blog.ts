@@ -5647,7 +5647,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Conseguir interesados en un terreno es fácil y barato. Conseguir interesados que puedan comprarlo es otro oficio, y es el que separa una agenda llena de una semana de ventas.",
     date: "2026-10-06",
-    actualizado: "2026-11-14",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Primero: quién compra un terreno",
@@ -5695,7 +5695,7 @@ export const BLOG_POSTS: BlogPost[] = [
           cabeceras: ["Grupo Inmobiliario Ceinys", "26 ago – 29 sep 2026"],
           filas: [
             ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
-            ["Lotes cerrados por leads que entraron durante el período", "18"],
+            ["Lotes cerrados por leads que entraron durante el período de pauta", "18"],
             ["Publicidad por lote vendido", "S/230.51"],
           ],
           nota: "Resultado medido al 29 de septiembre de 2026, publicado con autorización del cliente. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",
@@ -6539,7 +6539,7 @@ export const BLOG_POSTS: BlogPost[] = [
           cabeceras: ["Grupo Inmobiliario Ceinys", "26 ago – 29 sep 2026"],
           filas: [
             ["Invertido en Meta Ads", "S/4,149.21 en 35 días"],
-            ["Lotes cerrados por leads que entraron durante el período", "18"],
+            ["Lotes cerrados por leads que entraron durante el período de pauta", "18"],
             ["Publicidad por lote vendido", "S/230.51"],
           ],
           nota: "Resultado medido al 29 de septiembre de 2026, publicado con autorización del cliente. En el período se cerraron 25 lotes en total; 7 los cerró cartera anterior a la campaña y por eso no entran en esta cuenta.",
