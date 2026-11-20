@@ -189,7 +189,7 @@ export function leadDedup(): { event_id: string; event_source_url: string; fbp: 
 }
 
 /** ¿Navegador marcado como interno (`?interno=1`)? Entonces no se mide nada. */
-function esInterno(): boolean {
+export function esInterno(): boolean {
   try {
     return localStorage.getItem(INTERNO_KEY) === "1";
   } catch {

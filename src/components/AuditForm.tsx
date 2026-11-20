@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Btn } from "@/components/brand/parts";
-import { track, leadDedup, getAttribution, metaServidor } from "@/lib/tracking";
+import { track, leadDedup, getAttribution, metaServidor, esInterno } from "@/lib/tracking";
 import { GUARDAR_EN_BASE, temaDeUrl } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
 import { lineaRef } from "@/lib/whatsapp-ref";
@@ -99,6 +99,7 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
     }
     window.open(wa, "_blank", "noopener,noreferrer");
     const dedup = leadDedup(); // event_id compartido Pixel↔CAPI + fbp/fbc para el match
+    const interno = esInterno(); // pruebas del equipo: se guardan, pero no cuentan en Meta
     if (!GUARDAR_EN_BASE) {
       track("generate_lead", { origen: consultoria ? "consultoria-cero" : "auditoria" }, dedup.event_id);
       // Sin base no pasa por /api/lead: la copia server-side del Lead sale de aquí.
@@ -124,11 +125,16 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
         mensaje: consultoria ? quiere || undefined : undefined,
         pagina: consultoria ? window.location.pathname : "/auditoria-gratis",
         website: f.get("website"),
-        extra: consultoria
-          ? { oferta: "consultoria-cero", tema: tema || undefined }
-          : { web: f.get("web"), inversion: f.get("inversion"), objetivo: f.get("objetivo") },
+        extra: {
+          ...(consultoria
+            ? { oferta: "consultoria-cero", tema: tema || undefined }
+            : { web: f.get("web"), inversion: f.get("inversion"), objetivo: f.get("objetivo") }),
+          // Navegador marcado como interno (?interno=1): la fila queda señalada
+          // y no se manda el event_id, así el servidor no cuenta un Lead en Meta.
+          ...(interno ? { interno: true } : {}),
+        },
         attribution: getAttribution(),
-        ...dedup,
+        ...(interno ? {} : dedup),
       }),
     });
     setSent(true);
