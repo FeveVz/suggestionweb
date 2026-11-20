@@ -44,13 +44,15 @@ export function organizationSchema(): Json {
         availableLanguage: ["Spanish"],
         email: site.email,
         url: `${SITE_URL}/contacto`,
-        // Atención 24 h con el agente de IA. Es del canal de contacto, no del local,
-        // que no recibe público sin coordinar: por eso ya no hay horario de apertura.
+        // Horario de atención de personas (decisión 6 del owner, 20-nov-2026):
+        // lunes a sábado de 8:30 a 18:30. El agente de IA de WhatsApp responde a
+        // toda hora, pero lo que se declara aquí es cuándo atiende alguien. Es del
+        // canal de contacto, no del local, que no recibe público sin coordinar.
         hoursAvailable: {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          opens: "00:00",
-          closes: "23:59",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "08:30",
+          closes: "18:30",
         },
       },
     ],

@@ -36,7 +36,7 @@ export default function Gracias() {
           </Btn>
         </div>
         <p style={{ display: "inline-flex", alignItems: "center", gap: 8, font: "var(--fw-light) var(--fs-xs)/1 var(--font-body)", color: "var(--text-muted)", marginTop: 22 }}>
-          <Clock size={14} style={{ color: "var(--cyan)" }} /> Atención las 24 horas con nuestro agente de IA · {site.phoneDisplay}
+          <Clock size={14} style={{ color: "var(--cyan)" }} /> Agente de IA a toda hora · personas de {site.horario} · {site.phoneDisplay}
         </p>
       </div>
     </section>

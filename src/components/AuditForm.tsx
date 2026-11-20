@@ -210,7 +210,7 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
           {sent ? "¡Abriendo WhatsApp!" : consultoria ? "Agendar mi consultoría cero" : "Quiero mi auditoría gratis"}
         </Btn>
         <span style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
-          {consultoria ? "Gratis y sin compromiso. Se abre WhatsApp con tu mensaje listo y respondemos en menos de 24 h hábiles." : "Sin compromiso · Respuesta en 48 h hábiles"}
+          {consultoria ? "Gratis y sin compromiso. Se abre WhatsApp con tu mensaje listo: nuestro agente de IA te responde al momento y una persona te confirma de lunes a sábado, de 8:30 a 18:30." : "Sin compromiso · Diagnóstico en 48 h hábiles"}
         </span>
       </div>
     </form>

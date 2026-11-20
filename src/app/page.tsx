@@ -76,7 +76,7 @@ const PROBLEMAS: { problema: string; causa: string; Icono: typeof Car; lleva: { 
  *  que encajan con su objetivo. No es la auditoría de /auditoria-gratis:
  *  aquí no hay revisión previa ni "tres mejoras", y no se promete. */
 const PASOS_CONSULTORIA = [
-  { Icono: MessageCircle, t: "Nos escribes", d: "Por WhatsApp o con un formulario de dos minutos. Te respondemos en menos de 24 horas hábiles para elegir el día y la hora." },
+  { Icono: MessageCircle, t: "Nos escribes", d: "Por WhatsApp o con un formulario de dos minutos. Nuestro agente de IA te responde al momento, y una persona te confirma el día y la hora de lunes a sábado, de 8:30 a 18:30." },
   { Icono: Video, t: "Nos cuentas tu caso en 30 minutos", d: "Tu problema o lo que quieres mejorar, con tus palabras. Escuchamos y preguntamos hasta entender lo que necesitas." },
   { Icono: ClipboardCheck, t: "Te proponemos el camino", d: "Los caminos y los servicios de Suggestion que mejor encajan con tu objetivo, adaptados a tu negocio y no sacados de un paquete." },
 ];

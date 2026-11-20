@@ -48,7 +48,7 @@ const FAQ = [
   { q: "¿Cuánto dura?", a: "30 minutos. Es tiempo suficiente para que nos cuentes tu caso y para proponerte por dónde ir." },
   { q: "¿Necesito saber de marketing?", a: "No. Basta con que nos cuentes qué te pasa o qué quieres lograr, con tus palabras. Entender eso y traducirlo en un plan es nuestro trabajo." },
   { q: "¿Qué me llevo?", a: "Un camino claro para tu objetivo: qué conviene hacer, en qué orden y qué servicios de Suggestion encajan con tu caso. Si decides seguir con nosotros, preparamos la propuesta; si no, te quedas con la orientación." },
-  { q: "¿Cómo la agendo?", a: "Por WhatsApp o con el formulario de esta página. Te respondemos en menos de 24 horas hábiles para elegir el día y la hora." },
+  { q: "¿Cómo la agendo?", a: "Por WhatsApp o con el formulario de esta página. Nuestro agente de IA te responde al momento, y una persona te confirma el día y la hora de lunes a sábado, de 8:30 a 18:30." },
 ];
 
 export default function ConsultoriaCero() {

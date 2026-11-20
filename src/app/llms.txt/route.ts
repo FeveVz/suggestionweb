@@ -65,6 +65,7 @@ Actualizado: ${actualizado}
 
 ${site.legalName} · RUC ${site.ruc} · ${site.city}, Perú.
 Contacto: ${site.email} · WhatsApp ${site.phoneDisplay} · ${u("/contacto")}
+Atención: el agente de IA de WhatsApp responde a toda hora; una persona confirma de ${site.horario}.
 
 ## Qué hacemos
 

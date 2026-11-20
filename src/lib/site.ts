@@ -27,6 +27,12 @@ export const site = {
   phoneE164: "+51920010308",
   whatsappNumber: "51920010308",
   email: "hola@suggestion.pe",
+  /**
+   * Horario de atención de personas (decisión 6 del owner, 20-nov-2026). El
+   * agente de IA de WhatsApp responde a toda hora; una persona confirma en este
+   * horario. Es la única promesa de respuesta de la web (auditoría CRO-09).
+   */
+  horario: "lunes a sábado, de 8:30 a 18:30",
   city: "Ica",
   region: "Ica",
   country: "PE",

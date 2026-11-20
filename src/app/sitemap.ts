@@ -41,8 +41,8 @@ const ACTUALIZADA: Record<string, string> = {
   "/metodo": "2026-10-10",
   "/casos": "2026-11-20",
   "/portafolio": "2026-10-09",
-  "/consultoria-cero": "2026-11-02",
-  "/contacto": "2026-11-02",
+  "/consultoria-cero": "2026-11-20",
+  "/contacto": "2026-11-20",
   "/auditoria-gratis": "2026-10-15",
   "/privacidad": "2026-10-15",
   // 2026-11-14: títulos, H1 o secciones nuevas tras el keyword research.
