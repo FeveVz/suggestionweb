@@ -2273,7 +2273,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Hay una cantidad mínima?",
-        a: "No, producimos desde una unidad. Lo que cambia con la cantidad es la técnica que conviene y, por tanto, el costo por pieza: para pocos puntos de venta suele salir mejor una producción distinta que para un despliegue en decenas de tiendas.",
+        a: "Depende del producto y de la técnica: al cotizar te decimos el mínimo de cada opción. Lo que cambia con la cantidad es la técnica que conviene y, por tanto, el costo por pieza: para pocos puntos de venta suele salir mejor una producción distinta que para un despliegue en decenas de tiendas.",
       },
       {
         q: "¿Diseñan la pieza o solo la producen?",

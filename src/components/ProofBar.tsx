@@ -16,14 +16,15 @@ export type ProofStat = { value: string; label: string; href?: string };
 
 // Cada cifra lleva a la página que la demuestra. Antes eran texto plano y
 // concentraban el 29% de los clics de la home sin llevar a ninguna parte.
-// Etiquetas en palabras de la calle: "atendidas" o "estrategia propia" son
-// frases de informe. Quien llega quiere saber con quién trabajamos y en qué
-// rubros sabemos moverlos.
+// Etiquetas en palabras de la calle, salvo una: las 19 marcas de vehículos se
+// atendieron a través de concesionarios y su etiqueta autorizada es «marcas de
+// vehículos atendidas»; no se presentan como clientes (auditoría EXT6-02,
+// 20-nov-2026).
 const DEFAULT_STATS: ProofStat[] = [
   // Dato del owner (2026-10-15). Va primero: inmobiliario es el primer rubro
   // de la home y el de más marcas que conocemos.
   { value: "24", label: "Marcas inmobiliarias para las que trabajamos", href: "/marketing-inmobiliario" },
-  { value: "19", label: "Marcas de autos y maquinaria con las que trabajamos", href: "/marketing-automotriz" },
+  { value: "19", label: "Marcas de vehículos atendidas", href: "/marketing-automotriz" },
   { value: "+50", label: "Marcas que ya confiaron en nosotros", href: "/casos" },
   { value: String(SECTORES.length), label: "Rubros que conocemos a fondo: inmobiliario, autos, turismo y más", href: "/sectores" },
   // "7 años" es una afirmación; "desde 2019" es un dato que se puede

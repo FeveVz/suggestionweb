@@ -373,7 +373,9 @@ export default function LandingArticle({
       {/* PLANES Y PRECIOS */}
       <PricingSection planes={precios} />
 
-      {banda("¿Es lo que estabas buscando?")}
+      {/* La segunda banda solo si entre las dos se pintó algo: en las 8
+          ciudades quedaban pegadas, a 125 caracteres (auditoría CON-22). */}
+      {(galeria?.length || incluye?.length || beneficios?.length || proceso?.length || precios?.length) ? banda("¿Es lo que estabas buscando?") : null}
 
       {/* ENLAZADO INTERNO (silo) */}
       {related.length > 0 && (

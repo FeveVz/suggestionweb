@@ -4,7 +4,7 @@ import {
   ArrowRight, ArrowDown, Phone, Mail, Building2, Car, Luggage, ShoppingBag, Stethoscope, Sprout, Wine,
   SearchX, UserX, Hourglass, BadgeDollarSign, MonitorX, EyeOff, MessageCircle, Video, ClipboardCheck,
 } from "lucide-react";
-import { Section, Btn, TaglineStrip } from "@/components/brand/parts";
+import { Section, Btn, TaglineStrip, Blot } from "@/components/brand/parts";
 import { Percepcion } from "@/components/brand/interactive";
 import AuditForm from "@/components/AuditForm";
 import HeroShowcase from "@/components/HeroShowcase";
@@ -106,10 +106,10 @@ const SECTORES = [
 // y la única salida era un "Hablemos de tu caso" que abría el índice. Las
 // frases van sin jerga: "leads", "Meta Ads" o "cierre en piso" se entienden en
 // una agencia, no en la cabeza de quien busca una.
-const CASOS: { tag: string; title: string; metric: string; metricLocale?: string; note: string; img: string; alt: string; href: string }[] = [
+const CASOS: { tag: string; title: string; metric: string; metricLocale?: string; note: string; img?: string; alt?: string; href: string }[] = [
   { tag: "Inmobiliario", title: "Inmobiliaria Ceinys", metric: "S/350,000", metricLocale: "es-ES", note: "en ventas: 350 personas interesadas y 8 lotes vendidos, con S/3,000 en anuncios de Facebook e Instagram.", img: "/assets/casos/ceinys-campana-2.webp", alt: "Anuncio del bono por WhatsApp de Ceinys, la pieza que captaba a los interesados de la campaña", href: "/casos/inmobiliaria-ceinys" },
   { tag: "Consumo", title: "Granjas Bonanza", metric: "15", note: "contratos cerrados con S/2,500 invertidos en publicidad.", img: "/assets/casos/bonanza-granja.webp", alt: "Galpón de Granjas Bonanza en operación", href: "/casos/granjas-bonanza" },
-  { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas en una sola campaña, dentro y fuera de temporada.", img: "/assets/sectores/turismo.webp", alt: "Destino turístico en Ica (sector turismo)", href: "/casos/hoteles-senor-de-luren" },
+  { tag: "Turismo", title: "Hoteles Señor de Luren", metric: "75", note: "reservas en una sola campaña, dentro y fuera de temporada.", href: "/casos/hoteles-senor-de-luren" },
   { tag: "Automotriz", title: "Autoniza", metric: "8", note: "autos vendidos en 2 eventos: invitamos a los compradores, montamos el evento y se vendió el mismo día.", img: fotoPortafolio("relanzamiento-mitsubishi-autoniza", 18), alt: "Unidad Mitsubishi con moño en el evento de Autoniza, en Ica", href: "/casos/autoniza-eventos" },
 ];
 
@@ -264,8 +264,15 @@ export default function Home() {
             <a key={c.title} href={c.href} className="hk-case hk-lift" style={{ border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", overflow: "hidden", display: "flex", flexDirection: "column", background: "var(--white)", color: "inherit", textDecoration: "none" }}>
               {/* Imagen real del caso (relaciona el dato con una prueba visual) */}
               <div style={{ position: "relative", aspectRatio: "16 / 10", background: "var(--surface-raised)" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.img} alt={c.alt} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                {c.img ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={c.img} alt={c.alt ?? ""} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                ) : (
+                  // Sin foto propia del caso: la mancha de marca, como en /casos.
+                  <span style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
+                    <Blot shape={3} tint="orange" size={120} />
+                  </span>
+                )}
                 <span style={{ position: "absolute", top: 12, left: 12, font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--white)", background: "rgba(8,8,8,0.6)", backdropFilter: "blur(4px)", padding: "6px 10px", borderRadius: "var(--radius-sm)" }}>{c.tag}</span>
               </div>
               <div style={{ padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 14 }}>

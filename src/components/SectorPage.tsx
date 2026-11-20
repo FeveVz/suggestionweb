@@ -11,7 +11,8 @@ import { getServicio } from "@/content/servicios";
 const SECTOR_IMG: Record<string, { src: string; alt: string; w: number; h: number }> = {
   "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys", w: 1000, h: 562 },
   "marketing-automotriz": { src: "/assets/sectores/automotriz.webp", alt: "Campaña de marketing para el concesionario Pacífico Motors", w: 1000, h: 1778 },
-  "marketing-turismo": { src: "/assets/sectores/turismo.webp", alt: "Oasis de Huacachina en Ica, principal destino turístico de la región", w: 1100, h: 766 },
+  // Turismo va sin foto hasta tener una propia: la anterior era una captura de
+  // otra web, con la flecha de su carrusel (auditoría CON-18, 20-nov-2026).
   "marketing-marcas-consumo": { src: "/assets/sectores/marcas.webp", alt: "Producto de marca: chorizos artesanales de El Charcutero", w: 1000, h: 1000 },
 };
 

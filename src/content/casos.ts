@@ -72,7 +72,7 @@ export const CASOS_DETALLE: Caso[] = [
       "Del 26 de agosto al 29 de septiembre de 2026 (35 días): S/4,149.21 en Meta Ads y 18 lotes cerrados con leads que entraron en ese período. La resta y el embudo.",
     h1: "Ceinys: 18 lotes cerrados a S/230.51 de publicidad por lote",
     resumen:
-      "Del 26 de agosto al 29 de septiembre de 2026 —35 días— el Grupo Inmobiliario Ceinys cerró 25 lotes. No nos atribuimos los 25: siete los cerró gente que ya estaba en cartera antes del 26 de agosto, y esas ventas las pagó el esfuerzo de meses anteriores. Quedan 18, cerrados con leads que entraron durante el período, y esa es la cifra que usamos. La resta la hacemos nosotros, antes de que la haga usted.",
+      "Del 26 de agosto al 29 de septiembre de 2026 —35 días— el Grupo Inmobiliario Ceinys cerró 25 lotes. No nos atribuimos los 25: siete los cerró gente que ya estaba en cartera antes del 26 de agosto, y esas ventas las pagó el esfuerzo de meses anteriores. Quedan 18, cerrados con leads que entraron durante el período, y esa es la cifra que usamos. La resta la hacemos nosotros, antes de que la hagas tú.",
     stats: [
       { valor: "S/4,149.21", label: "Invertido en Meta Ads del 26/08 al 29/09/2026" },
       { valor: "18", label: "Lotes cerrados por leads que entraron durante el período" },
@@ -298,7 +298,7 @@ export const CASOS_DETALLE: Caso[] = [
       },
       {
         q: "\u00bfEste resultado se puede comparar con el de otro per\u00edodo?",
-        a: "Con cuidado y solo si el criterio es el mismo. Cada corte tiene su propio per\u00edodo, su propia inversi\u00f3n y su propia resta; comparar la cifra estricta de un corte con la generosa de otro no dice nada \u00fatil. En esta p\u00e1gina est\u00e1n las dos, para que la comparaci\u00f3n la pueda hacer usted con los mismos criterios.",
+        a: "Con cuidado y solo si el criterio es el mismo. Cada corte tiene su propio per\u00edodo, su propia inversi\u00f3n y su propia resta; comparar la cifra estricta de un corte con la generosa de otro no dice nada \u00fatil. En esta p\u00e1gina est\u00e1n las dos, para que compares t\u00fa con los mismos criterios.",
       },
     ],
   },

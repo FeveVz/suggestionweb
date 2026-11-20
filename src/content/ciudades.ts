@@ -21,15 +21,15 @@ export const CIUDADES: Ciudad[] = [
     metaDescription:
       "Agencia de marketing para negocios de Chincha: agroindustria, avícolas, concesionarios y comercio. Campañas que se miden en ventas. Consultoría gratis.",
     h1: "Agencia de marketing en Chincha",
-    hero: "Chincha vende, pero compite con Lima a una hora de distancia. Armamos campañas que capturan al comprador local antes de que se le ocurra buscar afuera, y que le llegan también al cliente de Lima que compra aquí.",
+    hero: "Chincha vende, pero compite con Lima, a unas tres horas de distancia. Armamos campañas que capturan al comprador local antes de que se le ocurra buscar afuera, y que le llegan también al cliente de Lima que compra aquí.",
     cta: "Agenda tu consultoría cero",
     proof:
       "Trabajamos desde Ica con más de 50 marcas y llevamos 7 años en el mercado de la región.",
     cobertura:
-      "Chincha está a poco más de una hora de nuestra oficina en Ica, así que es de las plazas que mejor conocemos fuera de casa. Reuniones presenciales cuando el proyecto lo pide, y el resto de la operación —campañas, reportes, seguimiento— funcionando a diario sin depender de que alguien maneje dos horas.",
+      "Chincha está a menos de dos horas de nuestra oficina en Ica, así que es de las plazas que mejor conocemos fuera de casa. Reuniones presenciales cuando el proyecto lo pide, y el resto de la operación —campañas, reportes, seguimiento— funcionando a diario sin depender de que alguien viaje cada semana.",
     secciones: [
       {
-        h2: "El problema de estar a una hora de Lima",
+        h2: "El problema de competir con Lima",
         parrafo:
           "Es la particularidad comercial de Chincha: tu cliente puede resolver la compra en Lima el mismo día. Eso obliga a competir con argumentos que no sean solo el precio —cercanía, atención, entrega, postventa— y a que tu negocio aparezca antes de que la búsqueda derive a la capital. La otra cara es la oportunidad: hay demanda limeña que baja los fines de semana y en feriados largos, y casi nadie le habla.",
       },
@@ -58,7 +58,7 @@ export const CIUDADES: Ciudad[] = [
     faq: [
       {
         q: "¿Atienden Chincha si su oficina está en Ica?",
-        a: "Sí. Chincha está a poco más de una hora y es una de las plazas que más trabajamos fuera de Ica. Coordinamos reuniones presenciales cuando hacen falta y la operación del día a día es remota, que es como funciona igual dentro de la misma ciudad.",
+        a: "Sí. Chincha está a menos de dos horas de Ica y es una de las plazas que más trabajamos fuera de Ica. Coordinamos reuniones presenciales cuando hacen falta y la operación del día a día es remota, que es como funciona igual dentro de la misma ciudad.",
       },
       {
         q: "¿Cuánto debo invertir al mes en publicidad?",

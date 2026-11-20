@@ -104,6 +104,24 @@ export const MAIN_NAV: NavLink[] = [
 // /contacto sigue en el pie para quien lo busque.
 export const CTA_PRIMARY: NavLink = { label: "Consultoría cero", href: "/consultoria-cero" };
 
+/**
+ * Páginas de producción: quien llega quiere un precio, no una reunión. Ahí la
+ * cabecera y el menú del celular cotizan por WhatsApp con el servicio escrito,
+ * en vez de ofrecer la consultoría (auditoría CRO-05, 20-nov-2026). BTL queda
+ * fuera hasta que el dueño decida si es producción (decisión 1).
+ */
+export const CTA_COTIZA = "Cotiza por WhatsApp";
+export const COTIZA_PRODUCCION: Record<string, string> = {
+  "/servicios/imprenta": "impresiones",
+  "/servicios/gigantografias": "gigantografías",
+  "/servicios/merchandising": "merchandising",
+  "/servicios/material-pop": "material POP",
+  "/servicios/estructuras-publicitarias": "estructuras publicitarias",
+  "/servicios/letreros-luminosos": "letreros luminosos",
+  "/servicios/publicidad-movil": "publicidad móvil",
+};
+export const mensajeCotiza = (tema: string) => `Hola Suggestion, quiero cotizar ${tema}.`;
+
 /** Columnas del footer (doc 02 §7). */
 export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
   {

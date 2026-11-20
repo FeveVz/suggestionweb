@@ -559,13 +559,16 @@ export const SECTORES: Sector[] = [
     metaDescription:
       "Agencia de marketing para clínicas dentales, estéticas y médicas: capta pacientes sin quemar presupuesto, con la agenda y la ficha de Google medidas.",
     h1: "Marketing para clínicas que capta pacientes",
+    // Sin barra de cifras: las de lotes y autos no prueban nada en salud y no
+    // hay un caso de salud publicado (auditoría CON-29, 20-nov-2026).
+    proof: "",
     hero: "Más pacientes, sin quemar tu presupuesto en clics que no agendan. Diseñamos campañas para clínicas, consultorios y profesionales de la salud, enfocadas en llenar la agenda.",
     cta: "Agenda tu consultoría cero",
     secciones: [
       {
         h2: "Marketing y publicidad dental",
         parrafo:
-          "El nicho con mayor demanda en salud. Campañas para clínicas y consultorios dentales que convierten búsquedas en citas.",
+          "Campañas para clínicas y consultorios dentales que convierten búsquedas en citas.",
       },
       {
         h2: "Captación de pacientes",

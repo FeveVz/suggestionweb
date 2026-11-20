@@ -209,22 +209,3 @@ export function contactPageSchema(opts: { url: string }): Json {
   };
 }
 
-/**
- * ItemList de reseñas para /casos. Sin estrellas self-serving (doc 12 §2.7):
- * marcamos Review dentro de la Organization para E-E-A-T, no para rich snippet.
- */
-export function casosReviewSchema(
-  reviews: { quote: string; author: string }[]
-): Json {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": ORG_ID,
-    name: site.name,
-    review: reviews.map((r) => ({
-      "@type": "Review",
-      reviewBody: r.quote,
-      author: { "@type": "Person", name: r.author },
-    })),
-  };
-}

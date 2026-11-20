@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 
 /**
  * Reveal de titular palabra por palabra (máscara + subida escalonada) al
@@ -43,10 +43,15 @@ export default function RevealText({
   const words = text.split(" ");
   return (
     <span ref={ref} className={`hk-reveal-text ${className || ""}`} style={style}>
+      {/* Un espacio real entre palabras: sin él, el texto que leen Google y
+          los lectores de pantalla salía pegado («Asíloresolvimos…»). */}
       {words.map((w, i) => (
-        <span key={i} className="hk-word">
-          <span style={{ transitionDelay: `${(i * 0.045).toFixed(3)}s` }}>{w}</span>
-        </span>
+        <Fragment key={i}>
+          <span className="hk-word">
+            <span style={{ transitionDelay: `${(i * 0.045).toFixed(3)}s` }}>{w}</span>
+          </span>
+          {i < words.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </span>
   );

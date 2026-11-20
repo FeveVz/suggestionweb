@@ -67,7 +67,8 @@ export default function ConsultoriaCero() {
                 Nos cuentas tu problema o lo que quieres mejorar. Con eso entendemos lo que necesitas y te proponemos los caminos y los servicios de Suggestion que mejor encajan con tu objetivo. Sin costo y sin compromiso.
               </p>
               <div className="hk-enter-4" style={{ marginTop: 26 }}>
-                <WaConsultoria>Agendar por WhatsApp <ArrowRight size={18} /></WaConsultoria>
+                <WaConsultoria>Agenda tu consultoría cero <ArrowRight size={18} /></WaConsultoria>
+                <p style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-muted)", margin: "10px 0 0" }}>Se abre WhatsApp con tu mensaje listo.</p>
               </div>
             </div>
 
@@ -120,7 +121,7 @@ export default function ConsultoriaCero() {
           </h2>
           <Faq items={FAQ} />
           <div style={{ display: "flex", gap: "14px 22px", flexWrap: "wrap", alignItems: "center", marginTop: 28 }}>
-            <WaConsultoria>Agendar por WhatsApp <ArrowRight size={18} /></WaConsultoria>
+            <WaConsultoria>Agenda tu consultoría cero <ArrowRight size={18} /></WaConsultoria>
             {/* La otra oferta sigue viva y este es su enlace de entrada. */}
             <Link href="/auditoria-gratis" className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-muted)" }}>
               ¿Prefieres que revisemos primero tu marketing? Pide la auditoría

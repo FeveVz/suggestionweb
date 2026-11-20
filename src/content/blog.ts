@@ -1005,7 +1005,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "Ya sabes qué es el marketing digital; falta saber qué aplica en tu caso. Esa conversación la tenemos gratis: revisamos tus números y te decimos qué canal te conviene primero —y qué todavía no vale la pena pagar.",
-    moneyPage: { label: "Agenda tu diagnóstico gratuito", href: "/servicios/marketing-digital" },
+    moneyPage: { label: "Marketing digital para tu negocio", href: "/servicios/marketing-digital" },
     relacionados: ["cuanto-invertir-en-ads-peru", "que-es-un-lead"],
   },
   {
@@ -1162,7 +1162,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "¿Quieres saber cuánto necesitas invertir para tu objetivo? Te damos un número honesto.",
-    moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
+    moneyPage: { label: "Publicidad en Google Ads", href: "/servicios/publicidad-digital" },
     relacionados: ["cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru", "cpl-vs-roas", "que-es-el-remarketing"],
   },
   {
@@ -1595,7 +1595,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "Si tus leads se están enfriando entre WhatsApp, correos y cuadernos, el problema no es la publicidad: es el proceso. Eso se ordena.",
-    moneyPage: { label: "Agenda una demo", href: "/servicios/crm-automatizacion" },
+    moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
     relacionados: ["como-automatizar-whatsapp", "que-es-el-marketing-digital"],
   },
   {
@@ -1789,7 +1789,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion reportamos CPL, ROAS y cierres con transparencia. Sin humo.",
-    moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
+    moneyPage: { label: "Publicidad en Google Ads", href: "/servicios/publicidad-digital" },
     relacionados: ["cuanto-invertir-en-ads-peru", "que-es-el-marketing-digital", "como-elegir-una-agencia-de-marketing-digital"],
   },
   {
@@ -2011,7 +2011,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion montamos tu automatización de WhatsApp conectada al CRM, para que ningún lead se enfríe.",
-    moneyPage: { label: "Agenda una demo", href: "/servicios/crm-automatizacion" },
+    moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
     relacionados: ["que-es-un-lead", "ia-en-el-marketing", "como-vender-por-whatsapp-paso-a-paso"],
   },
   {
@@ -2112,7 +2112,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion construimos estrategias con el consumidor peruano en el centro, no plantillas importadas.",
-    moneyPage: { label: "Agenda tu diagnóstico", href: "/servicios/marketing-digital" },
+    moneyPage: { label: "Marketing digital para tu negocio", href: "/servicios/marketing-digital" },
     relacionados: ["psicologia-de-ventas", "que-es-neuromarketing"],
   },
   {
@@ -2224,7 +2224,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion escribimos campañas que persuaden con principios reales, no con trucos.",
-    moneyPage: { label: "Pide tu propuesta", href: "/servicios/publicidad-digital" },
+    moneyPage: { label: "Publicidad en Google Ads", href: "/servicios/publicidad-digital" },
     relacionados: ["que-es-neuromarketing", "comportamiento-del-consumidor-peruano"],
   },
   {
@@ -2479,9 +2479,9 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "El sector dental: el de mayor demanda",
+        h2: "El sector dental: búsquedas con intención de cita",
         parrafo:
-          "En salud, las búsquedas dentales lideran. Si tienes un consultorio dental, hay demanda activa esperando: campañas específicas la capturan.",
+          "Quien busca un dentista suele necesitarlo pronto: es una búsqueda con intención de cita. Si tienes un consultorio dental, una campaña específica captura esa demanda.",
       },
       {
         h2: "No quemes presupuesto",
@@ -2730,7 +2730,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre: "En Suggestion integramos IA en flujos de trabajo y automatización, con estrategia humana al mando.",
-    moneyPage: { label: "Agenda una demo", href: "/servicios/crm-automatizacion" },
+    moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
     relacionados: ["como-automatizar-whatsapp", "que-es-un-lead"],
   },
   {
@@ -4117,7 +4117,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre:
-      "En Suggestion producimos regalos corporativos con tu marca para clientes y equipo, y coordinamos contigo la entrega para que lleguen antes de que cierre el año.",
+      "En Suggestion producimos regalos corporativos con tu marca para clientes y equipo. Cuéntanos cuántos necesitas y para cuándo, y confirmamos la fecha de entrega al cotizar.",
     moneyPage: { label: "Merchandising y regalos corporativos", href: "/servicios/merchandising" },
     relacionados: ["merchandising-corporativo-que-regalar", "polos-personalizados-para-empresa"],
   },
@@ -6456,13 +6456,13 @@ export const BLOG_POSTS: BlogPost[] = [
         bullets: [
           { titulo: "La gestión", texto: "si la lleva una agencia, se cobra aparte: un fee mensual o un porcentaje de la inversión, que en el mercado peruano suele ir del 12 % al 18 %." },
           { titulo: "Las piezas", texto: "fotos, videos y diseños. Un buen video corto suele rendir más que subir el presupuesto." },
-          { titulo: "El IGV", texto: "si compras con RUC, el IGV de un servicio que te presta una empresa extranjera lo declaras y pagas tú, y normalmente lo usas como crédito fiscal. Sin RUC, revisa tu factura de Meta: desde 2025 la ley grava con IGV los servicios digitales que empresas extranjeras prestan a personas en el Perú." },
+          { titulo: "El IGV", texto: "si compras con RUC, el IGV de un servicio que te presta una empresa extranjera lo declaras y pagas tú, y normalmente lo usas como crédito fiscal. Sin RUC, revisa tu factura de Meta: desde el 1 de diciembre de 2024 los servicios digitales que empresas extranjeras prestan a personas en el Perú pagan IGV." },
           { titulo: "El tipo de cambio", texto: "si la cuenta publicitaria está en dólares, tu banco convierte cada cobro. Una cuenta en soles evita esa diferencia." },
         ],
         nota: {
           tipo: "info",
           titulo: "Fuente del IGV",
-          texto: "Ley del IGV (utilización de servicios prestados por no domiciliados) y Decreto Legislativo 1623, publicado en agosto de 2024. Es una orientación general: cómo se aplica a tu caso lo confirma tu contador.",
+          texto: "Ley del IGV (utilización de servicios prestados por no domiciliados), Decreto Legislativo 1623, publicado en agosto de 2024, y Decreto Legislativo 1644, de septiembre de 2024, que fijó el inicio del cobro el 1 de diciembre de 2024. Es una orientación general: cómo se aplica a tu caso lo confirma tu contador.",
         },
       },
       {
@@ -6505,7 +6505,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿La publicidad en Facebook paga IGV?",
-        a: "Sí. Si compras con RUC, el IGV de un servicio prestado por una empresa extranjera lo declaras y pagas tú, y normalmente lo puedes usar como crédito fiscal. Sin RUC, desde 2025 la ley grava con IGV los servicios digitales que empresas extranjeras prestan a personas en el Perú. Confírmalo con tu contador.",
+        a: "Sí. Si compras con RUC, el IGV de un servicio prestado por una empresa extranjera lo declaras y pagas tú, y normalmente lo puedes usar como crédito fiscal. Sin RUC, desde el 1 de diciembre de 2024 los servicios digitales que empresas extranjeras prestan a personas en el Perú pagan IGV. Confírmalo con tu contador.",
       },
       {
         q: "¿Conviene usar el botón «Promocionar publicación»?",

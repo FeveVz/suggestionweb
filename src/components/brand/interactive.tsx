@@ -196,7 +196,8 @@ const RUBROS_TEST: RubroTest[] = [
   },
   {
     k: 'viajes', chip: 'Hoteles y viajes', cosa: 'tu destino',
-    img: '/assets/sectores/turismo.webp', alt: 'Oasis de Huacachina en Ica',
+    // Sin foto propia del destino todavía: la mancha antes que una captura ajena (CON-18).
+    img: BLOT(3, 'orange'), alt: 'Mancha de marca de Suggestion',
     prueba: 'las 75 reservas de Hoteles Señor de Luren',
     miradas: [
       { quien: 'La pareja', ve: 'la escapada que se deben hace meses', dot: 'var(--cyan)', pos: POS[0] },

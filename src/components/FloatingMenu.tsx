@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SERVICE_CATEGORIES, SECTORS, MAIN_NAV, CTA_PRIMARY } from "@/content/navegacion";
+import { SERVICE_CATEGORIES, SECTORS, MAIN_NAV, CTA_PRIMARY, CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza } from "@/content/navegacion";
 import { whatsappLink } from "@/lib/site";
 
 /**
@@ -100,12 +100,20 @@ export default function FloatingMenu() {
               </div>
 
               <div className="hk-fab-foot">
-                <Link href={CTA_PRIMARY.href} onClick={() => setOpen(false)} className="hk-fab-cta">
-                  {CTA_PRIMARY.label} <ArrowRight size={16} />
-                </Link>
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hk-fab-wa">
-                  <MessageCircle size={16} /> WhatsApp
-                </a>
+                {COTIZA_PRODUCCION[pathname] ? (
+                  <a href={whatsappLink(mensajeCotiza(COTIZA_PRODUCCION[pathname]))} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="hk-fab-cta">
+                    {CTA_COTIZA} <ArrowRight size={16} />
+                  </a>
+                ) : (
+                  <>
+                    <Link href={CTA_PRIMARY.href} onClick={() => setOpen(false)} className="hk-fab-cta">
+                      {CTA_PRIMARY.label} <ArrowRight size={16} />
+                    </Link>
+                    <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hk-fab-wa">
+                      <MessageCircle size={16} /> WhatsApp
+                    </a>
+                  </>
+                )}
               </div>
             </motion.div>
           </>

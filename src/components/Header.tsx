@@ -10,7 +10,11 @@ import {
   SECTORS,
   MAIN_NAV,
   CTA_PRIMARY,
+  CTA_COTIZA,
+  COTIZA_PRODUCCION,
+  mensajeCotiza,
 } from "@/content/navegacion";
+import { whatsappLink } from "@/lib/site";
 
 type OpenMenu = "servicios" | "sectores" | null;
 
@@ -140,9 +144,15 @@ export default function Header() {
 
         <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
           <span className="hk-nav" style={{ display: "flex" }}>
-            <Btn as="a" href={CTA_PRIMARY.href} size="sm">
-              {CTA_PRIMARY.label}
-            </Btn>
+            {COTIZA_PRODUCCION[pathname] ? (
+              <Btn as="a" href={whatsappLink(mensajeCotiza(COTIZA_PRODUCCION[pathname]))} target="_blank" rel="noopener noreferrer" size="sm">
+                {CTA_COTIZA}
+              </Btn>
+            ) : (
+              <Btn as="a" href={CTA_PRIMARY.href} size="sm">
+                {CTA_PRIMARY.label}
+              </Btn>
+            )}
           </span>
         </div>
       </div>

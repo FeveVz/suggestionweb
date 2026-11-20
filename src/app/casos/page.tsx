@@ -5,9 +5,7 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Section, Btn, Blot, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
-import { casosReviewSchema } from "@/lib/schema";
 import { site, whatsappLink } from "@/lib/site";
 import { PORTAFOLIO } from "@/content/portafolio";
 import CountUp from "@/components/CountUp";
@@ -20,7 +18,7 @@ export const metadata: Metadata = buildMetadata({
     // Sin las cifras de los cortes de Ceinys: en 155 caracteres no cabe su
     // etiqueta ni su fecha de corte (docs-fuente/21), y «18 lotes» junto a
     // «S/350K» invitaba a comparar dos casos medidos con criterios distintos.
-    "Resultados de negocio, no capturas de likes: S/350K en ventas, 75 reservas, 15 contratos y 8 autos en 2 eventos. Cada caso con su período.",
+    "Resultados de negocio, no capturas de likes: S/350K en ventas, 75 reservas, 15 contratos y 8 autos en 2 eventos. Los recientes, con período y fecha de corte.",
   path: "/casos",
   ogImage: "/assets/og/casos.png",
 });
@@ -93,7 +91,7 @@ const CASOS: {
     img: "/assets/casos/bonanza-granja.webp",
     w: 720,
     h: 450,
-    alt: "Galón de Granjas Bonanza en operación, en Ica",
+    alt: "Galpón de Granjas Bonanza en operación, en Ica",
   },
   {
     tag: "Turismo",
@@ -155,7 +153,6 @@ const GALERIA = [
 export default function Casos() {
   return (
     <>
-      <JsonLd data={casosReviewSchema(CASOS.filter((c) => c.quote && c.author).map((c) => ({ quote: c.quote, author: c.author })))} />
 
       {/* HERO */}
       <section style={{ background: "var(--white)" }}>
