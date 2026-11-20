@@ -24,7 +24,7 @@ export const CIUDADES: Ciudad[] = [
     hero: "Chincha vende, pero compite con Lima, a unas tres horas de distancia. Armamos campañas que capturan al comprador local antes de que se le ocurra buscar afuera, y que le llegan también al cliente de Lima que compra aquí.",
     cta: "Agenda tu consultoría cero",
     proof:
-      "Trabajamos desde Ica con más de 50 marcas y llevamos 7 años en el mercado de la región.",
+      "Trabajamos desde Ica con más de 50 marcas y estamos en el mercado de la región desde 2019.",
     cobertura:
       "Chincha está a menos de dos horas de nuestra oficina en Ica, así que es de las plazas que mejor conocemos fuera de casa. Reuniones presenciales cuando el proyecto lo pide, y el resto de la operación —campañas, reportes, seguimiento— funcionando a diario sin depender de que alguien viaje cada semana.",
     secciones: [
@@ -284,7 +284,7 @@ export const CIUDADES: Ciudad[] = [
     hero: "En Tacna una parte del cliente llega desde el otro lado de la frontera. Eso cambia todo: el idioma del anuncio, la moneda de la comparación y el momento en que se toma la decisión.",
     cta: "Agenda tu consultoría cero",
     proof:
-      "Siete años trabajando con más de 50 marcas, en siete sectores con estrategia propia para cada uno.",
+      "Desde 2019 hemos trabajado con más de 50 marcas, en siete sectores con estrategia propia para cada uno.",
     cobertura:
       "Tacna la trabajamos en remoto desde Ica. La operación diaria —campañas, seguimiento, reportes— es digital, y cuando el proyecto necesita presencia física se coordina con anticipación. La ventaja de trabajar con nosotros no es la cercanía: es el método y los números.",
     secciones: [
@@ -479,7 +479,7 @@ export const CIUDADES: Ciudad[] = [
     hero: "Palpa es un mercado pequeño con dos activos que pocos tienen: una fruta con nombre propio y unos geoglifos más antiguos que los de Nazca. Ninguno de los dos está bien contado, y ahí es donde hay negocio.",
     cta: "Agenda tu consultoría cero",
     proof:
-      "Siete años trabajando desde Ica con más de 50 marcas, en siete sectores con estrategia propia.",
+      "En Ica desde 2019, con más de 50 marcas y siete sectores con estrategia propia.",
     cobertura:
       "Palpa está a poco más de una hora de nuestra oficina en Ica, camino a Nazca, así que es mercado de casa: podemos estar presencialmente para grabar, fotografiar producto o sentarnos con el equipo, y llevar las campañas del día a día en remoto.",
     secciones: [

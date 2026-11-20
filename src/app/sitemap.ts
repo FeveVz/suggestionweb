@@ -37,16 +37,16 @@ const GLOBAL = new Date(`${CAMBIO_GLOBAL}T12:00:00Z`);
  */
 const ACTUALIZADA: Record<string, string> = {
   "/": "2026-10-15",
-  "/nosotros": "2026-10-15",
+  "/nosotros": "2026-11-20",
   "/metodo": "2026-10-10",
-  "/casos": "2026-10-10",
+  "/casos": "2026-11-20",
   "/portafolio": "2026-10-09",
   "/consultoria-cero": "2026-11-02",
   "/contacto": "2026-11-02",
   "/auditoria-gratis": "2026-10-15",
   "/privacidad": "2026-10-15",
   // 2026-11-14: títulos, H1 o secciones nuevas tras el keyword research.
-  "/servicios/publicidad-digital": "2026-11-14",
+  "/servicios/publicidad-digital": "2026-11-20",
   "/servicios/seo": "2026-11-14",
   "/servicios/marketing-digital": "2026-11-14",
   "/servicios/redes-sociales": "2026-11-14",
@@ -56,38 +56,57 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/crm-automatizacion": "2026-11-14",
   "/servicios/produccion-audiovisual": "2026-11-14",
   "/servicios/btl": "2026-11-14",
-  "/servicios/publicidad-movil": "2026-11-14",
-  "/servicios/estructuras-publicitarias": "2026-11-14",
-  "/servicios/material-pop": "2026-11-14",
-  "/servicios/imprenta": "2026-11-14",
+  "/servicios/publicidad-movil": "2026-11-20",
+  "/servicios/estructuras-publicitarias": "2026-11-20",
+  "/servicios/material-pop": "2026-11-20",
+  "/servicios/imprenta": "2026-11-20",
   "/servicios/branding": "2026-11-14",
   "/marketing-inmobiliario": "2026-10-15",
   "/marketing-automotriz": "2026-10-09",
   "/marketing-turismo": "2026-10-09",
   "/marketing-marcas-consumo": "2026-10-09",
-  "/marketing-salud": "2026-10-09",
+  "/marketing-salud": "2026-11-20",
   "/marketing-agroexportacion": "2026-10-09",
   "/marketing-pisco-vino": "2026-10-04",
-  "/casos/ceinys-septiembre-2026": "2026-10-09",
-  "/casos/ceinys-agosto-2026": "2026-10-10",
+  "/casos/ceinys-septiembre-2026": "2026-11-20",
+  "/casos/ceinys-agosto-2026": "2026-11-20",
   "/casos/inmobiliaria-ceinys": "2026-10-09",
   "/casos/autoniza-eventos": "2026-10-09",
   "/equipo/carolina": "2026-10-13",
   "/servicios/merchandising": "2026-11-14",
-  "/blog/imprenta-btl/gigantografias-medidas-materiales-precios": "2026-11-02",
-  "/blog/performance/cuanto-invertir-en-ads-peru": "2026-11-13",
-  "/blog/inmobiliario/como-conseguir-clientes-para-vender-terrenos": "2026-11-14",
   // Keyword research del 2026-11-14: títulos nuevos y 6 páginas nuevas.
-  "/servicios/meta-ads": "2026-11-14",
+  "/servicios/meta-ads": "2026-11-20",
   "/servicios/tienda-virtual": "2026-11-14",
   "/servicios/chatbot-whatsapp": "2026-11-16",
-  "/servicios/eventos-corporativos": "2026-11-14",
+  "/servicios/eventos-corporativos": "2026-11-20",
   "/servicios/gigantografias": "2026-11-16",
   "/servicios/letreros-luminosos": "2026-11-14",
+  // 2026-11-20: correcciones de la auditoría suprema (tareas 1.04, 1.06, 1.16 y 2.12).
+  // Las páginas de arriba que también cambiaron ese día ya llevan esa fecha.
+  "/equipo/abraham": "2026-11-20",
+  "/agencia-de-marketing-en-chincha": "2026-11-20",
+  "/agencia-de-marketing-en-tacna": "2026-11-20",
+  "/agencia-de-marketing-en-palpa": "2026-11-20",
 };
-const fecha = (path: string) => (ACTUALIZADA[path] ? new Date(`${ACTUALIZADA[path]}T12:00:00Z`) : GLOBAL);
-/** Los artículos con fotos propias se ilustraron el 13-oct. */
-const FOTOS_BLOG = new Date("2026-10-13T12:00:00Z");
+const dia = (iso: string) => new Date(`${iso}T12:00:00Z`);
+const fecha = (path: string) => (ACTUALIZADA[path] ? dia(ACTUALIZADA[path]) : GLOBAL);
+const masReciente = (...ds: Date[]) => new Date(Math.max(...ds.map((d) => d.getTime())));
+
+/**
+ * Artículos: la fecha de su última revisión real (`actualizado`, sacado del
+ * historial de git) o, si nunca se tocó, la de publicación. Es la misma que
+ * se ve en el artículo y la que va en su dateModified (auditoría CON-09).
+ */
+const fechaPost = (p: { date: string; actualizado?: string }) => dia(p.actualizado ?? p.date);
+
+/**
+ * Páginas índice (/servicios, /sectores, /blog y sus categorías): cambian
+ * cuando cambia lo que listan, así que llevan la fecha más reciente de sus
+ * hijas. Antes las 17 decían 27-sep aunque ya listaban páginas nuevas
+ * (auditoría TEC-04).
+ */
+const indiceDe = (hijas: Date[]) => masReciente(GLOBAL, ...hijas);
+const SERVICIOS_HIJOS = SERVICE_CATEGORIES.flatMap((c) => c.children.map((s) => fecha(s.href)));
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const u = (path: string) => `${SITE_URL}${path}`;
@@ -114,9 +133,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/terminos"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
     { url: u("/libro-de-reclamaciones"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
     { url: u("/contacto"), lastModified: fecha("/contacto"), changeFrequency: "yearly", priority: 0.6 },
-    { url: u("/servicios"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.9 },
-    { url: u("/sectores"), lastModified: GLOBAL, changeFrequency: "monthly", priority: 0.8 },
-    { url: u("/blog"), lastModified: GLOBAL, changeFrequency: "weekly", priority: 0.8 },
+    { url: u("/servicios"), lastModified: indiceDe(SERVICIOS_HIJOS), changeFrequency: "monthly", priority: 0.9 },
+    { url: u("/sectores"), lastModified: indiceDe(SECTORS.map((s) => fecha(s.href))), changeFrequency: "monthly", priority: 0.8 },
+    { url: u("/blog"), lastModified: indiceDe(BLOG_POSTS.map(fechaPost)), changeFrequency: "weekly", priority: 0.8 },
   ];
 
   // Las 5 categorías hub son indexables (copy y title propios): se incluyen con
@@ -125,7 +144,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicios: MetadataRoute.Sitemap = SERVICE_CATEGORIES.flatMap((c) => [
     {
       url: u(`/servicios/${c.slug}`),
-      lastModified: GLOBAL,
+      lastModified: indiceDe(c.children.map((s) => fecha(s.href))),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
@@ -140,7 +159,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Páginas de cobertura por ciudad: copy propio por ciudad, indexables.
   const ciudades: MetadataRoute.Sitemap = allCiudadSlugs().map((slug) => ({
     url: u(ciudadHref(slug)),
-    lastModified: GLOBAL,
+    lastModified: fecha(ciudadHref(slug)),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
@@ -154,7 +173,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogCategorias: MetadataRoute.Sitemap = BLOG_CATEGORIAS.map((c) => ({
     url: u(`/blog/${c.slug}`),
-    lastModified: GLOBAL,
+    lastModified: indiceDe(BLOG_POSTS.filter((p) => p.categoria === c.slug).map(fechaPost)),
     changeFrequency: "weekly" as const,
     priority: 0.5,
   }));
@@ -163,11 +182,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Las fotos propias que ilustran el artículo, para que Google las indexe
     // asociadas a él y no solo sueltas en /portafolio.
     const fotos = p.secciones.flatMap((s) => (s.foto ? [u(s.foto.src)] : []));
-    const publicado = new Date(`${p.date}T00:00:00`);
     return {
       url: u(`/blog/${p.categoria}/${p.slug}`),
-      // La más reciente de: publicación, cambio global, fotos añadidas y texto revisado.
-      lastModified: new Date(Math.max(publicado.getTime(), GLOBAL.getTime(), fotos.length ? FOTOS_BLOG.getTime() : 0, fecha(`/blog/${p.categoria}/${p.slug}`).getTime())),
+      lastModified: fechaPost(p),
       changeFrequency: "monthly" as const,
       priority: 0.6,
       ...(fotos.length ? { images: fotos } : {}),

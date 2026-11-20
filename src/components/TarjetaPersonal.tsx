@@ -6,7 +6,7 @@ import { UserPlus, MessageCircle, Phone, Mail, Share2, Globe, ArrowRight, Check 
 import { DualReveal, usePrefersReduced } from "@/components/brand/interactive";
 import CountUp from "@/components/CountUp";
 import { Btn, Blot } from "@/components/brand/parts";
-import { site } from "@/lib/site";
+import { aniosActivos, site } from "@/lib/site";
 import type { Talento } from "@/content/equipo";
 
 /**
@@ -157,7 +157,7 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
             colgando en la segunda fila de una tarjeta pensada para el celular. */}
         <Rise reduce={reduce} delay={0.74} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "18px 12px", marginTop: 38, paddingTop: 26, borderTop: "1px solid var(--hairline-inverse)" }}>
           {[
-            ["7", "años"],
+            [String(aniosActivos()), "años"],
             ["+50", "marcas"],
             ["24", "marcas inmobiliarias"],
             ["19", "marcas de vehículos"],

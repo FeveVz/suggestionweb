@@ -49,7 +49,7 @@ export function GET() {
   const blog = BLOG_CATEGORIAS.map((c) => {
     const posts = BLOG_POSTS.filter((p) => p.categoria === c.slug);
     const lista = posts
-      .map((p) => `  - [${p.h1}](${u(`/blog/${p.categoria}/${p.slug}`)}) — ${p.date}`)
+      .map((p) => `  - [${p.h1}](${u(`/blog/${p.categoria}/${p.slug}`)}) — ${p.date}${p.actualizado ? ` (actualizado ${p.actualizado})` : ""}`)
       .join("\n");
     return `- [${c.nombre}](${u(`/blog/${c.slug}`)})\n${lista}`;
   }).join("\n");

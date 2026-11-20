@@ -139,6 +139,7 @@ export default async function BlogPostPage({ params }: Params) {
           headline: post.h1,
           description: post.description,
           datePublished: post.date,
+          dateModified: post.actualizado,
           image: ogDelPost(post.moneyPage.href),
           url: `/blog/${categoria}/${slug}`,
         })}
@@ -161,7 +162,13 @@ export default async function BlogPostPage({ params }: Params) {
               {post.h1}
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 16 }}>
-              {fechaLarga(post.date)} · {minutosLectura(post)} min de lectura · Por <a href="/nosotros" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
+              <time dateTime={post.date}>{fechaLarga(post.date)}</time>
+              {post.actualizado && (
+                <>
+                  {" · "}Actualizado el <time dateTime={post.actualizado}>{fechaLarga(post.actualizado)}</time>
+                </>
+              )}
+              {" · "}{minutosLectura(post)} min de lectura · Por <a href="/nosotros" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
             </p>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "64ch" }}>
               {post.excerpt}

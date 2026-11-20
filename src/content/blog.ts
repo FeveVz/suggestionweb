@@ -40,6 +40,15 @@ export type BlogPost = {
   /** Respuesta corta bajo la entradilla (ver components/EnCorto.tsx). Solo datos del propio artículo. */
   enCorto?: string[];
   date: string;
+  /**
+   * Última revisión real del texto (AAAA-MM-DD), si es posterior a `date`.
+   * Sale visible en el artículo, en el dateModified del schema y en el
+   * sitemap (auditoría CON-09, tarea 2.12). La primera carga se sacó del
+   * historial de git, artículo por artículo, el 20-nov-2026. Al cambiar el
+   * texto de un artículo, se pone aquí la fecha del día; un enlace o un botón
+   * no cuentan.
+   */
+  actualizado?: string;
   secciones: Seccion[];
   /** Preguntas frecuentes del post. Emiten FAQPage (rich snippet) y capturan
    *  las "Otras preguntas de los usuarios" de Google. Opcional. */
@@ -576,6 +585,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Buscar “crear logo” devuelve mil herramientas que prometen un logo en cinco minutos. Algunas sirven; otras te dan un dibujo bonito que no aguanta el primer mes de tu negocio. Antes de elegir, entiende los tres caminos y qué pierdes (o ganas) en cada uno.",
     date: "2026-01-14",
+    actualizado: "2026-08-28",
     secciones: [
       {
         h2: "Los 3 caminos para crear un logo",
@@ -684,6 +694,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La IA crea logos en segundos. Eso es real y útil. Pero confundir “tengo una imagen” con “tengo una marca” es el error que pagan caro muchos negocios. Aquí la versión honesta.",
     date: "2026-01-21",
+    actualizado: "2026-08-28",
     secciones: [
       {
         h2: "Qué hace bien la IA para logos",
@@ -791,6 +802,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Rebranding no es “cambiar el logo porque ya aburre”. Es realinear tu marca con lo que tu negocio es hoy y con el cliente que quieres. Hecho por moda, es un gasto. Hecho por estrategia, recupera ventas.",
     date: "2026-01-28",
+    actualizado: "2026-08-28",
     secciones: [
       {
         h2: "Qué es un rebranding",
@@ -893,6 +905,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para atraer clientes, convertirlos y fidelizarlos. Suena simple, pero la mayoría lo hace mal por una razón: mide likes en vez de ventas. Esta es la versión sin humo, con lo que cuesta empezar en Perú y lo que puedes esperar de verdad.",
     date: "2026-02-04",
+    actualizado: "2026-07-26",
     secciones: [
       {
         h2: "¿Qué es el marketing digital, en una frase?",
@@ -1024,6 +1037,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En Perú el costo por lead va de S/3 a S/40 según el rubro (rangos de mercado de octubre de 2026, sin la gestión).",
     ],
     date: "2026-02-11",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "El presupuesto no se adivina, se calcula al revés",
@@ -1175,6 +1189,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Crear una página web nunca fue tan fácil… ni tan fácil de hacer mal. Hoy puedes armar una en una tarde con Wix, o invertir en una hecha para vender. La diferencia no es la estética: es si trae clientes o solo “se ve bonita”.",
     date: "2026-02-18",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Opción 1: hacerla tú (Wix, WordPress, etc.)",
@@ -1385,6 +1400,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Las herramientas de IA para logos se multiplicaron. Algunas son útiles para explorar; ninguna construye una marca sola. Esta es la guía honesta: para qué sirven y dónde se quedan cortas.",
     date: "2026-02-25",
+    actualizado: "2026-08-28",
     secciones: [
       {
         h2: "Para qué sirven (y para qué no)",
@@ -1486,6 +1502,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un lead es una persona que mostró interés en lo que vendes y te dejó un dato para contactarla. Suena obvio, pero ahí empieza el problema: la mayoría de negocios genera leads y los pierde por no saber qué hacer con ellos. Esta es la guía completa, sin tecnicismos.",
     date: "2026-03-04",
+    actualizado: "2026-07-26",
     secciones: [
       {
         h2: "¿Qué es un lead, en palabras simples?",
@@ -1608,6 +1625,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El neuromarketing estudia cómo decide el cerebro de tu cliente: no lo que dice que decide, sino lo que realmente hace. Es un campo con mucha evidencia útil y también con mucho charlatán, así que aquí va la versión honesta: qué sirve, qué no, y qué puedes aplicar sin un laboratorio.",
     date: "2026-03-11",
+    actualizado: "2026-07-26",
     secciones: [
       {
         h2: "¿Qué es el neuromarketing?",
@@ -1711,6 +1729,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Si tu reporte de campañas habla de alcance y likes, te están distrayendo. Las dos métricas que dicen si tu inversión funciona son CPL y ROAS. Aquí, sin tecnicismos.",
     date: "2026-03-18",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Qué es el CPL (costo por lead)",
@@ -1802,6 +1821,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Wix y similares democratizaron las webs: cualquiera arma una. La duda real es si esa web te va a traer clientes o solo a “estar online”. Comparemos honesto.",
     date: "2026-03-25",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Wix (y constructores similares)",
@@ -1908,6 +1928,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "WhatsApp es donde tu cliente peruano quiere hablar. El problema: si no respondes rápido, el lead se enfría. Automatizar resuelve eso sin que vivas pegado al celular.",
     date: "2026-04-01",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Qué se puede automatizar (y conviene)",
@@ -2024,6 +2045,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Vender en Perú con un manual gringo no funciona. El consumidor peruano tiene motivaciones, desconfianzas y aspiraciones propias. Entenderlas es la diferencia entre una campaña que conecta y una que se ignora.",
     date: "2026-04-08",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Qué motiva la decisión de compra en Perú",
@@ -2125,6 +2147,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Los gatillos mentales funcionan porque así decide el cerebro, no porque “engañen”. Usados con honestidad, aceleran la venta. Usados con humo, queman tu marca. Aquí los 6 que sí valen.",
     date: "2026-04-15",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Los 6 gatillos",
@@ -2237,6 +2260,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Vender un lote o departamento por redes no es subir fotos bonitas y esperar. Es atraer al comprador correcto, filtrar curiosos y llevarlo a una cita. Esto es lo que funciona.",
     date: "2026-04-22",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Lo que funciona",
@@ -2344,6 +2368,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un buen restaurante con mesas vacías un martes no tiene un problema de comida: tiene un problema de marketing. Estas estrategias llenan los días flojos y suben el ticket.",
     date: "2026-04-29",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Estrategias que funcionan",
@@ -2468,6 +2493,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Más pacientes no es cuestión de gastar más en publicidad, sino de captar al correcto y no perderlo en el camino. Esto es lo que funciona en salud.",
     date: "2026-05-06",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Las claves para captar pacientes",
@@ -2555,6 +2581,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El posicionamiento es el lugar que tu marca ocupa en la mente de tu cliente. No es tu logo ni tu eslogan: es lo que la gente piensa y siente cuando te nombran. Y define cuánto puedes cobrar.",
     date: "2026-05-13",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Qué es el posicionamiento de marca",
@@ -2644,6 +2671,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La IA está en todos los discursos de marketing, pero no todo lo que brilla vende. Separemos lo que de verdad mueve resultados de lo que solo suena moderno.",
     date: "2026-05-20",
+    actualizado: "2026-08-28",
     secciones: [
       {
         h2: "Lo que sí funciona",
@@ -2743,6 +2771,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Los mejores ejemplos de marketing inmobiliario tienen algo en común: no venden “metros y precio”, venden valorización, oportunidad y futuro. Aquí ejemplos que funcionan y uno real.",
     date: "2026-05-27",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Ejemplos de ángulos que venden",
@@ -2832,6 +2861,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La preventa es la etapa más rentable y la más difícil: vendes algo que aún no existe. Se vende con percepción de valorización y confianza, no con planos. Así se hace.",
     date: "2026-06-03",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "¿Por qué la preventa es la etapa donde más se vende un proyecto inmobiliario?",
@@ -2951,11 +2981,12 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Pedir “ejemplos de marketing automotriz” y recibir piezas bonitas no le sirve a nadie. Acá tienes siete acciones concretas, del modelo del mes al taller, con qué se hace, por qué funciona y qué número mirar para saber si valió la pena.",
     date: "2026-06-08",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "¿Qué tienen en común los ejemplos de marketing automotriz que sí venden?",
         parrafo:
-          "La mayoría de ejemplos de marketing automotriz que circulan son piezas lindas sin objetivo. Los que mueven la caja comparten tres cosas: piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas. En siete años con 19 marcas de vehículos —livianos, camiones y línea amarilla, incluida XCMG— comprobamos que el formato importa menos que esa disciplina. Van siete ejemplos aplicables desde esta semana: qué se hace, por qué funciona y qué medir.",
+          "La mayoría de ejemplos de marketing automotriz que circulan son piezas lindas sin objetivo. Los que mueven la caja comparten tres cosas: piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas. Desde 2019, con 19 marcas de vehículos —livianos, camiones y línea amarilla, incluida XCMG— comprobamos que el formato importa menos que esa disciplina. Van siete ejemplos aplicables desde esta semana: qué se hace, por qué funciona y qué medir.",
       },
       {
         h2: "Ejemplo 1: la campaña del modelo del mes",
@@ -3074,6 +3105,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Generar leads de autos es fácil; generar leads que llegan al piso y compran, no. La diferencia está en a quién atraes y qué haces después del formulario.",
     date: "2026-06-13",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "El problema de los leads “basura”",
@@ -3167,6 +3199,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que sí mueve al comprador a actuar.",
     date: "2026-06-17",
+    actualizado: "2026-11-02",
     secciones: [
       {
         h2: "¿Qué mensaje mueve de verdad la decisión de comprar un auto?",
@@ -3288,6 +3321,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Tu pisco gana medallas pero se vende casi solo en la puerta de la bodega. Internet puede llevarlo a todo el Perú —si lo haces con marca y estrategia, no improvisando con un par de fotos. Esto es lo que funciona.",
     date: "2026-06-20",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "Primero la marca, después el carrito",
@@ -3384,6 +3418,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que sí mueve la aguja.",
     date: "2026-06-24",
+    actualizado: "2026-08-27",
     secciones: [
       {
         h2: "El importador te googlea antes de escribirte",
@@ -3488,6 +3523,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
     date: "2026-10-04",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Medidas, material y precio: la respuesta corta",
@@ -3722,6 +3758,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Es la inversión publicitaria que más tiempo va a estar trabajando para ti, y la única que no puedes apagar. Conviene acertar a la primera.",
     date: "2026-10-04",
+    actualizado: "2026-10-13",
     secciones: [
       {
         h2: "Qué tipo de letrero necesita tu local",
@@ -3823,6 +3860,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La técnica correcta no es la más bonita: es la que corresponde a tu cantidad. Pedir serigrafía para doce polos o bordado para quinientos son dos formas distintas de pagar de más.",
     date: "2026-10-04",
+    actualizado: "2026-11-02",
     secciones: [
       {
         h2: "Las cuatro técnicas, y cuándo usa cada una",
@@ -3922,6 +3960,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El objetivo de un regalo corporativo no es que guste al recibirlo: es que siga encima del escritorio dentro de seis meses. Son dos cosas muy distintas.",
     date: "2026-10-04",
+    actualizado: "2026-11-14",
     secciones: [
       {
         h2: "La única pregunta que importa",
@@ -4028,6 +4067,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Lo que más se recuerda no es el precio: es un objeto de uso diario con la marca discreta, una tarjeta escrita a mano y una entrega antes de la última semana del año.",
     ],
     date: "2026-11-14",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Por qué diciembre es distinto",
@@ -4150,6 +4190,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La decisión de compra se toma frente al estante, en segundos y casi sin pensar. El material POP existe para ganar esos segundos, y la mayoría está diseñado como si hubiera minutos.",
     date: "2026-10-04",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Material POP en punto de venta: qué es y qué hace cada pieza",
@@ -4250,6 +4291,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Los cuatro formatos ponen tu marca en la calle, pero no hacen el mismo trabajo ni le hablan a la misma persona. Elegir por precio es como se desperdicia una campaña de exterior.",
     date: "2026-10-04",
+    actualizado: "2026-10-13",
     secciones: [
       {
         h2: "Qué hace cada formato",
@@ -5208,6 +5250,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un embudo no sirve para explicar el marketing en una lámina. Sirve para una sola cosa: ver en qué escalón se te está cayendo la gente, que casi nunca es donde crees.",
     date: "2026-10-06",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Qué es un embudo de ventas, sin la lámina de siempre",
@@ -5487,6 +5530,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El problema de casi ninguna clínica dental es que no llegan pacientes. Es que llegan, preguntan el precio y desaparecen. Eso no se arregla con más publicidad.",
     date: "2026-10-06",
+    actualizado: "2026-11-02",
     secciones: [
       {
         h2: "El paciente dental no se capta como cualquier otro",
@@ -5603,6 +5647,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Conseguir interesados en un terreno es fácil y barato. Conseguir interesados que puedan comprarlo es otro oficio, y es el que separa una agenda llena de una semana de ventas.",
     date: "2026-10-06",
+    actualizado: "2026-11-14",
     secciones: [
       {
         h2: "Primero: quién compra un terreno",
@@ -6075,6 +6120,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El importador no busca proveedores como un consumidor busca un producto. Y por eso la mayoría de agroexportadoras pequeñas invierte en marketing que a su cliente real no le llega nunca.",
     date: "2026-10-06",
+    actualizado: "2026-11-14",
     secciones: [
       {
         h2: "Tu cliente no te busca como un consumidor",
@@ -6427,6 +6473,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Aparte de los anuncios se paga la gestión, la producción de las piezas y el IGV.",
     ],
     date: "2026-11-14",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "No hay tarifa: hay subasta",
@@ -6665,6 +6712,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La demostración o el evento con la máquina presente es donde se decide la compra: todo lo anterior existe para llevar ahí a quien puede comprar.",
     ],
     date: "2026-11-14",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Quién compra y cómo decide",
