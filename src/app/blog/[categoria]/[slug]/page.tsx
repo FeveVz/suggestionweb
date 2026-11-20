@@ -10,6 +10,8 @@ import JsonLd from "@/components/JsonLd";
 import EnCorto from "@/components/EnCorto";
 import { buildMetadata } from "@/lib/seo";
 import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
+import { whatsappLink } from "@/lib/site";
+import { CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza } from "@/content/navegacion";
 import { blogPostingSchema } from "@/lib/schema";
 import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
@@ -202,17 +204,36 @@ export default async function BlogPostPage({ params }: Params) {
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", maxWidth: "54ch" }}>
               {post.cierre}
             </p>
-            <div style={{ marginTop: 20, display: "flex", gap: "14px 22px", flexWrap: "wrap", alignItems: "center" }}>
-              <Btn as="a" href={post.moneyPage.href} variant="insight" size="lg">
-                {post.moneyPage.label} <ArrowRight size={18} />
-              </Btn>
-              {/* El cierre es el sitio del artículo donde se deriva (solo 4 de 52
-                  tenían un enlace para hablar con nosotros); la única otra salida
-                  es el bloque «En corto», en los posts que lo tienen. */}
-              <a href={consultoriaHref(cat?.nombre)} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
-                O cuéntanos tu caso: consultoría cero, gratis
-              </a>
-            </div>
+            {/* Imprenta y BTL cierra con la cotización por WhatsApp (auditoría
+                CRO-07, tarea 2.04): quien lee de gigantografías quiere un precio,
+                no una reunión. El resto, con la consultoría. */}
+            {categoria === "imprenta-btl" ? (
+              <>
+                <div style={{ marginTop: 20, display: "flex", gap: "14px 22px", flexWrap: "wrap", alignItems: "center" }}>
+                  <Btn as="a" href={whatsappLink(mensajeCotiza(COTIZA_PRODUCCION[post.moneyPage.href] ?? "un trabajo de imprenta"))} data-cta="cierre del artículo" target="_blank" rel="noopener noreferrer" variant="insight" size="lg">
+                    {CTA_COTIZA} <ArrowRight size={18} />
+                  </Btn>
+                  <a href={post.moneyPage.href} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
+                    {post.moneyPage.label}
+                  </a>
+                </div>
+                <p style={{ font: "var(--fw-light) var(--fs-xs)/1.5 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 14 }}>
+                  Producimos en Ica y entregamos en sus distritos. Todo con factura.
+                </p>
+              </>
+            ) : (
+              <div style={{ marginTop: 20, display: "flex", gap: "14px 22px", flexWrap: "wrap", alignItems: "center" }}>
+                <Btn as="a" href={post.moneyPage.href} variant="insight" size="lg">
+                  {post.moneyPage.label} <ArrowRight size={18} />
+                </Btn>
+                {/* El cierre es el sitio del artículo donde se deriva (solo 4 de 52
+                    tenían un enlace para hablar con nosotros); la única otra salida
+                    es el bloque «En corto», en los posts que lo tienen. */}
+                <a href={consultoriaHref(cat?.nombre)} className="hk-ulink" style={{ font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
+                  O cuéntanos tu caso: consultoría cero, gratis
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Enlaces internos con ancla de keyword → money pages (SEO) */}

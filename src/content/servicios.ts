@@ -1725,12 +1725,13 @@ const SERVICIOS_BASE: Servicio[] = [
     h1: "Activaciones BTL que conectan y captan datos",
     hero: "Lo digital atrae; lo presencial convence. Diseñamos activaciones que hacen vivir tu marca y, a la vez, capturan datos para seguir vendiendo después del evento.",
     enCorto: [
-      "Activaciones de 3 horas: Starter S/1,050, Business S/1,800 y Enterprise S/2,400, con personal de animación, supervisor y captación de leads.",
+      "Cada activación se cotiza según lo que quieres lograr, el lugar, la fecha, la duración y el personal: nos escribes por WhatsApp y te pasamos la propuesta.",
       "Antes de montar definimos qué cuenta como resultado: muestras entregadas, datos capturados, ventas del día o citas.",
       "Una activación sin datos es una fiesta: preparamos la captura y damos seguimiento en las 48 horas siguientes.",
       "Operamos desde Ica y hacemos activaciones y roadshows en Lima y otras regiones.",
     ],
-    cta: "Agenda tu consultoría cero",
+    cta: "Cotiza tu activación",
+    especificaciones: ["Qué quieres lograr (ventas, datos o lanzamiento)", "Lugar y fecha", "Duración", "Personal (anfitrionas, animador, volanteros)", "Cuántas activaciones"],
     keyword: "activaciones btl",
     secciones: [
       {
@@ -1855,7 +1856,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
     ],
     enlazaA: ["eventos-corporativos", "publicidad-movil", "material-pop"],
-    cierre: { h2: "Activemos tu marca en la calle", cta: "Agenda tu consultoría cero" },
+    cierre: { h2: "Activemos tu marca en la calle", cta: "Cotiza tu activación" },
   },
   {
     pruebas: [
@@ -1872,12 +1873,13 @@ const SERVICIOS_BASE: Servicio[] = [
     h1: "Publicidad móvil y bicivallas: tu marca en movimiento",
     hero: "La publicidad que no espera a que te encuentren: va a donde está tu cliente. Llevamos tu marca por las calles de Ica con bicivallas, rotulación y volanteo.",
     enCorto: [
-      "Bicivalla luminosa desde S/120 por jornada de 4 horas, S/190 con una bicipluma y S/250 con dos, con contrato mínimo de 15 días.",
+      "Se cotiza según cuántas bicivallas o biciplumas, cuántas horas al día, cuántos días y por qué zonas: nos escribes por WhatsApp y te pasamos la propuesta.",
       "La ruta se diseña según dónde está tu público y a qué hora, no según dónde hay más gente.",
       "Circula a velocidad de peatón, así que admite más texto que un panel de avenida, y en su versión luminosa se ve de noche.",
       "Rinde más junto con volanteo con captura de datos: la bicivalla da el reconocimiento y el volanteo convierte el interés en contactos.",
     ],
     cta: "Pide tu cotización",
+    especificaciones: ["Qué quieres anunciar", "Bicivallas o biciplumas, y cuántas", "Zonas o rutas", "Horas al día y cuántos días", "Fecha de inicio"],
     keyword: "publicidad móvil ica",
     schema: "localbusiness",
     secciones: [

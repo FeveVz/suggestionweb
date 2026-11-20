@@ -1,7 +1,10 @@
 /**
  * Precios referenciales por servicio (de la v1 de Suggestion, en soles).
- * Mapa slug → planes. Los 4 servicios físicos (estructuras, imprenta,
- * material-pop, merchandising) van por cotización y no listan precios aquí.
+ * Mapa slug → planes. Los servicios físicos (estructuras, imprenta,
+ * material-pop, merchandising, gigantografías, letreros, publicidad móvil y
+ * BTL) van por cotización y no listan precios aquí. Publicidad móvil y BTL
+ * tenían tablas hasta el 20-nov-2026: el dueño decidió cotizarlas como el
+ * resto de producción (decisión 1 de la auditoría).
  * Frecuencias corregidas respecto a la v1 (p. ej. desarrollo-web es por proyecto).
  */
 
@@ -218,48 +221,6 @@ export const PRECIOS: Record<string, PlanPrecio[]> = {
       incluye: ["Todo lo del Business", "Segmentación avanzada del mercado", "Customer journey", "Análisis de precios y posicionamiento", "300 encuestas", "10 a 15 entrevistas a clientes reales", "Estrategia basada en datos", "Presentación + sesión de consultoría"],
     },
   ],
-  btl: [
-    {
-      nombre: "Starter",
-      precio: "S/1,050",
-      periodo: "por activación",
-      incluye: ["Activación de 3 horas", "1 anfitriona / publiman", "1 animador", "1 volantero", "1 supervisor", "Captación básica de leads", "Reporte fotográfico"],
-    },
-    {
-      nombre: "Business",
-      precio: "S/1,800",
-      periodo: "por activación",
-      popular: true,
-      incluye: ["Activación de 3 horas", "3 anfitrionas / publiman", "1 animador", "2 volanteros", "1 personaje (muñeco o bailarín)", "1 supervisor", "Dinámica de interacción", "Captación estructurada de leads", "Base de datos entregable"],
-    },
-    {
-      nombre: "Enterprise",
-      precio: "S/2,400",
-      periodo: "por activación",
-      incluye: ["Activación de 3 horas", "2 anfitrionas / publiman", "1 animador", "1 volantero", "1 personaje", "1 supervisor", "Experiencia de marca completa", "Alta captación de leads", "Base de datos lista para ventas"],
-    },
-  ],
-  "publicidad-movil": [
-    {
-      nombre: "Starter",
-      precio: "S/120",
-      periodo: "por 4 horas",
-      incluye: ["Contrato mínimo: 15 días", "1 bicivalla luminosa", "Activación de 4 horas diarias", "Recorrido en zonas estratégicas", "Visibilidad diurna y nocturna"],
-    },
-    {
-      nombre: "Business",
-      precio: "S/190",
-      periodo: "por 4 horas",
-      popular: true,
-      incluye: ["Contrato mínimo: 15 días", "1 bicivalla luminosa", "1 bicipluma", "Activación de 4 horas diarias", "Mayor cobertura en campo", "Refuerzo de impacto visual"],
-    },
-    {
-      nombre: "Enterprise",
-      precio: "S/250",
-      periodo: "por 4 horas",
-      incluye: ["Contrato mínimo: 15 días", "1 bicivalla luminosa", "2 biciplumas", "Activación de 4 horas diarias", "Alta visibilidad", "Mayor recordación de marca"],
-    },
-  ],
 };
 
 // Meta Ads es la misma gestión de pauta, contada por plataformas: mismos planes.
@@ -280,12 +241,11 @@ const aNumero = (precio: string): number | null => {
  * servicios de la categoría tienen precio publicado.** Si alguno va por
  * cotización, la categoría entera dice "a cotizar".
  *
- * No es purismo. "Activación y medios físicos" tiene cuatro de seis servicios
- * por cotización, y su plan más barato es S/120 de publicidad móvil —que son
- * cuatro horas, con contrato mínimo de quince días. Anunciar "desde S/120"
- * sería poner un piso que no existe, justo lo que /nosotros promete no hacer.
- * Con esta regla esa categoría cae sola en "a cotizar" y no hace falta
- * mantener ninguna excepción a mano.
+ * No es purismo: anunciar el plan más barato de una categoría donde casi todo
+ * se cotiza sería poner un piso que no existe, justo lo que /nosotros promete
+ * no hacer. Con esta regla esas categorías caen solas en "a cotizar" y no hace
+ * falta mantener ninguna excepción a mano. (Desde el 20-nov-2026 «Activación y
+ * medios físicos» no tiene ningún servicio con precio publicado.)
  */
 export function desdeCategoria(slugs: string[]): string | null {
   const minimos: number[] = [];

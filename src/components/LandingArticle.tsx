@@ -24,6 +24,13 @@ import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "
  * (Service / CollectionPage) en `extraSchema`.
  */
 
+/** Cobertura de una página de producción sin párrafo propio (imprenta, gigantografías…). */
+const COBERTURA_PRODUCCION =
+  "Producimos en Ica y entregamos en la ciudad y sus distritos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes y Salas Guadalupe—; a Chincha, Pisco, Nazca y Palpa enviamos con fecha comprometida, y fuera de la región coordinamos el envío. Todo con factura.";
+
+/** Última línea del «En corto» en producción: lo que pregunta quien compra para su empresa. */
+const EN_CORTO_FACTURA = "Todo con factura: somos una empresa formal con RUC 20615266753.";
+
 export type RelatedBlock = { title: string; links: RelatedLink[]; columns?: number };
 
 /** Párrafo de cobertura ÚNICO por página (keyword propia + ángulo local real); clave = ruta. */
@@ -38,6 +45,12 @@ const COBERTURA: Record<string, string> = {
   "/servicios/crm-automatizacion": "Implementamos CRM y automatización para equipos de venta en Ica y a nivel nacional: cada lead con su seguimiento, sin importar si el asesor está en Subtanjalla o en Lima.",
   "/servicios/branding": "Construimos marcas desde Ica para el Perú: identidad, voz y sistema visual que funcionan igual en una bodega de Ocucaje que en un corporativo de Lima.",
   "/servicios/produccion-audiovisual": "Producimos video y foto en Ica y sus provincias —de las dunas de Ocucaje a los geoglifos de Palpa y las líneas de Nazca— con spots, drone y contenido para redes, y viajamos a donde tu marca lo necesite.",
+  // Producción (auditoría CON-12 y LOC-16, tarea 2.04): Ica y sus distritos, sin «Lima incluida».
+  "/servicios/letreros-luminosos": "Fabricamos e instalamos letreros luminosos en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña y Los Aquijes—. Si tu local está en otra provincia de la región, lo vemos al cotizar. Todo con factura.",
+  "/servicios/estructuras-publicitarias": "Fabricamos e instalamos paneles y estructuras en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña y Los Aquijes—. Para otras provincias de la región, la ubicación, el permiso y el traslado se ven al cotizar. Todo con factura.",
+  "/servicios/publicidad-movil": "Nuestras bicivallas y biciplumas recorren Ica con la ruta pensada para tu público: por dónde pasa y a qué hora. Todo con factura.",
+  "/servicios/btl": "Activamos marcas en Ica y sus distritos, y hacemos activaciones y roadshows en Lima y otras regiones: la logística y los plazos de montaje van en la propuesta. Todo con factura.",
+  "/servicios/eventos-corporativos": "Organizamos eventos corporativos en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña y Los Aquijes—; si es en otra ciudad, la logística y los plazos van en la propuesta. Todo con factura.",
   "/servicios/material-pop": "Producimos material POP para puntos de venta de Ica, Parcona y La Tinguiña, y despachamos a tiendas y campañas de todo el Perú.",
   "/servicios/merchandising": "Merchandising publicitario para empresas de Ica con entrega en toda la región —Subtanjalla, Parcona, Chincha, Pisco y Nazca— y envíos corporativos a nivel nacional.",
   "/marketing-inmobiliario": "Hemos trabajado para 24 marcas inmobiliarias. Vendemos lotes y proyectos en Ica, donde el crecimiento inmobiliario se está dando sobre todo en Subtanjalla, La Tinguiña, Parcona y Los Aquijes, y operamos campañas para desarrolladoras de otras regiones del Perú.",
@@ -308,7 +321,7 @@ export default function LandingArticle({
         <div style={{ display: "grid", gap: "var(--space-8)", maxWidth: 880 }}>
           {enCorto && enCorto.length > 0 && (
             <EnCorto
-              puntos={enCorto}
+              puntos={cotiza ? [...enCorto, EN_CORTO_FACTURA] : enCorto}
               enlace={cotiza ? { href: wa, label: ctaLabel, externo: true } : { href: consultoria, label: CTA_CONSULTORIA }}
             />
           )}
@@ -393,17 +406,18 @@ export default function LandingArticle({
 
       {/* MÉTODO genérico (solo si el servicio no trae proceso propio) + POR QUÉ */}
       {!proceso && <MetodoSection />}
-      <PorQueSection tone="light" />
+      <PorQueSection tone="light" produccion={cotiza} />
 
       {/* Cobertura local (SEO on-page: Ica + provincias + nacional; suma keywords, no reemplaza nada) */}
       <Section tone="light" style={{ paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
         <div style={{ maxWidth: 820 }}>
           <SectionHeading level={2} kicker="Cobertura" maxWidth="22ch" style={{ marginBottom: 16 }}>
-            En Ica y en todo el Perú.
+            {cotiza ? "En Ica y sus distritos." : "En Ica y en todo el Perú."}
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)" }}>
             {cobertura ??
               COBERTURA[breadcrumbs[breadcrumbs.length - 1]?.href ?? ""] ??
+              (cotiza ? COBERTURA_PRODUCCION : null) ??
               "Somos una agencia de marketing y publicidad con base en Ica: atendemos negocios de Ica, Chincha, Pisco y Nazca, y operamos campañas a nivel nacional — Lima incluida — con la misma medición: leads, citas y ventas."}
           </p>
         </div>

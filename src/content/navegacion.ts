@@ -107,8 +107,8 @@ export const CTA_PRIMARY: NavLink = { label: "Consultoría cero", href: "/consul
 /**
  * Páginas de producción: quien llega quiere un precio, no una reunión. Ahí la
  * cabecera y el menú del celular cotizan por WhatsApp con el servicio escrito,
- * en vez de ofrecer la consultoría (auditoría CRO-05, 20-nov-2026). BTL queda
- * fuera hasta que el dueño decida si es producción (decisión 1).
+ * en vez de ofrecer la consultoría (auditoría CRO-05, 20-nov-2026). BTL entró
+ * el mismo día, cuando el dueño decidió cotizarlo como producción (decisión 1).
  */
 export const CTA_COTIZA = "Cotiza por WhatsApp";
 export const COTIZA_PRODUCCION: Record<string, string> = {
@@ -119,6 +119,7 @@ export const COTIZA_PRODUCCION: Record<string, string> = {
   "/servicios/estructuras-publicitarias": "estructuras publicitarias",
   "/servicios/letreros-luminosos": "letreros luminosos",
   "/servicios/publicidad-movil": "publicidad móvil",
+  "/servicios/btl": "una activación BTL",
 };
 export const mensajeCotiza = (tema: string) => `Hola Suggestion, quiero cotizar ${tema}.`;
 
