@@ -124,6 +124,19 @@ export default async function CasoPage({ params }: Params) {
         </div>
       </Section>
 
+      {/* Banda a mitad del caso (auditoría CRO-15, tarea 3.14): el primer botón
+          aparecía casi al final de la página, cuando quien lee ya decidió. */}
+      <aside style={{ background: "var(--surface-raised)", borderTop: "1px solid var(--border-subtle)", borderBottom: "1px solid var(--border-subtle)" }}>
+        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.5rem,3vw,2rem) var(--gutter)", display: "flex", gap: "16px 32px", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}>
+          <p style={{ font: "var(--fw-medium) var(--fs-base)/1.45 var(--font-body)", color: "var(--text-strong)", margin: 0, maxWidth: "56ch" }}>
+            ¿Quieres saber dónde se escapa tu venta? En 30 minutos lo vemos contigo, gratis.
+          </p>
+          <Btn as="a" href={consultoriaHref()} data-cta="banda del caso" size="md">
+            {CTA_CONSULTORIA} <ArrowRight size={16} />
+          </Btn>
+        </div>
+      </aside>
+
       {/* GALERÍA */}
       {c.imagenes && c.imagenes.length > 0 && (
         <Section tone="light" style={{ background: "var(--surface-raised)" }}>

@@ -2365,11 +2365,11 @@ const SERVICIOS_BASE: Servicio[] = [
     metaDescription:
       "Imprenta en Ica por pedido: gigantografías, banners, tarjetas y más. Cotizamos por WhatsApp según medida, material y cantidad. Recojo solo coordinado.",
     h1: "Imprenta en Ica: impresión por pedido para tu negocio",
-    hero: "Imprimimos desde una tarjeta hasta una gigantografía. Cuéntanos qué necesitas, en qué medida, material y cantidad, y te cotizamos por WhatsApp. Trabajamos por pedido: no atendemos al paso y cualquier visita se coordina antes.",
+    hero: "Imprimimos desde una tarjeta hasta una gigantografía. Cuéntanos qué necesitas, en qué medida, material y cantidad, y te cotizamos por WhatsApp sin que tengas que moverte. Trabajamos por pedido, sin atención al paso: la entrega o el recojo se coordinan contigo.",
     enCorto: [
       "Imprimimos por pedido: tarjetas, volantes, banners, vinil, etiquetas y gigantografías.",
       "No hay lista de precios fija: cotizamos por WhatsApp con lo que vas a imprimir, la medida, el material, la cantidad y la fecha.",
-      "No atendemos al paso: la entrega o el recojo se coordinan antes.",
+      "Cotizas por WhatsApp sin moverte; la entrega o el recojo se coordinan contigo.",
       "Para tirajes cortos conviene la impresión digital; para tirajes largos, el offset, porque el costo por unidad baja con el volumen.",
     ],
     cta: "Cotiza tu impresión",
@@ -2418,9 +2418,9 @@ const SERVICIOS_BASE: Servicio[] = [
         ],
       },
       {
-        h2: "Trabajamos por pedido, sin atención al paso",
+        h2: "Trabajamos por pedido: cotizas sin moverte",
         parrafo:
-          "No atendemos al público en el local a menos que se coordine antes. Los pedidos se cotizan con sus especificaciones y te decimos la fecha de entrega antes de empezar. Si necesitas recoger tu pedido o revisar algo en persona, lo coordinamos. Si buscas copias o impresiones al momento y sin cita, te conviene un centro de copiado cercano. Si llegaste buscando «imprentas cerca de mí» o «impresiones cerca de mí», esto es lo que somos en Ica: una empresa de imprenta por pedido que coordina contigo la entrega o el recojo.",
+          "Todo se coordina antes: no hace falta venir al local para cotizar ni para hacer el pedido. Los pedidos se cotizan con sus especificaciones y te decimos la fecha de entrega antes de empezar. Si necesitas recoger tu pedido o revisar algo en persona, lo coordinamos. Si buscas copias o impresiones al momento y sin cita, te conviene un centro de copiado cercano. Si llegaste buscando «imprentas cerca de mí» o «impresiones cerca de mí», esto es lo que somos en Ica: una empresa de imprenta por pedido que coordina contigo la entrega o el recojo.",
       },
       {
         h2: "Impresiones por tiraje corto o largo",

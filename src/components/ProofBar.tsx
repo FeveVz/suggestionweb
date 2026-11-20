@@ -25,7 +25,9 @@ const DEFAULT_STATS: ProofStat[] = [
   // de la home y el de más marcas que conocemos.
   { value: "24", label: "Marcas inmobiliarias para las que trabajamos", href: "/marketing-inmobiliario" },
   { value: "19", label: "Marcas de vehículos atendidas", href: "/marketing-automotriz" },
-  { value: "+50", label: "Marcas que ya confiaron en nosotros", href: "/casos" },
+  // Lleva al muro de logos de la home, que es lo que la demuestra; /casos
+  // solo tiene 6 casos (auditoría EXT6-04, tarea 3.14).
+  { value: "+50", label: "Marcas que ya confiaron en nosotros", href: "/#marcas" },
   { value: String(SECTORES.length), label: "Rubros que conocemos a fondo: inmobiliario, autos, turismo y más", href: "/sectores" },
   // "7 años" es una afirmación; "desde 2019" es un dato que se puede
   // comprobar. Y el número se calcula, así que no caduca en enero.

@@ -38,7 +38,7 @@ const LOGOS: { src: string; h: number }[] = [
 export default function ClientLogos() {
   const row = [...LOGOS, ...LOGOS]; // duplicado para loop continuo
   return (
-    <section style={{ background: "var(--surface-raised)", borderTop: "1px solid var(--hairline)", borderBottom: "1px solid var(--hairline)" }} aria-label="Clientes">
+    <section id="marcas" style={{ background: "var(--surface-raised)", borderTop: "1px solid var(--hairline)", borderBottom: "1px solid var(--hairline)", scrollMarginTop: 80 }} aria-label="Clientes">
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,4vw,3.5rem) 0" }}>
         <div style={{ padding: "0 var(--gutter)", marginBottom: 28 }}>
           <Label>Más de 50 marcas confían en nosotros</Label>

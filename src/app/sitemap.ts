@@ -70,8 +70,8 @@ const ACTUALIZADA: Record<string, string> = {
   "/marketing-pisco-vino": "2026-10-04",
   "/casos/ceinys-septiembre-2026": "2026-11-20",
   "/casos/ceinys-agosto-2026": "2026-11-20",
-  "/casos/inmobiliaria-ceinys": "2026-10-09",
-  "/casos/autoniza-eventos": "2026-10-09",
+  "/casos/inmobiliaria-ceinys": "2026-11-20",
+  "/casos/autoniza-eventos": "2026-11-20",
   "/equipo/carolina": "2026-10-13",
   "/servicios/merchandising": "2026-11-20",
   // Keyword research del 2026-11-14: títulos nuevos y 6 páginas nuevas.
