@@ -36,7 +36,7 @@ const GLOBAL = new Date(`${CAMBIO_GLOBAL}T12:00:00Z`);
  * no cuenta: al cambiar el texto de una página, se anota aquí su fecha.
  */
 const ACTUALIZADA: Record<string, string> = {
-  "/": "2026-10-15",
+  "/": "2026-11-20",
   "/nosotros": "2026-11-20",
   "/metodo": "2026-10-10",
   "/casos": "2026-11-20",
@@ -47,12 +47,12 @@ const ACTUALIZADA: Record<string, string> = {
   "/privacidad": "2026-10-15",
   // 2026-11-14: títulos, H1 o secciones nuevas tras el keyword research.
   "/servicios/publicidad-digital": "2026-11-20",
-  "/servicios/seo": "2026-11-14",
-  "/servicios/marketing-digital": "2026-11-14",
-  "/servicios/redes-sociales": "2026-11-14",
-  "/servicios/investigacion-de-mercado": "2026-11-14",
+  "/servicios/seo": "2026-11-20",
+  "/servicios/marketing-digital": "2026-11-20",
+  "/servicios/redes-sociales": "2026-11-20",
+  "/servicios/investigacion-de-mercado": "2026-11-20",
   "/servicios/consultoria": "2026-11-14",
-  "/servicios/desarrollo-web": "2026-11-14",
+  "/servicios/desarrollo-web": "2026-11-20",
   "/servicios/crm-automatizacion": "2026-11-14",
   "/servicios/produccion-audiovisual": "2026-11-14",
   "/servicios/btl": "2026-11-14",
@@ -73,14 +73,14 @@ const ACTUALIZADA: Record<string, string> = {
   "/casos/inmobiliaria-ceinys": "2026-10-09",
   "/casos/autoniza-eventos": "2026-10-09",
   "/equipo/carolina": "2026-10-13",
-  "/servicios/merchandising": "2026-11-14",
+  "/servicios/merchandising": "2026-11-20",
   // Keyword research del 2026-11-14: títulos nuevos y 6 páginas nuevas.
   "/servicios/meta-ads": "2026-11-20",
-  "/servicios/tienda-virtual": "2026-11-14",
+  "/servicios/tienda-virtual": "2026-11-20",
   "/servicios/chatbot-whatsapp": "2026-11-16",
   "/servicios/eventos-corporativos": "2026-11-20",
-  "/servicios/gigantografias": "2026-11-16",
-  "/servicios/letreros-luminosos": "2026-11-14",
+  "/servicios/gigantografias": "2026-11-20",
+  "/servicios/letreros-luminosos": "2026-11-20",
   // 2026-11-20: correcciones de la auditoría suprema (tareas 1.04, 1.06, 1.16 y 2.12).
   // Las páginas de arriba que también cambiaron ese día ya llevan esa fecha.
   "/equipo/abraham": "2026-11-20",

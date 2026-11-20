@@ -5345,6 +5345,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La mayoría de negocios no necesita un CRM más potente: necesita que alguien llene el que ya tiene. Esa diferencia explica casi todas las implementaciones que no sirvieron para nada.",
     date: "2026-10-06",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Qué es un CRM, en una frase",
@@ -5421,6 +5422,18 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         q: "¿Cuánto tarda en implementarse?",
         a: "Una configuración básica con los campos esenciales y un pipeline simple puede estar en semanas. Lo que toma tiempo no es la herramienta: es acordar las etapas, decidir qué se registra y conseguir que el equipo lo haga todos los días. Esa parte se mide en meses de hábito, no en días de configuración.",
+      },
+      {
+        q: "¿Qué significa CRM?",
+        a: "Son las siglas de Customer Relationship Management: gestión de la relación con los clientes. En la práctica, es el sistema donde queda cada contacto, en qué etapa está y cuál es el próximo paso.",
+      },
+      {
+        q: "¿Qué tipos de CRM hay?",
+        a: "Se suelen distinguir tres: el operativo, que ordena el día a día de ventas y seguimiento; el analítico, que cruza los datos para ver qué canal y qué etapa rinden; y el colaborativo, que comparte la información del cliente entre áreas. En una empresa pequeña, lo primero que rinde es el operativo.",
+      },
+      {
+        q: "¿Qué beneficios tiene un CRM para las empresas?",
+        a: "Que ningún contacto se pierda, que cada uno tenga una próxima acción con fecha y que puedas medir cuántos pasan de interesado a venta y de qué canal vienen. Además, la información queda en la empresa aunque el asesor se vaya.",
       },
     ],
     cierre: "En Suggestion implementamos el CRM con los campos mínimos que de verdad se llenan, y conectado a WhatsApp, que es por donde entra casi todo.",

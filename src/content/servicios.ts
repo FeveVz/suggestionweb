@@ -630,7 +630,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Estudio de mercado a la medida de tu negocio",
         parrafo:
-          "Diseñamos el estudio según tu pregunta de negocio: ¿hay demanda?, ¿a qué precio?, ¿qué hace la competencia?, ¿qué quiere el cliente?",
+          "Como empresa de investigación de mercados, diseñamos el estudio según tu pregunta de negocio: ¿hay demanda?, ¿a qué precio?, ¿qué hace la competencia?, ¿qué quiere el cliente?",
         sub: [
           {
             h3: "Análisis de mercado y demanda",
@@ -727,7 +727,7 @@ const SERVICIOS_BASE: Servicio[] = [
           "No copiamos plantillas. Leemos tu mercado, tu competencia y tu cliente, y construimos una estrategia con un solo objetivo: vender más. Cada canal cumple un rol dentro del embudo, no actúa por separado.",
       },
       {
-        h2: "¿Qué incluye nuestro servicio?",
+        h2: "¿Qué incluyen nuestros servicios de marketing digital?",
         bullets: [
           {
             titulo: "Plan de marketing digital",
@@ -793,6 +793,10 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         q: "¿Cómo miden el éxito de las campañas?",
         a: "Con KPIs alineados a tu negocio, no likes: CPL, ROAS y cierres, medidos en GA4, Google Ads, Meta y dashboards propios.",
+      },
+      {
+        q: "¿Trabajan con pymes y con empresas B2B?",
+        a: "Sí. Somos una agencia de marketing para empresas: pymes que buscan sus primeros clientes por internet y empresas B2B que venden a otras empresas, donde el ciclo de venta es más largo y cada contacto vale más.",
       },
     ],
     enlazaA: ["publicidad-digital", "redes-sociales", "seo"],
@@ -939,6 +943,10 @@ const SERVICIOS_BASE: Servicio[] = [
         q: "¿Incluye la creación de los anuncios?",
         a: "Sí: diseño de las piezas (imágenes, video corto y copy). Para producción audiovisual completa, está nuestro servicio aparte.",
       },
+      {
+        q: "¿Google Ads es lo mismo que AdWords?",
+        a: "Sí. AdWords es el nombre que tuvo hasta 2018; desde entonces se llama Google Ads. Si buscabas una agencia de Google AdWords en Perú o en Lima, es este servicio: publicamos y gestionamos tus anuncios en Google para que te encuentren quienes ya te buscan.",
+      },
     ],
     enlazaA: ["meta-ads", "marketing-digital", "crm-automatizacion"],
     cierre: { h2: "Pongamos tu inversión a vender", cta: "Agenda tu consultoría cero" },
@@ -967,9 +975,9 @@ const SERVICIOS_BASE: Servicio[] = [
     keyword: "community manager",
     secciones: [
       {
-        h2: "Community manager profesional",
+        h2: "Servicio de community manager profesional",
         parrafo:
-          "Gestionamos tu comunidad: contenido, respuestas y mensajería, con tono de marca y foco comercial.",
+          "Somos una agencia de redes sociales: hacemos el manejo de redes sociales de tu marca —contenido, respuestas y mensajería— con tono de marca y foco comercial.",
       },
       {
         h2: "Estrategia de social media",
@@ -1078,6 +1086,14 @@ const SERVICIOS_BASE: Servicio[] = [
         q: "¿Quién crea el contenido?",
         a: "Nuestro equipo de diseño, copy y video crea todo el contenido. También podemos partir de tu material.",
       },
+      {
+        q: "¿Cuánto cuesta un servicio de community manager?",
+        a: "S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias. Lo que inviertas en anuncios va aparte.",
+      },
+      {
+        q: "¿Tienen community manager en Ica?",
+        a: "Sí. Somos community manager en Ica para marcas de la región, y también llevamos las redes de clientes de Lima y del resto del país.",
+      },
     ],
     enlazaA: ["marketing-digital", "publicidad-digital", "produccion-audiovisual"],
     cierre: { h2: "Hagamos que tus redes vendan", cta: "Agenda tu consultoría cero" },
@@ -1103,9 +1119,9 @@ const SERVICIOS_BASE: Servicio[] = [
     keyword: "diseño de páginas web",
     secciones: [
       {
-        h2: "Diseño y desarrollo web profesional",
+        h2: "Diseño web profesional: estrategia, diseño y desarrollo",
         parrafo:
-          "Estrategia, diseño y tecnología en un mismo equipo. Tu web no es un folleto digital: es tu mejor vendedor, trabajando 24/7.",
+          "Somos una agencia de diseño web: la creación de páginas web va de principio a fin en un mismo equipo, con estrategia, diseño y programación web. Tu web no es un folleto digital: es tu mejor vendedor, trabajando 24/7.",
       },
       {
         h2: "¿Qué incluye?",
@@ -1191,6 +1207,18 @@ const SERVICIOS_BASE: Servicio[] = [
         q: "¿Qué pasa después del lanzamiento?",
         a: "Planes de mantenimiento mensual: actualizaciones, backups, soporte y mejoras continuas.",
       },
+      {
+        q: "¿Cuánto cuesta una landing page?",
+        a: "S/1,500 por proyecto: una sola página con un objetivo, diseño responsive, formulario de contacto, optimización SEO básica y una revisión incluida. Es la opción para una campaña o para empezar.",
+      },
+      {
+        q: "¿Hacen páginas web económicas?",
+        a: "La opción más económica es la landing page de S/1,500, una sola página pensada para que te escriban. Si necesitas varias secciones y administrar tu contenido, la web corporativa cuesta S/4,000. Las dos se diseñan primero para el celular.",
+      },
+      {
+        q: "¿Son una empresa de desarrollo web en Ica?",
+        a: "Sí. Somos una empresa de desarrollo web con base en Ica: hacemos diseño de páginas web en Ica y para empresas de todo el Perú.",
+      },
     ],
     enlazaA: ["tienda-virtual", "seo", "crm-automatizacion"],
     cierre: { h2: "Tu web debería traerte clientes", cta: "Agenda tu consultoría cero" },
@@ -1221,7 +1249,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Posicionamiento web orgánico",
         parrafo:
-          "Trabajamos tu visibilidad de forma sostenida: tráfico que no se apaga cuando apagas la pauta.",
+          "Nuestros servicios de posicionamiento web trabajan tu visibilidad en Google de forma sostenida: tráfico que no se apaga cuando apagas la pauta. Es posicionamiento SEO para empresas que quieren que las encuentren cuando las buscan.",
         sub: [
           {
             h3: "Qué incluye nuestro servicio SEO",
@@ -1327,8 +1355,12 @@ const SERVICIOS_BASE: Servicio[] = [
         a: "Nadie honesto puede garantizar posiciones específicas en Google. Lo que garantizamos es trabajo profesional y resultados medibles.",
       },
       {
-        q: "¿Qué incluye el servicio de SEO?",
+        q: "¿Qué incluye el servicio de posicionamiento en Google?",
         a: "Auditoría inicial, SEO técnico, investigación de keywords, estrategia de contenido, link building y reportes mensuales.",
+      },
+      {
+        q: "¿Cuánto cuesta contratar posicionamiento SEO?",
+        a: "El servicio de SEO mensual cuesta S/1,200 en el plan Básico, S/2,500 en el Profesional y S/5,000 en el Enterprise. El detalle de cada plan está en la tabla de precios de esta página.",
       },
     ],
     enlazaA: ["desarrollo-web", "marketing-digital", "crm-automatizacion"],
@@ -2009,10 +2041,10 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         h2: "Paneles publicitarios",
-        parrafo: "Gran formato para dominar el espacio.",
+        parrafo: "Gran formato para dominar el espacio: un panel publicitario bien ubicado trabaja todos los días frente a quien pasa.",
         sub: [
           {
-            h3: "Paneles LED",
+            h3: "Paneles LED publicitarios",
             texto: "Movimiento y luz para captar la mirada de día y de noche.",
           },
         ],
@@ -2034,7 +2066,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Módulos y stands para ferias",
         parrafo:
-          "Tu punto de marca para ferias, centros comerciales y activaciones: un stand que se ve desde el pasillo y deja espacio para atender y registrar a los visitantes.",
+          "Fabricamos stands y módulos para ferias, centros comerciales y activaciones: un punto de marca que se ve desde el pasillo y deja espacio para atender y registrar a los visitantes.",
       },
       {
         h2: "Toldos publicitarios",
@@ -2257,7 +2289,7 @@ const SERVICIOS_BASE: Servicio[] = [
       { titulo: "Displays de piso", texto: "Estructuras autoportantes de gran visibilidad." },
       { titulo: "Cabeceras de góndola", texto: "Espacios premium en supermercados." },
       { titulo: "Islas y shop-in-shop", texto: "Espacios de marca dedicados dentro de tiendas." },
-      { titulo: "Cartelería", texto: "Carteles, posters, wobblers y más." },
+      { titulo: "Cartelería", texto: "Carteles, posters, wobblers y más material de punto de venta." },
       { titulo: "Stoppers y stripers", texto: "Material colgante para lineales." },
       { titulo: "Letras volumétricas", texto: "Marca con cuerpo y presencia, imposible de ignorar." },
       { titulo: "Señalética", texto: "Letreros y señalización para tiendas." },
@@ -2302,7 +2334,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Diseñan la pieza o solo la producen?",
-        a: "Las dos cosas. Si ya tienes el diseño lo producimos; si no, lo diseñamos partiendo del espacio real y de lo que la tienda permite, que suele ser la restricción que más condiciona el resultado.",
+        a: "Las dos cosas: somos proveedores de material POP de principio a fin. Si ya tienes el diseño, hacemos la producción del material POP; si no, lo diseñamos partiendo del espacio real y de lo que la tienda permite, que suele ser la restricción que más condiciona el resultado.",
       },
       {
         q: "¿Instalan en las tiendas?",
@@ -2378,7 +2410,7 @@ const SERVICIOS_BASE: Servicio[] = [
             texto: "Resistentes al sol y la lluvia, pensadas para durar a la intemperie.",
           },
           {
-            h3: "Offset",
+            h3: "Impresión offset",
             texto: "La opción ideal para grandes volúmenes con costo eficiente.",
           },
           {
@@ -2390,7 +2422,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Trabajamos por pedido, sin atención al paso",
         parrafo:
-          "No atendemos al público en el local a menos que se coordine antes. Los pedidos se cotizan con sus especificaciones y te decimos la fecha de entrega antes de empezar. Si necesitas recoger tu pedido o revisar algo en persona, lo coordinamos. Si buscas copias o impresiones al momento y sin cita, te conviene un centro de copiado cercano.",
+          "No atendemos al público en el local a menos que se coordine antes. Los pedidos se cotizan con sus especificaciones y te decimos la fecha de entrega antes de empezar. Si necesitas recoger tu pedido o revisar algo en persona, lo coordinamos. Si buscas copias o impresiones al momento y sin cita, te conviene un centro de copiado cercano. Si llegaste buscando «imprentas cerca de mí» o «impresiones cerca de mí», esto es lo que somos en Ica: una empresa de imprenta por pedido que coordina contigo la entrega o el recojo.",
       },
       {
         h2: "Impresiones por tiraje corto o largo",
@@ -2444,11 +2476,11 @@ const SERVICIOS_BASE: Servicio[] = [
     incluye: [
       { titulo: "Tarjetas de presentación", texto: "Offset y digital, con acabados especiales." },
       { titulo: "Papelería corporativa", texto: "Hojas membretadas, sobres y carpetas." },
-      { titulo: "Folletos y flyers", texto: "Dípticos, trípticos y volantes promocionales." },
+      { titulo: "Folletos y afiches", texto: "Dípticos, trípticos, volantes y afiches publicitarios." },
       { titulo: "Catálogos", texto: "Encuadernación profesional de alta gama." },
       { titulo: "Revistas y boletines", texto: "Publicaciones periódicas y newsletters." },
       { titulo: "Libros y manuales", texto: "Impresión de libros, manuales y anuarios." },
-      { titulo: "Etiquetas y stickers", texto: "Adhesivos y etiquetas de producto." },
+      { titulo: "Etiquetas y stickers", texto: "Stickers personalizados, adhesivos y etiquetas de producto." },
       { titulo: "Empaques", texto: "Cajas, bolsas y packaging personalizado." },
       { titulo: "Gran formato", texto: "Posters, banners, gigantografías y displays." },
     ],
@@ -2502,6 +2534,10 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         q: "¿Trabajan con empresas de fuera de la ciudad de Ica?",
         a: "Sí. Atendemos toda la región —Chincha, Pisco, Nazca, Palpa y los distritos de la ciudad— con fecha de entrega comprometida, y coordinamos envíos al resto del país.",
+      },
+      {
+        q: "¿Imprimen para Nazca, Chincha o Pisco?",
+        a: "Sí. El taller trabaja para toda la región de Ica: para Chincha, Pisco, Nazca y Palpa la fecha de envío se compromete desde que apruebas la prueba, y fuera de la región coordinamos el envío a cualquier punto del país.",
       },
     ],
     enlazaA: ["gigantografias", "material-pop", "merchandising"],
@@ -2576,7 +2612,7 @@ const SERVICIOS_BASE: Servicio[] = [
           "Día del padre, navidad, aniversarios. Llegamos a tiempo y con stock —porque un regalo tarde no es regalo.",
       },
       {
-        h2: "Por qué tu merch con Suggestion",
+        h2: "Merch para empresas: por qué con Suggestion",
         parrafo:
           "Diseño + producción + logística en un solo lugar. No solo imprimimos: pensamos qué pieza refuerza tu marca y cuál es plata tirada.",
       },
@@ -2597,12 +2633,12 @@ const SERVICIOS_BASE: Servicio[] = [
       },
     ],
     incluye: [
-      { titulo: "Ropa corporativa", texto: "Polos, camisetas, casacas y uniformes." },
+      { titulo: "Ropa corporativa", texto: "Polos con logo de empresa, camisetas, casacas y uniformes." },
       { titulo: "Artículos de oficina", texto: "Agendas, lapiceros, libretas y accesorios de escritorio." },
       { titulo: "Tecnología", texto: "USBs, power banks, audífonos y gadgets." },
       { titulo: "Hogar y estilo de vida", texto: "Termos, tazas, paraguas y bolsas." },
       { titulo: "Kits corporativos", texto: "De bienvenida, navideños y especiales." },
-      { titulo: "Regalos premium", texto: "Regalos ejecutivos de alto valor." },
+      { titulo: "Regalos premium", texto: "Regalos premium corporativos para clientes y directivos." },
       { titulo: "Eco-friendly", texto: "Productos sostenibles y reciclados." },
       { titulo: "Producción express", texto: "Entregas urgentes cuando lo necesitas." },
       { titulo: "Diseño de empaque", texto: "Presentación premium para cada producto." },
@@ -2640,6 +2676,10 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         q: "¿Qué souvenir corporativo conviene para una feria?",
         a: "Algo liviano, útil y que no estorbe: en una feria la gente ya carga bolsas y folletos. Lo pesado o frágil se abandona en el stand. Si quieres dejar una pieza de más valor, es mejor entregarla solo a los contactos calificados en lugar de repartirla a todo el que pasa.",
+      },
+      {
+        q: "¿Son una empresa de regalos corporativos?",
+        a: "Sí: diseñamos y producimos merchandising empresarial y regalos corporativos —polos, tazas, termos, kits y otros productos corporativos con tu marca— y los entregamos en Ica o los enviamos al resto del país.",
       },
     ],
     enlazaA: ["imprenta", "eventos-corporativos", "branding"],

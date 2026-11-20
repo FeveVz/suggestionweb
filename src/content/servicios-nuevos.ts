@@ -274,6 +274,10 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
         q: "¿Me ayudan a conseguir ventas?",
         a: "Sí. La tienda sale con la medición lista para Meta Ads y Google Ads, y podemos llevar la pauta y el SEO desde el lanzamiento.",
       },
+      {
+        q: "¿Hacen tiendas online para negocios de todo el Perú?",
+        a: "Sí. Diseñamos la tienda online desde Ica para negocios de cualquier ciudad del Perú, con pasarela de pagos para cobrar con tarjeta y los medios que usa tu cliente.",
+      },
     ],
     enlazaA: ["desarrollo-web", "meta-ads", "seo"],
     cierre: { h2: "Abramos tu tienda", cta: "Agenda tu consultoría cero" },
@@ -618,7 +622,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     incluye: [
       { titulo: "Lonas para fachada", texto: "Con refuerzo y ojales, listas para colgar." },
-      { titulo: "Banners con estructura", texto: "Roll ups y banners para ferias y eventos." },
+      { titulo: "Banner publicitario con estructura", texto: "Roll ups y banners para ferias, eventos y puntos de venta." },
       { titulo: "Vinil adhesivo", texto: "Para vidrios, paredes y vehículos." },
       { titulo: "Vinil microperforado", texto: "Ventanas con publicidad sin perder luz." },
       { titulo: "Rígidos", texto: "Foam y PVC para señalética." },
@@ -661,6 +665,10 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       {
         q: "¿Hacen envíos fuera de Ica?",
         a: "Sí, coordinamos envíos al resto del país. El plazo de transporte se suma al de producción y te lo decimos junto con la cotización.",
+      },
+      {
+        q: "¿Imprimen banners publicitarios en Ica?",
+        a: "Sí: banners en lona o en vinil, con estructura tipo roll up o para colgar, para fachadas, ferias y eventos. Se cotizan igual que una gigantografía: con la medida, el material, el acabado y la cantidad.",
       },
     ],
     enlazaA: ["imprenta", "letreros-luminosos", "estructuras-publicitarias"],
@@ -739,7 +747,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       },
     ],
     incluye: [
-      { titulo: "Letreros luminosos", texto: "Cajas de luz en acrílico para tu fachada." },
+      { titulo: "Letreros luminosos", texto: "Letreros acrílicos luminosos: cajas de luz para tu fachada." },
       { titulo: "Letras corpóreas", texto: "Con volumen, con o sin iluminación." },
       { titulo: "Letras retroiluminadas", texto: "Luz por detrás, efecto halo." },
       { titulo: "Avisos en acrílico", texto: "Para interior y exterior." },
@@ -784,6 +792,10 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       {
         q: "¿También hacen toldos publicitarios?",
         a: "Sí, con tu marca impresa, para entradas, terrazas y vitrinas.",
+      },
+      {
+        q: "¿Qué letreros de publicidad hacen?",
+        a: "Letreros luminosos en acrílico, letras corpóreas con o sin luz, letras retroiluminadas, avisos en acrílico, paneles LED, toldos y señalética, con diseño, fabricación e instalación del mismo equipo.",
       },
     ],
     enlazaA: ["estructuras-publicitarias", "gigantografias", "material-pop"],

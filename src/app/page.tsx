@@ -126,7 +126,7 @@ const FAQ = [
   },
   {
     q: "¿Qué hace una agencia de marketing y publicidad?",
-    a: "Atrae a las personas correctas, las convierte en contactos y acompaña hasta el cierre. Nosotros no nos quedamos en el alcance: medimos cuántos leads, citas y ventas genera cada sol invertido.",
+    a: "Atrae a las personas correctas, las convierte en contactos y acompaña hasta el cierre. Suggestion es a la vez agencia digital y agencia de publicidad: en Ica hacemos marketing digital y publicidad física —impresos, paneles y activaciones— con el mismo equipo. Y no nos quedamos en el alcance: medimos cuántos leads, citas y ventas genera cada sol invertido.",
   },
   {
     q: "¿Por qué elegir una agencia de marketing en Ica y no una de Lima?",
