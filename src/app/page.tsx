@@ -276,7 +276,8 @@ export default function Home() {
                 <span style={{ position: "absolute", top: 12, left: 12, font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--white)", background: "rgba(8,8,8,0.6)", backdropFilter: "blur(4px)", padding: "6px 10px", borderRadius: "var(--radius-sm)" }}>{c.tag}</span>
               </div>
               <div style={{ padding: "var(--space-6)", display: "flex", flexDirection: "column", gap: 14 }}>
-                <div style={{ font: "var(--fw-bold) var(--fs-4xl)/0.95 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
+                {/* Las cifras largas (S/350.000) se salían de la tarjeta en escritorio. */}
+                <div style={{ font: `var(--fw-bold) ${c.metric.length > 6 ? "var(--fs-3xl)" : "var(--fs-4xl)"}/0.95 var(--font-display)`, letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>
                   <CountUp to={c.metric} locale={c.metricLocale} />
                 </div>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-body)" }}>
