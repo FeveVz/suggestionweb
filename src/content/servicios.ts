@@ -924,10 +924,6 @@ const SERVICIOS_BASE: Servicio[] = [
         a: "Depende de la búsqueda. Según el Planificador de palabras clave de Google para Perú, consultado en octubre de 2026, la puja alta sugerida para salir arriba fue de S/2.10 en «gigantografías», S/2.80 en «imprenta», S/6.60 en «marketing inmobiliario» y S/12.12 en «agencia de marketing digital». Son estimaciones de Google, no tarifas de Suggestion: lo que pagas sale de la subasta y puede quedar por debajo.",
       },
       {
-        q: "¿La cuenta de Google Ads queda a mi nombre?",
-        a: "Sí. La cuenta publicitaria es tuya y nosotros trabajamos con acceso de administrador, igual que en Meta Ads.",
-      },
-      {
         q: "¿En cuánto tiempo veo resultados?",
         a: "Las búsquedas traen clics desde el primer día. El costo por contacto se estabiliza en dos a cuatro semanas, y el costo por venta real se lee entre el segundo y el tercer mes, según lo largo que sea tu ciclo de cierre.",
       },
