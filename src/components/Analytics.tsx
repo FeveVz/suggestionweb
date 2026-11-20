@@ -28,6 +28,15 @@ import { EID_KEY } from "@/lib/meta-match";
  * (/api/evento, ver metaServidor en tracking.ts), con el mismo event_id que
  * el Píxel. El PageView queda solo en el Píxel. Si en Events Manager sigue
  * conectada la pasarela de Stape, se puede desconectar: no hace nada.
+ * (20-nov-2026: la configuración pública del Píxel ya no tiene pasarela; nada que desconectar.)
+ *
+ * Sin eventos automáticos (20-nov-2026, auditoría MED-01): autoConfig en false
+ * antes del init apaga los clics que el Píxel registraba solo (SubscribedButtonClick)
+ * y los metadatos de página. La configuración pública del dataset seguía con
+ * InferredEvents activo aunque Events Manager lo mostrara apagado, y esos clics
+ * ya habían fabricado conversiones falsas. La coincidencia automática se apagó
+ * el mismo día en Events Manager: tomaba el correo y el teléfono de la agencia
+ * del pie de la web. El external_id manual sigue igual.
  *
  * ⚠️ No llamar a fbq('init') por segunda vez para añadir datos (teléfono al
  * enviar un formulario, etc.): el Píxel solo acepta un segundo init si el
@@ -121,6 +130,7 @@ export default function Analytics() {
                 localStorage.setItem('${EID_KEY}', eid);
               }
             } catch (x) { eid = ''; }
+            fbq('set', 'autoConfig', false, '${META_PIXEL_ID}');
             if (eid) fbq('init', '${META_PIXEL_ID}', { external_id: eid });
             else fbq('init', '${META_PIXEL_ID}');
           }`}
