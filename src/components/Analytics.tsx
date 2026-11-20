@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, ES_INTERNO_JS, captureAttribution, track, newEventId, metaServidor } from "@/lib/tracking";
+import { decorarWhatsApp } from "@/lib/whatsapp-ref";
 import { EID_KEY } from "@/lib/meta-match";
 
 /**
@@ -80,15 +81,37 @@ export default function Analytics() {
       else if (href.startsWith("tel:")) method = "phone";
       else if (href.startsWith("mailto:")) method = "email";
       if (!method) return;
+      // Antes de que se abra WhatsApp: línea «Ref» con página, botón y fuente (lib/whatsapp-ref.ts).
+      let cta: string | null = null;
+      try {
+        cta = method === "whatsapp" ? decorarWhatsApp(a) : null;
+      } catch {
+        /* si falla, el enlace se abre tal cual */
+      }
       // Mismo id para el Píxel y para la copia del servidor: Meta los une.
       const id = newEventId();
-      track("contact", { method, page_path: window.location.pathname }, id);
+      track("contact", { method, page_path: window.location.pathname, ...(cta ? { cta } : {}) }, id);
       metaServidor("Contact", id, { method });
+    };
+
+    // Clic con la rueda o «abrir en otra pestaña» con el botón del medio: solo la línea «Ref».
+    const onAuxClick = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement | null)?.closest?.("a");
+      if (!a || e.button !== 1) return;
+      try {
+        decorarWhatsApp(a);
+      } catch {
+        /* el enlace se abre tal cual */
+      }
     };
 
     // Captura: dispara aunque un hijo del <a> (icono/span) sea el objetivo real.
     document.addEventListener("click", onClick, { capture: true });
-    return () => document.removeEventListener("click", onClick, { capture: true });
+    document.addEventListener("auxclick", onAuxClick, { capture: true });
+    return () => {
+      document.removeEventListener("click", onClick, { capture: true });
+      document.removeEventListener("auxclick", onAuxClick, { capture: true });
+    };
   }, []);
 
   if (!GA_ID && !META_PIXEL_ID && !CLARITY_ID) return null;

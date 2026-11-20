@@ -7,6 +7,7 @@ import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SERVICE_CATEGORIES, SECTORS, MAIN_NAV, CTA_PRIMARY, CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza } from "@/content/navegacion";
 import { whatsappLink } from "@/lib/site";
+import { mensajePorRuta } from "@/lib/whatsapp-ref";
 
 /**
  * Menú móvil como botón flotante (FAB) abajo a la derecha + WhatsApp.
@@ -109,7 +110,7 @@ export default function FloatingMenu() {
                     <Link href={CTA_PRIMARY.href} onClick={() => setOpen(false)} className="hk-fab-cta">
                       {CTA_PRIMARY.label} <ArrowRight size={16} />
                     </Link>
-                    <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hk-fab-wa">
+                    <a href={whatsappLink(mensajePorRuta(pathname))} target="_blank" rel="noopener noreferrer" className="hk-fab-wa">
                       <MessageCircle size={16} /> WhatsApp
                     </a>
                   </>
@@ -123,7 +124,7 @@ export default function FloatingMenu() {
       {/* Botones flotantes */}
       <div className="hk-fab">
         {!open && (
-          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp" className="hk-fab-btn" style={{ background: "#25D366" }}>
+          <a href={whatsappLink(mensajePorRuta(pathname))} target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp" className="hk-fab-btn" style={{ background: "#25D366" }}>
             <MessageCircle size={24} color="#fff" />
           </a>
         )}

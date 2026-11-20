@@ -38,6 +38,7 @@ export default function EnCorto({ puntos, enlace }: { puntos: string[]; enlace?:
       {enlace && (
         <a
           href={enlace.href}
+          data-cta="en corto"
           {...(enlace.externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
           className="hk-ulink"
           style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-bold) var(--fs-sm)/1.3 var(--font-accent)", color: "var(--text-strong)" }}

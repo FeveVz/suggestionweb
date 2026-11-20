@@ -132,7 +132,7 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
           </motion.a>
         </Rise>
         <Rise reduce={reduce} delay={0.6} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 10 }}>
-          <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" href={`https://wa.me/${t.whatsapp}?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer" style={accion}>
+          <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" data-ref="no" href={`https://wa.me/${t.whatsapp}?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer" style={accion}>
             <MessageCircle size={17} style={{ color: "#25D366" }} /> WhatsApp
           </motion.a>
           <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" href={`tel:${t.telefono}`} style={accion}>

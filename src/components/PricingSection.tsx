@@ -68,7 +68,7 @@ export default function PricingSection({ planes, nombre }: { planes?: PlanPrecio
                 ))}
               </ul>
               <div style={{ marginTop: 26 }}>
-                <Btn as="a" href={whatsappLink(waMsg)} target="_blank" rel="noopener noreferrer" variant={p.popular ? "primary" : "secondary"} size="md" full>
+                <Btn as="a" href={whatsappLink(waMsg)} data-cta={`plan ${p.nombre}`} target="_blank" rel="noopener noreferrer" variant={p.popular ? "primary" : "secondary"} size="md" full>
                   Solicitar este plan <ArrowRight size={16} />
                 </Btn>
               </div>

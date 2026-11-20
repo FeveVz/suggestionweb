@@ -57,7 +57,7 @@ function CtaBanda({ texto, label, destino }: { texto: string; label: string; des
     <aside style={{ background: "var(--surface-raised)", borderTop: "1px solid var(--border-subtle)", borderBottom: "1px solid var(--border-subtle)" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.5rem,3vw,2rem) var(--gutter)", display: "flex", gap: "16px 32px", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}>
         <p style={{ font: "var(--fw-medium) var(--fs-base)/1.45 var(--font-body)", color: "var(--text-strong)", margin: 0, maxWidth: "56ch" }}>{texto}</p>
-        <Btn as="a" {...destino} size="md">
+        <Btn as="a" {...destino} data-cta="banda" size="md">
           {label} <ArrowRight size={16} />
         </Btn>
       </div>
@@ -119,7 +119,9 @@ export default function LandingArticle({
   // consultoría, recordando de qué página viene (ver lib/cta.ts).
   const cotiza = esCotizacion(ctaLabel);
   const plantilla = especificaciones?.length ? `\n\n${especificaciones.map((d) => `${d}: `).join("\n")}` : "";
-  const waMsg = cotiza ? `Hola Suggestion, quiero cotizar ${tema ?? h1}.${plantilla}` : `Hola Suggestion, me interesa: ${h1}.`;
+  const waMsg = cotiza
+    ? `Hola Suggestion, quiero cotizar ${tema ?? h1}.${plantilla}`
+    : `Hola Suggestion, quiero agendar mi consultoría cero${tema ? ` sobre ${tema}` : ""}.`;
   const wa = whatsappLink(waMsg);
   const consultoria = consultoriaHref(tema);
   const destino = cotiza
@@ -190,7 +192,7 @@ export default function LandingArticle({
                 className="hk-enter-4"
                 style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap", alignItems: "center" }}
               >
-                <Btn as="a" {...destino} size="lg">
+                <Btn as="a" {...destino} data-cta="hero" size="lg">
                   {ctaLabel} <ArrowRight size={18} />
                 </Btn>
                 {/* En las páginas de producto no hay segundo botón: el de la
@@ -201,6 +203,7 @@ export default function LandingArticle({
                   <Btn
                     as="a"
                     href={wa}
+                    data-cta="hero"
                     variant="secondary"
                     size="lg"
                     target="_blank"
@@ -371,7 +374,7 @@ export default function LandingArticle({
       <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} tema={tema} />
 
       {/* PLANES Y PRECIOS */}
-      <PricingSection planes={precios} />
+      <PricingSection planes={precios} nombre={tema} />
 
       {/* La segunda banda solo si entre las dos se pintó algo: en las 8
           ciudades quedaban pegadas, a 125 caracteres (auditoría CON-22). */}
@@ -437,11 +440,12 @@ export default function LandingArticle({
             {cierre.h2}
           </SectionHeading>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-            <Btn as="a" {...destino} variant="onDark" size="lg">
+            <Btn as="a" {...destino} data-cta="cierre" variant="onDark" size="lg">
               {cierre.cta} <ArrowRight size={18} />
             </Btn>
             <a
               href={wa}
+              data-cta="cierre"
               target="_blank"
               rel="noopener noreferrer"
               style={{

@@ -5,6 +5,7 @@ import { Btn } from "@/components/brand/parts";
 import { track, leadDedup, getAttribution, metaServidor } from "@/lib/tracking";
 import { GUARDAR_EN_BASE, temaDeUrl } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
+import { lineaRef } from "@/lib/whatsapp-ref";
 
 /**
  * Formulario calificador, para dos ofertas distintas:
@@ -53,7 +54,7 @@ export function WaConsultoria({ children }: { children: React.ReactNode }) {
   const tema = useTema();
   const texto = `Hola Suggestion, quiero agendar mi consultoría cero${tema ? ` sobre ${tema}` : ""}.`;
   return (
-    <Btn as="a" href={whatsappLink(texto)} size="lg" target="_blank" rel="noopener noreferrer">
+    <Btn as="a" href={whatsappLink(texto)} data-cta="botón de la consultoría" size="lg" target="_blank" rel="noopener noreferrer">
       {children}
     </Btn>
   );
@@ -78,7 +79,7 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
           `Mi WhatsApp: ${f.get("telefono")}`,
           tema ? `Sobre: ${tema}` : null,
           quiere ? `Lo que quiero resolver o mejorar: ${quiere}` : null,
-          `Desde: ${window.location.pathname}`,
+          `\n${lineaRef("formulario de la consultoría")}`,
         ]
       : [
           `Hola Suggestion, quiero mi auditoría gratis. Soy ${f.get("nombre")}.`,
@@ -87,6 +88,7 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
           f.get("web") ? `Web/IG: ${f.get("web")}` : null,
           `Inversión mensual en publicidad: ${f.get("inversion")}`,
           `Objetivo: ${f.get("objetivo")}`,
+          `\n${lineaRef("formulario de la auditoría")}`,
         ];
     const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg.filter(Boolean).join("\n"))}`;
     setWaUrl(wa);
