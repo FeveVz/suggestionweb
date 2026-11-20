@@ -87,6 +87,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/agencia-de-marketing-en-chincha": "2026-11-20",
   "/agencia-de-marketing-en-tacna": "2026-11-20",
   "/agencia-de-marketing-en-palpa": "2026-11-20",
+  "/libro-de-reclamaciones": "2026-11-20",
 };
 const dia = (iso: string) => new Date(`${iso}T12:00:00Z`);
 const fecha = (path: string) => (ACTUALIZADA[path] ? dia(ACTUALIZADA[path]) : GLOBAL);
@@ -131,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/auditoria-gratis"), lastModified: fecha("/auditoria-gratis"), changeFrequency: "monthly", priority: 0.7 },
     { url: u("/privacidad"), lastModified: fecha("/privacidad"), changeFrequency: "yearly", priority: 0.2 },
     { url: u("/terminos"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
-    { url: u("/libro-de-reclamaciones"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/libro-de-reclamaciones"), lastModified: fecha("/libro-de-reclamaciones"), changeFrequency: "yearly", priority: 0.2 },
     { url: u("/contacto"), lastModified: fecha("/contacto"), changeFrequency: "yearly", priority: 0.6 },
     { url: u("/servicios"), lastModified: indiceDe(SERVICIOS_HIJOS), changeFrequency: "monthly", priority: 0.9 },
     { url: u("/sectores"), lastModified: indiceDe(SECTORS.map((s) => fecha(s.href))), changeFrequency: "monthly", priority: 0.8 },

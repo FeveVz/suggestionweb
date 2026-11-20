@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BookOpen } from "lucide-react";
 import { Label } from "@/components/brand/parts";
 import ReclamoForm from "@/components/ReclamoForm";
+import { DEF_QUEJA, DEF_RECLAMO, LEYENDA_INDECOPI, LEYENDA_PLAZO } from "@/lib/reclamos";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -22,9 +23,16 @@ export default function LibroReclamaciones() {
         <p style={{ font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-body)", margin: "16px 0 6px", maxWidth: "70ch" }}>
           Conforme al Código de Protección y Defensa del Consumidor (Ley N.º 29571), ponemos a tu disposición nuestro Libro de Reclamaciones virtual.
         </p>
-        <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", margin: "0 0 30px" }}>
+        <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", margin: "0 0 20px" }}>
           Proveedor: {site.legalName} · RUC {site.ruc} · Ica, Perú
         </p>
+        {/* Leyendas de la Hoja de Reclamación (DS 011-2011-PCM, modificado por el DS 101-2022-PCM). */}
+        <ul style={{ listStyle: "none", margin: "0 0 32px", padding: "16px 18px", maxWidth: 760, display: "grid", gap: 8, background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-sm)", font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-body)" }}>
+          <li>{DEF_RECLAMO}</li>
+          <li>{DEF_QUEJA}</li>
+          <li>{LEYENDA_PLAZO}</li>
+          <li>{LEYENDA_INDECOPI}</li>
+        </ul>
         <ReclamoForm />
       </div>
     </section>

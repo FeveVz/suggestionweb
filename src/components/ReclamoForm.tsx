@@ -3,15 +3,23 @@
 import { useState } from "react";
 import { Btn } from "@/components/brand/parts";
 import { GUARDAR_EN_BASE } from "@/lib/cta";
-import { site, whatsappLink } from "@/lib/site";
+import { site } from "@/lib/site";
+import { DEF_QUEJA, DEF_RECLAMO, LEYENDA_INDECOPI, LEYENDA_PLAZO } from "@/lib/reclamos";
 
 /**
- * Formulario del Libro de Reclamaciones virtual (DS 011-2011-PCM).
- * Guarda el reclamo en /api/lead (tipo "reclamo") y muestra el código
- * de registro. Respuesta al consumidor: máx. 15 días hábiles.
+ * Formulario del Libro de Reclamaciones virtual (Ley 29571; reglamento
+ * DS 011-2011-PCM, modificado por el DS 101-2022-PCM). Sigue los campos de la
+ * Hoja de Reclamación oficial: consumidor (con padre, madre o apoderado si es
+ * menor de edad), bien contratado, tipo, detalle y pedido.
  *
- * Mientras GUARDAR_EN_BASE sea false (lib/cta.ts) no hay base: el reclamo sale por
- * WhatsApp o correo y solo queda constancia si la persona lo envía.
+ * Mientras GUARDAR_EN_BASE sea false (lib/cta.ts) no hay base: la hoja se arma
+ * en el navegador y sale por CORREO a hola@. Antes salía por WhatsApp, donde
+ * la atiende el agente de IA, que no debe tramitar reclamos (auditoría
+ * MED-04, tarea 2.07). El correo enviado y la copia impresa o en PDF le
+ * quedan a la persona como constancia.
+ *
+ * Pendiente (tarea 2.08): número correlativo, constancia automática por
+ * correo y conservación de la hoja, con un registro en el servidor.
  */
 
 const label: React.CSSProperties = { font: "var(--fw-medium) var(--fs-sm)/1 var(--font-body)", color: "var(--text-strong)" };
@@ -19,6 +27,7 @@ const input: React.CSSProperties = {
   font: "var(--fw-light) var(--fs-base)/1.4 var(--font-body)", color: "var(--text-strong)", background: "var(--white)",
   border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-sm)", padding: "12px 14px", outline: "none", width: "100%",
 };
+const parrafo: React.CSSProperties = { font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-body)" };
 
 function F({ l, children, span }: { l: string; children: React.ReactNode; span?: boolean }) {
   return (
@@ -29,64 +38,101 @@ function F({ l, children, span }: { l: string; children: React.ReactNode; span?:
   );
 }
 
+/** Título de cada parte de la hoja (1. consumidor, 2. bien, 3. reclamo). */
+function Grupo({ titulo }: { titulo: string }) {
+  return (
+    <h2 style={{ gridColumn: "1 / -1", margin: "12px 0 0", font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
+      {titulo}
+    </h2>
+  );
+}
+
+type Hoja = { referencia: string; fecha: string; texto: string; mail: string };
+
 export default function ReclamoForm() {
-  const [codigo, setCodigo] = useState<string | null>(null);
+  const [hoja, setHoja] = useState<Hoja | null>(null);
+  const [codigoBase, setCodigoBase] = useState<string | null>(null);
+  const [menor, setMenor] = useState(false);
   const [error, setError] = useState(false);
   const [enviando, setEnviando] = useState(false);
-  const [salida, setSalida] = useState<{ wa: string; mail: string } | null>(null);
+  const [copiado, setCopiado] = useState(false);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setEnviando(true);
     setError(false);
     const f = new FormData(e.currentTarget);
+    if (f.get("website")) return; // honeypot
+    const g = (k: string) => String(f.get(k) ?? "").trim();
+
     if (!GUARDAR_EN_BASE) {
-      if (f.get("website")) return; // honeypot
-      const cod = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 4)}`.slice(-8).toUpperCase();
+      const ahora = new Date();
+      const fecha = ahora.toLocaleDateString("es-PE", { timeZone: "America/Lima", day: "2-digit", month: "2-digit", year: "numeric" });
+      const hora = ahora.toLocaleTimeString("es-PE", { timeZone: "America/Lima", hour: "2-digit", minute: "2-digit" });
+      // Referencia para ubicar el correo; no es el correlativo oficial (tarea 2.08).
+      const referencia = `REC-${ahora.toISOString().slice(0, 10).replace(/-/g, "")}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
       const texto = [
-        `Libro de Reclamaciones · Código REC-${cod}`,
-        `Tipo: ${f.get("clase")}`,
-        `Nombre: ${f.get("nombre")}`,
-        `DNI / CE: ${f.get("documento")}`,
-        `Teléfono: ${f.get("telefono")}`,
-        `Correo: ${f.get("email")}`,
-        f.get("direccion") ? `Dirección: ${f.get("direccion")}` : null,
-        `Servicio o producto: ${f.get("bien")}`,
-        f.get("monto") ? `Monto reclamado: ${f.get("monto")}` : null,
-        `Detalle: ${f.get("detalle")}`,
-        `Pedido: ${f.get("pedido")}`,
-      ].filter(Boolean).join("\n");
-      const wa = whatsappLink(texto);
-      setSalida({ wa, mail: `mailto:${site.email}?subject=${encodeURIComponent(`Libro de Reclamaciones REC-${cod}`)}&body=${encodeURIComponent(texto)}` });
-      setCodigo(cod);
-      setEnviando(false);
-      window.open(wa, "_blank", "noopener,noreferrer");
+        "HOJA DE RECLAMACIÓN · LIBRO DE RECLAMACIONES VIRTUAL",
+        `Fecha: ${fecha}, ${hora} (hora de Lima) · Referencia: ${referencia}`,
+        `Proveedor: ${site.legalName} · RUC ${site.ruc} · Ica, Perú`,
+        "",
+        "1. Consumidor reclamante",
+        `Nombre: ${g("nombre")}`,
+        `DNI / CE: ${g("documento")}`,
+        `Domicilio: ${g("direccion")}`,
+        `Teléfono: ${g("telefono")}`,
+        `Correo: ${g("email")}`,
+        menor ? `Menor de edad. Padre, madre o apoderado: ${g("apoderado")} · DNI / CE ${g("apoderadoDoc")}` : null,
+        "",
+        "2. Bien contratado",
+        `${g("tipoBien")}: ${g("bien")}`,
+        g("monto") ? `Monto reclamado: ${g("monto")}` : null,
+        "",
+        "3. Detalle de la reclamación y pedido",
+        `Tipo: ${g("clase")}`,
+        `Detalle: ${g("detalle")}`,
+        `Pedido: ${g("pedido")}`,
+        "",
+        DEF_RECLAMO,
+        DEF_QUEJA,
+        LEYENDA_INDECOPI,
+        LEYENDA_PLAZO,
+      ].filter((l) => l !== null).join("\n");
+      const mail = `mailto:${site.email}?subject=${encodeURIComponent(`Libro de Reclamaciones · ${g("clase")} · ${referencia}`)}&body=${encodeURIComponent(texto)}`;
+      setHoja({ referencia, fecha: `${fecha}, ${hora}`, texto, mail });
+      // Abre el correo de la persona con la hoja escrita. Si no tiene uno
+      // configurado, queda el botón y la opción de copiar el texto.
+      window.location.href = mail;
       return;
     }
+
+    setEnviando(true);
     try {
       const r = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           tipo: "reclamo",
-          nombre: f.get("nombre"),
-          email: f.get("email"),
-          telefono: f.get("telefono"),
-          mensaje: f.get("detalle"),
+          nombre: g("nombre"),
+          email: g("email"),
+          telefono: g("telefono"),
+          mensaje: g("detalle"),
           pagina: "/libro-de-reclamaciones",
-          website: f.get("website"),
+          website: g("website"),
           extra: {
-            clase: f.get("clase"),
-            documento: f.get("documento"),
-            direccion: f.get("direccion"),
-            bien: f.get("bien"),
-            monto: f.get("monto"),
-            pedido: f.get("pedido"),
+            clase: g("clase"),
+            documento: g("documento"),
+            direccion: g("direccion"),
+            tipoBien: g("tipoBien"),
+            bien: g("bien"),
+            monto: g("monto"),
+            pedido: g("pedido"),
+            apoderado: menor ? g("apoderado") : "",
+            apoderadoDoc: menor ? g("apoderadoDoc") : "",
           },
         }),
       });
       const data = await r.json();
-      if (data?.ok && data?.id) setCodigo(String(data.id).slice(0, 8).toUpperCase());
+      if (data?.ok && data?.id) setCodigoBase(String(data.id).slice(0, 8).toUpperCase());
       else setError(true);
     } catch {
       setError(true);
@@ -95,27 +141,50 @@ export default function ReclamoForm() {
     }
   };
 
-  if (codigo && salida) {
+  const copiar = async () => {
+    if (!hoja) return;
+    try {
+      await navigator.clipboard.writeText(hoja.texto);
+      setCopiado(true);
+    } catch {
+      setCopiado(false);
+    }
+  };
+
+  if (hoja) {
     return (
-      <div style={{ padding: "var(--space-6)", background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", maxWidth: 640 }}>
-        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Falta un paso: envía tu reclamo</h2>
-        <p style={{ font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-body)", marginTop: 10 }}>
-          Tu código es <strong style={{ fontWeight: 700 }}>REC-{codigo}</strong>. Tu reclamo ya está escrito en WhatsApp. <strong style={{ fontWeight: 700 }}>Hasta que lo envíes no nos llega.</strong> Si prefieres, envíalo por correo. Te responderemos al correo o teléfono indicado en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>, conforme al Código de Protección y Defensa del Consumidor.
+      <div className="hk-hoja" style={{ padding: "var(--space-6)", background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", maxWidth: 760 }}>
+        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Falta un paso: envía el correo</h2>
+        <p style={{ ...parrafo, marginTop: 10 }}>
+          Se abrió tu correo con la hoja de reclamación escrita, dirigida a <strong style={{ fontWeight: 700 }}>{site.email}</strong>. <strong style={{ fontWeight: 700 }}>Tu reclamo nos llega cuando envías ese correo.</strong> Guarda el correo enviado o una copia en PDF: te sirve como constancia. Te responderemos en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>.
         </p>
-        <div style={{ display: "flex", gap: 14, marginTop: 20, flexWrap: "wrap" }}>
-          <Btn as="a" href={salida.wa} target="_blank" rel="noopener noreferrer" size="lg">Abrir WhatsApp</Btn>
-          <Btn as="a" href={salida.mail} variant="secondary" size="lg">Enviarlo por correo</Btn>
+        <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 8 }}>
+          Si no se abrió ningún correo, copia el texto y envíalo desde tu correo a {site.email}, con la referencia {hoja.referencia} en el asunto.
+        </p>
+        <div className="hk-hoja-acciones" style={{ display: "flex", gap: 12, marginTop: 20, flexWrap: "wrap" }}>
+          <Btn as="a" href={hoja.mail} size="lg">Abrir el correo otra vez</Btn>
+          <Btn type="button" variant="secondary" size="lg" onClick={copiar}>{copiado ? "Texto copiado" : "Copiar el texto"}</Btn>
+          <Btn type="button" variant="secondary" size="lg" onClick={() => window.print()}>Imprimir o guardar en PDF</Btn>
         </div>
+        <pre style={{ marginTop: 24, padding: "var(--space-4)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-sm)", whiteSpace: "pre-wrap", wordBreak: "break-word", font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-strong)" }}>
+          {hoja.texto}
+        </pre>
+        <style>{`
+          @media print {
+            header, footer, .hk-fab-wrap, .hk-hoja-acciones { display: none !important; }
+            .hk-hoja { border: none !important; padding: 0 !important; background: none !important; }
+          }
+        `}</style>
       </div>
     );
   }
 
-  if (codigo) {
+  if (codigoBase) {
     return (
       <div style={{ padding: "var(--space-6)", background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", maxWidth: 640 }}>
-        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Reclamo registrado ✔</h2>
-        <p style={{ font: "var(--fw-light) var(--fs-base)/1.6 var(--font-body)", color: "var(--text-body)", marginTop: 10 }}>
-          Tu código de registro es <strong style={{ fontWeight: 700 }}>REC-{codigo}</strong>. Te responderemos al correo o teléfono indicado en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>, conforme al Código de Protección y Defensa del Consumidor.
+        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Reclamo registrado</h2>
+        <p style={{ ...parrafo, marginTop: 10 }}>
+          Tu código de registro es <strong style={{ fontWeight: 700 }}>REC-{codigoBase}</strong>. Te responderemos al correo indicado en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>.
         </p>
       </div>
     );
@@ -124,28 +193,54 @@ export default function ReclamoForm() {
   return (
     <form onSubmit={onSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-4)", maxWidth: 760 }} className="hk-form">
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
-      <F l="Tipo *">
-        <select name="clase" required style={input} defaultValue="Reclamo">
-          <option value="Reclamo">Reclamo (disconformidad con el servicio)</option>
-          <option value="Queja">Queja (malestar con la atención)</option>
+
+      <Grupo titulo="1. Tus datos" />
+      <F l="Nombre completo *"><input name="nombre" required autoComplete="name" placeholder="Nombres y apellidos" style={input} /></F>
+      <F l="DNI / CE *"><input name="documento" required placeholder="Número de documento" style={input} /></F>
+      <F l="Domicilio *"><input name="direccion" required autoComplete="street-address" placeholder="Dirección, distrito y provincia" style={input} /></F>
+      <F l="Teléfono *"><input name="telefono" required type="tel" autoComplete="tel" placeholder="+51 ..." style={input} /></F>
+      <F l="Correo electrónico *" span><input name="email" required type="email" autoComplete="email" placeholder="tucorreo@..." style={input} /></F>
+      <label style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-strong)", cursor: "pointer" }}>
+        <input type="checkbox" checked={menor} onChange={(e) => setMenor(e.target.checked)} style={{ width: 18, height: 18 }} />
+        Quien reclama es menor de edad
+      </label>
+      {menor && (
+        <>
+          <F l="Nombre del padre, madre o apoderado *"><input name="apoderado" required placeholder="Nombres y apellidos" style={input} /></F>
+          <F l="DNI / CE del padre, madre o apoderado *"><input name="apoderadoDoc" required placeholder="Número de documento" style={input} /></F>
+        </>
+      )}
+
+      <Grupo titulo="2. Lo que contrataste" />
+      <F l="¿Producto o servicio? *">
+        <select name="tipoBien" required style={input} defaultValue="Servicio">
+          <option value="Servicio">Servicio</option>
+          <option value="Producto">Producto</option>
         </select>
       </F>
-      <F l="Nombre completo *"><input name="nombre" required placeholder="Nombres y apellidos" style={input} /></F>
-      <F l="DNI / CE *"><input name="documento" required placeholder="Número de documento" style={input} /></F>
-      <F l="Teléfono *"><input name="telefono" required type="tel" placeholder="+51 ..." style={input} /></F>
-      <F l="Correo electrónico *"><input name="email" required type="email" placeholder="tucorreo@..." style={input} /></F>
-      <F l="Dirección"><input name="direccion" placeholder="Distrito, provincia" style={input} /></F>
-      <F l="Servicio o producto contratado *"><input name="bien" required placeholder="Ej. gestión de redes, campaña, imprenta…" style={input} /></F>
       <F l="Monto reclamado (opcional)"><input name="monto" placeholder="S/" style={input} /></F>
-      <F l="Detalle del reclamo o queja *" span>
+      <F l="Descripción *" span><input name="bien" required placeholder="Ej. gestión de redes, campaña, impresión de volantes…" style={input} /></F>
+
+      <Grupo titulo="3. Tu reclamo o queja" />
+      <F l="Tipo *" span>
+        <select name="clase" required style={input} defaultValue="Reclamo">
+          <option value="Reclamo">Reclamo: disconformidad con el producto o servicio</option>
+          <option value="Queja">Queja: malestar con la atención</option>
+        </select>
+      </F>
+      <F l="Detalle *" span>
         <textarea name="detalle" required rows={5} placeholder="Cuéntanos qué pasó" style={{ ...input, resize: "vertical" }} />
       </F>
-      <F l="Pedido del consumidor *" span>
+      <F l="Pedido *" span>
         <textarea name="pedido" required rows={3} placeholder="¿Qué solución esperas?" style={{ ...input, resize: "vertical" }} />
       </F>
+
+      <p style={{ gridColumn: "1 / -1", font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", margin: 0 }}>
+        Al continuar se abre tu correo con la hoja de reclamación escrita, dirigida a {site.email}. Tu reclamo nos llega cuando lo envías.
+      </p>
       <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-        <Btn type="submit" size="lg" disabled={enviando}>{enviando ? "Registrando…" : "Registrar reclamo"}</Btn>
-        {error && <span style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "#b3261e" }}>No se pudo registrar. Inténtalo de nuevo o escríbenos a hola@suggestion.pe.</span>}
+        <Btn type="submit" size="lg" disabled={enviando}>{enviando ? "Registrando…" : "Enviar reclamo por correo"}</Btn>
+        {error && <span style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "#b3261e" }}>No se pudo registrar. Inténtalo de nuevo o escríbenos a {site.email}.</span>}
       </div>
     </form>
   );
