@@ -43,11 +43,17 @@ function pasaLimite(ip: string): boolean {
   return true;
 }
 
-/** Solo URLs del propio sitio (o de una vista previa de Vercel / local). */
+/**
+ * Solo URLs del propio sitio. En producción, solo el dominio real: una vista
+ * previa de Vercel no debe mandar eventos a Meta (auditoría MED-15, tarea 3.12).
+ * Fuera de producción se aceptan las vistas previas y localhost para probar.
+ */
 function urlPropia(u: string): boolean {
   try {
     const h = new URL(u).hostname;
-    return h === "suggestion.pe" || h === "www.suggestion.pe" || h.endsWith(".vercel.app") || h === "localhost";
+    if (h === "suggestion.pe" || h === "www.suggestion.pe") return true;
+    if (process.env.VERCEL_ENV === "production") return false;
+    return h.endsWith(".vercel.app") || h === "localhost";
   } catch {
     return false;
   }

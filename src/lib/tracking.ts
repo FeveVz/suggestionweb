@@ -47,9 +47,11 @@ export const GADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL || "";
  * actual (decenas de visitas al mes) las estadísticas no dicen nada, pero ver
  * sesiones reales sí: enseña dónde se atasca quien llega buscando "imprenta en
  * Ica". Enmascara el contenido de los formularios por defecto — no tocar eso.
- * Vacío = no se inyecta nada.
+ * Vacío = no se inyecta nada. El ID vive en Vercel (NEXT_PUBLIC_CLARITY_ID, solo
+ * Production) y no escrito aquí, para poder apagarlo sin tocar el código
+ * (auditoría MED-14, tarea 3.12).
  */
-export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "y2utjzo8p3";
+export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "";
 
 /**
  * Tráfico interno. Abrir cualquier página con `?interno=1` marca ese
@@ -64,7 +66,17 @@ export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "y2utjzo8p3";
  * públicos de retargeting.
  */
 export const INTERNO_KEY = "sg_interno";
+/**
+ * Solo se mide en el dominio real. Las vistas previas de Vercel (*.vercel.app)
+ * y localhost no cargan GA4, Píxel ni Clarity ni mandan copias a la API de
+ * Conversiones (auditoría MED-15, tarea 3.12).
+ */
+export const DOMINIOS_MEDIBLES = ["suggestion.pe", "www.suggestion.pe"];
+const HOST_AJENO_JS = `(${JSON.stringify(DOMINIOS_MEDIBLES)}.indexOf(location.hostname)<0)`;
+
 export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location.search).get('interno');if(q==='1')localStorage.setItem('${INTERNO_KEY}','1');if(q==='0')localStorage.removeItem('${INTERNO_KEY}');return localStorage.getItem('${INTERNO_KEY}')==='1'}catch(e){return false}})()`;
+/** Arranque de las etiquetas: no medir si el navegador es interno o el dominio no es el real. */
+export const NO_MEDIR_JS = `(${ES_INTERNO_JS}||${HOST_AJENO_JS})`;
 
 type Gtag = (...args: unknown[]) => void;
 type Fbq = (...args: unknown[]) => void;
@@ -197,6 +209,12 @@ export function esInterno(): boolean {
   }
 }
 
+/** ¿No hay que medir esta visita? Navegador interno o dominio que no es el real. */
+export function noMedir(): boolean {
+  if (typeof window === "undefined") return true;
+  return esInterno() || !DOMINIOS_MEDIBLES.includes(window.location.hostname);
+}
+
 /**
  * Copia server-side (API de Conversiones) del evento que el Píxel acaba de
  * mandar con `eventId`: Meta une los dos por ese id. Va por sendBeacon para
@@ -205,7 +223,7 @@ export function esInterno(): boolean {
  * (el servidor los hashea antes de enviarlos a Meta).
  */
 export function metaServidor(evento: "Contact" | "Lead", eventId: string, datos?: Record<string, string>): void {
-  if (!META_PIXEL_ID || typeof window === "undefined" || esInterno()) return;
+  if (!META_PIXEL_ID || noMedir()) return;
   try {
     const base = leadDedup();
     const body = JSON.stringify({ ...base, ...datos, event_name: evento, event_id: eventId });

@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
-import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, ES_INTERNO_JS, captureAttribution, track, newEventId, metaServidor } from "@/lib/tracking";
+import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, NO_MEDIR_JS, captureAttribution, track, newEventId, metaServidor } from "@/lib/tracking";
 import { decorarWhatsApp } from "@/lib/whatsapp-ref";
 import { EID_KEY } from "@/lib/meta-match";
 
@@ -15,7 +15,7 @@ import { EID_KEY } from "@/lib/meta-match";
  * ~40 enlaces del sitio, presentes y futuros) — el canal principal de leads.
  * Activos en prod (2026-07-04): GA4 G-RVE3CLTNW3 + Meta Pixel 2487100898472593.
  *
- * Los tres arranques empiezan por ES_INTERNO_JS: en un navegador marcado como
+ * Los tres arranques empiezan por NO_MEDIR_JS: en un navegador marcado como
  * interno no cargan (ver tracking.ts).
  *
  * El Píxel arranca con un external_id: un identificador anónimo y aleatorio
@@ -121,7 +121,7 @@ export default function Analytics() {
       {GA_ID && (
         <>
           <Script id="ga4-init" strategy="afterInteractive">
-            {`if (!${ES_INTERNO_JS}) {
+            {`if (!${NO_MEDIR_JS}) {
               window.dataLayer = window.dataLayer || [];
               var gtag = function(){ window.dataLayer.push(arguments); };
               window.gtag = gtag;
@@ -138,7 +138,7 @@ export default function Analytics() {
       )}
       {META_PIXEL_ID && (
         <Script id="meta-pixel" strategy="afterInteractive">
-          {`if (!${ES_INTERNO_JS}) {
+          {`if (!${NO_MEDIR_JS}) {
             !function(f,b,e,v,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
             n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
@@ -161,7 +161,7 @@ export default function Analytics() {
       )}
       {CLARITY_ID && (
         <Script id="ms-clarity" strategy="afterInteractive">
-          {`if (!${ES_INTERNO_JS}) (function(c,l,a,r,i){
+          {`if (!${NO_MEDIR_JS}) (function(c,l,a,r,i){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               (${DIFERIR_JS})(function(){
                 var t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
