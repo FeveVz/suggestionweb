@@ -190,7 +190,7 @@ export const CIUDADES: Ciudad[] = [
           },
           {
             h3: "Volanteo",
-            texto: "Reparto en calles, mercados y puntos de paso, con zona y horario acordados antes de salir. Si no tienes los volantes, los imprimimos.",
+            texto: "Reparto en calles, mercados y puntos de paso, con zona y horario acordados antes de salir. Si no tienes los volantes, también los imprimimos; la impresión se cotiza aparte.",
           },
           {
             h3: "Anfitrionas e impulsadoras",
@@ -256,7 +256,7 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Hacen cortatráfico y volanteo en Nazca?",
-        a: "Sí. Acordamos contigo los cruces, las calles o los mercados, el horario y los días, y cotizamos según cuántas personas y cuántas horas necesitas. Si no tienes los volantes, los imprimimos. Escríbenos por WhatsApp con la fecha y te pasamos la propuesta.",
+        a: "Sí. Acordamos contigo los cruces, las calles o los mercados, el horario y los días, y cotizamos según cuántas personas y cuántas horas necesitas. Si no tienes los volantes, también los imprimimos, y la impresión se cotiza aparte. Escríbenos por WhatsApp con la fecha y te pasamos la propuesta.",
       },
       {
         q: "¿Llegan a Marcona, Palpa y Puquio?",
