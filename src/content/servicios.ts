@@ -2026,6 +2026,10 @@ const SERVICIOS_BASE: Servicio[] = [
         q: "¿Hace falta permiso municipal?",
         a: "Para circular con una bicivalla se aplican las condiciones habituales de circulación, más simples que las de instalar una estructura fija en vía pública. Aun así, cada municipalidad tiene sus reglas y las verificamos según la zona.",
       },
+      {
+        q: "¿Hacen perifoneo y volanteo en Nazca?",
+        a: "Sí: en Nazca tenemos equipo propio de BTL para perifoneo, volanteo y cortatráfico, que cubre también Marcona, Palpa y Puquio. Se cotiza por WhatsApp con la fecha, la zona y cuántas personas necesitas.",
+      },
     ],
     enlazaA: ["btl", "estructuras-publicitarias", "material-pop"],
     cierre: { h2: "Lleva tu marca a la calle", cta: "Pide tu cotización" },

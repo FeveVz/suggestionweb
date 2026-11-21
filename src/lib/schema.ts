@@ -98,17 +98,21 @@ export function serviceSchema(opts: {
   description: string;
   url: string;
   areaServedName?: string;
-  /** Ciudad concreta (páginas de cobertura). Se declara junto con el país. */
-  areaServedCity?: string;
+  /**
+   * Ciudad concreta (páginas de cobertura), o varias cuando el equipo de esa
+   * ciudad cubre también las de alrededor. Se declaran junto con el país.
+   */
+  areaServedCity?: string | string[];
 }): Json {
+  const ciudades = opts.areaServedCity ? [opts.areaServedCity].flat() : [];
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: opts.serviceType,
     provider: { "@id": ORG_ID },
-    areaServed: opts.areaServedCity
+    areaServed: ciudades.length
       ? [
-          { "@type": "City", name: opts.areaServedCity },
+          ...ciudades.map((name) => ({ "@type": "City", name })),
           { "@type": "Country", name: "Perú" },
         ]
       : { "@type": "Country", name: opts.areaServedName || "Perú" },

@@ -195,7 +195,10 @@ export default async function ServicioPage({ params }: Params) {
   const ciudadLinks: RelatedLink[] = CIUDADES.filter((c) =>
     c.serviciosQueUsa.includes(s.slug)
   ).map((c) => ({
-    label: s.slug === "btl" && c.btl ? `BTL en ${c.nombre}, con equipo propio` : `Agencia de marketing en ${c.nombre}`,
+    label:
+      c.btl && ["btl", "publicidad-movil", "eventos-corporativos"].includes(s.slug)
+        ? `BTL en ${c.nombre}, con equipo propio`
+        : `Agencia de marketing en ${c.nombre}`,
     href: ciudadHref(c.slug),
   }));
   if (ciudadLinks.length) {

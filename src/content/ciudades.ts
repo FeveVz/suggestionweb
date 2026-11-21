@@ -165,6 +165,7 @@ export const CIUDADES: Ciudad[] = [
       "Cuántas personas y cuántos días",
     ],
     btl: true,
+    alrededores: ["Marcona", "Palpa", "Puquio"],
     proof:
       "En Nazca: siete días de cortatráfico para la tienda Entel de la calle Bolognesi (del 12 al 18 de noviembre de 2026) y tres días de exhibición de maquinaria para XCMG · Dercomaq, con publimanes, anfitriona y promotora. A esa exhibición llegaron empresarios del sector minero y salió una venta.",
     cobertura:

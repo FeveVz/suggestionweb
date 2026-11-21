@@ -187,6 +187,11 @@ export default function PortafolioPage() {
                       {p.caso.label} <ArrowRight size={15} />
                     </Link>
                   )}
+                  {p.enlace && (
+                    <Link href={p.enlace.href} className="hk-ulink hk-pf-caso">
+                      {p.enlace.label} <ArrowRight size={15} />
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}

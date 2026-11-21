@@ -100,7 +100,7 @@ export default function CiudadPage({ slug }: { slug: string }) {
         serviceType: c.btl ? `Agencia BTL y de marketing en ${c.nombre}` : `Agencia de marketing en ${c.nombre}`,
         description: c.metaDescription,
         url: `/agencia-de-marketing-en-${c.slug}`,
-        areaServedCity: c.nombre,
+        areaServedCity: c.alrededores ? [c.nombre, ...c.alrededores] : c.nombre,
       })}
     />
   );

@@ -33,8 +33,10 @@ export function GET() {
 
   const sectores = SECTORS.map((s) => `- [${s.label}](${u(s.href)})`).join("\n");
 
-  const ciudades = CIUDADES.map(
-    (c) => `- [Agencia de marketing en ${c.nombre}](${u(ciudadHref(c.slug))})`,
+  const ciudades = CIUDADES.map((c) =>
+    c.btl
+      ? `- [Agencia BTL y de marketing en ${c.nombre}](${u(ciudadHref(c.slug))}): equipo propio de cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo${c.alrededores?.length ? `, que cubre también ${c.alrededores.join(", ").replace(/, ([^,]*)$/, " y $1")}` : ""}.`
+      : `- [Agencia de marketing en ${c.nombre}](${u(ciudadHref(c.slug))})`,
   ).join("\n");
 
   // Un caso por línea, con su titular y su período. El archivo enumeraba los

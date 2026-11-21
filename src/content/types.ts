@@ -142,6 +142,8 @@ export type Ciudad = {
    * el 20-nov-2026): razones de BTL y enlace «BTL en <ciudad>» desde /servicios/btl.
    */
   btl?: boolean;
+  /** Ciudades de alrededor que cubre el equipo de esta (van al schema areaServed). */
+  alrededores?: string[];
   secciones: Seccion[];
   serviciosQueUsa: string[];
   faq: Faq[];

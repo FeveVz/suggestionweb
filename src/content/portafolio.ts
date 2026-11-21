@@ -45,6 +45,8 @@ export type PiezaPortafolio = {
   detalle?: string;
   /** Cuando el mismo trabajo tiene un caso con resultado medido. */
   caso?: { label: string; href: string };
+  /** Página de la ciudad o del servicio donde se ofrece lo mismo (enlace interno). */
+  enlace?: { label: string; href: string };
   /**
    * Texto alternativo por defecto de las fotos del evento. Lo llevan todas
    * las que no tienen uno propio: describen la misma activación, así que
@@ -81,6 +83,7 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
     fechaLabel: "12 al 18 de noviembre",
     tipo: "Cortatráfico",
     sector: "Telecomunicaciones",
+    enlace: { label: "BTL en Nazca, con equipo propio", href: "/agencia-de-marketing-en-nazca" },
     reto:
       "Anunciar un plan nuevo y la dirección de la tienda a quien se mueve por el centro de Nazca: en la calle, y no solo en la pantalla del celular.",
     hicimos:
@@ -338,6 +341,7 @@ export const PORTAFOLIO: PiezaPortafolio[] = [
     fechaLabel: "febrero 2025",
     tipo: "Lanzamiento de producto",
     sector: "Automotriz",
+    enlace: { label: "BTL en Nazca, con equipo propio", href: "/agencia-de-marketing-en-nazca" },
     reto:
       "Repetir el lanzamiento en un mercado más pequeño, donde el comprador quiere ver la máquina trabajando y no escuchar una presentación.",
     hicimos:
