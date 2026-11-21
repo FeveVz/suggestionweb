@@ -17,9 +17,15 @@ import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
 type Params = { params: Promise<{ categoria: string; slug: string }> };
 
-/** OG del post = la de su money page (marca en cada compartida + thumbnail elegible). */
-function ogDelPost(moneyHref: string): string {
-  const slug = moneyHref.replace(/^\/servicios\//, "").replace(/^\//, "").split("/")[0];
+/**
+ * OG del post. Si el artículo tiene foto propia en alguna sección, su imagen
+ * compuesta desde esa foto (scripts/og-posts.mjs → /assets/og/blog-<slug>.jpg):
+ * antes hasta 8 posts compartían la misma (auditoría TEC-13). Si no, la de su
+ * money page (marca en cada compartida + thumbnail elegible).
+ */
+function ogDelPost(post: { slug: string; moneyPage: { href: string }; secciones: { foto?: unknown }[] }): string {
+  if (post.secciones.some((s) => s.foto)) return `/assets/og/blog-${post.slug}.jpg`;
+  const slug = post.moneyPage.href.replace(/^\/servicios\//, "").replace(/^\//, "").split("/")[0];
   return slug ? `/assets/og/${slug}.png` : "/og-image.png";
 }
 
@@ -120,7 +126,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: post.description,
     path: `/blog/${categoria}/${slug}`,
     type: "article",
-    ogImage: ogDelPost(post.moneyPage.href),
+    ogImage: ogDelPost(post),
   });
 }
 
@@ -158,7 +164,7 @@ export default async function BlogPostPage({ params }: Params) {
           description: post.description,
           datePublished: post.date,
           dateModified: post.actualizado,
-          image: ogDelPost(post.moneyPage.href),
+          image: ogDelPost(post),
           url: `/blog/${categoria}/${slug}`,
         })}
       />

@@ -16,7 +16,7 @@ const PAGINAS = [
   ["consultoria-cero", "Consultoría cero:", "30 minutos, gratis"],
   ["nosotros", "La agencia de performance", "de Ica"],
   ["metodo", "Cómo medimos", "una campaña"],
-  ["portafolio", "22 activaciones,", "documentadas"],
+  ["portafolio", "Activaciones BTL,", "documentadas"],
   ["caso-ceinys-septiembre-2026", "Caso Ceinys:", "septiembre 2026"],
   ["caso-ceinys-agosto-2026", "Caso Ceinys:", "agosto 2026"],
   ["caso-inmobiliaria-ceinys", "Caso:", "Inmobiliaria Ceinys"],
