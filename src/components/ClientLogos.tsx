@@ -16,22 +16,22 @@ import { Label } from "@/components/brand/parts";
 // los cuadrados/verticales van mucho más altos que los wordmarks horizontales
 // (que se ven grandes por su ancho). Los emblemas con aire interno, aún más.
 const LOGOS: { src: string; h: number; alt: string }[] = [
-  { src: "/assets/clientes/trim/cliente-1.webp", h: 80, alt: "Logo de Corplogistics Perú" }, // Corplogistics Perú
-  { src: "/assets/clientes/trim/cliente-2.webp", h: 52, alt: "Logo de Aura Andina" }, // Aura Andina (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-3.webp", h: 54, alt: "Logo de Ceinys" }, // Ceinys (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-4.webp", h: 46, alt: "Logo de yonda" }, // yonda (horizontal)
-  { src: "/assets/clientes/trim/cliente-5.webp", h: 58, alt: "Logo de El Charcutero" }, // El Charcutero (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-6.webp", h: 84, alt: "Logo de CGH" }, // CGH (recortado)
-  { src: "/assets/clientes/trim/cliente-7.webp", h: 46, alt: "Logo de Changan, marca atendida vía concesionario" }, // Changan (horizontal)
-  { src: "/assets/clientes/trim/cliente-8.webp", h: 52, alt: "Logo de Renault, marca atendida vía concesionario" }, // Renault (semi-ancho)
-  { src: "/assets/clientes/trim/cliente-9.webp", h: 46, alt: "Logo de Landini, marca atendida vía concesionario" }, // Landini (horizontal)
-  { src: "/assets/clientes/trim/cliente-10.webp", h: 48, alt: "Logo de Citroën, marca atendida vía concesionario" }, // Citroën (horizontal)
-  { src: "/assets/clientes/trim/cliente-11.webp", h: 55, alt: "Logo de Suzuki, marca atendida vía concesionario" }, // Suzuki (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-12.webp", h: 83, alt: "Logo de Mazda, marca atendida vía concesionario" }, // Mazda (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-13.webp", h: 50, alt: "Logo de Subaru, marca atendida vía concesionario" }, // Subaru (semi-cuadrado)
-  { src: "/assets/clientes/trim/cliente-14.webp", h: 52, alt: "Logo de JAC, marca atendida vía concesionario" }, // JAC (semi-ancho)
-  { src: "/assets/clientes/trim/cliente-16.webp", h: 46, alt: "Logo de Motorpark" }, // Motorpark (horizontal)
-  { src: "/assets/clientes/trim/cliente-17.webp", h: 48, alt: "Logo de GWM, marca atendida vía concesionario" }, // GWM (horizontal)
+  { src: "/assets/clientes/trim/logo-1.webp", h: 80, alt: "Logo de Corplogistics Perú" }, // Corplogistics Perú
+  { src: "/assets/clientes/trim/logo-2.webp", h: 52, alt: "Logo de Aura Andina" }, // Aura Andina (tarjeta, +caja)
+  { src: "/assets/clientes/trim/logo-3.webp", h: 54, alt: "Logo de Ceinys" }, // Ceinys (tarjeta, +caja)
+  { src: "/assets/clientes/trim/logo-4.webp", h: 46, alt: "Logo de yonda" }, // yonda (horizontal)
+  { src: "/assets/clientes/trim/logo-5.webp", h: 58, alt: "Logo de El Charcutero" }, // El Charcutero (tarjeta, +caja)
+  { src: "/assets/clientes/trim/logo-6.webp", h: 84, alt: "Logo de CGH" }, // CGH (recortado)
+  { src: "/assets/clientes/trim/logo-7.webp", h: 46, alt: "Logo de Changan, marca atendida vía concesionario" }, // Changan (horizontal)
+  { src: "/assets/clientes/trim/logo-8.webp", h: 52, alt: "Logo de Renault, marca atendida vía concesionario" }, // Renault (semi-ancho)
+  { src: "/assets/clientes/trim/logo-9.webp", h: 46, alt: "Logo de Landini, marca atendida vía concesionario" }, // Landini (horizontal)
+  { src: "/assets/clientes/trim/logo-10.webp", h: 48, alt: "Logo de Citroën, marca atendida vía concesionario" }, // Citroën (horizontal)
+  { src: "/assets/clientes/trim/logo-11.webp", h: 55, alt: "Logo de Suzuki, marca atendida vía concesionario" }, // Suzuki (tarjeta, +caja)
+  { src: "/assets/clientes/trim/logo-12.webp", h: 83, alt: "Logo de Mazda, marca atendida vía concesionario" }, // Mazda (tarjeta, +caja)
+  { src: "/assets/clientes/trim/logo-13.webp", h: 50, alt: "Logo de Subaru, marca atendida vía concesionario" }, // Subaru (semi-cuadrado)
+  { src: "/assets/clientes/trim/logo-14.webp", h: 52, alt: "Logo de JAC, marca atendida vía concesionario" }, // JAC (semi-ancho)
+  { src: "/assets/clientes/trim/logo-16.webp", h: 46, alt: "Logo de Motorpark" }, // Motorpark (horizontal)
+  { src: "/assets/clientes/trim/logo-17.webp", h: 48, alt: "Logo de GWM, marca atendida vía concesionario" }, // GWM (horizontal)
 ];
 
 // Desde el 21-nov-2026 los logos van sin caja: se les quitó el fondo gris claro
