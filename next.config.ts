@@ -22,6 +22,15 @@ import type { NextConfig } from "next";
  * etiquetas <script>. Con nonce habría que hacer dinámicas las 92 páginas
  * estáticas, y eso cuesta más de lo que protege en un sitio sin sesiones.
  */
+/**
+ * 'unsafe-eval' solo en desarrollo (el refresco en caliente de Next lo usa).
+ * En producción salió el 21-nov-2026 (auditoría TEC-15): GA4 (gtag.js) y
+ * Clarity no usan eval, y el Píxel solo tiene un `new Function("return this")`
+ * de respaldo para navegadores sin globalThis, dentro de un try/catch.
+ * Comprobado en vivo después de publicar (ver la regla de arriba).
+ */
+const EVAL = process.env.NODE_ENV === "production" ? "" : " 'unsafe-eval'";
+
 const CSP = [
   "default-src 'self'",
   "base-uri 'self'",
@@ -32,7 +41,7 @@ const CSP = [
   // violates..." y ese evento se perdía. Detectado en local antes de subirlo.
   "form-action 'self' https://www.facebook.com",
   "frame-ancestors 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms",
+  `script-src 'self' 'unsafe-inline'${EVAL} https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
