@@ -1,4 +1,5 @@
 import type { Ciudad } from "./types";
+import { FOTOS_PORTAFOLIO, fotoPortafolio } from "./portafolio-fotos";
 
 /**
  * Páginas de cobertura por ciudad (/agencia-de-marketing-en-<slug>).
@@ -165,7 +166,7 @@ export const CIUDADES: Ciudad[] = [
     ],
     btl: true,
     proof:
-      "En Nazca: cortatráfico para la tienda Entel de la calle Bolognesi, y tres días de exhibición de maquinaria para XCMG · Dercomaq, con publimanes, anfitriona y promotora. A esa exhibición llegaron empresarios del sector minero y salió una venta.",
+      "En Nazca: siete días de cortatráfico para la tienda Entel de la calle Bolognesi (del 12 al 18 de noviembre de 2026) y tres días de exhibición de maquinaria para XCMG · Dercomaq, con publimanes, anfitriona y promotora. A esa exhibición llegaron empresarios del sector minero y salió una venta.",
     cobertura:
       "Nazca está a unas dos horas al sur de nuestra oficina en Ica, y ahí tenemos equipo propio de BTL: desde Nazca cubrimos Marcona, Palpa y Puquio. Las campañas digitales las operamos en remoto, y cada activación sale con su factura.",
     coberturaTitulo: "En Nazca, Marcona, Palpa y Puquio.",
@@ -175,11 +176,11 @@ export const CIUDADES: Ciudad[] = [
         parrafo:
           "Una activación en Nazca suele cargar con el viaje del personal desde Lima o Ica: pasajes, viáticos, horas de bus y gente que no conoce la ciudad. Nuestro equipo de BTL está en Nazca y se arma para tu fecha, con tu mecánica y tu material.",
         foto: {
-          src: "/assets/ciudades/nazca-2-s.44023c1e.webp",
+          src: fotoPortafolio("cortatrafico-entel-nazca", 2),
           alt: "Equipo de Suggestion con un banner de Entel en un cruce de Nazca, frente a un auto detenido en rojo",
-          cap: "Cortatráfico para la tienda Entel de la calle Bolognesi, en Nazca: el conductor que espera la luz verde tiene el mensaje delante.",
-          w: 747,
-          h: 560,
+          cap: "Cortatráfico para la tienda Entel de la calle Bolognesi, del 12 al 18 de noviembre de 2026: el conductor que espera la luz verde tiene el mensaje delante.",
+          w: FOTOS_PORTAFOLIO["cortatrafico-entel-nazca"]?.[1]?.[0],
+          h: FOTOS_PORTAFOLIO["cortatrafico-entel-nazca"]?.[1]?.[1],
         },
         sub: [
           {

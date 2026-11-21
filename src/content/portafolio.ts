@@ -12,7 +12,10 @@
  *
  * Fuente: Notion «Portafolio BTL | Suggestion», 22 piezas entre febrero de
  * 2024 y mayo de 2026. El reto y la solución de cada pieza vienen de ahí;
- * aquí están reescritos sin el inflado de agencia del original.
+ * aquí están reescritos sin el inflado de agencia del original. Desde
+ * noviembre de 2026 se suman trabajos que no están en el Notion, con las
+ * fotos del equipo y los datos que da el owner (fotos en
+ * portafolio-fotos-extra.ts). El número de piezas se cuenta, no se escribe.
  *
  * El campo `detalle` lo dictó el owner el 9 de octubre de 2026: promotores,
  * horas de montaje, aforos, datos recogidos y unidades en piso. No sale del
@@ -35,7 +38,7 @@ export type PiezaPortafolio = {
   fecha: string;
   fechaLabel: string;
   tipo: string;
-  sector: "Automotriz" | "Inmobiliario" | "Mixto";
+  sector: "Automotriz" | "Inmobiliario" | "Telecomunicaciones" | "Mixto";
   reto: string;
   hicimos: string;
   /** El dato de oficio: lo que solo sabe quien estuvo ahí. */
@@ -70,6 +73,31 @@ export const fotosDe = (p: PiezaPortafolio): FotoPieza[] =>
   }));
 
 export const PORTAFOLIO: PiezaPortafolio[] = [
+  {
+    slug: "cortatrafico-entel-nazca",
+    titular: "Una semana de cortatráfico en los cruces del centro de Nazca",
+    cliente: "Tienda Entel · Nazca",
+    fecha: "2026-11-12",
+    fechaLabel: "12 al 18 de noviembre",
+    tipo: "Cortatráfico",
+    sector: "Telecomunicaciones",
+    reto:
+      "Anunciar un plan nuevo y la dirección de la tienda a quien se mueve por el centro de Nazca: en la calle, y no solo en la pantalla del celular.",
+    hicimos:
+      "Cortatráfico con un banner de gran formato en los cruces con semáforo del centro: dos personas por banner en el paso peatonal mientras dura la luz roja, con el plan, el precio y la dirección de la tienda a la vista de cada conductor.",
+    detalle:
+      "Siete días, del 12 al 18 de noviembre de 2026, con el equipo propio de Suggestion en Nazca rotando entre varios cruces: el de la plaza, el de la iglesia y las esquinas comerciales del centro. El banner llevaba la dirección exacta de la tienda, calle Bolognesi 580, para que quien lo viera supiera adónde ir sin buscarla.",
+    altBase: "Cortatráfico con banner de una tienda Entel en un cruce del centro de Nazca",
+    alts: [
+      "Cortatráfico con el banner de una tienda Entel en un cruce del centro de Nazca, bajo el letrero de la Municipalidad Provincial de Nasca",
+      "Equipo de Suggestion con un banner de Entel en un cruce de Nazca, frente a un auto detenido en rojo",
+      "Cortatráfico con banner de Entel en el paso peatonal de un cruce de Nazca, con un auto rojo detenido",
+      "Cortatráfico con banner de Entel frente a la iglesia, en un cruce del centro de Nazca con el semáforo en rojo",
+      "Motociclistas detenidos frente al banner de Entel al atardecer, en un cruce de Nazca",
+      "Banner de Entel en un cruce de Nazca visto desde un auto detenido",
+      "Cortatráfico con banner de Entel en una avenida comercial del centro de Nazca",
+    ],
+  },
   {
     slug: "relanzamiento-mitsubishi-autoniza",
     titular: "Un relanzamiento de tienda que trajo a ocho canales de prensa",

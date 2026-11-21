@@ -16,6 +16,7 @@ import { BLOG_POSTS } from "@/content/blog";
 import { CIUDADES, ciudadHref } from "@/content/ciudades";
 import { getPrecios } from "@/content/precios";
 import { fotoPortafolio, FOTOS_PORTAFOLIO } from "@/content/portafolio-fotos";
+import { PORTAFOLIO } from "@/content/portafolio";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -75,8 +76,7 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
 };
 
 /** Prueba para quien compra producción física: el trabajo hecho, no cifras de ventas ajenas a su pedido. */
-const PROOF_PRODUCCION =
-  "22 activaciones documentadas con fotos propias, tomadas en el montaje: gigantografías, módulos de marca, estructuras y unidades rotuladas.";
+const PROOF_PRODUCCION = `${PORTAFOLIO.length} activaciones documentadas con fotos propias, tomadas en el montaje: gigantografías, módulos de marca, estructuras, unidades rotuladas y cortatráfico.`;
 const SERVICIOS_PRODUCCION = new Set(["imprenta", "material-pop", "estructuras-publicitarias", "publicidad-movil", "merchandising", "btl", "gigantografias", "letreros-luminosos"]);
 
 const shapeFor = (slug: string) => ((slug.charCodeAt(0) + slug.length) % 6) + 1;

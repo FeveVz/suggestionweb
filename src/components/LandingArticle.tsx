@@ -15,6 +15,7 @@ import JsonLd from "@/components/JsonLd";
 import EnCorto from "@/components/EnCorto";
 import { site, whatsappLink } from "@/lib/site";
 import { CTA_CONSULTORIA, consultoriaHref, esCotizacion } from "@/lib/cta";
+import { PORTAFOLIO } from "@/content/portafolio";
 import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "@/content/types";
 
 /**
@@ -364,7 +365,7 @@ export default function LandingArticle({
             ))}
           </div>
           <Link href="/portafolio" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: "var(--space-6)", font: "var(--fw-bold) var(--fs-sm)/1 var(--font-accent)", color: "var(--text-strong)" }}>
-            Las 22 activaciones, con el dato de oficio de cada una <ArrowRight size={15} />
+            Las {PORTAFOLIO.length} activaciones, con el dato de oficio de cada una <ArrowRight size={15} />
           </Link>
           <style>{`
             .hk-serv-gal { display:grid; gap:var(--space-4); grid-template-columns:1fr; }

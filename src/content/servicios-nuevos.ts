@@ -18,6 +18,7 @@
  */
 import type { Servicio } from "./types";
 import { FOTOS_PORTAFOLIO, fotoPortafolio } from "./portafolio-fotos";
+import { PORTAFOLIO } from "./portafolio";
 
 /** Foto del portafolio con sus medidas reales, para reservar el hueco. */
 const foto = (slug: string, n: number, alt: string, cap: string) => {
@@ -422,7 +423,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       { label: "Marketing automotriz: ejemplos que funcionan", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
       { label: "Regalos corporativos de Navidad", href: "/blog/imprenta-btl/regalos-corporativos-de-navidad" },
     ],
-    proof: "Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · un relanzamiento de tienda que cubrieron ocho canales de prensa · 22 activaciones documentadas con fotos propias.",
+    proof: `Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · un relanzamiento de tienda que cubrieron ocho canales de prensa · ${PORTAFOLIO.length} activaciones documentadas con fotos propias.`,
     metaTitle: "Eventos Corporativos y de Fin de Año en Ica | Suggestion",
     metaDescription:
       "Producimos eventos corporativos en Ica y el Perú: lanzamientos, inauguraciones, eventos con clientes y de fin de año. Convocatoria, montaje y registro. Cotiza.",

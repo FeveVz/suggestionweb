@@ -35,12 +35,12 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Portafolio de Activaciones BTL | Suggestion",
   description:
-    "22 activaciones y piezas de gran formato producidas entre 2024 y 2026 para marcas automotrices e inmobiliarias: qué resolvía cada una y cómo se montó.",
+    `${PORTAFOLIO.length} activaciones y piezas de gran formato producidas entre 2024 y 2026 para marcas automotrices, inmobiliarias y de telecomunicaciones: qué resolvía cada una y cómo se montó.`,
   path: "/portafolio",
   ogImage: "/assets/og/portafolio.png",
 });
 
-const MARCAS = 11;
+const MARCAS = 12; // 11 del Notion + la tienda Entel de Nazca (nov-2026)
 const PIEZAS = PORTAFOLIO.length;
 
 export default function PortafolioPage() {

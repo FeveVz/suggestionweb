@@ -4,13 +4,14 @@ import type { RelatedLink } from "@/components/RelatedLinks";
 import { serviceSchema } from "@/lib/schema";
 import { getCiudad } from "@/content/ciudades";
 import { getServicio } from "@/content/servicios";
-import { fotoPortafolio } from "@/content/portafolio-fotos";
+import { FOTOS_PORTAFOLIO, fotoPortafolio } from "@/content/portafolio-fotos";
 
 /**
  * Fotos propias tomadas EN la ciudad. Solo donde las hay: una ciudad sin
  * trabajo fotografiado allí va sin foto, no con una de Ica.
  */
 const XCMG = "xcmg-linea-amarilla-nazca";
+const ENTEL = "cortatrafico-entel-nazca";
 const FOTOS_CIUDAD: Record<
   string,
   {
@@ -18,19 +19,19 @@ const FOTOS_CIUDAD: Record<
     galeria: { src: string; alt: string; cap: string }[];
   }
 > = {
-  // Cortatráfico para la tienda Entel de Nazca: fotos del equipo de Nazca
-  // (20-nov-2026), pasadas por scripts/ciudad-imagenes.mjs. Sin selfies ni
-  // placas legibles. La foto de la sección va en content/ciudades.ts.
+  // Cortatráfico para la tienda Entel de Nazca (12-18 nov 2026): son las
+  // fotos de esa pieza del portafolio. Sin selfies ni placas legibles. La
+  // foto de la sección va en content/ciudades.ts.
   nazca: {
     hero: {
-      src: "/assets/ciudades/nazca-1.51cd50dc.webp",
+      src: fotoPortafolio(ENTEL, 1),
       alt: "Cortatráfico con el banner de una tienda Entel en un cruce del centro de Nazca, bajo el letrero de la Municipalidad Provincial de Nasca",
-      w: 1564,
-      h: 880,
+      w: FOTOS_PORTAFOLIO[ENTEL]?.[0]?.[0],
+      h: FOTOS_PORTAFOLIO[ENTEL]?.[0]?.[1],
     },
     galeria: [
-      { src: "/assets/ciudades/nazca-3-s.e6a9b9d2.webp", alt: "Cortatráfico con banner de Entel en el paso peatonal de un cruce de Nazca, con un auto rojo detenido", cap: "Dos personas, un banner y el semáforo en rojo: el mensaje se ve desde cada auto que para" },
-      { src: "/assets/ciudades/nazca-4-s.553eb662.webp", alt: "Cortatráfico con banner de Entel frente a la iglesia, en un cruce del centro de Nazca", cap: "Otro cruce del centro: los puntos y los horarios se acuerdan antes de salir" },
+      { src: fotoPortafolio(ENTEL, 3), alt: "Cortatráfico con banner de Entel en el paso peatonal de un cruce de Nazca, con un auto rojo detenido", cap: "Dos personas, un banner y el semáforo en rojo: el mensaje se ve desde cada auto que para" },
+      { src: fotoPortafolio(ENTEL, 4), alt: "Cortatráfico con banner de Entel frente a la iglesia, en un cruce del centro de Nazca", cap: "Siete días rotando por los cruces del centro, del 12 al 18 de noviembre de 2026" },
       { src: fotoPortafolio(XCMG, 8), alt: "Anfitriona presentando la maquinaria XCMG en la exhibición de Nazca", cap: "XCMG · Dercomaq, febrero 2025: anfitriona en una exhibición de tres días para contratistas y empresarios" },
       { src: fotoPortafolio(XCMG, 6), alt: "Publimán con cartel de la campaña de XCMG en la plaza de armas de Nazca", cap: "Publimanes en la plaza de armas. A esa exhibición llegaron empresarios del sector minero y salió una venta" },
     ],

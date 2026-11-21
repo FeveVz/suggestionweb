@@ -3,6 +3,7 @@ import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
 import { CASOS_DETALLE } from "@/content/casos";
 import { CIUDADES, ciudadHref } from "@/content/ciudades";
+import { PORTAFOLIO } from "@/content/portafolio";
 
 /**
  * /llms.txt — mapa del sitio en texto plano para modelos de lenguaje.
@@ -103,7 +104,7 @@ ${ciudades}
 - [Casos de éxito](${u("/casos")}): resultados reales con cifras verificables.
 ${casos}
 - [Cómo medimos una campaña](${u("/metodo")}): qué cuenta como resultado, qué se descuenta antes de reportar y qué no se publica nunca.
-- [Portafolio](${u("/portafolio")}): 22 activaciones, lanzamientos y piezas de gran formato producidos entre 2024 y 2026, con el dato de oficio de cada uno.
+- [Portafolio](${u("/portafolio")}): ${PORTAFOLIO.length} activaciones, lanzamientos y piezas de gran formato producidos entre 2024 y 2026, con el dato de oficio de cada uno.
 - [Nosotros](${u("/nosotros")}): cómo trabajamos y quiénes somos.
 - [Consultoría cero, gratis](${u("/consultoria-cero")}): la forma de empezar. 30 minutos en los que el cliente cuenta su problema o lo que quiere mejorar; con eso proponemos los caminos y los servicios que encajan con su objetivo. Sin costo ni compromiso.
 - [Auditoría gratis](${u("/auditoria-gratis")}): revisión de la cuenta en 48 h, con tres mejoras accionables.

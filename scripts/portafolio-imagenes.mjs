@@ -271,8 +271,12 @@ fs.writeFileSync(
  * \`{slug}-{n}-s.{hash}.webp\` (alto ${ALTO_CHICO}).
  */
 
+import { FOTOS_EXTRA } from "./portafolio-fotos-extra";
+
 /** [ancho, alto, hash] de la variante grande, en orden de publicación. */
 export const FOTOS_PORTAFOLIO: Record<string, [number, number, string][]> = {
+  // Trabajos que no están en Notion: ver portafolio-fotos-extra.ts.
+  ...FOTOS_EXTRA,
 ${lineas}
 };
 

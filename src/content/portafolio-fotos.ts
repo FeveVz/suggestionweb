@@ -10,8 +10,12 @@
  * `{slug}-{n}-s.{hash}.webp` (alto 440).
  */
 
+import { FOTOS_EXTRA } from "./portafolio-fotos-extra";
+
 /** [ancho, alto, hash] de la variante grande, en orden de publicación. */
 export const FOTOS_PORTAFOLIO: Record<string, [number, number, string][]> = {
+  // Trabajos que no están en Notion: ver portafolio-fotos-extra.ts.
+  ...FOTOS_EXTRA,
   "autoplan-portafolio-marcas": [[1173,880,"f4905c20"], [1173,880,"cf548a7d"], [1173,880,"a81a3ab3"], [1173,880,"d27c6720"], [1173,880,"80aabec7"], [1171,880,"d623ce61"]],
   "grifo-repsol-jac": [[1173,880,"efa77514"], [661,880,"40a01441"], [1173,880,"798d7ee5"], [661,880,"38f73e4b"]],
   "mercado-santo-domingo-dfsk": [[660,880,"d96833b0"], [660,880,"4a32a517"], [660,880,"bed626b9"], [661,880,"b026c20e"]],

@@ -40,7 +40,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/nosotros": "2026-11-20",
   "/metodo": "2026-11-20",
   "/casos": "2026-11-20",
-  "/portafolio": "2026-10-09",
+  "/portafolio": "2026-11-20",
   "/consultoria-cero": "2026-11-20",
   "/contacto": "2026-11-20",
   "/auditoria-gratis": "2026-11-20",
