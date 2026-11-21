@@ -30,6 +30,12 @@ const CAT_DESC: Record<string, string> = {
 export default function Header() {
   const [open, setOpen] = useState<OpenMenu>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false);
+  useEffect(() => {
+    const alCambiar = (e: Event) => setMenuAbierto(Boolean((e as CustomEvent<boolean>).detail));
+    window.addEventListener("hk:menu-estado", alCambiar);
+    return () => window.removeEventListener("hk:menu-estado", alCambiar);
+  }, []);
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
 
@@ -113,7 +119,11 @@ export default function Header() {
               type="button"
               aria-haspopup="true"
               aria-expanded={open === "servicios"}
-              onClick={() => setOpen(open === "servicios" ? null : "servicios")}
+              onClick={(e) => {
+                const abrir = open !== "servicios";
+                setOpen(abrir ? "servicios" : null);
+                if (abrir && e.detail === 0) enfocarPanel();
+              }}
               style={triggerStyle}
             >
               Servicios
@@ -127,7 +137,11 @@ export default function Header() {
               type="button"
               aria-haspopup="true"
               aria-expanded={open === "sectores"}
-              onClick={() => setOpen(open === "sectores" ? null : "sectores")}
+              onClick={(e) => {
+                const abrir = open !== "sectores";
+                setOpen(abrir ? "sectores" : null);
+                if (abrir && e.detail === 0) enfocarPanel();
+              }}
               style={triggerStyle}
             >
               Sectores
@@ -164,6 +178,7 @@ export default function Header() {
             className="hk-menu-btn"
             aria-label="Abrir menú"
             aria-haspopup="dialog"
+            aria-expanded={menuAbierto}
             onClick={() => window.dispatchEvent(new Event("hk:menu"))}
           >
             <Menu size={22} aria-hidden />
@@ -257,11 +272,25 @@ export default function Header() {
   );
 }
 
+/**
+ * Con teclado (auditoría UX-13, tarea 3.16): Enter en «Servicios» o «Sectores»
+ * lleva el foco al primer enlace del panel, y el panel se cierra cuando el
+ * foco sale de él.
+ */
+function enfocarPanel() {
+  window.setTimeout(() => document.querySelector<HTMLElement>("[data-mega] a")?.focus(), 40);
+}
+
 function MegaPanel({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
   return (
     <div
       className="hk-nav"
+      data-mega=""
       onMouseLeave={onClose}
+      onBlur={(e) => {
+        const siguiente = e.relatedTarget as Node | null;
+        if (siguiente && !e.currentTarget.contains(siguiente)) onClose();
+      }}
       style={{
         position: "absolute",
         left: 0,

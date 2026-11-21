@@ -13,7 +13,7 @@ export const SECTORES_HUB = {
     "Marketing de performance por industria en Perú: inmobiliario, automotriz, turismo, marcas, salud, agroexportación y pisco/vino. Elige tu sector y hablemos.",
   h1: "Cada mercado tiene su perspectiva. Nosotros la entendemos.",
   intro:
-    "No hacemos el mismo marketing para todos. Cada industria tiene su cliente, su ciclo y su forma de cerrar. Por eso trabajamos con un playbook propio por sector.",
+    "No hacemos el mismo marketing para todos. Cada industria tiene su cliente, su ciclo y su forma de cerrar. Por eso trabajamos con una estrategia propia por sector.",
   cta: "Agenda tu consultoría cero",
 } as const;
 
@@ -156,8 +156,8 @@ export const SECTORES: Sector[] = [
     nombre: "Automotriz",
     metaTitle: "Agencia de Marketing Automotriz en Perú | Suggestion",
     metaDescription:
-      "Marketing automotriz que lleva del clic al test drive: leads listos para cierre en piso. Campañas para concesionarios y autos. Agenda hoy.",
-    h1: "Marketing automotriz: del clic al test drive",
+      "Marketing automotriz que lleva del clic a la prueba de manejo: leads listos para cierre en piso. Campañas para concesionarios y autos. Agenda hoy.",
+    h1: "Marketing automotriz: del clic a la prueba de manejo",
     hero: "Un lead de auto que no llega al piso no sirve. Diseñamos campañas que no solo generan interesados: los califican y los empujan a la prueba de manejo, donde tu equipo cierra.",
     cta: "Agenda tu consultoría cero",
     proof:
@@ -240,7 +240,7 @@ export const SECTORES: Sector[] = [
       { label: "Cómo vender maquinaria pesada", href: "/blog/automotriz/como-vender-maquinaria-pesada" },
       { label: "Leads para concesionarios que sí cierran", href: "/blog/automotriz/leads-para-concesionarios" },
       { label: "Publicidad para venta de autos", href: "/blog/automotriz/publicidad-para-venta-de-autos" },
-      { label: "Del clic al test drive: ejemplos", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
+      { label: "Del clic a la prueba de manejo: ejemplos", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
       { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
       { label: "Panel, valla o publicidad móvil: cuál elegir", href: "/blog/imprenta-btl/panel-valla-bicivalla-o-vehiculo-rotulado" },
     ],
@@ -958,12 +958,12 @@ export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] 
   "marketing-inmobiliario": {
     beneficios: [
       { titulo: "Citas, no curiosos", texto: "Filtramos al interesado real y lo llevamos a tu sala de ventas listo para decidir." },
-      { titulo: "Funnel completo del proyecto", texto: "Del lanzamiento a la separación, con pauta, landing, drone y CRM conectados." },
+      { titulo: "Embudo completo del proyecto", texto: "Del lanzamiento a la separación, con pauta, landing, drone y CRM conectados." },
       { titulo: "Valorización que vende", texto: "Mensajes de plusvalía y etapa inicial que activan al inversor." },
       { titulo: "Seguimiento que no enfría", texto: "CRM y respuesta rápida para que ningún lead de alto valor se pierda." },
     ],
     proceso: [
-      { paso: "01", titulo: "Leemos", texto: "Auditamos tu proyecto, tu comprador y tu funnel de ventas." },
+      { paso: "01", titulo: "Leemos", texto: "Auditamos tu proyecto, tu comprador y tu embudo de ventas." },
       { paso: "02", titulo: "Captamos", texto: "Pauta segmentada + landing del proyecto que agenda citas." },
       { paso: "03", titulo: "Calificamos", texto: "Filtramos y nutrimos con CRM hasta la visita." },
       { paso: "04", titulo: "Cerramos", texto: "Reportamos citas, visitas y separaciones; iteramos." },
@@ -974,12 +974,12 @@ export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] 
       { titulo: "Leads que llegan al piso", texto: "Filtramos al curioso y empujamos a la prueba de manejo." },
       { titulo: "Ofertas que mueven", texto: "Financiamiento, bono y modelo del mes con el mensaje correcto." },
       { titulo: "Conectado a tu equipo", texto: "Generación y calificación enlazadas a tu fuerza comercial." },
-      { titulo: "Menos costo por venta", texto: "Seguimiento rápido que baja el costo por test drive y cierre." },
+      { titulo: "Menos costo por venta", texto: "Seguimiento rápido que baja el costo por prueba de manejo y cierre." },
     ],
     proceso: [
       { paso: "01", titulo: "Leemos", texto: "Analizamos tu marca, tus modelos y tu proceso comercial." },
       { paso: "02", titulo: "Captamos", texto: "Campañas que generan y filtran prospectos de compra." },
-      { paso: "03", titulo: "Agendamos", texto: "Calificación + seguimiento que lleva al test drive." },
+      { paso: "03", titulo: "Agendamos", texto: "Calificación + seguimiento que lleva a la prueba de manejo." },
       { paso: "04", titulo: "Medimos", texto: "Reportamos pruebas de manejo y cierres; optimizamos." },
     ],
   },

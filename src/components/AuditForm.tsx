@@ -195,7 +195,7 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
       )}
       <F l="Nombre *"><input name="nombre" required autoComplete="name" placeholder="Tu nombre" className="hk-input" style={input} /></F>
       {!consultoria && <F l="Negocio *"><input name="negocio" required autoComplete="organization" placeholder="Empresa / rubro" className="hk-input" style={input} /></F>}
-      <F l="WhatsApp *"><input name="telefono" required type="tel" autoComplete="tel" placeholder="+51 ..." className="hk-input" style={input} /></F>
+      <F l="WhatsApp *"><input name="telefono" required type="tel" inputMode="tel" autoComplete="tel" pattern="[+0-9 ()-]{9,20}" title="Escribe tu número con al menos 9 dígitos" placeholder="+51 ..." aria-describedby="ayuda-envio" className="hk-input" style={input} /></F>
       {consultoria ? (
         // La consultoría cero empieza con lo que el cliente cuenta: se le pide
         // en sus palabras, no eligiendo de una lista.
@@ -225,10 +225,10 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
         </>
       )}
       <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-        <Btn type="submit" variant="insight" size="lg">
+        <Btn type="submit" variant="insight" size="lg" aria-describedby="ayuda-envio">
           {sent ? "¡Abriendo WhatsApp!" : consultoria ? "Agendar mi consultoría cero" : "Quiero mi auditoría gratis"}
         </Btn>
-        <span style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
+        <span id="ayuda-envio" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
           {consultoria ? "Gratis y sin compromiso. Se abre WhatsApp con tu mensaje listo: nuestro agente de IA te responde al momento y una persona te confirma de lunes a sábado, de 8:30 a 18:30." : "Sin compromiso · Diagnóstico en 48 h hábiles"}
         </span>
       </div>

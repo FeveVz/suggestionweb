@@ -71,7 +71,7 @@ export const PRECIOS: Record<string, PlanPrecio[]> = {
       nombre: "Enterprise",
       precio: "S/3,000",
       periodo: "/mes",
-      incluye: ["Todas las plataformas", "Campañas ilimitadas", "Consultor dedicado", "Funnel completo", "Attribution modeling"],
+      incluye: ["Todas las plataformas", "Campañas ilimitadas", "Consultor dedicado", "Embudo completo", "Modelo de atribución"],
     },
   ],
   "desarrollo-web": [
@@ -218,7 +218,7 @@ export const PRECIOS: Record<string, PlanPrecio[]> = {
       nombre: "Enterprise",
       precio: "S/6,000",
       periodo: "/proyecto",
-      incluye: ["Todo lo del Business", "Segmentación avanzada del mercado", "Customer journey", "Análisis de precios y posicionamiento", "300 encuestas", "10 a 15 entrevistas a clientes reales", "Estrategia basada en datos", "Presentación + sesión de consultoría"],
+      incluye: ["Todo lo del Business", "Segmentación avanzada del mercado", "Recorrido del cliente", "Análisis de precios y posicionamiento", "300 encuestas", "10 a 15 entrevistas a clientes reales", "Estrategia basada en datos", "Presentación + sesión de consultoría"],
     },
   ],
 };

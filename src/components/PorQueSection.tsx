@@ -18,9 +18,9 @@ const RAZONES_PRODUCCION: [string, string][] = [
 
 const RAZONES: [string, string][] = [
   ["Performance, no vanidad", "Medimos leads, citas y cierres. Los likes no pagan la planilla."],
-  ["Método propio por vertical", "Cada rubro con su playbook, no una receta genérica."],
+  ["Estrategia propia por sector", "Cada rubro con su forma de vender, no una receta genérica."],
   ["Base en Ica, alcance nacional", "Conocemos el mercado local y operamos campañas en todo el Perú."],
-  ["Transparencia radical", "Ves los números reales del funnel. Sin humo, sin promesas de #1."],
+  ["Transparencia radical", "Ves los números reales de cada etapa, del anuncio a la venta. Sin humo, sin promesas de #1."],
 ];
 
 export default function PorQueSection({ tone = "light", produccion = false }: { tone?: "light" | "raised"; produccion?: boolean }) {

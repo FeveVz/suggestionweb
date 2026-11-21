@@ -411,9 +411,9 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     // Ídem: la keyword comercial la defiende /marketing-automotriz.
     metaTitle: "Guías y Artículos de Marketing Automotriz | Suggestion",
     metaDescription:
-      "Del clic al test drive: cómo llevar leads de autos hasta el cierre en piso. Ideas y casos de marketing automotriz.",
+      "Del clic a la prueba de manejo: cómo llevar leads de autos hasta el cierre en piso. Ideas y casos de marketing automotriz.",
     h1: "Marketing automotriz: ideas y casos",
-    intro: "Del clic al test drive: cómo llevar leads de autos hasta el cierre en piso.",
+    intro: "Del clic a la prueba de manejo: cómo llevar leads de autos hasta el cierre en piso.",
     secciones: [
       {
         h2: "Qué encontrarás en esta sección",
@@ -2977,8 +2977,8 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "automotriz",
     title: "Marketing Automotriz: Ejemplos que Funcionan | Suggestion",
     description:
-      "Ejemplos de marketing automotriz que llevan del clic al test drive: ofertas, formatos y mensajes que generan leads de autos que sí cierran.",
-    h1: "Marketing automotriz: ejemplos que llevan del clic al test drive",
+      "Ejemplos de marketing automotriz que llevan del clic a la prueba de manejo: ofertas, formatos y mensajes que generan leads de autos que sí cierran.",
+    h1: "Marketing automotriz: ejemplos que llevan del clic a la prueba de manejo",
     excerpt:
       "Pedir “ejemplos de marketing automotriz” y recibir piezas bonitas no le sirve a nadie. Acá tienes siete acciones concretas, del modelo del mes al taller, con qué se hace, por qué funciona y qué número mirar para saber si valió la pena.",
     date: "2026-06-08",
@@ -3101,12 +3101,12 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "automotriz",
     title: "Leads para Concesionarios que Sí Cierran | Suggestion",
     description:
-      "Cómo generar leads para concesionarios que llegan al test drive y cierran: segmentación, calificación y seguimiento que bajan el costo por venta.",
+      "Cómo generar leads para concesionarios que llegan a la prueba de manejo y cierran: segmentación, calificación y seguimiento que bajan el costo por venta.",
     h1: "Cómo conseguir leads para concesionarios que sí cierran",
     excerpt:
       "Generar leads de autos es fácil; generar leads que llegan al piso y compran, no. La diferencia está en a quién atraes y qué haces después del formulario.",
     date: "2026-06-13",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "El problema de los leads “basura”",
@@ -3126,7 +3126,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "La métrica correcta",
         parrafo:
-          "No mires “cuántos leads”, mira cuántos test drives y cierres. Menos leads buenos valen más que muchos malos.",
+          "No mires “cuántos leads”, mira cuántas pruebas de manejo y cierres. Menos leads buenos valen más que muchos malos.",
       },
       {
         h2: "Por qué el tiempo de respuesta decide la venta",
@@ -3195,12 +3195,12 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "automotriz",
     title: "Publicidad para Venta de Autos: Ideas y Medios | Suggestion",
     description:
-      "Qué mensaje mueve al comprador, dónde pautar y cómo medir si tu publicidad para venta de autos trajo test drives y ventas, no solo curiosos.",
+      "Qué mensaje mueve al comprador, dónde pautar y cómo medir si tu publicidad para venta de autos trajo pruebas de manejo y ventas, no solo curiosos.",
     h1: "Publicidad para venta de autos: ideas que funcionan",
     excerpt:
       "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que sí mueve al comprador a actuar.",
     date: "2026-06-17",
-    actualizado: "2026-11-02",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "¿Qué mensaje mueve de verdad la decisión de comprar un auto?",
@@ -3250,7 +3250,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Meta Ads para generar deseo y captar interesados; Google Ads para capturar a quien ya busca tu marca o modelo. La combinación cubre todo el embudo: del que aún no decide al que ya está buscando. Súmale remarketing —volver a mostrar el anuncio a quien ya visitó tu web—, porque en automotriz el indeciso es la norma. Y no descuides el catálogo de usados: trae búsquedas de intención altísima y a veces al comprador de un cero kilómetros.",
       },
       {
-        h2: "El test drive es la conversión que sí predice la venta",
+        h2: "La prueba de manejo es la conversión que sí predice la venta",
         parrafo:
           "Entre el formulario y la firma hay un paso que casi nadie mide: la prueba de manejo. Es la conversión intermedia real, donde el interesado invierte su tiempo y se sube. De ahí en adelante cierra tu asesor, no la pauta. Por eso conviene diseñar la campaña para agendar pruebas. Si no puedes ofrecer prueba del modelo anunciado, el equivalente es una visita con hora y asesor asignado.",
       },
@@ -6850,6 +6850,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cada conversación tiene que quedar en el CRM con la campaña de origen; si no, no sabrás qué anuncio trajo la venta.",
     ],
     date: "2026-11-16",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Por qué una inmobiliaria pierde leads en WhatsApp",

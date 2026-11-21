@@ -162,6 +162,9 @@ export default function MetodoPage() {
       {/* FAQ */}
       <Section tone="light" style={{ background: "var(--surface-raised)" }}>
         <div style={{ maxWidth: 820 }}>
+          <h2 style={{ font: "var(--fw-bold) var(--fs-2xl)/1.15 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "0 0 16px" }}>
+            Preguntas frecuentes
+          </h2>
           <Faq items={FAQ} />
         </div>
       </Section>

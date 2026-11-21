@@ -44,7 +44,7 @@ export default function FunnelVivo() {
         Tu problema no es que no te vean: <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>es que los que te ven no terminan comprando</strong>.
       </p>
       <p style={HIDDEN}>
-        Armamos tu funnel completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: la atención se
+        Armamos tu embudo de ventas completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: la atención se
         vuelve clic, el clic conversación por WhatsApp y la conversación venta.
       </p>
       <div className="fv" aria-hidden>

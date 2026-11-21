@@ -195,6 +195,11 @@ export default async function BlogPostPage({ params }: Params) {
               emite el FAQPage de esta URL (una sola vez, aquí). */}
           {post.faq && post.faq.length > 0 && (
             <div style={{ marginTop: "var(--space-8)" }}>
+              {/* Su propio H2 (auditoría CON-26): sin él, las preguntas colgaban
+                  del último H2 del artículo. */}
+              <h2 style={{ font: "var(--fw-bold) var(--fs-2xl)/1.15 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "0 0 16px" }}>
+                Preguntas frecuentes
+              </h2>
               <Faq items={post.faq} />
             </div>
           )}

@@ -552,7 +552,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Qué resolvemos",
         parrafo:
-          "Diagnóstico honesto de tu marketing, detección de fugas en el funnel y un plan accionable. Sin humo: te decimos qué funciona, qué no y qué soltar.",
+          "Diagnóstico honesto de tu marketing, detección de fugas en el embudo y un plan accionable. Sin humo: te decimos qué funciona, qué no y qué soltar.",
       },
       {
         h2: "Cómo trabajamos",
@@ -565,8 +565,8 @@ const SERVICIOS_BASE: Servicio[] = [
       { titulo: "Plan estratégico", texto: "Documento con objetivos, estrategias, tácticas y KPIs atados a venta." },
       { titulo: "Auditoría de competencia", texto: "Análisis de la estrategia digital de tus principales competidores." },
       { titulo: "Definición de buyer persona", texto: "Perfiles detallados de tus clientes ideales y qué los mueve a comprar." },
-      { titulo: "Customer journey mapping", texto: "Mapeo de los puntos de contacto y dónde se pierde la conversión." },
-      { titulo: "Análisis de funnel", texto: "Identificación de fugas y oportunidades de mejora en el embudo." },
+      { titulo: "Mapa del recorrido del cliente", texto: "Mapeo de los puntos de contacto y dónde se pierde la conversión." },
+      { titulo: "Análisis del embudo", texto: "Identificación de fugas y oportunidades de mejora en el embudo." },
       { titulo: "Stack de herramientas", texto: "Recomendación del set tecnológico óptimo para tu operación." },
       { titulo: "Capacitación del equipo", texto: "Training en herramientas y mejores prácticas para tu gente." },
       { titulo: "Sesiones de seguimiento", texto: "Reuniones periódicas para ajustar el rumbo con datos." },
@@ -602,7 +602,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Trabajan con cualquier industria?",
-        a: "Tenemos un playbook por vertical (inmobiliario, automotriz, turismo, consumo, salud). Si tu industria es nueva para nosotros, la investigamos antes de recomendar.",
+        a: "Tenemos una estrategia propia por sector (inmobiliario, automotriz, turismo, consumo, salud). Si tu industria es nueva para nosotros, la investigamos antes de recomendar.",
       },
     ],
     enlazaA: ["investigacion-de-mercado", "marketing-digital"],
@@ -709,7 +709,7 @@ const SERVICIOS_BASE: Servicio[] = [
     metaDescription:
       "Agencia de marketing digital para empresas y pymes en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
     h1: "Marketing digital para empresas que genera ventas, no vanidad",
-    hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el funnel conectado.",
+    hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el embudo conectado.",
     enCorto: [
       "Una sola estrategia con todo el embudo conectado, medida en leads, citas y cierres, no en likes.",
       "Planes mensuales: Starter S/1,500 con 2 redes y 8 publicaciones, Pro S/2,500 con 4 redes, 15 publicaciones y una campaña, y Enterprise S/4,500 con redes ilimitadas, varias campañas y SEO avanzado.",
@@ -994,7 +994,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Por qué con Suggestion",
         parrafo:
-          "Trabajamos las redes con mentalidad de funnel: el contenido atrae, la conversación califica y el mensaje cierra.",
+          "Trabajamos las redes con mentalidad de embudo: el contenido atrae, la conversación califica y el mensaje cierra.",
       },
       {
         h2: "Qué medimos y qué ignoramos",
@@ -1447,7 +1447,7 @@ const SERVICIOS_BASE: Servicio[] = [
       { titulo: "Integraciones", texto: "Conexión con tu web, ads, calendarios y herramientas." },
       { titulo: "Pipelines de ventas", texto: "Etapas personalizadas con seguimiento automático." },
       { titulo: "Chatbots", texto: "Atención automatizada en web y WhatsApp." },
-      { titulo: "Reportes y dashboards", texto: "Visibilidad total del funnel de ventas y marketing." },
+      { titulo: "Reportes y dashboards", texto: "Visibilidad total del embudo de ventas y marketing." },
     ],
     beneficios: [
       { titulo: "Ahorro de tiempo", texto: "Automatiza tareas repetitivas y libera a tu equipo para lo importante." },

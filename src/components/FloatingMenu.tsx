@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X, ArrowRight, MessageCircle } from "lucide-react";
@@ -20,6 +20,43 @@ export default function FloatingMenu() {
   const pathname = usePathname();
 
   useEffect(() => setOpen(false), [pathname]);
+
+  // Foco del panel (auditoría UX-02, tarea 3.16): al abrir, el foco va a
+  // «Cerrar menú» y no sale del panel con Tab; la cabecera, el contenido y el
+  // pie quedan inertes; al cerrar, el foco vuelve a quien lo abrió. La
+  // cabecera recibe el estado para su aria-expanded.
+  const panelRef = useRef<HTMLDivElement>(null);
+  const cerrarRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("hk:menu-estado", { detail: open }));
+    if (!open) return;
+    const previo = document.activeElement as HTMLElement | null;
+    const fuera = Array.from(document.querySelectorAll<HTMLElement>("header, main, footer"));
+    fuera.forEach((el) => el.setAttribute("inert", ""));
+    const t = window.setTimeout(() => cerrarRef.current?.focus(), 60);
+    const atrapar = (e: KeyboardEvent) => {
+      if (e.key !== "Tab" || !panelRef.current) return;
+      const focos = Array.from(panelRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'));
+      if (!focos.length) return;
+      const primero = focos[0];
+      const ultimo = focos[focos.length - 1];
+      if (e.shiftKey && document.activeElement === primero) {
+        e.preventDefault();
+        ultimo.focus();
+      } else if (!e.shiftKey && document.activeElement === ultimo) {
+        e.preventDefault();
+        primero.focus();
+      }
+    };
+    document.addEventListener("keydown", atrapar);
+    return () => {
+      window.clearTimeout(t);
+      document.removeEventListener("keydown", atrapar);
+      fuera.forEach((el) => el.removeAttribute("inert"));
+      const destino = previo && document.contains(previo) && previo !== document.body ? previo : document.querySelector<HTMLElement>(".hk-menu-btn");
+      destino?.focus();
+    };
+  }, [open]);
 
   // El botón de menú vive en la cabecera (Header.tsx) y avisa con este evento.
   useEffect(() => {
@@ -68,12 +105,13 @@ export default function FloatingMenu() {
               exit={{ opacity: 0, y: 24, scale: 0.96 }}
               transition={{ type: "spring", stiffness: 340, damping: 30 }}
               className="hk-fab-panel"
+              ref={panelRef}
             >
               <div className="hk-fab-head">
                 <Link href="/" onClick={() => setOpen(false)} aria-label="Suggestion — inicio" style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)" }}>
                   Suggestion
                 </Link>
-                <button onClick={() => setOpen(false)} aria-label="Cerrar menú" className="hk-fab-close">
+                <button ref={cerrarRef} onClick={() => setOpen(false)} aria-label="Cerrar menú" className="hk-fab-close">
                   <X size={18} />
                 </button>
               </div>
@@ -145,7 +183,7 @@ export default function FloatingMenu() {
         .hk-fab-btn:active { transform: scale(0.94); }
         .hk-fab-panel { position: fixed; inset: 0; width: 100%; height: 100dvh; overflow-y: auto; background: var(--black); color: var(--white); z-index: 1001; display: flex; flex-direction: column; }
         .hk-fab-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; background: var(--black); border-bottom: 1px solid var(--hairline-inverse); }
-        .hk-fab-close { width: 34px; height: 34px; border-radius: 50%; background: var(--ink-700); border: none; color: var(--white); display: grid; place-items: center; cursor: pointer; }
+        .hk-fab-close { width: 44px; height: 44px; border-radius: 50%; background: var(--ink-700); border: none; color: var(--white); display: grid; place-items: center; cursor: pointer; }
         .hk-fab-label { font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent); text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-on-inverse-mut); margin: 0 0 10px; }
         .hk-fab-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 15px 2px; background: transparent; border: none; border-bottom: 1px solid var(--hairline-inverse); color: var(--white); font: var(--fw-medium) var(--fs-lg)/1.25 var(--font-display); letter-spacing: var(--tracking-snug); text-decoration: none; }
         .hk-fab-card::after { content: "→"; color: var(--cyan); flex-shrink: 0; font-family: var(--font-body); }

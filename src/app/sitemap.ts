@@ -38,12 +38,12 @@ const GLOBAL = new Date(`${CAMBIO_GLOBAL}T12:00:00Z`);
 const ACTUALIZADA: Record<string, string> = {
   "/": "2026-11-20",
   "/nosotros": "2026-11-20",
-  "/metodo": "2026-10-10",
+  "/metodo": "2026-11-20",
   "/casos": "2026-11-20",
   "/portafolio": "2026-10-09",
   "/consultoria-cero": "2026-11-20",
   "/contacto": "2026-11-20",
-  "/auditoria-gratis": "2026-10-15",
+  "/auditoria-gratis": "2026-11-20",
   "/privacidad": "2026-10-15",
   // 2026-11-14: títulos, H1 o secciones nuevas tras el keyword research.
   "/servicios/publicidad-digital": "2026-11-20",
@@ -88,6 +88,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/agencia-de-marketing-en-tacna": "2026-11-20",
   "/agencia-de-marketing-en-palpa": "2026-11-20",
   "/libro-de-reclamaciones": "2026-11-20",
+  "/agencia-de-marketing-en-arequipa": "2026-11-20",
 };
 const dia = (iso: string) => new Date(`${iso}T12:00:00Z`);
 const fecha = (path: string) => (ACTUALIZADA[path] ? dia(ACTUALIZADA[path]) : GLOBAL);

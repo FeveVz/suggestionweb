@@ -17,7 +17,7 @@ const FAQ = [
 
 export const metadata: Metadata = buildMetadata({
   title: "Auditoría de Marketing Gratis en Ica (48 h) | Suggestion",
-  description: "Te auditamos gratis el funnel: pauta, web y seguimiento. Recibes 3 mejoras accionables en 48 horas hábiles, sin compromiso. Para negocios en Perú.",
+  description: "Te auditamos gratis el embudo de ventas: pauta, web y seguimiento. Recibes 3 mejoras accionables en 48 horas hábiles, sin compromiso. Para negocios en Perú.",
   path: "/auditoria-gratis",
   ogImage: "/assets/og/auditoria-gratis.png",
 });
@@ -52,7 +52,7 @@ const SECCIONES: Seccion[] = [
 ];
 
 const ENTREGABLES = [
-  { Icon: Search, t: "Leemos tu funnel completo", d: "Revisamos tu pauta, tu web/redes y tu seguimiento: dónde se está escapando la venta." },
+  { Icon: Search, t: "Leemos tu embudo de ventas completo", d: "Revisamos tu pauta, tu web/redes y tu seguimiento: dónde se está escapando la venta." },
   { Icon: Target, t: "3 mejoras accionables", d: "Te decimos las 3 cosas concretas que más moverían tus resultados — y que puedes aplicar con o sin nosotros." },
   { Icon: Zap, t: "En 48 h, sin compromiso", d: "Un diagnóstico honesto de 20 minutos por videollamada o WhatsApp. Sin letra pequeña." },
 ];

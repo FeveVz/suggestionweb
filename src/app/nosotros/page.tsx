@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   // conservar relevancia sin competir de frente con ella.
   title: "Nosotros | La Agencia de Performance de Ica | Suggestion",
   description:
-    "Somos Suggestion, agencia de performance en Ica. Convertimos atención en ventas con un método propio por vertical. Conoce cómo trabajamos.",
+    "Somos Suggestion, agencia de performance en Ica. Convertimos atención en ventas con una estrategia propia por sector. Conoce cómo trabajamos.",
   path: "/nosotros",
   ogImage: "/assets/og/nosotros.png",
 });
@@ -115,9 +115,9 @@ const METODO = [
 
 const POR_QUE = [
   ["Performance, no vanidad", "Medimos leads, citas y cierres. Los likes no pagan la planilla."],
-  ["Método propio por vertical", "Cada rubro con su playbook, no una receta genérica."],
+  ["Estrategia propia por sector", "Cada rubro con su forma de vender, no una receta genérica."],
   ["Base en Ica, alcance nacional", "Conocemos el mercado local y operamos campañas en todo el Perú."],
-  ["Transparencia radical", "Ves los números reales del funnel. Sin humo, sin promesas de #1."],
+  ["Transparencia radical", "Ves los números reales de cada etapa, del anuncio a la venta. Sin humo, sin promesas de #1."],
 ];
 
 const VALORES = [

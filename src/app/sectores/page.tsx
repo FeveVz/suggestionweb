@@ -31,7 +31,7 @@ export default function SectoresHub() {
       items={items}
       columns={3}
       gridKicker="Elige tu industria"
-      gridHeading="Un playbook propio por sector."
+      gridHeading="Una estrategia propia por sector."
       related={[
         {
           title: "La prueba, para cualquier sector",

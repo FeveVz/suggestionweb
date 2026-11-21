@@ -13,7 +13,7 @@ const PASOS = [
   { n: "01", t: "Leemos", d: "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir." },
   { n: "02", t: "Moldeamos", d: "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros." },
   { n: "03", t: "Convertimos", d: "Activamos campañas y agendamos citas, hasta el cierre." },
-  { n: "04", t: "Medimos", d: "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta." },
+  { n: "04", t: "Medimos", d: "Reportamos el costo por contacto (CPL), el retorno de lo invertido en anuncios (ROAS) y los cierres, medidos contra el CRM. Iteramos sobre lo que mueve la venta." },
 ];
 
 export default function MetodoPinned() {
@@ -89,6 +89,11 @@ export default function MetodoPinned() {
                 <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>{p.n}</span>
                 <h3 style={{ font: "var(--fw-medium) var(--fs-xl)/1.1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: "12px 0 10px" }}>{p.t}</h3>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>{p.d}</p>
+                {p.t === "Medimos" && (
+                  <a href="/metodo" className="hk-ulink" style={{ display: "inline-block", marginTop: 10, font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
+                    Cómo medimos →
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -131,6 +136,11 @@ export default function MetodoPinned() {
                 <span className="hk-ghost hk-ghost--dark" style={{ display: "block" }}>{paso.n}</span>
                 <h3 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.0 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--white)", margin: 0 }}>{paso.t}</h3>
                 <p style={{ font: "var(--fw-light) var(--fs-lg)/1.5 var(--font-body)", color: "var(--text-on-inverse-mut)", maxWidth: "34ch" }}>{paso.d}</p>
+                {paso.t === "Medimos" && (
+                  <a href="/metodo" className="hk-ulink" style={{ display: "inline-block", marginTop: 14, font: "var(--fw-medium) var(--fs-md)/1.4 var(--font-body)", color: "var(--white)" }}>
+                    Cómo medimos →
+                  </a>
+                )}
               </div>
             </div>
           </div>

@@ -71,7 +71,8 @@ Atención: el agente de IA de WhatsApp responde a toda hora; una persona confirm
 
 Agencia de marketing de performance. Medimos hasta la venta: el trabajo se
 mide en leads, citas y cierres, no en alcance ni "me gusta", y los casos se
-publican con su período y su fecha de corte. Cubrimos el embudo completo: estrategia e
+publican con su período y su fecha de corte. Trabajamos en cuatro pasos
+(leemos, moldeamos, convertimos y medimos) y medimos contra el CRM: ${u("/metodo")}. Cubrimos el embudo completo: estrategia e
 investigación, publicidad digital, redes, web y SEO, CRM y automatización,
 marca y contenido, y también producción física — imprenta, merchandising,
 material POP, estructuras publicitarias, BTL y publicidad móvil.

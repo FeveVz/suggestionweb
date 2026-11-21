@@ -10,7 +10,7 @@ const PASOS: [string, string][] = [
   ["Leemos", "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir."],
   ["Moldeamos", "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros."],
   ["Convertimos", "Activamos campañas y agendamos citas, hasta el cierre."],
-  ["Medimos", "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta."],
+  ["Medimos", "Reportamos el costo por contacto (CPL), el retorno de lo invertido en anuncios (ROAS) y los cierres, medidos contra el CRM. Iteramos sobre lo que mueve la venta."],
 ];
 
 export default function MetodoSection() {
@@ -26,6 +26,11 @@ export default function MetodoSection() {
               <span style={{ font: "var(--fw-bold) var(--fs-lg)/1 var(--font-accent)", color: "var(--cyan-text)" }}>0{i + 1}</span>
               <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--white)", marginTop: 14 }}>{t}</h3>
               <p style={{ font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 8 }}>{d}</p>
+              {t === "Medimos" && (
+                <a href="/metodo" className="hk-ulink" style={{ display: "inline-block", marginTop: 12, font: "var(--fw-medium) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
+                  Cómo medimos →
+                </a>
+              )}
             </div>
           ))}
         </div>
