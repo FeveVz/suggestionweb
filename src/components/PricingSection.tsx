@@ -6,10 +6,12 @@ import type { PlanPrecio } from "@/content/types";
 
 /**
  * Tabla de precios (AST): planes referenciales con features y CTA. El plan
- * `popular` se resalta. Siempre visible. Los precios son referenciales; el
- * alcance final se ajusta en la llamada.
+ * `popular` se resalta como «Recomendado para empezar» (antes «Más elegido»,
+ * que afirmaba un dato de ventas que no publicamos: auditoría CRO-13). Los
+ * precios son referenciales; el alcance final se ajusta en la consultoría cero.
+ * `nota`: aclaración bajo la introducción (p. ej. que la pauta va aparte).
  */
-export default function PricingSection({ planes, nombre }: { planes?: PlanPrecio[]; nombre?: string }) {
+export default function PricingSection({ planes, nombre, nota }: { planes?: PlanPrecio[]; nombre?: string; nota?: string }) {
   if (!planes || planes.length === 0) return null;
   return (
     <Section tone="light" style={{ background: "var(--surface-raised)" }}>
@@ -17,7 +19,7 @@ export default function PricingSection({ planes, nombre }: { planes?: PlanPrecio
         Precios claros, sin sorpresas.
       </SectionHeading>
       <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginBottom: 40, maxWidth: "54ch" }}>
-        Planes referenciales para que tengas una idea. El alcance final lo ajustamos a tu caso en la llamada.
+        Planes referenciales para que tengas una idea. El alcance final lo ajustamos a tu caso en la consultoría cero.{nota ? ` ${nota}` : ""}
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)", alignItems: "stretch" }}>
         {planes.map((p) => {
@@ -51,7 +53,7 @@ export default function PricingSection({ planes, nombre }: { planes?: PlanPrecio
                     borderRadius: "var(--radius-pill)",
                   }}
                 >
-                  Más elegido
+                  Recomendado para empezar
                 </span>
               )}
               <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)" }}>{p.nombre}</h3>

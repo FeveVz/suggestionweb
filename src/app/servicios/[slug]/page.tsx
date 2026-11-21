@@ -77,6 +77,8 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
 
 /** Prueba para quien compra producción física: el trabajo hecho, no cifras de ventas ajenas a su pedido. */
 const PROOF_PRODUCCION = `${PORTAFOLIO.length} activaciones documentadas con fotos propias, tomadas en el montaje: gigantografías, módulos de marca, estructuras, unidades rotuladas y cortatráfico.`;
+/** Servicios cuyo plan es la gestión de pauta: la inversión en anuncios va aparte (auditoría CRO-13). */
+const SERVICIOS_PAUTA = new Set(["publicidad-digital", "meta-ads", "marketing-digital"]);
 const SERVICIOS_PRODUCCION = new Set(["imprenta", "material-pop", "estructuras-publicitarias", "publicidad-movil", "merchandising", "btl", "gigantografias", "letreros-luminosos"]);
 
 const shapeFor = (slug: string) => ((slug.charCodeAt(0) + slug.length) % 6) + 1;
@@ -227,6 +229,7 @@ export default async function ServicioPage({ params }: Params) {
       tema={s.nombre}
       especificaciones={s.especificaciones}
       precios={getPrecios(s.slug)}
+      notaPrecios={SERVICIOS_PAUTA.has(s.slug) ? "Es el precio de la gestión: la inversión en anuncios se paga aparte." : undefined}
       related={related}
       faq={s.faq}
       cierre={s.cierre}

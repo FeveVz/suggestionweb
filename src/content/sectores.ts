@@ -103,7 +103,7 @@ export const SECTORES: Sector[] = [
         parrafo:
           "El trabajo con un proyecto se puede llevar en remoto. En Arequipa, una plaza con mucha más oferta, la diferencia está en separar al comprador que busca vivienda del inversionista y sostener el seguimiento hasta la visita a sala de ventas.",
         enlaces: [
-          { label: "Agencia de marketing en Arequipa", href: "/agencia-de-marketing-en-arequipa" },
+          { label: "Marketing para empresas de Arequipa", href: "/agencia-de-marketing-en-arequipa" },
         ],
       },
     ],
@@ -247,8 +247,8 @@ export const SECTORES: Sector[] = [
           "La mecánica es la misma —campañas pensadas para llegar a la prueba de manejo—, pero cambia según la plaza: en Chincha el concesionario compite con la oferta de Lima, en Arequipa con muchos más anunciantes pagando por el mismo comprador y en Tacna con un comercio que vive de comparar precios.",
         enlaces: [
           { label: "Agencia de marketing en Chincha", href: "/agencia-de-marketing-en-chincha" },
-          { label: "Agencia de marketing en Arequipa", href: "/agencia-de-marketing-en-arequipa" },
-          { label: "Agencia de marketing en Tacna", href: "/agencia-de-marketing-en-tacna" },
+          { label: "Marketing para empresas de Arequipa", href: "/agencia-de-marketing-en-arequipa" },
+          { label: "Marketing para empresas de Tacna", href: "/agencia-de-marketing-en-tacna" },
         ],
       },
     ],
@@ -331,8 +331,8 @@ export const SECTORES: Sector[] = [
           "En turismo, buena parte de la decisión se toma en el mapa. Alguien que ya está en Ica y busca dónde dormir, dónde comer o qué hacer mañana no abre Instagram: abre el buscador y mira lo que hay cerca. Esa búsqueda tiene la conversión más rápida que existe, y no cuesta un sol de publicidad. Por eso, antes de proponerte una campaña, revisamos que tu ficha esté verificada, con horarios reales, ubicación exacta, fotos actuales y reseñas recientes.",
         dato: {
           cifra: "76%",
-          texto: "de quienes hacen una búsqueda de tipo «cerca de mí» visita un negocio dentro de las 24 horas siguientes. En turismo eso no es una estadística lejana: es el turista que ya está en la ciudad decidiendo dónde cenar.",
-          fuente: "Think with Google",
+          texto: "de quienes buscan en el celular algo cercano visita un negocio relacionado en menos de un día. En turismo eso no es una estadística lejana: es el turista que ya está en la ciudad decidiendo dónde cenar.",
+          fuente: "Think with Google, estudio de 2016 en Estados Unidos",
         },
       },
       {
@@ -642,8 +642,8 @@ export const SECTORES: Sector[] = [
           "Cuando alguien necesita un dentista, un pediatra o una consulta que no puede esperar, busca cerca. Esa búsqueda tiene la conversión más rápida que existe y no cuesta publicidad: lo que decide es tener un perfil de empresa verificado, con horarios reales, ubicación exacta y reseñas recientes. Por eso ese es el primer trabajo que hacemos, antes de encender nada.",
         dato: {
           cifra: "76%",
-          texto: "de quienes hacen una búsqueda de tipo «cerca de mí» visita un negocio dentro de las 24 horas siguientes. En salud es el paciente que necesita atención hoy.",
-          fuente: "Think with Google",
+          texto: "de quienes buscan en el celular algo cercano visita un negocio relacionado en menos de un día. En salud es el paciente que necesita atención hoy.",
+          fuente: "Think with Google, estudio de 2016 en Estados Unidos",
         },
       },
       {
@@ -706,8 +706,8 @@ export const SECTORES: Sector[] = [
         parrafo:
           "Fuera de Ica, la salud pesa en Arequipa, donde una clínica compite con mucha oferta por el mismo paciente, y en Tacna, donde el turismo médico, dental y estético vive del paciente que cruza la frontera y decide por confianza.",
         enlaces: [
-          { label: "Agencia de marketing en Arequipa", href: "/agencia-de-marketing-en-arequipa" },
-          { label: "Agencia de marketing en Tacna", href: "/agencia-de-marketing-en-tacna" },
+          { label: "Marketing para empresas de Arequipa", href: "/agencia-de-marketing-en-arequipa" },
+          { label: "Marketing para empresas de Tacna", href: "/agencia-de-marketing-en-tacna" },
         ],
       },
     ],
@@ -850,7 +850,7 @@ export const SECTORES: Sector[] = [
           { label: "Agencia de marketing en Pisco y Paracas", href: "/agencia-de-marketing-en-pisco" },
           { label: "Agencia de marketing en Chincha", href: "/agencia-de-marketing-en-chincha" },
           { label: "Agencia de marketing en Palpa", href: "/agencia-de-marketing-en-palpa" },
-          { label: "Agencia de marketing en Tacna", href: "/agencia-de-marketing-en-tacna" },
+          { label: "Marketing para empresas de Tacna", href: "/agencia-de-marketing-en-tacna" },
         ],
       },
     ],

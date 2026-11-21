@@ -12,6 +12,10 @@ import { FOTOS_PORTAFOLIO, fotoPortafolio } from "./portafolio-fotos";
  * Cusco. El copy de cada ciudad habla de SU economía (lo que sí conocemos del
  * mercado) y de cómo trabajamos a distancia, no de casos que no existen.
  *
+ * Arequipa y Tacna se titulan «Marketing para empresas de…» desde el 21-nov-2026
+ * (decisión 8 de la auditoría): el H1 ya no promete una agencia en la ciudad
+ * cuando el texto aclara que trabajamos en remoto. La URL no cambia.
+ *
  * Cada ciudad lleva secciones y FAQ propias: no son plantillas con el nombre
  * cambiado (eso Google lo trata como página-puerta y lo penaliza).
  */
@@ -314,10 +318,10 @@ export const CIUDADES: Ciudad[] = [
   {
     slug: "arequipa",
     nombre: "Arequipa",
-    metaTitle: "Agencia de Marketing en Arequipa | Suggestion",
+    metaTitle: "Marketing para Empresas de Arequipa | Suggestion",
     metaDescription:
       "Agencia de marketing para empresas de Arequipa: automotriz, inmobiliario, salud y comercio. Campañas que se miden en ventas, no en likes. Agenda hoy.",
-    h1: "Agencia de marketing en Arequipa",
+    h1: "Marketing para empresas de Arequipa",
     hero: "Arequipa es la plaza más competida del sur. Con más oferta, ganar no es gritar más fuerte: es tener un embudo que convierta mejor que el del vecino, y medirlo hasta el cierre.",
     cta: "Agenda tu consultoría cero",
     proof:
@@ -391,10 +395,10 @@ export const CIUDADES: Ciudad[] = [
   {
     slug: "tacna",
     nombre: "Tacna",
-    metaTitle: "Agencia de Marketing en Tacna | Suggestion",
+    metaTitle: "Marketing para Empresas de Tacna | Suggestion",
     metaDescription:
       "Marketing para negocios de Tacna: turismo médico, comercio fronterizo, automotriz y agro. Campañas que traen clientes, no likes. Consultoría gratis.",
-    h1: "Agencia de marketing en Tacna",
+    h1: "Marketing para empresas de Tacna",
     hero: "En Tacna una parte del cliente llega desde el otro lado de la frontera. Eso cambia todo: el idioma del anuncio, la moneda de la comparación y el momento en que se toma la decisión.",
     cta: "Agenda tu consultoría cero",
     proof:

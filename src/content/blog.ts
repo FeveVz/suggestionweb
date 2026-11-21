@@ -1037,7 +1037,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En Perú el costo por lead va de S/3 a S/40 según el rubro (rangos de mercado de octubre de 2026, sin la gestión).",
     ],
     date: "2026-02-11",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "El presupuesto no se adivina, se calcula al revés",
@@ -1121,7 +1121,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["CPM en rubros competidos (educación, seguros)", "desde S/15, hasta S/25", "Ticket alto y mucha competencia por el mismo público"],
             ["CPM en consumo masivo (restaurantes, ropa)", "desde S/5, hasta S/12", "Público amplio y menos pujas por el mismo espacio"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según benchmarks publicados por agencias locales. Son costos de medios —lo que se le paga a la plataforma—, sin incluir la gestión. No son tarifas de Suggestion.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026 en los benchmarks que publican las agencias 3rcore.com, adsacademy.pe y flamacreators.com. Son costos de medios —lo que se le paga a la plataforma—, sin incluir la gestión. No son tarifas de Suggestion.",
         },
         nota: {
           tipo: "aviso",
@@ -2379,7 +2379,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un buen restaurante con mesas vacías un martes no tiene un problema de comida: tiene un problema de marketing. Estas estrategias llenan los días flojos y suben el ticket.",
     date: "2026-04-29",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Estrategias que funcionan",
@@ -2406,8 +2406,8 @@ export const BLOG_POSTS: BlogPost[] = [
           "La mayoría de restaurantes invierte su energía en redes y descuida el sitio donde se toma la decisión de verdad: la búsqueda local. Cuando alguien tiene hambre y busca dónde comer cerca, no abre Instagram, abre el mapa. Y esa búsqueda no es curiosidad: es una decisión a punto de tomarse. Un perfil de empresa completo —horarios correctos, fotos reales del local y de los platos, carta actualizada y reseñas recientes— convierte mejor que cualquier campaña, y no tiene costo por clic.",
         dato: {
           cifra: "76%",
-          texto: "de quienes hacen una búsqueda de tipo «cerca de mí» visita un negocio dentro de las 24 horas siguientes. Es el tipo de búsqueda que menos tarda en convertirse en una visita real.",
-          fuente: "Think with Google",
+          texto: "de quienes buscan en el celular algo cercano visita un negocio relacionado en menos de un día. Es el tipo de búsqueda que menos tarda en convertirse en una visita real.",
+          fuente: "Think with Google, estudio de 2016 en Estados Unidos",
         },
         nota: {
           titulo: "Antes de pagar publicidad",
@@ -3432,7 +3432,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que sí mueve la aguja.",
     date: "2026-06-24",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "El importador te googlea antes de escribirte",
@@ -3456,12 +3456,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "El dato que define tu marketing",
         parrafo:
-          "Hay una cifra que ordena todas las decisiones de comunicación de una agroexportadora iqueña, y es la proporción de a dónde va la producción. Cuando prácticamente todo se va afuera, tu público no es el consumidor que compra en el mercado: es un comprador profesional al otro lado del mundo que evalúa proveedores. Eso descarta de golpe media estrategia habitual —contenido de recetas, promociones, campañas de temporada local— y pone el foco en otra cosa: credibilidad verificable.",
-        dato: {
-          cifra: "92%",
-          texto: "de la producción agrícola de Ica se destina al mercado externo y solo el 8% al interno. Tu marketing no le habla a un consumidor: le habla a un importador.",
-          fuente: "Reporte regional de Ica",
-        },
+          "Hay un dato que ordena todas las decisiones de comunicación de una agroexportadora iqueña, y es a dónde va la producción. Cuando prácticamente todo se va afuera, tu público no es el consumidor que compra en el mercado: es un comprador profesional al otro lado del mundo que evalúa proveedores. Eso descarta de golpe media estrategia habitual —contenido de recetas, promociones, campañas de temporada local— y pone el foco en otra cosa: credibilidad verificable.",
       },
       {
         h2: "Dónde está Ica de verdad",
@@ -3537,7 +3532,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
     date: "2026-10-04",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Medidas, material y precio: la respuesta corta",
@@ -3546,7 +3541,7 @@ export const BLOG_POSTS: BlogPost[] = [
         bullets: [
           { titulo: "Medidas más pedidas", texto: "1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m. El rollo más común mide 3.20 m de ancho, y ajustar la pieza a ese ancho evita pagar recorte." },
           { titulo: "Material", texto: "lona de 8 onzas para interior, de 11 para exterior de campaña corta y de 13 o frontlit para exterior permanente. En zonas con mucho viento, malla (mesh), que deja pasar el aire." },
-          { titulo: "Precio", texto: "en el mercado peruano va desde S/18 el m² en lona de interior hasta S/120 en acabados premium (rangos consultados en octubre de 2026). El diseño y la instalación suelen ir aparte." },
+          { titulo: "Precio", texto: "en el mercado peruano va desde S/18 el m² en lona de interior hasta S/120 en acabados premium (rangos consultados el 4 de octubre de 2026; las fuentes van en la tabla de precios). El diseño y la instalación suelen ir aparte." },
         ],
       },
       {
@@ -3585,7 +3580,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Tela sublimada", "desde S/60, hasta S/100"],
             ["Acabado premium, cualquier material", "hasta S/120"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026. El extremo bajo sale de fichas de producto con precio listado; el alto, de referencias publicadas por proveedores del rubro. No son tarifas de Suggestion ni una cotización: el precio final depende del material, los metros y los acabados.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026. El extremo bajo sale de la ficha de producto con precio listado de imagoimpresiones.com; el alto, de las referencias que publican imprentaperuana.com y publisistemas.pe. No son tarifas de Suggestion ni una cotización: el precio final depende del material, los metros y los acabados.",
         },
         dato: {
           cifra: "S/100 a S/400",
@@ -3688,6 +3683,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Es la pieza más barata que vas a mandar a imprimir y la que más veces se arruina por un detalle de dos milímetros. Esto es lo que hay que revisar antes.",
     date: "2026-10-04",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Las medidas estándar, y por qué conviene respetarlas",
@@ -3728,7 +3724,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Bordes redondeados o troquel", "desde S/89, según el troquel"],
             ["Stamping metálico, letterpress o papeles especiales", "hasta S/450"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto con precio listado y de referencias publicadas por imprentas del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026: el extremo bajo, de fichas de producto con precio listado de imagoimpresiones.com; el alto, de las referencias que publica imprentaperuana.com. No son tarifas de Suggestion ni una cotización.",
         },
       },
       {
@@ -3784,7 +3780,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Es la inversión publicitaria que más tiempo va a estar trabajando para ti, y la única que no puedes apagar. Conviene acertar a la primera.",
     date: "2026-10-04",
-    actualizado: "2026-10-13",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Qué tipo de letrero necesita tu local",
@@ -3815,7 +3811,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Transporte e instalación", "desde S/200, hasta S/1,000 o más"],
             ["Mantenimiento preventivo anual", "entre 8 % y 12 % del valor de instalación"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según referencias publicadas por proveedores de señalización del rubro. No son tarifas de Suggestion ni una cotización: el tamaño, el material y el tipo de iluminación mueven mucho el total.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, según las referencias que publican publisistemas.pe y ccimasenalizaciones.pe. No son tarifas de Suggestion ni una cotización: el tamaño, el material y el tipo de iluminación mueven mucho el total.",
         },
         dato: {
           cifra: "40 % a 60 %",
@@ -3886,7 +3882,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La técnica correcta no es la más bonita: es la que corresponde a tu cantidad. Pedir serigrafía para doce polos o bordado para quinientos son dos formas distintas de pagar de más.",
     date: "2026-10-04",
-    actualizado: "2026-11-02",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Las cuatro técnicas, y cuándo usa cada una",
@@ -3916,7 +3912,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["DTF en pecho, 50 prendas del mismo diseño", "desde S/12"],
             ["Digitalización del logo para bordado, pago único", "desde S/30, hasta S/80"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de listas de precios publicadas por talleres de estampado del rubro. Son solo la marca: el costo de la prenda va aparte si no la pones tú. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, tomados de la lista de precios por tramos que publica chromaestampados.com. Son solo la marca: el costo de la prenda va aparte si no la pones tú. No son tarifas de Suggestion ni una cotización.",
         },
         dato: {
           cifra: "De S/25 a S/12",
@@ -3986,7 +3982,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El objetivo de un regalo corporativo no es que guste al recibirlo: es que siga encima del escritorio dentro de seis meses. Son dos cosas muy distintas.",
     date: "2026-10-04",
-    actualizado: "2026-11-14",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "La única pregunta que importa",
@@ -4013,7 +4009,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Llavero, línea premium", "hasta S/14.62", "50 unidades"],
             ["USB grabado con láser y caja de regalo", "según capacidad", "50 unidades"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto con precio listado de proveedores de merchandising. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, tomados de fichas de producto con precio listado de zumomerchandising.com y publiventa.pe. No son tarifas de Suggestion ni una cotización.",
         },
       },
       {
@@ -4093,7 +4089,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Lo que más se recuerda no es el precio: es un objeto de uso diario con la marca discreta, una tarjeta escrita a mano y una entrega antes de la última semana del año.",
     ],
     date: "2026-11-14",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Por qué diciembre es distinto",
@@ -4150,7 +4146,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Llavero, línea estándar", "desde S/1.59", "50 unidades"],
             ["Llavero, línea premium", "hasta S/14.62", "50 unidades"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto con precio listado de proveedores de merchandising. En temporada alta pueden subir. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, tomados de fichas de producto con precio listado de zumomerchandising.com y publiventa.pe. En temporada alta pueden subir. No son tarifas de Suggestion ni una cotización.",
         },
       },
       {
@@ -4216,7 +4212,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La decisión de compra se toma frente al estante, en segundos y casi sin pensar. El material POP existe para ganar esos segundos, y la mayoría está diseñado como si hubiera minutos.",
     date: "2026-10-04",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Material POP en punto de venta: qué es y qué hace cada pieza",
@@ -4246,7 +4242,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Display de mostrador en cartón", "desde S/8.50", "100 unidades"],
             ["Tótem o display de piso", "desde S/35", "50 unidades"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según referencias publicadas por proveedores de material POP del rubro. No son tarifas de Suggestion ni una cotización: el troquel, el material y la cantidad mueven mucho el precio por pieza.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, según los precios por tramos que publica imprentaperuana.com. No son tarifas de Suggestion ni una cotización: el troquel, el material y la cantidad mueven mucho el precio por pieza.",
         },
         dato: {
           cifra: "El troquel",
@@ -4317,7 +4313,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Los cuatro formatos ponen tu marca en la calle, pero no hacen el mismo trabajo ni le hablan a la misma persona. Elegir por precio es como se desperdicia una campaña de exterior.",
     date: "2026-10-04",
-    actualizado: "2026-10-13",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Qué hace cada formato",
@@ -4347,7 +4343,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Lima, ubicaciones premium", "más de US$3,000"],
             ["Provincias, 24 m²", "desde US$500, hasta US$1,200"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según referencias publicadas por operadores de publicidad exterior. La impresión de la lona y la instalación suelen ir aparte. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, según las referencias que publican publisistemas.pe y panelespublicitarios.net. La impresión de la lona y la instalación suelen ir aparte. No son tarifas de Suggestion ni una cotización.",
         },
         dato: {
           cifra: "Trimestral o semestral",
@@ -4417,6 +4413,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La respuesta honesta es que depende, pero eso no sirve de nada. Estos son los rangos del mercado peruano, qué entra en cada uno y qué se paga aparte aunque nadie te lo diga al cotizar.",
     date: "2026-10-05",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Los rangos del mercado peruano",
@@ -4431,7 +4428,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Tienda virtual", "desde S/2,500, hasta S/15,000", "Vender en línea, con pagos, stock y envíos"],
             ["Portal o plataforma a medida", "desde S/8,000, hasta S/50,000", "Sistema con usuarios, procesos o integraciones propias"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según precios publicados por agencias y desarrolladores del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, según los precios que publican hosting.com.pe, gredich.com, 3rcore.com y limadisenoweb.com. No son tarifas de Suggestion ni una cotización.",
         },
         enlaces: [{ label: "Cuánto cuesta una tienda virtual en Perú", href: "/blog/conversion/cuanto-cuesta-una-tienda-virtual-en-peru" }],
       },
@@ -4516,6 +4513,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Hay una confusión que arruina más relaciones entre cliente y agencia que ninguna otra, y aparece en la primera reunión: creer que lo que pagas de fee es lo que se va a invertir en publicidad.",
     date: "2026-10-05",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Los tres modelos de cobro",
@@ -4546,7 +4544,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Agencia full-service, servicio estándar", "desde S/15,000, hasta S/25,000"],
             ["Agencia full-service, servicio amplio", "desde S/25,000, hasta S/60,000"],
           ],
-          nota: "Rangos del mercado peruano formal consultados en octubre de 2026, antes de IGV, según tarifarios publicados del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano formal consultados el 4 de octubre de 2026, antes de IGV, según el tarifario 2026 que publica la agencia La Cura (lacura.pe/cifras). No son tarifas de Suggestion ni una cotización.",
         },
         dato: {
           cifra: "12 % a 18 %",
@@ -4617,6 +4615,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Entre una cotización de S/300 y una de S/15,000 no hay un estafador y un honesto: hay dos trabajos completamente distintos que se llaman igual.",
     date: "2026-10-05",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Tres rangos, y qué entra en cada uno",
@@ -4629,7 +4628,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["desde S/3,500, hasta S/9,000", "Estudio de diseño o agencia pequeña", "Investigación inicial, dos o tres propuestas, tres rondas de ajuste y un manual básico"],
             ["desde S/10,000, hasta S/25,000", "Agencia con equipo estratégico", "Diagnóstico de marca, definición del ADN, varias rutas conceptuales, manual completo y sistema visual extendido"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según tarifarios publicados por estudios y agencias del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos que publica la agencia La Cura en su guía de precios de logos de 2026 (lacura.pe), consultada el 21 de noviembre de 2026. Otras fuentes ponen el piso del freelance más abajo: kom.pe habla de S/200 a S/500 por un logo básico. No son tarifas de Suggestion ni una cotización.",
         },
       },
       {
@@ -4711,6 +4710,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Pides tres cotizaciones por lo mismo y vuelven S/100, S/145 y S/260. La mayor parte de esa diferencia se explica con dos datos que casi nunca están en el precio que te mandan.",
     date: "2026-10-05",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Cuánto cuesta el millar",
@@ -4723,7 +4723,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["A5, couché 150 g, full color ambas caras", "desde S/140"],
             ["A5 o medio oficio, según acabado y gramaje", "desde S/145, hasta S/260"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, tomados de fichas de producto de imprentas del rubro. Algunas fuentes publican con IGV y otras sin IGV, y eso explica buena parte de la diferencia. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, tomados de fichas de producto y referencias de asdisa.com, imprentaperuana.com, peruprint.com y tarjetaspersonalesdelivery.com. Algunas fuentes publican con IGV y otras sin IGV, y eso explica buena parte de la diferencia. No son tarifas de Suggestion ni una cotización.",
         },
         dato: {
           cifra: "2 a 3 días",
@@ -4805,6 +4805,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La tasa no se devuelve aunque te rechacen la solicitud. Por eso lo que decide cuánto te va a costar registrar tu marca no es la tasa: es lo que hagas antes de pagarla.",
     date: "2026-10-05",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Las tasas publicadas",
@@ -4820,7 +4821,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Búsqueda figurativa previa, opcional", "S/38.46 por clase"],
             ["Oposición presentada por un tercero", "S/378.70"],
           ],
-          nota: "Montos recogidos en octubre de 2026 de fuentes peruanas especializadas que coinciden entre sí y en el código de arancel. No pudimos confirmarlos en el portal oficial del Estado, que bloquea la consulta automatizada, así que verifica el monto vigente en el canal oficial de Indecopi antes de pagar: las tasas se actualizan por decreto.",
+          nota: "Montos recogidos el 4 de octubre de 2026 de seis fuentes peruanas especializadas que coinciden entre sí y en el código de arancel: tramitesperu.com, perugestiona.pe, estudiotarazona.com, abogadosycontadores.pe, modelo.pe y emprendedorperuano.pe. No pudimos confirmarlos en el portal oficial del Estado, que bloquea la consulta automatizada, así que verifica el monto vigente en el canal oficial de Indecopi antes de pagar: las tasas se actualizan por decreto.",
         },
         nota: {
           tipo: "aviso",
@@ -4902,6 +4903,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un plan de marketing puede costar S/300 o S/15,000, y los dos pueden ser precios justos. La diferencia no está en el documento: está en quién lo ejecuta después.",
     date: "2026-10-05",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Primero: qué estás comprando exactamente",
@@ -4931,7 +4933,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Acompañamiento mensual de consultor", "desde S/1,200, hasta S/4,000 al mes"],
             ["Dirección estratégica externa continuada", "desde S/8,000, hasta S/15,000 al mes"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según tarifarios publicados por consultores y agencias del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, según los tarifarios que publican robertoargandona.com, flamacreators.com y limarank.pe. No son tarifas de Suggestion ni una cotización.",
         },
       },
       {
@@ -5937,6 +5939,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un hotel lleno a través de Booking y un hotel rentable no son lo mismo. La diferencia está en una cuenta que casi nadie hace: cuánto te queda de cada reserva según de dónde vino.",
     date: "2026-10-06",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "La cuenta que decide todo lo demás",
@@ -5945,12 +5948,12 @@ export const BLOG_POSTS: BlogPost[] = [
         tabla: {
           cabeceras: ["Canal", "Qué se lleva", "Qué te deja además"],
           filas: [
-            ["Booking.com", "Alrededor del 15 % como referencia para independientes, con un rango habitual del 10 % al 20 %", "Volumen y visibilidad que tú solo no alcanzas"],
-            ["Expedia", "Comisión estándar en torno al 18 %, con un rango real del 15 % al 30 %", "Acceso a mercados y paquetes"],
+            ["Booking.com", "En torno al 15 % estándar; sube al 17-22 % en su programa Preferred Partner, y el rango publicado va del 10 % al 25 %", "Volumen y visibilidad que tú solo no alcanzas"],
+            ["Expedia", "Entre el 15 % y el 25 %, según el modelo de contrato y la visibilidad contratada", "Acceso a mercados y paquetes"],
             ["Canal directo", "Solo lo que gastes en captar", "El dato del huésped, para que vuelva"],
             ["Teléfono y recomendación", "Nada", "La mejor tasa de conversión de todas"],
           ],
-          nota: "Rangos del mercado consultados en octubre de 2026 según guías del sector; la comisión exacta figura en tu propio contrato y los programas de visibilidad la suben. La referencia que se maneja como sana es que el canal directo represente entre el 20 % y el 40 % del total de reservas.",
+          nota: "Comisiones que publican Chekin y Mews, proveedores de software hotelero, consultadas el 21 de noviembre de 2026. La comisión exacta figura en tu propio contrato y los programas de visibilidad la suben.",
         },
       },
       {
@@ -5976,8 +5979,9 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Pídele la reserva directa al que ya se fue contento", texto: "un mensaje con un código para la próxima estadía, enviado días después de la salida, convierte mejor que cualquier anuncio." },
         ],
         dato: {
-          cifra: "20 % a 40 %",
-          texto: "del total de reservas es la referencia que el sector considera sana para el canal directo. Cada punto que recuperas es comisión que se queda en el hotel, y no requiere llenar más habitaciones.",
+          cifra: "60 %",
+          texto: "de las reservas en una sola plataforma es el punto a partir del cual esa plataforma dicta tus condiciones de paridad, cancelación y posición. Cada reserva que pasas a directo es comisión que se queda en el hotel, sin llenar una habitación más.",
+          fuente: "Chekin, guía de canales de distribución hotelera (consultada el 21 de noviembre de 2026)",
         },
       },
       {
@@ -6010,7 +6014,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faq: [
       {
         q: "¿Cuánto cobra Booking.com a un hotel?",
-        a: "Las guías del sector sitúan la comisión entre el 10 % y el 20 %, con alrededor del 15 % como referencia para propiedades independientes; Expedia se mueve en torno al 18 % estándar con un rango del 15 % al 30 %. El porcentaje exacto está en tu contrato y los programas de mayor visibilidad lo aumentan. Datos de referencia consultados en octubre de 2026.",
+        a: "Booking.com aplica una comisión estándar en torno al 15 %, que sube al 17-22 % en su programa Preferred Partner; las guías del sector dan un rango del 10 % al 25 %. Expedia se mueve entre el 15 % y el 25 % según el modelo de contrato. El porcentaje exacto está en tu contrato. Datos publicados por Chekin y Mews, consultados el 21 de noviembre de 2026.",
       },
       {
         q: "¿Conviene salir de Booking?",
@@ -6022,7 +6026,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Qué porcentaje de reservas directas debería tener?",
-        a: "La referencia que maneja el sector como sana es entre el 20 % y el 40 % del total. Si estás muy por debajo, cada punto que recuperes es comisión que se queda en el hotel sin necesidad de llenar una habitación más, que suele ser la forma más rápida de mejorar la rentabilidad del mes.",
+        a: "No hay una cifra única que valga para todos los hoteles. Lo que sí señalan las guías del sector es el riesgo del otro extremo: cuando una sola plataforma concentra más del 60 % de las reservas, es ella la que dicta la paridad, las cancelaciones y tu posición. Cada punto que pasas a directo es comisión que se queda en el hotel sin necesidad de llenar una habitación más.",
       },
       {
         q: "¿Cómo consigo más reseñas para mi hotel?",
@@ -6406,6 +6410,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La inversión en anuncios no va incluida en el fee: se paga aparte, directo a la plataforma.",
     ],
     date: "2026-11-14",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Los rangos del mercado peruano",
@@ -6418,7 +6423,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Community manager sénior, varias redes y pauta básica", "desde S/2,500, hasta S/4,500"],
             ["Community manager líder con equipo", "desde S/4,500, hasta S/8,000"],
           ],
-          nota: "Rangos del mercado peruano formal consultados en octubre de 2026, antes de IGV, según tarifarios publicados del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano formal consultados el 4 de octubre de 2026, antes de IGV, según el tarifario 2026 que publica la agencia La Cura (lacura.pe/cifras). No son tarifas de Suggestion ni una cotización.",
         },
         nota: {
           tipo: "aviso",
@@ -6515,7 +6520,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Aparte de los anuncios se paga la gestión, la producción de las piezas y el IGV.",
     ],
     date: "2026-11-14",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "No hay tarifa: hay subasta",
@@ -6540,7 +6545,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["CPM en rubros competidos (educación, seguros)", "desde S/15, hasta S/25", "Ticket alto y mucha competencia por el mismo público"],
             ["CPM en consumo masivo (restaurantes, ropa)", "desde S/5, hasta S/12", "Público amplio y menos pujas por el mismo espacio"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según benchmarks publicados por agencias locales. Son costos de medios, sin la gestión. No son tarifas de Suggestion.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026 en los benchmarks que publican las agencias 3rcore.com, adsacademy.pe y flamacreators.com. Son costos de medios, sin la gestión. No son tarifas de Suggestion.",
         },
       },
       {
@@ -6644,6 +6649,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Si usas una plataforma de suscripción como Shopify, suma su cuota mensual y, con una pasarela externa, su propia comisión por venta.",
     ],
     date: "2026-11-14",
+    actualizado: "2026-11-21",
     secciones: [
       {
         h2: "Lo que cuesta construirla",
@@ -6656,7 +6662,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Tienda virtual", "desde S/2,500, hasta S/15,000", "Vender en línea, con pagos, stock y envíos"],
             ["Plataforma a medida", "desde S/8,000, hasta S/50,000", "Procesos propios, usuarios o integraciones complejas"],
           ],
-          nota: "Rangos del mercado peruano consultados en octubre de 2026, según precios publicados por agencias y desarrolladores del rubro. No son tarifas de Suggestion ni una cotización.",
+          nota: "Rangos del mercado peruano consultados el 4 de octubre de 2026, según los precios que publican hosting.com.pe, gredich.com, 3rcore.com y limadisenoweb.com. No son tarifas de Suggestion ni una cotización.",
         },
       },
       {

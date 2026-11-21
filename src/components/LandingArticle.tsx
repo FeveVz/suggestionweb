@@ -96,6 +96,7 @@ export default function LandingArticle({
   tema,
   especificaciones,
   precios,
+  notaPrecios,
   related = [],
   faq,
   cierre,
@@ -123,6 +124,8 @@ export default function LandingArticle({
   /** Datos a rellenar en el mensaje de cotización. */
   especificaciones?: string[];
   precios?: PlanPrecio[];
+  /** Aclaración junto a los planes (servicios de pauta: la inversión va aparte). */
+  notaPrecios?: string;
   related?: RelatedBlock[];
   faq: FaqType[];
   cierre: Cierre;
@@ -394,7 +397,7 @@ export default function LandingArticle({
       <TransactionalSections incluye={incluye} beneficios={beneficios} proceso={proceso} tema={tema} />
 
       {/* PLANES Y PRECIOS */}
-      <PricingSection planes={precios} nombre={tema} />
+      <PricingSection planes={precios} nombre={tema} nota={notaPrecios} />
 
       {/* La segunda banda solo si entre las dos se pintó algo: en las 8
           ciudades quedaban pegadas, a 125 caracteres (auditoría CON-22). */}

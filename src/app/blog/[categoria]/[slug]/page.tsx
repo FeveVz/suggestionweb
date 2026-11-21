@@ -11,7 +11,7 @@ import EnCorto from "@/components/EnCorto";
 import { buildMetadata } from "@/lib/seo";
 import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
-import { CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza } from "@/content/navegacion";
+import { CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza, ANCLA_SECTOR } from "@/content/navegacion";
 import { blogPostingSchema } from "@/lib/schema";
 import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
@@ -40,6 +40,20 @@ function ogDelPost(moneyHref: string): string {
  * Cada enlace tiene que ser honesto para los posts de SU categoría: esto es
  * enlazado interno, no un escaparate.
  */
+/**
+ * En «sectores» la rejilla común no sirve: cada post es de un rubro distinto.
+ * Va primero la página de SU sector con el ancla descriptiva («Marketing para
+ * bodegas de pisco y vino»), en vez del botón genérico «Hagamos crecer tu
+ * bodega» (auditoría CRO-10, 21-nov-2026).
+ */
+function serviciosRelacionados(categoria: string, moneyPage: RelatedLink): RelatedLink[] {
+  const base = SERVICIOS_ANCLA[categoria];
+  if (categoria === "sectores" && ANCLA_SECTOR[moneyPage.href]) {
+    return [{ label: ANCLA_SECTOR[moneyPage.href], href: moneyPage.href }, ...(base ?? [])];
+  }
+  return base ?? [moneyPage];
+}
+
 const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
   inmobiliario: [
     { label: "Marketing inmobiliario", href: "/marketing-inmobiliario" },
@@ -245,7 +259,7 @@ export default async function BlogPostPage({ params }: Params) {
 
           {/* Enlaces internos con ancla de keyword → money pages (SEO) */}
           <div style={{ marginTop: "var(--space-8)" }}>
-            <RelatedLinks title="Servicios relacionados" links={SERVICIOS_ANCLA[categoria] ?? [post.moneyPage]} columns={2} />
+            <RelatedLinks title="Servicios relacionados" links={serviciosRelacionados(categoria, post.moneyPage)} columns={2} />
           </div>
 
           {relatedLinks.length > 0 && (
