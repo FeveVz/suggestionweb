@@ -105,7 +105,7 @@ export default function BeneficiosPinned({
                 {items.map((p, i) => {
                   const on = i === active;
                   return (
-                    <li key={p.titulo} style={{ display: "flex", alignItems: "center", gap: 16, padding: "12px 0", opacity: on ? 1 : 0.4, transition: "opacity var(--dur-base) var(--ease-out)" }}>
+                    <li key={p.titulo} style={{ display: "flex", alignItems: "center", gap: 16, padding: "12px 0" }}>
                       <span style={{ position: "relative", width: 38, height: 2, background: "var(--border-subtle)", overflow: "hidden", flexShrink: 0 }}>
                         <span style={{ position: "absolute", inset: 0, background: "var(--cyan)", transformOrigin: "left", transform: on ? "scaleX(1)" : "scaleX(0)", transition: "transform var(--dur-slow) var(--ease-out)" }} />
                       </span>

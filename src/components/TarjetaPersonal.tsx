@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { UserPlus, MessageCircle, Phone, Mail, Share2, Globe, ArrowRight, Check } from "lucide-react";
-import { DualReveal, usePrefersReduced } from "@/components/brand/interactive";
+import { DualReveal } from "@/components/brand/interactive";
+import { usePrefersReduced } from "@/components/brand/usePrefersReduced";
 import CountUp from "@/components/CountUp";
 import { Btn, Blot } from "@/components/brand/parts";
 import { aniosActivos, site } from "@/lib/site";
@@ -73,14 +73,13 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
     <section className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", position: "relative", overflow: "hidden", minHeight: "calc(100vh - 68px)" }}>
       <span className="hk-grain-layer" aria-hidden />
       {/* Mancha de marca flotando al fondo (identidad, no ruido) */}
-      <motion.div
+      <div
         aria-hidden
+        className="hk-tp-blot"
         style={{ position: "absolute", top: -70, right: -90, opacity: 0.14, pointerEvents: "none", zIndex: 0 }}
-        animate={reduce ? undefined : { y: [0, 26, 0], rotate: [0, 4, 0] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
       >
         <Blot shape={1} dual reveal size={340} />
-      </motion.div>
+      </div>
 
       <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "clamp(2.5rem,6vw,4rem) var(--gutter) clamp(3rem,7vw,5rem)" }}>
         {/* Kicker de marca */}
@@ -127,24 +126,24 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
 
         {/* Acciones de un toque */}
         <Rise reduce={reduce} delay={0.52} style={{ marginTop: 30 }}>
-          <motion.a whileTap={reduce ? undefined : { scale: 0.98 }} href={`/api/vcard/${t.slug}`} style={{ ...accion, background: "var(--cyan)", border: "none", color: "var(--black)", font: "var(--fw-bold) var(--fs-md)/1 var(--font-body)", padding: "17px 12px" }}>
+          <a className="hk-tp-tap" href={`/api/vcard/${t.slug}`} style={{ ...accion, background: "var(--cyan)", border: "none", color: "var(--black)", font: "var(--fw-bold) var(--fs-md)/1 var(--font-body)", padding: "17px 12px" }}>
             <UserPlus size={19} strokeWidth={2.2} /> Guardar contacto
-          </motion.a>
+          </a>
         </Rise>
         <Rise reduce={reduce} delay={0.6} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 10 }}>
-          <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" data-ref="no" href={`https://wa.me/${t.whatsapp}?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer" style={accion}>
+          <a className="hk-tp-btn" data-ref="no" href={`https://wa.me/${t.whatsapp}?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer" style={accion}>
             <MessageCircle size={17} style={{ color: "#25D366" }} /> WhatsApp
-          </motion.a>
-          <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" href={`tel:${t.telefono}`} style={accion}>
+          </a>
+          <a className="hk-tp-btn" href={`tel:${t.telefono}`} style={accion}>
             <Phone size={17} style={{ color: "var(--cyan)" }} /> Llamar
-          </motion.a>
-          <motion.a whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" href={`mailto:${t.email}`} style={accion}>
+          </a>
+          <a className="hk-tp-btn" href={`mailto:${t.email}`} style={accion}>
             <Mail size={17} style={{ color: "var(--orange)" }} /> Correo
-          </motion.a>
-          <motion.button whileTap={reduce ? undefined : { scale: 0.97 }} className="hk-tp-btn" onClick={compartir} style={accion} type="button">
+          </a>
+          <button className="hk-tp-btn" onClick={compartir} style={accion} type="button">
             {copiado ? <Check size={17} style={{ color: "var(--cyan)" }} /> : <Share2 size={17} style={{ color: "var(--white)" }} />}
             {copiado ? "¡Enlace copiado!" : "Compartir"}
-          </motion.button>
+          </button>
         </Rise>
         <Rise reduce={reduce} delay={0.66} style={{ textAlign: "center" }}>
           <a href="/" className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 18, font: "var(--fw-light) var(--fs-sm)/1 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
@@ -202,6 +201,12 @@ export default function TarjetaPersonal({ t }: { t: Talento }) {
 
       <style>{`
         .hk-tp-btn:hover { border-color: var(--cyan) !important; background: var(--ink-700) !important; }
+        .hk-tp-btn, .hk-tp-tap { transition: transform 120ms var(--ease-out); }
+        .hk-tp-btn:active { transform: scale(0.97); }
+        .hk-tp-tap:active { transform: scale(0.98); }
+        .hk-tp-blot { animation: hk-tp-flota 14s ease-in-out infinite; }
+        @keyframes hk-tp-flota { 0%, 100% { transform: none; } 50% { transform: translateY(26px) rotate(4deg); } }
+        @media (prefers-reduced-motion: reduce) { .hk-tp-blot { animation: none; } .hk-tp-btn:active, .hk-tp-tap:active { transform: none; } }
         .hk-rise { opacity: 0; animation: hk-rise-in 0.7s var(--ease-out) var(--rise, 0s) both; }
         @keyframes hk-rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
         @media (prefers-reduced-motion: reduce) { .hk-rise { animation: none; opacity: 1; } }

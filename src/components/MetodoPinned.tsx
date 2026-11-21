@@ -69,9 +69,9 @@ export default function MetodoPinned() {
   const topo = (
     <div aria-hidden style={{ position: "absolute", left: 0, right: 0, top: "50%", transform: "translateY(-50%)", height: 360, color: "var(--cyan)", opacity: 0.12, zIndex: 0, pointerEvents: "none", display: "flex", width: "200%", animation: "hk-topo-drift 40s linear infinite" }}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/assets/textures/topo.svg" alt="" style={{ width: "50%", height: "100%", objectFit: "cover" }} />
+      <img fetchPriority="low" src="/assets/textures/topo.svg" alt="" style={{ width: "50%", height: "100%", objectFit: "cover" }} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/assets/textures/topo.svg" alt="" style={{ width: "50%", height: "100%", objectFit: "cover" }} />
+      <img fetchPriority="low" src="/assets/textures/topo.svg" alt="" style={{ width: "50%", height: "100%", objectFit: "cover" }} />
     </div>
   );
 
@@ -118,7 +118,7 @@ export default function MetodoPinned() {
                 {PASOS.map((p, i) => {
                   const on = i === active;
                   return (
-                    <li key={p.n} style={{ display: "flex", alignItems: "center", gap: 16, padding: "12px 0", opacity: on ? 1 : 0.4, transition: "opacity var(--dur-base) var(--ease-out)" }}>
+                    <li key={p.n} style={{ display: "flex", alignItems: "center", gap: 16, padding: "12px 0" }}>
                       <span style={{ position: "relative", width: 38, height: 2, background: "var(--ink-600)", overflow: "hidden", flexShrink: 0 }}>
                         <span style={{ position: "absolute", inset: 0, background: "var(--cyan)", transformOrigin: "left", transform: on ? "scaleX(1)" : "scaleX(0)", transition: "transform var(--dur-slow) var(--ease-out)" }} />
                       </span>

@@ -15,28 +15,33 @@ import { Label } from "@/components/brand/parts";
 // Altura por logo para igualar el TAMAÑO VISUAL (área), no solo la altura:
 // los cuadrados/verticales van mucho más altos que los wordmarks horizontales
 // (que se ven grandes por su ancho). Los emblemas con aire interno, aún más.
-const LOGOS: { src: string; h: number }[] = [
-  { src: "/assets/clientes/trim/cliente-1.webp", h: 80 }, // Coplogistics (recortado)
-  { src: "/assets/clientes/trim/cliente-2.webp", h: 92 }, // Aura Andina (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-3.webp", h: 96 }, // Ceinys (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-4.webp", h: 46 }, // yonda (horizontal)
-  { src: "/assets/clientes/trim/cliente-5.webp", h: 92 }, // El Charcutero (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-6.webp", h: 84 }, // CGH (recortado)
-  { src: "/assets/clientes/trim/cliente-7.webp", h: 46 }, // Changan (horizontal)
-  { src: "/assets/clientes/trim/cliente-8.webp", h: 52 }, // Renault (semi-ancho)
-  { src: "/assets/clientes/trim/cliente-9.webp", h: 46 }, // Landini (horizontal)
-  { src: "/assets/clientes/trim/cliente-10.webp", h: 48 }, // Citroën (horizontal)
-  { src: "/assets/clientes/trim/cliente-11.webp", h: 92 }, // Suzuki (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-12.webp", h: 90 }, // Mazda (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-13.webp", h: 68 }, // Subaru (semi-cuadrado)
-  { src: "/assets/clientes/trim/cliente-14.webp", h: 52 }, // JAC (semi-ancho)
-  { src: "/assets/clientes/trim/cliente-15.webp", h: 92 }, // El Charcutero oscuro (tarjeta, +caja)
-  { src: "/assets/clientes/trim/cliente-16.webp", h: 46 }, // Motorpark (horizontal)
-  { src: "/assets/clientes/trim/cliente-17.webp", h: 48 }, // GWM (horizontal)
+const LOGOS: { src: string; h: number; alt: string }[] = [
+  { src: "/assets/clientes/trim/cliente-1.webp", h: 80 , alt: "Logo de Coplogistics" }, // Coplogistics (recortado)
+  { src: "/assets/clientes/trim/cliente-2.webp", h: 92 , alt: "Logo de Aura Andina" }, // Aura Andina (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-3.webp", h: 96 , alt: "Logo de Ceinys" }, // Ceinys (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-4.webp", h: 46 , alt: "Logo de yonda" }, // yonda (horizontal)
+  { src: "/assets/clientes/trim/cliente-5.webp", h: 92 , alt: "Logo de El Charcutero" }, // El Charcutero (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-6.webp", h: 84 , alt: "Logo de CGH" }, // CGH (recortado)
+  { src: "/assets/clientes/trim/cliente-7.webp", h: 46 , alt: "Logo de Changan, marca atendida vía concesionario" }, // Changan (horizontal)
+  { src: "/assets/clientes/trim/cliente-8.webp", h: 52 , alt: "Logo de Renault, marca atendida vía concesionario" }, // Renault (semi-ancho)
+  { src: "/assets/clientes/trim/cliente-9.webp", h: 46 , alt: "Logo de Landini, marca atendida vía concesionario" }, // Landini (horizontal)
+  { src: "/assets/clientes/trim/cliente-10.webp", h: 48 , alt: "Logo de Citroën, marca atendida vía concesionario" }, // Citroën (horizontal)
+  { src: "/assets/clientes/trim/cliente-11.webp", h: 92 , alt: "Logo de Suzuki, marca atendida vía concesionario" }, // Suzuki (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-12.webp", h: 90 , alt: "Logo de Mazda, marca atendida vía concesionario" }, // Mazda (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-13.webp", h: 68 , alt: "Logo de Subaru, marca atendida vía concesionario" }, // Subaru (semi-cuadrado)
+  { src: "/assets/clientes/trim/cliente-14.webp", h: 52 , alt: "Logo de JAC, marca atendida vía concesionario" }, // JAC (semi-ancho)
+  { src: "/assets/clientes/trim/cliente-15.webp", h: 92 , alt: "" }, // El Charcutero oscuro (tarjeta, +caja)
+  { src: "/assets/clientes/trim/cliente-16.webp", h: 46 , alt: "Logo de Motorpark" }, // Motorpark (horizontal)
+  { src: "/assets/clientes/trim/cliente-17.webp", h: 48 , alt: "Logo de GWM, marca atendida vía concesionario" }, // GWM (horizontal)
 ];
 
 export default function ClientLogos() {
-  const row = [...LOGOS, ...LOGOS]; // duplicado para loop continuo
+  // Duplicado para el loop continuo. Solo la primera copia lleva alt: la
+  // segunda es decoración repetida y va oculta a lectores (auditoría TEC-10).
+  // Las marcas de vehículos se nombran como «atendidas vía concesionario», no
+  // como clientes directos. El segundo logo de El Charcutero (fondo oscuro)
+  // va con alt vacío para no repetirlo.
+  const row = [...LOGOS.map((l) => ({ ...l, copia: false })), ...LOGOS.map((l) => ({ ...l, copia: true }))];
   return (
     <section id="marcas" style={{ background: "var(--surface-raised)", borderTop: "1px solid var(--hairline)", borderBottom: "1px solid var(--hairline)", scrollMarginTop: 80 }} aria-label="Clientes">
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(2.5rem,4vw,3.5rem) 0" }}>
@@ -49,11 +54,11 @@ export default function ClientLogos() {
               por logo, y la banda parecía quieta. A 32s van ~84 px/s, menos de
               dos segundos por logo. Sigue pausándose al pasar el mouse y sigue
               apagada con prefers-reduced-motion. */}
-          <div className="hk-marquee" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(2rem,4vw,3.75rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 32s linear infinite", willChange: "transform" }}>
+          <div className="hk-marquee hk-anima" style={{ display: "inline-flex", alignItems: "center", gap: "clamp(2rem,4vw,3.75rem)", whiteSpace: "nowrap", padding: "8px 0", animation: "hk-marquee 32s linear infinite", willChange: "transform" }}>
             {row.map((logo, i) => (
               // Altura balanceada por logo (área visual pareja), ancho natural.
               // eslint-disable-next-line @next/next/no-img-element
-              <img key={i} src={logo.src} alt="" aria-hidden className="hk-logo" style={{ height: `calc(${logo.h}px * var(--logo-scale, 1))`, width: "auto", flexShrink: 0 }} loading="lazy" />
+              <img key={i} src={logo.src} alt={logo.copia ? "" : logo.alt} aria-hidden={logo.copia || !logo.alt ? true : undefined} className="hk-logo" style={{ height: `calc(${logo.h}px * var(--logo-scale, 1))`, width: "auto", flexShrink: 0 }} loading="lazy" />
             ))}
           </div>
         </div>

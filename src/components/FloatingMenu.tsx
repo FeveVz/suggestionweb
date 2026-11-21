@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X, ArrowRight, MessageCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { SERVICE_CATEGORIES, SECTORS, MAIN_NAV, CTA_PRIMARY, CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza } from "@/content/navegacion";
 import { whatsappLink } from "@/lib/site";
 import { mensajePorRuta } from "@/lib/whatsapp-ref";
@@ -14,6 +13,11 @@ import { mensajePorRuta } from "@/lib/whatsapp-ref";
  * Al pulsar abre un panel oscuro con servicios, sectores, nav y CTAs.
  * Solo visible ≤920px (la nav desktop la sirve el Header). Bloquea el scroll
  * del body mientras está abierto. Cierra al navegar, al pulsar fuera o Escape.
+ *
+ * Animación con CSS (@keyframes), sin framer-motion: este componente vive en
+ * el layout, así que su librería se descargaba en todas las páginas, unos
+ * 40 KB comprimidos solo para abrir un menú (auditoría TEC-03, 21-nov-2026).
+ * El velo ya no lleva blur, que en celulares baratos traba el scroll (PERF-07).
  */
 export default function FloatingMenu() {
   const [open, setOpen] = useState(false);
@@ -84,26 +88,13 @@ export default function FloatingMenu() {
 
   return (
     <div className="hk-fab-wrap">
-      <AnimatePresence>
-        {open && (
+      {open && (
           <>
-            <motion.div
-              key="ov"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setOpen(false)}
-              style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)", zIndex: 1000 }}
-            />
-            <motion.div
-              key="panel"
+            <div className="hk-fab-ov" onClick={() => setOpen(false)} />
+            <div
               role="dialog"
               aria-modal="true"
               aria-label="Menú"
-              initial={{ opacity: 0, y: 24, scale: 0.96 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 24, scale: 0.96 }}
-              transition={{ type: "spring", stiffness: 340, damping: 30 }}
               className="hk-fab-panel"
               ref={panelRef}
             >
@@ -161,10 +152,9 @@ export default function FloatingMenu() {
                   </>
                 )}
               </div>
-            </motion.div>
+            </div>
           </>
         )}
-      </AnimatePresence>
 
       {/* Botones flotantes */}
       <div className="hk-fab">
@@ -181,7 +171,11 @@ export default function FloatingMenu() {
         .hk-fab-btn { width: 54px; height: 54px; border-radius: 50%; border: none; cursor: pointer; display: grid; place-items: center; box-shadow: var(--shadow-lg); transition: transform var(--dur-fast) var(--ease-out); }
         .hk-fab-btn:hover { transform: translateY(-2px) scale(1.04); }
         .hk-fab-btn:active { transform: scale(0.94); }
-        .hk-fab-panel { position: fixed; inset: 0; width: 100%; height: 100dvh; overflow-y: auto; background: var(--black); color: var(--white); z-index: 1001; display: flex; flex-direction: column; }
+        .hk-fab-ov { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; animation: hk-fab-fade var(--dur-base, 220ms) var(--ease-out, ease-out) both; }
+        .hk-fab-panel { position: fixed; inset: 0; width: 100%; height: 100dvh; overflow-y: auto; background: var(--black); color: var(--white); z-index: 1001; display: flex; flex-direction: column; animation: hk-fab-in 260ms cubic-bezier(.2,.8,.2,1) both; }
+        @keyframes hk-fab-fade { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes hk-fab-in { from { opacity: 0; transform: translateY(24px) scale(0.96); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .hk-fab-ov, .hk-fab-panel { animation: none; } }
         .hk-fab-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; background: var(--black); border-bottom: 1px solid var(--hairline-inverse); }
         .hk-fab-close { width: 44px; height: 44px; border-radius: 50%; background: var(--ink-700); border: none; color: var(--white); display: grid; place-items: center; cursor: pointer; }
         .hk-fab-label { font: var(--fw-bold) var(--fs-micro)/1 var(--font-accent); text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--text-on-inverse-mut); margin: 0 0 10px; }

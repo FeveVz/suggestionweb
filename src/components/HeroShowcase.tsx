@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Building2, CalendarCheck, Car, Eye, Handshake, MessageCircle } from "lucide-react";
 import CountUp from "@/components/CountUp";
-import { usePrefersReduced } from "@/components/brand/interactive";
+import { usePrefersReduced } from "@/components/brand/usePrefersReduced";
 
 /**
  * Pieza del hero, en dos tarjetas: cómo llega un cliente y qué resultados
@@ -124,9 +124,14 @@ export default function HeroShowcase() {
   // pantalla no cambia `ci`, y sin esto el temporizador seguía corriendo: el
   // caso se iba aunque la persona acabara de pedir quedarse en él.
   const [toques, setToques] = useState(0);
+  // Pausa pedida por la persona (botón o toque en un punto). Sin ella, el
+  // carrusel solo se paraba con hover o foco, y en un celular no había forma
+  // de quedarse leyendo un caso (auditoría UX-11, WCAG 2.2.2).
+  const [detenido, setDetenido] = useState(false);
   const elegir = (i: number) => {
     setCi(i);
     setToques((t) => t + 1);
+    setDetenido(true);
   };
 
   // Un temporizador por caso, no un intervalo fijo: depende de `ci`, así que
@@ -134,13 +139,13 @@ export default function HeroShowcase() {
   // dar los nueve segundos enteros. Con setInterval, el caso que alguien
   // acababa de elegir podía irse un segundo después.
   useEffect(() => {
-    if (reduce || pausa) return;
+    if (reduce || pausa || detenido) return;
     const id = setTimeout(() => setCi((c) => (c + 1) % CASOS.length), ROTACION_MS);
     return () => clearTimeout(id);
-  }, [reduce, pausa, ci, toques]);
+  }, [reduce, pausa, detenido, ci, toques]);
 
   return (
-    <div className="hs" style={{ width: "100%", maxWidth: 520, display: "flex", flexDirection: "column", gap: 14 }}>
+    <div className="hs hk-anima" style={{ width: "100%", maxWidth: 520, display: "flex", flexDirection: "column", gap: 14 }}>
       {/* ── Tarjeta 1: el recorrido ─────────────────────────────────────── */}
       <section className="hs-card hs-viaje" aria-labelledby="hs-viaje-t">
         <p id="hs-viaje-t" className="hs-kicker">
@@ -247,6 +252,15 @@ export default function HeroShowcase() {
               <span aria-hidden className={i === ci ? "is-on" : undefined} />
             </button>
           ))}
+          {!reduce && (
+            <button type="button" className="hs-pausa" onClick={() => setDetenido((d) => !d)} aria-label={detenido ? "Reanudar el carrusel" : "Pausar el carrusel"} aria-pressed={detenido}>
+              {detenido ? (
+                <svg aria-hidden width="12" height="12" viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor" /></svg>
+              ) : (
+                <svg aria-hidden width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 1.5h2.5v9H2.5zM7 1.5h2.5v9H7z" fill="currentColor" /></svg>
+              )}
+            </button>
+          )}
         </div>
       </section>
 
@@ -371,7 +385,9 @@ export default function HeroShowcase() {
         }
         .hs-enlace:hover, .hs-enlace:focus-visible { color: var(--cyan-text); text-decoration-color: var(--cyan); }
 
-        .hs-puntos { display: flex; justify-content: center; margin-top: 2px; }
+        .hs-puntos { display: flex; justify-content: center; align-items: center; margin-top: 2px; }
+        .hs-puntos .hs-pausa { width: 44px; height: 44px; color: var(--text-muted); border-radius: 50%; }
+        .hs-puntos .hs-pausa:hover { color: var(--text-strong); }
         .hs-puntos button { width: 24px; height: 24px; border: none; padding: 0; background: none; cursor: pointer; display: grid; place-items: center; }
         .hs-puntos button span { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-400); transition: background var(--dur-base), transform var(--dur-base); }
         .hs-puntos button span.is-on { background: var(--cyan); transform: scale(1.15); }

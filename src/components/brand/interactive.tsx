@@ -1,62 +1,17 @@
 'use client';
 
 import React from 'react';
-import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, LazyMotion, AnimatePresence } from 'framer-motion';
+import { usePrefersReduced } from './usePrefersReduced';
 import { Label, Btn, Blot } from './parts';
 
 const BLOT = (shape: number, tint: 'orange' | 'cyan') => `/assets/blots/blot-${shape}-${tint}.png`;
 
-export function usePrefersReduced() {
-  const [r, setR] = React.useState(false);
-  React.useEffect(() => {
-    const m = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const f = () => setR(m.matches);
-    f();
-    m.addEventListener('change', f);
-    return () => m.removeEventListener('change', f);
-  }, []);
-  return r;
-}
+export { usePrefersReduced };
 
-/* Scroll-reveal: revela los .reveal según el scroll. Re-escanea en cada cambio
-   de ruta (usePathname) para que la navegación SPA no deje secciones ocultas. */
-export function RevealController() {
-  const pathname = usePathname();
-  React.useEffect(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      els.forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
-      return;
-    }
-    let raf = 0;
-    const update = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const vh = window.innerHeight;
-        const start = vh * 0.92; // empieza a entrar
-        const end = vh * 0.5;    // completamente revelado al llegar al centro
-        for (const el of els) {
-          const r = el.getBoundingClientRect();
-          let p = (start - r.top) / (start - end);
-          p = p < 0 ? 0 : p > 1 ? 1 : p;
-          const e = 1 - Math.pow(1 - p, 3); // easeOutCubic
-          el.style.opacity = String(e);
-          el.style.transform = `translateY(${((1 - e) * 52).toFixed(1)}px) scale(${(0.985 + 0.015 * e).toFixed(4)})`;
-        }
-      });
-    };
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    return () => {
-      window.removeEventListener('scroll', update);
-      window.removeEventListener('resize', update);
-      cancelAnimationFrame(raf);
-    };
-  }, [pathname]);
-  return null;
-}
+const cargarAnimacion = () => import('./motion-features').then((r) => r.default);
+
+/* RevealController vive en ./RevealController.tsx (sin framer-motion: va en el layout). */
 
 /* ============================================================
    DualReveal — la pieza estrella. La mancha es naranja
@@ -66,11 +21,22 @@ export function RevealController() {
 export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: number }) {
   const [pct, setPct] = React.useState(52);
   const [touched, setTouched] = React.useState(false);
+  const [enPantalla, setEnPantalla] = React.useState(true);
   const ref = React.useRef<HTMLDivElement>(null);
   const reduce = usePrefersReduced();
 
+  // Fuera de pantalla no se anima: antes re-renderizaba React a 60 fps sin
+  // pausa aunque nadie lo viera (auditoría UX-15).
   React.useEffect(() => {
-    if (touched || reduce) {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(([e]) => setEnPantalla(e.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  React.useEffect(() => {
+    if (touched || reduce || !enPantalla) {
       if (reduce) setPct(50);
       return;
     }
@@ -82,7 +48,7 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
     };
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
-  }, [touched, reduce]);
+  }, [touched, reduce, enPantalla]);
 
   const setFromX = (clientX: number) => {
     const el = ref.current;
@@ -112,6 +78,18 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
     setFromX(cx);
   };
 
+  const teclas = (e: React.KeyboardEvent) => {
+    const paso = e.shiftKey ? 15 : 5;
+    const dest =
+      e.key === 'ArrowLeft' || e.key === 'ArrowDown' ? pct - paso :
+      e.key === 'ArrowRight' || e.key === 'ArrowUp' ? pct + paso :
+      e.key === 'Home' ? 5 : e.key === 'End' ? 95 : null;
+    if (dest === null) return;
+    e.preventDefault();
+    setTouched(true);
+    setPct(Math.max(5, Math.min(95, dest)));
+  };
+
   const marketWins = pct > 55;
   const usWins = pct < 45;
 
@@ -121,10 +99,18 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
         ref={ref}
         onMouseDown={start}
         onTouchStart={start}
+        onKeyDown={teclas}
+        role="slider"
+        tabIndex={0}
+        aria-label="Costura entre lo que el mercado ve y lo que vemos nosotros"
+        aria-valuemin={5}
+        aria-valuemax={95}
+        aria-valuenow={Math.round(pct)}
+        aria-valuetext={`${Math.round(100 - pct)} % de lo que vemos nosotros a la vista`}
         style={{ position: 'relative', width: '100%', maxWidth: size, aspectRatio: '1.35', cursor: 'ew-resize', touchAction: 'none', userSelect: 'none' }}
       >
-        <img src={BLOT(shape, 'orange')} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
-        <img src={BLOT(shape, 'cyan')} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', clipPath: `inset(0 0 0 ${pct}%)` }} />
+        <img fetchPriority="low" src={BLOT(shape, 'orange')} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img fetchPriority="low" src={BLOT(shape, 'cyan')} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', clipPath: `inset(0 0 0 ${pct}%)` }} />
         <div style={{ position: 'absolute', top: '-6%', bottom: '-6%', left: `${pct}%`, width: 2, background: 'linear-gradient(var(--orange), var(--cyan))', transform: 'translateX(-1px)' }}>
           <span style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 38, height: 38, borderRadius: '50%', background: 'var(--black)', border: '1px solid var(--white)', display: 'grid', placeItems: 'center', boxShadow: '0 4px 18px rgba(0,0,0,.45)' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 7-5 5 5 5" /><path d="m15 7 5 5-5 5" /></svg>
@@ -141,7 +127,7 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
           oscuro va --text-on-inverse-mut (#b3b3b3, 10:1). */}
       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, font: 'var(--fw-light) var(--fs-xs) var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 8 4 4-4 4" /><path d="M2 12h20" /><path d="m6 8-4 4 4 4" /></svg>
-        {touched ? 'Esto es lo que cambia un buen marketing.' : 'Arrastra y descúbrelo.'}
+        {touched ? 'Esto es lo que cambia un buen marketing.' : 'Arrastra o usa las flechas y descúbrelo.'}
       </span>
     </figure>
   );
@@ -265,6 +251,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
   };
 
   return (
+    <LazyMotion features={cargarAnimacion} strict>
     <section id="percepcion" style={{ background: 'var(--black)', color: 'var(--white)', padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden' }}>
       <div className="hk-perc" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 var(--gutter)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
         {/* Estímulo: selector visual (2×2 de trabajo real) → morph → escaneo → miradas */}
@@ -272,7 +259,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
           {fase === 'ask' ? (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, width: '100%', maxWidth: 460 }}>
               {RUBROS_TEST.map((r, i) => (
-                <motion.button
+                <m.button
                   key={r.k}
                   onClick={() => elegir(r)}
                   className="hk-perc-cell"
@@ -283,12 +270,12 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                   whileHover={reduce ? undefined : { y: -4 }}
                   style={{ position: 'relative', padding: 0, border: '1px solid var(--border-on-inverse)', borderRadius: 'var(--radius-md)', overflow: 'hidden', cursor: 'pointer', background: 'var(--ink-800)', aspectRatio: '4 / 3' }}
                 >
-                  <motion.img layoutId={reduce ? undefined : `perc-${r.k}`} src={r.img} alt={r.alt} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <m.img layoutId={reduce ? undefined : `perc-${r.k}`} src={r.img} alt={r.alt} loading="lazy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
                   <span aria-hidden style={{ position: 'absolute', top: 10, left: 12, font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)', textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>0{i + 1}</span>
                   <span style={{ position: 'absolute', inset: 'auto 0 0 0', padding: '20px 12px 10px', background: 'linear-gradient(transparent, rgba(0,0,0,0.88))', font: 'var(--fw-bold) var(--fs-sm)/1.1 var(--font-accent)', color: 'var(--white)', textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
                     {r.chip} <span className="hk-perc-arrow" aria-hidden>↗</span>
                   </span>
-                </motion.button>
+                </m.button>
               ))}
             </div>
           ) : (
@@ -296,7 +283,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
               {esBlot ? (
                 <img src={sel!.img} alt={sel!.alt} className="hk-fadein" style={{ width: '78%', margin: '0 auto', display: 'block' }} />
               ) : (
-                <motion.img
+                <m.img
                   layoutId={reduce ? undefined : `perc-${sel!.k}`}
                   src={sel!.img}
                   alt={sel!.alt}
@@ -307,7 +294,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
               {/* Barrido de escaneo: "leyendo las miradas" */}
               {fase === 'scan' && !esBlot && (
                 <div style={{ position: 'absolute', inset: 0, borderRadius: 'var(--radius-md)', overflow: 'hidden', pointerEvents: 'none' }} aria-hidden>
-                  <motion.div
+                  <m.div
                     initial={{ top: '-30%' }}
                     animate={{ top: '110%' }}
                     transition={{ duration: 1.15, delay: 0.35, ease: 'easeInOut' }}
@@ -316,14 +303,14 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                 </div>
               )}
               {fase === 'scan' && (
-                <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ position: 'absolute', left: '50%', bottom: 14, transform: 'translateX(-50%)', font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)', background: 'rgba(0,0,0,0.72)', border: '1px solid rgba(0,191,255,0.4)', borderRadius: 'var(--radius-pill)', padding: '8px 14px', backdropFilter: 'blur(4px)', whiteSpace: 'nowrap' }}>
+                <m.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ position: 'absolute', left: '50%', bottom: 14, transform: 'translateX(-50%)', font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--cyan)', background: 'rgba(0,0,0,0.72)', border: '1px solid rgba(0,191,255,0.4)', borderRadius: 'var(--radius-pill)', padding: '8px 14px', backdropFilter: 'blur(4px)', whiteSpace: 'nowrap' }}>
                   <span className="hk-perc-blink" aria-hidden>●</span>&nbsp; Analizando perfiles de compra…
-                </motion.span>
+                </m.span>
               )}
               {/* Pins de compradores: caen con física + anillo */}
               {(fase === 'reveal' || fase === 'lesson') &&
                 sel!.miradas.map((p, i) => (
-                  <motion.div
+                  <m.div
                     key={p.quien}
                     initial={reduce ? false : { opacity: 0, y: -22, scale: 0.85 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -336,7 +323,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                       <strong style={{ display: 'block', font: 'var(--fw-bold) var(--fs-xs)/1.2 var(--font-accent)', color: 'var(--white)' }}>{p.quien}</strong>
                       <span style={{ font: 'var(--fw-light) var(--fs-xs)/1.35 var(--font-body)', color: 'var(--text-on-inverse-mut)' }}>ve {p.ve}</span>
                     </span>
-                  </motion.div>
+                  </m.div>
                 ))}
             </div>
           )}
@@ -352,7 +339,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
           </div>
           <AnimatePresence mode="wait" initial={false}>
             {fase === 'ask' && (
-              <motion.div key="ask" {...fadeSlide}>
+              <m.div key="ask" {...fadeSlide}>
                 <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '16ch' }}>
                   ¿Qué vendes tú?
                 </h2>
@@ -362,17 +349,17 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                 <button onClick={() => elegir(RUBRO_OTRO)} className="hk-chip" style={chip}>
                   Mi rubro es otro →
                 </button>
-              </motion.div>
+              </m.div>
             )}
             {(fase === 'scan' || fase === 'reveal') && (
-              <motion.div key="mid" {...fadeSlide}>
+              <m.div key="mid" {...fadeSlide}>
                 <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
                   {esBlot ? <>Cualquier rubro. <span style={{ color: 'var(--cyan)' }}>El mismo principio</span>.</> : <>Mismo producto. <span style={{ color: 'var(--cyan)' }}>Tres compradores</span>.</>}
                 </h2>
                 <p style={{ font: 'var(--fw-light) var(--fs-md)/1.55 var(--font-body)', color: 'var(--text-on-inverse-mut)', margin: '18px 0 26px', maxWidth: '40ch' }}>
                   {fase === 'scan' ? <>Analizando {esBlot ? 'tu oferta' : sel!.cosa} con los criterios de tu mercado…</> : <>Tres perfiles. Tres decisiones de compra distintas — sobre {esBlot ? 'la misma oferta' : `el mismo ${sel!.cosa.replace('tu ', '')}`}.</>}
                 </p>
-                <motion.button
+                <m.button
                   onClick={() => setFase('lesson')}
                   className="hk-chip"
                   style={{ ...chip, visibility: fase === 'reveal' ? 'visible' : 'hidden' }}
@@ -381,11 +368,11 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                   transition={{ duration: 0.4, delay: 0.6 }}
                 >
                   Ver la conclusión →
-                </motion.button>
-              </motion.div>
+                </m.button>
+              </m.div>
             )}
             {fase === 'lesson' && (
-              <motion.div key="lesson" {...fadeSlide}>
+              <m.div key="lesson" {...fadeSlide}>
                 <h2 style={{ font: 'var(--fw-bold) var(--fs-3xl)/1.04 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: 'var(--white)', margin: '14px 0 0', maxWidth: '17ch' }}>
                   Tu venta se decide en la <span style={{ color: 'var(--cyan)' }}>percepción</span>.
                 </h2>
@@ -403,7 +390,7 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
                     Probar con otro rubro
                   </button>
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
         </div>
@@ -424,5 +411,6 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
         @media (prefers-reduced-motion: reduce) { .hk-perc-dot { animation: none; } .hk-perc-blink { animation: none; } .hk-perc-cell img { filter: none; } }
       `}</style>
     </section>
+    </LazyMotion>
   );
 }

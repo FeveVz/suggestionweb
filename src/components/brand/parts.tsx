@@ -64,14 +64,15 @@ export function Blot({
   if (!dual) {
     return (
       <span className={className} style={{ display: 'inline-block', width: size, lineHeight: 0, ...style }}>
-        <img src={BLOT(shape, tint)} alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        <img fetchPriority="low" src={BLOT(shape, tint)} alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
       </span>
     );
   }
   return (
     <span className={className} aria-hidden="true" style={{ position: 'relative', display: 'inline-block', width: size, lineHeight: 0, ...style }}>
-      <img src={BLOT(shape, 'orange')} alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
+      <img fetchPriority="low" src={BLOT(shape, 'orange')} alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
       <img
+        fetchPriority="low"
         src={BLOT(shape, 'cyan')} alt="" data-reveal={reveal ? '' : undefined}
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 'auto', display: 'block', clipPath: 'inset(0 0 0 50%)', opacity: reveal ? 0 : 1, transition: 'opacity var(--dur-slow) var(--ease-out)' }}
       />
@@ -127,7 +128,7 @@ export function TaglineStrip({ items, tone = 'dark', duration = 30 }: { items: s
   const line = dark ? 'var(--hairline-inverse)' : 'var(--hairline)';
   return (
     <div style={{ overflow: 'hidden', background: dark ? 'var(--black)' : 'var(--white)', borderTop: `1px solid ${line}`, borderBottom: `1px solid ${line}` }}>
-      <div className="hk-marquee" style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-6)', whiteSpace: 'nowrap', padding: '16px 0', animation: `hk-marquee ${duration}s linear infinite`, willChange: 'transform' }}>
+      <div className="hk-marquee hk-anima" style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-6)', whiteSpace: 'nowrap', padding: '16px 0', animation: `hk-marquee ${duration}s linear infinite`, willChange: 'transform' }}>
         {doubled.map((t, k) => (
           <span key={k} style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-6)' }}>
             <span style={{ font: 'var(--fw-medium) var(--fs-lg)/1 var(--font-display)', letterSpacing: 'var(--tracking-tight)', color: dark ? 'var(--white)' : 'var(--text-strong)' }}>{t}</span>

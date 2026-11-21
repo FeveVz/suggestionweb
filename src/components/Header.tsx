@@ -41,7 +41,9 @@ export default function Header() {
 
   // Elevación del header al scrollear (profundidad).
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    // Con histéresis: se compacta pasados 24 px y vuelve por debajo de 4. Con un
+    // solo umbral de 10 px, el borde alternaba al hacer scroll fino (PERF-07).
+    const onScroll = () => setScrolled((s) => (s ? window.scrollY > 4 : window.scrollY > 24));
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -81,19 +83,20 @@ export default function Header() {
     <header
       ref={headerRef}
       onMouseLeave={() => setOpen(null)}
-      className={scrolled ? "hk-header-solid" : undefined}
+      className={scrolled ? "hk-header hk-header-solid" : "hk-header"}
       style={{
         position: "sticky",
         top: 0,
         zIndex: "var(--z-nav)" as unknown as number,
-        background: scrolled ? "rgba(255,255,255,0.94)" : "rgba(255,255,255,0.86)",
-        backdropFilter: "saturate(180%) blur(12px)",
-        WebkitBackdropFilter: "saturate(180%) blur(12px)",
+        // Fondo y desenfoque en globals.css (.hk-header): en el celular, fondo
+        // sólido sin blur (auditoría PERF-07); el estilo en línea no se podía
+        // anular desde la media query.
         borderBottom: scrolled ? "1px solid transparent" : "1px solid var(--hairline)",
         transition: "background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)",
       }}
     >
       <div
+        className="hk-header-bar"
         style={{
           maxWidth: "var(--container-wide)",
           margin: "0 auto",
@@ -108,7 +111,7 @@ export default function Header() {
       >
         <Link href="/" aria-label="Suggestion — inicio" style={{ display: "flex", flexShrink: 0 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/logos/suggestion-logo-black.webp" alt="Suggestion" width={800} height={135} style={{ height: 22, width: "auto" }} />
+          <img src="/assets/logos/suggestion-logo-black-400.webp" alt="Suggestion" width={400} height={68} style={{ height: 22, width: "auto" }} />
         </Link>
 
         {/* Nav desktop */}

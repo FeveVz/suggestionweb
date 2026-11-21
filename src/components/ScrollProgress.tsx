@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * Barra fina de progreso de scroll (acento cian) fija arriba.
- * Pasiva + rAF para no afectar el rendimiento de scroll.
+ *
+ * Pasiva + rAF, y sin estado de React: escribe un transform: scaleX en el
+ * propio elemento. Antes cambiaba `width` con setState en cada cuadro, lo que
+ * re-renderizaba el componente y forzaba layout mientras se hacía scroll
+ * (auditoría TEC-03, 21-nov-2026). scaleX lo compone la GPU.
  */
 export default function ScrollProgress() {
-  const [pct, setPct] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let raf = 0;
@@ -16,7 +20,8 @@ export default function ScrollProgress() {
       raf = requestAnimationFrame(() => {
         const el = document.documentElement;
         const max = el.scrollHeight - el.clientHeight;
-        setPct(max > 0 ? (el.scrollTop / max) * 100 : 0);
+        const p = max > 0 ? el.scrollTop / max : 0;
+        if (ref.current) ref.current.style.transform = `scaleX(${p.toFixed(4)})`;
       });
     };
     update();
@@ -31,16 +36,18 @@ export default function ScrollProgress() {
 
   return (
     <div
+      ref={ref}
       aria-hidden
       style={{
         position: "fixed",
         top: 0,
         left: 0,
         height: 3,
-        width: `${pct}%`,
+        width: "100%",
+        transform: "scaleX(0)",
+        transformOrigin: "0 50%",
         background: "var(--cyan)",
         zIndex: 200,
-        transition: "width 90ms linear",
         pointerEvents: "none",
       }}
     />

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { preload } from "react-dom";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,8 +7,9 @@ import FloatingMenu from "@/components/FloatingMenu";
 import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
 import ScrollProgress from "@/components/ScrollProgress";
-import CustomCursor from "@/components/CustomCursor";
-import { RevealController } from "@/components/brand/interactive";
+import CursorLoader from "@/components/CursorLoader";
+import PausaFueraDePantalla from "@/components/PausaFueraDePantalla";
+import { RevealController } from "@/components/brand/RevealController";
 import { site, SITE_URL } from "@/lib/site";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
@@ -66,12 +68,14 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  // Las 2 fuentes de la primera pantalla. Con ReactDOM.preload sale una sola
+  // etiqueta en el <head>; las <link> que había en el body se duplicaban
+  // (auditoría PERF-04). No subir a más precargas: compiten con el CSS en 4G.
+  preload("/fonts/SpaceGrotesk-SemiBold.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  preload("/fonts/Geomanist-Regular.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
   return (
     <html lang={site.lang} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
-        {/* Preload de las 2 fuentes above-the-fold (mejora LCP/CLS) */}
-        <link rel="preload" href="/fonts/SpaceGrotesk-SemiBold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/Geomanist-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Activa animaciones solo si hay JS; sin JS el contenido queda visible (SEO-safe). */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         {/* Salto al contenido: primer tabulador de la página. Sin esto, quien
@@ -80,7 +84,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a href="#contenido" className="hk-skip">Saltar al contenido</a>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollProgress />
-        <CustomCursor />
+        <CursorLoader />
+        <PausaFueraDePantalla />
         <RevealController />
         <div style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
           <Header />

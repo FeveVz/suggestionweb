@@ -47,10 +47,10 @@ export default function FunnelVivo() {
         Armamos tu embudo de ventas completo —anuncios, web, WhatsApp y CRM— y lo medimos hasta el cierre: la atención se
         vuelve clic, el clic conversación por WhatsApp y la conversación venta.
       </p>
-      <div className="fv" aria-hidden>
+      <div className="fv hk-anima" aria-hidden>
         <span className="fv-line" />
         <span className="fv-prog" />
-        <span className="fv-dot" />
+        <span className="fv-carril"><span className="fv-dot" /></span>
         {PASOS.map(({ Icon, label, cls }) => (
           <span key={label} className={`fv-node ${cls}`}>
             <span className="fv-ico"><Icon size={19} strokeWidth={1.9} /></span>
@@ -84,10 +84,21 @@ export default function FunnelVivo() {
           transform: scaleX(0);
           animation: fv-prog var(--fv-loop) linear infinite;
         }
-        .fv-dot {
+        /* El carril mide exactamente el recorrido del punto: así translateX(100%)
+           del carril lo lleva del primer nodo al último sin animar «left»
+           (que repinta en cada cuadro). Auditoría PERF-03. */
+        .fv-carril {
           position: absolute;
           top: calc(var(--fv-s) / 2 - 5px);
           left: calc(var(--fv-s) / 2);
+          width: calc(100% - var(--fv-s));
+          height: 10px;
+          pointer-events: none;
+          animation: fv-carril var(--fv-loop) linear infinite;
+        }
+        .fv-dot {
+          position: absolute;
+          top: 0; left: 0;
           width: 10px; height: 10px;
           margin-left: -5px;
           border-radius: 50%;
@@ -126,7 +137,8 @@ export default function FunnelVivo() {
         .fv-n2 { animation: fv-n2 var(--fv-loop) ease-out infinite; }
         .fv-n3 { animation: fv-n3 var(--fv-loop) ease-out infinite; }
         .fv-n4 { animation: fv-n4 var(--fv-loop) ease-out infinite; }
-        .fv-n4 .fv-ico { animation: fv-pop var(--fv-loop) ease-out infinite; }
+        .fv-n4 .fv-ico { position: relative; animation: fv-pop var(--fv-loop) ease-out infinite; }
+        .fv-n4 .fv-ico::after { content: ""; position: absolute; inset: -1.5px; border-radius: 50%; border: 2px solid rgba(0,191,255,0.45); opacity: 0; animation: fv-anillo var(--fv-loop) ease-out infinite; }
 
         /* línea de progreso: crece 4%→83%, sostiene y se desvanece */
         @keyframes fv-prog {
@@ -136,12 +148,15 @@ export default function FunnelVivo() {
           99%,100% { transform: scaleX(1); opacity: 0; }
         }
         /* punto viajero: mismo tramo temporal que la línea */
+        @keyframes fv-carril {
+          0%, 3%  { transform: translateX(0); }
+          83%, 100% { transform: translateX(100%); }
+        }
         @keyframes fv-dot {
-          0%, 3%  { left: calc(var(--fv-s) / 2); opacity: 0; }
+          0%, 3%  { opacity: 0; }
           5%      { opacity: 1; }
           82%     { opacity: 1; }
-          83%     { left: calc(100% - var(--fv-s) / 2); opacity: 0; }
-          100%    { left: calc(100% - var(--fv-s) / 2); opacity: 0; }
+          83%, 100% { opacity: 0; }
         }
         /* cada nodo se enciende cuando el punto le llega (4%/30%/57%/83%) */
         @keyframes fv-n1 { 0%,3% { color: var(--text-muted); } 6% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
@@ -150,14 +165,19 @@ export default function FunnelVivo() {
         @keyframes fv-n4 { 0%,81% { color: var(--text-muted); } 85% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
         /* pop de "venta": escala + anillo que se expande */
         @keyframes fv-pop {
-          0%, 82%  { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,191,255,0); }
-          86%      { transform: scale(1.14); box-shadow: 0 0 0 0 rgba(0,191,255,0.45); }
-          92%      { transform: scale(1); box-shadow: 0 0 0 14px rgba(0,191,255,0); }
-          100%     { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,191,255,0); }
+          0%, 82%  { transform: scale(1); }
+          86%      { transform: scale(1.14); }
+          92%, 100% { transform: scale(1); }
+        }
+        @keyframes fv-anillo {
+          0%, 85%  { transform: scale(1); opacity: 0; }
+          86%      { transform: scale(1); opacity: 1; }
+          92%      { transform: scale(1.6); opacity: 0; }
+          100%     { transform: scale(1.6); opacity: 0; }
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .fv-prog, .fv-dot, .fv-n1, .fv-n2, .fv-n3, .fv-n4, .fv-n4 .fv-ico { animation: none; }
+          .fv-prog, .fv-carril, .fv-dot, .fv-n1, .fv-n2, .fv-n3, .fv-n4, .fv-n4 .fv-ico, .fv-n4 .fv-ico::after { animation: none; }
           .fv-prog { transform: scaleX(1); }
           .fv-dot { opacity: 0; }
           .fv-n1, .fv-n2, .fv-n3 { color: var(--ink-700); }

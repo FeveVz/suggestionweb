@@ -63,9 +63,9 @@ export default function ScrollBlot({
       style={{ position: "relative", display: "inline-block", width: size, lineHeight: 0, transform: mirror ? "scaleX(-1)" : undefined, ...style }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`/assets/blots/blot-${shape}-orange.png`} alt="" style={{ width: "100%", display: "block" }} />
+      <img fetchPriority="low" src={`/assets/blots/blot-${shape}-orange.png`} alt="" style={{ width: "100%", display: "block" }} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img data-cyan src={`/assets/blots/blot-${shape}-cyan.png`} alt="" style={{ position: "absolute", inset: 0, width: "100%", opacity: 0, transition: "opacity 0.15s linear" }} />
+      <img data-cyan fetchPriority="low" src={`/assets/blots/blot-${shape}-cyan.png`} alt="" style={{ position: "absolute", inset: 0, width: "100%", opacity: 0, transition: "opacity 0.15s linear" }} />
     </div>
   );
 }
