@@ -1,3 +1,4 @@
+import { anclaSector } from "@/content/navegacion";
 import type { Metadata } from "next";
 import HubLanding from "@/components/HubLanding";
 import { buildMetadata } from "@/lib/seo";
@@ -13,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function SectoresHub() {
   const items = SECTORES.map((s) => ({
-    title: `Marketing ${s.nombre.toLowerCase()}`,
+    title: anclaSector(s.slug, s.nombre),
     description: s.hero,
     href: `/${s.slug}`,
   }));

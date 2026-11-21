@@ -21,13 +21,13 @@
  * un chat que diga solo «Ref: …».
  */
 
-import { COTIZA_PRODUCCION, SECTORS, SERVICE_CATEGORIES, mensajeCotiza } from "@/content/navegacion";
+import { COTIZA_PRODUCCION, SECTORS, SERVICE_CATEGORIES, anclaSector, mensajeCotiza } from "@/content/navegacion";
 import { getAttribution } from "@/lib/tracking";
 
 /** Nombre de cada servicio digital y sector, por ruta, tal como sale en el menú. */
 const NOMBRES: Record<string, string> = Object.fromEntries([
   ...SERVICE_CATEGORIES.flatMap((c) => c.children.map((s) => [s.href, s.label] as const)),
-  ...SECTORS.map((s) => [s.href, `marketing ${s.label.toLowerCase()}`] as const),
+  ...SECTORS.map((s) => [s.href, anclaSector(s.href, s.label).replace(/^Marketing/, "marketing")] as const),
 ]);
 
 const CONSULTORIA_GENERAL = "Hola Suggestion, vengo de suggestion.pe y quiero agendar mi consultoría cero.";

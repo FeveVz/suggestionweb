@@ -1,3 +1,4 @@
+import { anclaSector } from "@/content/navegacion";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LandingArticle, { type RelatedBlock } from "@/components/LandingArticle";
@@ -178,7 +179,7 @@ export default async function ServicioPage({ params }: Params) {
 
   const sectorLinks: RelatedLink[] = SECTORES.filter((sec) =>
     sec.serviciosQueUsa.includes(s.slug)
-  ).map((sec) => ({ label: `Marketing ${sec.nombre.toLowerCase()}`, href: `/${sec.slug}` }));
+  ).map((sec) => ({ label: anclaSector(sec.slug, sec.nombre), href: `/${sec.slug}` }));
   if (sectorLinks.length) {
     related.push({
       title: "Sectores donde lo aplicamos",

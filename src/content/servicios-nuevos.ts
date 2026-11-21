@@ -58,13 +58,13 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       { label: "Publicidad inmobiliaria en redes: qué funciona", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
       { label: "Cuánto cuesta la publicidad en Facebook e Instagram", href: "/blog/performance/cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru" },
     ],
-    metaTitle: "Agencia de Meta Ads: Facebook e Instagram | Suggestion",
+    metaTitle: "Agencia de Meta Ads y Facebook Ads en Perú | Suggestion",
     metaDescription:
-      "Agencia de Meta Ads en Perú: anuncios en Facebook e Instagram que se miden en ventas, no en likes. Campañas a WhatsApp y formularios. Consultoría gratis.",
+      "Agencia de Meta Ads (Facebook Ads) en Perú: anuncios en Facebook e Instagram medidos en ventas, con campañas a WhatsApp y formularios. Consultoría gratis.",
     h1: "Agencia de Meta Ads: anuncios en Facebook e Instagram que venden",
     hero: "En Facebook e Instagram tu cliente no está buscando comprar: hay que interrumpirlo con una oferta que valga la pena. Armamos tus campañas y las medimos hasta la venta, no hasta el clic.",
     enCorto: [
-      "Meta Ads son los anuncios de Facebook, Instagram y Messenger, incluidos los que abren una conversación de WhatsApp. Se compran todos desde el mismo administrador.",
+      "Meta Ads, lo que antes se llamaba Facebook Ads, son los anuncios de Facebook, Instagram y Messenger, incluidos los que abren una conversación de WhatsApp. Se compran todos desde el mismo administrador.",
       "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y S/3,000 con todas.",
       "Medimos el costo por venta: cruzamos los contactos que llegan con lo que cierra tu equipo.",
       "Meta necesita unos 50 resultados por semana en cada conjunto de anuncios para salir de la fase de aprendizaje. Si el presupuesto no llega, se optimiza por algo más frecuente, como iniciar una conversación.",

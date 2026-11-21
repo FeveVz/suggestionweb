@@ -138,7 +138,7 @@ const FAQ = [
   },
   {
     q: "¿Cómo miden los resultados?",
-    a: "Con lo que le importa a tu negocio: cuánto te cuesta cada persona interesada, cuántas citas salen de ahí y cuántas ventas se cierran. Recibes un reporte claro con esos números, no un tablero de “me gusta”.",
+    a: "Medimos hasta la venta, no hasta el clic: cuánto te cuesta cada persona interesada, cuántas citas salen de ahí y cuántas ventas se cierran. Recibes un reporte claro con esos números, no un tablero de “me gusta”.",
   },
 ];
 

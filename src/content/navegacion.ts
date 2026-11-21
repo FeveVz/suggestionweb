@@ -64,7 +64,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       { label: "Estructuras Publicitarias", href: "/servicios/estructuras-publicitarias" },
       { label: "Letreros Luminosos", href: "/servicios/letreros-luminosos" },
       { label: "Material POP", href: "/servicios/material-pop" },
-      { label: "Imprenta Corporativa", href: "/servicios/imprenta" },
+      { label: "Imprenta en Ica", href: "/servicios/imprenta" },
       { label: "Gigantografías", href: "/servicios/gigantografias" },
       { label: "Merchandising", href: "/servicios/merchandising" },
     ],
@@ -83,6 +83,24 @@ export const SECTORS: NavLink[] = [
 ];
 
 /** Menú principal (doc 02 §7). */
+/**
+ * Cómo se nombra cada sector cuando enlaza o se usa en una frase. Antes se
+ * armaba «Marketing » + nombre y salían «Lo que ganas con marketing turismo» o
+ * anclas como «Marketing salud» (auditoría ONP-11, tarea 3.11).
+ */
+export const ANCLA_SECTOR: Record<string, string> = {
+  "/marketing-inmobiliario": "Marketing inmobiliario",
+  "/marketing-automotriz": "Marketing automotriz",
+  "/marketing-turismo": "Marketing turístico y para hoteles",
+  "/marketing-marcas-consumo": "Marketing para marcas de consumo",
+  "/marketing-salud": "Marketing para clínicas",
+  "/marketing-agroexportacion": "Marketing para agroexportadoras",
+  "/marketing-pisco-vino": "Marketing para bodegas de pisco y vino",
+};
+/** Ancla del sector por su ruta («/marketing-salud» o «marketing-salud»). */
+export const anclaSector = (ruta: string, nombre: string) =>
+  ANCLA_SECTOR[ruta.startsWith("/") ? ruta : `/${ruta}`] ?? `Marketing ${nombre.toLowerCase()}`;
+
 export const MAIN_NAV: NavLink[] = [
   { label: "Servicios", href: "/servicios" },
   { label: "Sectores", href: "/sectores" },
@@ -134,7 +152,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavLink[] }[] = [
   },
   {
     title: "Sectores",
-    links: SECTORS.map((s) => ({ label: `Marketing ${s.label.toLowerCase()}`, href: s.href })),
+    links: SECTORS.map((s) => ({ label: anclaSector(s.href, s.label), href: s.href })),
   },
   {
     // Da a cada página de ciudad un enlace entrante desde todo el sitio.

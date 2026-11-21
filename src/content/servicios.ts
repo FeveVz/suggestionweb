@@ -263,7 +263,7 @@ const CATEGORIAS_RAW: Servicio[] = [
     slug: "web-seo",
     tipo: "categoria",
     nombre: "Web, SEO y automatización",
-    metaTitle: "Web, SEO y Automatización | Suggestion",
+    metaTitle: "Páginas Web, SEO y CRM para Empresas | Suggestion",
     metaDescription:
       "Web, SEO y automatización que venden: una web que convierte, posicionamiento que te hace visible y CRM que no deja caer ningún lead.",
     h1: "Web, SEO y automatización que venden",
@@ -339,7 +339,7 @@ const CATEGORIAS_RAW: Servicio[] = [
     slug: "marca-contenido",
     tipo: "categoria",
     nombre: "Marca y contenido",
-    metaTitle: "Marca y Contenido | Suggestion",
+    metaTitle: "Marca y Contenido: Branding, Video y Fotografía | Suggestion",
     metaDescription:
       "Marca y contenido que dejan huella: branding que justifica el precio y producción audiovisual que mueve a la acción. Construyamos tu marca.",
     h1: "Marca y contenido que dejan huella",
@@ -411,7 +411,7 @@ const CATEGORIAS_RAW: Servicio[] = [
     slug: "btl-medios",
     tipo: "categoria",
     nombre: "Activación y medios físicos",
-    metaTitle: "Activación y Medios Físicos | Suggestion",
+    metaTitle: "Publicidad Exterior y BTL en Ica | Suggestion",
     metaDescription:
       "Activación y medios físicos de alto impacto: BTL, publicidad móvil, estructuras, material POP, imprenta y merchandising. Pide tu cotización.",
     h1: "Activación y medios físicos de alto impacto",
@@ -818,13 +818,13 @@ const SERVICIOS_BASE: Servicio[] = [
     // Desde el 2026-11-14 esta URL es la de Google Ads; Meta Ads tiene página
     // propia (/servicios/meta-ads). La URL se mantiene para no perder lo ganado.
     nombre: "Google Ads",
-    metaTitle: "Agencia de Google Ads en Perú | Suggestion",
+    metaTitle: "Agencia de Google Ads (AdWords) en Perú | Suggestion",
     metaDescription:
-      "Agencia de Google Ads en Perú: campañas de búsqueda, display y YouTube medidas en leads y ventas, no en clics. Aparece cuando tu cliente te busca. Consultoría gratis.",
+      "Agencia de Google Ads (antes AdWords) en Perú: búsqueda, display y YouTube medidos en leads y ventas, no en clics. Desde S/800 al mes. Consultoría gratis.",
     h1: "Agencia de Google Ads en Perú: campañas que se miden en ventas",
     hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas con un solo norte: que cada sol invertido vuelva en leads y ventas, no en clics que no cierran.",
     enCorto: [
-      "Google Ads te muestra a quien ya está buscando lo que vendes, en la Búsqueda de Google, en Display y en YouTube.",
+      "Google Ads (antes Google AdWords) te muestra a quien ya está buscando lo que vendes, en la Búsqueda de Google, en Display y en YouTube.",
       "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas.",
       "Medimos hasta la venta, con costo por lead y ROAS, no por clics.",
       "Si te buscan por nombre o por servicio, empieza por Google; si primero tienen que conocerte, por Meta.",
@@ -958,7 +958,7 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Redes Sociales",
     metaTitle: "Community Manager y Gestión de Redes Sociales | Suggestion",
     metaDescription:
-      "Community manager y gestión de redes sociales para empresas: contenido con criterio, respuesta a tiempo y reportes que terminan en una decisión. Consultoría gratis.",
+      "Community manager y gestión de redes sociales para empresas en Perú: contenido, respuesta a tiempo y reportes que terminan en una decisión. Desde S/800 al mes.",
     h1: "Community manager para empresas: redes que traen clientes",
     hero: "Tus redes no son un mural de fotos bonitas: son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
     enCorto: [
@@ -1102,8 +1102,8 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Desarrollo Web",
     metaTitle: "Diseño de Páginas Web para Empresas en Perú | Suggestion",
     metaDescription:
-      "Diseño de páginas web profesionales, rápidas y pensadas para convertir visitas en clientes. Web que vende, no solo bonita. Consultoría gratis.",
-    h1: "Diseño de páginas web que convierten visitas en clientes",
+      "Diseño de páginas web para empresas en Perú: rápidas, con SEO básico y pensadas para convertir visitas en clientes. Landing desde S/1,500. Consultoría gratis.",
+    h1: "Diseño de páginas web para empresas que convierten visitas en clientes",
     hero: "Una web bonita que no vende es un gasto. Diseñamos páginas web rápidas, claras y pensadas para una sola cosa: que el visitante haga lo que tú necesitas —comprar, escribir o agendar.",
     enCorto: [
       "Tres formatos por proyecto: landing page por S/1,500, web corporativa por S/4,000 y tienda virtual por S/8,000.",
@@ -1228,9 +1228,9 @@ const SERVICIOS_BASE: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "web-seo",
     nombre: "SEO",
-    metaTitle: "Agencia SEO y Posicionamiento Web en Perú | Suggestion",
+    metaTitle: "Servicio SEO y Posicionamiento Web en Perú | Suggestion",
     metaDescription:
-      "Agencia SEO en Perú: posicionamiento web que te hace visible cuando tu cliente busca. SEO técnico y de contenidos. Agenda tu auditoría gratuita.",
+      "Servicio SEO mensual en Perú: auditoría, SEO técnico, contenidos y SEO local para que te encuentren en Google. Planes desde S/1,200 al mes. Consultoría gratis.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
     hero: "El mejor lugar para esconder un cadáver es la segunda página de Google. Te llevamos a la primera, justo cuando tu cliente busca lo que ofreces —sin pagar por cada clic.",
     enCorto: [

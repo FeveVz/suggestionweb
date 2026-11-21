@@ -1289,13 +1289,14 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "posicionamiento-web-como-aparecer-en-google",
     categoria: "conversion",
-    title: "Posicionamiento Web: Cómo Aparecer en Google | Suggestion",
+    title: "Cómo Hacer que tu Página Aparezca en Google | Suggestion",
     description:
       "Por qué tu página no aparece en Google y qué revisar primero: si está indexada, con qué intención te buscan y si tu rubro se busca en local o en nacional.",
-    h1: "Posicionamiento web: por qué no apareces en Google y qué revisar primero",
+    h1: "Cómo hacer que tu página aparezca en Google: qué revisar primero",
     excerpt:
       "Antes de contratar nada ni de escribir una palabra clave, hay una comprobación de dos minutos que casi nadie hace y que explica la mitad de los casos: saber si Google tiene tu página.",
     date: "2026-10-04",
+    actualizado: "2026-11-20",
     secciones: [
       {
         h2: "Lo primero: ¿Google tiene tu página o ni la conoce?",

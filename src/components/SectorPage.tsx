@@ -1,3 +1,4 @@
+import { anclaSector } from "@/content/navegacion";
 import { notFound } from "next/navigation";
 import LandingArticle, { type RelatedBlock } from "@/components/LandingArticle";
 import type { RelatedLink } from "@/components/RelatedLinks";
@@ -59,7 +60,7 @@ export default function SectorPage({ slug }: { slug: string }) {
       secciones={sec.secciones}
       beneficios={ast?.beneficios}
       proceso={ast?.proceso}
-      tema={`marketing ${sec.nombre.toLowerCase()}`}
+      tema={anclaSector(slug, sec.nombre).replace(/^Marketing/, "marketing")}
       related={related}
       faq={sec.faq}
       cierre={sec.cierre}
