@@ -186,7 +186,7 @@ export default async function BlogPostPage({ params }: Params) {
                   {" · "}Actualizado el <time dateTime={post.actualizado}>{fechaLarga(post.actualizado)}</time>
                 </>
               )}
-              {" · "}{minutosLectura(post)} min de lectura · Por <a href="/nosotros" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
+              {" · "}{minutosLectura(post)} min de lectura · Por <a href="/equipo/abraham" style={{ color: "var(--text-strong)", fontWeight: 500, textDecoration: "underline", textUnderlineOffset: "0.18em" }}>Abraham Velásquez</a>, Gerente General de Suggestion
             </p>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "64ch" }}>
               {post.excerpt}

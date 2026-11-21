@@ -9,6 +9,14 @@ import type { PlanPrecio } from "@/content/types";
 
 type Json = Record<string, unknown>;
 
+/**
+ * Autor del blog: una sola entidad (auditoría CON-08). El author de cada
+ * BlogPosting apunta al Person de /equipo/abraham por este @id, con el mismo
+ * nombre que se ve en la firma.
+ */
+export const AUTOR = { slug: "abraham", nombre: "Abraham Velásquez", rol: "Gerente General" } as const;
+export const AUTOR_ID = `${SITE_URL}/equipo/${AUTOR.slug}#person`;
+
 /** ProfessionalService / LocalBusiness — identidad de la organización (doc 12 §2.1). */
 export function organizationSchema(): Json {
   return {
@@ -236,10 +244,11 @@ export function blogPostingSchema(opts: {
     dateModified: opts.dateModified || opts.datePublished,
     author: {
       "@type": "Person",
-      name: "Abraham Velásquez Aquije",
-      jobTitle: "Gerente General",
+      "@id": AUTOR_ID,
+      name: AUTOR.nombre,
+      jobTitle: AUTOR.rol,
       worksFor: { "@id": ORG_ID },
-      url: absoluteUrl("/nosotros"),
+      url: absoluteUrl(`/equipo/${AUTOR.slug}`),
     },
     publisher: { "@id": ORG_ID },
     ...(opts.image ? { image: absoluteUrl(opts.image) } : {}),

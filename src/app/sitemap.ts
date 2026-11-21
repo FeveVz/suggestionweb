@@ -86,7 +86,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/letreros-luminosos": "2026-11-20",
   // 2026-11-20: correcciones de la auditoría suprema (tareas 1.04, 1.06, 1.16 y 2.12).
   // Las páginas de arriba que también cambiaron ese día ya llevan esa fecha.
-  "/equipo/abraham": "2026-11-20",
+  "/equipo/abraham": "2026-11-21",
   "/agencia-de-marketing-en-chincha": "2026-11-21",
   "/agencia-de-marketing-en-tacna": "2026-11-21",
   "/agencia-de-marketing-en-palpa": "2026-11-21",
@@ -206,7 +206,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(c.imagenes?.length ? { images: c.imagenes.map((i) => u(i.src)) } : {}),
   }));
 
-  const equipo: MetadataRoute.Sitemap = EQUIPO.map((t) => ({
+  // Solo la ficha del autor: las otras 6 llevan noindex (decisión 11 de la auditoría).
+  const equipo: MetadataRoute.Sitemap = EQUIPO.filter((t) => t.slug === "abraham").map((t) => ({
     url: u(`/equipo/${t.slug}`),
     lastModified: fecha(`/equipo/${t.slug}`),
     changeFrequency: "yearly" as const,
