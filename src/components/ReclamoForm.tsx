@@ -18,8 +18,10 @@ import { DEF_QUEJA, DEF_RECLAMO, LEYENDA_INDECOPI, LEYENDA_PLAZO } from "@/lib/r
  * MED-04, tarea 2.07). El correo enviado y la copia impresa o en PDF le
  * quedan a la persona como constancia.
  *
- * Pendiente (tarea 2.08): número correlativo, constancia automática por
- * correo y conservación de la hoja, con un registro en el servidor.
+ * Con RECLAMOS_EN_BASE (tarea 2.08) la hoja va a /api/reclamo: se guarda con
+ * número correlativo (000001-2026), la constancia llega al correo de la
+ * persona con copia a hola@ y el número se muestra solo cuando se registró.
+ * Si el registro falla, el formulario cae al envío por correo.
  */
 
 const label: React.CSSProperties = { font: "var(--fw-medium) var(--fs-sm)/1 var(--font-body)", color: "var(--text-strong)" };
@@ -48,10 +50,11 @@ function Grupo({ titulo }: { titulo: string }) {
 }
 
 type Hoja = { referencia: string; fecha: string; texto: string; mail: string };
+type Registro = { numero: string; limite?: string; email: string };
 
 export default function ReclamoForm() {
   const [hoja, setHoja] = useState<Hoja | null>(null);
-  const [codigoBase, setCodigoBase] = useState<string | null>(null);
+  const [registro, setRegistro] = useState<Registro | null>(null);
   const [menor, setMenor] = useState(false);
   const [error, setError] = useState(false);
   const [enviando, setEnviando] = useState(false);
@@ -64,7 +67,8 @@ export default function ReclamoForm() {
     if (f.get("website")) return; // honeypot
     const g = (k: string) => String(f.get(k) ?? "").trim();
 
-    if (!RECLAMOS_EN_BASE) {
+    // Hoja por correo: el camino de siempre, y el respaldo si el registro falla.
+    const porCorreo = () => {
       const ahora = new Date();
       const fecha = ahora.toLocaleDateString("es-PE", { timeZone: "America/Lima", day: "2-digit", month: "2-digit", year: "numeric" });
       const hora = ahora.toLocaleTimeString("es-PE", { timeZone: "America/Lima", hour: "2-digit", minute: "2-digit" });
@@ -102,21 +106,23 @@ export default function ReclamoForm() {
       // Abre el correo de la persona con la hoja escrita. Si no tiene uno
       // configurado, queda el botón y la opción de copiar el texto.
       window.location.href = mail;
+    };
+
+    if (!RECLAMOS_EN_BASE) {
+      porCorreo();
       return;
     }
 
     setEnviando(true);
     try {
-      const r = await fetch("/api/lead", {
+      const r = await fetch("/api/reclamo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          tipo: "reclamo",
           nombre: g("nombre"),
           email: g("email"),
           telefono: g("telefono"),
-          mensaje: g("detalle"),
-          pagina: "/libro-de-reclamaciones",
+          detalle: g("detalle"),
           website: g("website"),
           extra: {
             clase: g("clase"),
@@ -131,8 +137,9 @@ export default function ReclamoForm() {
           },
         }),
       });
-      const data = await r.json();
-      if (data?.ok && data?.id) setCodigoBase(String(data.id).slice(0, 8).toUpperCase());
+      const data = await r.json().catch(() => ({}));
+      if (data?.ok && data?.numero) setRegistro({ numero: String(data.numero), limite: data.limite, email: g("email") });
+      else if (r.status === 503) porCorreo(); // registro apagado o sin hoja: por correo
       else setError(true);
     } catch {
       setError(true);
@@ -179,13 +186,19 @@ export default function ReclamoForm() {
     );
   }
 
-  if (codigoBase) {
+  if (registro) {
     return (
       <div style={{ padding: "var(--space-6)", background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", maxWidth: 640 }}>
-        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Reclamo registrado</h2>
+        <h2 style={{ font: "var(--fw-medium) var(--fs-xl)/1.2 var(--font-display)", color: "var(--text-strong)" }}>Hoja de reclamación N.º {registro.numero}</h2>
         <p style={{ ...parrafo, marginTop: 10 }}>
-          Tu código de registro es <strong style={{ fontWeight: 700 }}>REC-{codigoBase}</strong>. Te responderemos al correo indicado en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>.
+          Quedó registrada. Te enviamos la constancia a <strong style={{ fontWeight: 700 }}>{registro.email}</strong>, con copia a {site.email}. Te responderemos en un plazo máximo de <strong style={{ fontWeight: 700 }}>15 días hábiles</strong>{registro.limite ? `, a más tardar el ${registro.limite}` : ""}.
         </p>
+        <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginTop: 8 }}>
+          Si no ves el correo, revisa la carpeta de spam o escríbenos a {site.email} con tu número de hoja.
+        </p>
+        <div style={{ marginTop: 16 }}>
+          <Btn type="button" variant="secondary" size="lg" onClick={() => window.print()}>Imprimir o guardar en PDF</Btn>
+        </div>
       </div>
     );
   }
@@ -236,10 +249,12 @@ export default function ReclamoForm() {
       </F>
 
       <p style={{ gridColumn: "1 / -1", font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", margin: 0 }}>
-        Al continuar se abre tu correo con la hoja de reclamación escrita, dirigida a {site.email}. Tu reclamo nos llega cuando lo envías.
+        {RECLAMOS_EN_BASE
+          ? "Al enviar, tu hoja queda registrada con su número y te llega la constancia a tu correo."
+          : `Al continuar se abre tu correo con la hoja de reclamación escrita, dirigida a ${site.email}. Tu reclamo nos llega cuando lo envías.`}
       </p>
       <div style={{ gridColumn: "1 / -1", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-        <Btn type="submit" size="lg" disabled={enviando}>{enviando ? "Registrando…" : "Enviar reclamo por correo"}</Btn>
+        <Btn type="submit" size="lg" disabled={enviando}>{enviando ? "Registrando…" : RECLAMOS_EN_BASE ? "Registrar mi reclamo" : "Enviar reclamo por correo"}</Btn>
         {error && <span style={{ font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "#b3261e" }}>No se pudo registrar. Inténtalo de nuevo o escríbenos a {site.email}.</span>}
       </div>
     </form>

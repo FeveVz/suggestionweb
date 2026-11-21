@@ -24,10 +24,14 @@ export const CTA_CONSULTORIA = "Agenda tu consultoría cero";
 export const GUARDAR_EN_BASE = true;
 
 /**
- * El Libro de Reclamaciones sigue por correo (tarea 2.07) hasta tener
- * correlativo y constancia automática validados por un abogado (tarea 2.08).
+ * Libro de Reclamaciones con número correlativo y constancia por correo
+ * (tarea 2.08): /api/reclamo → Apps Script → pestaña «Reclamaciones». Ya está
+ * programado, pero APAGADO: se enciende con NEXT_PUBLIC_RECLAMOS_ACTIVO=1 en
+ * Vercel (y un redeploy) solo después de que un abogado valide la constancia
+ * (decisión 10) y de pegar la versión nueva del Apps Script. Mientras tanto la
+ * hoja sale por correo a hola@ (tarea 2.07).
  */
-export const RECLAMOS_EN_BASE = false;
+export const RECLAMOS_EN_BASE = process.env.NEXT_PUBLIC_RECLAMOS_ACTIVO === "1";
 
 export const esCotizacion = (label: string) => /cotiz/i.test(label);
 
