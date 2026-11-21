@@ -231,6 +231,16 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
         <span id="ayuda-envio" style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
           {consultoria ? "Gratis y sin compromiso. Se abre WhatsApp con tu mensaje listo: nuestro agente de IA te responde al momento y una persona te confirma de lunes a sábado, de 8:30 a 18:30." : "Sin compromiso · Diagnóstico en 48 h hábiles"}
         </span>
+        {/* Aviso junto al botón (auditoría MED-05, decisión 9): el nombre y el
+            teléfono viajan a Meta en hash para medir los anuncios. Pestaña nueva
+            para no perder lo escrito; 44 px de alto para el dedo. */}
+        <p style={{ flexBasis: "100%", margin: 0, font: "var(--fw-light) var(--fs-xs)/1.45 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
+          Al enviar aceptas nuestra{" "}
+          <a href="/privacidad" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", minHeight: 44, color: "inherit", textDecoration: "underline" }}>
+            Política de Privacidad
+          </a>
+          , que explica cómo medimos nuestros anuncios con Meta.
+        </p>
       </div>
     </form>
   );

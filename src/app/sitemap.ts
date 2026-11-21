@@ -44,7 +44,6 @@ const ACTUALIZADA: Record<string, string> = {
   "/consultoria-cero": "2026-11-20",
   "/contacto": "2026-11-20",
   "/auditoria-gratis": "2026-11-20",
-  "/privacidad": "2026-10-15",
   // 2026-11-14: títulos, H1 o secciones nuevas tras el keyword research.
   "/servicios/publicidad-digital": "2026-11-20",
   "/servicios/seo": "2026-11-20",
@@ -92,6 +91,8 @@ const ACTUALIZADA: Record<string, string> = {
   "/agencia-de-marketing-en-tacna": "2026-11-21",
   "/agencia-de-marketing-en-palpa": "2026-11-21",
   "/libro-de-reclamaciones": "2026-11-20",
+  "/privacidad": "2026-11-21",
+  "/terminos": "2026-11-21",
   "/agencia-de-marketing-en-arequipa": "2026-11-21",
 };
 const dia = (iso: string) => new Date(`${iso}T12:00:00Z`);
@@ -136,7 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/consultoria-cero"), lastModified: fecha("/consultoria-cero"), changeFrequency: "monthly", priority: 0.9 },
     { url: u("/auditoria-gratis"), lastModified: fecha("/auditoria-gratis"), changeFrequency: "monthly", priority: 0.7 },
     { url: u("/privacidad"), lastModified: fecha("/privacidad"), changeFrequency: "yearly", priority: 0.2 },
-    { url: u("/terminos"), lastModified: GLOBAL, changeFrequency: "yearly", priority: 0.2 },
+    { url: u("/terminos"), lastModified: fecha("/terminos"), changeFrequency: "yearly", priority: 0.2 },
     { url: u("/libro-de-reclamaciones"), lastModified: fecha("/libro-de-reclamaciones"), changeFrequency: "yearly", priority: 0.2 },
     { url: u("/contacto"), lastModified: fecha("/contacto"), changeFrequency: "yearly", priority: 0.6 },
     { url: u("/servicios"), lastModified: indiceDe(SERVICIOS_HIJOS), changeFrequency: "monthly", priority: 0.9 },

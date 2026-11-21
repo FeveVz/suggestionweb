@@ -21,7 +21,7 @@ export default function Terminos() {
         <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 8px" }}>
           Términos y Condiciones
         </h1>
-        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: junio de 2026</p>
+        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: 21 de noviembre de 2026</p>
 
         <h2 style={H2}>1. Titularidad del sitio</h2>
         <p style={P}>
@@ -35,7 +35,7 @@ export default function Terminos() {
 
         <h2 style={H2}>3. Información de servicios y precios</h2>
         <p style={P}>
-          Los precios y alcances publicados son referenciales y pueden ajustarse según el diagnóstico de cada negocio. Toda contratación se formaliza mediante propuesta y/o contrato específico, que prevalece sobre lo publicado en el sitio.
+          Los precios y alcances publicados son referenciales y pueden ajustarse según el diagnóstico de cada negocio. Toda contratación se formaliza mediante propuesta y/o contrato específico, que prevalece sobre lo publicado en el sitio, y se emite con factura electrónica a nombre de {site.legalName}.
         </p>
 
         <h2 style={H2}>4. Resultados</h2>
@@ -48,7 +48,12 @@ export default function Terminos() {
           Suggestion no se responsabiliza por interrupciones temporales del sitio ni por el contenido de sitios de terceros enlazados.
         </p>
 
-        <h2 style={H2}>6. Ley aplicable</h2>
+        <h2 style={H2}>6. Datos personales y reclamos</h2>
+        <p style={P}>
+          Cómo tratamos tus datos está en la <a href="/privacidad" style={{ textDecoration: "underline" }}>Política de Privacidad</a>. Si tienes un reclamo o una queja, puedes registrarlo en nuestro <a href="/libro-de-reclamaciones" style={{ textDecoration: "underline" }}>Libro de Reclamaciones</a>.
+        </p>
+
+        <h2 style={H2}>7. Ley aplicable</h2>
         <p style={P}>
           Estos términos se rigen por las leyes de la República del Perú. Cualquier controversia se somete a los jueces y tribunales de Ica. Para consultas: <a href={`mailto:${site.email}`} style={{ textDecoration: "underline" }}>{site.email}</a>.
         </p>

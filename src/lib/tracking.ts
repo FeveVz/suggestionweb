@@ -67,6 +67,14 @@ export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "";
  */
 export const INTERNO_KEY = "sg_interno";
 /**
+ * «No medir mi visita» (botón de /privacidad, decisión 9 de la auditoría,
+ * MED-08): clave aparte de sg_interno porque la decide el visitante, no el
+ * equipo. Mientras valga "1", ese navegador no carga GA4, el Píxel ni Clarity
+ * ni manda copias a la API de Conversiones. No equivale a pedir consentimiento
+ * previo: es la opción de rechazar la medición en cualquier momento.
+ */
+export const OPTOUT_KEY = "sg_optout";
+/**
  * Solo se mide en el dominio real. Las vistas previas de Vercel (*.vercel.app)
  * y localhost no cargan GA4, Píxel ni Clarity ni mandan copias a la API de
  * Conversiones (auditoría MED-15, tarea 3.12).
@@ -74,7 +82,7 @@ export const INTERNO_KEY = "sg_interno";
 export const DOMINIOS_MEDIBLES = ["suggestion.pe", "www.suggestion.pe"];
 const HOST_AJENO_JS = `(${JSON.stringify(DOMINIOS_MEDIBLES)}.indexOf(location.hostname)<0)`;
 
-export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location.search).get('interno');if(q==='1')localStorage.setItem('${INTERNO_KEY}','1');if(q==='0')localStorage.removeItem('${INTERNO_KEY}');return localStorage.getItem('${INTERNO_KEY}')==='1'}catch(e){return false}})()`;
+export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location.search).get('interno');if(q==='1')localStorage.setItem('${INTERNO_KEY}','1');if(q==='0')localStorage.removeItem('${INTERNO_KEY}');return localStorage.getItem('${INTERNO_KEY}')==='1'||localStorage.getItem('${OPTOUT_KEY}')==='1'}catch(e){return false}})()`;
 /** Arranque de las etiquetas: no medir si el navegador es interno o el dominio no es el real. */
 export const NO_MEDIR_JS = `(${ES_INTERNO_JS}||${HOST_AJENO_JS})`;
 
@@ -200,7 +208,11 @@ export function leadDedup(): { event_id: string; event_source_url: string; fbp: 
   };
 }
 
-/** ¿Navegador marcado como interno (`?interno=1`)? Entonces no se mide nada. */
+/**
+ * ¿Navegador marcado como interno (`?interno=1`)? Entonces no se mide nada.
+ * Solo el equipo: AuditForm lo usa además para guardar sus pruebas marcadas,
+ * así que el «No medir mi visita» de un visitante va aparte (pidioNoMedir).
+ */
 export function esInterno(): boolean {
   try {
     return localStorage.getItem(INTERNO_KEY) === "1";
@@ -209,10 +221,19 @@ export function esInterno(): boolean {
   }
 }
 
+/** ¿El visitante pulsó «No medir mi visita» en /privacidad? */
+export function pidioNoMedir(): boolean {
+  try {
+    return localStorage.getItem(OPTOUT_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
 /** ¿No hay que medir esta visita? Navegador interno o dominio que no es el real. */
 export function noMedir(): boolean {
   if (typeof window === "undefined") return true;
-  return esInterno() || !DOMINIOS_MEDIBLES.includes(window.location.hostname);
+  return esInterno() || pidioNoMedir() || !DOMINIOS_MEDIBLES.includes(window.location.hostname);
 }
 
 /**
