@@ -98,6 +98,14 @@ export const SECTORES: Sector[] = [
           texto: "Cuando el precio está por encima de lo que paga la zona, la habilitación no avanza o la ubicación no encaja con el público al que se le habla, la publicidad solo consigue que más gente lo descubra antes. Si en el diagnóstico vemos eso, lo decimos: es más útil que vender una campaña que no iba a funcionar.",
         },
       },
+      {
+        h2: "Proyectos inmobiliarios fuera de Ica",
+        parrafo:
+          "El trabajo con un proyecto se puede llevar en remoto. En Arequipa, una plaza con mucha más oferta, la diferencia está en separar al comprador que busca vivienda del inversionista y sostener el seguimiento hasta la visita a sala de ventas.",
+        enlaces: [
+          { label: "Agencia de marketing en Arequipa", href: "/agencia-de-marketing-en-arequipa" },
+        ],
+      },
     ],
     serviciosQueUsa: [
       "publicidad-digital",
@@ -232,6 +240,16 @@ export const SECTORES: Sector[] = [
         h2: "Qué incluye trabajar con nosotros",
         parrafo:
           "Un responsable de cuenta que conoce tu operación y te contesta. Estrategia y calendario de campañas por modelo y por mes. Producción de las piezas: foto y video de tus unidades en tu propio piso, no imágenes de catálogo. Puesta en marcha del CRM y del seguimiento comercial junto a tu equipo. Y un reporte mensual con prospectos, pruebas de manejo, cierres y costo por unidad, revisado contigo en reunión.",
+      },
+      {
+        h2: "Concesionarios fuera de Ica",
+        parrafo:
+          "La mecánica es la misma —campañas pensadas para llegar a la prueba de manejo—, pero cambia según la plaza: en Chincha el concesionario compite con la oferta de Lima, en Arequipa con muchos más anunciantes pagando por el mismo comprador y en Tacna con un comercio que vive de comparar precios.",
+        enlaces: [
+          { label: "Agencia de marketing en Chincha", href: "/agencia-de-marketing-en-chincha" },
+          { label: "Agencia de marketing en Arequipa", href: "/agencia-de-marketing-en-arequipa" },
+          { label: "Agencia de marketing en Tacna", href: "/agencia-de-marketing-en-tacna" },
+        ],
       },
     ],
     serviciosQueUsa: [
@@ -375,6 +393,18 @@ export const SECTORES: Sector[] = [
           texto: "Comprueba que tu ficha de empresa esté verificada y con el horario real, incluidos feriados. Una campaña que trae gente a un negocio que parece cerrado gasta el presupuesto en la puerta.",
         },
       },
+      {
+        h2: "El turismo en las otras ciudades que atendemos",
+        parrafo:
+          "Además de Ica, el turismo es el rubro que más pesa en varias de las ciudades que atendemos, y cada destino tiene su problema: en Paracas, llenar fuera de temporada; en Nazca y Palpa, aparecer en la planificación del viaje antes de que el turista llegue; en Huaraz y Ayacucho, una temporada corta que hay que alargar. Lo contamos ciudad por ciudad.",
+        enlaces: [
+          { label: "Agencia de marketing en Pisco y Paracas", href: "/agencia-de-marketing-en-pisco" },
+          { label: "Agencia BTL y de marketing en Nazca", href: "/agencia-de-marketing-en-nazca" },
+          { label: "Agencia de marketing en Huaraz", href: "/agencia-de-marketing-en-huaraz" },
+          { label: "Agencia de marketing en Ayacucho", href: "/agencia-de-marketing-en-ayacucho" },
+          { label: "Agencia de marketing en Palpa", href: "/agencia-de-marketing-en-palpa" },
+        ],
+      },
     ],
     serviciosQueUsa: [
       "publicidad-digital",
@@ -517,6 +547,14 @@ export const SECTORES: Sector[] = [
           titulo: "El error que anula la inversión",
           texto: "Encender una campaña de demanda directa sin tener quién atienda los mensajes el mismo día. El resultado es pagar por generar interés y dejar que se enfríe, y desde fuera parece una campaña que no funcionó cuando lo que falló fue el tramo posterior al clic.",
         },
+      },
+      {
+        h2: "Marcas de consumo fuera de Ica",
+        parrafo:
+          "La misma lógica de marca y canal sirve para la artesanía de Ayacucho —retablo, textil y cerámica—, que muchas veces se vende al precio del souvenir cuando tiene valor de pieza.",
+        enlaces: [
+          { label: "Agencia de marketing en Ayacucho", href: "/agencia-de-marketing-en-ayacucho" },
+        ],
       },
     ],
     serviciosQueUsa: [
@@ -663,6 +701,15 @@ export const SECTORES: Sector[] = [
           texto: "No interpelamos al paciente sobre su estado de salud («¿tienes dolor de rodilla?»), no prometemos resultados ni curas, y no usamos imágenes de antes y después como reclamo principal. Las tres son motivo habitual de rechazo de anuncios y, en varias especialidades, también un problema regulatorio. Lo que sí construimos es credibilidad verificable: especialidad, colegiatura, años de ejercicio y pacientes que hablan por ti.",
         },
       },
+      {
+        h2: "Clínicas en Arequipa y Tacna",
+        parrafo:
+          "Fuera de Ica, la salud pesa en Arequipa, donde una clínica compite con mucha oferta por el mismo paciente, y en Tacna, donde el turismo médico, dental y estético vive del paciente que cruza la frontera y decide por confianza.",
+        enlaces: [
+          { label: "Agencia de marketing en Arequipa", href: "/agencia-de-marketing-en-arequipa" },
+          { label: "Agencia de marketing en Tacna", href: "/agencia-de-marketing-en-tacna" },
+        ],
+      },
     ],
     serviciosQueUsa: [
       "publicidad-digital",
@@ -795,6 +842,17 @@ export const SECTORES: Sector[] = [
           nota: "Un año con pocas órdenes nuevas pero con varios compradores en auditoría es un buen año. Un panel de leads diría lo contrario, y por eso no usamos ese panel.",
         },
       },
+      {
+        h2: "El agro que vende fuera, en otras ciudades del sur",
+        parrafo:
+          "Además de Ica, el agro que le vende a compradores de fuera pesa en Pisco, con la pesca y la agroexportación; en Chincha, con la agroindustria y las avícolas; en Palpa, con los cítricos, la uva y la pecana; y en Tacna, con el olivo y el orégano.",
+        enlaces: [
+          { label: "Agencia de marketing en Pisco y Paracas", href: "/agencia-de-marketing-en-pisco" },
+          { label: "Agencia de marketing en Chincha", href: "/agencia-de-marketing-en-chincha" },
+          { label: "Agencia de marketing en Palpa", href: "/agencia-de-marketing-en-palpa" },
+          { label: "Agencia de marketing en Tacna", href: "/agencia-de-marketing-en-tacna" },
+        ],
+      },
     ],
     serviciosQueUsa: [
       "desarrollo-web",
@@ -909,6 +967,15 @@ export const SECTORES: Sector[] = [
           ],
           nota: "El primer mes de una tienda nueva es calibración: hay poco historial y las cifras se mueven mucho. Lo decimos antes, no cuando llega el reporte.",
         },
+      },
+      {
+        h2: "El pisco fuera de Ica: Chincha y Pisco",
+        parrafo:
+          "Fuera de Ica, el pisco pesa en dos ciudades que atendemos: Chincha, que suma su identidad afroperuana a la marca, y Pisco, donde el visitante de Paracas puede volverse cliente de la bodega gracias al enoturismo.",
+        enlaces: [
+          { label: "Agencia de marketing en Chincha", href: "/agencia-de-marketing-en-chincha" },
+          { label: "Agencia de marketing en Pisco y Paracas", href: "/agencia-de-marketing-en-pisco" },
+        ],
       },
     ],
     serviciosQueUsa: [

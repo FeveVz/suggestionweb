@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
     // Sin las cifras de los cortes de Ceinys: en 155 caracteres no cabe su
     // etiqueta ni su fecha de corte (docs-fuente/21), y «18 lotes» junto a
     // «S/350K» invitaba a comparar dos casos medidos con criterios distintos.
-    "Resultados de negocio, no capturas de likes: S/350K en ventas, 75 reservas, 15 contratos y autos vendidos en dos eventos. Los recientes, con período y fecha de corte.",
+    "Resultados de negocio, no likes: S/350K en ventas, 75 reservas, 15 contratos y autos vendidos en dos eventos. Los recientes, con período y fecha de corte.",
   path: "/casos",
   ogImage: "/assets/og/casos.png",
 });

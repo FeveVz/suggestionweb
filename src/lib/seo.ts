@@ -33,7 +33,7 @@ export function buildMetadata(opts: {
       siteName: site.name,
       locale: site.locale,
       type: opts.type || "website",
-      images: [{ url: image, width: 1200, height: 630, alt: site.name }],
+      images: [{ url: image, width: 1200, height: 630, alt: opts.title }],
     },
     twitter: {
       card: "summary_large_image",

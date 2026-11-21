@@ -13,6 +13,9 @@ import type { NextConfig } from "next";
  * - googletagmanager + google-analytics + analytics.google.com → GA4 (GT-NNQW6GPS).
  * - connect.facebook.net + facebook.com → Píxel de Meta.
  * - clarity.ms + bing.com → Clarity (es de Microsoft y carga su propio tag).
+ *   bat.bing.com (etiqueta UET de Microsoft Ads) salió de script-src el
+ *   21-nov-2026: no se usa y el tag de Clarity no carga nada de ese dominio
+ *   (comprobado en su script). *.bing.com sigue en connect-src por Clarity.
  *
  * `unsafe-inline` en script-src es obligatorio hoy: Next inyecta su arranque
  * en línea, el sitio marca `<html class="js">` así y los bloques JSON-LD son
@@ -29,7 +32,7 @@ const CSP = [
   // violates..." y ese evento se perdía. Detectado en local antes de subirlo.
   "form-action 'self' https://www.facebook.com",
   "frame-ancestors 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms https://bat.bing.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
@@ -78,6 +81,9 @@ const nextConfig: NextConfig = {
       // tarjeta la buscaba a ella, y mandarlo a la ficha de otra persona sin
       // avisar sería confuso.
       { source: "/equipo/maria-teresa", destination: "/nosotros", permanent: true },
+      // /equipo no tiene página propia: el equipo está en /nosotros. Antes lo
+      // resolvía equipo/page.tsx con redirect(), que responde 307 (temporal).
+      { source: "/equipo", destination: "/nosotros", permanent: true },
     ];
   },
 
@@ -119,6 +125,12 @@ const nextConfig: NextConfig = {
             value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
           },
           { key: "Content-Security-Policy", value: CSP },
+          // Vercel ya mandaba HSTS de 2 años, pero sin includeSubDomains. Todo
+          // subdominio web de suggestion.pe apunta a Vercel (registro comodín),
+          // que siempre sirve HTTPS, y el correo de Hostinger no usa
+          // subdominios web; revisado en el DNS el 21-nov-2026. «preload» NO
+          // se pone sin decisión del dueño (decisión 18): es casi irreversible.
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
         ],
       },
     ];

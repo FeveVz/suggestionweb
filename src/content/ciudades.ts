@@ -40,16 +40,19 @@ export const CIUDADES: Ciudad[] = [
         h2: "Agroindustria y avícolas: venta B2B, no likes",
         parrafo:
           "El agro y la producción avícola de la zona venden a otras empresas, no al consumidor de la calle. Ahí el marketing no es postear: es una web que sostiene una ficha técnica, contenido que genera confianza en el comprador industrial y un seguimiento ordenado de cada cotización. En consumo directo ya nos pasó con Granjas Bonanza: 15 contratos cerrados con S/2,500 en campañas de demanda directa.",
+        enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
       },
       {
         h2: "Concesionarios y vehículos",
         parrafo:
           "Atendemos 19 marcas de vehículos entre livianos, camiones y línea amarilla. Sabemos lo que cuesta un lead de auto que no llega al piso. Para un concesionario en Chincha el trabajo es doble: captar al comprador de la provincia y no perderlo contra la oferta de Lima, con campañas de financiamiento y modelo del mes que empujan a la prueba de manejo.",
+        enlaces: [{ label: "Marketing automotriz para concesionarios", href: "/marketing-automotriz" }],
       },
       {
         h2: "Bodegas, pisco y comercio local",
         parrafo:
           "Chincha comparte con Ica la tradición del pisco y suma su propia identidad afroperuana, que es un activo de marca que casi nadie está explotando bien. Para una bodega o un negocio con historia, el trabajo empieza por la marca —cómo se ve, qué cuenta— y sigue por venta directa y enoturismo, que es donde está el margen.",
+        enlaces: [{ label: "Marketing para bodegas de pisco y vino", href: "/marketing-pisco-vino" }],
       },
       {
         h2: "Qué medimos",
@@ -100,6 +103,7 @@ export const CIUDADES: Ciudad[] = [
         h2: "Turismo en Paracas: llenar también fuera de temporada",
         parrafo:
           "El reto de un hotel, una agencia o un restaurante en la zona no es la temporada alta, es marzo. La solución no es bajar el precio: es tener una oferta distinta para cada momento del año y un canal de reserva propio que no dependa solo de las plataformas y su comisión. Con Hoteles Señor de Luren logramos 75 reservas en una sola campaña que cubrió alta y baja temporada.",
+        enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
         h2: "Industria y puerto: el marketing que sí aplica a una B2B",
@@ -110,11 +114,26 @@ export const CIUDADES: Ciudad[] = [
         h2: "Bodegas de pisco: la marca es el producto",
         parrafo:
           "En pisco, la etiqueta y la historia valen tanto como el destilado. Un producto con medallas pero con marca pobre se vende al precio del que no las tiene. Trabajamos branding, fotografía y video de producto, venta directa y enoturismo, que es donde el visitante que ya está en la zona se convierte en cliente recurrente.",
+        enlaces: [{ label: "Marketing para bodegas de pisco y vino", href: "/marketing-pisco-vino" }],
       },
       {
         h2: "Pesca y agroexportación",
         parrafo:
           "Para quien exporta, el marketing es institucional: presencia digital que resista la mirada de un importador extranjero, catálogo claro, contenido que demuestre estándares y trazabilidad, y material para ferias. No se trata de vender por Instagram, sino de que cuando el comprador te busque, encuentre a una empresa que da confianza.",
+        enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
+      },
+      {
+        h2: "Lo que ya hicimos en Paracas",
+        parrafo:
+          "En febrero de 2024 montamos para GWM Motors un showroom a cielo abierto en el aniversario del distrito de Paracas: dos días con la Haval Dargo y la GWM Poer, para probar cómo recibía un mercado costero y turístico a los modelos todoterreno de la marca antes de invertir en el canal. La gente se subió a conocerlas y de ahí salieron agendamientos de prueba de manejo en el concesionario.",
+        foto: {
+          src: fotoPortafolio("aniversario-paracas-gwm", 2),
+          alt: "Camioneta GWM Poer y módulo de marca en el showroom al aire libre del aniversario de Paracas",
+          cap: "GWM Motors, febrero de 2024: showroom al aire libre aprovechando el flujo del aniversario del distrito de Paracas.",
+          w: FOTOS_PORTAFOLIO["aniversario-paracas-gwm"]?.[1]?.[0],
+          h: FOTOS_PORTAFOLIO["aniversario-paracas-gwm"]?.[1]?.[1],
+        },
+        enlaces: [{ label: "El showroom de Paracas, en el portafolio", href: "/portafolio#aniversario-paracas-gwm" }],
       },
       {
         h2: "Qué medimos",
@@ -201,6 +220,7 @@ export const CIUDADES: Ciudad[] = [
             texto: "Animador para tu evento o tu tienda, y perifoneo recorriendo la ciudad para anunciar una apertura, una oferta o una fecha.",
           },
         ],
+        enlaces: [{ label: "La semana de cortatráfico, en el portafolio", href: "/portafolio#cortatrafico-entel-nazca" }],
       },
       {
         h2: "Qué acción te conviene en Nazca",
@@ -226,11 +246,13 @@ export const CIUDADES: Ciudad[] = [
         h2: "Comercio, servicios y proveedores",
         parrafo:
           "No todo en Nazca es turismo. Hay comercio, transporte y empresas que proveen a la actividad minera de la zona. Ese negocio es B2B: se gana con credibilidad, presencia ordenada en buscadores y un seguimiento serio de cada cotización, no con publicaciones diarias. Así se pensó la exhibición de maquinaria de XCMG en Nazca: tres días para contratistas y empresarios, no para público general.",
+        enlaces: [{ label: "La exhibición de XCMG en Nazca, en el portafolio", href: "/portafolio#xcmg-linea-amarilla-nazca" }],
       },
       {
         h2: "Captar al turista antes de que llegue",
         parrafo:
           "La diferencia entre un hotel lleno y uno a media capacidad no suele estar en el servicio, sino en el momento de la captación. El viajero decide dónde dormir y qué tour tomar días o semanas antes de subir al bus. Si tu negocio solo existe para quien ya está caminando por la plaza, dependes del azar y de la comisión de las plataformas.",
+        enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
         h2: "Reserva directa: dejar de regalar comisión",
@@ -306,22 +328,26 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Competir en una plaza con mucha oferta",
         parrafo:
-          "En una ciudad grande hay más competencia pagando por el mismo cliente, así que el costo por contacto sube. La ventaja no está en tener más presupuesto, sino en perder menos: responder rápido, calificar bien y darle seguimiento a cada oportunidad. La mayoría de negocios pierde más ventas por desorden interno que por falta de publicidad.",
+          "En una ciudad grande hay más competencia pagando por el mismo cliente, así que el costo por contacto sube. La ventaja no está en tener más presupuesto, sino en perder menos: responder rápido, calificar bien y darle seguimiento a cada oportunidad. La mayoría de negocios pierde más ventas por desorden interno que por falta de publicidad. En marketing digital, perder menos también es aparecer en Google cuando alguien busca tu servicio en Arequipa: con un buen SEO, parte de los contactos llega sin pagar un anuncio.",
+        enlaces: [{ label: "Posicionamiento SEO para empresas", href: "/servicios/seo" }],
       },
       {
         h2: "Automotriz: del clic a la prueba de manejo",
         parrafo:
           "Es donde tenemos más kilómetros recorridos: 19 marcas de vehículos entre livianos, camiones y línea amarilla, incluida XCMG. Un lead de auto que no llega al piso no vale nada, así que las campañas se diseñan alrededor de la prueba de manejo y del argumento que mueve la decisión —financiamiento, cuota inicial, modelo del mes—, no alrededor del clic barato.",
+        enlaces: [{ label: "Marketing automotriz", href: "/marketing-automotriz" }],
       },
       {
         h2: "Inmobiliario: citas calificadas, no curiosos",
         parrafo:
           "Un proyecto se vende en preventa, cuando la valorización todavía es un argumento. El trabajo es separar al comprador que busca vivienda del inversionista, hablarle distinto a cada uno y sostener el seguimiento hasta la visita a sala de ventas. Con Inmobiliaria Ceinys, S/3,000 en Meta Ads generaron 350 leads, 20 visitas y 8 lotes vendidos: S/350K en ventas.",
+        enlaces: [{ label: "Marketing inmobiliario", href: "/marketing-inmobiliario" }],
       },
       {
         h2: "Salud y servicios profesionales",
         parrafo:
           "Una clínica o un consultorio no necesita más seguidores: necesita agenda llena y pacientes que lleguen a la cita. Eso se logra con campañas segmentadas por especialidad y zona, recordatorios que reducen las ausencias y una reputación digital cuidada, que en salud pesa más que en cualquier otro rubro.",
+        enlaces: [{ label: "Marketing para clínicas", href: "/marketing-salud" }],
       },
       {
         h2: "Por qué una agencia que no es de Arequipa",
@@ -385,16 +411,19 @@ export const CIUDADES: Ciudad[] = [
         h2: "Turismo médico, dental y estético",
         parrafo:
           "Es la actividad que más ha crecido con ese flujo y también la más competida. Aquí la decisión se toma por confianza: el paciente quiere saber quién lo va a atender, con qué respaldo y qué pasa si algo sale mal. Reputación digital, testimonios reales, precios claros y una respuesta inmediata a la consulta valen más que cualquier anuncio bonito.",
+        enlaces: [{ label: "Marketing para clínicas", href: "/marketing-salud" }],
       },
       {
         h2: "Comercio fronterizo y automotriz",
         parrafo:
           "El comercio de Tacna vive de la comparación de precios, así que la oferta tiene que estar visible y ser inequívoca. En vehículos aportamos experiencia directa: atendemos 19 marcas entre livianos, camiones y línea amarilla, y sabemos armar campañas que empujan a la prueba de manejo en lugar de acumular consultas que nunca llegan al piso.",
+        enlaces: [{ label: "Marketing automotriz", href: "/marketing-automotriz" }],
       },
       {
         h2: "Agro: olivo, orégano y exportación",
         parrafo:
           "Para el productor que exporta, el marketing es institucional: una web que resista la revisión de un importador, catálogo y ficha de producto en orden, contenido que demuestre estándares y material para ferias. Es el mismo trabajo que hacemos con agroexportadoras, uno de nuestros siete sectores.",
+        enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
       },
       {
         h2: "Qué medimos",
@@ -445,11 +474,13 @@ export const CIUDADES: Ciudad[] = [
         h2: "Turismo más allá de Semana Santa",
         parrafo:
           "El calendario turístico de Ayacucho tiene un pico enorme y once meses de trabajo por hacer. Depender de una sola fecha es un riesgo: si ese año llueve, hay un problema logístico o cambia el feriado, el ejercicio completo se resiente. La salida es construir demanda para el resto del año con motivos distintos —cultura, gastronomía, naturaleza, viaje corto— dirigidos a públicos distintos.",
+        enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
         h2: "Artesanía: de recuerdo a marca",
         parrafo:
           "El retablo, el textil y la cerámica de la zona se venden muchas veces al precio del souvenir cuando tienen valor de pieza. La diferencia la hace la marca: fotografía decente, una historia que se pueda contar, presencia digital y un canal de venta que llegue más allá del visitante que pasó por la tienda. Es el mismo trabajo que hacemos en marcas y consumo, uno de nuestros sectores.",
+        enlaces: [{ label: "Marketing para marcas de consumo", href: "/marketing-marcas-consumo" }],
       },
       {
         h2: "Hotelería y restaurantes",
@@ -510,6 +541,7 @@ export const CIUDADES: Ciudad[] = [
         h2: "El viajero de montaña decide antes de llegar",
         parrafo:
           "Quien viene a hacer trekking reserva alojamiento, tour y a veces guía con semanas de anticipación, y lo hace comparando en internet desde su ciudad o su país. Eso significa que la competencia por ese cliente no se juega en Huaraz: se juega en el buscador y en las plataformas, mucho antes de que el bus salga.",
+        enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
         h2: "Reserva directa: recuperar el margen",
@@ -575,6 +607,7 @@ export const CIUDADES: Ciudad[] = [
         h2: "Un mercado pequeño se trabaja distinto",
         parrafo:
           "Con pocos habitantes, el error clásico es copiar la receta de una ciudad grande: mucha pauta apuntando a un público que no existe en ese volumen. En Palpa la ecuación es otra. La recomendación pesa más que el anuncio, el mismo cliente vuelve varias veces al año y buena parte de la venta importante no está en el distrito, sino fuera: el comprador de Lima, el turista que baja por la Panamericana, el acopiador que compra la cosecha. Por eso lo que rinde no es gritar más fuerte adentro, es hacerse visible afuera.",
+        enlaces: [{ label: "BTL en Palpa con nuestro equipo de Nazca", href: "/agencia-de-marketing-en-nazca" }],
       },
       {
         h2: "La naranja de Palpa: un nombre que nadie ha convertido en marca",
@@ -585,11 +618,13 @@ export const CIUDADES: Ciudad[] = [
         h2: "Turismo: los geoglifos que casi nadie visita",
         parrafo:
           "Los geoglifos de Palpa son anteriores a las líneas de Nazca y están a un lado de la ruta que miles de viajeros recorren cada año camino al sur. La mayoría pasa de largo, no porque no le interese, sino porque no se entera. Para un hospedaje, un restaurante o una agencia de la zona, el trabajo no es competir con Nazca: es aparecer en la planificación del viaje, que ocurre semanas antes y en internet, con una propuesta concreta de por qué vale la pena parar.",
+        enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
         h2: "Agro: vender al comprador, no al vecino",
         parrafo:
           "Para el productor de cítricos, uva o pecana, el marketing útil no es publicar en redes: es que cuando un acopiador, un exportador o un comprador mayorista te busque, encuentre una empresa que da confianza. Eso significa una web sencilla pero seria, fichas de producto con datos reales de calibre y campaña, fotografías que muestren el estado del cultivo y una forma ordenada de responder cada consulta. Es el mismo trabajo que hacemos en agroexportación, uno de nuestros siete sectores.",
+        enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
       },
       {
         h2: "Comercio local: primero lo básico, que suele estar suelto",

@@ -7,7 +7,6 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
-import { breadcrumbSchema } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/site";
 import CarruselFotos from "@/components/CarruselFotos";
 import { CARRUSEL_CSS } from "@/components/carrusel-css";
@@ -35,7 +34,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Portafolio de Activaciones BTL | Suggestion",
   description:
-    `${PORTAFOLIO.length} activaciones y piezas de gran formato producidas entre 2024 y 2026 para marcas automotrices, inmobiliarias y de telecomunicaciones: qué resolvía cada una y cómo se montó.`,
+    `${PORTAFOLIO.length} activaciones y piezas de gran formato, de 2024 a 2026, para marcas automotrices, inmobiliarias y de telecomunicaciones: qué resolvía cada una y cómo se hizo.`,
   path: "/portafolio",
   ogImage: "/assets/og/portafolio.png",
 });
@@ -50,10 +49,7 @@ export default function PortafolioPage() {
     <>
       <JsonLd
         data={[
-          breadcrumbSchema([
-            { name: "Inicio", url: absoluteUrl("/") },
-            { name: "Portafolio", url },
-          ]),
+          // La miga la emite <Breadcrumbs>: una sola fuente (auditoría TEC-06).
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
@@ -166,7 +162,7 @@ export default function PortafolioPage() {
 
           <div className="hk-pf-lista">
             {PORTAFOLIO.map((p) => (
-              <article key={p.slug} className="hk-pf-item hk-lift" data-tipo={p.tipo}>
+              <article key={p.slug} id={p.slug} className="hk-pf-item hk-lift" data-tipo={p.tipo}>
                 <CarruselFotos fotos={fotosDe(p)} titulo={p.titular} />
 
                 <div className="hk-pf-texto">
@@ -217,6 +213,7 @@ export default function PortafolioPage() {
           .hk-pf-item {
             background:var(--white); border:1px solid var(--border-subtle);
             border-radius:var(--radius-md); overflow:hidden;
+            scroll-margin-top:96px;
           }
           .hk-pf-texto { padding:clamp(1.25rem,3vw,2rem); }
           .hk-pf-meta {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -33,7 +33,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: { icon: "/favicon.ico" },
+  // Los tres iconos explícitos: con `icons` declarado, Next no añade solo los
+  // de src/app (icon.png, apple-icon.png), que se servían pero no salían en el
+  // <head> (auditoría TEC-19, 21-nov-2026).
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     type: "website",
     locale: site.locale,
@@ -49,6 +58,11 @@ export const metadata: Metadata = {
     description: site.description,
     images: [site.ogImage],
   },
+};
+
+/** Color de la barra del navegador en el celular: el blanco de la cabecera. */
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

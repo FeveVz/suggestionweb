@@ -237,6 +237,7 @@ export default async function ServicioPage({ params }: Params) {
         serviceType: s.nombre,
         description: s.metaDescription,
         url: `/servicios/${s.slug}`,
+        planes: SERVICIOS_PRODUCCION.has(s.slug) ? undefined : getPrecios(s.slug),
       })}
     />
   );

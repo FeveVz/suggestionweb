@@ -69,6 +69,8 @@ const SERVICIOS_ANCLA: Record<string, RelatedLink[]> = {
   ],
   "ia-automatizacion": [
     { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
+    // El agente de IA tenía 6 enlaces entrantes y 0 impresiones (auditoría ONP-03).
+    { label: "Agente de IA para WhatsApp", href: "/servicios/chatbot-whatsapp" },
     { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
     { label: "Branding e identidad de marca", href: "/servicios/branding" },
   ],

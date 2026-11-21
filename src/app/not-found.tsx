@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Btn, Blot, Label } from "@/components/brand/parts";
+
+/**
+ * Title propio y un solo robots: antes heredaba el title de la home y el
+ * «index, follow» del layout, junto al noindex que Next pone en la 404
+ * (auditoría TEC-14, 21-nov-2026).
+ */
+export const metadata: Metadata = {
+  title: "Página no encontrada",
+  robots: { index: false, follow: true },
+};
 
 /** 404 con identidad (Rorschach): convierte el error en un momento de marca. */
 export default function NotFound() {

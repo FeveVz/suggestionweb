@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import type { Seccion } from "@/content/types";
 import Grafico from "@/components/Grafico";
@@ -325,6 +327,17 @@ export default function Secciones({ secciones }: { secciones: Seccion[] }) {
               ))}
             </ul>
           )}
+          {sec.enlaces?.length ? (
+            <ul style={{ listStyle: "none", margin: "18px 0 0", padding: 0, display: "flex", flexWrap: "wrap", gap: "10px 24px" }}>
+              {sec.enlaces.map((e) => (
+                <li key={e.href}>
+                  <Link href={e.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 6, font: "var(--fw-medium) var(--fs-base)/1.4 var(--font-body)", color: "var(--text-strong)" }}>
+                    {e.label} <ArrowRight size={16} aria-hidden />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : null}
           {sec.nota && <NotaAlMargen n={sec.nota} />}
           {sec.foto && <FotoSeccion f={sec.foto} />}
         </div>

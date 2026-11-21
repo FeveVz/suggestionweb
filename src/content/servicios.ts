@@ -675,6 +675,11 @@ const SERVICIOS_BASE: Servicio[] = [
       { paso: "03", titulo: "Recolección", texto: "Ejecutamos la investigación de campo y el análisis de datos." },
       { paso: "04", titulo: "Insights", texto: "Entregamos hallazgos con recomendaciones accionables." },
     ],
+    lecturas: [
+      { label: "Comportamiento del consumidor peruano: cómo decide tu cliente", href: "/blog/psicologia-de-mercado/comportamiento-del-consumidor-peruano" },
+      { label: "6 gatillos de la psicología de ventas", href: "/blog/psicologia-de-mercado/psicologia-de-ventas" },
+      { label: "Qué es el neuromarketing y cómo usarlo para vender más", href: "/blog/psicologia-de-mercado/que-es-neuromarketing" },
+    ],
     faq: [
       {
         q: "¿Qué es la investigación de mercado?",
@@ -709,7 +714,7 @@ const SERVICIOS_BASE: Servicio[] = [
     // Dueña de «agencia de marketing digital» (la home va por «agencia de
     // marketing en Ica»). «Para empresas» suma la búsqueda «marketing digital
     // para empresas» sin quitarle la principal (keyword research 2026-11-14).
-    metaTitle: "Agencia de Marketing Digital para Empresas en Perú | Suggestion",
+    metaTitle: "Agencia de Marketing Digital para Empresas en Perú",
     metaDescription:
       "Agencia de marketing digital para empresas y pymes en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
     h1: "Marketing digital para empresas que genera ventas, no vanidad",
@@ -1610,7 +1615,7 @@ const SERVICIOS_BASE: Servicio[] = [
     // producción audiovisual" (130 impresiones en 52 días), pero ni el título ni
     // la descripción usaban esas palabras. Ojo: en posición 53-73 esto no trae
     // clics por sí solo; sirve para cuando el contenido haga subir la página.
-    metaTitle: "Productora Audiovisual en Ica y Videos Corporativos | Suggestion",
+    metaTitle: "Productora Audiovisual en Ica y Videos Corporativos",
     metaDescription:
       "Servicios de producción audiovisual y postproducción en Ica: spots, video sell, fotografía y drone. Productora propia. Consultoría gratis.",
     h1: "Productora audiovisual: videos corporativos que cuentan y venden",
@@ -1691,6 +1696,10 @@ const SERVICIOS_BASE: Servicio[] = [
       { paso: "02", titulo: "Pre-producción", texto: "Guion, locaciones, casting y planificación." },
       { paso: "03", titulo: "Producción", texto: "Grabación con equipo profesional y dirección." },
       { paso: "04", titulo: "Post-producción", texto: "Edición, color, audio, motion graphics y entregables." },
+    ],
+    lecturas: [
+      { label: "Marketing automotriz: ejemplos con contenido del auto en uso", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
+      { label: "Publicidad inmobiliaria en redes: qué funciona en Perú", href: "/blog/inmobiliario/publicidad-inmobiliaria-en-redes" },
     ],
     faq: [
       {
@@ -1842,6 +1851,10 @@ const SERVICIOS_BASE: Servicio[] = [
       { paso: "03", titulo: "Producción", texto: "Montaje, staff, materiales y ejecución." },
       { paso: "04", titulo: "Informe", texto: "Métricas, fotos, videos y aprendizajes." },
     ],
+    lecturas: [
+      { label: "Publicidad para venta de autos: eventos y activaciones que cierran", href: "/blog/automotriz/publicidad-para-venta-de-autos" },
+      { label: "Cuánto cuesta un millar de volantes en Perú", href: "/blog/imprenta-btl/cuanto-cuesta-un-millar-de-volantes-en-peru" },
+    ],
     faq: [
       {
         q: "¿Qué es el BTL en publicidad?",
@@ -1988,6 +2001,10 @@ const SERVICIOS_BASE: Servicio[] = [
       { paso: "02", titulo: "Producción", texto: "Diseño e impresión del material publicitario." },
       { paso: "03", titulo: "Instalación", texto: "Aplicación profesional en vehículos o pantallas." },
       { paso: "04", titulo: "Operación", texto: "Ejecución de rutas con tracking y reportes." },
+    ],
+    lecturas: [
+      { label: "Panel, valla, bicivalla o vehículo rotulado: cuál te conviene", href: "/blog/imprenta-btl/panel-valla-bicivalla-o-vehiculo-rotulado" },
+      { label: "Cuánto cuesta un millar de volantes en Perú", href: "/blog/imprenta-btl/cuanto-cuesta-un-millar-de-volantes-en-peru" },
     ],
     faq: [
       {

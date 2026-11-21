@@ -74,9 +74,10 @@ export default function CiudadPage({ slug }: { slug: string }) {
 
   return (
     <LandingArticle
+      // Sin el nivel «Cobertura»: enlazaba a /sectores, que no trata de
+      // cobertura, y /cobertura no existe (auditoría TEC-12, 21-nov-2026).
       breadcrumbs={[
         { name: "Inicio", href: "/" },
-        { name: "Cobertura", href: "/sectores" },
         { name: c.nombre, href: `/agencia-de-marketing-en-${c.slug}` },
       ]}
       kicker={c.kicker ?? `Marketing en ${c.nombre}`}

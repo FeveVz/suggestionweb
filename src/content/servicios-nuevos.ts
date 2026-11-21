@@ -298,7 +298,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     // 16-nov: «agente de ia para whatsapp» tiene más sugerencias comerciales
     // (precio, business, meta) que «chatbot whatsapp»; el título lleva los dos.
-    metaTitle: "Agente de IA para WhatsApp: Chatbot para Empresas | Suggestion",
+    metaTitle: "Agente de IA para WhatsApp: Chatbot para Empresas",
     metaDescription:
       "Agente de IA para WhatsApp que responde a cualquier hora, califica a cada contacto y agenda por tu equipo, conectado a tu CRM. Lo usamos en Suggestion.",
     h1: "Agente de IA para WhatsApp: el chatbot que responde, califica y agenda",

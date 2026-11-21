@@ -5,6 +5,7 @@
  */
 
 import { site, SITE_URL, ORG_ID, WEBSITE_ID, absoluteUrl } from "./site";
+import type { PlanPrecio } from "@/content/types";
 
 type Json = Record<string, unknown>;
 
@@ -74,7 +75,14 @@ export function organizationSchema(): Json {
   };
 }
 
-/** WebSite + SearchAction (doc 12 §2.2). */
+/**
+ * WebSite (doc 12 §2.2).
+ *
+ * Sin SearchAction desde el 21-nov-2026 (auditoría, AEO-10): apuntaba a
+ * /buscar, que nunca existió y responde 404, y Google retiró el cuadro de
+ * búsqueda de sitelinks en nov-2024. Volver a ponerlo solo si se construye un
+ * buscador de verdad.
+ */
 export function websiteSchema(): Json {
   return {
     "@context": "https://schema.org",
@@ -84,12 +92,13 @@ export function websiteSchema(): Json {
     name: site.name,
     inLanguage: site.hreflang,
     publisher: { "@id": ORG_ID },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/buscar?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
+}
+
+/** "S/1,500" → "1500"; null si el texto no es un importe. */
+function importe(precio: string): string | null {
+  const n = Number(precio.replace(/[^0-9]/g, ""));
+  return Number.isFinite(n) && n > 0 ? String(n) : null;
 }
 
 /** Service — en cada página de servicio/sector (doc 12 §2.3). */
@@ -103,11 +112,43 @@ export function serviceSchema(opts: {
    * ciudad cubre también las de alrededor. Se declaran junto con el país.
    */
   areaServedCity?: string | string[];
+  /**
+   * Planes con precio publicado en la página. Solo servicios digitales: los de
+   * producción, BTL y publicidad móvil se cotizan y no deben llevar offers.
+   */
+  planes?: PlanPrecio[];
 }): Json {
   const ciudades = opts.areaServedCity ? [opts.areaServedCity].flat() : [];
+  const url = opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url);
+  const offers = (opts.planes ?? []).flatMap((p) => {
+    const price = importe(p.precio);
+    if (!price) return [];
+    const mensual = p.periodo.includes("mes");
+    return [
+      {
+        "@type": "Offer",
+        name: p.nombre,
+        price,
+        priceCurrency: "PEN",
+        url,
+        ...(mensual
+          ? {
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                price,
+                priceCurrency: "PEN",
+                unitCode: "MON",
+                unitText: "mes",
+              },
+            }
+          : {}),
+      },
+    ];
+  });
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    name: opts.serviceType,
     serviceType: opts.serviceType,
     provider: { "@id": ORG_ID },
     areaServed: ciudades.length
@@ -117,7 +158,8 @@ export function serviceSchema(opts: {
         ]
       : { "@type": "Country", name: opts.areaServedName || "Perú" },
     description: opts.description,
-    url: opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url),
+    url,
+    ...(offers.length ? { offers } : {}),
   };
 }
 

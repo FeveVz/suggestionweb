@@ -13,12 +13,18 @@
  *   npm run revision            → informe completo
  *   npm run revision -- zonas   → solo el hueco de zonas geográficas
  *
+ * También avisa de lo que rompe el <head> sin que se note (auditoría TEC-06 y
+ * TEC-16, 21-nov-2026): más de un FAQPage o BreadcrumbList en una página, y
+ * titles de más de 60 caracteres o descriptions de más de 160.
+ *   REVISION_HOST=http://localhost:3100 npm run revision → contra el servidor local
+ *
  * Cómo usarlo: pasa el informe a Claude y pídele que redacte lo que falte.
  * Nunca metas la palabra a la fuerza: si no cabe en una frase con sentido
  * propio, es que esa página no es la que debe cubrir ese término.
  */
 
-const HOST = "https://suggestion.pe";
+const HOST = process.env.REVISION_HOST || "https://suggestion.pe";
+const SITIO = "https://suggestion.pe"; // el sitemap siempre lista URL de producción
 const FLACA = 600; // por debajo de esto, la página pide contenido
 
 /** Términos que el sitio DEBERÍA cubrir, y en qué páginas tiene sentido. */
@@ -63,15 +69,25 @@ const texto = (html) => {
 
 const main = async () => {
   const xml = await (await fetch(`${HOST}/sitemap.xml`)).text();
-  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(SITIO, HOST));
 
   const paginas = [];
   for (let i = 0; i < urls.length; i += 10) {
     const lote = await Promise.all(
       urls.slice(i, i + 10).map(async (u) => {
         try {
-          const t = texto(await (await fetch(u)).text());
-          return { ruta: u.replace(HOST, "") || "/", texto: t.toLowerCase(), palabras: t.split(" ").filter((w) => w.length > 1).length };
+          const html = await (await fetch(u)).text();
+          const t = texto(html);
+          const decod = (s) => (s || "").replace(/&amp;/g, "&").replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').trim();
+          return {
+            ruta: u.replace(HOST, "") || "/",
+            texto: t.toLowerCase(),
+            palabras: t.split(" ").filter((w) => w.length > 1).length,
+            faq: (html.match(/"@type":"FAQPage"/g) || []).length,
+            miga: (html.match(/"@type":"BreadcrumbList"/g) || []).length,
+            title: decod(html.match(/<title>([^<]*)<\/title>/)?.[1]),
+            desc: decod(html.match(/<meta name="description" content="([^"]*)"/)?.[1]),
+          };
         } catch { return null; }
       })
     );
@@ -82,6 +98,15 @@ const main = async () => {
     const flacas = paginas.filter((p) => p.palabras < FLACA && !/^\/(contacto|privacidad|terminos|libro-de-reclamaciones|casos|sectores|blog)$/.test(p.ruta));
     console.log(`\n== PÁGINAS FLACAS (menos de ${FLACA} palabras): ${flacas.length} ==`);
     flacas.sort((a, b) => a.palabras - b.palabras).forEach((p) => console.log(`  ${String(p.palabras).padStart(5)}  ${p.ruta}`));
+  }
+
+  if (!soloZonas) {
+    const dobles = paginas.filter((p) => p.faq > 1 || p.miga > 1);
+    console.log(`\n== SCHEMA DUPLICADO (más de un FAQPage o BreadcrumbList): ${dobles.length} ==`);
+    dobles.forEach((p) => console.log(`  ${p.ruta}  FAQPage ${p.faq} · BreadcrumbList ${p.miga}`));
+    const largos = paginas.filter((p) => p.title.length > 60 || p.desc.length > 160);
+    console.log(`\n== TITLE > 60 O DESCRIPTION > 160 CARACTERES: ${largos.length} ==`);
+    largos.forEach((p) => console.log(`  ${p.ruta}  title ${p.title.length} · description ${p.desc.length}`));
   }
 
   console.log(`\n== TÉRMINOS QUE FALTAN DONDE DEBERÍAN ESTAR ==`);

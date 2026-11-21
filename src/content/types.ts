@@ -52,6 +52,12 @@ export type Seccion = {
    * de imágenes: si no hay una foto honesta del asunto, la sección va sin foto.
    */
   foto?: { src: string; alt: string; cap: string; w?: number; h?: number };
+  /**
+   * Enlaces internos al final del texto de la sección, con anchor descriptivo:
+   * de una ciudad al sector que trata ese H2, de un sector a las ciudades donde
+   * el rubro pesa, de un artículo a su hermano (auditoría, paquete 21).
+   */
+  enlaces?: { label: string; href: string }[];
 };
 
 export type Faq = { q: string; a: string };

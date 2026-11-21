@@ -1889,6 +1889,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Tu marca tiene que verse distinta a las demás", "Profesional"],
           ],
         },
+        enlaces: [{ label: "Cuánto cuesta una tienda virtual en Perú", href: "/blog/conversion/cuanto-cuesta-una-tienda-virtual-en-peru" }],
       },
       {
         h2: "Cómo decidir sin arrepentirte",
@@ -1988,6 +1989,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Cuándo dar el salto", "—", "Cuando se pierden mensajes o no sabes quién respondió qué"],
           ],
         },
+        enlaces: [{ label: "CRM para WhatsApp: qué debe tener y cómo elegirlo", href: "/blog/ia-automatizacion/crm-para-whatsapp" }],
       },
       {
         h2: "Cómo montarlo sin romper la atención",
@@ -3066,6 +3068,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Por qué funciona", texto: "el comprador empresarial investiga antes de escribirte. Si no encuentra información seria, no te considera." },
           { titulo: "Qué medir", texto: "oportunidades abiertas y valor del embudo (las negociaciones en curso), no contactos sueltos. El cierre puede caer dos trimestres después." },
         ],
+        enlaces: [{ label: "Cómo vender maquinaria pesada: del primer contacto a la demostración", href: "/blog/automotriz/como-vender-maquinaria-pesada" }],
       },
       {
         h2: "¿Por dónde empiezas si solo puedes hacer una cosa?",
@@ -3170,6 +3173,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Camiones y línea amarilla no se venden como un auto",
         parrafo:
           "Cuando el vehículo es de trabajo, la lógica cambia. La decisión es de empresa, el ciclo es más largo, casi siempre hay más de una persona involucrada y lo que pesa no es el diseño sino el costo por kilómetro, la disponibilidad de repuestos y el respaldo del taller. Un anuncio que funciona para un auto familiar rara vez funciona aquí. En Suggestion hemos atendido 19 marcas de vehículos, entre livianos, camiones y línea amarilla, y la diferencia práctica es esa: en livianos compites por atención; en pesados compites por confianza y por tiempo de respuesta del servicio postventa.",
+        enlaces: [{ label: "Cómo vender maquinaria pesada: del primer contacto a la demostración", href: "/blog/automotriz/como-vender-maquinaria-pesada" }],
       },
     ],
     faq: [
@@ -3251,6 +3255,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { h3: "Camión y línea amarilla: decisión empresarial y larga", texto: "Meses, y no decide una sola persona. El argumento no es el diseño: es el costo de operación, los repuestos, el respaldo del taller y el leasing (arrendamiento con opción de compra)." },
           { h3: "Cambia el canal, no solo el mensaje", texto: "Pesa más la búsqueda en Google y el contenido técnico que el video emocional. Pocos leads es lo normal: un cierre justifica meses de inversión." },
         ],
+        enlaces: [{ label: "Cómo vender maquinaria pesada: del primer contacto a la demostración", href: "/blog/automotriz/como-vender-maquinaria-pesada" }],
       },
       {
         h2: "¿Dónde conviene pautar publicidad para venta de autos?",
@@ -3525,7 +3530,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gigantografias-medidas-materiales-precios",
     categoria: "imprenta-btl",
-    title: "Gigantografías: Tamaños, Medidas y Precios en Perú | Suggestion",
+    title: "Gigantografías: Tamaños, Medidas y Precios en Perú",
     description:
       "Tamaños y medidas de gigantografía más pedidos, qué material aguanta la calle y cuánto cuesta el m² en Perú, con rangos de octubre de 2026.",
     h1: "Gigantografías: qué material pedir, qué medidas y cuánto cuesta",
@@ -4428,6 +4433,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ],
           nota: "Rangos del mercado peruano consultados en octubre de 2026, según precios publicados por agencias y desarrolladores del rubro. No son tarifas de Suggestion ni una cotización.",
         },
+        enlaces: [{ label: "Cuánto cuesta una tienda virtual en Perú", href: "/blog/conversion/cuanto-cuesta-una-tienda-virtual-en-peru" }],
       },
       {
         h2: "Lo que mueve el precio no es lo que crees",
@@ -4524,6 +4530,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ],
           nota: "El porcentaje sobre inversión tiene un problema que conviene mirar de frente: premia que gastes más, no que vendas más. Si eliges ese modelo, acuerda también qué resultado se espera, no solo cuánto se va a invertir.",
         },
+        enlaces: [{ label: "Cuánto cobra un community manager en Perú", href: "/blog/marca/cuanto-cobra-un-community-manager-en-peru" }],
       },
       {
         h2: "Los rangos del mercado peruano",
@@ -5421,6 +5428,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Que puedas sacar tus datos", texto: "pregunta cómo se exporta todo antes de entrar. Es la pregunta que nadie hace y la que duele cuando quieres cambiar." },
           { titulo: "Que empiece simple", texto: "es preferible arrancar con lo mínimo y crecer, que configurar un sistema completo que el equipo abandona la segunda semana." },
         ],
+        enlaces: [{ label: "CRM para WhatsApp: qué debe tener y cómo elegirlo", href: "/blog/ia-automatizacion/crm-para-whatsapp" }],
       },
     ],
     faq: [
@@ -6271,7 +6279,7 @@ export const BLOG_POSTS: BlogPost[] = [
     // «crm inmobiliario» (100–1K) y «mejor crm inmobiliario» (CPC S/20.86).
     slug: "crm-inmobiliario",
     categoria: "inmobiliario",
-    title: "CRM Inmobiliario: Qué Debe Tener y Cómo Elegirlo | Suggestion",
+    title: "CRM Inmobiliario: Qué Debe Tener y Cómo Elegirlo",
     description:
       "Qué debe tener un CRM para inmobiliarias: leads que entran solos, inventario de lotes, etapas hasta la separación y el origen de cada venta. Cómo elegirlo.",
     h1: "CRM inmobiliario: qué debe tener para que no se pierda ningún lead",
@@ -6495,7 +6503,7 @@ export const BLOG_POSTS: BlogPost[] = [
     // salvaguardas de docs-fuente/21: el 18 con su definición y fecha de corte, el 25 con el 7.
     slug: "cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru",
     categoria: "performance",
-    title: "Publicidad en Facebook e Instagram: Precios en Perú | Suggestion",
+    title: "Publicidad en Facebook e Instagram: Precios en Perú",
     description:
       "Cuánto cuesta anunciar en Facebook e Instagram en Perú: costos de referencia por mil impresiones, clic y lead, el presupuesto mínimo que funciona y el IGV.",
     h1: "Cuánto cuesta la publicidad en Facebook e Instagram en Perú",
@@ -6564,6 +6572,7 @@ export const BLOG_POSTS: BlogPost[] = [
           titulo: "Fuente del IGV",
           texto: "Ley del IGV (utilización de servicios prestados por no domiciliados), Decreto Legislativo 1623, publicado en agosto de 2024, y Decreto Legislativo 1644, de septiembre de 2024, que fijó el inicio del cobro el 1 de diciembre de 2024. Es una orientación general: cómo se aplica a tu caso lo confirma tu contador.",
         },
+        enlaces: [{ label: "Cuánto cobra un community manager en Perú", href: "/blog/marca/cuanto-cobra-un-community-manager-en-peru" }],
       },
       {
         h2: "El costo que importa: cuánto cuesta cada venta",

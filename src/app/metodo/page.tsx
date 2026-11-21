@@ -5,10 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Secciones from "@/components/Secciones";
 import Faq from "@/components/Faq";
 import RelatedLinks from "@/components/RelatedLinks";
-import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
-import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
-import { absoluteUrl } from "@/lib/site";
 import type { Seccion, Faq as FaqItem } from "@/content/types";
 
 /**
@@ -117,19 +114,10 @@ const FAQ: FaqItem[] = [
 ];
 
 export default function MetodoPage() {
-  const url = absoluteUrl("/metodo");
   return (
     <>
-      <JsonLd
-        data={[
-          faqPageSchema(FAQ),
-          breadcrumbSchema([
-            { name: "Inicio", url: absoluteUrl("/") },
-            { name: "Cómo medimos", url },
-          ]),
-        ]}
-      />
-
+      {/* FAQPage y BreadcrumbList los emiten <Faq> y <Breadcrumbs>: una sola
+          fuente por tipo (auditoría TEC-06, 21-nov-2026). */}
       {/* HERO */}
       <section style={{ background: "var(--white)" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2.5rem,5vw,4rem)" }}>
