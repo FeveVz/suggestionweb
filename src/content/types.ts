@@ -129,6 +129,19 @@ export type Ciudad = {
   proof?: string;
   /** Párrafo propio sobre cómo se atiende esa ciudad desde Ica. */
   cobertura: string;
+  /** Título de la sección de cobertura (por defecto, el genérico). */
+  coberturaTitulo?: string;
+  /** Etiqueta sobre el H1; por defecto «Marketing en <ciudad>». */
+  kicker?: string;
+  /** Qué se cotiza por WhatsApp cuando el CTA es de cotización. */
+  tema?: string;
+  /** Datos a rellenar en el mensaje de cotización. */
+  especificaciones?: string[];
+  /**
+   * Ciudad con equipo propio de BTL (hoy solo Nazca, confirmado por el dueño
+   * el 20-nov-2026): razones de BTL y enlace «BTL en <ciudad>» desde /servicios/btl.
+   */
+  btl?: boolean;
   secciones: Seccion[];
   serviciosQueUsa: string[];
   faq: Faq[];

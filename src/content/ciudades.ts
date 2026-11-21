@@ -4,7 +4,9 @@ import type { Ciudad } from "./types";
  * Páginas de cobertura por ciudad (/agencia-de-marketing-en-<slug>).
  *
  * REGLA DE HONESTIDAD: no afirmamos tener oficina ni clientes en estas
- * ciudades. Lo que se afirma es real y verificable: operamos desde Ica para
+ * ciudades. Única excepción, confirmada por el dueño el 20-nov-2026: en Nazca
+ * hay equipo propio de BTL (cortatráfico, volanteo, anfitrionas, impulsadoras,
+ * animación y perifoneo) que cubre también Marcona, Palpa y Puquio. Lo que se afirma es real y verificable: operamos desde Ica para
  * todo el Perú, y la red de concesionarios que atendemos ya opera en Ica y
  * Cusco. El copy de cada ciudad habla de SU economía (lo que sí conocemos del
  * mercado) y de cómo trabajamos a distancia, no de casos que no existen.
@@ -147,17 +149,82 @@ export const CIUDADES: Ciudad[] = [
   {
     slug: "nazca",
     nombre: "Nazca",
-    metaTitle: "Agencia de Marketing en Nazca | Suggestion",
+    metaTitle: "Agencia BTL y de Marketing en Nazca | Suggestion",
     metaDescription:
-      "Marketing para negocios de Nazca: hoteles, agencias de turismo, comercio y proveedores mineros. Reservas y clientes medibles. Consultoría gratis.",
-    h1: "Agencia de marketing en Nazca",
-    hero: "Nazca recibe visitantes de todo el mundo y aun así muchos negocios de la zona dependen de que el turista aparezca solo. Se puede captar antes: cuando todavía está planeando el viaje.",
-    cta: "Agenda tu consultoría cero",
+      "Equipo propio de BTL en Nazca: cortatráfico, volanteo, anfitrionas, impulsadoras y perifoneo. También en Marcona, Palpa y Puquio. Cotiza por WhatsApp.",
+    kicker: "BTL y marketing en Nazca",
+    h1: "Agencia BTL y de marketing en Nazca, con equipo propio",
+    hero: "Tenemos equipo propio en Nazca para cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo, y cubrimos también Marcona, Palpa y Puquio. El personal ya está en la zona: no viaja desde Lima. Trabajamos para negocios de la zona y para agencias de Lima con plazas en el sur.",
+    cta: "Cotiza tu activación",
+    tema: "una activación BTL en Nazca",
+    especificaciones: [
+      "Qué necesitas (cortatráfico, volanteo, anfitrionas, impulsadoras o perifoneo)",
+      "Ciudad y lugar (Nazca, Marcona, Palpa o Puquio)",
+      "Fecha y horario",
+      "Cuántas personas y cuántos días",
+    ],
+    btl: true,
     proof:
-      "En turismo trabajamos con resultados concretos: 75 reservas generadas para un hotel en una sola campaña.",
+      "En Nazca: cortatráfico para la tienda Entel de la calle Bolognesi, y tres días de exhibición de maquinaria para XCMG · Dercomaq, con publimanes, anfitriona y promotora. A esa exhibición llegaron empresarios del sector minero y salió una venta.",
     cobertura:
-      "Nazca está a unas dos horas al sur de nuestra oficina en Ica, dentro de la misma región. Conocemos el corredor turístico y el movimiento comercial de la zona, y operamos las campañas en remoto con visitas presenciales cuando el proyecto las necesita.",
+      "Nazca está a unas dos horas al sur de nuestra oficina en Ica, y ahí tenemos equipo propio de BTL: desde Nazca cubrimos Marcona, Palpa y Puquio. Las campañas digitales las operamos en remoto, y cada activación sale con su factura.",
+    coberturaTitulo: "En Nazca, Marcona, Palpa y Puquio.",
     secciones: [
+      {
+        h2: "BTL en Nazca con equipo propio",
+        parrafo:
+          "Una activación en Nazca suele cargar con el viaje del personal desde Lima o Ica: pasajes, viáticos, horas de bus y gente que no conoce la ciudad. Nuestro equipo de BTL está en Nazca y se arma para tu fecha, con tu mecánica y tu material.",
+        foto: {
+          src: "/assets/ciudades/nazca-2-s.44023c1e.webp",
+          alt: "Equipo de Suggestion con un banner de Entel en un cruce de Nazca, frente a un auto detenido en rojo",
+          cap: "Cortatráfico para la tienda Entel de la calle Bolognesi, en Nazca: el conductor que espera la luz verde tiene el mensaje delante.",
+          w: 747,
+          h: 560,
+        },
+        sub: [
+          {
+            h3: "Cortatráfico",
+            texto: "Personal con tu mensaje en los cruces y semáforos de más tránsito, en las horas en que la ciudad se mueve.",
+          },
+          {
+            h3: "Volanteo",
+            texto: "Reparto en calles, mercados y puntos de paso, con zona y horario acordados antes de salir. Si no tienes los volantes, los imprimimos.",
+          },
+          {
+            h3: "Anfitrionas e impulsadoras",
+            texto: "Para ferias, inauguraciones, degustaciones y punto de venta: reciben al público, explican el producto y empujan la venta en el sitio.",
+          },
+          {
+            h3: "Animación y perifoneo",
+            texto: "Animador para tu evento o tu tienda, y perifoneo recorriendo la ciudad para anunciar una apertura, una oferta o una fecha.",
+          },
+        ],
+      },
+      {
+        h2: "Qué acción te conviene en Nazca",
+        parrafo:
+          "Cada acción sirve para algo distinto, y conviene decidir antes de salir a la calle qué va a contar como resultado.",
+        tabla: {
+          cabeceras: ["Acción", "Cuándo conviene", "Qué se mide"],
+          filas: [
+            ["Volanteo", "Abrir un local, lanzar una oferta o llenar un evento", "Volantes repartidos y cupones o consultas que vuelven"],
+            ["Cortatráfico", "Que la ciudad vea tu mensaje en pocos días", "Cruces y horas cubiertos, y consultas en esos días"],
+            ["Anfitrionas e impulsadoras", "Ferias, inauguraciones y punto de venta", "Personas atendidas, datos captados y ventas del día"],
+            ["Perifoneo", "Anunciar algo a toda la ciudad o a un barrio", "Recorrido y horas, y llamadas o visitas en esos días"],
+          ],
+          nota: "Si quieres saber cuánta gente llegó por la activación, ponle un código o un cupón propio: es la forma más simple de medirla.",
+        },
+      },
+      {
+        h2: "Para agencias de Lima que necesitan personal en Nazca",
+        parrafo:
+          "Si tu agencia tiene una campaña con plazas en el sur, no hace falta mandar gente desde Lima. Ponemos el personal en Nazca, Marcona, Palpa o Puquio con tu mecánica y tu material, coordinamos cada jornada y te enviamos las fotos de cada punto. Somos una empresa formal con RUC 20615266753: cada servicio sale con su factura.",
+      },
+      {
+        h2: "Comercio, servicios y proveedores",
+        parrafo:
+          "No todo en Nazca es turismo. Hay comercio, transporte y empresas que proveen a la actividad minera de la zona. Ese negocio es B2B: se gana con credibilidad, presencia ordenada en buscadores y un seguimiento serio de cada cotización, no con publicaciones diarias. Así se pensó la exhibición de maquinaria de XCMG en Nazca: tres días para contratistas y empresarios, no para público general.",
+      },
       {
         h2: "Captar al turista antes de que llegue",
         parrafo:
@@ -174,18 +241,29 @@ export const CIUDADES: Ciudad[] = [
           "Buena parte de quien visita Nazca no busca en español. Una web que solo existe en un idioma pierde a ese visitante antes de empezar. Trabajamos presencia y contenido pensando en quién busca de verdad y desde dónde, no en lo que a nosotros nos resulta cómodo.",
       },
       {
-        h2: "Comercio, servicios y proveedores",
-        parrafo:
-          "No todo en Nazca es turismo. Hay comercio, transporte y empresas que proveen a la actividad minera de la zona. Ese negocio es B2B: se gana con credibilidad, presencia ordenada en buscadores y un seguimiento serio de cada cotización, no con publicaciones diarias.",
-      },
-      {
         h2: "Qué medimos",
         parrafo:
-          "Reservas, consultas y ventas cerradas, con su costo. En turismo miramos además la estacionalidad: qué pasó en temporada alta y qué se logró sostener en la baja, que es donde se ve si la estrategia funciona.",
+          "En una activación, lo que pactamos antes de salir a la calle: volantes repartidos, datos captados o ventas del día. En digital, reservas, consultas y ventas cerradas, con su costo. En turismo miramos además la estacionalidad: qué pasó en temporada alta y qué se logró sostener en la baja, que es donde se ve si la estrategia funciona.",
       },
     ],
-    serviciosQueUsa: ["publicidad-digital", "desarrollo-web", "redes-sociales", "seo"],
+    serviciosQueUsa: ["btl", "publicidad-movil", "eventos-corporativos", "publicidad-digital", "redes-sociales", "seo"],
     faq: [
+      {
+        q: "¿Tienen personal para BTL en Nazca?",
+        a: "Sí: tenemos equipo propio en Nazca para cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo. En Nazca, la activación no carga el viaje del personal desde Lima o Ica.",
+      },
+      {
+        q: "¿Hacen cortatráfico y volanteo en Nazca?",
+        a: "Sí. Acordamos contigo los cruces, las calles o los mercados, el horario y los días, y cotizamos según cuántas personas y cuántas horas necesitas. Si no tienes los volantes, los imprimimos. Escríbenos por WhatsApp con la fecha y te pasamos la propuesta.",
+      },
+      {
+        q: "¿Llegan a Marcona, Palpa y Puquio?",
+        a: "Sí: desde Nazca cubrimos Marcona, Palpa y Puquio. El traslado del equipo a cada ciudad va detallado en la cotización, no aparece después.",
+      },
+      {
+        q: "¿Trabajan con agencias de Lima que necesitan personal en Nazca?",
+        a: "Sí. Si tu agencia tiene una campaña con plazas en el sur, ponemos el personal en Nazca y alrededores con tu mecánica y tu material, coordinamos la jornada y te enviamos fotos de cada punto. Facturamos como empresa formal.",
+      },
       {
         q: "¿Cómo consigo más reservas directas y menos por plataformas?",
         a: "Con una web que permita reservar sin fricción, respuesta inmediata por WhatsApp y campañas dirigidas a quien está planificando el viaje. No se trata de salir de las plataformas, sino de que dejen de ser tu único canal.",
@@ -196,18 +274,18 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Atienden Nazca desde Ica?",
-        a: "Sí, estamos a unas dos horas y dentro de la misma región. Las campañas se operan en remoto y coordinamos presencia física cuando hace falta grabar, fotografiar o hacer una activación.",
+        a: "La oficina está en Ica, a unas dos horas, y el equipo de BTL está en Nazca. Las campañas digitales se operan en remoto y las activaciones las hace el equipo de la zona.",
       },
       {
-        q: "¿Cuánto cuesta empezar?",
-        a: "Hay dos costos distintos: lo que le pagas a la agencia y lo que va a la plataforma como pauta. Conviene no mezclarlos. En la primera llamada te decimos qué presupuesto tiene sentido para tu caso, y si creemos que aún no es momento de invertir, también lo decimos.",
+        q: "¿Cuánto cuesta?",
+        a: "Depende del servicio. Una activación se cotiza según el personal, las horas, los días y el lugar: nos escribes por WhatsApp y te pasamos la propuesta. En publicidad digital hay dos costos distintos, lo que le pagas a la agencia y lo que va a la plataforma como pauta, y conviene no mezclarlos.",
       },
       {
         q: "¿Trabajan con negocios que no son de turismo?",
         a: "Sí. Tenemos siete sectores con estrategia propia: inmobiliario, automotriz, turismo, marcas y consumo, salud, agroexportación y pisco y vino. Y si tu rubro no está en la lista, la primera llamada sirve para ver si podemos aportar de verdad.",
       },
     ],
-    cierre: { h2: "Hagamos crecer tu negocio en Nazca", cta: "Agenda tu consultoría cero" },
+    cierre: { h2: "Activemos tu marca en Nazca", cta: "Cotiza tu activación" },
   },
   {
     slug: "arequipa",

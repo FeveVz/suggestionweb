@@ -49,7 +49,7 @@ const COBERTURA: Record<string, string> = {
   "/servicios/letreros-luminosos": "Fabricamos e instalamos letreros luminosos en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña y Los Aquijes—. Si tu local está en otra provincia de la región, lo vemos al cotizar. Todo con factura.",
   "/servicios/estructuras-publicitarias": "Fabricamos e instalamos paneles y estructuras en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña y Los Aquijes—. Para otras provincias de la región, la ubicación, el permiso y el traslado se ven al cotizar. Todo con factura.",
   "/servicios/publicidad-movil": "Nuestras bicivallas y biciplumas recorren Ica con la ruta pensada para tu público: por dónde pasa y a qué hora. Todo con factura.",
-  "/servicios/btl": "Activamos marcas en Ica y sus distritos, y hacemos activaciones y roadshows en Lima y otras regiones: la logística y los plazos de montaje van en la propuesta. Todo con factura.",
+  "/servicios/btl": "Activamos marcas en Ica y sus distritos, tenemos equipo propio de BTL en Nazca —que cubre también Marcona, Palpa y Puquio— y hacemos activaciones y roadshows en Lima y otras regiones: la logística y los plazos de montaje van en la propuesta. Todo con factura.",
   "/servicios/eventos-corporativos": "Organizamos eventos corporativos en Ica y sus distritos —Parcona, Subtanjalla, La Tinguiña y Los Aquijes—; si es en otra ciudad, la logística y los plazos van en la propuesta. Todo con factura.",
   "/servicios/material-pop": "Producimos material POP para puntos de venta de Ica, Parcona y La Tinguiña, y despachamos a tiendas y campañas de todo el Perú.",
   "/servicios/merchandising": "Merchandising publicitario para empresas de Ica con entrega en toda la región —Subtanjalla, Parcona, Chincha, Pisco y Nazca— y envíos corporativos a nivel nacional.",
@@ -99,6 +99,8 @@ export default function LandingArticle({
   faq,
   cierre,
   cobertura,
+  coberturaTitulo,
+  porQue,
   extraSchema,
 }: {
   breadcrumbs: Crumb[];
@@ -125,6 +127,10 @@ export default function LandingArticle({
   cierre: Cierre;
   /** Párrafo de cobertura propio (páginas de ciudad); si no, se usa COBERTURA por ruta. */
   cobertura?: string;
+  /** Título de la sección de cobertura; si no, sale de si es producción o no. */
+  coberturaTitulo?: string;
+  /** Juego de razones del «Por qué Suggestion»; si no, sale del CTA. */
+  porQue?: "digital" | "produccion" | "btl";
   shape?: number;
   extraSchema?: Json | Json[];
 }) {
@@ -406,13 +412,13 @@ export default function LandingArticle({
 
       {/* MÉTODO genérico (solo si el servicio no trae proceso propio) + POR QUÉ */}
       {!proceso && <MetodoSection />}
-      <PorQueSection tone="light" produccion={cotiza} />
+      <PorQueSection tone="light" produccion={cotiza} tipo={porQue} />
 
       {/* Cobertura local (SEO on-page: Ica + provincias + nacional; suma keywords, no reemplaza nada) */}
       <Section tone="light" style={{ paddingTop: "var(--section-y-tight)", paddingBottom: "var(--section-y-tight)" }}>
         <div style={{ maxWidth: 820 }}>
           <SectionHeading level={2} kicker="Cobertura" maxWidth="22ch" style={{ marginBottom: 16 }}>
-            {cotiza ? "En Ica y sus distritos." : "En Ica y en todo el Perú."}
+            {coberturaTitulo ?? (cotiza ? "En Ica y sus distritos." : "En Ica y en todo el Perú.")}
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)" }}>
             {cobertura ??

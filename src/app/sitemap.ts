@@ -56,6 +56,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/servicios/crm-automatizacion": "2026-11-20",
   "/servicios/produccion-audiovisual": "2026-11-20",
   "/servicios/btl": "2026-11-20",
+  "/agencia-de-marketing-en-nazca": "2026-11-20",
   "/servicios/publicidad-movil": "2026-11-20",
   "/servicios/estructuras-publicitarias": "2026-11-20",
   "/servicios/material-pop": "2026-11-20",

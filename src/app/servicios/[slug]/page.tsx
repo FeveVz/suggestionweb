@@ -194,7 +194,10 @@ export default async function ServicioPage({ params }: Params) {
   // derivarlo del propio contenido, el enlace solo aparece donde es cierto.
   const ciudadLinks: RelatedLink[] = CIUDADES.filter((c) =>
     c.serviciosQueUsa.includes(s.slug)
-  ).map((c) => ({ label: `Agencia de marketing en ${c.nombre}`, href: ciudadHref(c.slug) }));
+  ).map((c) => ({
+    label: s.slug === "btl" && c.btl ? `BTL en ${c.nombre}, con equipo propio` : `Agencia de marketing en ${c.nombre}`,
+    href: ciudadHref(c.slug),
+  }));
   if (ciudadLinks.length) {
     related.push({
       title: "Dónde lo hacemos",
@@ -224,6 +227,8 @@ export default async function ServicioPage({ params }: Params) {
       related={related}
       faq={s.faq}
       cierre={s.cierre}
+      porQue={s.slug === "btl" ? "btl" : undefined}
+      coberturaTitulo={s.slug === "btl" ? "En Ica, en Nazca y en todo el Perú." : undefined}
       shape={shapeFor(s.slug)}
       extraSchema={serviceSchema({
         serviceType: s.nombre,

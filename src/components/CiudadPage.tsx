@@ -4,6 +4,38 @@ import type { RelatedLink } from "@/components/RelatedLinks";
 import { serviceSchema } from "@/lib/schema";
 import { getCiudad } from "@/content/ciudades";
 import { getServicio } from "@/content/servicios";
+import { fotoPortafolio } from "@/content/portafolio-fotos";
+
+/**
+ * Fotos propias tomadas EN la ciudad. Solo donde las hay: una ciudad sin
+ * trabajo fotografiado allí va sin foto, no con una de Ica.
+ */
+const XCMG = "xcmg-linea-amarilla-nazca";
+const FOTOS_CIUDAD: Record<
+  string,
+  {
+    hero: { src: string; alt: string; w?: number; h?: number };
+    galeria: { src: string; alt: string; cap: string }[];
+  }
+> = {
+  // Cortatráfico para la tienda Entel de Nazca: fotos del equipo de Nazca
+  // (20-nov-2026), pasadas por scripts/ciudad-imagenes.mjs. Sin selfies ni
+  // placas legibles. La foto de la sección va en content/ciudades.ts.
+  nazca: {
+    hero: {
+      src: "/assets/ciudades/nazca-1.51cd50dc.webp",
+      alt: "Cortatráfico con el banner de una tienda Entel en un cruce del centro de Nazca, bajo el letrero de la Municipalidad Provincial de Nasca",
+      w: 1564,
+      h: 880,
+    },
+    galeria: [
+      { src: "/assets/ciudades/nazca-3-s.e6a9b9d2.webp", alt: "Cortatráfico con banner de Entel en el paso peatonal de un cruce de Nazca, con un auto rojo detenido", cap: "Dos personas, un banner y el semáforo en rojo: el mensaje se ve desde cada auto que para" },
+      { src: "/assets/ciudades/nazca-4-s.553eb662.webp", alt: "Cortatráfico con banner de Entel frente a la iglesia, en un cruce del centro de Nazca", cap: "Otro cruce del centro: los puntos y los horarios se acuerdan antes de salir" },
+      { src: fotoPortafolio(XCMG, 8), alt: "Anfitriona presentando la maquinaria XCMG en la exhibición de Nazca", cap: "XCMG · Dercomaq, febrero 2025: anfitriona en una exhibición de tres días para contratistas y empresarios" },
+      { src: fotoPortafolio(XCMG, 6), alt: "Publimán con cartel de la campaña de XCMG en la plaza de armas de Nazca", cap: "Publimanes en la plaza de armas. A esa exhibición llegaron empresarios del sector minero y salió una venta" },
+    ],
+  },
+};
 
 /**
  * Landing de cobertura por ciudad (/agencia-de-marketing-en-<slug>).
@@ -36,6 +68,8 @@ export default function CiudadPage({ slug }: { slug: string }) {
     ],
   });
 
+  const fotos = FOTOS_CIUDAD[c.slug];
+
   return (
     <LandingArticle
       breadcrumbs={[
@@ -43,20 +77,25 @@ export default function CiudadPage({ slug }: { slug: string }) {
         { name: "Cobertura", href: "/sectores" },
         { name: c.nombre, href: `/agencia-de-marketing-en-${c.slug}` },
       ]}
-      kicker={`Marketing en ${c.nombre}`}
+      kicker={c.kicker ?? `Marketing en ${c.nombre}`}
       h1={c.h1}
       hero={c.hero}
+      heroImage={fotos?.hero}
+      galeria={fotos?.galeria}
       ctaLabel={c.cta}
       proof={c.proof}
       secciones={c.secciones}
-      tema={`marketing en ${c.nombre}`}
+      tema={c.tema ?? `marketing en ${c.nombre}`}
+      especificaciones={c.especificaciones}
       related={related}
       faq={c.faq}
       cierre={c.cierre}
       cobertura={c.cobertura}
+      coberturaTitulo={c.coberturaTitulo}
+      porQue={c.btl ? "btl" : undefined}
       shape={shape}
       extraSchema={serviceSchema({
-        serviceType: `Agencia de marketing en ${c.nombre}`,
+        serviceType: c.btl ? `Agencia BTL y de marketing en ${c.nombre}` : `Agencia de marketing en ${c.nombre}`,
         description: c.metaDescription,
         url: `/agencia-de-marketing-en-${c.slug}`,
         areaServedCity: c.nombre,

@@ -1748,10 +1748,10 @@ const SERVICIOS_BASE: Servicio[] = [
       "Cada activación se cotiza según lo que quieres lograr, el lugar, la fecha, la duración y el personal: nos escribes por WhatsApp y te pasamos la propuesta.",
       "Antes de montar definimos qué cuenta como resultado: muestras entregadas, datos capturados, ventas del día o citas.",
       "Una activación sin datos es una fiesta: preparamos la captura y damos seguimiento en las 48 horas siguientes.",
-      "Somos una agencia BTL en Perú con base en Ica: hacemos activaciones publicitarias y roadshows en Lima y otras regiones.",
+      "Somos una agencia BTL en Perú con base en Ica y equipo propio en Nazca: hacemos activaciones publicitarias y roadshows en Lima y otras regiones.",
     ],
     cta: "Cotiza tu activación",
-    especificaciones: ["Qué quieres lograr (ventas, datos o lanzamiento)", "Lugar y fecha", "Duración", "Personal (anfitrionas, animador, volanteros)", "Cuántas activaciones"],
+    especificaciones: ["Qué quieres lograr (ventas, datos o lanzamiento)", "Lugar y fecha", "Duración", "Personal (anfitrionas, impulsadoras, volanteo, cortatráfico, animación o perifoneo)", "Cuántas activaciones"],
     keyword: "activaciones btl",
     secciones: [
       {
@@ -1795,6 +1795,11 @@ const SERVICIOS_BASE: Servicio[] = [
           ],
           nota: "Si la acción no tiene una forma clara de medirse antes de empezar, tampoco la tendrá después.",
         },
+      },
+      {
+        h2: "BTL en Nazca, Marcona, Palpa y Puquio",
+        parrafo:
+          "En Nazca tenemos equipo propio de BTL: cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo, y desde ahí cubrimos Marcona, Palpa y Puquio. El personal no viaja desde Lima, así que la activación no carga ese traslado y la hace gente que conoce la ciudad. Trabajamos para negocios de la zona y para agencias de Lima que necesitan personal en el sur.",
       },
       {
         h2: "Una activación sin datos es una fiesta",
@@ -1873,6 +1878,10 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         q: "¿Se puede combinar la activación con campañas digitales?",
         a: "Es lo que recomendamos. La campaña digital previa llena el punto con la gente correcta —igual que en un evento automotriz— y los datos capturados en la activación alimentan después el seguimiento. Hacer las dos cosas por separado desaprovecha la mitad del trabajo.",
+      },
+      {
+        q: "¿Tienen personal de BTL en Nazca?",
+        a: "Sí: equipo propio en Nazca para cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo, que cubre también Marcona, Palpa y Puquio. Trabajamos para negocios de la zona y para agencias de Lima que necesitan personal en el sur, con factura.",
       },
     ],
     enlazaA: ["eventos-corporativos", "publicidad-movil", "material-pop"],
