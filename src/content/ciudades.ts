@@ -169,7 +169,7 @@ export const CIUDADES: Ciudad[] = [
     proof:
       "En Nazca: siete días de cortatráfico para la tienda Entel de la calle Bolognesi (del 12 al 18 de noviembre de 2026) y tres días de exhibición de maquinaria para XCMG · Dercomaq, con publimanes, anfitriona y promotora. A esa exhibición llegaron empresarios del sector minero y salió una venta.",
     cobertura:
-      "Nazca está a unas dos horas al sur de nuestra oficina en Ica, y ahí tenemos equipo propio de BTL: desde Nazca cubrimos Marcona, Palpa y Puquio. Las campañas digitales las operamos en remoto, y cada activación sale con su factura.",
+      "Nazca (Nasca, como la escribe la municipalidad) está a unas dos horas al sur de nuestra oficina en Ica, y ahí tenemos equipo propio de BTL: desde Nazca cubrimos Marcona, Palpa y Puquio. Las campañas digitales las operamos en remoto, y cada activación sale con su factura.",
     coberturaTitulo: "En Nazca, Marcona, Palpa y Puquio.",
     secciones: [
       {
@@ -252,7 +252,7 @@ export const CIUDADES: Ciudad[] = [
     faq: [
       {
         q: "¿Tienen personal para BTL en Nazca?",
-        a: "Sí: tenemos equipo propio en Nazca para cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo. En Nazca, la activación no carga el viaje del personal desde Lima o Ica.",
+        a: "Sí: tenemos equipo propio en Nazca (Nasca) para cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo. En Nazca, la activación no carga el viaje del personal desde Lima o Ica.",
       },
       {
         q: "¿Hacen cortatráfico y volanteo en Nazca?",
