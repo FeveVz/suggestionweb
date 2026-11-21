@@ -45,7 +45,10 @@ const CSP = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://*.bing.com",
+  // www.google.com: GA4 manda una copia del hit a www.google.com/g/collect
+  // (Google Signals / datos demográficos) y la CSP la bloqueaba en silencio.
+  // Visto en la consola de Chrome al probar la CSP sin unsafe-eval (21-nov-2026).
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://*.bing.com",
   "frame-src 'self' https://www.facebook.com https://td.doubleclick.net https://www.googletagmanager.com",
   "media-src 'self'",
   "worker-src 'self' blob:",
