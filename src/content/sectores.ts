@@ -143,6 +143,10 @@ export const SECTORES: Sector[] = [
         q: "¿Y si ya tengo un equipo de marketing interno?",
         a: "Trabajamos en las dos formas: llevando la parte de captación y medición mientras tu equipo se ocupa del contenido y la marca, o al revés. Lo que no funciona es duplicar decisiones sobre la misma campaña sin que nadie tenga la última palabra.",
       },
+      {
+        q: "¿Son una agencia de marketing para inmobiliarias?",
+        a: "Sí: hemos trabajado para 24 marcas inmobiliarias. Hacemos marketing inmobiliario en Perú desde Ica: campañas para lotes y proyectos, lanzamientos inmobiliarios en preventa y el seguimiento de cada lead hasta la visita a la sala de ventas.",
+      },
     ],
     cierre: { h2: "Llenemos tu sala de ventas", cta: "Agenda tu consultoría cero" },
   },
@@ -409,6 +413,10 @@ export const SECTORES: Sector[] = [
       {
         q: "¿Cómo se mide una campaña de turismo?",
         a: "Por reservas y su costo, no por alcance. Y con dos matices que suelen olvidarse: cuántas noches trae cada reserva y qué porcentaje de huéspedes repite, que es el canal más barato que existe.",
+      },
+      {
+        q: "¿Son una agencia de marketing turístico?",
+        a: "Sí: hacemos marketing turístico y hotelero para hoteles, tours y bodegas de Ica y del resto del Perú, con la ficha de Google, la pauta y las redes apuntando a reservas. Con Hoteles Señor de Luren, una sola campaña trajo 75 reservas.",
       },
     ],
     cierre: { h2: "Llena tu temporada (y la baja también)", cta: "Agenda tu consultoría cero" },
@@ -693,6 +701,10 @@ export const SECTORES: Sector[] = [
       {
         q: "¿Necesito una web o basta con redes?",
         a: "En salud la web pesa, porque es donde el paciente comprueba que existes y que eres quien dices ser. No hace falta que sea grande: horarios, especialidades, credenciales verificables, ubicación y una forma clara de agendar resuelven casi todo.",
+      },
+      {
+        q: "¿Hacen marketing médico?",
+        a: "Sí: marketing para clínicas, consultorios y centros de salud, con la ficha de Google y sus reseñas, pauta con la cita como meta y seguimiento por WhatsApp.",
       },
     ],
     cierre: { h2: "Llena tu agenda de pacientes", cta: "Agenda tu consultoría cero" },

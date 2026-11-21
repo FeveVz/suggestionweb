@@ -271,6 +271,14 @@ export const CIUDADES: Ciudad[] = [
         q: "¿Trabajan con exclusividad por rubro?",
         a: "En cuentas que compiten directamente en la misma ciudad y el mismo rubro sí lo conversamos antes de empezar, porque no tendría sentido optimizar dos campañas que pelean entre sí. Es una decisión que se toma al inicio, no sobre la marcha.",
       },
+      {
+        q: "¿Son una agencia de marketing digital en Arequipa?",
+        a: "Somos una agencia de Ica que atiende empresas de Arequipa: publicidad en Meta y Google, posicionamiento web, páginas web y redes, con reportes y reuniones por videollamada. Si buscas una agencia de publicidad en Arequipa para producir paneles o impresos allá, conviene un proveedor local: lo que hacemos para Arequipa es lo digital.",
+      },
+      {
+        q: "¿Hacen posicionamiento web en Arequipa?",
+        a: "Sí: posicionamiento web en Arequipa para que te encuentren quienes buscan tu servicio con la ciudad al lado, más SEO técnico y la ficha de Google. Como agencia SEO trabajamos a distancia, igual que la pauta.",
+      },
     ],
     cierre: { h2: "Hagamos crecer tu empresa en Arequipa", cta: "Agenda tu consultoría cero" },
   },

@@ -432,7 +432,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       "Producimos lanzamientos, inauguraciones, relanzamientos de tienda, eventos con clientes y eventos de fin de año.",
       "No hay precio fijo: cotizamos según el tipo de evento, la fecha, la ciudad, los invitados y lo que necesitas que pongamos.",
       "Un evento comercial vende si la convocatoria está bien hecha: con Autoniza, en Ica, salieron 3 autos vendidos el 22 de mayo y 5 el 25 de junio.",
-      "Montaje, estructuras, foto, video y merchandising salen del mismo equipo.",
+      "Organización de eventos corporativos con un solo equipo: montaje, estructuras, foto, video y merchandising.",
     ],
     cta: "Cotiza tu evento",
     keyword: "eventos corporativos",

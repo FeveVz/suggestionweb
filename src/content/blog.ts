@@ -1386,6 +1386,14 @@ export const BLOG_POSTS: BlogPost[] = [
         q: "¿Sirve de algo tener un blog para posicionar?",
         a: "Sirve si responde dudas reales de tu cliente y si enlaza hacia las páginas que venden. Un blog que recibe visitas y no lleva a ninguna parte entretiene y no convierte. Un blog abandonado con tres entradas viejas resta más de lo que suma.",
       },
+      {
+        q: "¿Cómo hago para que mi página web aparezca en Google?",
+        a: "Primero confirma que Google la tiene: busca site:tudominio.com. Si no sale, envíala desde Google Search Console. Después revisa que cada página tenga en su título lo que tu cliente escribe y, si atiendes en una ciudad, que tu ficha de Google esté verificada y completa.",
+      },
+      {
+        q: "¿En qué página de Google aparece mi web?",
+        a: "Search Console te lo dice: en Rendimiento ves la posición promedio de cada búsqueda. Buscarte a mano engaña, porque Google personaliza los resultados según quién busca y desde dónde.",
+      },
     ],
     cierre: "En Suggestion empezamos cada proyecto de posicionamiento por lo mismo: comprobar qué tiene Google de ti hoy, antes de proponer nada.",
     moneyPage: { label: "Posicionamiento web (SEO)", href: "/servicios/seo" },
@@ -3645,6 +3653,18 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         q: "¿Puedo llevar mi propio diseño?",
         a: "Sí, y casi siempre sale más barato. Pide las especificaciones antes de diseñar: medida final, margen de seguridad, modo de color y formato de archivo. Diseñar primero y adaptar después es como se pierden las tardes.",
+      },
+      {
+        q: "¿Cuánto está una gigantografía por metro?",
+        a: "Se cobra por metro cuadrado: el precio de una gigantografía es su área, ancho por alto, por la tarifa del material. En octubre de 2026 el mercado peruano iba desde unos S/18 por m² en lona de interior hasta S/120 en acabados premium, según fichas de producto con precio listado y referencias publicadas por proveedores del rubro; no son tarifas de Suggestion. Una de 3 × 1 m se cobra como 3 m².",
+      },
+      {
+        q: "¿Cuáles son los tamaños de gigantografías más pedidos?",
+        a: "Los tamaños de gigantografías más comunes son 1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m, y 3.20 × 2 m cuando se usa el ancho completo del rollo, como en la tabla de medidas de esta guía. El ruedo y los ojales suman entre 3 y 5 cm por lado.",
+      },
+      {
+        q: "¿Qué medida de gigantografía uso para un cumpleaños?",
+        a: "La que entra en el espacio donde va: mide la pared o el soporte del fondo de fotos y elige la medida de la tabla que más se acerque. Si tiene que cubrir todo el ancho, el rollo da hasta 3.20 m sin uniones.",
       },
     ],
     cierre: "En Suggestion imprimimos gran formato y lo instalamos, con la pieza pensada para el sitio donde va a estar. Cotizamos según medida, material y cantidad.",
