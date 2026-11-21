@@ -472,6 +472,9 @@ img { max-width: 100%; display: block; }
   .hk-hero { grid-template-columns: 1fr !important; min-height: auto !important; align-items: start !important; }
   .hk-hero-art { order: -1; }
   .hk-perc { grid-template-columns: 1fr !important; }
+  /* Mientras pregunta, primero el título y luego las fotos, sin el hueco de
+     380 px que reserva el estímulo para las fases siguientes. */
+  .hk-perc-ask > :first-child { order: 2; min-height: 0 !important; }
   .hk-stats, .hk-sectores, .hk-casos, .hk-pasos, .hk-porque, .hk-test, .hk-foot { grid-template-columns: 1fr 1fr !important; }
   .hk-serv, .hk-cta, .hk-form { grid-template-columns: 1fr !important; }
 }
@@ -655,10 +658,23 @@ img, svg, video { max-width: 100%; }
 .hk-prob-cta { margin: clamp(1.5rem,3vw,2.25rem) 0 0; }
 .hk-serv-duda { margin: 16px 0 0; font-size: var(--fs-sm); }
 .hk-prob-cta a, .hk-serv-duda a {
-  display: inline-flex; align-items: center; gap: 6px; padding-block: 6px; margin-block: -6px;
+  /* En línea: si baja a dos líneas, la flecha sigue a la última palabra. */
+  display: inline; padding-block: 6px;
   font-weight: 700; color: var(--text-strong); text-decoration: underline;
   text-decoration-color: var(--cyan); text-underline-offset: 4px;
 }
+.hk-prob-cta a svg, .hk-serv-duda a svg { display: inline-block; vertical-align: -0.15em; margin-left: 6px; }
+
+/* Leyenda del DualReveal: dos columnas iguales y cortes equilibrados; en el
+   celular «Lo que el mercado ve» dejaba «ve» sola en la segunda línea. */
+.hk-dual-cap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; text-align: center; }
+.hk-dual-cap > span { text-wrap: balance; }
+
+/* Enlace de texto con flecha (fin de sección, portafolio): la flecha va
+   pegada a la última palabra y se adelanta un poco al pasar el mouse. */
+.hk-enlace { display: inline; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hk-enlace-flecha { display: inline-block; vertical-align: -0.15em; margin-left: 6px; transition: transform var(--dur-fast) var(--ease-out); }
+.hk-enlace:hover .hk-enlace-flecha { transform: translateX(3px); }
 .hk-prob-cta a:hover, .hk-serv-duda a:hover { color: var(--cyan-text); }
 
 /* Casos: rejilla en escritorio; en el celular se deslizan de lado. */
@@ -825,11 +841,14 @@ footer:hover .hk-foot-ghost { opacity: 0.9; -webkit-text-stroke-color: var(--ink
   .hk-foot-col > summary::after { content: "+"; font: var(--fw-light) 1.5rem/1 var(--font-body); color: var(--cyan); }
   .hk-foot-col[open] > summary::after { content: "\2212"; }
   .hk-foot-list { gap: 0; margin: 0 0 10px; }
-  .hk-foot-list a, .hk-foot-contact a { display: flex; align-items: center; min-height: 44px; }
-  .hk-foot-contact { gap: 0 !important; border-top: 1px solid var(--hairline-inverse); padding-top: 18px; }
+  .hk-foot-list a { display: flex; align-items: center; min-height: 44px; }
+  .hk-foot-contact { gap: 0 !important; }
+  .hk-foot-contact-a { min-height: 44px; }
   .hk-foot-ghost-wrap { margin-top: 28px !important; }
   /* Que la burbuja de WhatsApp no tape la última línea del pie. */
-  footer { padding-bottom: 84px; }
+  /* Solo el pie del sitio (deja sitio a la burbuja de WhatsApp): con «footer» a
+     secas también inflaba la firma de las citas en /casos. */
+  .hk-site-footer { padding-bottom: 84px; }
 }
 .hk-header-solid { box-shadow: 0 1px 0 var(--hairline), 0 10px 30px rgba(0, 0, 0, 0.07); }
 /* Celular y tableta: cabecera de altura fija y fondo sólido, sin desenfoque.

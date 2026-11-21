@@ -233,10 +233,11 @@ export default function AuditForm({ variante = "auditoria" }: { variante?: "audi
         </span>
         {/* Aviso junto al botón (auditoría MED-05, decisión 9): el nombre y el
             teléfono viajan a Meta en hash para medir los anuncios. Pestaña nueva
-            para no perder lo escrito; 44 px de alto para el dedo. */}
+            para no perder lo escrito; el relleno vertical en línea da 44 px de
+            área táctil sin separar las dos líneas del aviso. */}
         <p style={{ flexBasis: "100%", margin: 0, font: "var(--fw-light) var(--fs-xs)/1.45 var(--font-body)", color: "var(--text-on-inverse-mut)" }}>
           Al enviar aceptas nuestra{" "}
-          <a href="/privacidad" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", minHeight: 44, color: "inherit", textDecoration: "underline" }}>
+          <a href="/privacidad" target="_blank" rel="noopener" style={{ padding: "12px 0", color: "inherit", textDecoration: "underline", textUnderlineOffset: 3 }}>
             Política de Privacidad
           </a>
           , que explica cómo medimos nuestros anuncios con Meta.

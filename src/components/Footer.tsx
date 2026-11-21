@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Instagram, Facebook } from "lucide-react";
+import { MapPin, Instagram, Facebook, Mail, MessageCircle, Phone, FileText } from "lucide-react";
 import { Dot } from "@/components/brand/parts";
 import { FOOTER_COLUMNS } from "@/content/navegacion";
 import { site, whatsappLink } from "@/lib/site";
@@ -22,15 +22,15 @@ const socials = [
  *   número de teléfono declarado como tal.
  */
 const contactLinks = [
-  { label: site.email, href: `mailto:${site.email}` },
-  { label: site.phoneDisplay, href: whatsappLink() },
-  { label: "Llamar", href: `tel:${site.phoneE164}` },
-  { label: "Formulario de contacto", href: "/contacto" },
+  { label: site.email, href: `mailto:${site.email}`, Icon: Mail },
+  { label: `WhatsApp ${site.phoneDisplay}`, href: whatsappLink(), Icon: MessageCircle },
+  { label: "Llamar", href: `tel:${site.phoneE164}`, Icon: Phone },
+  { label: "Formulario de contacto", href: "/contacto", Icon: FileText },
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ background: "var(--black)", color: "var(--white)", borderTop: "1px solid var(--hairline-inverse)" }}>
+    <footer className="hk-site-footer" style={{ background: "var(--black)", color: "var(--white)", borderTop: "1px solid var(--hairline-inverse)" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y-tight) var(--gutter)" }}>
         <div className="hk-foot" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr 1fr 1fr", gap: "var(--space-6)" }}>
           {/* Bloque de marca */}
@@ -44,6 +44,19 @@ export default function Footer() {
               <MapPin size={16} style={{ color: "var(--cyan)", marginTop: 2, flexShrink: 0 }} />
               <span>Ica, Perú · Atención a todo el país</span>
             </p>
+            {/* Contacto dentro del bloque de marca, con el mismo icono cian que la
+                ubicación. Antes era una sexta columna que caía sola en una segunda
+                fila en escritorio y con otro estilo en el celular. */}
+            <ul className="hk-foot-contact" aria-label="Contacto" style={{ listStyle: "none", margin: "14px 0 0", padding: 0, display: "grid", gap: 10 }}>
+              {contactLinks.map(({ label, href, Icon }) => (
+                <li key={href}>
+                  <a href={href} className="hk-tap hk-foot-contact-a" style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--white)" }}>
+                    <Icon size={16} style={{ color: "var(--cyan)", flexShrink: 0 }} aria-hidden />
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
             <div style={{ display: "flex", gap: 12, marginTop: 18 }}>
               {socials.map(({ name, Icon, href }) => (
                 <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={name}
@@ -63,13 +76,6 @@ export default function Footer() {
             </FooterColumna>
           ))}
 
-          {/* Columna de contacto */}
-          <nav className="hk-foot-contact" style={{ display: "flex", flexDirection: "column", gap: 12 }} aria-label="Contacto">
-            <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-on-inverse-mut)" }}>Contacto</span>
-            {contactLinks.map((l) => (
-              <a key={l.href} href={l.href} className="hk-tap" style={{ font: "var(--fw-light) var(--fs-sm)/1.3 var(--font-body)", color: "var(--white)" }}>{l.label}</a>
-            ))}
-          </nav>
         </div>
 
         {/* Firma editorial: wordmark fantasma */}

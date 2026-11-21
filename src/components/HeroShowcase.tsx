@@ -156,6 +156,8 @@ export default function HeroShowcase() {
             <li key={p.titulo} className={`hs-paso hs-p${i + 1}`}>
               <span className="hs-ico" aria-hidden>
                 <p.Icon size={17} strokeWidth={2.2} />
+                {/* Estado encendido encima; solo se anima su opacidad (compuesta). */}
+                <span className="hs-luz"><p.Icon size={17} strokeWidth={2.2} /></span>
               </span>
               <span className="hs-txt">
                 <strong>{p.titulo}</strong>
@@ -306,11 +308,20 @@ export default function HeroShowcase() {
         }
         .hs-paso { position: relative; z-index: 1; display: flex; gap: 12px; align-items: flex-start; }
         .hs-ico {
+          position: relative;
           width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%;
           display: grid; place-items: center;
           background: var(--surface-raised); color: var(--text-muted);
           border: 1.5px solid var(--border-subtle);
         }
+        .hs-luz {
+          position: absolute; inset: -1.5px; border-radius: 50%;
+          display: grid; place-items: center;
+          opacity: 0;
+        }
+        .hs-p1 .hs-luz, .hs-p4 .hs-luz { background: var(--cyan); color: #04121a; }
+        .hs-p2 .hs-luz { background: #25d366; color: #fff; }
+        .hs-p3 .hs-luz { background: var(--orange); color: #1a0d00; }
         .hs-txt { display: grid; gap: 3px; padding-top: 1px; min-width: 0; }
         .hs-txt strong { font: var(--fw-medium) var(--fs-sm)/1.3 var(--font-display); color: var(--text-strong); }
         .hs-det { font: var(--fw-light) var(--fs-xs)/1.4 var(--font-body); color: var(--text-body); }
@@ -323,17 +334,19 @@ export default function HeroShowcase() {
         }
 
         /* Cada paso se enciende cuando la línea llega: 0 / 25 / 50 / 75 %. */
-        .hs-p1 .hs-ico { animation: hs-p1 var(--hs-loop) ease-out infinite; }
-        .hs-p2 .hs-ico { animation: hs-p2 var(--hs-loop) ease-out infinite; }
-        .hs-p3 .hs-ico { animation: hs-p3 var(--hs-loop) ease-out infinite; }
-        .hs-p4 .hs-ico { animation: hs-p4 var(--hs-loop) ease-out infinite; }
+        .hs-p1 .hs-luz { animation: hs-p1 var(--hs-loop) ease-out infinite; }
+        .hs-p2 .hs-luz { animation: hs-p2 var(--hs-loop) ease-out infinite; }
+        .hs-p3 .hs-luz { animation: hs-p3 var(--hs-loop) ease-out infinite; }
+        .hs-p4 .hs-luz { animation: hs-p4 var(--hs-loop) ease-out infinite; }
+        .hs-p4 .hs-ico { animation: hs-p4-pop var(--hs-loop) ease-out infinite; }
         .hs-p2 .hs-burbuja { animation: hs-burbuja var(--hs-loop) ease-out infinite; transform-origin: left top; }
 
         @keyframes hs-linea { 0% { transform: scaleY(0); } 75% { transform: scaleY(1); } 92% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
-        @keyframes hs-p1 { 0%, 92% { background: var(--cyan); border-color: var(--cyan); color: #04121a; } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } }
-        @keyframes hs-p2 { 0%, 23% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } 27%, 92% { background: #25d366; border-color: #25d366; color: #fff; } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } }
-        @keyframes hs-p3 { 0%, 48% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } 52%, 92% { background: var(--orange); border-color: var(--orange); color: #1a0d00; } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); } }
-        @keyframes hs-p4 { 0%, 73% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); transform: scale(1); } 77% { background: var(--cyan); border-color: var(--cyan); color: #04121a; transform: scale(1.12); } 81%, 92% { background: var(--cyan); border-color: var(--cyan); color: #04121a; transform: scale(1); } 100% { background: var(--surface-raised); border-color: var(--border-subtle); color: var(--text-muted); transform: scale(1); } }
+        @keyframes hs-p1 { 0%, 92% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes hs-p2 { 0%, 23% { opacity: 0; } 27%, 92% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes hs-p3 { 0%, 48% { opacity: 0; } 52%, 92% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes hs-p4 { 0%, 73% { opacity: 0; } 77%, 92% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes hs-p4-pop { 0%, 73% { transform: scale(1); } 77% { transform: scale(1.12); } 81%, 100% { transform: scale(1); } }
         @keyframes hs-burbuja { 0%, 24% { transform: scale(0.9); opacity: 0.55; } 29%, 100% { transform: scale(1); opacity: 1; } }
 
         /* ── Resultados ──────────────────────────────────────────────────── */
@@ -395,9 +408,8 @@ export default function HeroShowcase() {
         /* Sin movimiento: todo encendido y quieto, las barras ya dibujadas. */
         @media (prefers-reduced-motion: reduce) {
           .hs-pasos::after { animation: none; transform: scaleY(1); }
-          .hs-p1 .hs-ico, .hs-p4 .hs-ico { animation: none; background: var(--cyan); border-color: var(--cyan); color: #04121a; }
-          .hs-p2 .hs-ico { animation: none; background: #25d366; border-color: #25d366; color: #fff; }
-          .hs-p3 .hs-ico { animation: none; background: var(--orange); border-color: var(--orange); color: #1a0d00; }
+          .hs-luz, .hs-p4 .hs-ico { animation: none; }
+          .hs-luz { opacity: 1; }
           .hs-p2 .hs-burbuja { animation: none; }
           .hs-slide, .hs-b-barra, .hs-u { transition: none; }
         }

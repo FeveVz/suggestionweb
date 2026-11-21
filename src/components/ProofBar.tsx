@@ -110,7 +110,7 @@ export default function ProofBar({
               ))}
             </ul>
             <a href="/nosotros" className="hk-equipo-mas">
-              Desde {site.fundacion}, más de 50 marcas y los datos de la agencia <ArrowRight size={15} aria-hidden />
+              Desde {site.fundacion}, más de 50 marcas y los datos de la agencia<ArrowRight size={15} aria-hidden className="hk-enlace-flecha" />
             </a>
           </div>
         )}
@@ -199,9 +199,9 @@ export default function ProofBar({
         .hk-equipo-p:hover .hk-equipo-nom { color: var(--cyan); }
 
         .hk-equipo-mas {
-          display: inline-flex; align-items: center; gap: 8px;
+          display: block; width: fit-content;
           margin-top: clamp(1.75rem, 3vw, 2.25rem);
-          font: var(--fw-bold) var(--fs-sm)/1 var(--font-accent);
+          font: var(--fw-bold) var(--fs-sm)/1.35 var(--font-accent);
           color: var(--white); text-decoration: none;
           border-bottom: 1px solid var(--hairline-inverse); padding-bottom: 6px;
         }

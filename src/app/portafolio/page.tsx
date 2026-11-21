@@ -179,13 +179,13 @@ export default function PortafolioPage() {
                     <p className="hk-pf-detalle"><strong>El detalle.</strong> {p.detalle}</p>
                   )}
                   {p.caso && (
-                    <Link href={p.caso.href} className="hk-ulink hk-pf-caso">
-                      {p.caso.label} <ArrowRight size={15} />
+                    <Link href={p.caso.href} className="hk-ulink hk-pf-caso hk-enlace">
+                      {p.caso.label}<ArrowRight size={15} aria-hidden className="hk-enlace-flecha" />
                     </Link>
                   )}
                   {p.enlace && (
-                    <Link href={p.enlace.href} className="hk-ulink hk-pf-caso">
-                      {p.enlace.label} <ArrowRight size={15} />
+                    <Link href={p.enlace.href} className="hk-ulink hk-pf-caso hk-enlace">
+                      {p.enlace.label}<ArrowRight size={15} aria-hidden className="hk-enlace-flecha" />
                     </Link>
                   )}
                 </div>
@@ -238,8 +238,8 @@ export default function PortafolioPage() {
           }
           .hk-pf-detalle strong { font-weight:700; color:var(--text-strong); }
           .hk-pf-caso {
-            display:inline-flex; align-items:center; gap:8px; margin-top:18px;
-            font:var(--fw-bold) var(--fs-sm)/1 var(--font-accent); color:var(--text-strong);
+            display:block; width:fit-content; margin-top:18px;
+            font:var(--fw-bold) var(--fs-sm)/1.35 var(--font-accent); color:var(--text-strong);
           }
 
           @media (min-width: 860px) {

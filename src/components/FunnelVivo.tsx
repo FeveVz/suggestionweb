@@ -55,6 +55,12 @@ export default function FunnelVivo() {
           <span key={label} className={`fv-node ${cls}`}>
             <span className="fv-ico"><Icon size={19} strokeWidth={1.9} /></span>
             <span className="fv-lbl">{label}</span>
+            {/* Copia encendida encima: se anima solo su opacidad, que la GPU
+                compone sin repintar (antes se animaba el color de cada nodo). */}
+            <span className="fv-luz">
+              <span className="fv-ico"><Icon size={19} strokeWidth={1.9} /></span>
+              <span className="fv-lbl">{label}</span>
+            </span>
           </span>
         ))}
       </div>
@@ -133,12 +139,23 @@ export default function FunnelVivo() {
           max-width: 9ch;
         }
         @media (min-width: 420px) { .fv-lbl { max-width: none; white-space: nowrap; } }
-        .fv-n1 { animation: fv-n1 var(--fv-loop) ease-out infinite; }
-        .fv-n2 { animation: fv-n2 var(--fv-loop) ease-out infinite; }
-        .fv-n3 { animation: fv-n3 var(--fv-loop) ease-out infinite; }
-        .fv-n4 { animation: fv-n4 var(--fv-loop) ease-out infinite; }
+        /* Los extremos se alinean al borde: centradas, «te ven» y «te compran»
+           se salían del contenedor en el celular. */
+        .fv-n1 .fv-lbl { align-self: flex-start; text-align: left; }
+        .fv-n4 .fv-lbl { align-self: flex-end; text-align: right; }
+        .fv-luz {
+          position: absolute; inset: 0;
+          display: flex; flex-direction: column; align-items: center; gap: 8px;
+          color: var(--cyan-text-sm);
+          opacity: 0;
+          pointer-events: none;
+        }
+        .fv-n1 .fv-luz { animation: fv-n1 var(--fv-loop) ease-out infinite; }
+        .fv-n2 .fv-luz { animation: fv-n2 var(--fv-loop) ease-out infinite; }
+        .fv-n3 .fv-luz { animation: fv-n3 var(--fv-loop) ease-out infinite; }
+        .fv-n4 .fv-luz { animation: fv-n4 var(--fv-loop) ease-out infinite; }
         .fv-n4 .fv-ico { position: relative; animation: fv-pop var(--fv-loop) ease-out infinite; }
-        .fv-n4 .fv-ico::after { content: ""; position: absolute; inset: -1.5px; border-radius: 50%; border: 2px solid rgba(0,191,255,0.45); opacity: 0; animation: fv-anillo var(--fv-loop) ease-out infinite; }
+        .fv-n4 .fv-luz .fv-ico::after { content: ""; position: absolute; inset: -1.5px; border-radius: 50%; border: 2px solid rgba(0,191,255,0.45); opacity: 0; animation: fv-anillo var(--fv-loop) ease-out infinite; }
 
         /* línea de progreso: crece 4%→83%, sostiene y se desvanece */
         @keyframes fv-prog {
@@ -159,10 +176,10 @@ export default function FunnelVivo() {
           83%, 100% { opacity: 0; }
         }
         /* cada nodo se enciende cuando el punto le llega (4%/30%/57%/83%) */
-        @keyframes fv-n1 { 0%,3% { color: var(--text-muted); } 6% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
-        @keyframes fv-n2 { 0%,29% { color: var(--text-muted); } 33% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
-        @keyframes fv-n3 { 0%,55% { color: var(--text-muted); } 59% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
-        @keyframes fv-n4 { 0%,81% { color: var(--text-muted); } 85% { color: var(--cyan-text-sm); } 94% { color: var(--cyan-text-sm); } 99%,100% { color: var(--text-muted); } }
+        @keyframes fv-n1 { 0%,3% { opacity: 0; } 6% { opacity: 1; } 94% { opacity: 1; } 99%,100% { opacity: 0; } }
+        @keyframes fv-n2 { 0%,29% { opacity: 0; } 33% { opacity: 1; } 94% { opacity: 1; } 99%,100% { opacity: 0; } }
+        @keyframes fv-n3 { 0%,55% { opacity: 0; } 59% { opacity: 1; } 94% { opacity: 1; } 99%,100% { opacity: 0; } }
+        @keyframes fv-n4 { 0%,81% { opacity: 0; } 85% { opacity: 1; } 94% { opacity: 1; } 99%,100% { opacity: 0; } }
         /* pop de "venta": escala + anillo que se expande */
         @keyframes fv-pop {
           0%, 82%  { transform: scale(1); }
@@ -177,11 +194,11 @@ export default function FunnelVivo() {
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .fv-prog, .fv-carril, .fv-dot, .fv-n1, .fv-n2, .fv-n3, .fv-n4, .fv-n4 .fv-ico, .fv-n4 .fv-ico::after { animation: none; }
+          .fv-prog, .fv-carril, .fv-dot, .fv-luz, .fv-n4 .fv-ico, .fv-n4 .fv-luz .fv-ico::after { animation: none; }
           .fv-prog { transform: scaleX(1); }
           .fv-dot { opacity: 0; }
           .fv-n1, .fv-n2, .fv-n3 { color: var(--ink-700); }
-          .fv-n4 { color: var(--cyan-text-sm); }
+          .fv-n4 .fv-luz { opacity: 1; }
         }
       `}</style>
     </div>

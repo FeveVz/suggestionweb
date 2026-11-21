@@ -58,7 +58,7 @@ const CASOS: {
     title: "Grupo Inmobiliario Ceinys",
     periodo: "Campaña de septiembre · del 26 de agosto al 29 de septiembre de 2026",
     metric: "18",
-    note: "lotes cerrados a S/230.51 de publicidad por lote, con S/4,149.21 en Meta Ads. Ya descontados los que cerró cartera anterior al período.",
+    note: "lotes cerrados por leads que entraron durante el período de pauta, con S/4,149.21 en Meta Ads: S/230.51 de publicidad por lote. Resultado medido al 29 de septiembre de 2026.",
     quote: "",
     author: "",
     shape: 1,
@@ -73,7 +73,7 @@ const CASOS: {
     title: "Grupo Inmobiliario Ceinys",
     periodo: "Campa\u00f1a de agosto \u00b7 del 1 al 20 de agosto de 2026",
     metric: "14",
-    note: "lotes cerrados a S/225.17 de publicidad por lote, con S/3,152.43 en Meta Ads. Ya descontados los 3 que cerraron leads de campa\u00f1as anteriores.",
+    note: "lotes cerrados por leads que entraron durante el período de pauta, con S/3,152.43 en Meta Ads: S/225.17 de publicidad por lote. Resultado medido al 20 de agosto de 2026.",
     quote: "",
     author: "",
     shape: 3,
@@ -198,14 +198,18 @@ export default function Casos() {
                   <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>{c.tag}</span>
                   <Blot shape={c.shape} tint="orange" size={44} />
                 </div>
+                {/* El cliente va arriba y la frase debajo de la cifra, que la
+                    continúa («18 lotes cerrados…»). Antes era «Ceinys. lotes
+                    cerrados…», con minúscula después del punto. */}
+                <p style={{ font: "var(--fw-bold) var(--fs-sm)/1.35 var(--font-body)", color: "var(--text-strong)", marginTop: 12 }}>{c.title}</p>
                 {c.periodo && (
-                  <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 12 }}>{c.periodo}</p>
+                  <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)", marginTop: 4 }}>{c.periodo}</p>
                 )}
-                <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: c.periodo ? 8 : 16 }}>
+                <div style={{ font: "var(--fw-bold) var(--fs-5xl)/0.9 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", marginTop: 14 }}>
                   <CountUp to={c.metric} locale={c.metricLocale ?? (c.metric.includes(".") ? "es-ES" : undefined)} />
                 </div>
                 <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-body)", marginTop: 10, maxWidth: "58ch" }}>
-                  <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{c.title}.</strong> {c.note}
+                  {c.note}
                 </p>
                 {c.quote && (
                   <blockquote style={{ margin: "22px 0 0", borderLeft: "2px solid var(--cyan)", paddingLeft: 20 }}>

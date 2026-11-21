@@ -24,6 +24,8 @@ export function buildMetadata(opts: {
     alternates: {
       canonical: url,
       languages: { [site.hreflang]: url },
+      // Feed del blog anunciado en todas las páginas (auditoría TEC-19).
+      types: { "application/rss+xml": [{ url: "/blog/rss.xml", title: `Blog de ${site.name}` }] },
     },
     robots: opts.noindex ? { index: false, follow: true } : undefined,
     openGraph: {

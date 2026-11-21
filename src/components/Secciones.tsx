@@ -17,6 +17,13 @@ import Grafico from "@/components/Grafico";
  * visual —ritmo, contraste y color de marca—, no animación.
  */
 
+/**
+ * Mayúscula inicial para el texto que sigue a un título en negrita. El
+ * contenido está escrito como continuación («Material. lona de 8 onzas…»), y
+ * tras un punto o en su propia línea esa minúscula se lee como errata.
+ */
+const conMayuscula = (t: string) => t.replace(/^([«"¿¡(]?)(\p{Ll})/u, (_, signo: string, letra: string) => signo + letra.toUpperCase());
+
 const CELDA = {
   font: "var(--fw-light) var(--fs-base)/1.5 var(--font-body)",
   color: "var(--text-body)",
@@ -158,7 +165,7 @@ function Pasos({ pasos }: { pasos: NonNullable<Seccion["pasos"]> }) {
                 maxWidth: "62ch",
               }}
             >
-              {p.texto}
+              {conMayuscula(p.texto)}
             </span>
           </span>
         </li>
@@ -321,25 +328,28 @@ export default function Secciones({ secciones }: { secciones: Seccion[] }) {
                   <span aria-hidden style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", marginTop: 9, flexShrink: 0 }} />
                   <p style={{ font: "var(--fw-light) var(--fs-base)/1.55 var(--font-body)", color: "var(--text-body)", maxWidth: "64ch" }}>
                     {b.titulo && <strong style={{ fontWeight: 700, color: "var(--text-strong)" }}>{b.titulo}. </strong>}
-                    {b.texto}
+                    {b.titulo ? conMayuscula(b.texto) : b.texto}
                   </p>
                 </li>
               ))}
             </ul>
           )}
+          {sec.nota && <NotaAlMargen n={sec.nota} />}
+          {sec.foto && <FotoSeccion f={sec.foto} />}
+          {/* Enlaces al final de la sección, después de la foto. En línea (no
+              flex): si el texto baja a dos líneas, la flecha sigue pegada a la
+              última palabra en vez de quedarse sola al borde derecho. */}
           {sec.enlaces?.length ? (
             <ul style={{ listStyle: "none", margin: "18px 0 0", padding: 0, display: "flex", flexWrap: "wrap", gap: "10px 24px" }}>
               {sec.enlaces.map((e) => (
                 <li key={e.href}>
-                  <Link href={e.href} className="hk-ulink" style={{ display: "inline-flex", alignItems: "center", gap: 6, font: "var(--fw-medium) var(--fs-base)/1.4 var(--font-body)", color: "var(--text-strong)" }}>
-                    {e.label} <ArrowRight size={16} aria-hidden />
+                  <Link href={e.href} className="hk-ulink hk-enlace" style={{ font: "var(--fw-medium) var(--fs-base)/1.45 var(--font-body)", color: "var(--text-strong)" }}>
+                    {e.label}<ArrowRight size={16} aria-hidden className="hk-enlace-flecha" />
                   </Link>
                 </li>
               ))}
             </ul>
           ) : null}
-          {sec.nota && <NotaAlMargen n={sec.nota} />}
-          {sec.foto && <FotoSeccion f={sec.foto} />}
         </div>
       ))}
     </div>

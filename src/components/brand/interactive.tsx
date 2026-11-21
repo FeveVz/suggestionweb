@@ -117,7 +117,7 @@ export function DualReveal({ shape = 3, size = 400 }: { shape?: number; size?: n
           </span>
         </div>
       </div>
-      <figcaption style={{ display: 'flex', gap: 26, font: 'var(--fw-bold) var(--fs-micro)/1 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)' }}>
+      <figcaption className="hk-dual-cap" style={{ font: 'var(--fw-bold) var(--fs-micro)/1.25 var(--font-accent)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', maxWidth: size }}>
         <span style={{ color: 'var(--orange)', opacity: marketWins ? 1 : 0.45, transition: 'opacity var(--dur-base)' }}>Lo que el mercado ve</span>
         <span style={{ color: 'var(--cyan)', opacity: usWins ? 1 : 0.45, transition: 'opacity var(--dur-base)' }}>Lo que vemos nosotros</span>
       </figcaption>
@@ -237,6 +237,11 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
   const elegir = (r: RubroTest) => {
     setSel(r);
     setFase(reduce ? 'lesson' : 'scan');
+    // En el celular la pregunta va arriba y las fotos debajo; al elegir, la
+    // imagen vuelve a quedar primero, así que se sube a la pieza para verla.
+    if (window.matchMedia('(max-width: 920px)').matches) {
+      document.getElementById('percepcion')?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    }
     import('@/lib/tracking').then((m) => m.track('view_item', { origen: 'percepcion', rubro: r.k })).catch(() => {});
   };
 
@@ -252,8 +257,8 @@ export function Percepcion({ shape = 1 }: { shape?: number }) {
 
   return (
     <LazyMotion features={cargarAnimacion} strict>
-    <section id="percepcion" style={{ background: 'var(--black)', color: 'var(--white)', padding: 'var(--section-y) 0', position: 'relative', overflow: 'hidden' }}>
-      <div className="hk-perc" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 var(--gutter)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
+    <section id="percepcion" style={{ background: 'var(--black)', color: 'var(--white)', padding: 'var(--section-y-tight) 0 var(--section-y)', position: 'relative', overflow: 'hidden', scrollMarginTop: 58 }}>
+      <div className={`hk-perc hk-perc-${fase}`} style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 var(--gutter)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem,5vw,4.5rem)', alignItems: 'center' }}>
         {/* Estímulo: selector visual (2×2 de trabajo real) → morph → escaneo → miradas */}
         <div style={{ display: 'grid', placeItems: 'center', minHeight: 380 }}>
           {fase === 'ask' ? (
