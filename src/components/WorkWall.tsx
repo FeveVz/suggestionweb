@@ -1,12 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { Btn, Label } from "@/components/brand/parts";
 import CountUp from "@/components/CountUp";
+import MuroImagenes from "@/components/MuroImagenes";
 
 /**
  * Muro de trabajos: columnas de miniaturas de piezas REALES flotando en
  * direcciones alternas (loop infinito, contenido duplicado). Texto + métrica
  * a la izquierda, muro a la derecha. Server Component (animación CSS pura).
  * Pausa al hover; con prefers-reduced-motion queda estático; móvil: 2 columnas.
+ * Las imágenes las pide MuroImagenes (cliente) al acercarse el muro, para no
+ * competir con la hoja de estilos al cargar el inicio.
  */
 
 const W = (n: number) => `/assets/wall/wall-${n}.webp`;
@@ -55,38 +58,8 @@ export default function WorkWall() {
           </div>
         </div>
 
-        {/* Muro flotante */}
-        <div className="hk-wall" aria-hidden>
-          {COLS.map((col, i) => (
-            <div key={i} className="hk-wall-col" style={{ animationDuration: `${DUR[i]}s`, animationDirection: DIR[i], animationDelay: `${DELAY[i]}s` }}>
-              {/* eager: las columnas en reversa muestran su 2.ª copia desde t=0;
-                  con lazy quedaban vacías hasta cargar (bug visto por el owner).
-                  fetchPriority low: siguen siendo eager —así el muro no se rompe—
-                  pero dejan de competir por ancho de banda con el elemento que
-                  define el LCP. React precarga automáticamente toda imagen que no
-                  sea lazy, y eran 28 <link rel=preload> para un bloque que está
-                  al 53% de la página; el LCP de campo se fue a 2,5 s. */}
-              {[...col, ...col].map((src, j) => (
-                // srcSet: en móvil el muro son 4 columnas de ~85 px y se servía
-                // el archivo de 360 px en las 28 (478 KB de sobra, medido con
-                // Lighthouse el 2026-09-20). La variante de 180 px cubre 85 px
-                // en pantalla de densidad doble; el escritorio sigue con la de
-                // 360. Se generan con `node scripts/wall-sizes.mjs`.
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={j}
-                  src={src}
-                  srcSet={`${src.replace(/\.webp$/, "-180.webp")} 180w, ${src} 360w`}
-                  sizes="(max-width: 767px) 23vw, 150px"
-                  alt=""
-                  loading="eager"
-                  decoding="async"
-                  fetchPriority="low"
-                />
-              ))}
-            </div>
-          ))}
-        </div>
+        {/* Muro flotante: las imágenes se piden al acercarse (ver MuroImagenes). */}
+        <MuroImagenes cols={COLS} dur={DUR} dir={DIR} delay={DELAY} />
       </div>
 
       <style>{`
