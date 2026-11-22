@@ -53,7 +53,7 @@ const CHROME = [
 ].find(existsSync);
 if (!CHROME) throw new Error("No encontré Chrome ni Edge");
 
-const fuente = pathToFileURL(path.join(raiz, "public/fonts/Geomanist-Bold.woff2")).href;
+const fuente = pathToFileURL(path.join(raiz, "fuentes/originales/Geomanist-Bold.woff2")).href;
 const tmp = mkdtempSync(path.join(tmpdir(), "og-posts-"));
 const pedidos = process.argv.slice(2);
 const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");

@@ -6,16 +6,20 @@
 /* ============================================================
    Suggestion — Webfonts (self-hosted)
    Display: Space Grotesk · Body/accent: Geomanist
+   Versiones ligeras (-lat): solo los caracteres de un sitio en español,
+   generadas con scripts/fuentes-subset.py desde fuentes/originales/.
+   Se ven idénticas a las completas (comparadas píxel a píxel) y pesan la
+   mitad. Si cambian, nuevo nombre: /fonts/ va con caché immutable de un año.
    ============================================================ */
-@font-face { font-family: "Space Grotesk"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Light.woff2") format("woff2"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"); }
-@font-face { font-family: "Space Grotesk"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"); }
-@font-face { font-family: "Geomanist"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular.woff2") format("woff2"); }
-@font-face { font-family: "Geomanist"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular.woff2") format("woff2"); }
-@font-face { font-family: "Geomanist"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Medium.woff2") format("woff2"); }
-@font-face { font-family: "Geomanist"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Light-lat.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Regular-lat.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-Medium-lat.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold-lat.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/SpaceGrotesk-SemiBold-lat.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 300; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular-lat.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Regular-lat.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Medium-lat.woff2") format("woff2"); }
+@font-face { font-family: "Geomanist"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/Geomanist-Bold-lat.woff2") format("woff2"); }
 
 /* Respaldo con métricas ajustadas: mientras llega la fuente de marca, Arial
    ocupa el mismo ancho y alto, y el texto no salta al cambiar (el CLS de 0,09

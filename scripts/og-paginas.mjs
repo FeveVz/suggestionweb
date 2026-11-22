@@ -58,7 +58,7 @@ const CHROME = [
 if (!CHROME) throw new Error("No encontré Chrome ni Edge");
 
 const raiz = process.cwd();
-const fuente = pathToFileURL(path.join(raiz, "public/fonts/Geomanist-Bold.woff2")).href;
+const fuente = pathToFileURL(path.join(raiz, "fuentes/originales/Geomanist-Bold.woff2")).href;
 const mancha = pathToFileURL(path.join(raiz, "public/assets/blots/blot-3-cyan.png")).href;
 const tmp = mkdtempSync(path.join(tmpdir(), "og-"));
 

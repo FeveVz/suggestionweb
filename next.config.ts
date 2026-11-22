@@ -106,7 +106,8 @@ const nextConfig: NextConfig = {
    * así que el navegador revalidaba las 56 imágenes de la home en CADA visita:
    * quien volvía pagaba casi lo mismo que quien entraba por primera vez.
    *
-   * Las fuentes van con `immutable` a un año porque no cambian nunca. Las
+   * Las fuentes van con `immutable` a un año porque no cambian nunca (si se
+   * regeneran con scripts/fuentes-subset.py, cambiarles el nombre). Las
    * imágenes van a 30 días con `stale-while-revalidate`: si alguna se
    * reemplaza, el visitante ve la vieja una vez y el navegador ya se trae la
    * nueva de fondo. Para forzar un cambio inmediato, renombrar el archivo

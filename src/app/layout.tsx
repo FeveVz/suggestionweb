@@ -71,8 +71,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   // Las 2 fuentes de la primera pantalla. Con ReactDOM.preload sale una sola
   // etiqueta en el <head>; las <link> que había en el body se duplicaban
   // (auditoría PERF-04). No subir a más precargas: compiten con el CSS en 4G.
-  preload("/fonts/SpaceGrotesk-SemiBold.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
-  preload("/fonts/Geomanist-Regular.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  preload("/fonts/SpaceGrotesk-SemiBold-lat.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  preload("/fonts/Geomanist-Regular-lat.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
   return (
     <html lang={site.lang} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
