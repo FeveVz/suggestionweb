@@ -415,7 +415,7 @@ export const CASOS_DETALLE: Caso[] = [
   {
     slug: "granjas-bonanza",
     publicado: "2026-07-01",
-    revisado: "2026-08-28",
+    revisado: "2026-11-22",
     cliente: "Granjas Bonanza",
     sector: "Marcas y consumo",
     sectorHref: "/marketing-marcas-consumo",
@@ -491,15 +491,19 @@ export const CASOS_DETALLE: Caso[] = [
     ],
     quote: "Suggestion convierte el presupuesto en clientes reales, no en promesas.",
     autor: "Jorge Saykon, Gerente General",
+    enlaces: [
+      { label: "Del costo por lead al costo por venta: CPL vs ROAS", href: "/blog/performance/cpl-vs-roas" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     servicios: [
-      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "Marketing y publicidad digital", href: "/servicios/marketing-digital-publicidad" },
       { label: "Gestión de Redes Sociales", href: "/servicios/redes-sociales" },
     ],
   },
   {
     slug: "hoteles-senor-de-luren",
     publicado: "2026-07-01",
-    revisado: "2026-08-28",
+    revisado: "2026-11-22",
     cliente: "Hoteles Señor de Luren",
     sector: "Turismo",
     sectorHref: "/marketing-turismo",
@@ -586,8 +590,12 @@ export const CASOS_DETALLE: Caso[] = [
     ],
     quote: "En una sola campaña generamos 75 reservas. Los resultados hablan por sí solos.",
     autor: "Roberto, Gerente General",
+    enlaces: [
+      { label: "Cómo promocionar un hotel y pasar reservas al canal directo", href: "/blog/sectores/como-promocionar-un-hotel" },
+      { label: "Cómo medimos una campaña", href: "/metodo" },
+    ],
     servicios: [
-      { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+      { label: "Marketing y publicidad digital", href: "/servicios/marketing-digital-publicidad" },
       { label: "Gestión de Redes Sociales", href: "/servicios/redes-sociales" },
     ],
   },
@@ -596,7 +604,7 @@ export const CASOS_DETALLE: Caso[] = [
 CASOS_DETALLE.push({
   slug: "autoniza-eventos",
     publicado: "2026-07-01",
-    revisado: "2026-08-28",
+    revisado: "2026-11-22",
   cliente: "Autoniza",
   sector: "Automotriz",
   sectorHref: "/marketing-automotriz",
@@ -709,12 +717,13 @@ CASOS_DETALLE.push({
     },
   ],
   enlaces: [
+    { label: "El evento de fin de semana que sale con autos firmados, paso a paso", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
     { label: "Cómo se produjo, en el portafolio", href: "/portafolio" },
     { label: "Cómo medimos una campaña", href: "/metodo" },
   ],
   servicios: [
     { label: "BTL y Activaciones", href: "/servicios/btl" },
-    { label: "Publicidad Digital", href: "/servicios/publicidad-digital" },
+    { label: "Marketing y publicidad digital", href: "/servicios/marketing-digital-publicidad" },
     { label: "Producción Audiovisual", href: "/servicios/produccion-audiovisual" },
   ],
 });

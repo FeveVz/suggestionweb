@@ -1408,8 +1408,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo hacer que tu página aparezca en Google: qué revisar primero",
     excerpt:
       "Antes de contratar nada ni de escribir una palabra clave, hay una comprobación de dos minutos que casi nadie hace y que explica la mitad de los casos: saber si Google tiene tu página.",
+    enCorto: [
+      "Primero comprueba si Google tiene tu página: busca entre comillas una frase literal de ella. Si no aparece, no está indexada, y eso se resuelve antes que cualquier palabra clave.",
+      "Estar indexado no es estar posicionado: Google muestra la página que mejor responde a lo que se buscó, así que necesitas una página por intención.",
+      "Decide si tu servicio se busca con el nombre de tu ciudad o sin él, y abre Search Console, que es gratis, para ver qué páginas tiene Google y con qué búsquedas apareces.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Lo primero: ¿Google tiene tu página o ni la conoce?",
@@ -1982,6 +1987,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Tasa de cita", texto: "cuántos de los contactados aceptan una reunión, visita o prueba." },
           { titulo: "Tasa de cierre", texto: "cuántas de esas citas terminan en venta. Aquí manda el equipo comercial, no la pauta." },
         ],
+        enlaces: [{ label: "Caso Granjas Bonanza: 15 contratos con S/2,500 de pauta", href: "/casos/granjas-bonanza" }],
       },
       {
         h2: "Cómo saber qué ROAS necesitas de verdad",
@@ -3026,8 +3032,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Marketing inmobiliario: ejemplos de campañas que sí venden lotes",
     excerpt:
       "Los mejores ejemplos de marketing inmobiliario tienen algo en común: no venden “metros y precio”, venden valorización, oportunidad y futuro. Aquí ejemplos que funcionan y uno real.",
+    enCorto: [
+      "Los ejemplos de marketing inmobiliario que venden no hablan de metros y precio: venden valorización, oportunidad con fecha y proyección de vida.",
+      "El formato decide si te creen: un recorrido en video vertical por el terreno real trae menos leads que un anuncio bonito, pero mejor informados.",
+      "La venta suele perderse entre el lead y la visita: agenda cerrada («el sábado a las 10»), recordatorio con la ubicación exacta y, en proyectos alejados, transporte resuelto.",
+    ],
     date: "2026-05-27",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Ejemplos de ángulos que venden",
@@ -3284,6 +3295,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Por qué funciona", texto: "la fecha límite es verdadera y el cliente ya está frente al auto. Del interés a la firma queda una tarde." },
           { titulo: "Qué medir", texto: "registrados, asistentes y unidades firmadas el mismo día. Si vino gente y no firmó nadie, falló la oferta." },
         ],
+        enlaces: [{ label: "Caso Autoniza: 8 autos vendidos en 2 eventos", href: "/casos/autoniza-eventos" }],
       },
       {
         h2: "Ejemplo 4: posventa y taller, la mina olvidada del marketing automotriz",
@@ -3538,7 +3550,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Eventos y activaciones: la pauta que se cierra el mismo día",
         parrafo:
           "Un evento en el concesionario convierte la publicidad en una fecha, y una fecha le pone plazo al indeciso. La clave está en la convocatoria: si llenas el local de paseantes, gastaste en gaseosa. Con Autoniza, en Ica, trabajamos convocatoria segmentada previa, activación en el punto y cierre en piso: 8 autos vendidos en 2 eventos —3 el 22 de mayo y 5 el 25 de junio—, firmados el mismo día.",
-        enlaces: [{ label: "El evento de fin de semana que sale con autos firmados, paso a paso", href: "/blog/automotriz/marketing-automotriz-ejemplos" }],
+        enlaces: [{ label: "El evento de fin de semana que sale con autos firmados, paso a paso", href: "/blog/automotriz/marketing-automotriz-ejemplos" }, { label: "Caso Autoniza: 8 autos vendidos en 2 eventos", href: "/casos/autoniza-eventos" }],
       },
       {
         h2: "Cómo medir si la publicidad para venta de autos funcionó",
@@ -4057,8 +4069,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Letreros para negocio: cuál elegir y cuánto cuesta en Perú",
     excerpt:
       "Es la inversión publicitaria que más tiempo va a estar trabajando para ti, y la única que no puedes apagar. Conviene acertar a la primera.",
+    enCorto: [
+      "El tipo de letrero depende de tu local, no del presupuesto: desde dónde te ven, a qué velocidad pasa quien mira y si necesitas que te vean de noche.",
+      "En octubre de 2026, las letras corpóreas iluminadas van de unos S/1,200 a S/5,000 en formato pequeño o mediano y hasta S/15,000 en gran formato (rangos de mercado). La instalación casi nunca viene en el primer precio.",
+      "Pregunta en tu municipalidad antes de fabricar: la autorización la tramita el negocio y las medidas máximas cambian según el distrito y la vía.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué tipo de letrero necesita tu local",
@@ -4159,8 +4176,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Polos personalizados para empresa: qué técnica pedir y cuánto cuesta",
     excerpt:
       "La técnica correcta no es la más bonita: es la que corresponde a tu cantidad. Pedir serigrafía para doce polos o bordado para quinientos son dos formas distintas de pagar de más.",
+    enCorto: [
+      "La técnica depende de la cantidad: DTF o vinil textil desde una unidad, bordado desde 12 y serigrafía cuando pasas de unas 50 prendas del mismo diseño.",
+      "En octubre de 2026, el bordado en pecho va desde unos S/8 por prenda a partir de 12 unidades, y el DTF baja de unos S/25 por una sola prenda a unos S/12 por prenda en 50 (rangos de mercado).",
+      "Hay costos que se pagan una sola vez, como la digitalización del logo para bordado, de S/30 a S/80: pide que te entreguen ese archivo.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Las cuatro técnicas, y cuándo usa cada una",
@@ -4259,8 +4281,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Merchandising corporativo: qué regalar para que no acabe en un cajón",
     excerpt:
       "El objetivo de un regalo corporativo no es que guste al recibirlo: es que siga encima del escritorio dentro de seis meses. Son dos cosas muy distintas.",
+    enCorto: [
+      "Un regalo corporativo funciona cuando se queda a la vista donde tu cliente trabaja o vive: un objeto de uso diario supera a uno espectacular que se guarda.",
+      "La cantidad mínima decide si una pieza es viable para un negocio pequeño: la mayoría arranca en 50 unidades y los lapiceros suelen pedir 100.",
+      "Cuanto más discreto el logo, más se usa el objeto. Y no pidas de más lo que caduca, como agendas y calendarios.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "La única pregunta que importa",
@@ -4489,8 +4516,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Material POP: qué piezas funcionan de verdad en punto de venta",
     excerpt:
       "La decisión de compra se toma frente al estante, en segundos y casi sin pensar. El material POP existe para ganar esos segundos, y la mayoría está diseñado como si hubiera minutos.",
+    enCorto: [
+      "El material POP son las piezas que trabajan dentro de la tienda: jalavistas, rompetráficos, stoppers, exhibidores de mostrador y tótems de piso. Su trabajo es ganar la comparación frente al estante.",
+      "Una pieza se entiende en tres segundos o no funciona: una sola idea y, si hay promoción, el número grande.",
+      "El fracaso más común es que la pieza nunca salga del almacén: acuerda el espacio con la tienda antes de fabricar y diseña algo que se arme sin instrucciones.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Material POP en punto de venta: qué es y qué hace cada pieza",
@@ -4590,8 +4622,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Panel, valla, bicivalla o vehículo rotulado: cuál te conviene",
     excerpt:
       "Los cuatro formatos ponen tu marca en la calle, pero no hacen el mismo trabajo ni le hablan a la misma persona. Elegir por precio es como se desperdicia una campaña de exterior.",
+    enCorto: [
+      "El panel o la valla dan notoriedad en una vía concreta a quien pasa en auto y se alquilan por mes; la bicivalla llega al peatón, por el recorrido que tú elijas, y se contrata por días.",
+      "A la velocidad de una avenida solo se lee la marca y una idea: pocas palabras, muy grandes, y una sola cosa que hacer.",
+      "Antes de firmar un alquiler, pregunta si incluye la impresión y el cambio de lona, si tiene iluminación y si el operador tiene autorización municipal.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué hace cada formato",
@@ -4790,8 +4827,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cuánto cobra una agencia de marketing digital en Perú",
     excerpt:
       "Hay una confusión que arruina más relaciones entre cliente y agencia que ninguna otra, y aparece en la primera reunión: creer que lo que pagas de fee es lo que se va a invertir en publicidad.",
+    enCorto: [
+      "En octubre de 2026, el mercado formal peruano va de unos S/1,500 al mes por un community manager junior con una red a S/60,000 en un retainer amplio de agencia full-service, antes de IGV.",
+      "Cuando la agencia cobra un porcentaje de la inversión en pauta, la comisión habitual va de 12 % a 18 %, según el monto invertido.",
+      "El fee no incluye la publicidad: pide el fee y la inversión en anuncios en líneas separadas, y el alcance mensual por escrito para comparar propuestas.",
+    ],
     date: "2026-10-05",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Los tres modelos de cobro",
@@ -4992,8 +5034,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cuánto cuesta un millar de volantes en Perú",
     excerpt:
       "Pides tres cotizaciones por lo mismo y vuelven S/100, S/145 y S/260. La mayor parte de esa diferencia se explica con dos datos que casi nunca están en el precio que te mandan.",
+    enCorto: [
+      "En octubre de 2026, un millar de volantes A5 a full color por ambas caras va desde unos S/100 en couché de 115 g y desde unos S/140 en couché de 150 g (rangos de mercado).",
+      "Antes de comparar cotizaciones, pregunta si el precio incluye IGV: la diferencia es de 18 % y explica buena parte de los presupuestos que parecen distintos.",
+      "Imprimir es lo barato; repartirlos bien es lo que decide si la campaña sirve. Un volante funciona con una sola oferta y un motivo para guardarlo.",
+    ],
     date: "2026-10-05",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Cuánto cuesta el millar",
@@ -5087,6 +5134,11 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cuánto cuesta registrar una marca en Indecopi",
     excerpt:
       "La tasa no se devuelve aunque te rechacen la solicitud. Por eso lo que decide cuánto te va a costar registrar tu marca no es la tasa: es lo que hagas antes de pagarla.",
+    enCorto: [
+      "La tasa publicada de Indecopi es S/534.90 por la primera clase, S/533.30 por cada clase adicional y S/401.20 para las MYPE que califican (fuentes consultadas en octubre de 2026).",
+      "Se paga por clase: registra solo las clases en las que vendes o vas a vender pronto. Registrar «por si acaso» multiplica el costo sin darte más protección.",
+      "La tasa no se devuelve si te deniegan la solicitud. La búsqueda previa cuesta unas decenas de soles por clase y es lo que te protege de pagar por un rechazo.",
+    ],
     date: "2026-10-05",
     actualizado: "2026-11-22",
     secciones: [
@@ -5380,7 +5432,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo aparecer primero en Google Maps",
     excerpt:
       "Google publica los tres factores que deciden el orden de los resultados locales. Uno de ellos no lo controla nadie, y entender eso cambia por completo en qué vale la pena invertir esfuerzo.",
+    enCorto: [
+      "Google ordena los resultados locales por relevancia, distancia y prominencia. La distancia no se puede mover; las otras dos, sí.",
+      "La relevancia se trabaja completando el perfil con precisión, empezando por la categoría principal, que es el campo que más pesa.",
+      "La prominencia se construye con reseñas recientes y respondidas, pedidas de forma sistemática. Y antes que nada, confirma que el perfil está verificado.",
+    ],
     date: "2026-10-06",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Los tres factores, y cuál puedes mover",
@@ -5666,8 +5724,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Qué es un CRM y cuándo lo necesitas de verdad",
     excerpt:
       "La mayoría de negocios no necesita un CRM más potente: necesita que alguien llene el que ya tiene. Esa diferencia explica casi todas las implementaciones que no sirvieron para nada.",
+    enCorto: [
+      "Un CRM es el lugar donde queda escrito quién te contactó, cuándo, de dónde vino, qué se habló y en qué etapa está: la memoria del área comercial, fuera de la cabeza de cada vendedor.",
+      "Una hoja de cálculo bien llevada sirve más tiempo del que se cree. Deja de alcanzar cuando dos personas se pisan los cambios, se pierden seguimientos o nadie sabe de dónde vino un cliente.",
+      "Al elegir uno, importa que tu equipo lo use: que se conecte con WhatsApp, funcione bien en el celular y obligue a llenar lo esencial, empezando por el origen del contacto.",
+    ],
     date: "2026-10-06",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es un CRM, en una frase",
@@ -5982,8 +6045,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo conseguir clientes para vender terrenos",
     excerpt:
       "Conseguir interesados en un terreno es fácil y barato. Conseguir interesados que puedan comprarlo es otro oficio, y es el que separa una agenda llena de una semana de ventas.",
+    enCorto: [
+      "Antes de anunciar, elige a qué comprador le hablas: quien va a construir su casa teme que la zona no se desarrolle; quien invierte para revender, que el terreno no suba.",
+      "Pon en el anuncio el rango de precio, la inicial y la ubicación real: recibes menos contactos y más visitas de gente que puede pagar.",
+      "En lotes la venta ocurre en la visita: confírmala la víspera y el mismo día, y mide cuántos contactos llegan a visitar, que es lo que mejor anticipa las ventas del mes siguiente.",
+    ],
     date: "2026-10-06",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Primero: quién compra un terreno",
@@ -6112,7 +6180,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo vender un terreno rápido en Perú",
     excerpt:
       "La mayoría de terrenos que llevan meses sin venderse no tienen un problema de publicidad: tienen un problema de papeles o de precio. Y los dos se arreglan antes de publicar nada.",
+    enCorto: [
+      "Lo que suele frenar la venta de un terreno no es la publicidad, sino los papeles o el precio: partida registral clara, propietarios de acuerdo, cargas declaradas y linderos que coincidan.",
+      "Ten listo el expediente antes de publicar: partida registral actualizada, documento del propietario, planos con área y linderos, y tributos municipales al día.",
+      "El precio lo fija lo que se vende hoy en la zona, comparado por metro cuadrado. Tres semanas sin consultas serias con un buen anuncio indican que está fuera de mercado.",
+    ],
     date: "2026-10-06",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Lo que de verdad frena una venta",
@@ -6275,6 +6349,7 @@ export const BLOG_POSTS: BlogPost[] = [
           texto: "de las reservas en una sola plataforma es el punto a partir del cual esa plataforma dicta tus condiciones de paridad, cancelación y posición. Cada reserva que pasas a directo es comisión que se queda en el hotel, sin llenar una habitación más.",
           fuente: "Chekin, guía de canales de distribución hotelera (consultada el 21 de noviembre de 2026)",
         },
+        enlaces: [{ label: "Caso Hoteles Señor de Luren: 75 reservas en una sola campaña", href: "/casos/hoteles-senor-de-luren" }],
       },
       {
         h2: "Las reseñas y la ficha deciden más que la campaña",
@@ -6342,7 +6417,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo vender por WhatsApp paso a paso",
     excerpt:
       "En Perú casi toda la venta pasa por WhatsApp, y casi nadie lo tiene montado. La diferencia entre un negocio que vende ahí y uno que solo conversa son cuatro cosas, y ninguna es un bot.",
+    enCorto: [
+      "Para vender, usa WhatsApp Business y no el personal: perfil completo, catálogo con precios, respuestas rápidas y etiquetas que funcionen como embudo.",
+      "La venta suele morir cuando el cliente pregunta el precio y recibe solo la cifra: responde la cifra, qué incluye y una pregunta de vuelta.",
+      "El tiempo de respuesta decide casi todo: define por escrito quién contesta y en qué horario. Y no escribas a listas compradas: es la vía rápida a que te restrinjan la cuenta.",
+    ],
     date: "2026-10-06",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Primero: qué versión necesitas",
