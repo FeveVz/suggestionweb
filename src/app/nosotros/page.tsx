@@ -39,7 +39,7 @@ const SECCIONES: Seccion[] = [
         ["Marcas atendidas", "Más de 50"],
         ["Sectores con estrategia propia", "7, cada uno con su método"],
         ["Inmobiliario", "24 marcas inmobiliarias para las que hemos trabajado"],
-        ["Automotriz", "19 marcas de vehículos, de livianos a línea amarilla"],
+        ["Automotriz", "19 marcas de vehículos atendidas, de livianos a línea amarilla"],
         ["Equipo", "7 personas, cada una con nombre, rol y página propia en esta web"],
       ],
       nota: "Somos Agencia de Marketing Suggestion S.A.C. Los datos formales están en el pie de página.",

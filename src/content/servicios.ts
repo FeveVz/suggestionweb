@@ -1854,7 +1854,7 @@ const SERVICIOS_BASE: Servicio[] = [
       { paso: "04", titulo: "Informe", texto: "Métricas, fotos, videos y aprendizajes." },
     ],
     lecturas: [
-      { label: "Publicidad para venta de autos: eventos y activaciones que cierran", href: "/blog/automotriz/publicidad-para-venta-de-autos" },
+      { label: "El evento en concesionario que sale con autos firmados", href: "/blog/automotriz/marketing-automotriz-ejemplos" },
       { label: "Cuánto cuesta un millar de volantes en Perú", href: "/blog/imprenta-btl/cuanto-cuesta-un-millar-de-volantes-en-peru" },
     ],
     faq: [

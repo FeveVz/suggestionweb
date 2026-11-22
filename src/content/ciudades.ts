@@ -341,7 +341,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Automotriz: del clic a la prueba de manejo",
         parrafo:
-          "Es donde tenemos más kilómetros recorridos: 19 marcas de vehículos entre livianos, camiones y línea amarilla, incluida XCMG. Un lead de auto que no llega al piso no vale nada, así que las campañas se diseñan alrededor de la prueba de manejo y del argumento que mueve la decisión —financiamiento, cuota inicial, modelo del mes—, no alrededor del clic barato.",
+          "Es donde tenemos más kilómetros recorridos: 19 marcas de vehículos atendidas entre livianos, camiones y línea amarilla, incluida XCMG. Un lead de auto que no llega al piso no vale nada, así que las campañas se diseñan alrededor de la prueba de manejo y del argumento que mueve la decisión —financiamiento, cuota inicial, modelo del mes—, no alrededor del clic barato.",
         enlaces: [{ label: "Marketing automotriz", href: "/marketing-automotriz" }],
       },
       {

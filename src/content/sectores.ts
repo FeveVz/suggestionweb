@@ -196,7 +196,7 @@ export const SECTORES: Sector[] = [
           "El interesado en un auto se enfría rápido: quien consulta hoy visita otros dos concesionarios esta semana. Conectamos la campaña con tu CRM (el sistema donde queda registrado cada prospecto y su seguimiento) y el contacto llega al asesor al instante, con el modelo que pidió y la campaña de la que salió. Encima corren recordatorios para que nadie se quede sin segundo ni tercer intento. Tú ves quién llamó, quién no y cuánto demoró.",
       },
       {
-        h2: "Camiones, livianos y línea amarilla: 19 marcas de vehículos trabajadas",
+        h2: "Camiones, livianos y línea amarilla: 19 marcas de vehículos atendidas",
         parrafo:
           "Llevamos 19 marcas de vehículos atendidas entre livianos, camiones y línea amarilla —la maquinaria pesada de construcción—, incluida XCMG. No es lo mismo vender una camioneta familiar que una excavadora: cambia el comprador, el plazo y quién firma. En livianos decide una familia en semanas. En camiones y maquinaria decide un gerente, con evaluación de crédito, ficha técnica y respaldo de repuestos sobre la mesa. Ya sabemos qué mensaje va para cada uno.",
       },
@@ -293,7 +293,7 @@ export const SECTORES: Sector[] = [
       },
       {
         q: "¿Trabajan solo autos o también camiones y maquinaria?",
-        a: "Las tres líneas. Entre livianos, camiones y línea amarilla llevamos 19 marcas de vehículos, incluida XCMG. El comprador de maquinaria pesada pide otra conversación —ficha técnica, repuestos, respaldo del taller y financiamiento— y ese contenido lo preparamos con tu equipo técnico.",
+        a: "Las tres líneas. Entre livianos, camiones y línea amarilla llevamos 19 marcas de vehículos atendidas, incluida XCMG. El comprador de maquinaria pesada pide otra conversación —ficha técnica, repuestos, respaldo del taller y financiamiento— y ese contenido lo preparamos con tu equipo técnico.",
       },
     ],
     cierre: { h2: "Del clic al cierre en piso", cta: "Agenda tu consultoría cero" },

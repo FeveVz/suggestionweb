@@ -420,7 +420,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
       {
         h2: "Qué encontrarás en esta sección",
         parrafo:
-          "Artículos sobre marketing para concesionarios y marcas de vehículos: cómo generar prospectos que sí llegan al piso, qué mensajes mueven la decisión de compra y cómo se arma un evento de venta. Escrito desde la experiencia de atender 19 marcas, de livianos a línea amarilla.",
+          "Artículos sobre marketing para concesionarios y marcas de vehículos: cómo generar prospectos que sí llegan al piso, qué mensajes mueven la decisión de compra y cómo se arma un evento de venta. Escrito desde la experiencia de atender 19 marcas de vehículos, de livianos a línea amarilla.",
       },
       {
         h2: "Un contacto que no llega al piso no vale nada",
@@ -3241,13 +3241,18 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Marketing automotriz: ejemplos que llevan del clic a la prueba de manejo",
     excerpt:
       "Pedir “ejemplos de marketing automotriz” y recibir piezas bonitas no le sirve a nadie. Acá tienes siete acciones concretas, del modelo del mes al taller, con qué se hace, por qué funciona y qué número mirar para saber si valió la pena.",
+    enCorto: [
+      "Los ejemplos de marketing automotriz que venden piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas, no en impresiones.",
+      "Son siete acciones: el modelo del mes, la cuota al frente, el evento con convocatoria previa, la posventa, el auto en uso, volver a quien cotizó y la venta de línea amarilla a empresas.",
+      "Si solo puedes hacer una cosa, ordena tu base y activa posventa y remarketing antes de invertir en captación nueva.",
+    ],
     date: "2026-06-08",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "¿Qué tienen en común los ejemplos de marketing automotriz que sí venden?",
         parrafo:
-          "La mayoría de ejemplos de marketing automotriz que circulan son piezas lindas sin objetivo. Los que mueven la caja comparten tres cosas: piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas. Desde 2019, con 19 marcas de vehículos —livianos, camiones y línea amarilla, incluida XCMG— comprobamos que el formato importa menos que esa disciplina. Van siete ejemplos aplicables desde esta semana: qué se hace, por qué funciona y qué medir.",
+          "La mayoría de ejemplos de marketing automotriz que circulan son piezas lindas sin objetivo. Los que mueven la caja comparten tres cosas: piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas. Desde 2019, con 19 marcas de vehículos atendidas —livianos, camiones y línea amarilla, incluida XCMG—, comprobamos que el formato importa menos que esa disciplina. Van siete ejemplos aplicables desde esta semana: qué se hace, por qué funciona y qué medir.",
       },
       {
         h2: "Ejemplo 1: la campaña del modelo del mes",
@@ -3268,6 +3273,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Por qué funciona", texto: "filtra solo. Quien sabe que no califica no deja sus datos, y tu asesor deja de quemar mañanas con quien no iba a calificar." },
           { titulo: "Qué medir", texto: "qué porcentaje de tus leads (interesados que dejan sus datos) llega aprobado por la financiera." },
         ],
+        enlaces: [{ label: "Qué poner en el anuncio para vender autos", href: "/blog/automotriz/publicidad-para-venta-de-autos" }],
       },
       {
         h2: "Ejemplo 3: el evento de fin de semana que sale con autos firmados",
@@ -3525,18 +3531,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Qué hacer con el lead en los primeros minutos",
         parrafo:
-          "El mejor anuncio sin seguimiento es plata a medias. La ventana es corta: el interesado consulta a tres o cuatro concesionarios la misma tarde, y quien contesta primero se queda con la visita.",
-        bullets: [
-          { titulo: "Contesta en el mismo canal", texto: "si llenó un formulario en Meta, un WhatsApp antes de cinco minutos." },
-          { titulo: "Propón horario, no folletos", texto: "el primer mensaje ofrece dos fechas concretas para la prueba de manejo." },
-          { titulo: "Registra todo en un CRM", texto: "un sistema donde cada lead queda con su estado y su siguiente paso. En chats sueltos se pierde la mitad." },
-          { titulo: "Insiste sin acosar", texto: "tres o cuatro contactos en dos semanas. Buena parte de las citas se agenda después del primer intento." },
-        ],
+          "El mejor anuncio sin seguimiento es plata a medias. La ventana es corta: el interesado consulta a tres o cuatro concesionarios la misma tarde, y quien contesta primero se queda con la visita. Lo mínimo que tiene que estar resuelto antes de prender la pauta: alguien que conteste por WhatsApp antes de cinco minutos y un primer mensaje que proponga dos horarios concretos para la prueba de manejo. Cómo calificar sin espantar, cuántas veces insistir y por qué el seguimiento vale más que el volumen lo contamos en el artículo de leads para concesionarios.",
+        enlaces: [{ label: "Leads para concesionarios que sí cierran", href: "/blog/automotriz/leads-para-concesionarios" }],
       },
       {
         h2: "Eventos y activaciones: la pauta que se cierra el mismo día",
         parrafo:
           "Un evento en el concesionario convierte la publicidad en una fecha, y una fecha le pone plazo al indeciso. La clave está en la convocatoria: si llenas el local de paseantes, gastaste en gaseosa. Con Autoniza, en Ica, trabajamos convocatoria segmentada previa, activación en el punto y cierre en piso: 8 autos vendidos en 2 eventos —3 el 22 de mayo y 5 el 25 de junio—, firmados el mismo día.",
+        enlaces: [{ label: "El evento de fin de semana que sale con autos firmados, paso a paso", href: "/blog/automotriz/marketing-automotriz-ejemplos" }],
       },
       {
         h2: "Cómo medir si la publicidad para venta de autos funcionó",
@@ -7145,7 +7147,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     cierre:
-      "En Suggestion hemos trabajado 19 marcas de vehículos entre livianos, camiones y línea amarilla, incluido el lanzamiento de XCMG en Ica: campañas, eventos con la máquina presente y el seguimiento que los convierte en ventas.",
+      "En Suggestion hemos atendido 19 marcas de vehículos entre livianos, camiones y línea amarilla, incluido el lanzamiento de XCMG en Ica: campañas, eventos con la máquina presente y el seguimiento que los convierte en ventas.",
     moneyPage: { label: "Marketing automotriz y de maquinaria", href: "/marketing-automotriz" },
     relacionados: ["leads-para-concesionarios", "publicidad-para-venta-de-autos", "marketing-automotriz-ejemplos"],
   },
