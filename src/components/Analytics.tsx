@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
-import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, NO_MEDIR_JS, captureAttribution, track, newEventId, metaServidor } from "@/lib/tracking";
+import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, NO_MEDIR_JS, captureAttribution, track, newEventId, metaServidor, gaPorServidor } from "@/lib/tracking";
 import { decorarWhatsApp } from "@/lib/whatsapp-ref";
 import { EID_KEY } from "@/lib/meta-match";
 
@@ -16,7 +16,7 @@ import { EID_KEY } from "@/lib/meta-match";
  * Activos en prod (2026-07-04): GA4 G-RVE3CLTNW3 + Meta Pixel 2487100898472593.
  *
  * Los tres arranques empiezan por NO_MEDIR_JS: en un navegador marcado como
- * interno no cargan (ver tracking.ts).
+ * interno, o automatizado (robots), no cargan (ver tracking.ts).
  *
  * El Píxel arranca con un external_id: un identificador anónimo y aleatorio
  * que se guarda en este navegador y acompaña a cada evento. Antes solo
@@ -30,6 +30,10 @@ import { EID_KEY } from "@/lib/meta-match";
  * el Píxel. El PageView queda solo en el Píxel. Si en Events Manager sigue
  * conectada la pasarela de Stape, se puede desconectar: no hace nada.
  * (20-nov-2026: la configuración pública del Píxel ya no tiene pasarela; nada que desconectar.)
+ *
+ * GA4 también puede recibir el contacto desde el servidor (22-nov-2026), pero
+ * solo cuando su librería no corrió a tiempo: GA4 no une eventos repetidos.
+ * Se activa con GA4_MP_SECRET en Vercel (ver GA_MP en tracking.ts).
  *
  * Sin eventos automáticos (20-nov-2026, auditoría MED-01): autoConfig en false
  * antes del init apaga los clics que el Píxel registraba solo (SubscribedButtonClick)
@@ -90,8 +94,11 @@ export default function Analytics() {
       }
       // Mismo id para el Píxel y para la copia del servidor: Meta los une.
       const id = newEventId();
-      track("contact", { method, page_path: window.location.pathname, ...(cta ? { cta } : {}) }, id);
-      metaServidor("Contact", id, { method });
+      // GA4 sin cargar todavía (o bloqueada): el contacto va a GA4 por el
+      // servidor en lugar de quedarse en la cola de gtag (ver GA_MP en tracking.ts).
+      const sinGa = gaPorServidor();
+      track("contact", { method, page_path: window.location.pathname, ...(cta ? { cta } : {}) }, id, { sinGa });
+      metaServidor("Contact", id, { method }, sinGa ? { cta: cta || "", page_title: document.title } : undefined);
     };
 
     // Clic con la rueda o «abrir en otra pestaña» con el botón del medio: solo la línea «Ref».

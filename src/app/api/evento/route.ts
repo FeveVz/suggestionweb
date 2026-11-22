@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sendCapiEvent } from "@/lib/meta-capi";
+import { enviarGa4 } from "@/lib/ga4-mp";
 
 /**
  * Copia server-side de los eventos de contacto del Píxel (API de Conversiones).
@@ -11,6 +12,10 @@ import { sendCapiEvent } from "@/lib/meta-capi";
  *   - Contact: clic a wa.me / tel: / mailto: (Analytics.tsx).
  *   - Lead: formulario enviado mientras GUARDAR_EN_BASE = false (AuditForm).
  *     Cuando vuelva la base, el Lead sale de /api/lead y este no se usa.
+ *
+ * Un Contact puede traer además `ga`: entonces también se manda a GA4 por el
+ * Measurement Protocol (lib/ga4-mp.ts). Solo pasa cuando la librería de GA4 no
+ * corrió en el navegador, para no contarlo dos veces (GA_MP en lib/tracking.ts).
  *
  * Abierta al público, así que se acota: solo esos dos eventos, solo URLs del
  * propio sitio, tamaños máximos y 30 eventos por IP cada 10 minutos.
@@ -90,7 +95,25 @@ export async function POST(req: Request) {
   if (metodo) customData.content_category = metodo;
   if (origen) customData.content_name = origen;
 
-  const recibidos = await sendCapiEvent(evento as "Contact" | "Lead", {
+  // Copia para GA4: solo un contacto cuya librería de GA4 no corrió en el
+  // navegador (el navegador decide y manda `ga`; ver GA_MP en lib/tracking.ts).
+  const ga = evento === "Contact" && b.ga && typeof b.ga === "object" ? (b.ga as Record<string, unknown>) : null;
+  const copiaGa = ga
+    ? enviarGa4("contact", {
+        clientId: s(ga.client_id, 40),
+        sessionId: s(ga.session_id, 30),
+        params: Object.fromEntries(
+          Object.entries({
+            method: metodo,
+            cta: s(ga.cta, 80),
+            page_location: url,
+            page_title: s(ga.page_title, 200),
+          }).filter(([, v]) => v),
+        ),
+      })
+    : Promise.resolve(false);
+
+  const capi = sendCapiEvent(evento as "Contact" | "Lead", {
     eventId,
     // Nombre y teléfono solo los trae el Lead del formulario; se hashean en sendCapiEvent.
     nombre: evento === "Lead" ? s(b.nombre, 200) || null : null,
@@ -104,6 +127,7 @@ export async function POST(req: Request) {
     testCode,
     customData,
   });
+  const [recibidos, enviadoGa] = await Promise.all([capi, copiaGa]);
 
-  return NextResponse.json(testCode ? { ok: true, recibidos } : { ok: true });
+  return NextResponse.json(testCode ? { ok: true, recibidos, ga: enviadoGa } : { ok: true });
 }

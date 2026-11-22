@@ -57,6 +57,15 @@ const CSP = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+
+  /**
+   * Interruptor público de la copia de GA4 desde el servidor: vale "1" solo si
+   * GA4_MP_SECRET existe al compilar. La clave nunca llega al navegador; solo
+   * se sabe que existe. Ver GA_MP en src/lib/tracking.ts.
+   */
+  env: {
+    NEXT_PUBLIC_GA_MP: process.env.GA4_MP_SECRET ? "1" : "",
+  },
   images: {
     formats: ["image/avif", "image/webp"],
   },

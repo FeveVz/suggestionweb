@@ -83,8 +83,26 @@ export const DOMINIOS_MEDIBLES = ["suggestion.pe", "www.suggestion.pe"];
 const HOST_AJENO_JS = `(${JSON.stringify(DOMINIOS_MEDIBLES)}.indexOf(location.hostname)<0)`;
 
 export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location.search).get('interno');if(q==='1')localStorage.setItem('${INTERNO_KEY}','1');if(q==='0')localStorage.removeItem('${INTERNO_KEY}');return localStorage.getItem('${INTERNO_KEY}')==='1'||localStorage.getItem('${OPTOUT_KEY}')==='1'}catch(e){return false}})()`;
-/** Arranque de las etiquetas: no medir si el navegador es interno o el dominio no es el real. */
-export const NO_MEDIR_JS = `(${ES_INTERNO_JS}||${HOST_AJENO_JS})`;
+/**
+ * Navegadores automatizados (robots que ejecutan JavaScript). Chrome sin
+ * pantalla, Puppeteer, Playwright y Selenium marcan `navigator.webdriver`, y
+ * con eso no cargan GA4, el Píxel ni Clarity ni mandan copias al servidor.
+ * Es el mismo filtro que usa Plausible.
+ *
+ * Por qué (22-nov-2026): en los 28 días al 21-nov, GA4 contó 60 «usuarios» de
+ * Huaral (2 sesiones con interacción, 3 s de media) y 23 de Ashburn, un centro
+ * de datos de Amazon (0 con interacción): casi un tercio de los usuarios. En
+ * Meta se vieron como ráfagas de 38 y 67 PageView en una o dos horas.
+ *
+ * Solo atrapa a los que se declaran. Los que se disfrazan siguen entrando; para
+ * esos está la comparación «Sin robots» guardada en GA4.
+ * Efecto secundario: Lighthouse y PageSpeed también se declaran, así que miden
+ * la página sin GA4 ni el Píxel. Como ambos cargan tarde (DIFERIR_JS en
+ * Analytics.tsx), el LCP no cambia.
+ */
+const AUTOMATIZADO_JS = `(navigator.webdriver===true)`;
+/** Arranque de las etiquetas: no medir si el navegador es interno o automatizado, o si el dominio no es el real. */
+export const NO_MEDIR_JS = `(${ES_INTERNO_JS}||${AUTOMATIZADO_JS}||${HOST_AJENO_JS})`;
 
 type Gtag = (...args: unknown[]) => void;
 type Fbq = (...args: unknown[]) => void;
@@ -97,14 +115,16 @@ declare global {
 }
 
 /** Evento de conversión con nombre GA4; se mapea también al Pixel.
- *  eventId (opcional): deduplica el evento del Pixel con el de la CAPI (servidor). */
+ *  eventId (opcional): deduplica el evento del Pixel con el de la CAPI (servidor).
+ *  sinGa: el evento va a GA4 por el servidor (ver GA_MP), así que no se encola en gtag. */
 export function track(
   event: "generate_lead" | "contact" | "view_item",
   params?: Record<string, unknown>,
   eventId?: string,
+  opciones?: { sinGa?: boolean },
 ) {
   try {
-    window.gtag?.("event", event, params);
+    if (!opciones?.sinGa) window.gtag?.("event", event, params);
     // Conversión de Google Ads (solo el lead real, y solo si está configurado).
     if (event === "generate_lead" && GADS_ID && GADS_LEAD_LABEL) {
       window.gtag?.("event", "conversion", { send_to: `${GADS_ID}/${GADS_LEAD_LABEL}` });
@@ -230,10 +250,78 @@ export function pidioNoMedir(): boolean {
   }
 }
 
-/** ¿No hay que medir esta visita? Navegador interno o dominio que no es el real. */
+/** ¿No hay que medir esta visita? Navegador interno o automatizado, o dominio que no es el real. */
 export function noMedir(): boolean {
   if (typeof window === "undefined") return true;
-  return esInterno() || pidioNoMedir() || !DOMINIOS_MEDIBLES.includes(window.location.hostname);
+  return (
+    esInterno() ||
+    pidioNoMedir() ||
+    navigator.webdriver === true ||
+    !DOMINIOS_MEDIBLES.includes(window.location.hostname)
+  );
+}
+
+/**
+ * Copia de GA4 desde el servidor (Measurement Protocol).
+ *
+ * El problema (22-nov-2026): del 15 al 21-nov GA4 contó 7 contactos y Meta 12.
+ * Meta recibe una copia desde nuestro servidor; GA4 no. GA4 pierde el clic
+ * cuando su librería no llegó a correr: un bloqueador de anuncios, o un clic a
+ * WhatsApp antes de que cargue (carga tarde a propósito, ver DIFERIR_JS en
+ * Analytics.tsx) y el celular salta a la app.
+ *
+ * La solución: si la librería NO corrió al momento del clic, el contacto no se
+ * deja en la cola de gtag y viaja por /api/evento, que lo manda a GA4. Si sí
+ * corrió, va por gtag como siempre. Así nunca se cuenta dos veces: GA4, a
+ * diferencia de Meta, no une eventos repetidos.
+ *
+ * Se enciende solo: cuando GA4_MP_SECRET existe en Vercel, next.config.ts pone
+ * NEXT_PUBLIC_GA_MP = "1" al compilar (sin exponer la clave). Mientras no
+ * exista, todo funciona como antes. La clave la crea el dueño de la cuenta:
+ * GA4 → Administrar → Flujos de datos → el flujo web → Secretos de la API de
+ * Measurement Protocol → Crear. Se pega en Vercel como GA4_MP_SECRET
+ * (Production) y hay que volver a publicar.
+ */
+export const GA_MP = process.env.NEXT_PUBLIC_GA_MP === "1";
+/** ID de medición del flujo web (va en la cookie _ga_<sufijo> y en la petición al Measurement Protocol). */
+export const GA_MEDICION = "G-RVE3CLTNW3";
+
+declare global {
+  interface Window {
+    google_tag_data?: unknown;
+  }
+}
+
+/** ¿Ya corrió gtag.js? `window.gtag` no prueba nada: es la cola que crea Analytics.tsx. */
+export function gaCargado(): boolean {
+  try {
+    return typeof window !== "undefined" && window.google_tag_data !== undefined;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * client_id y session_id que GA4 dejó en sus cookies en esta visita o en una
+ * anterior. Con ellos, GA4 suma el contacto a la sesión y a la fuente de esa
+ * persona. Sin cookies (bloqueador), el servidor inventa un client_id y el
+ * contacto cuenta igual, pero con fuente «(not set)».
+ */
+export function gaIds(): { client_id: string; session_id: string } {
+  try {
+    const c = document.cookie;
+    const ga = c.match(/(?:^|; )_ga=GA\d\.\d\.(\d+\.\d+)/);
+    // _ga_<sufijo>: formato antiguo GS1.1.<session_id>.… y nuevo GS2.1.s<session_id>$o…
+    const gs = c.match(new RegExp(`(?:^|; )_ga_${GA_MEDICION.slice(2)}=GS\\d\\.\\d\\.s?(\\d+)`));
+    return { client_id: ga ? ga[1] : "", session_id: gs ? gs[1] : "" };
+  } catch {
+    return { client_id: "", session_id: "" };
+  }
+}
+
+/** ¿Este contacto tiene que ir a GA4 por el servidor? Ver GA_MP. */
+export function gaPorServidor(): boolean {
+  return GA_MP && !noMedir() && !gaCargado();
 }
 
 /**
@@ -242,12 +330,25 @@ export function noMedir(): boolean {
  * que sobreviva aunque la página se vaya a WhatsApp en ese mismo instante.
  * `datos`: method/origen y, solo en el Lead del formulario, nombre y teléfono
  * (el servidor los hashea antes de enviarlos a Meta).
+ * `ga`: solo en un contacto que tiene que llegar a GA4 por el servidor (ver
+ * GA_MP); viaja en la misma petición con las cookies de GA4.
  */
-export function metaServidor(evento: "Contact" | "Lead", eventId: string, datos?: Record<string, string>): void {
-  if (!META_PIXEL_ID || noMedir()) return;
+export function metaServidor(
+  evento: "Contact" | "Lead",
+  eventId: string,
+  datos?: Record<string, string>,
+  ga?: Record<string, string>,
+): void {
+  if ((!META_PIXEL_ID && !ga) || noMedir()) return;
   try {
     const base = leadDedup();
-    const body = JSON.stringify({ ...base, ...datos, event_name: evento, event_id: eventId });
+    const body = JSON.stringify({
+      ...base,
+      ...datos,
+      event_name: evento,
+      event_id: eventId,
+      ...(ga ? { ga: { ...gaIds(), ...ga } } : {}),
+    });
     const blob = new Blob([body], { type: "application/json" });
     if (!navigator.sendBeacon?.("/api/evento", blob)) {
       fetch("/api/evento", { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true }).catch(() => {});

@@ -586,8 +586,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo crear un logo paso a paso",
     excerpt:
       "Buscar “crear logo” devuelve mil herramientas que prometen un logo en cinco minutos. Algunas sirven; otras te dan un dibujo bonito que no aguanta el primer mes de tu negocio. Antes de elegir, entiende los tres caminos y qué pierdes (o ganas) en cada uno.",
+    enCorto: [
+      "Hay tres caminos: herramientas gratis, inteligencia artificial o un profesional. Lo gratis o la IA sirven para un proyecto temporal, un evento o una prueba; un negocio que quiere crecer y verse serio necesita un profesional.",
+      "Un logo no se juzga por bonito, sino por si funciona: legible a 16 píxeles, a una sola tinta, bordado en un polo o visto de lejos.",
+      "Exige los archivos: el vectorial editable (SVG, AI o EPS), un PDF vectorial para imprenta, PNG con fondo transparente, la versión para fondo oscuro y el ícono cuadrado.",
+    ],
     date: "2026-01-14",
-    actualizado: "2026-08-28",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Los 3 caminos para crear un logo",
@@ -803,8 +808,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Qué es un rebranding y cuándo tu marca lo necesita",
     excerpt:
       "Rebranding no es “cambiar el logo porque ya aburre”. Es realinear tu marca con lo que tu negocio es hoy y con el cliente que quieres. Hecho por moda, es un gasto. Hecho por estrategia, recupera ventas.",
+    enCorto: [
+      "Un rebranding es renovar la identidad de una marca: puede tocar el nombre, el logo, la identidad visual, el mensaje y el posicionamiento. Puede ser un refresh, que actualiza lo visual y conserva la esencia, o un cambio total.",
+      "Conviene cuando la marca ya no representa lo que el negocio hace hoy, no conecta con el cliente que quieres o cambió tu modelo de negocio. No porque a ti ya te aburre.",
+      "Cuanto más te conocen tus clientes, más caro sale romper con lo anterior. Si cambia el dominio, cada URL antigua necesita su redirección para no perder posicionamiento.",
+    ],
     date: "2026-01-28",
-    actualizado: "2026-08-28",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es un rebranding",
@@ -906,8 +916,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Qué es el marketing digital y cómo funciona",
     excerpt:
       "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para atraer clientes, convertirlos y fidelizarlos. Suena simple, pero la mayoría lo hace mal por una razón: mide likes en vez de ventas. Esta es la versión sin humo, con lo que cuesta empezar en Perú y lo que puedes esperar de verdad.",
+    enCorto: [
+      "El marketing digital es usar canales digitales (buscador, redes, web, WhatsApp, correo) para que la persona correcta te encuentre, te deje un dato y termine comprando.",
+      "Funciona en tres etapas: atraer, convertir y fidelizar. Si una falla, se cae la cadena entera.",
+      "Se mide en leads, citas, cierres y costo por lead, no en likes. Los primeros leads pueden llegar en la primera semana de pauta; saber si el canal es rentable toma unos 90 días, y el SEO, de 6 a 12 meses.",
+    ],
     date: "2026-02-04",
-    actualizado: "2026-07-26",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "¿Qué es el marketing digital, en una frase?",
@@ -1190,8 +1205,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo crear una página web paso a paso",
     excerpt:
       "Crear una página web nunca fue tan fácil… ni tan fácil de hacer mal. Hoy puedes armar una en una tarde con Wix, o invertir en una hecha para vender. La diferencia no es la estética: es si trae clientes o solo “se ve bonita”.",
+    enCorto: [
+      "Hay dos caminos: hacerla tú con Wix o WordPress, barato y rápido, que sirve para empezar o para un negocio muy simple; o contratar desarrollo profesional, la opción cuando la web es un canal de ventas.",
+      "El orden correcto empieza por definir una sola acción principal y registrar el dominio a tu nombre. El diseño es la última capa.",
+      "Google evalúa la experiencia con tres medidas de usuarios reales, las Core Web Vitals. Para que la carga se considere buena, el LCP tiene que estar por debajo de 2,5 segundos.",
+    ],
     date: "2026-02-18",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Opción 1: hacerla tú (Wix, WordPress, etc.)",
@@ -1410,8 +1430,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Las mejores IA para crear logos (y sus límites)",
     excerpt:
       "Las herramientas de IA para logos se multiplicaron. Algunas son útiles para explorar; ninguna construye una marca sola. Esta es la guía honesta: para qué sirven y dónde se quedan cortas.",
+    enCorto: [
+      "La IA de logos sirve para generar ideas, variantes y bocetos rápidos. No sirve para definir tu posicionamiento, garantizar originalidad ni entregar un sistema de marca aplicable.",
+      "Las herramientas cambian de nombre cada pocos meses: elige primero el tipo (generador por texto, plantilla con personalización o IA generativa de imagen) según lo que necesitas.",
+      "Salga de donde salga, el logo tiene que venir en archivo vectorial editable, leerse a 16 píxeles y funcionar a una sola tinta.",
+    ],
     date: "2026-02-25",
-    actualizado: "2026-08-28",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Para qué sirven (y para qué no)",
@@ -1512,8 +1537,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Qué es un lead y cómo dejar de perderlos",
     excerpt:
       "Un lead es una persona que mostró interés en lo que vendes y te dejó un dato para contactarla. Suena obvio, pero ahí empieza el problema: la mayoría de negocios genera leads y los pierde por no saber qué hacer con ellos. Esta es la guía completa, sin tecnicismos.",
+    enCorto: [
+      "Un lead es una persona que mostró interés en lo que vendes y te dejó una forma de contactarla: su número, su correo o un mensaje por WhatsApp. Quien entra a tu web y se va sin dejar rastro es tráfico, no un lead.",
+      "Los leads se enfrían por lo que pasa después del anuncio: tardar en responder o no hacer seguimiento. Quien escribe a tres proveedores suele quedarse con el que contestó primero.",
+      "Antes de subir la publicidad, cierra las fugas: todo lead en un solo lugar con su origen anotado, respuesta rápida y seguimiento con calendario.",
+    ],
     date: "2026-03-04",
-    actualizado: "2026-07-26",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "¿Qué es un lead, en palabras simples?",
@@ -1635,8 +1665,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Qué es el neuromarketing y cómo usarlo para vender más",
     excerpt:
       "El neuromarketing estudia cómo decide el cerebro de tu cliente: no lo que dice que decide, sino lo que realmente hace. Es un campo con mucha evidencia útil y también con mucho charlatán, así que aquí va la versión honesta: qué sirve, qué no, y qué puedes aplicar sin un laboratorio.",
+    enCorto: [
+      "El neuromarketing aplica la neurociencia y la psicología del comportamiento al marketing: cómo la atención, la emoción y la memoria influyen en la decisión de compra.",
+      "No lee la mente ni es un botón de compra: muestra tendencias en grupos. Lo aplicable son sesgos como el ancla de precio y la prueba social.",
+      "No necesitas un laboratorio: con pruebas comparativas y mapas de calor se consigue la mayor parte del beneficio.",
+    ],
     date: "2026-03-11",
-    actualizado: "2026-07-26",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "¿Qué es el neuromarketing?",
@@ -1739,8 +1774,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "CPL vs ROAS: las únicas métricas de pauta que importan",
     excerpt:
       "Si tu reporte de campañas habla de alcance y likes, te están distrayendo. Las dos métricas que dicen si tu inversión funciona son CPL y ROAS. Aquí, sin tecnicismos.",
+    enCorto: [
+      "El CPL es lo que cuesta conseguir un contacto interesado: con S/1,000 invertidos y 50 leads, el CPL es S/20. Sirve cuando el cierre ocurre después, como en servicios, inmobiliario o salud.",
+      "El ROAS es cuánto vendiste por cada sol invertido: S/1,000 que se vuelven S/5,000 en ventas dan un ROAS de 5. Sirve cuando la venta es directa, como en e-commerce.",
+      "Un ROAS no dice nada sin tu margen: divide 1 entre tu margen bruto y sabrás por debajo de qué ROAS pierdes dinero. Con 50 % de margen, el equilibrio es 2.",
+    ],
     date: "2026-03-18",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es el CPL (costo por lead)",
@@ -1831,8 +1871,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Crear una página web con Wix vs profesional: qué te conviene",
     excerpt:
       "Wix y similares democratizaron las webs: cualquiera arma una. La duda real es si esa web te va a traer clientes o solo a “estar online”. Comparemos honesto.",
+    enCorto: [
+      "Wix y los constructores parecidos son baratos y rápidos, y los manejas sin saber código. Sirven para validar una idea, un negocio muy simple o empezar con poco.",
+      "El desarrollo profesional cuesta más y tarda semanas, pero permite optimizar la velocidad, el SEO técnico y la conversión: es la opción cuando la web es tu canal de ventas.",
+      "El costo que casi nadie cuenta es migrar: el contenido no se exporta de forma útil y las URLs cambian, así que dejar un constructor es rehacer la web.",
+    ],
     date: "2026-03-25",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Wix (y constructores similares)",
@@ -1939,8 +1984,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo automatizar WhatsApp en tu negocio",
     excerpt:
       "WhatsApp es donde tu cliente peruano quiere hablar. El problema: si no respondes rápido, el lead se enfría. Automatizar resuelve eso sin que vivas pegado al celular.",
+    enCorto: [
+      "Se automatiza lo repetitivo: la respuesta al primer mensaje, las preguntas frecuentes, la calificación de leads, el agendamiento y el seguimiento a quien no respondió.",
+      "La app gratuita de WhatsApp Business basta para un negocio pequeño con una persona atendiendo; la API es para equipos con varios asesores y volumen alto.",
+      "No se automatiza un reclamo ni una negociación de precio. Y pasadas 24 horas desde el último mensaje del cliente, WhatsApp solo permite plantillas aprobadas.",
+    ],
     date: "2026-04-01",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué se puede automatizar (y conviene)",
@@ -2057,8 +2107,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Comportamiento del consumidor peruano: cómo decide tu cliente",
     excerpt:
       "Vender en Perú con un manual gringo no funciona. El consumidor peruano tiene motivaciones, desconfianzas y aspiraciones propias. Entenderlas es la diferencia entre una campaña que conecta y una que se ignora.",
+    enCorto: [
+      "El consumidor peruano decide por confianza antes que por precio. Cuando una venta no se cierra, casi siempre falló el riesgo percibido: el cliente no estaba seguro de que fueras a cumplir.",
+      "El 82 % de la población usa internet, sobre todo desde el celular (Digital 2026 Report — Perú), y la conversación comercial ocurre en WhatsApp.",
+      "Segmenta por momento, no solo por perfil: la campaña escolar, Fiestas Patrias, Navidad, la vendimia o un cambio de vida explican por qué alguien compra hoy.",
+    ],
     date: "2026-04-08",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué motiva la decisión de compra en Perú",
@@ -2159,8 +2214,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "6 gatillos de la psicología de ventas (sin trucos baratos)",
     excerpt:
       "Los gatillos mentales funcionan porque así decide el cerebro, no porque “engañen”. Usados con honestidad, aceleran la venta. Usados con humo, queman tu marca. Aquí los 6 que sí valen.",
+    enCorto: [
+      "Los 6 gatillos que funcionan son reciprocidad, prueba social, autoridad, escasez, compromiso y coherencia, y aversión a la pérdida.",
+      "Funcionan porque el cerebro decide por atajos, no porque engañen. Cada uno tiene que apoyarse en algo verdadero: la escasez falsa y los testimonios inventados funcionan una vez y destruyen la confianza.",
+      "Se prueban cambiando una sola cosa a la vez y mirando citas o ventas, no clics.",
+    ],
     date: "2026-04-15",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Los 6 gatillos",
@@ -2272,8 +2332,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Publicidad inmobiliaria en redes: qué funciona en Perú",
     excerpt:
       "Vender un lote o departamento por redes no es subir fotos bonitas y esperar. Es atraer al comprador correcto, filtrar curiosos y llevarlo a una cita. Esto es lo que funciona.",
+    enCorto: [
+      "Lo que funciona: video y recorridos con drone, mensajes de valorización como «precio de lanzamiento», segmentación por intención y zona, y formularios conectados a WhatsApp.",
+      "El formulario instantáneo da más leads y más baratos, pero con más ruido; una landing propia da menos volumen y mejor intención.",
+      "La publicidad genera el interés y el seguimiento lo convierte en cita: sin respuesta rápida, pagas por leads que se enfrían.",
+    ],
     date: "2026-04-22",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Lo que funciona",
@@ -2380,8 +2445,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Estrategias de marketing para restaurantes que llenan mesas",
     excerpt:
       "Un buen restaurante con mesas vacías un martes no tiene un problema de comida: tiene un problema de marketing. Estas estrategias llenan los días flojos y suben el ticket.",
+    enCorto: [
+      "Lo primero no es Instagram: es que te encuentren en el mapa, con ficha verificada, horarios reales, fotos actuales y reseñas recientes.",
+      "Las reseñas se piden en el momento: al pagar, con un QR en la cuenta o en la mesa que lleve directo a escribirla.",
+      "Para llenar los días flojos, mueve el día y no el precio: una propuesta que solo existe de martes a jueves. Mide reservas, pedidos y ticket promedio, no seguidores.",
+    ],
     date: "2026-04-29",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Estrategias que funcionan",
@@ -2505,8 +2575,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo conseguir más pacientes para tu clínica o consultorio",
     excerpt:
       "Más pacientes no es cuestión de gastar más en publicidad, sino de captar al correcto y no perderlo en el camino. Esto es lo que funciona en salud.",
+    enCorto: [
+      "Para captar pacientes: publicidad segmentada por especialidad y zona, una web que transmita confianza, reseñas reales y respuesta rápida.",
+      "La cita perdida cuesta más que el lead caro: una confirmación por WhatsApp el día anterior reduce las ausencias y cuesta prácticamente nada.",
+      "En publicidad de salud, las plataformas rechazan los anuncios que dan por hecho el estado de salud de quien los ve o que prometen resultados. Escribirlos en tercera persona suele bastar.",
+    ],
     date: "2026-05-06",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Las claves para captar pacientes",
@@ -2593,8 +2668,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Posicionamiento de marca: qué es y cómo lograrlo",
     excerpt:
       "El posicionamiento es el lugar que tu marca ocupa en la mente de tu cliente. No es tu logo ni tu eslogan: es lo que la gente piensa y siente cuando te nombran. Y define cuánto puedes cobrar.",
+    enCorto: [
+      "El posicionamiento de marca es el lugar que ocupas en la mente del cliente frente a la competencia. No es el logo ni el eslogan, y define cuánto puedes cobrar.",
+      "Se logra eligiendo a quién le hablas, tu diferencial real y una idea simple y propia, y sosteniéndola en todo. Querer ser todo para todos es el error más caro.",
+      "Funciona cuando los clientes repiten tus palabras, te buscan por nombre y el precio deja de ser la discusión principal. Se construye en meses, no en semanas.",
+    ],
     date: "2026-05-13",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es el posicionamiento de marca",
@@ -2683,8 +2763,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "IA en el marketing: qué sí funciona en 2026 (y qué es ruido)",
     excerpt:
       "La IA está en todos los discursos de marketing, pero no todo lo que brilla vende. Separemos lo que de verdad mueve resultados de lo que solo suena moderno.",
+    enCorto: [
+      "La IA sí funciona para producir borradores y variantes más rápido, automatizar respuestas y seguimiento, analizar datos y optimizar campañas.",
+      "Es ruido creer que reemplaza la estrategia, o publicar contenido 100 % automático sin edición: se nota y daña la marca.",
+      "Empieza por una sola tarea repetitiva y medible, anota cuánto te toma hoy y comprueba si de verdad ahorra tiempo.",
+    ],
     date: "2026-05-20",
-    actualizado: "2026-08-28",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Lo que sí funciona",
@@ -2873,8 +2958,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo vender un proyecto inmobiliario en preventa",
     excerpt:
       "La preventa es la etapa más rentable y la más difícil: vendes algo que aún no existe. Se vende con percepción de valorización y confianza, no con planos. Así se hace.",
+    enCorto: [
+      "La preventa funciona porque el comprador entra al precio más bajo de toda la vida del proyecto: el argumento es que el precio sube cuando avance la obra, y se muestra con una escalera de precios por etapa.",
+      "Antes del primer sol en pauta necesitas render y recorrido del terreno, precio de lanzamiento por etapas, plan de pagos y alguien que responda rápido.",
+      "La mayoría de ventas se cae entre el «sí, quiero ir» y la visita: confirmar por escrito, mandar la ubicación y recordar el día anterior sube las visitas efectivas.",
+    ],
     date: "2026-06-03",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "¿Por qué la preventa es la etapa donde más se vende un proyecto inmobiliario?",
@@ -3213,8 +3303,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Publicidad para venta de autos: ideas que funcionan",
     excerpt:
       "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que sí mueve al comprador a actuar.",
+    enCorto: [
+      "El anuncio que vende autos habla de condiciones, no de adjetivos: cuota mensual, cuota inicial, un bono, un modelo del mes y entrega inmediata.",
+      "Meta Ads genera deseo y capta interesados; Google Ads captura a quien ya busca la marca o el modelo. Juntos cubren todo el recorrido del comprador.",
+      "La conversión que predice la venta es la prueba de manejo: mide el costo por prueba agendada y por unidad vendida, y contesta el formulario por WhatsApp antes de cinco minutos.",
+    ],
     date: "2026-06-17",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "¿Qué mensaje mueve de verdad la decisión de comprar un auto?",
@@ -3251,7 +3346,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "¿Se vende igual un liviano que un camión o una máquina de línea amarilla?",
         parrafo:
-          "No, y confundirlos sale caro. Desde Ica hemos manejado pauta para 19 marcas de vehículos —livianos, camiones y línea amarilla (maquinaria pesada de construcción y movimiento de tierra)— y el comprador no se parece en nada.",
+          "No, y confundirlos sale caro. Desde Ica hemos atendido 19 marcas de vehículos —livianos, camiones y línea amarilla (maquinaria pesada de construcción y movimiento de tierra)— y el comprador no se parece en nada.",
         sub: [
           { h3: "Liviano: decisión personal y rápida", texto: "Semanas, a veces días. Decide una familia, pesa la cuota y la emoción cuenta." },
           { h3: "Camión y línea amarilla: decisión empresarial y larga", texto: "Meses, y no decide una sola persona. El argumento no es el diseño: es el costo de operación, los repuestos, el respaldo del taller y el leasing (arrendamiento con opción de compra)." },
@@ -3323,7 +3418,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "En livianos, las primeras pruebas de manejo suelen aparecer en las primeras semanas; afinar audiencias y mensajes toma un par de meses. En camiones y maquinaria se piensa en trimestres. No prometemos plazos garantizados: mostramos el avance con los números de cada mes.",
       },
     ],
-    cierre: "En Suggestion hemos llevado pauta de 19 marcas de vehículos, de livianos a línea amarilla. Armamos tu publicidad para venta de autos con una sola meta: pruebas de manejo agendadas y unidades saliendo del piso.",
+    cierre: "En Suggestion hemos atendido 19 marcas de vehículos, de livianos a línea amarilla. Armamos tu publicidad para venta de autos con una sola meta: pruebas de manejo agendadas y unidades saliendo del piso.",
     moneyPage: { label: "Pongamos a vender tu concesionario", href: "/marketing-automotriz" },
     relacionados: ["marketing-automotriz-ejemplos", "leads-para-concesionarios"],
   },
@@ -3336,8 +3431,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo vender pisco y vino por internet (sin perder la tradición)",
     excerpt:
       "Tu pisco gana medallas pero se vende casi solo en la puerta de la bodega. Internet puede llevarlo a todo el Perú —si lo haces con marca y estrategia, no improvisando con un par de fotos. Esto es lo que funciona.",
+    enCorto: [
+      "Primero la marca, después el carrito: tu valle, tu uva, tu proceso y tus premios son lo que te diferencia del pisco industrial barato.",
+      "La denominación de origen no te distingue por sí sola: en Ica hay 235 productores autorizados, de 533 en todo el país (registro de la DO Pisco, julio de 2025).",
+      "La venta se concentra en fechas como Fiestas Patrias, el Día del Pisco Sour y el regalo corporativo de fin de año, y esas campañas se preparan semanas antes. El enoturismo es tu otra tienda.",
+    ],
     date: "2026-06-20",
-    actualizado: "2026-08-27",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Primero la marca, después el carrito",
@@ -3433,8 +3533,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Marketing para agroexportadoras: cómo abrir mercados internacionales",
     excerpt:
       "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que sí mueve la aguja.",
+    enCorto: [
+      "El importador revisa tu web antes de escribirte: tiene que encontrarla en inglés y español, con certificaciones, fichas técnicas, capacidad y trazabilidad.",
+      "Ica es la segunda región agroexportadora del país, detrás de La Libertad, y la uva pesa el 32,8 % de su valor agroexportado (referencia de 2024).",
+      "Una oportunidad de exportación no se cierra en la feria, se abre ahí: entre el primer contacto y la primera orden pueden pasar meses, y el seguimiento es la mitad del trabajo.",
+    ],
     date: "2026-06-24",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "El importador te googlea antes de escribirte",
@@ -4627,8 +4732,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cuánto cuesta un logotipo en Perú",
     excerpt:
       "Entre una cotización de S/300 y una de S/15,000 no hay un estafador y un honesto: hay dos trabajos completamente distintos que se llaman igual.",
+    enCorto: [
+      "En octubre de 2026, un logo en Perú va de S/800 a S/2,500 con un freelance o estudio pequeño, y de S/3,500 a S/9,000 en un estudio o agencia pequeña con investigación y manual básico (rangos de mercado).",
+      "La diferencia de precio no está en el dibujo: está en la investigación previa y en el sistema con el que vas a aplicar el logo. Un logo suelto no es una identidad de marca.",
+      "En cualquier rango tienes que recibir el vectorial editable y las versiones horizontal, vertical, a un color y en negativo, con los derechos a tu nombre por escrito.",
+    ],
     date: "2026-10-05",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Tres rangos, y qué entra en cada uno",
