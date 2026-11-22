@@ -694,56 +694,114 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "crear-logo-con-ia",
     categoria: "marca",
-    title: "Crear un Logo con IA: Ventajas y Límites Reales | Suggestion",
-    description:
-      "Crear un logo con IA: qué hace bien, por qué INDECOPI rechazó registrar obras puramente generadas por IA y el problema del formato. La versión honesta.",
-    h1: "Crear un logo con IA: ventajas, límites y cuándo NO usarla",
-    excerpt:
-      "La IA crea logos en segundos. Eso es real y útil. Pero confundir “tengo una imagen” con “tengo una marca” es el error que pagan caro muchos negocios. Aquí la versión honesta.",
+    title: "Crear un Logo con IA: Paso a Paso y Prompts | Suggestion",
+    description: "Cómo crear un logo con IA en ChatGPT, Gemini o Canva: el brief, prompts de ejemplo, cómo pasarlo a vector y qué dijo INDECOPI sobre registrarlo.",
+    h1: "Cómo crear un logo con IA, paso a paso",
+    excerpt: "La IA crea logos en segundos y, bien usada, ahorra semanas de exploración. Este es el paso a paso para hacerlo con ChatGPT, Gemini o Canva, con prompts de ejemplo, y las dos cosas que casi nadie cuenta: el formato y el registro.",
+    enCorto: [
+      "Antes de abrir la IA, define en tres líneas qué debe transmitir el logo, a quién le hablas y si quieres símbolo o solo tipografía.",
+      "Pide en blanco y negro, fondo blanco y estilo plano; genera varias rondas cambiando una cosa a la vez y quédate con dos o tres rumbos, no con un archivo.",
+      "La IA entrega PNG: para imprimir hay que pasarlo a vector. Y en Perú el INDECOPI rechazó en 2024 registrar por derecho de autor obras hechas solo con IA; registrar la marca es otro trámite.",
+    ],
     date: "2026-01-21",
-    actualizado: "2026-08-28",
+    actualizado: "2026-11-22",
     secciones: [
       {
-        h2: "Qué hace bien la IA para logos",
+        h2: "Antes de abrir la IA: tu brief en tres líneas",
+        parrafo: "La IA dibuja lo que le describes, y si la descripción es vaga, el resultado también. Antes de escribir el primer prompt, responde esto en una hoja: te va a servir para pedir y, sobre todo, para elegir.",
         bullets: [
-          { titulo: "Explorar ideas rápido", texto: "en minutos ves decenas de direcciones visuales." },
-          { titulo: "Bajar costo inicial", texto: "ideal para validar un concepto antes de invertir." },
-          { titulo: "Inspirar", texto: "sirve como punto de partida para un diseñador." },
+          {
+            titulo: "Qué tiene que transmitir",
+            texto: "tres adjetivos, no diez. Por ejemplo: «cercano, artesanal, confiable».",
+          },
+          { titulo: "A quién le hablas", texto: "el cliente al que quieres atraer, no «a todos»." },
+          {
+            titulo: "Con quién te comparan",
+            texto: "mira los logos de tu competencia para saber qué está ocupado y no repetirlo.",
+          },
+          {
+            titulo: "Símbolo o solo tipografía",
+            texto: "un ícono acompañado del nombre, o solo el nombre bien escrito.",
+          },
+          {
+            titulo: "Dónde se va a usar",
+            texto: "fachada, empaque, bordado, perfil de redes. Si va a ir pequeño, tiene que ser simple.",
+          },
         ],
       },
       {
-        h2: "Dónde falla (y te puede costar caro)",
-        bullets: [
-          { titulo: "No entiende tu estrategia", texto: "la IA no sabe a quién le vendes ni por qué te eligen. Diseña sobre estética, no sobre posicionamiento." },
-          { titulo: "Repite estilos", texto: "genera lo que ya vio mil veces: terminas pareciéndote a todos." },
-          { titulo: "Falla en lo técnico", texto: "versiones, tipografías propias, archivos vectoriales y aplicaciones: ahí la IA se queda corta." },
-          { titulo: "Riesgo de marca registrada", texto: "un logo genérico es difícil de proteger legalmente." },
+        h2: "El paso a paso, de la idea al archivo final",
+        parrafo: "Sirve con cualquiera de las herramientas de uso general. El orden importa más que la herramienta: casi todos los logos de IA que no funcionan se saltaron el paso cinco.",
+        pasos: [
+          {
+            titulo: "Escribe el prompt con tu brief",
+            texto: "rubro, nombre, sensación y estilo, en una sola instrucción clara. Más abajo tienes ejemplos para copiar y adaptar.",
+          },
+          {
+            titulo: "Pide blanco y negro, fondo blanco y estilo plano",
+            texto: "sin degradados ni sombras. Trabajar sin color obliga a que la forma se sostenga sola, y es lo que después se puede pasar a vector.",
+          },
+          {
+            titulo: "Genera varias rondas y cambia una cosa a la vez",
+            texto: "si te gusta el ícono pero no la letra, pide solo ese cambio. Cambiar todo a la vez te hace perder lo que sí funcionaba.",
+          },
+          {
+            titulo: "Quédate con dos o tres rumbos, no con un archivo",
+            texto: "lo que sale de esta etapa es una dirección visual. Compárala con tu brief, no con tu gusto del día.",
+          },
+          {
+            titulo: "Pásalo a vector",
+            texto: "si el trazo es simple, un vectorizador automático puede bastar con retoques; si no, hay que redibujarlo tomando la imagen como referencia. Sin vector no hay logo para imprimir.",
+          },
+          {
+            titulo: "Prueba en tamaño real",
+            texto: "a 16 píxeles, como ícono; en una sola tinta, como sello; y sobre fondo oscuro. Si falla en alguno, simplifica.",
+          },
+          {
+            titulo: "Busca por imagen y registra la marca",
+            texto: "una búsqueda inversa por imagen descarta parecidos con logos existentes, y el registro de marca ante el INDECOPI protege el uso comercial en tu categoría.",
+          },
         ],
       },
       {
-        h2: "Cómo usar la IA sin arruinar tu marca",
-        parrafo:
-          "Úsala para explorar, no para decidir. Genera ideas, elige direcciones que te gusten y llévalas a un profesional que las convierta en una marca real, registrable y coherente. La IA es un lápiz, no el diseñador.",
+        h2: "Prompts de ejemplo para crear un logo con IA",
+        parrafo: "Cámbiale el rubro, el nombre y los adjetivos, y mantén la estructura: qué es, cómo se llama, qué debe transmitir y las restricciones de estilo. Los ejemplos usan una panadería inventada.",
+        tabla: {
+          cabeceras: ["Qué quieres", "Prompt de ejemplo"],
+          filas: [
+            [
+              "Un ícono simple",
+              "Logo minimalista para una panadería artesanal llamada «Trigal»: un ícono plano de una espiga de trigo, en negro sobre fondo blanco, sin degradados ni sombras, que se entienda en tamaño pequeño.",
+            ],
+            [
+              "Solo el nombre",
+              "Logotipo tipográfico para «Trigal», panadería artesanal: letras sans serif gruesas y cálidas, en negro sobre fondo blanco, sin ícono, estilo plano.",
+            ],
+            [
+              "Ícono y nombre juntos",
+              "Logo para «Trigal», panadería artesanal: ícono de una espiga a la izquierda y el nombre a la derecha en letras sans serif, en negro sobre fondo blanco, estilo plano y simple.",
+            ],
+            [
+              "Variantes de una idea",
+              "Dame cuatro variantes del mismo logo cambiando solo la forma del ícono. Mantén la tipografía y el blanco y negro.",
+            ],
+            [
+              "Corregir un detalle",
+              "Usa el mismo logo, pero con trazos más gruesos y sin el círculo de fondo.",
+            ],
+          ],
+          nota: "Si el nombre sale con letras deformadas, pide solo el ícono y pon el nombre después con una tipografía real, o usa una herramienta que maneje mejor el texto.",
+        },
       },
       {
-        h2: "Cuándo NO usar IA",
-        parrafo:
-          "Cuando el logo va a ser la cara de un negocio que quiere durar y diferenciarse. Ahí necesitas estrategia, no una imagen rápida.",
-      },
-      {
-        h2: "Lo que dijo INDECOPI sobre las obras hechas con IA",
-        parrafo:
-          "Esta es la parte que casi nadie menciona y que en Perú ya tiene criterio establecido. En septiembre de 2024, la Dirección de Derecho de Autor del INDECOPI emitió dos resoluciones rechazando el registro de obras puramente generadas por inteligencia artificial. El razonamiento: la autoría exige una persona natural y una originalidad humana significativa, y escribir un prompt no alcanza para ser autor. La puerta no está cerrada del todo —una obra con intervención creativa humana significativa sí puede registrarse—, pero cada caso se evalúa por separado.",
-        dato: {
-          cifra: "2",
-          texto: "resoluciones del INDECOPI, en septiembre de 2024, rechazando el registro por derecho de autor de obras puramente generadas por IA. El criterio: un prompt simple no constituye autoría.",
-          fuente: "Dirección de Derecho de Autor del INDECOPI",
-        },
-        nota: {
-          tipo: "aviso",
-          titulo: "Derecho de autor y marca no son lo mismo",
-          texto: "Que una obra no se pueda registrar por derecho de autor no significa que el logo no se pueda registrar como MARCA, que es otro trámite, con otros requisitos —lo que se evalúa ahí es que sea distintivo— y una vigencia de 10 años renovables. Son dos protecciones distintas y conviene no confundirlas. Esto es información general, no asesoría legal: para un caso concreto, sobre todo si es híbrido humano-IA, consulta a un especialista en propiedad intelectual.",
-        },
+        h2: "ChatGPT, Gemini o Canva: cuál usar para qué",
+        parrafo: "ChatGPT y Gemini generan desde la conversación, así que son cómodas para explorar y corregir sobre la marcha; las dos entregan PNG. Canva parte de plantillas y te deja ajustar texto, colores y tipografía a mano, aunque el SVG y el fondo transparente están en Canva Pro. Si necesitas el vector desde el principio, hay herramientas que lo generan directamente: las comparamos en la guía de las mejores IA para crear logos.",
+        enlaces: [
+          {
+            label: "Las mejores IA para crear logos en 2026",
+            href: "/blog/ia-automatizacion/mejores-ia-para-crear-logos",
+          },
+        ],
       },
       {
         h2: "El problema del formato que descubres tarde",
@@ -761,19 +819,60 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "La forma sensata de usarla",
+        h2: "Lo que dijo INDECOPI sobre las obras hechas con IA",
         parrafo:
-          "Nada de lo anterior significa que la IA no sirva; significa que sirve para una parte del trabajo y no para otra. Usada en su sitio, ahorra semanas de exploración. Usada como entrega final, deja un archivo que no se puede imprimir, no se puede editar y cuya propiedad es discutible.",
-        pasos: [
-          { titulo: "Explora con IA", texto: "genera decenas de direcciones visuales en minutos. Es lo mejor que hace y es genuinamente útil." },
-          { titulo: "Elige dos o tres rumbos, no un archivo", texto: "lo que te llevas de esta etapa es una dirección estética, no el logo terminado." },
-          { titulo: "Redibuja en vectorial con criterio", texto: "aquí entra el trabajo humano: simplificar, ajustar proporciones, resolver la versión en negativo y el ícono." },
-          { titulo: "Prueba y documenta", texto: "aplicaciones reales, versiones, reglas de uso. Es lo que convierte una imagen en una identidad." },
-          { titulo: "Registra la marca", texto: "el trámite de marca protege el uso comercial en tu categoría, y es independiente del debate sobre la autoría del archivo." },
+          "Esta es la parte que casi nadie menciona y que en Perú ya tiene criterio establecido. En septiembre de 2024, la Dirección de Derecho de Autor del INDECOPI emitió dos resoluciones rechazando el registro de obras puramente generadas por inteligencia artificial. El razonamiento: la autoría exige una persona natural y una originalidad humana significativa, y escribir un prompt no alcanza para ser autor. La puerta no está cerrada del todo —una obra con intervención creativa humana significativa sí puede registrarse—, pero cada caso se evalúa por separado.",
+        dato: {
+          cifra: "2",
+          texto: "resoluciones del INDECOPI, en septiembre de 2024, rechazando el registro por derecho de autor de obras puramente generadas por IA. El criterio: un prompt simple no constituye autoría.",
+          fuente: "Dirección de Derecho de Autor del INDECOPI",
+        },
+        nota: {
+          tipo: "aviso",
+          titulo: "Derecho de autor y marca no son lo mismo",
+          texto: "Que una obra no se pueda registrar por derecho de autor no significa que el logo no se pueda registrar como MARCA, que es otro trámite, con otros requisitos —lo que se evalúa ahí es que sea distintivo— y una vigencia de 10 años renovables. Son dos protecciones distintas y conviene no confundirlas. Esto es información general, no asesoría legal: para un caso concreto, sobre todo si es híbrido humano-IA, consulta a un especialista en propiedad intelectual.",
+        },
+      },
+      {
+        h2: "Dónde se queda corta la IA",
+        parrafo: "Nada de lo anterior significa que no sirva: significa que sirve para una parte del trabajo. Estos son los límites que conviene tener claros antes de poner el logo en una fachada.",
+        bullets: [
+          {
+            titulo: "No entiende tu estrategia",
+            texto: "no sabe a quién le vendes ni por qué te eligen. Diseña sobre estética, no sobre posicionamiento.",
+          },
+          {
+            titulo: "Repite estilos",
+            texto: "genera lo que ya vio mil veces, y terminas pareciéndote a tu competencia.",
+          },
+          {
+            titulo: "No entrega un sistema",
+            texto: "versiones, tipografías, colores y reglas de uso siguen siendo trabajo humano.",
+          },
+          {
+            titulo: "Un logo genérico es difícil de proteger",
+            texto: "para registrar una marca, lo que se evalúa es que sea distintiva.",
+          },
+          {
+            titulo: "Cuándo no usarla como entrega final",
+            texto: "cuando el logo va a ser la cara de un negocio que quiere durar y diferenciarse.",
+          },
         ],
       },
     ],
     faq: [
+      {
+        q: "¿Cómo se crea un logo con IA?",
+        a: "Define en tres líneas qué debe transmitir y a quién le hablas, pídelo a la IA en blanco y negro, fondo blanco y estilo plano, genera varias rondas cambiando una cosa a la vez y quédate con dos o tres rumbos. Después hay que pasarlo a vector y probarlo en tamaño real antes de usarlo.",
+      },
+      {
+        q: "¿Qué prompt uso para crear un logo con IA?",
+        a: "Uno que diga qué es el negocio, cómo se llama, qué debe transmitir y las restricciones de estilo. Por ejemplo: «logo minimalista para una panadería artesanal llamada Trigal, ícono plano de una espiga, en negro sobre fondo blanco, sin degradados ni sombras». Los adjetivos sueltos, como «moderno» o «bonito», dan resultados genéricos.",
+      },
+      {
+        q: "¿Se puede crear un logo con IA gratis?",
+        a: "Para explorar, sí: ChatGPT, Gemini y Canva tienen planes gratis con límites. Lo que suele costar es el archivo final: el vector y, en algunas herramientas, el permiso de uso comercial.",
+      },
       {
         q: "¿Puedo registrar en Perú un logo hecho con IA?",
         a: "Hay que separar dos cosas. Por derecho de autor, el INDECOPI rechazó en 2024 registrar obras puramente generadas por IA: exige una persona natural y originalidad humana significativa, y un prompt simple no basta. Como marca, en cambio, el trámite es otro y lo que se evalúa es que sea distintiva. Es información general: para tu caso concreto consulta a un especialista en propiedad intelectual.",
@@ -786,18 +885,10 @@ export const BLOG_POSTS: BlogPost[] = [
         q: "¿Se puede convertir un logo de IA a vector?",
         a: "Existen vectorizadores automáticos y funcionan razonablemente con trazos simples. Con dibujos complejos, degradados o texturas el resultado queda sucio y con cientos de puntos imposibles de editar. En la práctica, lo que se hace es redibujarlo tomando el archivo de IA como referencia.",
       },
-      {
-        q: "¿Es legal usar comercialmente un logo generado con IA?",
-        a: "Usarlo y que puedas protegerlo son cosas distintas. Cada herramienta tiene sus propios términos sobre el uso comercial de lo que genera —conviene leerlos—, y aparte está la cuestión de si puedes impedir que otro use algo parecido, que es donde entra el registro de marca.",
-      },
-      {
-        q: "¿Entonces la IA no sirve para nada en branding?",
-        a: "Sirve, y mucho, en la etapa de exploración: en minutos recorres direcciones visuales que antes tomaban días. El error no es usarla, es confundir una imagen generada con una identidad terminada.",
-      },
     ],
     cierre: "En Suggestion combinamos lo mejor de ambos mundos: velocidad de exploración y criterio estratégico.",
     moneyPage: { label: "Construyamos tu marca", href: "/servicios/branding" },
-    relacionados: ["como-crear-un-logo", "mejores-ia-para-crear-logos"],
+    relacionados: ["mejores-ia-para-crear-logos", "como-crear-un-logo", "cuanto-cuesta-un-logotipo-en-peru"],
   },
   {
     slug: "que-es-rebranding",
@@ -1424,109 +1515,176 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "mejores-ia-para-crear-logos",
     categoria: "ia-automatizacion",
-    title: "Las Mejores IA para Crear Logos en 2026 | Suggestion",
-    description:
-      "Qué tipos de IA para logos existen, qué entrega cada uno y cuál te conviene según lo que necesites. Comparativa por tipo de herramienta, no por marca.",
-    h1: "Las mejores IA para crear logos (y sus límites)",
-    excerpt:
-      "Las herramientas de IA para logos se multiplicaron. Algunas son útiles para explorar; ninguna construye una marca sola. Esta es la guía honesta: para qué sirven y dónde se quedan cortas.",
+    title: "Mejores IA para Crear Logos en 2026: 7 Opciones | Suggestion",
+    description: "7 IA para crear logos revisadas en noviembre de 2026: ChatGPT, Gemini, Ideogram, Recraft, Illustrator, Canva y Looka. Cuáles son gratis y cuáles dan vector.",
+    h1: "Las mejores IA para crear logos en 2026 y qué entrega cada una",
+    excerpt: "Hay decenas de IA que prometen un logo en segundos. Estas son siete que vale la pena conocer: qué hace bien cada una, cuáles tienen plan gratis y cuáles entregan el archivo vectorial que vas a necesitar el día que imprimas.",
     enCorto: [
-      "La IA de logos sirve para generar ideas, variantes y bocetos rápidos. No sirve para definir tu posicionamiento, garantizar originalidad ni entregar un sistema de marca aplicable.",
-      "Las herramientas cambian de nombre cada pocos meses: elige primero el tipo (generador por texto, plantilla con personalización o IA generativa de imagen) según lo que necesitas.",
-      "Salga de donde salga, el logo tiene que venir en archivo vectorial editable, leerse a 16 píxeles y funcionar a una sola tinta.",
+      "Para explorar ideas gratis, ChatGPT y Gemini; si el logo lleva el nombre escrito, Ideogram; si necesitas el archivo en vector, Recraft o Illustrator; y para algo listo en una tarde, Canva o Looka.",
+      "Casi todas entregan PNG en el plan gratis. El vector, que es lo que pide una imprenta, suele estar en los planes de pago.",
+      "Antes de pagar, revisa si permite uso comercial y si lo que generas queda público: el plan gratis de Recraft no permite uso comercial y en el de Ideogram las imágenes son públicas.",
     ],
     date: "2026-02-25",
     actualizado: "2026-11-22",
     secciones: [
       {
-        h2: "Para qué sirven (y para qué no)",
-        parrafo:
-          "La IA de logos es excelente para generar ideas, variantes y bocetos rápidos. Es un acelerador de exploración. No sirve para definir tu posicionamiento, garantizar originalidad ni entregar un sistema de marca aplicable.",
-      },
-      {
-        h2: "Tipos de herramientas de IA para logos",
-        bullets: [
-          { titulo: "Generadores por texto (prompt)", texto: "describes tu idea y proponen conceptos. Útiles para explorar estilos." },
-          { titulo: "Plataformas con plantillas + IA", texto: "combinan plantillas y personalización automática. Rápidas, pero genéricas." },
-          { titulo: "IA generativa de imagen", texto: "crean grafismos originales, aunque difíciles de convertir en logo vectorial limpio." },
-        ],
-      },
-      {
-        h2: "Por qué no reemplazan a un diseñador",
-        parrafo:
-          "Un logo es el 10% de una marca. El otro 90% —estrategia, naming, identidad visual, coherencia, registro— necesita criterio humano. La IA te da un punto de partida; un profesional te da una marca que diferencia y se puede proteger.",
-      },
-      {
-        h2: "Comparativa por tipo de herramienta",
-        parrafo:
-          "Las herramientas concretas cambian de nombre cada pocos meses, así que compararlas una a una envejece mal. Lo que no cambia es en qué categoría cae cada una y qué puedes esperar de ella. Elige la categoría primero; la marca del momento da igual.",
+        h2: "Las 7 IA para crear logos, en una tabla",
+        parrafo: "Las elegimos por lo que resuelven, no por moda: dos para explorar ideas conversando, una que escribe bien el nombre, dos que entregan vector y dos que dejan algo listo en una tarde. Los planes y los límites cambian seguido, así que la tabla dice lo que había en noviembre de 2026.",
         tabla: {
-          cabeceras: ["Tipo", "Qué te entrega", "Formato", "Para qué conviene"],
+          cabeceras: ["IA", "Lo que mejor hace", "Qué entrega", "¿Plan gratis?"],
           filas: [
-            ["Generador por texto", "Conceptos a partir de una descripción", "Mapa de bits", "Explorar rumbos visuales rápido"],
-            ["Plantilla + personalización", "Un logo armado y listo para usar", "Mapa de bits y a veces vector", "Un proyecto temporal o una prueba"],
-            ["IA generativa de imagen", "Grafismos originales y llamativos", "Mapa de bits", "Inspiración, casi nunca un logo usable"],
-            ["Vectorizadores automáticos", "Convierte una imagen a vector", "Vector, con retoque", "Rescatar un trazo simple, no un dibujo complejo"],
+            [
+              "ChatGPT",
+              "Explorar ideas conversando y corregir sobre la marcha",
+              "PNG",
+              "Sí, con un límite de imágenes que OpenAI no publica",
+            ],
+            [
+              "Gemini",
+              "Explorar ideas y editar una imagen con instrucciones",
+              "PNG",
+              "Sí, con un tope diario que Google ajusta",
+            ],
+            [
+              "Ideogram",
+              "Escribir bien el nombre dentro del logo",
+              "PNG; SVG en planes de pago",
+              "Sí, pero lo que generas es público",
+            ],
+            ["Recraft", "Generar vectores de verdad", "SVG y PNG", "Sí, pero sin uso comercial"],
+            [
+              "Adobe Illustrator",
+              "Pasar de una descripción a un vector editable",
+              "Vector editable",
+              "No: es parte de Illustrator, de pago",
+            ],
+            [
+              "Canva",
+              "Partir de plantillas y ajustar texto y colores",
+              "PNG y PDF; SVG con Canva Pro",
+              "Sí, con un límite de usos de la IA",
+            ],
+            [
+              "Looka",
+              "Armar el logo y un kit de marca en minutos",
+              "PNG; vector en el paquete premium",
+              "Diseñar es gratis; descargar se paga",
+            ],
           ],
-          nota: "Ninguna categoría entrega hoy un sistema de marca completo: versiones, área de respeto, reglas de uso y archivos maestros siguen siendo trabajo humano.",
+          nota: "Datos revisados en noviembre de 2026. Los planes, los límites y los términos cambian seguido: confírmalos en la web de cada herramienta antes de pagar o de usar el logo en tu negocio.",
         },
       },
       {
-        h2: "Cómo elegir según lo que necesitas",
-        parrafo:
-          "Antes de probar herramientas, decide en cuál de estos tres casos estás. La respuesta cambia por completo cuánto tiene sentido invertir en esto.",
+        h2: "Qué hace bien cada una (y dónde se queda corta)",
+        sub: [
+          {
+            h3: "ChatGPT",
+            texto: "Genera imágenes dentro de la conversación, así que puedes pedir un cambio concreto sin empezar de cero: «la misma idea, pero más simple» o «sin el círculo de fondo». Es la forma más cómoda de explorar rumbos. Entrega PNG, y el fondo transparente no siempre sale aunque lo pidas: revisa el archivo antes de usarlo. En el plan gratis hay un límite de imágenes.",
+          },
+          {
+            h3: "Gemini",
+            texto: "La IA de Google genera y edita imágenes a partir de instrucciones, y sirve igual que ChatGPT para explorar. El plan gratis tiene un tope diario que Google cambia según la demanda, y la resolución es menor que en los planes de pago. Entrega PNG.",
+          },
+          {
+            h3: "Ideogram",
+            texto: "Su fuerte es el texto dentro de la imagen: es de las que mejor escriben el nombre de la marca sin letras deformadas, algo en lo que otras fallan. Tiene plan gratis sin tarjeta, pero lo que generas ahí es público, así que no es el lugar para un concepto que todavía no quieres mostrar. La descarga en SVG está en los planes de pago.",
+          },
+          {
+            h3: "Recraft",
+            texto: "Es de las pocas que generan vectores de verdad (SVG), no una imagen que después hay que redibujar. El matiz está en los términos: en el plan gratis, lo que creas es público, queda a nombre de Recraft y no se puede usar comercialmente. Para el logo de un negocio hace falta un plan de pago.",
+          },
+          {
+            h3: "Adobe Illustrator",
+            texto: "Su función Texto a gráfico vectorial crea íconos y gráficos vectoriales editables a partir de una descripción, en el mismo programa donde después se termina el logo. Es la opción más profesional de la lista y la menos accesible: requiere la suscripción de Illustrator. Adobe la presenta como segura para uso comercial.",
+          },
+          {
+            h3: "Canva",
+            texto: "Combina plantillas de logos con un generador con IA, y te deja cambiar el texto, los colores y la tipografía sin saber diseño. El plan gratis tiene un límite de usos de la IA al mes; el SVG y el fondo transparente necesitan Canva Pro. Como se parte de plantillas, el riesgo de parecerte a otro negocio es mayor.",
+          },
+          {
+            h3: "Looka",
+            texto: "Arma el logo a partir de tu nombre, tu rubro y tus gustos, y propone un kit de marca alrededor. Diseñar es gratis; pagas al descargar. Ojo con el paquete básico: trae solo un PNG de baja resolución, y los archivos vectoriales vienen en el paquete premium.",
+          },
+        ],
+      },
+      {
+        h2: "Cuál elegir según lo que necesitas",
+        parrafo: "La pregunta no es cuál es la mejor en abstracto, sino para qué la vas a usar. Lo normal es combinar dos: una para explorar y otra para el archivo final.",
         tabla: {
           cabeceras: ["Tu situación", "Qué usar"],
           filas: [
-            ["Necesito una imagen para un evento de un fin de semana", "Plantilla con personalización, y listo"],
-            ["Estoy validando una idea de negocio", "Generador por texto para explorar, sin cerrar nada"],
-            ["Voy a abrir el negocio y quiero verme serio", "IA para explorar, diseño humano para cerrar"],
-            ["Ya tengo clientes y mi marca se ve improvisada", "Proceso de branding: el logo es la última parte"],
+            ["Quiero explorar ideas sin pagar", "ChatGPT o Gemini"],
+            ["Mi logo lleva el nombre escrito y tiene que leerse bien", "Ideogram"],
+            ["Necesito el archivo en vector para imprimir", "Recraft (plan de pago) o Illustrator"],
+            ["Necesito algo presentable para un evento o una prueba", "Canva o Looka"],
+            ["Voy a abrir un negocio y quiero verme serio", "IA para explorar y un diseñador para cerrar"],
           ],
+        },
+        enlaces: [
+          { label: "Cómo crear un logo con IA, paso a paso", href: "/blog/marca/crear-logo-con-ia" },
+        ],
+      },
+      {
+        h2: "Antes de pagar una descarga, revisa esto",
+        parrafo: "Lo que separa un logo usable de una imagen bonita no se ve en la pantalla donde lo generaste. Son cinco preguntas, y conviene hacerlas antes de pagar, no después.",
+        bullets: [
+          {
+            titulo: "¿Incluye el archivo vectorial?",
+            texto: "si la descarga es solo PNG, el día que necesites una gigantografía o un bordado habrá que redibujarlo.",
+          },
+          {
+            titulo: "¿Permite uso comercial?",
+            texto: "algunas lo prohíben en el plan gratis, y un logo es, por definición, uso comercial.",
+          },
+          {
+            titulo: "¿Lo que generas queda público?",
+            texto: "en varios planes gratis, sí: cualquiera puede ver tu idea antes de que la lances.",
+          },
+          { titulo: "¿Lleva marca de agua?", texto: "hay herramientas que marcan las imágenes del plan gratis." },
+          {
+            titulo: "¿Se parece al de otro negocio?",
+            texto: "búscalo por imagen antes de adoptarlo. Estas herramientas se entrenan con lo que ya existe y repiten patrones del rubro.",
+          },
+        ],
+        nota: {
+          tipo: "aviso",
+          titulo: "Usarlo no es lo mismo que protegerlo",
+          texto: "Aunque la herramienta te dé derechos comerciales, en Perú el INDECOPI rechazó en 2024 registrar por derecho de autor obras generadas solo con IA. El registro de marca es otro trámite. Lo explicamos en el artículo sobre cómo crear un logo con IA.",
         },
       },
       {
-        h2: "Qué exigirle al resultado, salga de donde salga",
-        parrafo:
-          "Da igual si el logo lo hizo una IA, un editor gratuito o un estudio: la lista de comprobación es la misma. Si falla alguno de estos cinco puntos, el logo no está terminado, aunque se vea bien en la pantalla donde lo generaste.",
-        bullets: [
-          { titulo: "Archivo vectorial editable", texto: "sin él no tienes el original y no podrás imprimir en grande ni modificar nada." },
-          { titulo: "Legible en 16 píxeles", texto: "es el tamaño del ícono en una pestaña o en un perfil, y es donde tu cliente lo verá más veces." },
-          { titulo: "Funciona a una sola tinta", texto: "prueba a ponerlo todo en negro: si se cae, fallará en sellos, bordados y grabados." },
-          { titulo: "Tiene versión para fondo oscuro", texto: "la vas a necesitar el primer día, para el pie de tu web o una foto." },
-          { titulo: "No se parece al de un competidor", texto: "búscalo por imagen antes de adoptarlo. La IA se entrena con lo que ya existe y repite patrones del rubro." },
+        h2: "Lo que ninguna de estas IA hace por ti",
+        parrafo: "Ninguna sabe a quién le vendes, con quién te comparan ni qué tienes que transmitir para que te elijan. Tampoco entrega un sistema de marca: versiones, colores, tipografías y reglas de uso. Para un proyecto temporal eso da igual. Para un negocio que quiere durar, la IA acelera la exploración y el resto sigue siendo trabajo de criterio.",
+        enlaces: [
+          { label: "Cuánto cuesta un logotipo en Perú", href: "/blog/marca/cuanto-cuesta-un-logotipo-en-peru" },
         ],
-        nota: {
-          titulo: "Una comprobación de dos minutos",
-          texto: "Sube el logo a una búsqueda inversa por imagen antes de mandarlo a imprimir. Si aparecen resultados muy parecidos, tienes un problema de diferenciación —y quizá de registro— que es mucho más barato descubrir ahora que después de rotular la fachada.",
-        },
       },
     ],
     faq: [
       {
         q: "¿Cuál es la mejor IA para crear logos?",
-        a: "Depende de qué necesites, no de cuál esté de moda: las herramientas concretas cambian cada pocos meses. Para explorar rumbos, un generador por texto. Para algo temporal y listo para usar, una plataforma de plantillas con personalización. Para un negocio que va a durar, ninguna sola: IA para explorar y trabajo humano para cerrar.",
+        a: "Depende del uso. Para explorar ideas sin pagar, ChatGPT o Gemini. Si el logo lleva el nombre escrito, Ideogram, que es de las que mejor manejan el texto. Si necesitas el archivo en vector, Recraft en un plan de pago o Illustrator. Y para algo listo en una tarde, Canva o Looka.",
       },
       {
-        q: "¿Las IA de logos son gratis?",
-        a: "Casi todas dejan generar gratis y cobran al descargar en buena calidad o en formato editable. Conviene comprobar antes de invertir tiempo qué incluye exactamente la descarga de pago: si no incluye el archivo vectorial, el problema de fondo sigue ahí.",
+        q: "¿Hay IA gratis para crear logos?",
+        a: "Sí, para explorar: ChatGPT, Gemini, Ideogram, Recraft y Canva tienen planes gratis con límites, y en Looka diseñar es gratis. Lo que suele quedar fuera del plan gratis es justo lo que necesita un logo: el archivo vectorial y, en algunos casos, el permiso de uso comercial.",
+      },
+      {
+        q: "¿Qué IA entrega el logo en vector?",
+        a: "Recraft genera SVG de forma nativa e Illustrator crea vectores editables a partir de una descripción. Ideogram y Canva permiten descargar en SVG en sus planes de pago, y Looka incluye vectores en su paquete premium. ChatGPT y Gemini entregan PNG.",
+      },
+      {
+        q: "¿Puedo usar comercialmente un logo hecho con una IA gratis?",
+        a: "Depende de los términos de cada herramienta, y cambian. En noviembre de 2026, el plan gratis de Recraft no permitía uso comercial y el de Ideogram dejaba públicas las imágenes. Léelos antes de rotular un local o imprimir un empaque, y recuerda que poder usarlo no es lo mismo que poder protegerlo.",
       },
       {
         q: "¿Dos negocios pueden terminar con el mismo logo de IA?",
         a: "Es posible, sobre todo con plantillas y con estilos muy pedidos dentro de un mismo rubro. Estas herramientas se entrenan con lo que ya existe y tienden a repetir patrones. Una búsqueda inversa por imagen antes de adoptarlo cuesta dos minutos y evita un problema caro.",
       },
-      {
-        q: "¿Puedo usar IA solo para el ícono y hacer el resto aparte?",
-        a: "Sí, y es una forma sensata de usarla. El riesgo es que el ícono generado no combine con la tipografía ni resista la reducción, así que aun así hay que redibujarlo y ajustarlo para que funcione como sistema.",
-      },
-      {
-        q: "¿Qué le pido a la herramienta para que el resultado sirva?",
-        a: "Descripciones concretas en vez de adjetivos: el rubro, la sensación buscada, si quieres símbolo o solo tipografía, y pedirlo en blanco y negro. Trabajar sin color en la exploración obliga a que la forma se sostenga sola, que es la prueba que de verdad importa.",
-      },
     ],
     cierre: "En Suggestion usamos IA para acelerar, pero diseñamos con estrategia para que tu marca venda.",
     moneyPage: { label: "Construyamos tu marca", href: "/servicios/branding" },
-    relacionados: ["crear-logo-con-ia", "como-crear-un-logo"],
+    relacionados: ["crear-logo-con-ia", "cuanto-cuesta-un-logotipo-en-peru", "como-crear-un-logo"],
   },
   {
     slug: "que-es-un-lead",
