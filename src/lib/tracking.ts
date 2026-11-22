@@ -84,10 +84,13 @@ const HOST_AJENO_JS = `(${JSON.stringify(DOMINIOS_MEDIBLES)}.indexOf(location.ho
 
 export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location.search).get('interno');if(q==='1')localStorage.setItem('${INTERNO_KEY}','1');if(q==='0')localStorage.removeItem('${INTERNO_KEY}');return localStorage.getItem('${INTERNO_KEY}')==='1'||localStorage.getItem('${OPTOUT_KEY}')==='1'}catch(e){return false}})()`;
 /**
- * Navegadores automatizados (robots que ejecutan JavaScript). Chrome sin
- * pantalla, Puppeteer, Playwright y Selenium marcan `navigator.webdriver`, y
- * con eso no cargan GA4, el Píxel ni Clarity ni mandan copias al servidor.
- * Es el mismo filtro que usa Plausible.
+ * Navegadores automatizados (robots que ejecutan JavaScript). Puppeteer,
+ * Playwright y Selenium arrancan Chrome con --enable-automation, que marca
+ * `navigator.webdriver`, y con eso no cargan GA4, el Píxel ni Clarity ni mandan
+ * copias al servidor. Es el mismo filtro que usa Plausible.
+ * Comprobado en producción el 22-nov-2026: con la marca no se pide gtag.js;
+ * sin ella, sí. Ojo: Chrome sin pantalla a secas (--headless sin
+ * --enable-automation) NO se marca.
  *
  * Por qué (22-nov-2026): en los 28 días al 21-nov, GA4 contó 60 «usuarios» de
  * Huaral (2 sesiones con interacción, 3 s de media) y 23 de Ashburn, un centro
@@ -95,10 +98,8 @@ export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location
  * Meta se vieron como ráfagas de 38 y 67 PageView en una o dos horas.
  *
  * Solo atrapa a los que se declaran. Los que se disfrazan siguen entrando; para
- * esos está la comparación «Sin robots» guardada en GA4.
- * Efecto secundario: Lighthouse y PageSpeed también se declaran, así que miden
- * la página sin GA4 ni el Píxel. Como ambos cargan tarde (DIFERIR_JS en
- * Analytics.tsx), el LCP no cambia.
+ * esos está la comparación «Sin robots» guardada en GA4 (Administrar →
+ * Comparaciones: excluye las ciudades Huaral y Ashburn).
  */
 const AUTOMATIZADO_JS = `(navigator.webdriver===true)`;
 /** Arranque de las etiquetas: no medir si el navegador es interno o automatizado, o si el dominio no es el real. */
