@@ -3384,8 +3384,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo conseguir leads para concesionarios que sí cierran",
     excerpt:
       "Generar leads de autos es fácil; generar leads que llegan al piso y compran, no. La diferencia está en a quién atraes y qué haces después del formulario.",
+    enCorto: [
+      "Un lead de autos sirve si llega al piso y compra: segmenta por intención y capacidad, y pon en el anuncio las condiciones que descartan a quien no califica.",
+      "Quien contesta primero se lleva la mayoría de las ventas, porque el comprador llena el formulario de tres o cuatro concesionarios la misma tarde. Cada lead necesita un dueño desde que entra.",
+      "Califica con tres preguntas dentro de la conversación: para cuándo lo necesita, cómo piensa pagar y qué vehículo tiene hoy.",
+    ],
     date: "2026-06-13",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "El problema de los leads “basura”",
@@ -3972,8 +3977,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Tarjetas de presentación: medidas, acabados y cuánto cuesta un millar",
     excerpt:
       "Es la pieza más barata que vas a mandar a imprimir y la que más veces se arruina por un detalle de dos milímetros. Esto es lo que hay que revisar antes.",
+    enCorto: [
+      "En Perú lo más pedido es 9 × 5 cm; el estándar internacional es 8.5 × 5.5 cm. Los dos entran en billeteras y tarjeteros; una medida inventada, no.",
+      "El estándar profesional es couché de 350 g, y el acabado más elegido, el plastificado mate: no deja huellas y se puede escribir encima.",
+      "En octubre de 2026, el millar a full color por ambas caras con plastificado mate va desde unos S/60 (rangos de mercado). Medio millar no cuesta la mitad: casi todo el costo es preparar la máquina.",
+    ],
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Las medidas estándar, y por qué conviene respetarlas",
@@ -4727,8 +4737,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cuánto cuesta una página web en Perú",
     excerpt:
       "La respuesta honesta es que depende, pero eso no sirve de nada. Estos son los rangos del mercado peruano, qué entra en cada uno y qué se paga aparte aunque nadie te lo diga al cotizar.",
+    enCorto: [
+      "En octubre de 2026, una landing de una sola página va desde unos S/300 y una web informativa desde S/800; una corporativa llega a S/10,000 o más y una tienda virtual a S/15,000 (rangos de mercado).",
+      "Lo que mueve el precio no es el número de páginas, sino las integraciones (pagos, CRM, reservas) y quién hace los textos y las fotos.",
+      "Construir no es lo mismo que tener: el dominio y el hosting se pagan cada año, y tienen que quedar a nombre de tu empresa.",
+    ],
     date: "2026-10-05",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Los rangos del mercado peruano",
@@ -5241,8 +5256,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cuánto cuesta un plan de marketing en Perú",
     excerpt:
       "Un plan de marketing puede costar S/300 o S/15,000, y los dos pueden ser precios justos. La diferencia no está en el documento: está en quién lo ejecuta después.",
+    enCorto: [
+      "«Plan de marketing» se usa para cuatro cosas distintas: sesión estratégica, diagnóstico, plan como proyecto y acompañamiento mensual. Por eso las cotizaciones no se parecen.",
+      "En octubre de 2026, una sesión estratégica de unas dos horas va desde unos S/300 y un plan estratégico completo, entre S/5,000 y S/15,000 (rangos de mercado).",
+      "Vale lo que cuesta si trae un objetivo en número y con fecha, a quién le hablas y quién ejecuta cada cosa. La mayoría de planes fracasa porque nadie los ejecutó.",
+    ],
     date: "2026-10-05",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Primero: qué estás comprando exactamente",
@@ -5339,7 +5359,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo elegir una agencia de marketing digital",
     excerpt:
       "La reunión de venta la prepara su mejor gente y está diseñada para impresionarte. Estas son las preguntas que la desarman, y ninguna necesita que sepas de marketing.",
+    enCorto: [
+      "No evalúes la presentación: pide un caso con inversión, período y resultado comercial, pregunta por una campaña que salió mal y habla con un cliente actual.",
+      "Desconfía de quien garantiza posiciones o ventas concretas, o de quien no quiere que la cuenta publicitaria esté a tu nombre.",
+      "Antes de firmar, acuerda por escrito que las cuentas, el píxel, la analítica y el dominio quedan a nombre de tu empresa, y qué se entrega cada mes, con cantidades.",
+    ],
     date: "2026-10-06",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Lo que se evalúa no es la presentación",
@@ -5531,7 +5557,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Ficha de empresa en Google: cómo crearla y verificarla",
     excerpt:
       "Un perfil sin verificar es un perfil que no compite: no aparece en el mapa y los cambios que hagas pueden no publicarse nunca. La verificación no es un trámite, es el requisito.",
+    enCorto: [
+      "La ficha de empresa en Google es gratis y es la que te pone en el mapa. Sin verificar no compite: no aparece y los cambios que hagas pueden no publicarse.",
+      "Busca primero si tu negocio ya existe: Google crea fichas solo, a partir de información pública. Si existe, se reclama; si no, se crea.",
+      "Google decide qué métodos de verificación te ofrece, como teléfono, correo, video o postal. Ya verificada, completa primero la categoría principal y el nombre, la dirección y el teléfono escritos igual que en tu web.",
+    ],
     date: "2026-10-06",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es y por qué no es opcional",
@@ -5835,7 +5867,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Qué es el remarketing y cómo usarlo sin cansar a nadie",
     excerpt:
       "Es, casi siempre, lo más rentable de una cuenta publicitaria: le hablas a gente que ya te conoce. Y es también lo que más rápido se arruina, porque la línea entre recordar y perseguir es más fina de lo que parece.",
+    enCorto: [
+      "El remarketing muestra anuncios a quien ya tuvo contacto contigo: visitó tu web, vio un video, te escribió o ya es cliente. Por eso suele tener el costo por venta más bajo de la cuenta.",
+      "No crea demanda ni funciona hacia atrás: solo alcanza a quien llegó después de instalar la medición, así que conviene instalarla desde hoy aunque todavía no pautes.",
+      "Para no cansar a nadie, pon tope de frecuencia, fecha de caducidad a la audiencia y un mensaje distinto según lo que hizo cada persona.",
+    ],
     date: "2026-10-06",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es y por qué rinde tanto",
@@ -5928,8 +5966,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Marketing para clínicas dentales: cómo llenar la silla",
     excerpt:
       "El problema de casi ninguna clínica dental es que no llegan pacientes. Es que llegan, preguntan el precio y desaparecen. Eso no se arregla con más publicidad.",
+    enCorto: [
+      "El paciente dental busca el tratamiento, no al dentista, y escribe a varios consultorios el mismo día: gana el que responde antes y explica mejor lo que cobra.",
+      "Esconder el precio no sube la conversión, la baja. Un precio de referencia o la cuota mensual ayuda, sobre todo en tratamientos de monto alto.",
+      "El dinero suele estar en la silla vacía: citas que no se cumplen, presupuestos sin seguimiento y pacientes que no regresan. Un recordatorio la víspera y el mismo día tapa la primera fuga.",
+    ],
     date: "2026-10-06",
-    actualizado: "2026-11-02",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "El paciente dental no se capta como cualquier otro",
@@ -6304,8 +6347,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo promocionar un hotel sin regalar el margen",
     excerpt:
       "Un hotel lleno a través de Booking y un hotel rentable no son lo mismo. La diferencia está en una cuenta que casi nadie hace: cuánto te queda de cada reserva según de dónde vino.",
+    enCorto: [
+      "Antes de invertir, calcula cuánto te queda de cada reserva según el canal: Booking.com cobra una comisión en torno al 15 %, que sube al 17-22 % en su programa Preferred Partner.",
+      "Usa las plataformas para captar a quien no te conoce, y deja de pagarles comisión por el que repite o busca tu nombre en Google.",
+      "Compite por la reserva directa con valor, no con descuento: late checkout, desayuno o upgrade, y un motor de reservas que funcione en el celular.",
+    ],
     date: "2026-10-06",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "La cuenta que decide todo lo demás",
@@ -6538,8 +6586,13 @@ export const BLOG_POSTS: BlogPost[] = [
     h1: "Cómo conseguir clientes para exportar",
     excerpt:
       "El importador no busca proveedores como un consumidor busca un producto. Y por eso la mayoría de agroexportadoras pequeñas invierte en marketing que a su cliente real no le llega nunca.",
+    enCorto: [
+      "El importador no te busca en redes: llega por una feria, una institución que lo conecta o una búsqueda muy específica, y evalúa si puedes cumplir volumen, ventana y calidad.",
+      "Las tres vías que funcionan desde Perú son las ferias internacionales, los programas de Promperú, como la Ruta Exportadora, y la prospección propia.",
+      "Ten lista la documentación antes de la primera feria, con la ficha técnica en inglés y las certificaciones vigentes, y escribe a cada contacto en 48 horas con algo concreto.",
+    ],
     date: "2026-10-06",
-    actualizado: "2026-11-14",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Tu cliente no te busca como un consumidor",
