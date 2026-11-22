@@ -250,7 +250,10 @@ export const CIUDADES: Ciudad[] = [
         h2: "Comercio, servicios y proveedores",
         parrafo:
           "No todo en Nazca es turismo. Hay comercio, transporte y empresas que proveen a la actividad minera de la zona. Ese negocio es B2B: se gana con credibilidad, presencia ordenada en buscadores y un seguimiento serio de cada cotización, no con publicaciones diarias. Así se pensó la exhibición de maquinaria de XCMG en Nazca: tres días para contratistas y empresarios, no para público general.",
-        enlaces: [{ label: "La exhibición de XCMG en Nazca, en el portafolio", href: "/portafolio#xcmg-linea-amarilla-nazca" }],
+        enlaces: [
+          { label: "La exhibición de XCMG en Nazca, en el portafolio", href: "/portafolio#xcmg-linea-amarilla-nazca" },
+          { label: "Cómo vender maquinaria pesada", href: "/blog/automotriz/como-vender-maquinaria-pesada" },
+        ],
       },
       {
         h2: "Captar al turista antes de que llegue",

@@ -17,6 +17,7 @@ import { CIUDADES, ciudadHref } from "@/content/ciudades";
 import { getPrecios } from "@/content/precios";
 import { fotoPortafolio, FOTOS_PORTAFOLIO } from "@/content/portafolio-fotos";
 import { PORTAFOLIO } from "@/content/portafolio";
+import CotizadorGigantografia from "@/components/CotizadorGigantografia";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -228,6 +229,7 @@ export default async function ServicioPage({ params }: Params) {
       proceso={s.proceso}
       tema={s.nombre}
       especificaciones={s.especificaciones}
+      cotizador={s.cotizador === "gigantografias" ? <CotizadorGigantografia /> : undefined}
       precios={getPrecios(s.slug)}
       notaPrecios={SERVICIOS_PAUTA.has(s.slug) ? "Es el precio de la gestión: la inversión en anuncios se paga aparte." : undefined}
       related={related}

@@ -707,6 +707,7 @@ const SERVICIOS_BASE: Servicio[] = [
     lecturas: [
       { label: "Cuánto cobra una agencia de marketing en Perú", href: "/blog/performance/cuanto-cobra-una-agencia-de-marketing-digital-en-peru" },
       { label: "Cómo elegir una agencia de marketing digital", href: "/blog/performance/como-elegir-una-agencia-de-marketing-digital" },
+      { label: "Qué es un embudo de ventas", href: "/blog/conversion/que-es-un-embudo-de-ventas" },
     ],
     tipo: "servicio",
     categoriaSlug: "marketing-digital-publicidad",
@@ -816,6 +817,7 @@ const SERVICIOS_BASE: Servicio[] = [
     lecturas: [
       { label: "Qué es el remarketing", href: "/blog/performance/que-es-el-remarketing" },
       { label: "Cuánto invertir en Google y Meta Ads en Perú", href: "/blog/performance/cuanto-invertir-en-ads-peru" },
+      { label: "Cuánto cuesta la publicidad en Facebook e Instagram", href: "/blog/performance/cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru" },
     ],
     tipo: "servicio",
     pruebas: [
@@ -2411,9 +2413,9 @@ const SERVICIOS_BASE: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Imprenta Corporativa",
-    metaTitle: "Imprenta en Ica | Impresión por Pedido | Suggestion",
+    metaTitle: "Imprenta en Ica: Volantes, Tarjetas y Banners | Suggestion",
     metaDescription:
-      "Imprenta en Ica por pedido: gigantografías, banners, tarjetas y más. Cotizamos por WhatsApp según medida, material y cantidad. Recojo solo coordinado.",
+      "Imprenta en Ica por pedido: volantes, tarjetas, banners, vinil, etiquetas y gigantografías. Cotiza por WhatsApp con medida y cantidad, sin moverte.",
     h1: "Imprenta en Ica: impresión por pedido para tu negocio",
     hero: "Imprimimos desde una tarjeta hasta una gigantografía. Cuéntanos qué necesitas, en qué medida, material y cantidad, y te cotizamos por WhatsApp sin que tengas que moverte. Trabajamos por pedido, sin atención al paso: la entrega o el recojo se coordinan contigo.",
     enCorto: [
@@ -2605,7 +2607,7 @@ const SERVICIOS_BASE: Servicio[] = [
     tipo: "servicio",
     categoriaSlug: "btl-medios",
     nombre: "Merchandising",
-    metaTitle: "Merchandising y Regalos Corporativos en Ica | Suggestion",
+    metaTitle: "Merchandising Personalizado para Empresas en Ica",
     metaDescription:
       "Merchandising que refuerza tu marca: llaveros, gorras, tazas y regalos corporativos personalizados. Pide tu cotización por WhatsApp hoy.",
     h1: "Merchandising y regalos corporativos que refuerzan tu marca",

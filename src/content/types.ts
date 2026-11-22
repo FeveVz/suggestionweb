@@ -117,6 +117,11 @@ export type Servicio = {
    * que el cliente solo los rellene: el precio sale de la especificación.
    */
   especificaciones?: string[];
+  /**
+   * Cotizador interactivo bajo el «En corto» (hoy solo gigantografías): arma
+   * el pedido y abre WhatsApp con el mensaje escrito. Ver CotizadorGigantografia.
+   */
+  cotizador?: "gigantografias";
   /** schema dominante de la página. */
   schema?: "service" | "localbusiness";
   noindex?: boolean;

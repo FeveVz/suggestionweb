@@ -8,6 +8,7 @@ import Faq from "@/components/Faq";
 import RelatedLinks, { type RelatedLink } from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
 import EnCorto from "@/components/EnCorto";
+import CotizadorGigantografia from "@/components/CotizadorGigantografia";
 import { buildMetadata } from "@/lib/seo";
 import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
@@ -211,7 +212,17 @@ export default async function BlogPostPage({ params }: Params) {
       {/* CUERPO */}
       <section style={{ background: "var(--white)" }}>
         <div style={{ maxWidth: 820, margin: "0 auto", padding: "0 var(--gutter) var(--section-y)" }}>
-          <Secciones secciones={post.secciones} />
+          {/* Con cotizador, va tras la primera sección (la respuesta corta):
+              quien ya sabe medida y material lo pide ahí, sin bajar al cierre. */}
+          {post.cotizador === "gigantografias" ? (
+            <div style={{ display: "grid", gap: "var(--space-7)" }}>
+              <Secciones secciones={post.secciones.slice(0, 1)} />
+              <CotizadorGigantografia titulo="¿Ya sabes lo que necesitas? Cotízalo aquí" />
+              <Secciones secciones={post.secciones.slice(1)} />
+            </div>
+          ) : (
+            <Secciones secciones={post.secciones} />
+          )}
 
           {/* FAQ del post: responde las "Otras preguntas de los usuarios" y
               emite el FAQPage de esta URL (una sola vez, aquí). */}

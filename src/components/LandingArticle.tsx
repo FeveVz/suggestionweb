@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, Check } from "lucide-react";
@@ -104,6 +105,7 @@ export default function LandingArticle({
   coberturaTitulo,
   porQue,
   extraSchema,
+  cotizador,
 }: {
   breadcrumbs: Crumb[];
   kicker: string;
@@ -137,6 +139,8 @@ export default function LandingArticle({
   porQue?: "digital" | "produccion" | "btl";
   shape?: number;
   extraSchema?: Json | Json[];
+  /** Herramienta para armar el pedido (p. ej. CotizadorGigantografia), tras el «En corto». */
+  cotizador?: ReactNode;
 }) {
   // Producto a cotizar → WhatsApp con el servicio escrito. Todo lo demás → la
   // consultoría, recordando de qué página viene (ver lib/cta.ts).
@@ -276,7 +280,11 @@ export default function LandingArticle({
                 )}
               </aside>
             ) : heroItems.length > 0 ? (
-              <aside style={{ minWidth: 0 }}>
+              // Con «En corto», en el celular esta lista se oculta (globals.css,
+              // .hk-hero-resumen): repetía títulos que salen más abajo y empujaba
+              // la respuesta corta —planes, precios, plazos— a la segunda
+              // pantalla, justo a quien llega desde ChatGPT buscándola.
+              <aside className={enCorto?.length ? "hk-hero-resumen" : undefined} style={{ minWidth: 0 }}>
                 <div style={{ background: "var(--surface-raised)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "clamp(1.25rem,3vw,1.75rem)" }}>
                   <span style={{ font: "var(--fw-bold) var(--fs-micro)/1 var(--font-accent)", textTransform: "uppercase", letterSpacing: "var(--tracking-label)", color: "var(--text-muted)" }}>
                     {heroLabel}
@@ -335,6 +343,7 @@ export default function LandingArticle({
               enlace={cotiza ? { href: wa, label: ctaLabel, externo: true } : { href: consultoria, label: CTA_CONSULTORIA }}
             />
           )}
+          {cotizador}
           {/* Un solo render de secciones para todo el sitio: antes esta
               plantilla repetia su propia version (parrafo, sub, bullets) y por
               eso las paginas de servicio, sector y ciudad ignoraban EN SILENCIO

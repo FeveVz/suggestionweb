@@ -474,6 +474,9 @@ img { max-width: 100%; display: block; }
 /* Responsive de la home */
 @media (max-width: 920px) {
   .hk-hero { grid-template-columns: 1fr !important; min-height: auto !important; align-items: start !important; }
+  /* Páginas de servicio con «En corto»: la lista «Qué incluye» del hero se
+     oculta en una columna para que la respuesta corta suba (LandingArticle). */
+  .hk-hero-resumen { display: none; }
   .hk-hero-art { order: -1; }
   .hk-perc { grid-template-columns: 1fr !important; }
   /* Mientras pregunta, primero el título y luego las fotos, sin el hueco de

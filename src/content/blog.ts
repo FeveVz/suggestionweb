@@ -56,6 +56,8 @@ export type BlogPost = {
   cierre: string;
   moneyPage: { label: string; href: string };
   relacionados?: string[];
+  /** Cotizador tras la primera sección (la respuesta corta). Solo artículos de producción. */
+  cotizador?: "gigantografias";
 };
 
 /** Pilar /blog (doc 09 §B0). */
@@ -682,7 +684,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion construimos branding estratégico: del nombre al manual de marca.",
     moneyPage: { label: "Construyamos tu marca", href: "/servicios/branding" },
-    relacionados: ["crear-logo-con-ia", "mejores-ia-para-crear-logos"],
+    relacionados: ["crear-logo-con-ia", "mejores-ia-para-crear-logos", "cuanto-cuesta-registrar-una-marca-en-indecopi"],
   },
   {
     slug: "crear-logo-con-ia",
@@ -1019,7 +1021,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "Ya sabes qué es el marketing digital; falta saber qué aplica en tu caso. Esa conversación la tenemos gratis: revisamos tus números y te decimos qué canal te conviene primero —y qué todavía no vale la pena pagar.",
     moneyPage: { label: "Marketing digital para tu negocio", href: "/servicios/marketing-digital" },
-    relacionados: ["cuanto-invertir-en-ads-peru", "que-es-un-lead"],
+    relacionados: ["cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru", "que-es-un-embudo-de-ventas", "que-es-un-lead"],
   },
   {
     slug: "cuanto-invertir-en-ads-peru",
@@ -1622,7 +1624,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "Si tus leads se están enfriando entre WhatsApp, correos y cuadernos, el problema no es la publicidad: es el proceso. Eso se ordena.",
     moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
-    relacionados: ["como-automatizar-whatsapp", "que-es-el-marketing-digital"],
+    relacionados: ["que-es-un-embudo-de-ventas", "como-automatizar-whatsapp", "que-es-el-marketing-digital"],
   },
   {
     slug: "que-es-neuromarketing",
@@ -1818,7 +1820,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion reportamos CPL, ROAS y cierres con transparencia. Sin humo.",
     moneyPage: { label: "Publicidad en Google Ads", href: "/servicios/publicidad-digital" },
-    relacionados: ["cuanto-invertir-en-ads-peru", "que-es-el-marketing-digital", "como-elegir-una-agencia-de-marketing-digital"],
+    relacionados: ["cuanto-invertir-en-ads-peru", "cuanto-cuesta-publicidad-en-facebook-e-instagram-en-peru", "que-es-un-embudo-de-ventas"],
   },
   {
     slug: "crear-pagina-web-wix-vs-profesional",
@@ -2670,7 +2672,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion definimos tu posicionamiento antes de diseñar nada. Estrategia primero.",
     moneyPage: { label: "Construyamos tu marca", href: "/servicios/branding" },
-    relacionados: ["que-es-rebranding", "que-es-neuromarketing"],
+    relacionados: ["que-es-rebranding", "que-es-neuromarketing", "cuanto-cuesta-registrar-una-marca-en-indecopi"],
   },
   {
     slug: "ia-en-el-marketing",
@@ -3525,14 +3527,14 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gigantografias-medidas-materiales-precios",
     categoria: "imprenta-btl",
-    title: "Gigantografías: Tamaños, Medidas y Precios en Perú",
+    title: "Gigantografías: Medidas, Material y Precio por m² en Perú",
     description:
-      "Tamaños y medidas de gigantografía más pedidos, qué material aguanta la calle y cuánto cuesta el m² en Perú, con rangos de octubre de 2026.",
+      "Medidas más pedidas, cómo se llama el material (lona o banner de 8 a 13 oz), cuál aguanta la calle y el precio por m² en Perú: desde S/18 (octubre 2026).",
     h1: "Gigantografías: qué material pedir, qué medidas y cuánto cuesta",
     excerpt:
       "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
     date: "2026-10-04",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Medidas, material y precio: la respuesta corta",
@@ -3540,7 +3542,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Una gigantografía no tiene una medida única: se imprime al tamaño que necesites y se cotiza por metro cuadrado. Esto es lo que conviene saber antes de pedir precio.",
         bullets: [
           { titulo: "Medidas más pedidas", texto: "1 × 2 m, 2 × 1 m, 3 × 1 m y 1 × 3 m. El rollo más común mide 3.20 m de ancho, y ajustar la pieza a ese ancho evita pagar recorte." },
-          { titulo: "Material", texto: "lona de 8 onzas para interior, de 11 para exterior de campaña corta y de 13 o frontlit para exterior permanente. En zonas con mucho viento, malla (mesh), que deja pasar el aire." },
+          { titulo: "Material", texto: "se llama lona o banner: una lona de PVC que se mide en onzas. La de 8 onzas es para interior, la de 11 para exterior de campaña corta y la de 13 o frontlit para exterior permanente. En zonas con mucho viento, malla (mesh), que deja pasar el aire." },
           { titulo: "Precio", texto: "en el mercado peruano va desde S/18 el m² en lona de interior hasta S/120 en acabados premium (rangos consultados el 4 de octubre de 2026; las fuentes van en la tabla de precios). El diseño y la instalación suelen ir aparte." },
         ],
       },
@@ -3635,6 +3637,14 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "En el uso diario, sí: gigantografía, banner y lona nombran la misma pieza impresa en gran formato. Lo que cambia es el material y el acabado según dónde va a estar.",
       },
       {
+        q: "¿Cómo se llama el material de las gigantografías?",
+        a: "Casi siempre, lona o banner: una lona de PVC que se mide en onzas. La de 8 onzas es para interior, la de 11 para exterior de campaña corta y la de 13 o frontlit para exterior permanente. También se imprimen en vinil adhesivo (vidrios, paredes y vehículos), en malla o mesh (zonas con viento) y en tela sublimada (interior de alta definición).",
+      },
+      {
+        q: "¿Qué material de gigantografía aguanta la calle?",
+        a: "La lona de 13 onzas o frontlit: resiste sol y lluvia y es la que se usa en paneles y fachadas. Si hay mucho viento, malla (mesh), que deja pasar el aire. La lona de 8 onzas y la tela sublimada son de interior: en la calle se vencen pronto.",
+      },
+      {
         q: "¿Cuánto cuesta una gigantografía en Perú?",
         a: "Se cotiza por metro cuadrado. En octubre de 2026 el mercado peruano va desde unos S/18 por m² en lona de interior y S/19.50 en banner de 11 onzas, hasta S/120 por m² en acabados premium. El diseño y la instalación suelen sumar entre S/100 y S/400 aparte. El precio por metro baja cuanto más metros pidas.",
       },
@@ -3672,6 +3682,9 @@ export const BLOG_POSTS: BlogPost[] = [
     // artículo tiene 3,441 apariciones en top 10 y no tenía dónde cotizar.
     moneyPage: { label: "Gigantografías en Ica: cotiza la tuya", href: "/servicios/gigantografias" },
     relacionados: ["tarjetas-de-presentacion-medidas-y-errores", "letreros-para-negocio-cual-elegir"],
+    // Cotizador tras la respuesta corta (22-nov-2026): 15 visitas en 28 días y
+    // ningún contacto, frente a 3 de 5 en la página de servicio.
+    cotizador: "gigantografias",
   },
   {
     slug: "tarjetas-de-presentacion-medidas-y-errores",
@@ -4205,7 +4218,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "material-pop-punto-de-venta",
     categoria: "imprenta-btl",
-    title: "Material POP: Qué Es, Tipos y Precios en Perú | Suggestion",
+    title: "Material POP en Punto de Venta: Qué Es, Tipos y Precios",
     description:
       "Jalavistas, rompetráficos, exhibidores y tótems: qué hace cada pieza, cuál conviene a tu producto y cuánto cuesta en Perú desde S/0.60 por unidad.",
     h1: "Material POP: qué piezas funcionan de verdad en punto de venta",
@@ -4306,7 +4319,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "panel-valla-bicivalla-o-vehiculo-rotulado",
     categoria: "imprenta-btl",
-    title: "Panel, Valla o Publicidad Móvil: Cuál Elegir | Suggestion",
+    title: "Panel, Valla, Bicivalla o Vehículo Rotulado: Cuál Elegir",
     description:
       "Panel fijo, bicivalla o vehículo rotulado: qué consigue cada formato, a quién llega y cuánto cuesta en Perú. Alquiler de valla desde S/2,000 al mes.",
     h1: "Panel, valla, bicivalla o vehículo rotulado: cuál te conviene",
@@ -4698,7 +4711,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     cierre: "En Suggestion trabajamos la marca como sistema, no como un dibujo: lo que te llevas es el criterio para aplicarla en todo lo demás.",
     moneyPage: { label: "Branding e identidad de marca", href: "/servicios/branding" },
-    relacionados: ["como-crear-un-logo", "que-es-rebranding", "posicionamiento-de-marca"],
+    relacionados: ["como-crear-un-logo", "cuanto-cuesta-registrar-una-marca-en-indecopi", "posicionamiento-de-marca"],
   },
   {
     slug: "cuanto-cuesta-un-millar-de-volantes-en-peru",
@@ -4800,12 +4813,12 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "marca",
     title: "Cuánto Cuesta Registrar una Marca en Indecopi | Suggestion",
     description:
-      "La tasa publicada por clase, el descuento MYPE, la búsqueda previa que evita perder el pago y por qué la tasa no se devuelve aunque te denieguen la solicitud.",
+      "La tasa publicada de Indecopi es S/534.90 por la primera clase y S/401.20 para MYPE que califican. La búsqueda previa y por qué no se devuelve si te la niegan.",
     h1: "Cuánto cuesta registrar una marca en Indecopi",
     excerpt:
       "La tasa no se devuelve aunque te rechacen la solicitud. Por eso lo que decide cuánto te va a costar registrar tu marca no es la tasa: es lo que hagas antes de pagarla.",
     date: "2026-10-05",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Las tasas publicadas",
@@ -4868,6 +4881,10 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     faq: [
+      {
+        q: "¿Cuánto cuesta patentar una marca en Perú?",
+        a: "En Perú las marcas no se patentan, se registran: la patente es para invenciones. Registrar una marca en Indecopi cuesta S/534.90 por la primera clase según la tasa publicada, S/533.30 por cada clase adicional y S/401.20 para las MYPE que califican. Verifica el monto vigente en Indecopi antes de pagar.",
+      },
       {
         q: "¿Cuánto cuesta registrar una marca en Indecopi?",
         a: "Según las fuentes consultadas en octubre de 2026, la tasa de la primera clase es de S/534.90 y cada clase adicional cuesta S/533.30. Las MYPE que califican acceden a una tarifa reducida de S/401.20. Conviene confirmar el monto vigente en el canal oficial de Indecopi antes de pagar, porque las tasas se actualizan por decreto.",
@@ -5273,14 +5290,19 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "que-es-un-embudo-de-ventas",
     categoria: "conversion",
-    title: "Qué es un Embudo de Ventas y Cómo Armar el Tuyo | Suggestion",
+    title: "Qué Es un Embudo de Ventas: Etapas y Cómo Armar el Tuyo",
     description:
       "Qué es un embudo de ventas, cómo se construye con las etapas de tu negocio real y por qué el que más vende es el que enseña dónde se te cae la gente.",
     h1: "Qué es un embudo de ventas y cómo armar el tuyo",
     excerpt:
       "Un embudo no sirve para explicar el marketing en una lámina. Sirve para una sola cosa: ver en qué escalón se te está cayendo la gente, que casi nunca es donde crees.",
     date: "2026-10-06",
-    actualizado: "2026-11-20",
+    enCorto: [
+      "Un embudo de ventas es el recorrido de una persona desde que descubre tu negocio hasta que te compra, dividido en etapas que puedes contar.",
+      "En cada etapa quedan menos personas, y eso es normal. Lo que importa es el porcentaje que pasa de un escalón al siguiente.",
+      "Las etapas son las de tu negocio, no las de una lámina genérica: sirve para ver dónde se cae la gente y decidir dónde invertir.",
+    ],
+    actualizado: "2026-11-22",
     secciones: [
       {
         h2: "Qué es un embudo de ventas, sin la lámina de siempre",

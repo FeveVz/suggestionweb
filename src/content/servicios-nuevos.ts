@@ -572,6 +572,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     keyword: "gigantografías en Ica",
     schema: "localbusiness",
     especificaciones: ["Medida (ancho x alto)", "Dónde va a ir (interior o exterior)", "Material (si lo sabes)", "Acabado: ojales, bastidor o bolsillo", "Cantidad", "Fecha y lugar de entrega"],
+    cotizador: "gigantografias",
     secciones: [
       {
         h2: "Cuánto cuesta una gigantografía: qué necesitamos para cotizarte",
