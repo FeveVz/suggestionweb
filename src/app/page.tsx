@@ -142,6 +142,20 @@ const FAQ = [
   },
 ];
 
+/**
+ * Secciones de abajo que el navegador no calcula hasta que te acercas
+ * (content-visibility: auto). Se ven igual; solo se diseñan y pintan más tarde.
+ *
+ * Por qué (22-nov-2026): con CPU 4x, al llegar la hoja de estilos el
+ * navegador pasaba ~0,6 s diseñando la página entera (15.500 px de alto en
+ * celular) antes de pintar el título, que es el LCP. El número es el alto
+ * real de cada sección a 375 px, para reservar su espacio y que la barra de
+ * scroll no salte; con «auto», una vez pintada el navegador recuerda su alto.
+ * Fuera a propósito: el hero y lo que sigue (ProofBar, logos), que se ven
+ * enseguida, y #metodo, que se fija al hacer scroll (position: sticky).
+ */
+const diferir = (alto: number) => ({ contentVisibility: "auto" as const, containIntrinsicSize: `auto ${alto}px` });
+
 export default function Home() {
   return (
     <>
@@ -211,7 +225,7 @@ export default function Home() {
 
       {/* PROBLEMAS — la primera pregunta de quien llega no es "¿qué
           servicios tienen?", es "¿me pueden ayudar con lo que me pasa?". */}
-      <Section id="problemas" tone="light">
+      <Section id="problemas" tone="light" style={diferir(1607)}>
         <div className="reveal" style={{ maxWidth: 760, marginBottom: "clamp(1.75rem,3vw,2.5rem)" }}>
           <SectionHeading level={2} kicker="¿Qué te está pasando?" maxWidth="20ch">
             Elige tu problema. Te decimos por dónde empezar.
@@ -247,7 +261,7 @@ export default function Home() {
 
       {/* CASOS — subidos de la pantalla 6,5 a justo después de los
           problemas: "¿lo han resuelto antes?" es la pregunta siguiente. */}
-      <Section id="casos" tone="light" style={{ background: "var(--surface-raised)" }}>
+      <Section id="casos" tone="light" style={{ background: "var(--surface-raised)", ...diferir(759) }}>
         <div className="reveal" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24, marginBottom: 32, flexWrap: "wrap" }}>
           <SectionHeading level={2} kicker="Casos reales de Suggestion" maxWidth="18ch" reveal>
             Así lo resolvimos para otros negocios.
@@ -294,7 +308,7 @@ export default function Home() {
       {/* CONSULTORÍA CERO — justo después de los casos: es el momento en
           que el visitante ya vio que resolvemos su problema y que lo hemos
           hecho antes, y la siguiente pregunta es "¿y cómo empiezo?". */}
-      <Section id="consultoria" tone="light">
+      <Section id="consultoria" tone="light" style={diferir(1433)}>
         <div className="hk-cons reveal">
           <div className="hk-cons-intro">
             <SectionHeading level={2} kicker="Consultoría cero · gratis" maxWidth="16ch">
@@ -333,7 +347,7 @@ export default function Home() {
       </Section>
 
       {/* SECTORES */}
-      <Section id="sectores" tone="dark">
+      <Section id="sectores" tone="dark" style={diferir(1336)}>
         <div className="reveal" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24, marginBottom: 40, flexWrap: "wrap" }}>
           <SectionHeading level={2} kicker="¿Trabajan con mi rubro?" tone="dark" maxWidth="18ch" reveal>
             Cada mercado compra distinto. Estos los conocemos a fondo.
@@ -351,7 +365,7 @@ export default function Home() {
       <Percepcion shape={1} />
 
       {/* SERVICIOS */}
-      <Section id="servicios" tone="light">
+      <Section id="servicios" tone="light" style={diferir(1759)}>
         <div className="hk-serv reveal" style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: "clamp(2rem,5vw,4rem)", alignItems: "start" }}>
           <div>
             <SectionHeading level={2} kicker="Servicios y precios" maxWidth="15ch" reveal>
@@ -413,7 +427,7 @@ export default function Home() {
           bloque que menos ayudaba a decidir. La home ahora termina antes. */}
 
       {/* FAQ */}
-      <Section id="faq" tone="light" style={{ background: "var(--surface-raised)" }}>
+      <Section id="faq" tone="light" style={{ background: "var(--surface-raised)", ...diferir(998) }}>
         <div className="reveal">
           <SectionHeading level={2} kicker="Preguntas frecuentes" maxWidth="20ch" style={{ marginBottom: 24 }}>
             Lo que sueles preguntarte antes de empezar.
@@ -425,7 +439,7 @@ export default function Home() {
       </Section>
 
       {/* CIERRE / CONTACTO */}
-      <section id="contacto" className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", borderTop: "1px solid var(--hairline-inverse)", position: "relative", overflow: "hidden" }}>
+      <section id="contacto" className="hk-grain" style={{ background: "var(--black)", color: "var(--white)", borderTop: "1px solid var(--hairline-inverse)", position: "relative", overflow: "hidden", ...diferir(1001) }}>
         <span className="hk-grain-layer" aria-hidden />
         {/* Composición simétrica (Rorschach): mancha espejada que cambia naranja→cian */}
         <div aria-hidden style={{ position: "absolute", inset: 0, display: "flex", justifyContent: "center", alignItems: "center", opacity: 0.12, zIndex: 0, pointerEvents: "none" }}>

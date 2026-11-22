@@ -57,6 +57,25 @@ const CSP = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  /**
+   * La hoja de estilos va dentro del HTML (<style>), no como archivo aparte.
+   *
+   * Por qué (22-nov-2026): en celular, el título de cada página (su LCP) se
+   * pinta recién cuando llega la hoja de estilos, y esa petición competía
+   * con los scripts. Medido en local con la versión de producción, CPU 4x y
+   * red de 1,6 Mbps: el título del inicio pasó de 1,28 s a 0,86 s (junto con
+   * content-visibility en page.tsx), y el de un artículo quedó en ~0,75 s.
+   * El costo: el HTML pesa ~27 KB más comprimido y la hoja ya no se guarda
+   * en caché entre páginas. Compensa porque casi todas las visitas entran a
+   * una sola página desde Google o ChatGPT.
+   *
+   * La CSP ya permite estilos en línea (style-src 'unsafe-inline'). Es una
+   * opción experimental de Next: si algún día los estilos se ven raros
+   * tras actualizar Next, quitar esta línea lo devuelve a como era.
+   * Comprobado: capturas pantalla por pantalla del inicio, un servicio y un
+   * artículo, iguales a producción; navegación interna con estilos bien.
+   */
+  experimental: { inlineCss: true },
 
   /**
    * Interruptor público de la copia de GA4 desde el servidor: vale "1" solo si
