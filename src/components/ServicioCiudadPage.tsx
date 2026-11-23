@@ -5,33 +5,47 @@ import { paginaDeServicio } from "@/lib/schema";
 import { getServicioCiudad, serviciosDeCiudad } from "@/content/servicios-ciudad";
 import { getCiudad, ciudadHref } from "@/content/ciudades";
 import { getServicio } from "@/content/servicios";
-import { fotoPortafolio } from "@/content/portafolio-fotos";
+import { fotoPortafolio, FOTOS_PORTAFOLIO } from "@/content/portafolio-fotos";
 import { PORTAFOLIO } from "@/content/portafolio";
 
+/** Foto de portafolio con sus medidas reales (next/image las necesita). */
+const delPortafolio = (slug: string, n: number, alt: string) => {
+  const m = FOTOS_PORTAFOLIO[slug]?.[n - 1];
+  return { src: fotoPortafolio(slug, n), alt, w: m?.[0], h: m?.[1] };
+};
+
 /**
- * Trabajo propio por servicio. Son piezas producidas en Ica (de ahí sale todo
- * lo que se envía), así que el pie dice dónde se tomó la foto: no se presenta
- * como trabajo hecho en la otra ciudad.
+ * Portada: el trabajo con mejor acabado de cada servicio. En producción lo que
+ * decide al cliente es la terminación (owner, 23-nov-2026: «lo que se busca es
+ * el acabado, no interesa para qué ciudad sea el trabajo»), así que se elige
+ * por calidad, no por dónde se hizo.
  */
+const PORTADA: Record<string, { src: string; alt: string; w?: number; h?: number }> = {
+  imprenta: { src: "/assets/servicios/pop-colgante-sala.webp", alt: "Colgante impreso a todo color del Renault Duster, con fotos del motor y del interior, sobre la sala de exhibición", w: 750, h: 1000 },
+  gigantografias: delPortafolio("aniversario-paracas-gwm", 1, "Gigantografía de lona impresa a todo color con una campaña de Pacífico Motors, junto a una ruleta de premios, en un festival nocturno"),
+  merchandising: { src: "/assets/servicios/merchandising-gorra-bordada.webp", alt: "Gorra azul con los logos de Renault y Alpine bordados", w: 1600, h: 1200 },
+  "material-pop": delPortafolio("gira-conduce-tu-rumbo", 2, "Módulo de AutoPlan en un centro comercial: mostrador iluminado, roll-ups con código QR y exhibidores impresos"),
+};
+
+/** Más trabajo propio por servicio, con el acabado en el pie de foto. */
 const GALERIA: Record<string, { src: string; alt: string; cap: string }[]> = {
   imprenta: [
-    { src: fotoPortafolio("changan-cs15-presentacion", 2), alt: "Ficha impresa sobre el techo de un vehículo con las características del modelo y un código QR", cap: "Ficha de techo con QR, impresa para una presentación en Ica" },
+    { src: fotoPortafolio("changan-cs15-presentacion", 2), alt: "Ficha impresa sobre el techo de un vehículo con las características del modelo y un código QR", cap: "Ficha impresa con QR para el techo de un auto en exhibición" },
     { src: fotoPortafolio("gira-conduce-tu-rumbo", 4), alt: "Roll-up impreso con código QR y ruleta de premios de una campaña", cap: "Roll-up con el QR de la dinámica de una campaña" },
-    { src: fotoPortafolio("ahorra-o-nunca-despliegue", 2), alt: "Colgantes y banderolas impresos instalados en la sala de ventas", cap: "Colgantes y banderolas en la sala de un concesionario de Ica" },
+    { src: fotoPortafolio("ahorra-o-nunca-despliegue", 2), alt: "Colgantes y banderolas impresos instalados en la sala de ventas", cap: "Colgantes y banderolas impresos para la sala de un concesionario" },
   ],
   gigantografias: [
-    { src: fotoPortafolio("ahorra-o-nunca-despliegue", 1), alt: "Gigantografía impresa en la fachada de vidrio de un concesionario", cap: "Gigantografía de fachada para un concesionario de Ica" },
-    { src: fotoPortafolio("caballos-de-paso-2025", 1), alt: "Banderolas y estructuras de marca montadas en el circuito de un campeonato", cap: "Banderolas de marca en el circuito de un campeonato en Ica" },
+    { src: fotoPortafolio("ahorra-o-nunca-despliegue", 1), alt: "Gigantografía impresa en la fachada de vidrio de un concesionario", cap: "Gigantografía de fachada sobre vidrio, impresa a todo color" },
+    { src: fotoPortafolio("caballos-de-paso-2025", 1), alt: "Banderolas y estructuras de marca montadas en el circuito de un campeonato", cap: "Banderolas textiles de marca en el circuito de un campeonato" },
     { src: fotoPortafolio("gira-conduce-tu-rumbo", 4), alt: "Roll-up impreso con código QR y ruleta de premios de una campaña", cap: "Roll-up textil para una activación" },
   ],
   merchandising: [
-    { src: "/assets/servicios/merchandising-gorra-bordada.webp", alt: "Gorra azul bordada con los logos de Renault y Alpine", cap: "Gorra bordada con dos logos, producida para un concesionario" },
-    { src: "/assets/sectores/marcas-el-charcutero-gorra-pack.webp", alt: "Gorra de El Charcutero junto a un pack de cerveza y una caja de chorizo artesanal", cap: "Gorra y empaque de El Charcutero, una marca de Ica" },
+    { src: "/assets/sectores/marcas-el-charcutero-gorra-pack.webp", alt: "Gorra de El Charcutero junto a un pack de cerveza y una caja de chorizo artesanal", cap: "Gorra con la marca de El Charcutero, junto a su empaque" },
   ],
   "material-pop": [
     { src: "/assets/servicios/pop-totem-ficha-sala.webp", alt: "Tótem con la ficha del Renault Arkana junto a la unidad en la sala de Pacífico Motors", cap: "Tótem con la ficha del modelo, junto al auto" },
     { src: "/assets/servicios/pop-colgante-sala.webp", alt: "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", cap: "Colgante sobre los autos de la exhibición" },
-    { src: fotoPortafolio("mercado-santo-domingo-dfsk", 2), alt: "Módulo de marca con cajas de oferta en la calle del mercado de Santo Domingo", cap: "Módulo y cajas de oferta en el mercado de Santo Domingo, Ica" },
+    { src: fotoPortafolio("mercado-santo-domingo-dfsk", 2), alt: "Módulo de marca con cajas de oferta en la calle del mercado de Santo Domingo", cap: "Módulo de marca y cajas de oferta impresas para una activación en un mercado" },
   ],
 };
 
@@ -72,6 +86,7 @@ export default function ServicioCiudadPage({ slug }: { slug: string }) {
       h1={p.h1}
       hero={p.hero}
       enCorto={p.enCorto}
+      heroImage={PORTADA[p.servicio]}
       galeria={GALERIA[p.servicio]}
       ctaLabel={p.cta}
       proof={`${PORTAFOLIO.length} activaciones y piezas documentadas con fotos propias · Ya trabajamos con empresas de ${p.ciudadNombre} · Producción en Ica y envío por agencia de carga`}
@@ -94,6 +109,7 @@ export default function ServicioCiudadPage({ slug }: { slug: string }) {
         description: p.metaDescription,
         url,
         areaServedCity: p.ciudadNombre,
+        imagen: PORTADA[p.servicio]?.src,
         categoria: "Producción y publicidad física",
       })}
     />
