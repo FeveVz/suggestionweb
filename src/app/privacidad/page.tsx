@@ -8,6 +8,7 @@ import { site } from "@/lib/site";
 /**
  * Política de privacidad (Ley N.º 29733 y su Reglamento, DS 003-2013-JUS).
  *
+ * 23-nov-2026: se añade Metricool (proveedor, qué mide y el botón «No medir»), a pedido del owner.
  * Reescrita el 21-nov-2026 (auditoría MED-09, MED-05 y MED-08; decisión 9):
  * describe el tratamiento que de verdad ocurre hoy —formularios guardados en
  * una Hoja de Google, conversación en WhatsApp con asistente de IA, Píxel y
@@ -37,7 +38,7 @@ export default function Privacidad() {
         <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 8px" }}>
           Política de Privacidad
         </h1>
-        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: 21 de noviembre de 2026</p>
+        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: 23 de noviembre de 2026</p>
 
         <h2 style={H2}>1. Quién trata tus datos</h2>
         <p style={P}>
@@ -57,7 +58,7 @@ export default function Privacidad() {
             <strong>Libro de Reclamaciones:</strong> los datos que exige la norma (nombre, documento de identidad, domicilio, teléfono, correo, datos del padre, la madre o el apoderado si quien reclama es menor de edad, y el detalle del reclamo), que llegan a nuestro correo.
           </li>
           <li>
-            <strong>Navegación:</strong> datos de uso del sitio que registran Google Analytics, el Píxel de Meta y Microsoft Clarity mediante cookies e identificadores del navegador (sección 5).
+            <strong>Navegación:</strong> datos de uso del sitio que registran Google Analytics, el Píxel de Meta y Microsoft Clarity mediante cookies e identificadores del navegador, y Metricool, que no usa cookies (sección 5).
           </li>
         </ul>
 
@@ -78,6 +79,7 @@ export default function Privacidad() {
           <li><strong>Google</strong>: Google Analytics, para las estadísticas de uso, y Hojas de cálculo de Google, donde guardamos lo que envías en los formularios.</li>
           <li><strong>Meta Platforms</strong>: el Píxel y la API de Conversiones, para medir nuestros anuncios, y WhatsApp, donde continúa la conversación.</li>
           <li><strong>Microsoft</strong>: Clarity, para entender cómo se usa el sitio.</li>
+          <li><strong>Metricool</strong> (España): estadísticas de visitas del sitio.</li>
           <li><strong>Hostinger</strong>: nuestro correo electrónico, al que llegan los reclamos y los mensajes que nos envías por correo.</li>
           <li>El proveedor del <strong>asistente de IA</strong> que responde primero en WhatsApp.</li>
         </ul>
@@ -87,7 +89,7 @@ export default function Privacidad() {
           Para saber qué anuncios nos traen contactos, el Píxel de Meta guarda en tu navegador un identificador aleatorio (la cookie «_fbp») que no incluye tu nombre ni tu teléfono. Cuando envías un formulario, mandamos a Meta, por su API de Conversiones, tu nombre y tu teléfono transformados con una función hash (SHA-256): Meta no recibe el dato escrito, solo lo compara con el de sus propios usuarios para saber si llegaste desde un anuncio.
         </p>
         <p style={P}>
-          Google Analytics cuenta visitas y recorridos de forma estadística. Microsoft Clarity registra cómo se usa el sitio —desplazamiento, clics y recorrido entre páginas— y enmascara por defecto lo que escribes en los formularios, así que lo que teclees en ellos no queda grabado.
+          Google Analytics cuenta visitas y recorridos de forma estadística. Microsoft Clarity registra cómo se usa el sitio —desplazamiento, clics y recorrido entre páginas— y enmascara por defecto lo que escribes en los formularios, así que lo que teclees en ellos no queda grabado. Metricool cuenta las visitas: recibe la página que ves, la página desde la que llegaste y el tamaño de la ventana de tu navegador, además de la dirección IP y el tipo de navegador que recibe cualquier servidor. No guarda cookies ni identificadores en tu navegador.
         </p>
 
         <h2 style={H2}>6. Cuánto tiempo los guardamos</h2>
@@ -109,7 +111,7 @@ export default function Privacidad() {
 
         <h2 style={H2}>8. Cookies y cómo pedir que no midamos tu visita</h2>
         <p style={P}>
-          Este sitio usa cookies propias y de Google, Meta y Microsoft con fines estadísticos y publicitarios. Si prefieres que no te midamos, pulsa el botón: este navegador dejará de cargar Google Analytics, el Píxel de Meta y Microsoft Clarity, y tus formularios no se enviarán a Meta. Es una opción para rechazar la medición en cualquier momento; el sitio funciona igual. También puedes bloquear las cookies desde la configuración de tu navegador.
+          Este sitio usa cookies propias y de Google, Meta y Microsoft con fines estadísticos y publicitarios. Si prefieres que no te midamos, pulsa el botón: este navegador dejará de cargar Google Analytics, el Píxel de Meta, Microsoft Clarity y Metricool, y tus formularios no se enviarán a Meta. Es una opción para rechazar la medición en cualquier momento; el sitio funciona igual. También puedes bloquear las cookies desde la configuración de tu navegador.
         </p>
         <NoMedirToggle />
 

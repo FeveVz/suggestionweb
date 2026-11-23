@@ -6,8 +6,8 @@ import { OPTOUT_KEY } from "@/lib/tracking";
 /**
  * «No medir mi visita / Volver a medir» (sección de cookies de /privacidad).
  *
- * Guarda sg_optout=1 en este navegador; los arranques de GA4, el Píxel y
- * Clarity lo comprueban antes de cargar (NO_MEDIR_JS en lib/tracking.ts).
+ * Guarda sg_optout=1 en este navegador; los arranques de GA4, el Píxel,
+ * Clarity y Metricool lo comprueban antes de cargar (NO_MEDIR_JS en lib/tracking.ts).
  * Al pedir no ser medido se recarga la página, porque las etiquetas ya
  * cargadas seguirían activas en la navegación interna sin recarga.
  */
@@ -72,7 +72,7 @@ export default function NoMedirToggle() {
         {estado === "cargando"
           ? " "
           : sinMedir
-            ? "Listo: este navegador ya no carga Google Analytics, el Píxel de Meta ni Microsoft Clarity, y tus formularios no se envían a Meta para medir anuncios. Si borras los datos del sitio en tu navegador, vuelve a pulsar el botón."
+            ? "Listo: este navegador ya no carga Google Analytics, el Píxel de Meta, Microsoft Clarity ni Metricool, y tus formularios no se envían a Meta para medir anuncios. Si borras los datos del sitio en tu navegador, vuelve a pulsar el botón."
             : "Hoy medimos tu visita con las herramientas descritas arriba. Si vuelves a activarla, se aplica desde la próxima vez que abras el sitio."}
       </p>
     </div>
