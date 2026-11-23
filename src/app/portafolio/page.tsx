@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
+import { conHora } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { absoluteUrl, ORG_ID, WEBSITE_ID } from "@/lib/site";
 import CarruselFotos from "@/components/CarruselFotos";
@@ -103,7 +104,7 @@ export default function PortafolioPage() {
               caption: f.alt,
               width: f.w,
               height: f.h,
-              datePublished: p.fecha,
+              datePublished: conHora(p.fecha),
               creator: { "@id": ORG_ID },
               copyrightHolder: { "@id": ORG_ID },
               creditText: site.name,

@@ -11,7 +11,7 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import CountUp from "@/components/CountUp";
 import { buildMetadata } from "@/lib/seo";
-import { webPageSchema, articuloId, paginaId, servicioId } from "@/lib/schema";
+import { webPageSchema, articuloId, paginaId, servicioId, conHora } from "@/lib/schema";
 import { tieneServicio } from "@/lib/schema-org";
 import { absoluteUrl, ORG_ID, site, whatsappLink } from "@/lib/site";
 import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
@@ -79,8 +79,8 @@ export default async function CasoPage({ params }: Params) {
       headline: c.h1,
       description: c.metaDescription,
       image: imagenes,
-      datePublished: c.publicado,
-      dateModified: c.revisado,
+      datePublished: conHora(c.publicado),
+      dateModified: conHora(c.revisado),
       inLanguage: site.hreflang,
       author: { "@id": ORG_ID },
       publisher: { "@id": ORG_ID },

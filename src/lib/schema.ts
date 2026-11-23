@@ -34,6 +34,13 @@ export const AUTOR_ID = `${SITE_URL}/equipo/${AUTOR.slug}#person`;
 export const BLOG_ID = `${SITE_URL}/blog#blog`;
 
 const abs = (u: string) => (u.startsWith("http") ? u : absoluteUrl(u));
+/**
+ * Fecha con hora y zona horaria de Lima. Google acepta solo la fecha, pero la
+ * Prueba de resultados enriquecidos avisa que falta la zona horaria; con la
+ * hora fija al mediodía de Lima no cambia de día en ningún huso.
+ */
+export const conHora = (d: string) => (/^\d{4}-\d{2}-\d{2}$/.test(d) ? `${d}T12:00:00-05:00` : d);
+
 /** @id de la página (WebPage y derivados). */
 export const paginaId = (u: string) => `${abs(u)}#webpage`;
 /** @id del servicio principal de una página de servicio, sector o ciudad. */
@@ -111,8 +118,8 @@ export function webPageSchema(o: {
     ...(o.imagen ? { primaryImageOfPage: { "@type": "ImageObject", url: abs(o.imagen) } } : {}),
     ...(o.mainEntity ? { mainEntity: { "@id": o.mainEntity } } : o.items?.length ? { mainEntity: itemList(o.items) } : {}),
     ...(o.about ? { about: { "@id": o.about } } : {}),
-    ...(o.publicado ? { datePublished: o.publicado } : {}),
-    ...(o.modificado ? { dateModified: o.modificado } : {}),
+    ...(o.publicado ? { datePublished: conHora(o.publicado) } : {}),
+    ...(o.modificado ? { dateModified: conHora(o.modificado) } : {}),
     ...(o.resumen ? { speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".hk-encorto"] } } : {}),
   };
 }
@@ -287,8 +294,8 @@ export function blogSchema(opts: {
               "@id": articuloId(p.url),
               headline: p.headline,
               url: abs(p.url),
-              datePublished: p.datePublished,
-              ...(p.dateModified ? { dateModified: p.dateModified } : {}),
+              datePublished: conHora(p.datePublished),
+              ...(p.dateModified ? { dateModified: conHora(p.dateModified) } : {}),
             })),
           }
         : {}),
@@ -338,8 +345,8 @@ export function blogPostingSchema(opts: {
       "@id": articuloId(url),
       headline: opts.headline,
       description: opts.description,
-      datePublished: opts.datePublished,
-      dateModified: opts.dateModified || opts.datePublished,
+      datePublished: conHora(opts.datePublished),
+      dateModified: conHora(opts.dateModified || opts.datePublished),
       inLanguage: site.hreflang,
       author: {
         "@type": "Person",

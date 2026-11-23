@@ -1942,7 +1942,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "performance",
     title: "CPL vs ROAS: Las Métricas de Pauta que Importan | Suggestion",
     description:
-      "Qué es el CPL, qué es el ROAS, en qué se diferencian y cuál mirar según tu objetivo. Deja de medir likes y empieza a medir lo que paga.",
+      "Qué es el CPL, qué es el ROAS, en qué se diferencian y cuál mirar según tu objetivo, con un ejemplo en soles.",
     h1: "CPL vs ROAS: las únicas métricas de pauta que importan",
     excerpt:
       "Si tu reporte de campañas habla de alcance y likes, te están distrayendo. Las dos métricas que dicen si tu inversión funciona son CPL y ROAS. Aquí, sin tecnicismos.",
