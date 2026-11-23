@@ -54,6 +54,14 @@ export const GADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL || "";
 export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "";
 
 /**
+ * Metricool (23-nov-2026): el owner conectó la web en Metricool → Ajustes de
+ * marca → Conexiones → Web. El hash identifica la web en su cuenta y es
+ * público (va en el HTML de cada página, como el ID del Píxel). Se carga como
+ * las otras etiquetas: diferido y apagado con NO_MEDIR_JS.
+ */
+export const METRICOOL_HASH = process.env.NEXT_PUBLIC_METRICOOL_HASH || "bc030270fd7f71ab96d9f26957bb4c5f";
+
+/**
  * Tráfico interno. Abrir cualquier página con `?interno=1` marca ese
  * navegador y desde entonces no carga GA4, el Píxel ni Clarity; `?interno=0`
  * lo desmarca. Se hace dentro de los propios scripts de arranque, antes de
@@ -104,6 +112,21 @@ export const ES_INTERNO_JS = `(function(){try{var q=new URLSearchParams(location
 const AUTOMATIZADO_JS = `(navigator.webdriver===true)`;
 /** Arranque de las etiquetas: no medir si el navegador es interno o automatizado, o si el dominio no es el real. */
 export const NO_MEDIR_JS = `(${ES_INTERNO_JS}||${AUTOMATIZADO_JS}||${HOST_AJENO_JS})`;
+
+/**
+ * Pide una librería tarde: con la primera interacción o a los 3,5 s de cargar
+ * (ver el comentario en Analytics.tsx: pesaban 451 KB y hundían el LCP).
+ */
+export const DIFERIR_JS = `function(fn){var h=0,ev=['pointerdown','keydown','scroll','touchstart'];function go(){if(h)return;h=1;ev.forEach(function(e){removeEventListener(e,go)});fn()}ev.forEach(function(e){addEventListener(e,go,{passive:true})});function t(){setTimeout(go,3500)}if(document.readyState==='complete')t();else addEventListener('load',t)}`;
+
+/**
+ * Arranque de Metricool. Va en el HTML que entrega el servidor (layout.tsx) y
+ * no en un <Script> de Analytics.tsx, porque Next inyecta esos solo en el
+ * navegador y el botón «Verificar» de Metricool lee el HTML de la página.
+ * Mismas reglas que las demás etiquetas: NO_MEDIR_JS y carga diferida. Las
+ * navegaciones dentro del sitio las avisa Analytics.tsx.
+ */
+export const METRICOOL_JS = `if(!${NO_MEDIR_JS})(${DIFERIR_JS})(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://tracker.metricool.com/resources/be.js";s.onload=function(){if(window.beTracker)window.beTracker.t({hash:"${METRICOOL_HASH}"})};document.head.appendChild(s)});`;
 
 type Gtag = (...args: unknown[]) => void;
 type Fbq = (...args: unknown[]) => void;

@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
-import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, NO_MEDIR_JS, captureAttribution, track, newEventId, metaServidor, gaPorServidor } from "@/lib/tracking";
+import { GA_ID, META_PIXEL_ID, GADS_ID, CLARITY_ID, METRICOOL_HASH, NO_MEDIR_JS, DIFERIR_JS, captureAttribution, track, newEventId, metaServidor, gaPorServidor } from "@/lib/tracking";
 import { decorarWhatsApp } from "@/lib/whatsapp-ref";
 import { EID_KEY } from "@/lib/meta-match";
 
@@ -54,7 +54,7 @@ import { EID_KEY } from "@/lib/meta-match";
  * existen como colas, así que ningún evento se pierde: se envían al llegar la
  * librería. El coste: quien se va antes sin tocar nada no se cuenta.
  */
-const DIFERIR_JS = `function(fn){var h=0,ev=['pointerdown','keydown','scroll','touchstart'];function go(){if(h)return;h=1;ev.forEach(function(e){removeEventListener(e,go)});fn()}ev.forEach(function(e){addEventListener(e,go,{passive:true})});function t(){setTimeout(go,3500)}if(document.readyState==='complete')t();else addEventListener('load',t)}`;
+// DIFERIR_JS vive en lib/tracking.ts: también lo usa el arranque de Metricool del layout.
 
 export default function Analytics() {
   const pathname = usePathname();
@@ -70,6 +70,10 @@ export default function Analytics() {
       page_path: pathname,
     });
     window.fbq?.("track", "PageView");
+    // Metricool solo cuenta la página en la que carga su script; las
+    // navegaciones dentro del sitio se le avisan aquí. En la primera página
+    // todavía no existe (carga diferida) y la cuenta su propio arranque.
+    (window as unknown as { beTracker?: { t: (o: { hash: string }) => void } }).beTracker?.t({ hash: METRICOOL_HASH });
   }, [pathname]);
 
   // Setup único (al montar): atribución + medición de contacto directo.
@@ -121,7 +125,7 @@ export default function Analytics() {
     };
   }, []);
 
-  if (!GA_ID && !META_PIXEL_ID && !CLARITY_ID) return null;
+  if (!GA_ID && !META_PIXEL_ID && !CLARITY_ID && !METRICOOL_HASH) return null;
 
   return (
     <>

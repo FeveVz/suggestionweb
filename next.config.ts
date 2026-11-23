@@ -12,6 +12,7 @@ import type { NextConfig } from "next";
  * Quién es cada dominio:
  * - googletagmanager + google-analytics + analytics.google.com → GA4 (GT-NNQW6GPS).
  * - connect.facebook.net + facebook.com → Píxel de Meta.
+ * - tracker.metricool.com → Metricool (script be.js y su envío de visitas).
  * - clarity.ms + bing.com → Clarity (es de Microsoft y carga su propio tag).
  *   bat.bing.com (etiqueta UET de Microsoft Ads) salió de script-src el
  *   21-nov-2026: no se usa y el tag de Clarity no carga nada de ese dominio
@@ -41,14 +42,14 @@ const CSP = [
   // violates..." y ese evento se perdía. Detectado en local antes de subirlo.
   "form-action 'self' https://www.facebook.com",
   "frame-ancestors 'self'",
-  `script-src 'self' 'unsafe-inline'${EVAL} https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms`,
+  `script-src 'self' 'unsafe-inline'${EVAL} https://www.googletagmanager.com https://*.googletagmanager.com https://connect.facebook.net https://*.clarity.ms https://tracker.metricool.com`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   // www.google.com: GA4 manda una copia del hit a www.google.com/g/collect
   // (Google Signals / datos demográficos) y la CSP la bloqueaba en silencio.
   // Visto en la consola de Chrome al probar la CSP sin unsafe-eval (21-nov-2026).
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://*.bing.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://*.clarity.ms https://connect.facebook.net https://www.facebook.com https://*.bing.com https://tracker.metricool.com",
   "frame-src 'self' https://www.facebook.com https://td.doubleclick.net https://www.googletagmanager.com",
   "media-src 'self'",
   "worker-src 'self' blob:",

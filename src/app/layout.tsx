@@ -13,6 +13,7 @@ import { RevealController } from "@/components/brand/RevealController";
 import { site, SITE_URL } from "@/lib/site";
 import { websiteSchema } from "@/lib/schema";
 import { organizationSchema } from "@/lib/schema-org";
+import { METRICOOL_JS } from "@/lib/tracking";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -95,6 +96,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </div>
         <FloatingMenu />
         <Analytics />
+        {/* Metricool en el HTML del servidor (ver METRICOOL_JS en lib/tracking.ts). */}
+        <script id="metricool" dangerouslySetInnerHTML={{ __html: METRICOOL_JS }} />
       </body>
     </html>
   );
