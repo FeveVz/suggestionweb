@@ -72,10 +72,10 @@ export type BlogPost = {
 export const BLOG_PILAR = {
   metaTitle: "Blog de Marketing y Ventas | Suggestion",
   metaDescription:
-    "Estrategias de marketing, performance, branding y psicología de mercado que sí venden. Sin humo. Aprende y aplica con Suggestion.",
+    "Estrategias de marketing, performance, branding y psicología de mercado, con ejemplos del Perú. Aprende y aplica con Suggestion.",
   h1: "Estrategias de marketing que sí venden",
   intro:
-    "Sin humo ni teoría de relleno. Lo que aplicamos con nuestros clientes, explicado para que lo uses.",
+    "Lo que aplicamos con nuestros clientes, explicado para que lo uses.",
 } as const;
 
 export const BLOG_CATEGORIAS: BlogCategoria[] = [
@@ -600,7 +600,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Exige los archivos: el vectorial editable (SVG, AI o EPS), un PDF vectorial para imprenta, PNG con fondo transparente, la versión para fondo oscuro y el ícono cuadrado.",
     ],
     date: "2026-01-14",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Los 3 caminos para crear un logo",
@@ -713,7 +713,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La IA entrega PNG: para imprimir hay que pasarlo a vector. Y en Perú el INDECOPI rechazó en 2024 registrar por derecho de autor obras hechas solo con IA; registrar la marca es otro trámite.",
     ],
     date: "2026-01-21",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Antes de abrir la IA: tu brief en tres líneas",
@@ -914,7 +914,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cuanto más te conocen tus clientes, más caro sale romper con lo anterior. Si cambia el dominio, cada URL antigua necesita su redirección para no perder posicionamiento.",
     ],
     date: "2026-01-28",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es un rebranding",
@@ -1022,7 +1022,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Se mide en leads, citas, cierres y costo por lead. Los primeros leads pueden llegar en la primera semana de pauta; saber si el canal es rentable toma unos 90 días, y el SEO, de 6 a 12 meses.",
     ],
     date: "2026-02-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "¿Qué es el marketing digital, en una frase?",
@@ -1154,7 +1154,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En Perú el costo por lead va de S/3 a S/40 según el rubro (rangos de mercado de octubre de 2026, sin la gestión).",
     ],
     date: "2026-02-11",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "El presupuesto no se adivina, se calcula al revés",
@@ -1311,7 +1311,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Google evalúa la experiencia con tres medidas de usuarios reales, las Core Web Vitals. Para que la carga se considere buena, el LCP tiene que estar por debajo de 2,5 segundos.",
     ],
     date: "2026-02-18",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Opción 1: hacerla tú (Wix, WordPress, etc.)",
@@ -1423,7 +1423,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Decide si tu servicio se busca con el nombre de tu ciudad o sin él, y abre Search Console, que es gratis, para ver qué páginas tiene Google y con qué búsquedas apareces.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Lo primero: ¿Google tiene tu página o ni la conoce?",
@@ -1539,7 +1539,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Antes de pagar, revisa si permite uso comercial y si lo que generas queda público: el plan gratis de Recraft no permite uso comercial y en el de Ideogram las imágenes son públicas.",
     ],
     date: "2026-02-25",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Las 7 IA para crear logos, en una tabla",
@@ -1715,7 +1715,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Antes de subir la publicidad, cierra las fugas: todo lead en un solo lugar con su origen anotado, respuesta rápida y seguimiento con calendario.",
     ],
     date: "2026-03-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "¿Qué es un lead, en palabras simples?",
@@ -1843,7 +1843,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "No necesitas un laboratorio: con pruebas comparativas y mapas de calor se consigue la mayor parte del beneficio.",
     ],
     date: "2026-03-11",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "¿Qué es el neuromarketing?",
@@ -1952,7 +1952,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Un ROAS no dice nada sin tu margen: divide 1 entre tu margen bruto y sabrás por debajo de qué ROAS pierdes dinero. Con 50 % de margen, el equilibrio es 2.",
     ],
     date: "2026-03-18",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es el CPL (costo por lead)",
@@ -2050,7 +2050,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "El costo que casi nadie cuenta es migrar: el contenido no se exporta de forma útil y las URLs cambian, así que dejar un constructor es rehacer la web.",
     ],
     date: "2026-03-25",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Wix (y constructores similares)",
@@ -2163,7 +2163,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "No se automatiza un reclamo ni una negociación de precio. Y pasadas 24 horas desde el último mensaje del cliente, WhatsApp solo permite plantillas aprobadas.",
     ],
     date: "2026-04-01",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué se puede automatizar (y conviene)",
@@ -2286,7 +2286,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Segmenta por momento, no solo por perfil: la campaña escolar, Fiestas Patrias, Navidad, la vendimia o un cambio de vida explican por qué alguien compra hoy.",
     ],
     date: "2026-04-08",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué motiva la decisión de compra en Perú",
@@ -2393,7 +2393,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Se prueban cambiando una sola cosa a la vez y mirando citas o ventas.",
     ],
     date: "2026-04-15",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Los 6 gatillos",
@@ -2511,7 +2511,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La publicidad genera el interés y el seguimiento lo convierte en cita: sin respuesta rápida, pagas por leads que se enfrían.",
     ],
     date: "2026-04-22",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Lo que funciona",
@@ -2625,7 +2625,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Para llenar los días flojos, mueve el día y no el precio: una propuesta que solo existe de martes a jueves. Mide reservas, pedidos y ticket promedio.",
     ],
     date: "2026-04-29",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Estrategias que funcionan",
@@ -2756,7 +2756,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En publicidad de salud, las plataformas rechazan los anuncios que dan por hecho el estado de salud de quien los ve o que prometen resultados. Escribirlos en tercera persona suele bastar.",
     ],
     date: "2026-05-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Las claves para captar pacientes",
@@ -2849,7 +2849,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Funciona cuando los clientes repiten tus palabras, te buscan por nombre y el precio deja de ser la discusión principal. Se construye en meses, no en semanas.",
     ],
     date: "2026-05-13",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es el posicionamiento de marca",
@@ -2945,7 +2945,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Empieza por una sola tarea repetitiva y medible, anota cuánto te toma hoy y comprueba si ahorra tiempo.",
     ],
     date: "2026-05-20",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Lo que sí funciona",
@@ -3050,7 +3050,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La venta suele perderse entre el lead y la visita: agenda cerrada («el sábado a las 10»), recordatorio con la ubicación exacta y, en proyectos alejados, transporte resuelto.",
     ],
     date: "2026-05-27",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Ejemplos de ángulos que venden",
@@ -3145,7 +3145,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La mayoría de ventas se cae entre el «sí, quiero ir» y la visita: confirmar por escrito, mandar la ubicación y recordar el día anterior sube las visitas efectivas.",
     ],
     date: "2026-06-03",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "¿Por qué la preventa es la etapa donde más se vende un proyecto inmobiliario?",
@@ -3271,7 +3271,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Si solo puedes hacer una cosa, ordena tu base y activa posventa y remarketing antes de invertir en captación nueva.",
     ],
     date: "2026-06-08",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "¿Qué tienen en común los ejemplos de marketing automotriz que sí venden?",
@@ -3404,7 +3404,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Califica con tres preguntas dentro de la conversación: para cuándo lo necesita, cómo piensa pagar y qué vehículo tiene hoy.",
     ],
     date: "2026-06-13",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "El problema de los leads “basura”",
@@ -3505,7 +3505,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La conversión que predice la venta es la prueba de manejo: mide el costo por prueba agendada y por unidad vendida, y contesta el formulario por WhatsApp antes de cinco minutos.",
     ],
     date: "2026-06-17",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "¿Qué mensaje mueve la decisión de comprar un auto?",
@@ -3630,7 +3630,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La venta se concentra en fechas como Fiestas Patrias, el Día del Pisco Sour y el regalo corporativo de fin de año, y esas campañas se preparan semanas antes. El enoturismo es tu otra tienda.",
     ],
     date: "2026-06-20",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Primero la marca, después el carrito",
@@ -3732,7 +3732,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Una oportunidad de exportación no se cierra en la feria, se abre ahí: entre el primer contacto y la primera orden pueden pasar meses, y el seguimiento es la mitad del trabajo.",
     ],
     date: "2026-06-24",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "El importador te googlea antes de escribirte",
@@ -3832,7 +3832,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La mitad de los problemas con una gigantografía se deciden antes de imprimir: en el material que elegiste y en una medida que desperdicia medio rollo sin que nadie te avise.",
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Medidas, material y precio: la respuesta corta",
@@ -3999,7 +3999,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En octubre de 2026, el millar a full color por ambas caras con plastificado mate va desde unos S/60 (rangos de mercado). Medio millar no cuesta la mitad: casi todo el costo es preparar la máquina.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Las medidas estándar, y por qué conviene respetarlas",
@@ -4101,7 +4101,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Pregunta en tu municipalidad antes de fabricar: la autorización la tramita el negocio y las medidas máximas cambian según el distrito y la vía.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué tipo de letrero necesita tu local",
@@ -4208,7 +4208,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Hay costos que se pagan una sola vez, como la digitalización del logo para bordado, de S/30 a S/80: pide que te entreguen ese archivo.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Las cuatro técnicas, y cuándo usa cada una",
@@ -4313,7 +4313,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cuanto más discreto el logo, más se usa el objeto. Y no pidas de más lo que caduca, como agendas y calendarios.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "La única pregunta que importa",
@@ -4420,7 +4420,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Lo que más se recuerda es un objeto de uso diario con la marca discreta, una tarjeta escrita a mano y una entrega antes de la última semana del año.",
     ],
     date: "2026-11-14",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Por qué diciembre es distinto",
@@ -4548,7 +4548,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "El fracaso más común es que la pieza nunca salga del almacén: acuerda el espacio con la tienda antes de fabricar y diseña algo que se arme sin instrucciones.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Material POP en punto de venta: qué es y qué hace cada pieza",
@@ -4654,7 +4654,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Antes de firmar un alquiler, pregunta si incluye la impresión y el cambio de lona, si tiene iluminación y si el operador tiene autorización municipal.",
     ],
     date: "2026-10-04",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué hace cada formato",
@@ -4759,7 +4759,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Construir no es lo mismo que tener: el dominio y el hosting se pagan cada año, y tienen que quedar a nombre de tu empresa.",
     ],
     date: "2026-10-05",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Los rangos del mercado peruano",
@@ -4864,7 +4864,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "El fee no incluye la publicidad: pide el fee y la inversión en anuncios en líneas separadas, y el alcance mensual por escrito para comparar propuestas.",
     ],
     date: "2026-10-05",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Los tres modelos de cobro",
@@ -4971,7 +4971,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En cualquier rango tienes que recibir el vectorial editable y las versiones horizontal, vertical, a un color y en negativo, con los derechos a tu nombre por escrito.",
     ],
     date: "2026-10-05",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Tres rangos, y qué entra en cada uno",
@@ -5072,7 +5072,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Imprimir es lo barato; repartirlos bien es lo que decide si la campaña sirve. Un volante funciona con una sola oferta y un motivo para guardarlo.",
     ],
     date: "2026-10-05",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Cuánto cuesta el millar",
@@ -5173,7 +5173,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La tasa no se devuelve si te deniegan la solicitud. La búsqueda previa cuesta unas decenas de soles por clase y es lo que te protege de pagar por un rechazo.",
     ],
     date: "2026-10-05",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Las tasas publicadas",
@@ -5280,7 +5280,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Vale lo que cuesta si trae un objetivo en número y con fecha, a quién le hablas y quién ejecuta cada cosa. La mayoría de planes fracasa porque nadie los ejecutó.",
     ],
     date: "2026-10-05",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Primero: qué estás comprando exactamente",
@@ -5384,7 +5384,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Antes de firmar, acuerda por escrito que las cuentas, el píxel, la analítica y el dominio quedan a nombre de tu empresa, y qué se entrega cada mes, con cantidades.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Lo que se evalúa no es la presentación",
@@ -5582,7 +5582,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Google decide qué métodos de verificación te ofrece, como teléfono, correo, video o postal. Ya verificada, completa primero la categoría principal y el nombre, la dirección y el teléfono escritos igual que en tu web.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es y por qué no es opcional",
@@ -5681,7 +5681,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En cada etapa quedan menos personas, y eso es normal. Lo que importa es el porcentaje que pasa de un escalón al siguiente.",
       "Las etapas son las de tu negocio, no las de una lámina genérica: sirve para ver dónde se cae la gente y decidir dónde invertir.",
     ],
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es un embudo de ventas, sin la lámina de siempre",
@@ -5781,7 +5781,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Al elegir uno, importa que tu equipo lo use: que se conecte con WhatsApp, funcione bien en el celular y obligue a llenar lo esencial, empezando por el origen del contacto.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es un CRM, en una frase",
@@ -5892,7 +5892,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Para no cansar a nadie, pon tope de frecuencia, fecha de caducidad a la audiencia y un mensaje distinto según lo que hizo cada persona.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Qué es y por qué rinde tanto",
@@ -5991,7 +5991,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "El dinero suele estar en la silla vacía: citas que no se cumplen, presupuestos sin seguimiento y pacientes que no regresan. Un recordatorio la víspera y el mismo día tapa la primera fuga.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "El paciente dental no se capta como cualquier otro",
@@ -6113,7 +6113,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "En lotes la venta ocurre en la visita: confírmala la víspera y el mismo día, y mide cuántos contactos llegan a visitar, que es lo que mejor anticipa las ventas del mes siguiente.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Primero: quién compra un terreno",
@@ -6249,7 +6249,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "El precio lo fija lo que se vende hoy en la zona, comparado por metro cuadrado. Tres semanas sin consultas serias con un buen anuncio indican que está fuera de mercado.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Lo que frena una venta",
@@ -6374,7 +6374,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Compite por la reserva directa con valor, no con descuento: late checkout, desayuno o upgrade, y un motor de reservas que funcione en el celular.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "La cuenta que decide todo lo demás",
@@ -6614,7 +6614,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Ten lista la documentación antes de la primera feria, con la ficha técnica en inglés y las certificaciones vigentes, y escribe a cada contacto en 48 horas con algo concreto.",
     ],
     date: "2026-10-06",
-    actualizado: "2026-11-22",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Tu cliente no te busca como un consumidor",
@@ -6743,6 +6743,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Antes de elegir, pregunta si se conecta solo con tus formularios de Meta y con WhatsApp, si tu asesor lo usa desde el celular y si los datos se pueden exportar.",
     ],
     date: "2026-11-14",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Por qué un CRM genérico se queda corto en inmobiliaria",
@@ -6858,7 +6859,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La inversión en anuncios no va incluida en el fee: se paga aparte, directo a la plataforma.",
     ],
     date: "2026-11-14",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Los rangos del mercado peruano",
@@ -6968,7 +6969,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Aparte de los anuncios se paga la gestión, la producción de las piezas y el IGV.",
     ],
     date: "2026-11-14",
-    actualizado: "2026-11-21",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "No hay tarifa: hay subasta",
@@ -7209,7 +7210,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La demostración o el evento con la máquina presente es donde se decide la compra: todo lo anterior existe para llevar ahí a quien puede comprar.",
     ],
     date: "2026-11-14",
-    actualizado: "2026-11-20",
+    actualizado: "2026-11-23",
     secciones: [
       {
         h2: "Quién compra y cómo decide",

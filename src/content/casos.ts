@@ -306,7 +306,7 @@ export const CASOS_DETALLE: Caso[] = [
     slug: "inmobiliaria-ceinys",
     grupo: "ceinys",
     publicado: "2026-07-01",
-    revisado: "2026-08-28",
+    revisado: "2026-11-23",
     cliente: "Inmobiliaria Ceinys",
     sector: "Inmobiliario",
     sectorHref: "/marketing-inmobiliario",
@@ -415,7 +415,7 @@ export const CASOS_DETALLE: Caso[] = [
   {
     slug: "granjas-bonanza",
     publicado: "2026-07-01",
-    revisado: "2026-11-22",
+    revisado: "2026-11-23",
     cliente: "Granjas Bonanza",
     sector: "Marcas y consumo",
     sectorHref: "/marketing-marcas-consumo",
@@ -509,7 +509,7 @@ export const CASOS_DETALLE: Caso[] = [
   {
     slug: "hoteles-senor-de-luren",
     publicado: "2026-07-01",
-    revisado: "2026-11-22",
+    revisado: "2026-11-23",
     cliente: "Hoteles Señor de Luren",
     sector: "Turismo",
     sectorHref: "/marketing-turismo",

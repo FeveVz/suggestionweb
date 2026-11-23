@@ -2,7 +2,7 @@ import { anclaSector } from "@/content/navegacion";
 import { notFound } from "next/navigation";
 import LandingArticle, { type RelatedBlock } from "@/components/LandingArticle";
 import type { RelatedLink } from "@/components/RelatedLinks";
-import { serviceSchema } from "@/lib/schema";
+import { paginaDeServicio } from "@/lib/schema";
 import { getSector, getSectorAst } from "@/content/sectores";
 import { getServicio } from "@/content/servicios";
 
@@ -61,6 +61,7 @@ export default function SectorPage({ slug }: { slug: string }) {
       heroImage={SECTOR_IMG[slug]}
       ctaLabel={sec.cta}
       proof={sec.proof}
+      enCorto={sec.enCorto}
       secciones={sec.secciones}
       beneficios={ast?.beneficios}
       proceso={ast?.proceso}
@@ -69,10 +70,14 @@ export default function SectorPage({ slug }: { slug: string }) {
       faq={sec.faq}
       cierre={sec.cierre}
       shape={shape}
-      extraSchema={serviceSchema({
+      extraSchema={paginaDeServicio({
+        nombrePagina: sec.metaTitle.replace(" | Suggestion", ""),
+        resumen: !!sec.enCorto?.length,
         serviceType: sec.metaTitle.replace(" | Suggestion", ""),
         description: sec.metaDescription,
         url: `/${sec.slug}`,
+        imagen: SECTOR_IMG[slug]?.src,
+        categoria: "Marketing por sector",
       })}
     />
   );

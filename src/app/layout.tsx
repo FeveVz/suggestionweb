@@ -11,7 +11,8 @@ import CursorLoader from "@/components/CursorLoader";
 import PausaFueraDePantalla from "@/components/PausaFueraDePantalla";
 import { RevealController } from "@/components/brand/RevealController";
 import { site, SITE_URL } from "@/lib/site";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { websiteSchema } from "@/lib/schema";
+import { organizationSchema } from "@/lib/schema-org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

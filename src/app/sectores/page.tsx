@@ -48,6 +48,7 @@ export default function SectoresHub() {
         name: SECTORES_HUB.metaTitle,
         description: SECTORES_HUB.metaDescription,
         url: "/sectores",
+        items: items.map((i) => ({ name: i.title, url: i.href })),
       })}
     />
   );

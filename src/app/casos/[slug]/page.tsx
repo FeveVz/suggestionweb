@@ -11,6 +11,8 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import CountUp from "@/components/CountUp";
 import { buildMetadata } from "@/lib/seo";
+import { webPageSchema, articuloId, paginaId, servicioId } from "@/lib/schema";
+import { tieneServicio } from "@/lib/schema-org";
 import { absoluteUrl, ORG_ID, site, whatsappLink } from "@/lib/site";
 import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
 import { CASOS_DETALLE, getCaso, allCasoSlugs } from "@/content/casos";
@@ -58,18 +60,40 @@ export default async function CasoPage({ params }: Params) {
   // vienen del propio caso (ver el comentario en content/casos.ts) y la imagen
   // es la primera de la galería si la tiene; si no, la de compartir del sitio,
   // que es exactamente la que ya declara su og:image.
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: c.h1,
-    description: c.metaDescription,
-    image: absoluteUrl(c.imagenes?.[0]?.src ?? site.ogImage),
-    datePublished: c.publicado,
-    dateModified: c.revisado,
-    author: { "@id": ORG_ID },
-    publisher: { "@id": ORG_ID },
-    mainEntityOfPage: absoluteUrl(`/casos/${c.slug}`),
-  };
+  const urlCaso = `/casos/${c.slug}`;
+  const imagenes = c.imagenes?.length ? c.imagenes.map((i) => absoluteUrl(i.src)) : [absoluteUrl(site.ogImage)];
+  const schema = [
+    webPageSchema({
+      url: urlCaso,
+      name: c.metaTitle.replace(" | Suggestion", ""),
+      description: c.metaDescription,
+      imagen: imagenes[0],
+      mainEntity: articuloId(urlCaso),
+      publicado: c.publicado,
+      modificado: c.revisado,
+    }),
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": articuloId(urlCaso),
+      headline: c.h1,
+      description: c.metaDescription,
+      image: imagenes,
+      datePublished: c.publicado,
+      dateModified: c.revisado,
+      inLanguage: site.hreflang,
+      author: { "@id": ORG_ID },
+      publisher: { "@id": ORG_ID },
+      mainEntityOfPage: { "@id": paginaId(urlCaso) },
+      isPartOf: { "@type": "CollectionPage", "@id": paginaId("/casos"), url: absoluteUrl("/casos") },
+      articleSection: "Casos",
+      // El cliente del caso y los servicios que se usaron.
+      about: { "@type": "Organization", name: c.cliente },
+      ...(c.servicios.some((s) => tieneServicio(s.href))
+        ? { mentions: c.servicios.filter((s) => tieneServicio(s.href)).map((s) => ({ "@type": "Service", "@id": servicioId(s.href), name: s.label, url: absoluteUrl(s.href) })) }
+        : {}),
+    },
+  ];
 
   return (
     <>

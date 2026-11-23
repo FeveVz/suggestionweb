@@ -23,6 +23,11 @@ import { FOTOS_PORTAFOLIO, fotoPortafolio } from "./portafolio-fotos";
 export const CIUDADES: Ciudad[] = [
   {
     slug: "chincha",
+    enCorto: [
+      "Atendemos Chincha desde Ica, a menos de dos horas: reuniones presenciales cuando hacen falta y campañas operadas en remoto.",
+      "Rubros que trabajamos aquí: agroindustria y avícolas (venta B2B), concesionarios, bodegas de pisco y comercio local.",
+      "Las campañas buscan al comprador local antes de que busque en Lima, y también al cliente de Lima que compra en Chincha.",
+    ],
     nombre: "Chincha",
     metaTitle: "Agencia de Marketing en Chincha | Suggestion",
     metaDescription:
@@ -91,6 +96,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "pisco",
+    enCorto: [
+      "En Pisco hay dos mercados, el turismo de Paracas y la industria del puerto, y cada uno lleva su propia campaña.",
+      "Para hoteles y agencias trabajamos reservas también fuera de temporada. Nuestro caso de referencia: Hoteles Señor de Luren, 75 reservas en una campaña.",
+      "Para empresas industriales: web sólida, aparecer en búsquedas de su especialidad y orden en el seguimiento de cotizaciones.",
+    ],
     nombre: "Pisco",
     metaTitle: "Agencia de Marketing en Pisco | Suggestion",
     metaDescription:
@@ -172,6 +182,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "nazca",
+    enCorto: [
+      "Tenemos equipo propio en Nazca para cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo.",
+      "Desde Nazca cubrimos Marcona, Palpa y Puquio; el traslado va detallado en la cotización.",
+      "Trabajamos para negocios de la zona y para agencias de Lima con campañas en el sur.",
+    ],
     nombre: "Nazca",
     metaTitle: "Agencia BTL y de Marketing en Nazca | Suggestion",
     metaDescription:
@@ -320,6 +335,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "arequipa",
+    enCorto: [
+      "Atendemos empresas de Arequipa desde Ica: campañas, reportes y reuniones por videollamada, y viajes cuando hay que grabar.",
+      "Rubros que llevamos a Arequipa: automotriz (19 marcas de vehículos atendidas), inmobiliario y salud.",
+      "Anunciar en Arequipa suele costar más que en Ica; se compensa con mejor segmentación y sin desperdiciar los leads que ya entran.",
+    ],
     nombre: "Arequipa",
     metaTitle: "Marketing para Empresas de Arequipa | Suggestion",
     metaDescription:
@@ -397,6 +417,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "tacna",
+    enCorto: [
+      "Segmentamos campañas para el cliente que llega desde Chile, con mensajes para quien compara en otra moneda.",
+      "Frentes en Tacna: turismo médico, dental y estético, comercio fronterizo y automotriz, y agro de exportación.",
+      "Atendemos en remoto desde Ica: campañas, seguimiento y reportes.",
+    ],
     nombre: "Tacna",
     metaTitle: "Marketing para Empresas de Tacna | Suggestion",
     metaDescription:
@@ -465,6 +490,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "ayacucho",
+    enCorto: [
+      "En Ayacucho, el trabajo es convertir la identidad de la ciudad en marca, para no competir solo por precio.",
+      "Frentes en Ayacucho: turismo fuera de Semana Santa, artesanía, hotelería y restaurantes, y comercio local.",
+      "Atendemos en remoto desde Ica y coordinamos viajes para producción audiovisual.",
+    ],
     nombre: "Ayacucho",
     metaTitle: "Agencia de Marketing en Ayacucho | Suggestion",
     metaDescription:
@@ -532,6 +562,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "huaraz",
+    enCorto: [
+      "El viajero de montaña decide semanas antes de llegar: las campañas apuntan a quien planifica el viaje, también desde otro país.",
+      "Trabajamos la reserva directa para depender menos de las plataformas: web con reserva y respuesta rápida por WhatsApp.",
+      "En temporada baja se pueden alargar los bordes de la temporada con público nacional de escapada corta.",
+    ],
     nombre: "Huaraz",
     metaTitle: "Agencia de Marketing en Huaraz | Suggestion",
     metaDescription:
@@ -598,6 +633,11 @@ export const CIUDADES: Ciudad[] = [
   },
   {
     slug: "palpa",
+    enCorto: [
+      "Estamos a poco más de una hora, camino a Nazca: grabamos, fotografiamos y nos reunimos en Palpa cuando hace falta.",
+      "Tres frentes: la marca de la naranja de Palpa, el turismo de los geoglifos y la venta del agro al comprador mayorista.",
+      "En un mercado chico conviene un presupuesto modesto sostenido tres meses, antes que un mes fuerte y cortar.",
+    ],
     nombre: "Palpa",
     metaTitle: "Agencia de Marketing en Palpa | Suggestion",
     metaDescription:

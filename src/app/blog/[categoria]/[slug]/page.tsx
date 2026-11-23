@@ -14,6 +14,7 @@ import { CTA_CONSULTORIA, consultoriaHref } from "@/lib/cta";
 import { whatsappLink } from "@/lib/site";
 import { CTA_COTIZA, COTIZA_PRODUCCION, mensajeCotiza, ANCLA_SECTOR } from "@/content/navegacion";
 import { blogPostingSchema } from "@/lib/schema";
+import { tieneServicio } from "@/lib/schema-org";
 import { BLOG_POSTS, getPost, getCategoria } from "@/content/blog";
 
 type Params = { params: Promise<{ categoria: string; slug: string }> };
@@ -137,13 +138,17 @@ function fechaLarga(iso: string) {
   return `${d.getDate()} ${MESES[d.getMonth()]} ${d.getFullYear()}`;
 }
 
-/** Minutos de lectura (~200 palabras/min) a partir del contenido real del post. */
-function minutosLectura(post: { excerpt: string; secciones: unknown; faq?: unknown; cierre: string }): number {
-  const words = (JSON.stringify(post.secciones) + JSON.stringify(post.faq ?? "") + post.excerpt + post.cierre)
+/** Palabras del contenido real del post (también va como wordCount en el schema). */
+function palabras(post: { excerpt: string; secciones: unknown; faq?: unknown; cierre: string }): number {
+  return (JSON.stringify(post.secciones) + JSON.stringify(post.faq ?? "") + post.excerpt + post.cierre)
     .replace(/[^\p{L}\s]/gu, " ")
     .split(/\s+/)
     .filter(Boolean).length;
-  return Math.max(2, Math.round(words / 200));
+}
+
+/** Minutos de lectura (~200 palabras/min) a partir del contenido real del post. */
+function minutosLectura(post: { excerpt: string; secciones: unknown; faq?: unknown; cierre: string }): number {
+  return Math.max(2, Math.round(palabras(post) / 200));
 }
 
 export default async function BlogPostPage({ params }: Params) {
@@ -162,11 +167,18 @@ export default async function BlogPostPage({ params }: Params) {
       <JsonLd
         data={blogPostingSchema({
           headline: post.h1,
+          nombrePagina: post.title.replace(" | Suggestion", ""),
           description: post.description,
           datePublished: post.date,
           dateModified: post.actualizado,
           image: ogDelPost(post),
+          imagenes: post.secciones.flatMap((s) => (s.foto ? [s.foto.src] : [])),
           url: `/blog/${categoria}/${slug}`,
+          seccion: cat?.nombre,
+          palabras: palabras(post),
+          fuentes: post.secciones.flatMap((s) => (s.dato?.fuente ? [s.dato.fuente] : [])),
+          menciona: [post.moneyPage.href, ...post.secciones.flatMap((s) => (s.enlaces ?? []).map((e) => e.href))].filter(tieneServicio),
+          resumen: !!post.enCorto?.length,
         })}
       />
 

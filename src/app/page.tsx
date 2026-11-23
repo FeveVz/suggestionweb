@@ -21,8 +21,8 @@ import WorkWall from "@/components/WorkWall";
 import ScrollBlot from "@/components/ScrollBlot";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
-import { faqPageSchema } from "@/lib/schema";
-import { site, whatsappLink } from "@/lib/site";
+import { faqPageSchema, webPageSchema } from "@/lib/schema";
+import { site, whatsappLink, ORG_ID } from "@/lib/site";
 import { SERVICE_CATEGORIES } from "@/content/navegacion";
 import { desdeCategoria } from "@/content/precios";
 import { fotoPortafolio } from "@/content/portafolio-fotos";
@@ -159,7 +159,18 @@ const diferir = (alto: number) => ({ contentVisibility: "auto" as const, contain
 export default function Home() {
   return (
     <>
-      <JsonLd data={faqPageSchema(FAQ)} />
+      <JsonLd
+        data={[
+          webPageSchema({
+            url: "/",
+            name: "Agencia de Marketing en Ica y Perú",
+            description: "Marketing digital y publicidad en Ica y todo el Perú, más producción local, para convertir atención en ventas.",
+            about: ORG_ID,
+            migas: false,
+          }),
+          faqPageSchema(FAQ),
+        ]}
+      />
       {/* HERO */}
       <section style={{ background: "var(--white)", position: "relative", overflow: "hidden" }}>
         {/* Rejilla editorial tenue (profundidad) */}

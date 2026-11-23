@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedLinks from "@/components/RelatedLinks";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, ORG_ID, WEBSITE_ID } from "@/lib/site";
 import CarruselFotos from "@/components/CarruselFotos";
 import { CARRUSEL_CSS } from "@/components/carrusel-css";
 import { PORTAFOLIO, TIPOS_PORTAFOLIO, fotosDe } from "@/content/portafolio";
@@ -53,6 +53,11 @@ export default function PortafolioPage() {
           {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
+            "@id": `${url}#webpage`,
+            isPartOf: { "@id": WEBSITE_ID },
+            publisher: { "@id": ORG_ID },
+            breadcrumb: { "@id": `${url}#breadcrumb` },
+            inLanguage: site.hreflang,
             name: "Portafolio de activaciones BTL de Suggestion",
             description:
               "Activaciones de marca, lanzamientos de producto, auspicios y producción gráfica de Suggestion entre 2024 y 2026.",
@@ -99,7 +104,8 @@ export default function PortafolioPage() {
               width: f.w,
               height: f.h,
               datePublished: p.fecha,
-              creator: { "@type": "Organization", name: site.name, url: absoluteUrl("/") },
+              creator: { "@id": ORG_ID },
+              copyrightHolder: { "@id": ORG_ID },
               creditText: site.name,
               copyrightNotice: `© ${site.legalName}`,
             }];

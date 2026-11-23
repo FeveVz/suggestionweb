@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import LandingArticle, { type RelatedBlock } from "@/components/LandingArticle";
 import type { RelatedLink } from "@/components/RelatedLinks";
-import { serviceSchema } from "@/lib/schema";
+import { paginaDeServicio } from "@/lib/schema";
 import { getCiudad } from "@/content/ciudades";
 import { getServicio } from "@/content/servicios";
 import { FOTOS_PORTAFOLIO, fotoPortafolio } from "@/content/portafolio-fotos";
@@ -87,6 +87,7 @@ export default function CiudadPage({ slug }: { slug: string }) {
       galeria={fotos?.galeria}
       ctaLabel={c.cta}
       proof={c.proof}
+      enCorto={c.enCorto}
       secciones={c.secciones}
       tema={c.tema ?? `marketing en ${c.nombre}`}
       especificaciones={c.especificaciones}
@@ -97,7 +98,10 @@ export default function CiudadPage({ slug }: { slug: string }) {
       coberturaTitulo={c.coberturaTitulo}
       porQue={c.btl ? "btl" : undefined}
       shape={shape}
-      extraSchema={serviceSchema({
+      extraSchema={paginaDeServicio({
+        nombrePagina: c.metaTitle.replace(" | Suggestion", ""),
+        resumen: !!c.enCorto?.length,
+        imagen: fotos?.hero?.src,
         serviceType: c.btl ? `Agencia BTL y de marketing en ${c.nombre}` : `Agencia de marketing en ${c.nombre}`,
         description: c.metaDescription,
         url: `/agencia-de-marketing-en-${c.slug}`,

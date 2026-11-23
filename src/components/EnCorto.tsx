@@ -16,6 +16,7 @@ import { ArrowRight, Check } from "lucide-react";
 export default function EnCorto({ puntos, enlace }: { puntos: string[]; enlace?: { href: string; label: string; externo?: boolean } }) {
   return (
     <aside
+      className="hk-encorto"
       aria-label="En corto"
       style={{
         background: "var(--surface-raised)",

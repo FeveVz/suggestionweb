@@ -4,6 +4,7 @@ import { Section, Btn, Label } from "@/components/brand/parts";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import { webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { site, whatsappLink, absoluteUrl, ORG_ID, aniosActivos } from "@/lib/site";
 import Secciones from "@/components/Secciones";
@@ -127,13 +128,13 @@ const VALORES = [
 // Única fuente de verdad del equipo (fotos incluidas): content/equipo.ts
 
 export default function Nosotros() {
-  const aboutSchema = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
+  const aboutSchema = webPageSchema({
+    tipo: "AboutPage",
+    url: "/nosotros",
     name: "Nosotros | Suggestion",
-    url: absoluteUrl("/nosotros"),
-    about: { "@id": ORG_ID },
-  };
+    about: ORG_ID,
+    mainEntity: ORG_ID,
+  });
   return (
     <>
       <JsonLd data={aboutSchema} />

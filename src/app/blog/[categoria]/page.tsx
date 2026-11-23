@@ -32,7 +32,14 @@ export default async function BlogCategoria({ params }: Params) {
 
   return (
     <>
-      <JsonLd data={collectionPageSchema({ name: c.metaTitle, description: c.metaDescription, url: `/blog/${c.slug}` })} />
+      <JsonLd
+        data={collectionPageSchema({
+          name: c.metaTitle,
+          description: c.metaDescription,
+          url: `/blog/${c.slug}`,
+          items: posts.map((p) => ({ name: p.h1, url: `/blog/${p.categoria}/${p.slug}` })),
+        })}
+      />
 
       <section style={{ background: "var(--white)" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2rem,4vw,3rem)" }}>

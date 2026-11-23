@@ -70,6 +70,7 @@ export default function ServiciosPilar() {
         name: SERVICIOS_PILAR.metaTitle,
         description: SERVICIOS_PILAR.metaDescription,
         url: "/servicios",
+        items: items.map((i) => ({ name: i.title, url: i.href })),
       })}
     />
   );

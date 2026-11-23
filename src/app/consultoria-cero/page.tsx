@@ -8,6 +8,9 @@ import ClientLogos from "@/components/ClientLogos";
 import Faq from "@/components/Faq";
 import ProofBar from "@/components/ProofBar";
 import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
+import { webPageSchema, servicioId, paginaId } from "@/lib/schema";
+import { ORG_ID, absoluteUrl } from "@/lib/site";
 
 /**
  * /consultoria-cero — la puerta de entrada de todo el sitio.
@@ -51,9 +54,42 @@ const FAQ = [
   { q: "¿Cómo la agendo?", a: "Por WhatsApp o con el formulario de esta página. Nuestro agente de IA te responde al momento, y una persona te confirma el día y la hora de lunes a sábado, de 8:30 a 18:30." },
 ];
 
+/**
+ * La consultoría cero como servicio con oferta de precio 0: así queda escrito
+ * para buscadores y asistentes que es gratis, sin depender de que lean el texto.
+ */
+const SCHEMA = [
+  webPageSchema({
+    url: "/consultoria-cero",
+    name: "Consultoría Cero: 30 Minutos Gratis",
+    description: "30 minutos para contarnos tu problema o lo que quieres mejorar. Te decimos qué hacer y con qué servicios. Gratis.",
+    mainEntity: servicioId("/consultoria-cero"),
+  }),
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": servicioId("/consultoria-cero"),
+    name: "Consultoría cero",
+    serviceType: "Consultoría de marketing",
+    description: "Conversación de 30 minutos en la que nos cuentas tu problema o lo que quieres mejorar, y te proponemos qué hacer y con qué servicios.",
+    provider: { "@id": ORG_ID },
+    areaServed: { "@type": "Country", name: "Perú" },
+    url: absoluteUrl("/consultoria-cero"),
+    mainEntityOfPage: { "@id": paginaId("/consultoria-cero") },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "PEN",
+      url: absoluteUrl("/consultoria-cero"),
+      description: "Gratis y sin compromiso",
+    },
+  },
+];
+
 export default function ConsultoriaCero() {
   return (
     <>
+      <JsonLd data={SCHEMA} />
       <section style={{ background: "var(--white)" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "clamp(1.25rem,3vw,2rem) var(--gutter) clamp(2.5rem,5vw,3.5rem)" }}>
           <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Consultoría cero", href: "/consultoria-cero" }]} />

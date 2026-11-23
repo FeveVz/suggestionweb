@@ -131,6 +131,8 @@ export type Servicio = {
 /** Página de cobertura por ciudad (/agencia-de-marketing-en-<slug>). */
 export type Ciudad = {
   slug: string;
+  /** Resumen de 3 puntos arriba de la página, solo con datos de la propia página. */
+  enCorto?: string[];
   nombre: string;
   metaTitle: string;
   metaDescription: string;
@@ -172,6 +174,8 @@ export type Prueba = { label: string; href: string };
 export type Sector = {
   /** Casos publicados que prueban lo que esta página promete. */
   pruebas?: Prueba[];
+  /** Resumen de 3 puntos arriba de la página, solo con datos de la propia página. */
+  enCorto?: string[];
   slug: string;
   nombre: string;
   metaTitle: string;

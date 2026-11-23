@@ -2,6 +2,20 @@
  * Plantillas JSON-LD (Schema.org) para suggestion.pe.
  * Basado en docs-fuente/12_Datos_Estructurados_y_SEO_Tecnico.md.
  * Cada builder devuelve un objeto plano que se inyecta con <JsonLd>.
+ *
+ * Grafo conectado (23-nov-2026). Antes cada página emitía nodos sueltos: un
+ * Service, un BlogPosting o un FAQPage que no decían a qué página pertenecían
+ * ni quién la publicaba. Ahora todo cuelga de identificadores fijos:
+ *
+ *   https://suggestion.pe/#org            la agencia (layout, todas las páginas)
+ *   https://suggestion.pe/#website        el sitio
+ *   <url>#webpage                         la página (WebPage, CollectionPage…)
+ *   <url>#breadcrumb                      su miga (la emite <Breadcrumbs>)
+ *   <url>#service | #article | #person    lo principal de esa página
+ *
+ * Así Google y los rastreadores de los asistentes de IA leen «esta página es
+ * de Suggestion, trata de este servicio, está en este sitio» sin adivinarlo,
+ * y el catálogo de servicios de la organización apunta a las mismas páginas.
  */
 
 import { site, SITE_URL, ORG_ID, WEBSITE_ID, absoluteUrl } from "./site";
@@ -17,69 +31,27 @@ type Json = Record<string, unknown>;
 export const AUTOR = { slug: "abraham", nombre: "Abraham Velásquez", rol: "Gerente General" } as const;
 export const AUTOR_ID = `${SITE_URL}/equipo/${AUTOR.slug}#person`;
 
-/** ProfessionalService / LocalBusiness — identidad de la organización (doc 12 §2.1). */
-export function organizationSchema(): Json {
+export const BLOG_ID = `${SITE_URL}/blog#blog`;
+
+const abs = (u: string) => (u.startsWith("http") ? u : absoluteUrl(u));
+/** @id de la página (WebPage y derivados). */
+export const paginaId = (u: string) => `${abs(u)}#webpage`;
+/** @id del servicio principal de una página de servicio, sector o ciudad. */
+export const servicioId = (u: string) => `${abs(u)}#service`;
+/** @id del artículo principal (blog y casos). */
+export const articuloId = (u: string) => `${abs(u)}#article`;
+
+/** ItemList para listados (casos, servicios, artículos de una categoría). */
+export function itemList(items: { name: string; url: string }[]): Json {
   return {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": ORG_ID,
-    name: site.name,
-    legalName: site.legalName,
-    taxID: site.ruc,
-    // Año de fundación. Lo lee el grafo de conocimiento de Google y lo citan
-    // los asistentes cuando alguien pregunta desde cuándo existe la agencia:
-    // antes esa respuesta dependía de que el modelo encontrara "7 años"
-    // suelto en una frase, que además caduca cada enero.
-    foundingDate: String(site.fundacion),
-    description: site.description,
-    url: SITE_URL,
-    logo: absoluteUrl(site.logo),
-    image: absoluteUrl(site.ogImage),
-    telephone: site.phoneE164,
-    email: site.email,
-    // contactPoint además de `telephone`: `telephone` es un dato suelto de la
-    // ficha, y contactPoint declara PARA QUÉ sirve ese número, en qué idioma
-    // se atiende y dónde. Es lo que leen el grafo de conocimiento de Google y
-    // los rastreadores que alimentan a los asistentes de IA cuando alguien
-    // pregunta "cuál es el teléfono de Suggestion". Se añadió el 2026-09-27,
-    // con el cambio de número, para que la respuesta no dependa de que el
-    // modelo encuentre el número suelto en el pie de página.
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: site.phoneE164,
-        contactType: "customer service",
-        areaServed: "PE",
-        availableLanguage: ["Spanish"],
-        email: site.email,
-        url: `${SITE_URL}/contacto`,
-        // Horario de atención de personas (decisión 6 del owner, 20-nov-2026):
-        // lunes a sábado de 8:30 a 18:30. El agente de IA de WhatsApp responde a
-        // toda hora, pero lo que se declara aquí es cuándo atiende alguien. Es del
-        // canal de contacto, no del local, que no recibe público sin coordinar.
-        hoursAvailable: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          opens: "08:30",
-          closes: "18:30",
-        },
-      },
-    ],
-    priceRange: "$$",
-    slogan: site.slogan,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressRegion: site.region,
-      addressCountry: site.country,
-    },
-    geo: { "@type": "GeoCoordinates", latitude: -14.0678, longitude: -75.7286 },
-    knowsAbout: ["Marketing digital", "Publicidad digital", "Meta Ads", "Google Ads", "Desarrollo web", "Branding", "BTL y activaciones"],
-    areaServed: [
-      { "@type": "City", name: site.city },
-      { "@type": "Country", name: "Perú" },
-    ],
-    sameAs: [site.social.instagram, site.social.facebook],
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: abs(it.url),
+    })),
   };
 }
 
@@ -100,6 +72,48 @@ export function websiteSchema(): Json {
     name: site.name,
     inLanguage: site.hreflang,
     publisher: { "@id": ORG_ID },
+  };
+}
+
+/**
+ * WebPage y derivados: el nodo de la propia página. Todo lo demás (servicio,
+ * artículo, persona) cuelga de aquí con `mainEntity`.
+ *
+ * `resumen`: la página tiene bloque «En corto». Se declara como speakable
+ * (h1 + resumen): es la respuesta directa que un asistente puede leer o citar.
+ */
+export function webPageSchema(o: {
+  url: string;
+  name: string;
+  description?: string;
+  tipo?: "WebPage" | "AboutPage" | "ContactPage" | "CollectionPage" | "ProfilePage";
+  imagen?: string;
+  mainEntity?: string;
+  about?: string;
+  items?: { name: string; url: string }[];
+  migas?: boolean;
+  publicado?: string;
+  modificado?: string;
+  resumen?: boolean;
+}): Json {
+  const url = abs(o.url);
+  return {
+    "@context": "https://schema.org",
+    "@type": o.tipo ?? "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: o.name,
+    ...(o.description ? { description: o.description } : {}),
+    inLanguage: site.hreflang,
+    isPartOf: { "@id": WEBSITE_ID },
+    publisher: { "@id": ORG_ID },
+    ...(o.migas === false ? {} : { breadcrumb: { "@id": `${url}#breadcrumb` } }),
+    ...(o.imagen ? { primaryImageOfPage: { "@type": "ImageObject", url: abs(o.imagen) } } : {}),
+    ...(o.mainEntity ? { mainEntity: { "@id": o.mainEntity } } : o.items?.length ? { mainEntity: itemList(o.items) } : {}),
+    ...(o.about ? { about: { "@id": o.about } } : {}),
+    ...(o.publicado ? { datePublished: o.publicado } : {}),
+    ...(o.modificado ? { dateModified: o.modificado } : {}),
+    ...(o.resumen ? { speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".hk-encorto"] } } : {}),
   };
 }
 
@@ -125,9 +139,13 @@ export function serviceSchema(opts: {
    * producción, BTL y publicidad móvil se cotizan y no deben llevar offers.
    */
   planes?: PlanPrecio[];
+  /** Foto principal de la página (cabecera). */
+  imagen?: string;
+  /** Categoría del servicio (p. ej. «Producción y publicidad física»). */
+  categoria?: string;
 }): Json {
   const ciudades = opts.areaServedCity ? [opts.areaServedCity].flat() : [];
-  const url = opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url);
+  const url = abs(opts.url);
   const offers = (opts.planes ?? []).flatMap((p) => {
     const price = importe(p.precio);
     if (!price) return [];
@@ -156,8 +174,10 @@ export function serviceSchema(opts: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": servicioId(url),
     name: opts.serviceType,
     serviceType: opts.serviceType,
+    ...(opts.categoria ? { category: opts.categoria } : {}),
     provider: { "@id": ORG_ID },
     areaServed: ciudades.length
       ? [
@@ -167,8 +187,31 @@ export function serviceSchema(opts: {
       : { "@type": "Country", name: opts.areaServedName || "Perú" },
     description: opts.description,
     url,
+    mainEntityOfPage: { "@id": paginaId(url) },
+    ...(opts.imagen ? { image: abs(opts.imagen) } : {}),
     ...(offers.length ? { offers } : {}),
   };
+}
+
+/**
+ * Página de servicio, sector o ciudad completa: el WebPage (con su resumen
+ * declarado) y el Service que es su tema principal.
+ */
+export function paginaDeServicio(o: {
+  nombrePagina: string;
+  resumen?: boolean;
+} & Parameters<typeof serviceSchema>[0]): Json[] {
+  return [
+    webPageSchema({
+      url: o.url,
+      name: o.nombrePagina,
+      description: o.description,
+      imagen: o.imagen,
+      mainEntity: servicioId(o.url),
+      resumen: o.resumen,
+    }),
+    serviceSchema(o),
+  ];
 }
 
 /** FAQPage — respuestas idénticas a las visibles en página (doc 12 §2.4). */
@@ -184,85 +227,143 @@ export function faqPageSchema(faqs: { q: string; a: string }[]): Json {
   };
 }
 
-/** BreadcrumbList — en todas las páginas (doc 12 §2.5). */
+/** BreadcrumbList — en todas las páginas (doc 12 §2.5). El @id lo enlaza el WebPage. */
 export function breadcrumbSchema(items: { name: string; url: string }[]): Json {
+  const ultima = items[items.length - 1];
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    ...(ultima ? { "@id": `${abs(ultima.url)}#breadcrumb` } : {}),
     itemListElement: items.map((it, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      item: it.url.startsWith("http") ? it.url : absoluteUrl(it.url),
+      item: abs(it.url),
     })),
   };
 }
 
-/** CollectionPage — pilares y categorías hub (doc 12 §1). */
+/** CollectionPage — pilares, categorías y listados (doc 12 §1), con lo que contienen. */
 export function collectionPageSchema(opts: {
   name: string;
   description: string;
   url: string;
+  items?: { name: string; url: string }[];
+  mainEntity?: string;
 }): Json {
-  return {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
+  return webPageSchema({
+    tipo: "CollectionPage",
+    url: opts.url,
     name: opts.name,
     description: opts.description,
-    url: opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url),
-    isPartOf: { "@id": WEBSITE_ID },
-  };
+    items: opts.items,
+    mainEntity: opts.mainEntity,
+  });
 }
 
-/** Blog — pilar del blog (doc 12 §1). */
-export function blogSchema(opts: { name: string; description: string; url: string }): Json {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    name: opts.name,
-    description: opts.description,
-    url: opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url),
-    publisher: { "@id": ORG_ID },
-  };
+/** Blog — pilar del blog (doc 12 §1), con la lista de artículos. */
+export function blogSchema(opts: {
+  name: string;
+  description: string;
+  url: string;
+  posts?: { headline: string; url: string; datePublished: string; dateModified?: string }[];
+}): Json[] {
+  const url = abs(opts.url);
+  return [
+    webPageSchema({ tipo: "CollectionPage", url, name: opts.name, description: opts.description, mainEntity: BLOG_ID }),
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": BLOG_ID,
+      name: opts.name,
+      description: opts.description,
+      url,
+      inLanguage: site.hreflang,
+      publisher: { "@id": ORG_ID },
+      ...(opts.posts?.length
+        ? {
+            blogPost: opts.posts.map((p) => ({
+              "@type": "BlogPosting",
+              "@id": articuloId(p.url),
+              headline: p.headline,
+              url: abs(p.url),
+              datePublished: p.datePublished,
+              ...(p.dateModified ? { dateModified: p.dateModified } : {}),
+            })),
+          }
+        : {}),
+    },
+  ];
 }
 
-/** BlogPosting — en cada entrada (doc 12 §2.6). */
+/** BlogPosting — en cada entrada (doc 12 §2.6), con su WebPage. */
 export function blogPostingSchema(opts: {
   headline: string;
   description: string;
   datePublished: string;
   dateModified?: string;
   image?: string;
+  /** Fotos propias de las secciones, además de la imagen para compartir. */
+  imagenes?: string[];
   url: string;
-}): Json {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: opts.headline,
-    description: opts.description,
-    datePublished: opts.datePublished,
-    dateModified: opts.dateModified || opts.datePublished,
-    author: {
-      "@type": "Person",
-      "@id": AUTOR_ID,
-      name: AUTOR.nombre,
-      jobTitle: AUTOR.rol,
-      worksFor: { "@id": ORG_ID },
-      url: absoluteUrl(`/equipo/${AUTOR.slug}`),
+  /** Nombre de la categoría del blog. */
+  seccion?: string;
+  palabras?: number;
+  /** Fuentes que cita el texto (campo `fuente` de los datos). */
+  fuentes?: string[];
+  /** Páginas de servicio de las que habla: solo rutas con nodo Service (ver tieneServicio en schema-org.ts). */
+  menciona?: string[];
+  /** Tiene bloque «En corto». */
+  resumen?: boolean;
+  /** Título de la página (title), si difiere del titular. */
+  nombrePagina?: string;
+}): Json[] {
+  const url = abs(opts.url);
+  const imagenes = [opts.image, ...(opts.imagenes ?? [])].filter((x): x is string => !!x).map(abs);
+  const menciona = opts.menciona ?? [];
+  return [
+    webPageSchema({
+      url,
+      name: opts.nombrePagina ?? opts.headline,
+      description: opts.description,
+      imagen: opts.image,
+      mainEntity: articuloId(url),
+      publicado: opts.datePublished,
+      modificado: opts.dateModified || opts.datePublished,
+      resumen: opts.resumen,
+    }),
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": articuloId(url),
+      headline: opts.headline,
+      description: opts.description,
+      datePublished: opts.datePublished,
+      dateModified: opts.dateModified || opts.datePublished,
+      inLanguage: site.hreflang,
+      author: {
+        "@type": "Person",
+        "@id": AUTOR_ID,
+        name: AUTOR.nombre,
+        jobTitle: AUTOR.rol,
+        worksFor: { "@id": ORG_ID },
+        url: absoluteUrl(`/equipo/${AUTOR.slug}`),
+      },
+      publisher: { "@id": ORG_ID },
+      isPartOf: { "@id": BLOG_ID },
+      mainEntityOfPage: { "@id": paginaId(url) },
+      ...(imagenes.length ? { image: [...new Set(imagenes)] } : {}),
+      ...(opts.seccion ? { articleSection: opts.seccion } : {}),
+      ...(opts.palabras ? { wordCount: opts.palabras } : {}),
+      ...(menciona.length ? { mentions: menciona.map((h) => ({ "@type": "Service", "@id": servicioId(h), url: abs(h) })) } : {}),
+      ...(opts.fuentes?.length
+        ? { citation: [...new Set(opts.fuentes)].map((name) => ({ "@type": "CreativeWork", name })) }
+        : {}),
     },
-    publisher: { "@id": ORG_ID },
-    ...(opts.image ? { image: absoluteUrl(opts.image) } : {}),
-    mainEntityOfPage: opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url),
-  };
+  ];
 }
 
 /** ContactPage (doc 12 §1). */
-export function contactPageSchema(opts: { url: string }): Json {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    url: opts.url.startsWith("http") ? opts.url : absoluteUrl(opts.url),
-    about: { "@id": ORG_ID },
-  };
+export function contactPageSchema(opts: { url: string; name?: string }): Json {
+  return webPageSchema({ tipo: "ContactPage", url: opts.url, name: opts.name ?? "Contacto | Suggestion", about: ORG_ID });
 }
-

@@ -6,6 +6,9 @@ import Secciones from "@/components/Secciones";
 import Faq from "@/components/Faq";
 import RelatedLinks from "@/components/RelatedLinks";
 import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
+import { webPageSchema } from "@/lib/schema";
+import { ORG_ID } from "@/lib/site";
 import type { Seccion, Faq as FaqItem } from "@/content/types";
 
 /**
@@ -116,6 +119,14 @@ const FAQ: FaqItem[] = [
 export default function MetodoPage() {
   return (
     <>
+      <JsonLd
+        data={webPageSchema({
+          url: "/metodo",
+          name: "Cómo medimos una campaña",
+          description: "Cómo contamos los resultados de una campaña: medimos contra el CRM. La venta se cuenta cuando cierra y se dice de dónde venía el lead.",
+          about: ORG_ID,
+        })}
+      />
       {/* FAQPage y BreadcrumbList los emiten <Faq> y <Breadcrumbs>: una sola
           fuente por tipo (auditoría TEC-06, 21-nov-2026). */}
       {/* HERO */}

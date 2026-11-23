@@ -11,7 +11,9 @@ import { PORTAFOLIO } from "@/content/portafolio";
 import CountUp from "@/components/CountUp";
 import Grafico from "@/components/Grafico";
 import { fotoPortafolio } from "@/content/portafolio-fotos";
-import { getCaso } from "@/content/casos";
+import { getCaso, CASOS_DETALLE } from "@/content/casos";
+import JsonLd from "@/components/JsonLd";
+import { collectionPageSchema } from "@/lib/schema";
 
 // El gráfico de las tres cifras sale del caso de septiembre: una sola fuente,
 // para que /casos no se desalinee de la ficha del caso (auditoría CON-01).
@@ -160,6 +162,14 @@ const GALERIA = [
 export default function Casos() {
   return (
     <>
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Casos de Éxito de Marketing en Ica",
+          description: "Resultados de campañas de Suggestion para clientes de Ica y el Perú, con período y fecha de corte.",
+          url: "/casos",
+          items: CASOS_DETALLE.map((c) => ({ name: `${c.cliente}: ${c.h1}`, url: `/casos/${c.slug}` })),
+        })}
+      />
 
       {/* HERO */}
       <section style={{ background: "var(--white)" }}>

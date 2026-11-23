@@ -26,6 +26,11 @@ export const SECTORES: Sector[] = [
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "marketing-inmobiliario",
+    enCorto: [
+      "Generamos leads para proyectos inmobiliarios, los filtramos y los llevamos a tu sala de ventas como citas.",
+      "Hemos trabajado para 24 marcas inmobiliarias y constructoras, desde la preventa y el lanzamiento.",
+      "Medimos el embudo completo con el CRM: leads, visitas al proyecto y ventas, con el origen de cada lead escrito.",
+    ],
     nombre: "Inmobiliario",
     metaTitle: "Agencia de Marketing Inmobiliario en Perú | Suggestion",
     metaDescription:
@@ -165,6 +170,11 @@ export const SECTORES: Sector[] = [
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "marketing-automotriz",
+    enCorto: [
+      "Diseñamos campañas para concesionarios que llevan al interesado a la prueba de manejo, donde cierra tu asesor.",
+      "El anuncio pone adelante lo que mueve la decisión: cuota inicial, bono, mantenimiento incluido o modelo del mes.",
+      "Hemos atendido 19 marcas de vehículos entre livianos, camiones y línea amarilla; con Autoniza se vendieron 8 autos en dos eventos.",
+    ],
     nombre: "Automotriz",
     metaTitle: "Agencia de Marketing Automotriz en Perú | Suggestion",
     metaDescription:
@@ -305,6 +315,11 @@ export const SECTORES: Sector[] = [
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "marketing-turismo",
+    enCorto: [
+      "Campañas para hoteles, restaurantes y negocios turísticos que generan reservas en temporada alta y también en la baja.",
+      "Antes de pautar ordenamos la ficha de Google, las fotos y las reseñas, que deciden buena parte de la reserva.",
+      "Trabajamos la reserva directa para no depender solo de las agencias en línea. Con Hoteles Señor de Luren: 75 reservas en una campaña.",
+    ],
     nombre: "Turismo",
     metaTitle: "Agencia de Marketing para Hoteles y Turismo | Suggestion",
     metaDescription:
@@ -458,12 +473,17 @@ export const SECTORES: Sector[] = [
       { label: "Cómo medimos una campaña", href: "/metodo" },
     ],
     slug: "marketing-marcas-consumo",
+    enCorto: [
+      "Combinamos posicionamiento, performance y presencia física para que la demanda termine en venta.",
+      "Medimos lo que cuesta conseguir un cliente. Con Granjas Bonanza, la campaña cerró 15 contratos.",
+      "Producimos el merchandising y el material del punto de venta, que sigue decidiendo la compra.",
+    ],
     nombre: "Marcas y consumo",
     metaTitle: "Agencia de Marketing para Marcas de Consumo | Suggestion",
     metaDescription:
       "Marketing para marcas y consumo: demanda que se convierte en venta. Posicionamiento, performance y activación. Consultoría gratis.",
     h1: "Marcas y consumo: demanda que se vuelve venta",
-    hero: "Construir marca y vender no son cosas opuestas. Generamos demanda que se convierte en venta —no likes prestados— combinando posicionamiento, performance y presencia física.",
+    hero: "Generamos demanda que se convierte en venta, combinando posicionamiento, performance y presencia física.",
     cta: "Agenda tu consultoría cero",
     proof:
       "Caso Granjas Bonanza: 15 contratos cerrados con S/2,500 en campañas de demanda directa.",
@@ -600,6 +620,11 @@ export const SECTORES: Sector[] = [
       { label: "Todos los casos publicados", href: "/casos" },
     ],
     slug: "marketing-salud",
+    enCorto: [
+      "Campañas para clínicas, consultorios y profesionales de la salud, segmentadas por especialidad y zona, para llenar la agenda.",
+      "Primero trabajamos la ficha de Google y las reseñas: en salud, la búsqueda local pesa más que la campaña.",
+      "Los anuncios cumplen las políticas de salud: sin prometer resultados ni usar fotos de antes y después.",
+    ],
     nombre: "Salud",
     metaTitle: "Agencia de Marketing para Clínicas en Perú | Suggestion",
     metaDescription:
@@ -763,6 +788,11 @@ export const SECTORES: Sector[] = [
       { label: "Todos los casos publicados", href: "/casos" },
     ],
     slug: "marketing-agroexportacion",
+    enCorto: [
+      "Construimos la presencia B2B de agroexportadoras: web en inglés y español, catálogo con fichas técnicas y contenido institucional.",
+      "Una feria internacional se prepara con unas ocho semanas de anticipación, sobre todo por el catálogo.",
+      "La relación con el importador la lleva tu equipo; nosotros armamos el material y el sistema de seguimiento.",
+    ],
     nombre: "Agroexportación",
     metaTitle: "Marketing para Agroexportadoras de Ica y Perú | Suggestion",
     metaDescription:
@@ -906,6 +936,11 @@ export const SECTORES: Sector[] = [
       { label: "Todos los casos publicados", href: "/casos" },
     ],
     slug: "marketing-pisco-vino",
+    enCorto: [
+      "Unimos branding premium, venta en línea y enoturismo para que tu bodega venda dentro y fuera de Ica.",
+      "Diseñamos la etiqueta, que es lo que sostiene el precio en el estante.",
+      "Trabajamos con bodegas pequeñas y grandes, y las campañas siguen la temporada: vendimia, feriados largos y fiestas.",
+    ],
     nombre: "Pisco y Vino",
     metaTitle: "Marketing para Bodegas de Pisco y Vino en Ica | Suggestion",
     metaDescription:

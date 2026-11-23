@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import TarjetaPersonal from "@/components/TarjetaPersonal";
 import { buildMetadata } from "@/lib/seo";
 import { site, absoluteUrl, ORG_ID } from "@/lib/site";
-import { AUTOR, AUTOR_ID } from "@/lib/schema";
+import { AUTOR, AUTOR_ID, webPageSchema } from "@/lib/schema";
 import { getTalento, allTalentoSlugs } from "@/content/equipo";
 import { BLOG_POSTS } from "@/content/blog";
 
@@ -63,10 +63,12 @@ export default async function TalentoPage({ params }: Params) {
 
   const autor = esAutor(t.slug);
   const url = absoluteUrl(`/equipo/${t.slug}`);
+  const personaId = autor ? AUTOR_ID : `${url}#person`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    ...(autor ? { "@id": AUTOR_ID } : {}),
+    "@id": personaId,
+    mainEntityOfPage: { "@id": `${url}#webpage` },
     name: t.nombre,
     jobTitle: t.rol,
     description: autor ? BIO_AUTOR[0] : t.bio,
@@ -86,7 +88,8 @@ export default async function TalentoPage({ params }: Params) {
 
   return (
     <>
-      <JsonLd data={schema} />
+      {/* ProfilePage: la página es el perfil de esta persona (Google lo usa para autores). */}
+      <JsonLd data={[webPageSchema({ tipo: "ProfilePage", url, name: `${t.nombre}, ${t.rol} de Suggestion`, mainEntity: personaId }), schema]} />
       <TarjetaPersonal t={t} />
       {autor && (
         <section style={{ background: "var(--white)" }}>

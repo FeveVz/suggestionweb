@@ -5,7 +5,7 @@ import LandingArticle, { type RelatedBlock } from "@/components/LandingArticle";
 import HubLanding from "@/components/HubLanding";
 import type { RelatedLink } from "@/components/RelatedLinks";
 import { buildMetadata } from "@/lib/seo";
-import { serviceSchema, collectionPageSchema } from "@/lib/schema";
+import { paginaDeServicio, collectionPageSchema } from "@/lib/schema";
 import {
   getServicio,
   getServiciosByCategoria,
@@ -163,6 +163,7 @@ export default async function ServicioPage({ params }: Params) {
           name: s.metaTitle,
           description: s.metaDescription,
           url: `/servicios/${s.slug}`,
+          items: children.map((c) => ({ name: c.title, url: c.href })),
         })}
       />
     );
@@ -260,11 +261,15 @@ export default async function ServicioPage({ params }: Params) {
       porQue={s.slug === "btl" ? "btl" : undefined}
       coberturaTitulo={s.slug === "btl" ? "En Ica, en Nazca y en todo el Perú." : undefined}
       shape={shapeFor(s.slug)}
-      extraSchema={serviceSchema({
+      extraSchema={paginaDeServicio({
+        nombrePagina: s.metaTitle.replace(" | Suggestion", ""),
+        resumen: !!s.enCorto?.length,
         serviceType: s.nombre,
         description: s.metaDescription,
         url: `/servicios/${s.slug}`,
         planes: SERVICIOS_PRODUCCION.has(s.slug) ? undefined : getPrecios(s.slug),
+        imagen: SERVICE_IMG[s.slug]?.src,
+        categoria: parent?.nombre,
       })}
     />
   );

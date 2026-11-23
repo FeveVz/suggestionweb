@@ -20,7 +20,19 @@ export default function BlogPilar() {
   const posts = allPostsSorted();
   return (
     <>
-      <JsonLd data={blogSchema({ name: BLOG_PILAR.metaTitle, description: BLOG_PILAR.metaDescription, url: "/blog" })} />
+      <JsonLd
+        data={blogSchema({
+          name: BLOG_PILAR.metaTitle,
+          description: BLOG_PILAR.metaDescription,
+          url: "/blog",
+          posts: posts.map((p) => ({
+            headline: p.h1,
+            url: `/blog/${p.categoria}/${p.slug}`,
+            datePublished: p.date,
+            dateModified: p.actualizado,
+          })),
+        })}
+      />
 
       {/* HERO */}
       <section style={{ background: "var(--white)" }}>
