@@ -325,7 +325,7 @@ export const CASOS_DETALLE: Caso[] = [
     reto: "El proyecto tenía interesados, pero llegaban curiosos: pocos calificaban y el equipo de ventas perdía tiempo en contactos que nunca iban a comprar. La inversión publicitaria anterior se medía en alcance, no en ventas.",
     solucion: [
       { titulo: "Leímos al comprador", texto: "Separamos los dos públicos reales del proyecto: el que busca su primer lote y el inversor que compra plusvalía. A cada uno, su mensaje." },
-      { titulo: "Creatividades de valorización", texto: "Piezas que venden la etapa inicial y el precio de lanzamiento —el argumento que activa la decisión—, no solo metros y precio." },
+      { titulo: "Creatividades de valorización", texto: "Piezas que venden la etapa inicial y el precio de lanzamiento." },
       { titulo: "Captura sin fricción", texto: "Formulario + WhatsApp con respuesta inmediata, para que ningún lead se enfríe esperando." },
       { titulo: "Filtro y seguimiento", texto: "Calificamos cada lead antes de pasarlo a ventas y sostuvimos el seguimiento hasta la visita. Ventas cerró en sala." },
     ],
@@ -360,7 +360,7 @@ export const CASOS_DETALLE: Caso[] = [
       {
         h2: "Por qué una tasa de visita del 6% no es mala noticia",
         parrafo:
-          "De 350 leads llegaron 20 a la sala de ventas. Dicho así suena a fracaso, y es la lectura que hace que muchos proyectos apaguen campañas que funcionan. En inmobiliario la visita es un compromiso grande —hay que reservar una mañana y desplazarse—, así que el filtro natural es brutal. Lo que decide la rentabilidad no es cuántos leads llegan a visita, sino qué pasa en la visita: aquí, 8 de 20 terminaron en compra. Esa tasa de cierre del 40% es la que sostiene todo el caso, y es mérito del equipo comercial tanto como de la campaña.",
+          "De 350 leads llegaron 20 a la sala de ventas. Dicho así suena a fracaso, y es la lectura que hace que muchos proyectos apaguen campañas que funcionan. En inmobiliario la visita es un compromiso grande —hay que reservar una mañana y desplazarse—, así que el filtro natural es brutal. La rentabilidad la decide lo que pasa en la visita: aquí, 8 de 20 terminaron en compra. Esa tasa de cierre del 40% es la que sostiene todo el caso, y es mérito del equipo comercial tanto como de la campaña.",
         bullets: [
           { titulo: "El lead no es el producto", texto: "es materia prima. Un proyecto que mide su marketing en leads acaba comprando volumen barato que nadie atiende." },
           { titulo: "La visita es el filtro real", texto: "quien invierte una mañana en ir a ver el terreno ya se ha autoseleccionado." },
@@ -375,7 +375,7 @@ export const CASOS_DETALLE: Caso[] = [
           { titulo: "Separar los dos compradores", texto: "el que busca su primer lote y el inversor que compra plusvalía no responden al mismo anuncio. Hablarle a los dos a la vez es hablarle a ninguno." },
           { titulo: "Vender la etapa, no el metro cuadrado", texto: "el argumento de valorización —comprar en etapa inicial, antes de que suba— activa una decisión; una ficha técnica no." },
           { titulo: "Quitar fricción a la captura", texto: "formulario y WhatsApp con respuesta inmediata, porque un lead inmobiliario compara varios proyectos la misma tarde." },
-          { titulo: "Calificar antes de pasar a ventas", texto: "el equipo comercial recibió contactos con plazo y forma de pago identificados, no una lista de nombres." },
+          { titulo: "Calificar antes de pasar a ventas", texto: "el equipo comercial recibió contactos con plazo y forma de pago identificados." },
         ],
         nota: {
           titulo: "Lo que este caso NO demuestra",
@@ -390,7 +390,7 @@ export const CASOS_DETALLE: Caso[] = [
       },
       {
         q: "¿Por qué solo 20 de 350 leads llegaron a visitar?",
-        a: "Porque la visita exige tiempo y desplazamiento, y ese filtro es normal en inmobiliario. Lo relevante no es el porcentaje que llega, sino qué proporción de los que llegan compra: aquí fueron 8 de 20. Un proyecto con muchas visitas y pocos cierres tiene un problema distinto, y no se arregla con más pauta.",
+        a: "Porque la visita exige tiempo y desplazamiento, y ese filtro es normal en inmobiliario. Lo que importa es cuántos de los que llegan compran: aquí fueron 8 de 20. Un proyecto con muchas visitas y pocos cierres tiene un problema distinto, y no se arregla con más pauta.",
       },
       {
         q: "¿Cuánto tiempo tomó la campaña?",
@@ -421,10 +421,10 @@ export const CASOS_DETALLE: Caso[] = [
     sectorHref: "/marketing-marcas-consumo",
     metaTitle: "Caso Granjas Bonanza: 15 Contratos con S/2,500 | Suggestion",
     metaDescription:
-      "Cómo Granjas Bonanza cerró 15 contratos con S/2,500 en campañas de demanda directa. Demanda que se convierte en venta, no en likes. El caso completo.",
+      "Cómo Granjas Bonanza cerró 15 contratos con S/2,500 en campañas de demanda directa. Demanda que se convierte en venta. El caso completo.",
     h1: "Granjas Bonanza: 15 contratos con S/2,500 de inversión",
     resumen:
-      "Un negocio de consumo que necesitaba contratos, no seguidores. Con campañas de demanda directa —oferta clara, público correcto y respuesta rápida— la inversión se convirtió en ventas firmadas.",
+      "Un negocio de consumo que necesitaba contratos. Con campañas de demanda directa —oferta clara, público correcto y respuesta rápida— la inversión se convirtió en ventas firmadas.",
     stats: [
       { valor: "15", label: "Contratos cerrados" },
       { valor: "S/2,500", label: "Inversión total en pauta" },
@@ -448,7 +448,7 @@ export const CASOS_DETALLE: Caso[] = [
       {
         h2: "Demanda directa frente a “estar presente”",
         parrafo:
-          "La mayoría de marcas de consumo invierte en presencia: publicar con constancia, cuidar el feed, sumar seguidores. Está bien, pero resuelve un problema distinto del que tenía este negocio. Aquí hacía falta que alguien preguntara el precio y cerrara, y para eso el contenido de marca es un camino lento. Ninguna de las dos es mejor en abstracto: lo caro es confundirlas y esperar contratos de una estrategia diseñada para recordación.",
+          "La mayoría de marcas de consumo invierte en presencia: publicar con constancia, cuidar el feed, sumar seguidores. Está bien, pero resuelve un problema distinto del que tenía este negocio. Aquí hacía falta que alguien preguntara el precio y cerrara, y para eso el contenido de marca es un camino lento. Lo caro es confundirlas y esperar contratos de una estrategia diseñada para recordación.",
         tabla: {
           cabeceras: ["", "Contenido de marca", "Campaña de demanda directa"],
           filas: [
@@ -502,7 +502,7 @@ export const CASOS_DETALLE: Caso[] = [
     // Fotos tomadas por nosotros en la granja (owner, 22-nov-2026). Los
     // originales vienen de WhatsApp: sirven para galería, no para cabecera.
     imagenes: [
-      { src: "/assets/casos/bonanza-operario-bioseguridad.webp", alt: "Operario de Granjas Bonanza con traje y máscara de bioseguridad", cap: "Fotografía nuestra en la granja: un operario con el equipo de bioseguridad completo" },
+      { src: "/assets/casos/bonanza-operario-bioseguridad.webp", alt: "Operario de Granjas Bonanza con traje y máscara de bioseguridad", cap: "Operario con el equipo de bioseguridad completo" },
       { src: "/assets/casos/bonanza-galpon-desinfeccion.webp", alt: "Galpón de Granjas Bonanza durante la desinfección", cap: "Un galpón de Granjas Bonanza durante la desinfección" },
     ],
   },
@@ -571,7 +571,7 @@ export const CASOS_DETALLE: Caso[] = [
         bullets: [
           { titulo: "Costo por reserva directa", texto: "la inversión dividida entre las reservas conseguidas. Es lo que se compara contra la comisión que cobraría una plataforma." },
           { titulo: "Noches por reserva", texto: "una reserva de tres noches y una de una no valen lo mismo, y a menudo vienen de mensajes distintos." },
-          { titulo: "Ocupación entre semana", texto: "es donde de verdad se gana o se pierde el mes; el fin de semana suele llenarse solo." },
+          { titulo: "Ocupación entre semana", texto: "es donde se gana o se pierde el mes; el fin de semana suele llenarse solo." },
           { titulo: "Huéspedes que repiten", texto: "el canal más barato que existe, y el único que crece si guardas los datos de quien reservó directo." },
         ],
       },
@@ -625,9 +625,9 @@ CASOS_DETALLE.push({
     { valor: "5", label: "Autos vendidos · evento del 25 de junio" },
     { valor: "2", label: "Eventos, ambos con venta el mismo día" },
   ],
-  reto: "Un evento automotriz sin estrategia junta curiosos: gente que mira, sube al auto, toma fotos y se va. La inversión en local, personal y logística no garantiza ni un cierre. Autoniza necesitaba que cada evento saliera con ventas, no con alcance.",
+  reto: "Un evento automotriz sin estrategia junta curiosos: gente que mira, sube al auto, toma fotos y se va. La inversión en local, personal y logística no garantiza ni un cierre. Autoniza necesitaba que cada evento terminara en ventas.",
   solucion: [
-    { titulo: "Convocatoria segmentada", texto: "Campaña previa dirigida a perfiles con intención y capacidad de compra — el evento se llena de compradores potenciales, no de paseantes." },
+    { titulo: "Convocatoria segmentada", texto: "Campaña previa dirigida a perfiles con intención y capacidad de compra: el evento se llena de compradores potenciales." },
     { titulo: "Activación con dinámica", texto: "Experiencia en el punto con dinámica de participación y captura de datos: cada asistente queda registrado para el seguimiento." },
     { titulo: "Cierre en piso", texto: "Asesores preparados con la oferta del día; el interesado pasa de la prueba al papeleo sin salir del evento." },
     { titulo: "Registro y contenido", texto: "Cobertura del evento (incluido drone) que alimenta la prueba social de la marca para la siguiente convocatoria." },
@@ -676,9 +676,9 @@ CASOS_DETALLE.push({
     {
       h2: "Los cuatro momentos que deciden la venta",
       parrafo:
-        "Un evento que vende no es un evento con suerte: es una secuencia. Estos cuatro momentos son los que separan las ventas firmadas de los “te llamo la próxima semana” que nunca se concretan.",
+        "Un evento que vende sigue una secuencia. Estos cuatro momentos son los que separan las ventas firmadas de los “te llamo la próxima semana” que nunca se concretan.",
       pasos: [
-        { titulo: "La semana previa", texto: "campaña dirigida a intención de compra real, no a interés genérico en autos. Aquí se decide la calidad de la sala." },
+        { titulo: "La semana previa", texto: "campaña dirigida a quien tiene intención de compra. Aquí se decide quién llega a la sala." },
         { titulo: "La puerta", texto: "cada asistente queda registrado. Sin ese dato, todo el que no compra hoy se pierde para siempre." },
         { titulo: "El piso", texto: "asesores con la oferta del día lista y capacidad de cerrar sin consultar. El comprador que se va a pensarlo compara con otros dos concesionarios." },
         { titulo: "El día siguiente", texto: "seguimiento a quien no cerró, mientras el recuerdo del evento sigue fresco. Es el tramo que más ventas deja y el que más se abandona." },
@@ -691,13 +691,13 @@ CASOS_DETALLE.push({
       nota: {
         tipo: "aviso",
         titulo: "El error que convierte un buen evento en cero ventas",
-        texto: "Terminar el día con una lista de contactos en papel y no llamar hasta la semana siguiente. La intención de compra de un evento se enfría en 48 horas: quien no recibe seguimiento en ese plazo ya está mirando en otro sitio. El plan de seguimiento se prepara ANTES del evento, no después.",
+        texto: "Terminar el día con una lista de contactos en papel y no llamar hasta la semana siguiente. La intención de compra de un evento se enfría en 48 horas: quien no recibe seguimiento en ese plazo ya está mirando en otro sitio. El plan de seguimiento se prepara antes del evento.",
       },
     },
     {
       h2: "El evento también alimenta al siguiente",
       parrafo:
-        "La cobertura del evento —fotos, video, tomas con drone— no es un recuerdo bonito: es el material de la próxima convocatoria. Un anuncio que muestra una sala llena y gente firmando convence mucho más que uno que promete una sala llena. Por eso conviene grabar pensando en la campaña siguiente y no solo en las redes del día, y por eso el segundo evento parte siempre con ventaja sobre el primero: ya tiene prueba social propia y una base de interesados que no compraron.",
+        "La cobertura del evento (fotos, video, tomas con drone) se usa en la próxima convocatoria. Un anuncio que muestra una sala llena y gente firmando convence mucho más que uno que promete una sala llena. Por eso conviene grabar pensando en la campaña siguiente y no solo en las redes del día, y por eso el segundo evento parte siempre con ventaja sobre el primero: ya tiene prueba social propia y una base de interesados que no compraron.",
     },
   ],
   faq: [

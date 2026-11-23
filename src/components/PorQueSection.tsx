@@ -11,24 +11,24 @@ import SectionHeading from "@/components/SectionHeading";
 // Auditoría CON-12, tarea 2.04.
 const RAZONES_PRODUCCION: [string, string][] = [
   ["Por pedido y con fecha", "Cotizamos con tus especificaciones y te decimos la fecha de entrega antes de empezar."],
-  ["Material según dónde va", "Elegimos el soporte por el sol, el viento y cuánto tiene que durar, no por catálogo."],
+  ["Material según dónde va", "Elegimos el material según el sol, el viento y cuánto tiempo va a estar puesto."],
   ["Diseño, producción e instalación", "Si no tienes el arte lo hacemos, y si la pieza lo pide, la instalamos."],
-  ["Todo con factura", "Somos una empresa formal con RUC 20615266753: cada pedido sale con su comprobante."],
+  ["Todo con factura", "Cada pedido sale con factura. RUC 20615266753."],
 ];
 
 /** BTL: personal en la calle, con lo pactado y su informe (no producción física). */
 const RAZONES_BTL: [string, string][] = [
   ["Se pacta qué cuenta como resultado", "Volantes repartidos, datos captados o ventas del día: lo decidimos antes de salir a la calle."],
-  ["Personal formado en tu mecánica", "Antes de salir, el equipo aprende tu producto y lo que tiene que decir. No es personal genérico."],
-  ["Informe con fotos", "Terminas con fotos de cada punto y los números de la jornada, también cuando no acompañan."],
-  ["Todo con factura", "Somos una empresa formal con RUC 20615266753: cada activación sale con su comprobante."],
+  ["Personal formado en tu mecánica", "Antes de salir, el equipo aprende tu producto y lo que tiene que decir."],
+  ["Informe con fotos", "Recibes fotos de cada punto y los números de la jornada, buenos o malos."],
+  ["Todo con factura", "Cada activación sale con factura. RUC 20615266753."],
 ];
 
 const RAZONES: [string, string][] = [
-  ["Performance, no vanidad", "Medimos leads, citas y cierres. Los likes no pagan la planilla."],
-  ["Estrategia propia por sector", "Cada rubro con su forma de vender, no una receta genérica."],
+  ["Medimos ventas", "Leads, citas y cierres, mes a mes."],
+  ["Estrategia por sector", "Una inmobiliaria no se vende como un restaurante."],
   ["Base en Ica, alcance nacional", "Conocemos el mercado local y operamos campañas en todo el Perú."],
-  ["Transparencia radical", "Ves los números reales de cada etapa, del anuncio a la venta. Sin humo, sin promesas de #1."],
+  ["Números a la vista", "Ves cada etapa, del anuncio a la venta."],
 ];
 
 export default function PorQueSection({
@@ -46,10 +46,10 @@ export default function PorQueSection({
   const razones = t === "btl" ? RAZONES_BTL : t === "produccion" ? RAZONES_PRODUCCION : RAZONES;
   const titulo =
     t === "btl"
-      ? "Gente en la calle, con lo pactado y su informe."
+      ? "Por qué trabajar con nosotros."
       : t === "produccion"
-        ? "Lo que pides, como lo apruebas y en la fecha acordada."
-        : "Leemos lo que otros no ven en tu mercado.";
+        ? "Por qué trabajar con nosotros."
+        : "Por qué trabajar con nosotros.";
   return (
     <section style={{ background: bg }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>

@@ -10,10 +10,10 @@ import { Label } from "@/components/brand/parts";
  */
 
 const PASOS = [
-  { n: "01", t: "Leemos", d: "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir." },
-  { n: "02", t: "Moldeamos", d: "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros." },
+  { n: "01", t: "Leemos", d: "Revisamos tu mercado y tu proceso de venta para ver dónde se pierden clientes." },
+  { n: "02", t: "Moldeamos", d: "Diseñamos la oferta, el mensaje y el embudo." },
   { n: "03", t: "Convertimos", d: "Activamos campañas y agendamos citas, hasta el cierre." },
-  { n: "04", t: "Medimos", d: "Reportamos el costo por contacto (CPL), el retorno de lo invertido en anuncios (ROAS) y los cierres, medidos contra el CRM. Iteramos sobre lo que mueve la venta." },
+  { n: "04", t: "Medimos", d: "Reportamos el costo por contacto (CPL), el retorno de la inversión en anuncios (ROAS) y los cierres según el CRM, y ajustamos con esos números." },
 ];
 
 export default function MetodoPinned() {

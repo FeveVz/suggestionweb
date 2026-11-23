@@ -31,7 +31,7 @@ export default function NotFound() {
             ¿Qué ves aquí? Nosotros tampoco: esta página no existe.
           </h1>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "18px 0 0", maxWidth: "48ch" }}>
-            El enlace cambió o nunca existió. Lo que sí existe: nuestro trabajo convirtiendo atención en ventas.
+            El enlace cambió o nunca existió.
           </p>
           <div style={{ display: "flex", gap: 14, marginTop: 28, flexWrap: "wrap" }}>
             <Btn as="a" href="/" size="lg">

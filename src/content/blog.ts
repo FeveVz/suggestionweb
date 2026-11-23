@@ -621,7 +621,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "De un logo a una marca que vende",
-        foto: propia("/assets/blog/logo-aura-andina.webp", 1080, 1080, "Logo de Aura Andina: una cordillera dibujada con líneas sobre el nombre de la marca", "Logo que diseñamos para Aura Andina, una marca de suplementos andinos. Fue la primera pieza: después vinieron los empaques de cada producto, con la misma identidad."),
+        foto: propia("/assets/blog/logo-aura-andina.webp", 1080, 1080, "Logo de Aura Andina: una cordillera dibujada con líneas sobre el nombre de la marca", "Logo que diseñamos para Aura Andina, marca de suplementos andinos. Después vinieron los empaques, con la misma identidad."),
         parrafo:
           "Un logo es la punta del iceberg. Lo que hace que te elijan y paguen más es la marca completa: nombre, identidad visual, tono y coherencia. Eso no lo da una plantilla ni la IA.",
       },
@@ -2515,7 +2515,7 @@ export const BLOG_POSTS: BlogPost[] = [
     secciones: [
       {
         h2: "Lo que funciona",
-        foto: propia("/assets/blog/post-inmobiliario-mirador.webp", 1000, 1000, "Publicación de La Reserva que invita a conocer su mirador panorámico, con una pareja bajo la pérgola mirando el paisaje", "Post para La Reserva: no habla del metro cuadrado, enseña el mirador. En redes se vende el lugar donde uno se imagina viviendo."),
+        foto: propia("/assets/blog/post-inmobiliario-mirador.webp", 1000, 1000, "Publicación de La Reserva que invita a conocer su mirador panorámico, con una pareja bajo la pérgola mirando el paisaje", "Post para La Reserva sobre su mirador panorámico."),
         bullets: [
           { titulo: "Video y recorridos (incluido drone)", texto: "el inmueble se vende mostrándolo bien; la toma aérea vende ubicación y avance de obra." },
           { titulo: "Mensajes de valorización", texto: "“precio de lanzamiento”, “etapa inicial”, “antes que suba” mueven al inversor." },
@@ -2648,7 +2648,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Lo primero no es Instagram, es que te encuentren",
-        foto: propia("/assets/blog/salon-restaurante-al-toque.webp", 1100, 825, "Salón de Al Toque Venezolano con sus mesas, la pared con el nombre del local y un árbol decorativo de flores amarillas", "Salón de Al Toque Venezolano, fotografiado para el cliente. Ese tipo de foto es la que tiene que estar en la ficha de Google: el local como es hoy, no una imagen de catálogo."),
+        foto: propia("/assets/blog/salon-restaurante-al-toque.webp", 1100, 825, "Salón de Al Toque Venezolano con sus mesas, la pared con el nombre del local y un árbol decorativo de flores amarillas", "Salón de Al Toque Venezolano. Fotos así, del local como es hoy, son las que van en la ficha de Google."),
         parrafo:
           "La mayoría de restaurantes invierte su energía en redes y descuida el sitio donde se toma la decisión de verdad: la búsqueda local. Cuando alguien tiene hambre y busca dónde comer cerca, no abre Instagram, abre el mapa. Y esa búsqueda no es curiosidad: es una decisión a punto de tomarse. Un perfil de empresa completo —horarios correctos, fotos reales del local y de los platos, carta actualizada y reseñas recientes— convierte mejor que cualquier campaña, y no tiene costo por clic.",
         dato: {
@@ -2894,7 +2894,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Posicionamiento, identidad y rebranding no son lo mismo",
-        foto: propia("/assets/blog/empaque-aura-andina-turmeric.webp", 1254, 1254, "Empaque negro con detalles cobre del suplemento Turmeric Reserva de Aura Andina", "Empaque de Aura Andina. En inglés y con el apellido «Reserva», dice a quién le habla antes de que se lea la etiqueta. Eso es la identidad haciendo visible una decisión de posicionamiento."),
+        foto: propia("/assets/blog/empaque-aura-andina-turmeric.webp", 1254, 1254, "Empaque negro con detalles cobre del suplemento Turmeric Reserva de Aura Andina", "Empaque de Aura Andina: el nombre en inglés y el «Reserva» lo presentan como producto premium."),
         parrafo:
           "Se confunden a diario y la confusión sale cara. El posicionamiento es la decisión estratégica: qué lugar quieres ocupar y para quién. La identidad visual es la consecuencia: cómo se ve y se oye esa decisión. Y el rebranding es el cambio de una o de las dos, normalmente porque el negocio cambió. Rediseñar el logo sin haber decidido el posicionamiento es la forma más cara de no cambiar nada: la marca se ve distinta y el cliente sigue pensando exactamente lo mismo de ella.",
       },
@@ -3154,7 +3154,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "¿Cómo se vende algo que todavía no está construido?",
-        foto: propia("/assets/blog/avance-de-obra-la-reserva-dron.webp", 1100, 620, "Vista de dron del avance de obra de La Reserva: áreas verdes ya sembradas y maquinaria abriendo vías en el arenal", "Avance de obra de La Reserva, abril de 2025, tomado con dron. A quien compra sobre plano se le enseña esto: que lo prometido ya se está haciendo."),
+        foto: propia("/assets/blog/avance-de-obra-la-reserva-dron.webp", 1100, 620, "Vista de dron del avance de obra de La Reserva: áreas verdes ya sembradas y maquinaria abriendo vías en el arenal", "Avance de obra de La Reserva visto con dron, abril de 2025."),
         bullets: [
           { titulo: "Vende la valorización, no el ladrillo", texto: "el argumento es “el precio sube cuando avance la obra”. Muéstralo con la escalera de precios por etapa." },
           { titulo: "Genera urgencia real", texto: "condiciones de lanzamiento por etapas: quien espera, paga más. Si la urgencia es inventada, el comprador la huele." },
@@ -3301,7 +3301,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Ejemplo 3: el evento de fin de semana que sale con autos firmados",
-        foto: propia("/assets/blog/exhibicion-camioneta-plaza-ica.webp", 1100, 825, "Camioneta Mitsubishi L200 exhibida de noche en la Plaza de Armas de Ica, con público y el escenario del aniversario de la ciudad al fondo", "Exhibición de Autoniza en la Plaza de Armas de Ica, en junio de 2026, durante las celebraciones por el aniversario de la ciudad: la unidad se lleva a donde ya está la gente."),
+        foto: propia("/assets/blog/exhibicion-camioneta-plaza-ica.webp", 1100, 825, "Camioneta Mitsubishi L200 exhibida de noche en la Plaza de Armas de Ica, con público y el escenario del aniversario de la ciudad al fondo", "Exhibición de Autoniza en la Plaza de Armas de Ica, durante el aniversario de la ciudad (junio de 2026)."),
         parrafo:
           "Un sábado de puertas abiertas no vende solo. Vende la convocatoria previa: dos semanas de pauta dirigida a un perfil con intención y capacidad, más una condición que solo existe ese día. Con Autoniza, en Ica, así salieron 3 autos vendidos el 22 de mayo y 5 el 25 de junio.",
         bullets: [
@@ -3413,7 +3413,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Cómo conseguir leads que cierran",
-        foto: propia("/assets/blog/registro-de-datos-en-exhibicion.webp", 1100, 825, "Promotora de Mitsubishi con catálogos en la mano junto a visitantes que usan su celular durante una exhibición en Ica", "Exhibición de Autoniza en Ica: la promotora entrega el catálogo y el interesado se registra desde su celular, en el momento en que tiene el auto delante."),
+        foto: propia("/assets/blog/registro-de-datos-en-exhibicion.webp", 1100, 825, "Promotora de Mitsubishi con catálogos en la mano junto a visitantes que usan su celular durante una exhibición en Ica", "Exhibición de Autoniza en Ica: el interesado recibe el catálogo y se registra desde su celular."),
         bullets: [
           { titulo: "Segmenta por intención y capacidad", texto: "llega a quien busca cambiar de auto y puede hacerlo." },
           { titulo: "Filtra en el anuncio", texto: "menciona condiciones (financiamiento, modelo) que descartan al que no califica." },
@@ -3531,7 +3531,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Cómo se ve un anuncio que trae compradores y no curiosos",
-        foto: propia("/assets/servicios/pop-colgante-sala.webp", 750, 1000, "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", "Colgante del Renault Duster en la sala de Pacífico Motors: el modelo real, su argumento y la web en una pieza que sigue vendiendo cuando el cliente ya entró."),
+        foto: propia("/assets/servicios/pop-colgante-sala.webp", 750, 1000, "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", "Colgante del Renault Duster en la sala de Pacífico Motors."),
         parrafo:
           "La diferencia no está en la creatividad, está en el filtro. Un anuncio que le habla a todos junta clics baratos y quema al equipo comercial. Uno que filtra dice la cuota, nombra el modelo y pide una cita.",
         sub: [
@@ -4989,7 +4989,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Un logo no es una identidad de marca",
-        foto: propia("/assets/blog/logo-aura-andina.webp", 1080, 1080, "Logo de Aura Andina: una cordillera dibujada con líneas sobre el nombre de la marca", "El logo de Aura Andina. Una cotización de logo suelto entrega esto y sus archivos; los empaques y el resto de piezas de la marca son otro trabajo, y otro presupuesto."),
+        foto: propia("/assets/blog/logo-aura-andina.webp", 1080, 1080, "Logo de Aura Andina: una cordillera dibujada con líneas sobre el nombre de la marca", "El logo de Aura Andina. Un logo suelto se entrega con sus archivos; los empaques se cotizan aparte."),
         parrafo:
           "Se piden como si fueran lo mismo y son cosas distintas, y de ahí vienen la mitad de las sorpresas al cotizar. El logo es una pieza; la identidad es el sistema que hace que todo lo demás se vea como tú.",
         tabla: {
@@ -5105,7 +5105,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "El costo que nadie suma: repartirlos",
-        foto: propia("/assets/blog/volanteo-en-calle.webp", 825, 1100, "Promotor entregando un volante a una transeúnte en una vereda de Ica", "Volanteo a pie de calle en Ica. La impresión es la mitad de la cuenta: la otra mitad es quién entrega, en qué esquina y a qué hora."),
+        foto: propia("/assets/blog/volanteo-en-calle.webp", 825, 1100, "Promotor entregando un volante a una transeúnte en una vereda de Ica", "Volanteo en una calle de Ica. Al costo de impresión hay que sumarle el de repartir."),
         parrafo:
           "Aquí está el error de presupuesto más común con los volantes. Imprimir mil cuesta poco; repartirlos bien cuesta más, y es lo que decide si la campaña sirve de algo. Mil volantes en una caja debajo del mostrador no han hecho publicidad: han hecho inventario.",
         bullets: [
@@ -5315,7 +5315,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Qué tiene que traer para que valga lo que cuesta",
-        foto: propia("/assets/blog/taller-plan-de-negocios.webp", 1100, 825, "Presentación del plan de negocios 2025 de Pacífico Motors ante su equipo, en una sala de reuniones", "Presentación del plan de negocios 2025 de Pacífico Motors a su equipo. Un plan se presenta a quienes lo van a ejecutar, para que cada uno salga sabiendo qué le toca."),
+        foto: propia("/assets/blog/taller-plan-de-negocios.webp", 1100, 825, "Presentación del plan de negocios 2025 de Pacífico Motors ante su equipo, en una sala de reuniones", "Presentación del plan de negocios 2025 de Pacífico Motors a su equipo."),
         parrafo:
           "Un plan de marketing no es un documento bonito con gráficos: es un conjunto de decisiones tomadas. Si al terminar de leerlo no sabes qué hacer el lunes, no era un plan.",
         bullets: [
@@ -6131,7 +6131,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "De dónde salen los compradores",
-        foto: propia("/assets/blog/fondo-de-marca-inmobiliaria-evento.webp", 825, 1100, "Fondo fotográfico de la urbanización La Reserva en un concurso de caballos de paso", "El fondo de marca de La Reserva en un concurso de caballos de paso. Estar donde ya se reúne el público del proyecto es un canal de compradores que no depende de la pauta."),
+        foto: propia("/assets/blog/fondo-de-marca-inmobiliaria-evento.webp", 825, 1100, "Fondo fotográfico de la urbanización La Reserva en un concurso de caballos de paso", "El fondo de marca de La Reserva en un concurso de caballos de paso, donde se reúne el público del proyecto."),
         parrafo:
           "Casi todos los proyectos de lotes gastan en un solo canal y culpan al canal cuando no vende. Estos son los cuatro que funcionan en Perú, con lo que cada uno hace bien y lo que no.",
         tabla: {
@@ -6301,7 +6301,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Dónde publicarlo y cómo se ve un anuncio que funciona",
-        foto: propia("/assets/blog/lotizacion-desierto-dron.webp", 1100, 619, "Vista aérea de una lotización trazada en terreno desértico", "Una lotización vista desde el dron. La foto aérea responde de un vistazo lo que el comprador pregunta primero: dónde está el terreno, cómo se llega y cómo queda dentro del trazado."),
+        foto: propia("/assets/blog/lotizacion-desierto-dron.webp", 1100, 619, "Vista aérea de una lotización trazada en terreno desértico", "Una lotización vista desde el dron: se ve dónde está cada terreno y cómo se llega."),
         parrafo:
           "Publicar en diez sitios con un anuncio malo rinde menos que publicar en tres con uno bueno. Esto es lo que mira quien está comparando terrenos, en el orden en que lo mira.",
         bullets: [
@@ -6422,7 +6422,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Las reseñas y la ficha deciden más que la campaña",
-        foto: propia("/assets/blog/salon-beach-club-noche.webp", 1100, 825, "Salón de un beach club de noche, con techo de caña, sillones y mesas junto a los ventanales", "Un salón de beach club de noche, con su luz real. Así lo verá el huésped en la foto de su celular: el local tiene que verse bien así, sin producción."),
+        foto: propia("/assets/blog/salon-beach-club-noche.webp", 1100, 825, "Salón de un beach club de noche, con techo de caña, sillones y mesas junto a los ventanales", "Salón de un beach club, de noche."),
         parrafo:
           "Quien está eligiendo entre tu hotel y el de al lado abre las reseñas antes que tu web. En hotelería, la reputación en línea no es una métrica de marketing: es parte del producto, y se gestiona todos los días.",
         bullets: [

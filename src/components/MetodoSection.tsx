@@ -7,10 +7,10 @@ import SectionHeading from "@/components/SectionHeading";
  */
 
 const PASOS: [string, string][] = [
-  ["Leemos", "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir."],
-  ["Moldeamos", "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros."],
+  ["Leemos", "Revisamos tu mercado y tu proceso de venta para ver dónde se pierden clientes."],
+  ["Moldeamos", "Diseñamos la oferta, el mensaje y el embudo."],
   ["Convertimos", "Activamos campañas y agendamos citas, hasta el cierre."],
-  ["Medimos", "Reportamos el costo por contacto (CPL), el retorno de lo invertido en anuncios (ROAS) y los cierres, medidos contra el CRM. Iteramos sobre lo que mueve la venta."],
+  ["Medimos", "Reportamos el costo por contacto (CPL), el retorno de la inversión en anuncios (ROAS) y los cierres según el CRM, y ajustamos con esos números."],
 ];
 
 export default function MetodoSection() {
@@ -18,7 +18,7 @@ export default function MetodoSection() {
     <section data-tono="oscuro" style={{ background: "var(--black)", color: "var(--white)" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>
         <SectionHeading level={2} kicker="Cómo trabajamos" tone="dark" maxWidth="22ch" style={{ marginBottom: 40 }}>
-          El método que convierte atención en ventas.
+          Nuestro método, en cuatro pasos.
         </SectionHeading>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "var(--space-4)" }}>
           {PASOS.map(([t, d], i) => (

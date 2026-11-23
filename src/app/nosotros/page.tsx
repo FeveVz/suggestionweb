@@ -30,7 +30,7 @@ const SECCIONES: Seccion[] = [
   {
     h2: "Qué somos, en datos",
     parrafo:
-      `Somos una agencia de marketing de performance con base en Ica y clientes en todo el Perú. No es una descripción de folleto: significa que el trabajo se mide en leads, citas y cierres, y que el reporte del mes trae esos números aunque no favorezcan. Abrimos en ${site.fundacion} y llevamos ${aniosActivos()} años haciéndolo; en ese tiempo han pasado por aquí más de cincuenta marcas de sectores muy distintos.`,
+      `Somos una agencia de marketing de performance con base en Ica y clientes en todo el Perú. Medimos el trabajo en leads, citas y cierres, y el reporte del mes trae esos números aunque no favorezcan. Abrimos en ${site.fundacion} y llevamos ${aniosActivos()} años haciéndolo; en ese tiempo han pasado por aquí más de cincuenta marcas de sectores muy distintos.`,
     tabla: {
       cabeceras: ["", ""],
       filas: [
@@ -48,33 +48,29 @@ const SECCIONES: Seccion[] = [
   {
     h2: "Digital y calle, bajo un mismo techo",
     parrafo:
-      "Es la diferencia práctica más grande con la mayoría de agencias, y no es una decisión de catálogo. En Ica y en buena parte del Perú, la compra rara vez ocurre entera en la pantalla: alguien ve un anuncio, pregunta por WhatsApp, pasa por el local y decide delante del producto. Cuando la campaña la lleva una empresa y el material del punto de venta otra, el cliente nota la costura, y esa incoherencia se paga en ventas. Aquí las dos capas salen del mismo equipo.",
+      "En Ica y en buena parte del Perú, la compra rara vez ocurre entera en la pantalla: alguien ve un anuncio, pregunta por WhatsApp, pasa por el local y decide delante del producto. Cuando la campaña la lleva una empresa y el material del punto de venta otra, el cliente nota la costura, y esa incoherencia se paga en ventas. Aquí las dos capas salen del mismo equipo.",
   },
   {
-    h2: "Cómo trabajamos, sin adornos",
-    parrafo:
-      "Esto es lo que ocurre de verdad cuando empezamos, incluida la parte aburrida. La ponemos por escrito porque las expectativas mal puestas al principio son la causa más común de que una relación no funcione.",
+    h2: "Cómo empezamos con un cliente nuevo",
     pasos: [
       { titulo: "Miramos tu proceso comercial, no solo tu marketing", texto: "de dónde llegan hoy tus clientes, cuánto te cuestan y dónde se pierden. Casi siempre hay más ventas escondidas en las fugas que en un canal nuevo." },
       { titulo: "Montamos la medición antes que la campaña", texto: "si no está claro qué cuenta como lead y cómo se registra, cualquier resultado posterior es una opinión." },
       { titulo: "Arrancamos con presupuesto de aprendizaje", texto: "no con el total. Las plataformas necesitan volumen para optimizar, y cambiar todo cada dos días reinicia ese aprendizaje y encarece el resultado." },
-      { titulo: "Decidimos con datos, no por gusto", texto: "qué mensaje trae contactos que cierran, no cuál nos gusta más. Es la parte donde se deja de discutir de colores." },
+      { titulo: "Decidimos con datos", texto: "se queda el mensaje que trae contactos que cierran, aunque no sea el que más nos gusta." },
       { titulo: "Reportamos con los números como son", texto: "costo por lead, por cita y por venta. También los meses en que no salen." },
     ],
   },
   {
     h2: "Lo que no vamos a hacer",
-    parrafo:
-      "Nos parece más útil decir esto por adelantado que descubrirlo a los tres meses. Ninguna de estas cosas es una postura moral: todas son decisiones prácticas que protegen el resultado del cliente.",
     bullets: [
       { titulo: "No prometemos el puesto número uno", texto: "nadie controla a la competencia ni el algoritmo. Prometemos medir y decirte dónde estás." },
       { titulo: "No compramos seguidores ni reseñas", texto: "las plataformas lo detectan, y el daño a una ficha dura mucho más que el beneficio." },
-      { titulo: "No reportamos alcance como si fuera venta", texto: "el alcance describe la conversación; el negocio son las citas y los cierres." },
-      { titulo: "No vendemos una campaña cuando el problema es otro", texto: "si en el diagnóstico vemos que la causa es el precio, el producto o la capacidad de atención, lo decimos. Es más útil que facturar algo que no iba a funcionar." },
+      { titulo: "No reportamos alcance como si fuera venta", texto: "lo que cuenta son las citas y los cierres." },
+      { titulo: "No vendemos una campaña cuando el problema es otro", texto: "si en el diagnóstico vemos que la causa es el precio, el producto o la capacidad de atención, lo decimos." },
     ],
     nota: {
       titulo: "Qué necesitamos de tu lado",
-      texto: "Alguien que responda los mensajes el mismo día, claridad en precios y condiciones para que quien atiende no tenga que consultar cada duda, y acceso a tus números reales de venta. Sin esas tres cosas, buena parte de la inversión se pierde en un tramo que no controlamos.",
+      texto: "Alguien que responda los mensajes el mismo día, claridad en precios y condiciones para que quien atiende no tenga que consultar cada duda, y acceso a tus números reales de venta. Sin eso, buena parte de la inversión se pierde.",
     },
   },
 ];
@@ -82,11 +78,11 @@ const SECCIONES: Seccion[] = [
 const FAQ_NOSOTROS: FaqItem[] = [
   {
     q: "¿Por qué una agencia de Ica y no una de Lima?",
-    a: "Por dos cosas concretas, no por localismo. La primera es que conocemos el mercado de cerca: cómo se mueve la temporada, qué sectores mandan y cómo compra la gente aquí. La segunda es que producimos en la región, así que una gigantografía o una activación no dependen de coordinar a distancia. Para la parte digital la ubicación da igual, y trabajamos con marcas de todo el país.",
+    a: "Por dos cosas. La primera es que conocemos el mercado de cerca: cómo se mueve la temporada, qué sectores mandan y cómo compra la gente aquí. La segunda es que producimos en la región, así que una gigantografía o una activación no dependen de coordinar a distancia. Para la parte digital la ubicación da igual, y trabajamos con marcas de todo el país.",
   },
   {
     q: "¿Con qué tamaño de empresa trabajan?",
-    a: "Desde un consultorio o una bodega familiar hasta concesionarios y agroexportadoras. Lo que cambia no es el tamaño sino si hay alguien que pueda atender lo que la campaña genere: un negocio pequeño con respuesta rápida rinde más que uno grande donde los mensajes esperan tres días.",
+    a: "Desde un consultorio o una bodega familiar hasta concesionarios y agroexportadoras. Lo que importa es que haya alguien que atienda lo que la campaña genere: un negocio pequeño con respuesta rápida rinde más que uno grande donde los mensajes esperan tres días.",
   },
   {
     q: "¿Cuánto tardan en verse resultados?",
@@ -98,34 +94,34 @@ const FAQ_NOSOTROS: FaqItem[] = [
   },
   {
     q: "¿Qué pasa si quiero dejarlo?",
-    a: "Lo que hemos construido es tuyo: dominio, web, accesos, cuentas publicitarias y base de datos. Es una condición razonable que deberías exigirle a cualquier proveedor, y conviene comprobarla antes de firmar, no después.",
+    a: "Lo que hemos construido es tuyo: dominio, web, accesos, cuentas publicitarias y base de datos. Pídelo a cualquier proveedor antes de firmar.",
   },
   {
     q: "¿Trabajan con competidores directos?",
-    a: "No en la misma categoría y la misma zona. Es incompatible con hacer bien el trabajo: la estrategia de uno se construye precisamente mirando lo que hace el otro.",
+    a: "No en la misma categoría y la misma zona: la estrategia de uno se construye mirando lo que hace el otro.",
   },
 ];
 
 const METODO = [
-  ["Leemos", "Auditamos tu mercado y tu proceso de venta. Vemos dónde se pierde la atención antes de convertir."],
-  ["Moldeamos", "Diseñamos oferta, mensaje y embudo. Lo que tu público termina viendo lo decidimos nosotros."],
+  ["Leemos", "Revisamos tu mercado y tu proceso de venta para ver dónde se pierden clientes."],
+  ["Moldeamos", "Diseñamos la oferta, el mensaje y el embudo."],
   ["Convertimos", "Activamos campañas y agendamos citas, hasta el cierre."],
   ["Medimos", "Reportamos CPL, ROAS y cierres con transparencia. Iteramos sobre lo que mueve la venta."],
 ];
 
 const POR_QUE = [
-  ["Performance, no vanidad", "Medimos leads, citas y cierres. Los likes no pagan la planilla."],
-  ["Estrategia propia por sector", "Cada rubro con su forma de vender, no una receta genérica."],
+  ["Medimos ventas", "Leads, citas y cierres, mes a mes."],
+  ["Estrategia por sector", "Una inmobiliaria no se vende como un restaurante."],
   ["Base en Ica, alcance nacional", "Conocemos el mercado local y operamos campañas en todo el Perú."],
-  ["Transparencia radical", "Ves los números reales de cada etapa, del anuncio a la venta. Sin humo, sin promesas de #1."],
+  ["Números a la vista", "Ves cada etapa, del anuncio a la venta."],
 ];
 
 const VALORES = [
-  ["Humanidad", "Detrás de cada negocio hay personas. Priorizamos relaciones genuinas, no contratos fríos."],
-  ["Transparencia", "Comunicación clara en cada propuesta y reporte. Sin letras pequeñas ni promesas vacías."],
-  ["Autenticidad", "Mostramos la verdad de cada marca. Contenido real y resultados medibles, no postureo."],
-  ["Empatía", "Entendemos tu necesidad antes de proponer. Partimos de tu negocio, no de una plantilla."],
-  ["Adaptabilidad", "Flexibles en la propuesta, ágiles en la ejecución. Nos movemos a la velocidad de tu mercado."],
+  ["Humanidad", "Detrás de cada negocio hay personas, y así las tratamos."],
+  ["Transparencia", "Propuestas y reportes claros, sin letra pequeña."],
+  ["Autenticidad", "Mostramos cada marca como es, con contenido real."],
+  ["Empatía", "Entendemos tu negocio antes de proponer."],
+  ["Adaptabilidad", "Nos ajustamos a los tiempos de tu mercado."],
 ];
 
 // Única fuente de verdad del equipo (fotos incluidas): content/equipo.ts
@@ -152,7 +148,7 @@ export default function Nosotros() {
               La agencia de performance de Ica
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "54ch" }}>
-              Nacimos para una cosa: convertir la atención de tu mercado en ventas. Mostramos números reales y trabajamos todo el proceso, de la estrategia al cierre.
+              Convertimos la atención de tu mercado en ventas, de la estrategia al cierre, y te mostramos los números.
             </p>
             <div className="hk-enter-4" style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap" }}>
               <Btn as="a" href="/consultoria-cero" size="lg">Agenda tu consultoría cero <ArrowRight size={18} /></Btn>
@@ -237,7 +233,7 @@ export default function Nosotros() {
             Las personas detrás de Suggestion.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)" }}>
-            Estrategia, performance, creatividad y producción bajo un mismo techo. Por eso todo funciona conectado: nadie le pasa la pelota a un tercero.
+            Estrategia, performance, creatividad y producción en un mismo equipo, sin pasarle el trabajo a terceros.
           </p>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)" }}>

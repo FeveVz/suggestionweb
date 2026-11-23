@@ -28,7 +28,7 @@ export const SERVICIOS_PILAR = {
  */
 export const SERVICIOS_PILAR_SECCIONES: Seccion[] = [
   {
-    h2: "Empieza por el problema, no por el servicio",
+    h2: "Empieza por el problema",
     parrafo:
       "Casi nadie llega buscando «una campaña de publicidad digital». Se llega con un problema: el teléfono no suena, llegan contactos que no compran, la marca se ve improvisada al lado de la competencia. Por eso conviene entrar por ahí. Esta tabla es el atajo que usamos en la primera conversación, y sirve igual si decides no trabajar con nosotros.",
     tabla: {
@@ -41,7 +41,7 @@ export const SERVICIOS_PILAR_SECCIONES: Seccion[] = [
         ["La web no convierte", "Estructura y velocidad, casi nunca el diseño", "Desarrollo web"],
         ["Nadie te ve en la calle", "Toda la inversión está en pantalla", "BTL, imprenta y publicidad móvil"],
       ],
-      nota: "Es un mapa de partida, no un diagnóstico. La causa real aparece al mirar tus números.",
+      nota: "Es un punto de partida. La causa real aparece al mirar tus números.",
     },
   },
   {
@@ -50,7 +50,7 @@ export const SERVICIOS_PILAR_SECCIONES: Seccion[] = [
       "La mayoría de agencias hace una cosa u otra: o campañas o producción física. Nosotros hacemos las dos, y no por ampliar catálogo. En Ica y en buena parte del Perú, la decisión de compra rara vez ocurre entera en la pantalla: alguien ve un anuncio, pregunta por WhatsApp, pasa por el local y decide delante del producto. Cuando la campaña la lleva una empresa y el material del punto de venta otra, el cliente nota la costura —el envase no se parece al anuncio, el mensaje cambia a mitad de camino— y esa incoherencia se paga en ventas.",
     bullets: [
       { titulo: "Un solo mensaje", texto: "lo que ve en Instagram, lo que lee en la web y lo que encuentra en el local dicen lo mismo." },
-      { titulo: "Un solo responsable", texto: "si algo falla, no hay dos proveedores señalándose. Es una conversación, no tres." },
+      { titulo: "Un solo responsable", texto: "si algo falla, no hay dos proveedores echándose la culpa." },
       { titulo: "Tiempos que encajan", texto: "la gigantografía está lista cuando arranca la campaña, no dos semanas después." },
     ],
   },
@@ -214,7 +214,7 @@ const CATEGORIAS_RAW: Servicio[] = [
           "Tres frentes que se coordinan entre sí, porque el mismo mensaje tiene que sostenerse en los tres para que el cliente reconozca a la misma marca.",
         bullets: [
           { titulo: "Marketing digital", texto: "la estrategia completa: qué canal, qué mensaje, para qué público y con qué objetivo comercial." },
-          { titulo: "Publicidad digital", texto: "campañas en Meta y Google que traen contactos con intención, no clics baratos." },
+          { titulo: "Publicidad digital", texto: "campañas en Meta y Google que traen contactos con intención de compra." },
           { titulo: "Redes sociales", texto: "la presencia que sostiene la confianza entre campaña y campaña, y que revisa todo el que va a comprarte." },
         ],
       },
@@ -224,14 +224,14 @@ const CATEGORIAS_RAW: Servicio[] = [
           "Reportamos la cadena completa: contactos, citas y cierres, con el costo de cada paso. El alcance y los seguidores aparecen en el informe, pero no son la métrica que decide si seguimos invirtiendo. Este enfoque es el que llevó a una inmobiliaria de Ica a S/350K en ventas con S/3,000 en Meta Ads: 350 contactos, 20 visitas a sala de ventas y 8 lotes vendidos. La cifra que importa no fue el alcance, fueron los 8 lotes.",
       },
       {
-        h2: "Un método por rubro, no una receta genérica",
+        h2: "Un método por rubro",
         parrafo:
           "Un concesionario necesita llenar el piso de pruebas de manejo; una clínica, llenar la agenda sin quemar presupuesto; una inmobiliaria, citas calificadas en sala de ventas. Los tres podrían usar las mismas herramientas y fracasar con la misma estrategia. Por eso trabajamos con un enfoque distinto para cada uno de los siete sectores que atendemos, en lugar de aplicar la misma plantilla a todos.",
       },
       {
         h2: "Qué necesitas tener antes de invertir en pauta",
         parrafo:
-          "Somos claros con esto porque nos ahorra problemas a los dos: la publicidad acelera lo que ya funciona, no lo arregla. Antes de encender campañas conviene tener resuelto a dónde llega el interesado —una página o un WhatsApp que responda—, quién atiende y en cuánto tiempo, y qué se le ofrece exactamente. Si falta alguna de las tres, la pauta solo consigue que más gente descubra el problema. Cuando detectamos eso en el diagnóstico, lo decimos antes de cobrar.",
+          "La publicidad acelera lo que ya funciona, pero no arregla lo que falla. Antes de encender campañas conviene tener resuelto a dónde llega el interesado —una página o un WhatsApp que responda—, quién atiende y en cuánto tiempo, y qué se le ofrece exactamente. Si falta alguna de las tres, la pauta solo consigue que más gente descubra el problema. Cuando detectamos eso en el diagnóstico, lo decimos antes de cobrar.",
       },
     ],
     faq: [
@@ -274,7 +274,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       {
         h2: "Lo único de internet que sí es tuyo",
         parrafo:
-          "Tus redes son alquiladas: si mañana cambia el algoritmo, te suspenden la cuenta o la plataforma pierde relevancia, se va con ella tu canal de venta. Tu web y tu base de contactos son lo único que controlas de verdad. Por eso esta categoría no va de tener una página bonita: va de construir el activo que sostiene el negocio cuando lo demás falla.",
+          "Tus redes son alquiladas: si mañana cambia el algoritmo, te suspenden la cuenta o la plataforma pierde relevancia, se va con ella tu canal de venta. Tu web y tu base de contactos son lo único que controlas del todo. Por eso esta categoría no va de tener una página bonita: va de construir el activo que sostiene el negocio cuando lo demás falla.",
       },
       {
         h2: "Qué incluye esta categoría",
@@ -287,9 +287,9 @@ const CATEGORIAS_RAW: Servicio[] = [
         ],
       },
       {
-        h2: "Una web que convierte, no un folleto digital",
+        h2: "Una web que convierte visitas en contactos",
         parrafo:
-          "La mayoría de webs de pyme son un folleto: cuentan quién eres y ahí termina. Una web que convierte hace tres cosas más: deja clarísimo qué problema resuelves en los primeros cinco segundos, quita cada obstáculo entre el interés y el contacto, y da señales de confianza —casos, cifras, datos de contacto visibles— justo donde el visitante duda. La diferencia entre una y otra no es el diseño: es el orden de la información.",
+          "La mayoría de webs de pyme son un folleto: cuentan quién eres y ahí termina. Una web que convierte hace tres cosas más: deja clarísimo qué problema resuelves en los primeros cinco segundos, quita cada obstáculo entre el interés y el contacto, y da señales de confianza —casos, cifras, datos de contacto visibles— justo donde el visitante duda. Lo que separa una de otra es el orden de la información, más que el diseño.",
       },
       {
         h2: "SEO: lento, pero es el que se queda",
@@ -310,15 +310,15 @@ const CATEGORIAS_RAW: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto tarda una web en estar lista?",
-        a: "Depende del alcance, pero lo que más influye no es la programación: es la rapidez con que se define el contenido y se aprueban los textos e imágenes. Un proyecto con el contenido listo avanza mucho más rápido que uno donde se va decidiendo sobre la marcha.",
+        a: "Depende del alcance, pero lo que más influye es la rapidez con que se define el contenido y se aprueban los textos e imágenes. Un proyecto con el contenido listo avanza mucho más rápido que uno donde se va decidiendo sobre la marcha.",
       },
       {
         q: "¿Es mejor una web hecha a medida o una plantilla?",
-        a: "Una plantilla resuelve bien si necesitas presencia rápida y económica. Empieza a quedarse corta cuando necesitas velocidad de carga real, posicionamiento serio o funciones propias. La pregunta útil no es cuál es mejor, sino cuánto te cuesta migrar después si tu negocio crece.",
+        a: "Una plantilla resuelve bien si necesitas presencia rápida y económica. Empieza a quedarse corta cuando necesitas velocidad de carga real, posicionamiento serio o funciones propias. Conviene preguntar cuánto te costaría migrar después si tu negocio crece.",
       },
       {
         q: "¿Cuánto tiempo toma ver resultados de SEO?",
-        a: "Se mide en meses, no semanas. Las primeras señales —que Google indexe y muestre tus páginas— aparecen pronto, pero subir a las primeras posiciones en términos con competencia es un trabajo sostenido. Si necesitas ventas este mes, el SEO no es el canal; es el que asegura los meses siguientes.",
+        a: "Se mide en meses, no semanas. Las primeras señales —que Google indexe y muestre tus páginas— aparecen pronto, pero subir a las primeras posiciones en términos con competencia es un trabajo sostenido. Si necesitas ventas este mes, el SEO no es el canal: sus resultados llegan en los meses siguientes.",
       },
       {
         q: "¿Necesito un CRM si tengo pocos clientes?",
@@ -350,7 +350,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       {
         h2: "La marca es lo que queda cuando apagas la pauta",
         parrafo:
-          "Puedes comprar atención todos los meses o construir una razón para que te elijan sin pagar por ella. La marca es eso: la diferencia entre competir por precio y competir por preferencia. En mercados como el iqueño, donde muchos ofrecen lo mismo, la marca suele ser el único terreno donde de verdad se puede ganar sin bajar el margen.",
+          "Puedes comprar atención todos los meses o construir una razón para que te elijan sin pagar por ella. La marca es eso: la diferencia entre competir por precio y competir por preferencia. En mercados como el iqueño, donde muchos ofrecen lo mismo, la marca suele ser la única forma de ganar sin bajar el margen.",
       },
       {
         h2: "Qué incluye esta categoría",
@@ -374,7 +374,7 @@ const CATEGORIAS_RAW: Servicio[] = [
       {
         h2: "Marca fuerte, publicidad más barata",
         parrafo:
-          "Esto se ve en los números y no es teoría: cuando la gente ya te conoce, tus anuncios necesitan menos esfuerzo para convencer, y eso baja el costo de cada contacto. La marca no es el gasto que se recorta cuando hay que apretar: es lo que hace que el resto del presupuesto rinda más.",
+          "Esto se ve en los números y no es teoría: cuando la gente ya te conoce, tus anuncios necesitan menos esfuerzo para convencer, y eso baja el costo de cada contacto. Cuando se recorta la marca para ahorrar, el resto del presupuesto rinde menos.",
       },
       {
         h2: "Cómo trabajamos la coherencia",
@@ -422,14 +422,14 @@ const CATEGORIAS_RAW: Servicio[] = [
       {
         h2: "Por qué lo físico sigue vendiendo (y más en Ica)",
         parrafo:
-          "Un anuncio se cierra con el pulgar; una gigantografía en la avenida no. El medio físico tiene una ventaja que lo digital no puede comprar: ocupa un espacio real en la ruta diaria de tu cliente y no compite con veinte notificaciones. En una plaza como Ica, donde buena parte de la decisión de compra todavía pasa por la calle, el punto de venta y el boca a boca, la presencia física no es nostalgia: es donde está el cliente. Lo que sí cambió es que ahora se puede medir, y esa es la parte que casi nadie hace.",
+          "Un anuncio se cierra con el pulgar; una gigantografía en la avenida no. El medio físico tiene una ventaja que lo digital no puede comprar: ocupa un espacio real en la ruta diaria de tu cliente y no compite con veinte notificaciones. En una plaza como Ica, donde buena parte de la decisión de compra todavía pasa por la calle, el punto de venta y el boca a boca, la presencia física sigue siendo donde está el cliente. Lo que sí cambió es que ahora se puede medir, y esa es la parte que casi nadie hace.",
       },
       {
         h2: "Qué cubre esta categoría",
         parrafo:
           "Seis frentes que suelen contratarse por separado y funcionan mucho mejor coordinados, porque comparten la misma marca, el mismo mensaje y el mismo calendario.",
         bullets: [
-          { titulo: "BTL y activaciones", texto: "presencia en eventos, ferias y punto de venta, con equipo y guion de contacto para que la activación termine en dato, no solo en foto." },
+          { titulo: "BTL y activaciones", texto: "presencia en eventos, ferias y punto de venta, con equipo y guion de contacto para que cada activación deje datos de contacto." },
           { titulo: "Publicidad móvil", texto: "tu marca circulando por las rutas donde está tu público, con cobertura que un panel fijo no alcanza." },
           { titulo: "Estructuras publicitarias", texto: "tótems, letras volumétricas y señalización que convierten tu fachada en el mejor anuncio permanente que puedes tener." },
           { titulo: "Material POP", texto: "lo que decide la compra en el último metro: exhibidores, señalética de góndola, piezas de mostrador." },
@@ -461,7 +461,7 @@ const CATEGORIAS_RAW: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto tiempo toma producir una gigantografía o un banner?",
-        a: "Depende del formato y del acabado, pero la producción impresa suele resolverse en días, no semanas. Lo que más retrasa un pedido no es la impresión: es la aprobación del arte. Si el diseño ya está cerrado y el archivo llega en condiciones, los tiempos se acortan mucho.",
+        a: "Depende del formato y del acabado, pero la producción impresa suele resolverse en días. Lo que más retrasa un pedido es la aprobación del arte. Si el diseño ya está cerrado y el archivo llega en condiciones, los tiempos se acortan mucho.",
       },
       {
         q: "¿Hacen el diseño o tengo que llevarlo listo?",
@@ -552,7 +552,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Qué resolvemos",
         parrafo:
-          "Diagnóstico honesto de tu marketing, detección de fugas en el embudo y un plan accionable. Sin humo: te decimos qué funciona, qué no y qué soltar.",
+          "Diagnóstico honesto de tu marketing, detección de fugas en el embudo y un plan accionable. Te decimos qué funciona, qué no y qué dejar.",
       },
       {
         h2: "Cómo trabajamos",
@@ -574,7 +574,7 @@ const SERVICIOS_BASE: Servicio[] = [
     beneficios: [
       { titulo: "Visión objetiva", texto: "Una auditoría imparcial de tu situación actual, con recomendaciones accionables." },
       { titulo: "Plan de acción", texto: "Un roadmap con prioridades, tiempos y recursos —no teoría de manual." },
-      { titulo: "Experiencia probada", texto: "Consejo basado en casos reales (como Ceinys), no en plantillas genéricas." },
+      { titulo: "Experiencia probada", texto: "Consejo basado en casos reales, como el de Ceinys." },
       { titulo: "Acompañamiento", texto: "No solo decimos qué hacer: te acompañamos en la implementación." },
     ],
     proceso: [
@@ -626,7 +626,7 @@ const SERVICIOS_BASE: Servicio[] = [
       "Un estudio de mercado responde una pregunta de negocio concreta: si hay demanda, a qué precio, qué hace tu competencia y qué quiere tu cliente.",
       "Hay tres planes por proyecto: S/1,500 con 50 encuestas, S/3,000 con 150 y S/6,000 con 300 encuestas más 10 a 15 entrevistas a clientes reales.",
       "Combinamos encuestas y análisis de datos con entrevistas y focus groups, según lo que necesites responder.",
-      "Entregamos un informe ejecutivo con hallazgos y recomendaciones que puedes ejecutar, no un PDF para archivar.",
+      "Entregamos un informe ejecutivo con hallazgos y recomendaciones que puedes ejecutar.",
     ],
     cta: "Agenda tu consultoría cero",
     keyword: "investigación de mercado",
@@ -649,7 +649,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Qué entregamos",
         parrafo:
-          "Un informe accionable, no un PDF para archivar. Conclusiones claras y recomendaciones que puedes ejecutar.",
+          "Conclusiones claras y recomendaciones que puedes ejecutar.",
       },
     ],
     incluye: [
@@ -665,7 +665,7 @@ const SERVICIOS_BASE: Servicio[] = [
     ],
     beneficios: [
       { titulo: "Reduce riesgos", texto: "Valida hipótesis antes de invertir: conoce el mercado antes de entrar." },
-      { titulo: "Conoce a tu cliente", texto: "Entiende qué piensan, necesitan y valoran de verdad tus consumidores." },
+      { titulo: "Conoce a tu cliente", texto: "Entiende qué piensan, necesitan y valoran tus clientes." },
       { titulo: "Supera a la competencia", texto: "Identifica sus fortalezas y debilidades para diferenciarte." },
       { titulo: "Descubre oportunidades", texto: "Encuentra nichos, tendencias y espacios no atendidos." },
     ],
@@ -695,7 +695,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cómo entregan los resultados?",
-        a: "Un informe ejecutivo con hallazgos y recomendaciones accionables, no un PDF para archivar.",
+        a: "Un informe ejecutivo con hallazgos y recomendaciones que puedes aplicar.",
       },
     ],
     enlazaA: ["consultoria", "seo"],
@@ -717,11 +717,11 @@ const SERVICIOS_BASE: Servicio[] = [
     // para empresas» sin quitarle la principal (keyword research 2026-11-14).
     metaTitle: "Agencia de Marketing Digital para Empresas en Perú",
     metaDescription:
-      "Agencia de marketing digital para empresas y pymes en Perú: estrategia, contenidos, pauta y SEO orientados a ventas, no a likes. Pide tu diagnóstico gratuito.",
-    h1: "Marketing digital para empresas que genera ventas, no vanidad",
+      "Agencia de marketing digital para empresas y pymes en Perú: estrategia, contenidos, pauta y SEO orientados a ventas. Pide tu diagnóstico gratuito.",
+    h1: "Marketing digital para empresas que genera ventas",
     hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el embudo conectado.",
     enCorto: [
-      "Una sola estrategia con todo el embudo conectado, medida en leads, citas y cierres, no en likes.",
+      "Una sola estrategia con todo el embudo conectado, medida en leads, citas y cierres.",
       "Planes mensuales: Starter S/1,500 con 2 redes y 8 publicaciones, Pro S/2,500 con 4 redes, 15 publicaciones y una campaña, y Enterprise S/4,500 con redes ilimitadas, varias campañas y SEO avanzado.",
       "La pauta puede traer leads en días; el posicionamiento y la marca, en meses.",
       "No hace falta contratar todo junto: se empieza por lo esencial y se escala con resultados.",
@@ -734,7 +734,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Estrategia de marketing digital a medida",
         parrafo:
-          "No copiamos plantillas. Leemos tu mercado, tu competencia y tu cliente, y construimos una estrategia con un solo objetivo: vender más. Cada canal cumple un rol dentro del embudo, no actúa por separado.",
+          "No copiamos plantillas. Leemos tu mercado, tu competencia y tu cliente, y construimos una estrategia con un solo objetivo: vender más. Cada canal cumple un rol dentro del embudo.",
       },
       {
         h2: "¿Qué incluyen nuestros servicios de marketing digital?",
@@ -746,7 +746,7 @@ const SERVICIOS_BASE: Servicio[] = [
           },
           {
             titulo: "Marketing de contenidos",
-            texto: "Contenido que mueve a la acción, no que rellena el feed.",
+            texto: "Contenido pensado para que te escriban.",
           },
           {
             titulo: "Publicidad y posicionamiento (SEO y SEM)",
@@ -831,13 +831,13 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Google Ads",
     metaTitle: "Agencia de Google Ads (AdWords) en Perú | Suggestion",
     metaDescription:
-      "Agencia de Google Ads (antes AdWords) en Perú: búsqueda, display y YouTube medidos en leads y ventas, no en clics. Desde S/800 al mes. Consultoría gratis.",
+      "Agencia de Google Ads (antes AdWords) en Perú: búsqueda, display y YouTube medidos en leads y ventas. Desde S/800 al mes. Consultoría gratis.",
     h1: "Agencia de Google Ads en Perú: campañas que se miden en ventas",
-    hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas con un solo norte: que cada sol invertido vuelva en leads y ventas, no en clics que no cierran.",
+    hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas para que cada sol invertido vuelva en leads y ventas.",
     enCorto: [
       "Google Ads (antes Google AdWords) te muestra a quien ya está buscando lo que vendes, en la Búsqueda de Google, en Display y en YouTube.",
       "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas.",
-      "Medimos hasta la venta, con costo por lead y ROAS, no por clics.",
+      "Medimos hasta la venta, con costo por lead y ROAS.",
       "Si te buscan por nombre o por servicio, empieza por Google; si primero tienen que conocerte, por Meta.",
     ],
     cta: "Agenda tu consultoría cero",
@@ -850,7 +850,7 @@ const SERVICIOS_BASE: Servicio[] = [
       "Autoniza: 3 autos el 22 de mayo y 5 el 25 de junio · Granjas Bonanza: 15 contratos con S/2,500 de inversión · Señor de Luren: 75 reservas en una sola campaña.",
     secciones: [
       {
-        h2: "Un resultado medido, no una promesa",
+        h2: "Un resultado medido",
         parrafo:
           "Del 26 de agosto al 29 de septiembre de 2026, Grupo Inmobiliario Ceinys, venta de lotes. Esa campaña fue en Meta Ads; en Google Ads medimos igual, hasta la venta. Es el último reporte que publicamos con autorización del cliente, y está entero —con la resta de lo que no nos corresponde— en la página del caso.",
         tabla: {
@@ -971,10 +971,10 @@ const SERVICIOS_BASE: Servicio[] = [
     metaDescription:
       "Community manager y gestión de redes sociales para empresas en Perú: contenido, respuesta a tiempo y reportes que terminan en una decisión. Desde S/800 al mes.",
     h1: "Community manager para empresas: redes que traen clientes",
-    hero: "Tus redes no son un mural de fotos bonitas: son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
+    hero: "Tus redes son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
     enCorto: [
       "La gestión de redes cuesta S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias.",
-      "Medimos conversaciones iniciadas y clics al WhatsApp, no seguidores ni me gusta.",
+      "Medimos conversaciones iniciadas y clics al WhatsApp.",
       "El contenido orgánico construye confianza con quien ya te sigue; el volumen de clientes nuevos llega con pauta.",
       "Si el presupuesto obliga a elegir: primero pauta con una oferta clara y alguien que responda rápido, y el orgánico después.",
     ],
@@ -989,7 +989,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Estrategia de social media",
         parrafo:
-          "Detrás de cada post hay un plan: objetivos, formatos y calendario pensados para generar conversación y leads, no solo likes.",
+          "Detrás de cada post hay un plan: objetivos, formatos y calendario pensados para generar conversaciones y leads.",
         sub: [
           {
             h3: "Manejo de contenido y comunidad",
@@ -1019,7 +1019,7 @@ const SERVICIOS_BASE: Servicio[] = [
             ["Me gusta por publicación", "Mensajes que el equipo pudo atender y qué pasó con cada uno"],
             ["La mejor hora para publicar", "Qué formato y qué mensaje trajeron clientes, no aplausos"],
           ],
-          nota: "Ninguna de las de la izquierda es falsa ni inútil: sirven para diagnosticar. El problema aparece cuando se presentan como resultado y el negocio lo que necesita son ventas.",
+          nota: "Las de la izquierda sirven para diagnosticar. El problema aparece cuando se presentan como resultado y el negocio lo que necesita son ventas.",
         },
       },
       {
@@ -1048,8 +1048,8 @@ const SERVICIOS_BASE: Servicio[] = [
         bullets: [
           { titulo: "Un calendario que puedas ver antes", texto: "saber qué se va a publicar y por qué, en lugar de enterarte cuando ya está arriba." },
           { titulo: "Alguien que conteste en horario comercial", texto: "la mayoría de ventas por redes se pierde en los mensajes sin responder, no en el contenido." },
-          { titulo: "Un reporte que termine en una decisión", texto: "si el informe no dice qué se cambia el mes que viene, es un recuento, no un reporte." },
-          { titulo: "Los accesos a tu nombre", texto: "las cuentas, el administrador comercial y el píxel se quedan contigo el día que cambies de proveedor. Esto se acuerda al empezar, no al terminar." },
+          { titulo: "Un reporte que termine en una decisión", texto: "el informe tiene que decir qué se cambia el mes que viene." },
+          { titulo: "Los accesos a tu nombre", texto: "las cuentas, el administrador comercial y el píxel se quedan contigo el día que cambies de proveedor. Esto se acuerda al empezar." },
         ],
       },
     ],
@@ -1083,7 +1083,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Con qué frecuencia se publica?",
-        a: "Según tu plan; lo definimos por objetivos, no por cantidad porque sí.",
+        a: "Según tu plan; lo definimos por objetivos.",
       },
       {
         q: "¿Qué redes sociales gestionan?",
@@ -1128,7 +1128,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Diseño web profesional: estrategia, diseño y desarrollo",
         parrafo:
-          "Somos una agencia de diseño web: la creación de páginas web va de principio a fin en un mismo equipo, con estrategia, diseño y programación web. Tu web no es un folleto digital: es tu mejor vendedor, trabajando 24/7.",
+          "Somos una agencia de diseño web: la creación de páginas web va de principio a fin en un mismo equipo, con estrategia, diseño y programación web. Tu web puede vender las 24 horas.",
       },
       {
         h2: "¿Qué incluye?",
@@ -1208,7 +1208,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Qué tecnologías utilizan?",
-        a: "Según el proyecto: React/Next.js, WordPress o a medida. Elegimos la correcta para tu caso, no la de moda.",
+        a: "Según el proyecto: React/Next.js, WordPress o a medida. Elegimos la que conviene a tu caso.",
       },
       {
         q: "¿Qué pasa después del lanzamiento?",
@@ -1265,7 +1265,7 @@ const SERVICIOS_BASE: Servicio[] = [
           },
           {
             h3: "SEO para el mercado peruano",
-            texto: "Optimizamos para cómo busca tu cliente en Perú, no para un manual genérico.",
+            texto: "Optimizamos para cómo busca tu cliente en Perú.",
           },
         ],
       },
@@ -1310,7 +1310,7 @@ const SERVICIOS_BASE: Servicio[] = [
         nota: {
           tipo: "aviso",
           titulo: "La pregunta que destapa a cualquiera",
-          texto: "Pide ver Search Console de un cliente, aunque sea con el nombre tapado: impresiones, clics y posición media de los últimos seis meses. Es el dato que no se puede maquillar, y quien trabaja de verdad lo tiene a mano.",
+          texto: "Pide ver Search Console de un cliente, aunque sea con el nombre tapado: impresiones, clics y posición media de los últimos seis meses. Es un dato difícil de maquillar, y quien trabaja bien lo tiene a mano.",
         },
       },
       {
@@ -1430,7 +1430,7 @@ const SERVICIOS_BASE: Servicio[] = [
           { titulo: "El origen se escribe al entrar, no al cerrar", texto: "la campaña queda guardada en el lead desde el primer contacto. Reconstruirla después, de memoria, nunca sale bien." },
           { titulo: "La cartera se cuenta aparte", texto: "un lead de hace dos meses que madura y cierra ahora no es una venta de la pauta de este mes. Si el sistema no los separa, los números engordan solos." },
           { titulo: "El tiempo de primera respuesta se mide", texto: "en lotes y departamentos, quien contesta primero se suele quedar con la visita." },
-          { titulo: "Cada etapa con dueño y fecha", texto: "contactado, interesado, visita agendada, visita realizada, cierre. Sin eso no hay embudo: hay una lista de nombres." },
+          { titulo: "Cada etapa con dueño y fecha", texto: "contactado, interesado, visita agendada, visita realizada, cierre. Sin eso no se puede medir el embudo." },
         ],
         nota: {
           titulo: "Dónde se ve esto funcionando",
@@ -1445,7 +1445,7 @@ const SERVICIOS_BASE: Servicio[] = [
           { titulo: "No llama por ti", texto: "si nadie contesta los leads, el sistema solo va a documentar con mucha precisión cuántos se enfriaron." },
           { titulo: "No arregla una oferta que no interesa", texto: "automatizar el seguimiento de algo que nadie quiere acelera el «no»; no lo convierte en «sí»." },
           { titulo: "No sobrevive si nadie lo llena", texto: "un campo que el equipo no completa es un campo que miente. Mejor tres obligatorios y bien puestos que veinte opcionales." },
-          { titulo: "No sustituye la conversación", texto: "las plantillas sirven para llegar a tiempo, no para cerrar. El cierre sigue siendo cosa de una persona." },
+          { titulo: "No sustituye la conversación", texto: "las plantillas sirven para responder a tiempo; el cierre lo hace una persona." },
         ],
       },
     ],
@@ -1555,7 +1555,7 @@ const SERVICIOS_BASE: Servicio[] = [
           "Para empresas que quieren diferenciarse y para profesionales que son su propia marca. La estrategia cambia; la exigencia, no.",
       },
       {
-        h2: "Branding estratégico, no solo un logo bonito",
+        h2: "Branding estratégico",
         parrafo:
           "Antes de diseñar, definimos qué debe sentir y pensar tu cliente. El arte viene después de la estrategia, nunca al revés.",
       },
@@ -1573,7 +1573,7 @@ const SERVICIOS_BASE: Servicio[] = [
     ],
     beneficios: [
       { titulo: "Diferenciación real", texto: "Te destacamos de la competencia con una identidad única y memorable." },
-      { titulo: "Conexión emocional", texto: "Diseñamos para generar sentimientos y recuerdos, no solo estética." },
+      { titulo: "Conexión emocional", texto: "Diseñamos para que tu marca se recuerde." },
       { titulo: "Consistencia total", texto: "Tu marca se ve igual en todos los puntos de contacto." },
       { titulo: "Valor a largo plazo", texto: "Una marca fuerte es un activo que aprecia con el tiempo." },
     ],
@@ -1602,7 +1602,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Son una agencia de branding?",
-        a: "Sí: somos una agencia de marca y branding digital. Trabajamos identidad, voz y sistema visual pensados para funcionar en redes, web y anuncios, no solo en el logo.",
+        a: "Sí: somos una agencia de marca y branding digital. Trabajamos identidad, voz y sistema visual pensados para funcionar en redes, web y anuncios.",
       },
     ],
     enlazaA: ["produccion-audiovisual", "desarrollo-web", "merchandising"],
@@ -1688,7 +1688,7 @@ const SERVICIOS_BASE: Servicio[] = [
       { titulo: "Postproducción", texto: "Edición, color, motion graphics y efectos." },
     ],
     beneficios: [
-      { titulo: "Contenido que engancha", texto: "El video retiene mucho más que el texto: tu mensaje llega de verdad." },
+      { titulo: "Contenido que engancha", texto: "El video retiene más que el texto." },
       { titulo: "Calidad profesional", texto: "Equipo, técnica y experiencia para resultados que destacan." },
       { titulo: "Versatilidad total", texto: "Un shooting, múltiples formatos para todos tus canales." },
       { titulo: "Storytelling efectivo", texto: "No solo grabamos: creamos narrativas que conectan y venden." },
@@ -1789,7 +1789,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Qué significa BTL, y por qué el nombre ya se quedó corto",
         parrafo:
-          "BTL viene de «below the line», por debajo de la línea. El nombre nace de una época en que los presupuestos se partían en dos: arriba iban los medios masivos —televisión, radio, prensa— y abajo todo lo demás, que se consideraba secundario. Hoy esa frontera casi no significa nada, pero el término quedó y sigue siendo útil para nombrar una cosa concreta: las acciones en las que la marca y la persona se encuentran cara a cara. Sampling, activaciones, eventos, roadshows, promotoría. Lo que las une no es el presupuesto: es que hay contacto directo, y que ese contacto se puede medir.",
+          "BTL viene de «below the line», por debajo de la línea. El nombre nace de una época en que los presupuestos se partían en dos: arriba iban los medios masivos —televisión, radio, prensa— y abajo todo lo demás, que se consideraba secundario. Hoy esa frontera casi no significa nada, pero el término quedó y sigue siendo útil para nombrar una cosa concreta: las acciones en las que la marca y la persona se encuentran cara a cara. Sampling, activaciones, eventos, roadshows, promotoría. Todas tienen contacto directo con el público, y ese contacto se puede medir.",
       },
       {
         h2: "Qué tipo de acción necesitas",
@@ -1876,7 +1876,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Hacen activaciones fuera de Ica?",
-        a: "Sí. Operamos desde Ica y trabajamos con marcas de todo el Perú, incluidas activaciones y roadshows en Lima y otras regiones. Lo que cambia según el destino es la logística y los plazos de montaje, y lo decimos por adelantado en la propuesta, no después.",
+        a: "Sí. Operamos desde Ica y trabajamos con marcas de todo el Perú, incluidas activaciones y roadshows en Lima y otras regiones. Lo que cambia según el destino es la logística y los plazos de montaje, y lo detallamos en la propuesta.",
       },
       {
         q: "¿Qué diferencia hay entre BTL y ATL?",
@@ -1888,7 +1888,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Ponen ustedes a las promotoras y el personal?",
-        a: "Sí: equipo de activación, animación, captación y apoyo, más la logística completa. Trabajamos con personal capacitado en la mecánica concreta de tu acción, no genérico.",
+        a: "Sí: equipo de activación, animación, captación y apoyo, más la logística completa. Trabajamos con personal capacitado en la mecánica de tu acción.",
       },
       {
         q: "¿Se puede combinar la activación con campañas digitales?",
@@ -1918,7 +1918,7 @@ const SERVICIOS_BASE: Servicio[] = [
     hero: "La publicidad que no espera a que te encuentren: va a donde está tu cliente. Llevamos tu marca por las calles de Ica con bicivallas, rotulación y volanteo.",
     enCorto: [
       "Se cotiza según cuántas bicivallas o biciplumas, cuántas horas al día, cuántos días y por qué zonas: nos escribes por WhatsApp y te pasamos la propuesta.",
-      "La ruta se diseña según dónde está tu público y a qué hora, no según dónde hay más gente.",
+      "La ruta se diseña según dónde está tu público y a qué hora.",
       "Circula a velocidad de peatón, así que admite más texto que un panel de avenida, y en su versión luminosa se ve de noche.",
       "Rinde más junto con volanteo con captura de datos: la bicivalla da el reconocimiento y el volanteo convierte el interés en contactos.",
     ],
@@ -1976,7 +1976,7 @@ const SERVICIOS_BASE: Servicio[] = [
         pasos: [
           { titulo: "Dónde está tu público, no dónde hay gente", texto: "el mercado central concentra multitud, pero si vendes departamentos tu comprador está en otro lado. Más flujo no es mejor flujo." },
           { titulo: "A qué hora", texto: "las cuatro horas de activación no rinden igual a las diez de la mañana que a la salida de oficinas. La franja se elige según cuándo está disponible tu cliente." },
-          { titulo: "Cuántas pasadas por el mismo punto", texto: "la publicidad exterior funciona por repetición: ver una vez no deja huella, ver cinco veces en una semana sí. Eso se planifica, no se improvisa." },
+          { titulo: "Cuántas pasadas por el mismo punto", texto: "la publicidad exterior funciona por repetición: ver una vez no deja huella, ver cinco veces en una semana sí. Eso se planifica antes de salir." },
           { titulo: "Qué queremos que pase después", texto: "si el mensaje pide escribir por WhatsApp, alguien tiene que estar contestando esa tarde. Si no, la campaña genera interés y lo deja caer." },
         ],
       },
@@ -2031,7 +2031,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánta gente ve una bicivalla?",
-        a: "Depende por completo de la ruta y la franja horaria, y desconfía de quien te dé una cifra cerrada sin conocer ninguna de las dos. Lo que sí se puede planificar es la repetición: cuántas veces pasa por los mismos puntos, que es lo que de verdad deja huella en publicidad exterior.",
+        a: "Depende por completo de la ruta y la franja horaria, y desconfía de quien te dé una cifra cerrada sin conocer ninguna de las dos. Lo que sí se puede planificar es la repetición: cuántas veces pasa por los mismos puntos, que es lo que hace que la publicidad exterior se recuerde.",
       },
       {
         q: "¿Cuánto texto puede llevar la gráfica?",
@@ -2124,9 +2124,9 @@ const SERVICIOS_BASE: Servicio[] = [
           "Sombra en la entrada, la terraza o la vitrina, con tu marca impresa. Es publicidad que además le sirve al cliente, y por eso se queda años en la fachada.",
       },
       {
-        h2: "Cuántas palabras caben de verdad",
+        h2: "Cuántas palabras caben en un panel",
         parrafo:
-          "Es la regla de oficio que más presupuesto salva en publicidad exterior, y la que más se ignora. Quien pasa en auto por delante de un panel dispone de un par de segundos, y la mitad de ellos mirando la carretera. En ese tiempo no se lee un párrafo: se reconoce una marca y se retiene una idea. Por eso las estructuras que funcionan tienen pocas palabras, muy grandes, con contraste alto y una sola cosa que hacer. Un panel con teléfono, dirección, web, redes y tres servicios no comunica cinco cosas: no comunica ninguna.",
+          "Quien pasa en auto frente a un panel tiene un par de segundos, y la mitad los pasa mirando la pista. En ese tiempo se reconoce una marca y se retiene una idea. Por eso los paneles que funcionan tienen pocas palabras, grandes, con buen contraste y una sola cosa que hacer. Con teléfono, dirección, web, redes y tres servicios, no se lee nada.",
         bullets: [
           { titulo: "Una idea por pieza", texto: "si hay que elegir entre el qué y el dónde, gana el que responda la duda del que pasa." },
           { titulo: "Legible a la distancia real", texto: "no en la pantalla del diseñador. La prueba es alejarse del monitor hasta que el texto sea del tamaño que tendrá en la calle." },
@@ -2148,7 +2148,7 @@ const SERVICIOS_BASE: Servicio[] = [
         nota: {
           tipo: "aviso",
           titulo: "Antes de instalar en vía pública",
-          texto: "La publicidad exterior suele requerir autorización municipal, y las condiciones cambian de un distrito a otro: medidas permitidas, tipo de soporte, distancia a cruces o a otras estructuras. Conviene verificarlo con la municipalidad correspondiente antes de producir, no después. Te acompañamos en ese trámite, pero la normativa aplicable la marca cada municipio.",
+          texto: "La publicidad exterior suele requerir autorización municipal, y las condiciones cambian de un distrito a otro: medidas permitidas, tipo de soporte, distancia a cruces o a otras estructuras. Conviene verificarlo con la municipalidad antes de producir. Te acompañamos en ese trámite, pero la normativa aplicable la marca cada municipio.",
         },
       },
       {
@@ -2290,10 +2290,10 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Qué significa POP",
         parrafo:
-          "POP viene de «point of purchase», punto de compra. Se llama así a todo el material que trabaja dentro de la tienda, justo donde el cliente decide: exhibidores, displays, cartelería, señalética, cabeceras de góndola. Es la única publicidad que aparece en el momento exacto de la decisión, y por eso se juzga distinto que un anuncio: no tiene que gustar, tiene que conseguir que una mano se mueva hacia tu producto y no hacia el de al lado.",
+          "POP viene de «point of purchase», punto de compra. Se llama así a todo el material que trabaja dentro de la tienda, justo donde el cliente decide: exhibidores, displays, cartelería, señalética, cabeceras de góndola. Es la única publicidad que aparece en el momento de la decisión: su trabajo es que la mano vaya hacia tu producto y no al de al lado.",
         nota: {
           titulo: "La diferencia con el resto de tu publicidad",
-          texto: "Un anuncio compite por atención; una pieza POP compite por espacio. La tienda tiene un metraje limitado y el encargado decide qué entra. Por eso una pieza bien pensada no es solo la que más se ve: es también la que al local le resulta cómoda de montar, no estorba el paso y no se cae a la semana.",
+          texto: "Un anuncio compite por atención; una pieza POP compite por espacio. La tienda tiene un metraje limitado y el encargado decide qué entra. Por eso una buena pieza, además de verse, tiene que ser fácil de montar para el local, no estorbar el paso y durar.",
         },
       },
       {
@@ -2308,7 +2308,7 @@ const SERVICIOS_BASE: Servicio[] = [
             ["Acrílico", "Años", "Piezas de marca permanentes y de buena percepción"],
             ["Metal y madera", "Años", "Mobiliario, islas y espacios de marca dedicados"],
           ],
-          nota: "En zonas con humedad o exposición al sol la vida útil baja; conviene decirlo antes de producir, no después.",
+          nota: "En zonas con humedad o exposición al sol la vida útil baja; conviene decirlo antes de producir.",
         },
       },
       {
@@ -2509,7 +2509,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Cómo preparar tu archivo antes de imprimir",
         parrafo:
-          "La mayoría de retrasos en imprenta no son de la máquina: son archivos que llegan mal y hay que devolver. Estos cuatro puntos evitan casi todos. Y si no manejas ninguno, no es problema: también diseñamos la pieza.",
+          "La mayoría de retrasos en imprenta vienen de archivos que llegan mal y hay que devolver. Estos cuatro puntos evitan casi todos. Y si no manejas ninguno, no es problema: también diseñamos la pieza.",
         bullets: [
           { titulo: "PDF de alta resolución", texto: "es el formato que menos sorpresas da. También aceptamos AI y PSD; evita JPG para piezas con texto." },
           { titulo: "300 ppp a tamaño real", texto: "una imagen que se ve bien en pantalla puede salir pixelada al imprimir. En gran formato basta menos, porque se mira de lejos." },
@@ -2520,7 +2520,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Dónde entregamos",
         parrafo:
-          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos la entrega, o el recojo si lo acordamos antes. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización, no después.",
+          "El taller trabaja para toda la región de Ica. En la ciudad y en los distritos cercanos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes, Salas Guadalupe— coordinamos la entrega, o el recojo si lo acordamos antes. Para las provincias —Chincha, Pisco, Nazca y Palpa— y para zonas como Ocucaje o Villacurí trabajamos con fecha de envío comprometida desde el momento en que apruebas la prueba. Fuera de la región coordinamos envío a cualquier punto del país; en ese caso el plazo de transporte se suma al de producción y te lo decimos junto con la cotización.",
       },
     ],
     incluye: [
@@ -2644,7 +2644,7 @@ const SERVICIOS_BASE: Servicio[] = [
           },
           {
             h3: "Gorras y textiles",
-            texto: "Gorras y polos publicitarios que tu equipo y tus clientes usan de verdad.",
+            texto: "Gorras y polos publicitarios que tu equipo y tus clientes sí usan.",
           },
           {
             h3: "Tazas y utilitarios",
@@ -2679,7 +2679,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Merchandising para empresas: cómo elegir la pieza correcta",
         parrafo:
-          "Antes de elegir el producto conviene responder tres cosas: a quién se lo vas a dar, dónde lo va a usar y qué quieres que recuerde. Un cliente corporativo que trabaja en escritorio valora lo utilitario; un público joven en la calle, lo vestible. Con esa respuesta se decide el presupuesto por unidad, no al revés. Es la parte que casi nadie hace y la que separa el merchandising que trabaja para tu marca del que solo gasta presupuesto.",
+          "Antes de elegir el producto conviene responder tres cosas: a quién se lo vas a dar, dónde lo va a usar y qué quieres que recuerde. Un cliente corporativo que trabaja en escritorio valora lo utilitario; un público joven en la calle, lo vestible. Con esa respuesta se decide el presupuesto por unidad.",
       },
     ],
     incluye: [

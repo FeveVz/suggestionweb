@@ -28,7 +28,7 @@ const foto = (slug: string, n: number, alt: string, cap: string) => {
 
 /** El caso de pauta publicado. Etiquetas exactas de docs-fuente/21. */
 const CASO_CEINYS_SEPTIEMBRE = {
-  h2: "Un resultado medido, no una promesa",
+  h2: "Un resultado medido",
   parrafo:
     "Del 26 de agosto al 29 de septiembre de 2026, Grupo Inmobiliario Ceinys, venta de lotes, con campañas en Meta Ads. Es el último reporte que publicamos con autorización del cliente, y está entero —con la resta de lo que no nos corresponde— en la página del caso.",
   tabla: {
@@ -63,7 +63,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     metaDescription:
       "Agencia de Meta Ads (Facebook Ads) en Perú: anuncios en Facebook e Instagram medidos en ventas, con campañas a WhatsApp y formularios. Consultoría gratis.",
     h1: "Agencia de Meta Ads: anuncios en Facebook e Instagram que venden",
-    hero: "En Facebook e Instagram tu cliente no está buscando comprar: hay que interrumpirlo con una oferta que valga la pena. Armamos tus campañas y las medimos hasta la venta, no hasta el clic.",
+    hero: "En Facebook e Instagram tu cliente no está buscando comprar: hay que interrumpirlo con una oferta que valga la pena. Armamos tus campañas y las medimos hasta la venta.",
     enCorto: [
       "Meta Ads, lo que antes se llamaba Facebook Ads, son los anuncios de Facebook, Instagram y Messenger, incluidos los que abren una conversación de WhatsApp. Se compran todos desde el mismo administrador.",
       "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y S/3,000 con todas.",
@@ -120,7 +120,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     incluye: [
       { titulo: "Estrategia de campaña", texto: "Objetivo, públicos, presupuesto y calendario según lo que vendes." },
-      { titulo: "Creatividades", texto: "Imagen, video corto y textos pensados para filtrar, no solo para gustar." },
+      { titulo: "Creatividades", texto: "Imagen, video corto y textos que filtran al curioso." },
       { titulo: "Campañas a WhatsApp", texto: "Anuncios que abren la conversación con tu equipo o tu agente de IA." },
       { titulo: "Formularios instantáneos", texto: "Con preguntas que separan al curioso del comprador." },
       { titulo: "Píxel y API de Conversiones", texto: "Configuración para que Meta optimice con datos reales." },
@@ -130,7 +130,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       { titulo: "Cuentas a tu nombre", texto: "Todo se configura en tu Business Manager." },
     ],
     beneficios: [
-      { titulo: "Costo por venta, no por clic", texto: "La métrica que importa es lo que cuesta un cliente, no un me gusta." },
+      { titulo: "Costo por venta", texto: "Medimos lo que cuesta conseguir un cliente." },
       { titulo: "Creatividad que filtra", texto: "Anuncios que atraen al que puede comprar y descartan al curioso." },
       { titulo: "Cuentas tuyas", texto: "Si cambias de agencia, te llevas el historial y los datos." },
       { titulo: "Decisiones con datos", texto: "Lo que funciona se escala y lo que no se corta." },
@@ -186,7 +186,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     metaDescription:
       "Diseño de tienda virtual en Perú con catálogo, pasarela de pagos e inventario, lista para vender. Plan E-commerce de S/8,000 por proyecto. Consultoría gratis.",
     h1: "Diseño de tienda virtual lista para vender",
-    hero: "Una tienda virtual no es un catálogo con un botón de pago: es un canal de venta que necesita tráfico, confianza y un proceso que no se cae en el último paso. La diseñamos con catálogo, pasarela de pagos e inventario, y la conectamos con tu publicidad.",
+    hero: "Una tienda virtual necesita tráfico, confianza y un proceso de pago que no se caiga en el último paso. La diseñamos con catálogo, pasarela de pagos e inventario, y la conectamos con tu publicidad.",
     enCorto: [
       "El plan E-commerce cuesta S/8,000 por proyecto e incluye catálogo ilimitado, pasarela de pagos, gestión de inventario, SEO avanzado y 3 meses de soporte.",
       "Si vendes pocos productos o cierras por WhatsApp, una landing page de S/1,500 puede bastar antes que una tienda completa.",
@@ -355,7 +355,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       {
         h2: "Cómo lo implementamos",
         pasos: [
-          { titulo: "Leemos tus conversaciones reales", texto: "para saber qué pregunta tu cliente de verdad y en qué momento se cae la venta." },
+          { titulo: "Leemos tus conversaciones reales", texto: "para saber qué pregunta tu cliente y en qué momento se cae la venta." },
           { titulo: "Armamos la base de información", texto: "productos, precios publicados, preguntas frecuentes y el tono de tu marca." },
           { titulo: "Definimos cuándo derivar", texto: "qué casos pasan a una persona y a quién." },
           { titulo: "Probamos antes de salir", texto: "con preguntas difíciles, mal escritas y fuera de tema." },
@@ -375,7 +375,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     beneficios: [
       { titulo: "Nadie espera respuesta", texto: "El primer contacto se atiende en segundos, a cualquier hora." },
-      { titulo: "Tu equipo cierra", texto: "Recibe conversaciones calificadas, no preguntas repetidas." },
+      { titulo: "Tu equipo cierra", texto: "Recibe conversaciones ya calificadas." },
       { titulo: "Nada se pierde", texto: "Cada contacto queda registrado con su origen." },
       { titulo: "Bajo control", texto: "Ves todas las conversaciones y puedes intervenir cuando quieras." },
     ],
@@ -506,8 +506,8 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     beneficios: [
       { titulo: "Un solo equipo", texto: "Montaje, audiovisual y merchandising sin coordinar a cinco proveedores." },
-      { titulo: "Convocatoria pensada", texto: "Llega quien puede comprar, no solo quien pasa." },
-      { titulo: "Datos, no solo fotos", texto: "Cada asistente queda registrado para el seguimiento." },
+      { titulo: "Convocatoria pensada", texto: "Invitamos a quien puede comprar." },
+      { titulo: "Registro de asistentes", texto: "Cada asistente queda registrado para el seguimiento." },
       { titulo: "Contenido para después", texto: "El evento sigue trabajando en tus redes." },
     ],
     proceso: [
@@ -602,7 +602,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
         },
       },
       {
-        h2: "La medida: se define por el espacio, no al revés",
+        h2: "La medida se define por el espacio",
         parrafo:
           "La medida correcta es la que encaja en la estructura o en la pared que ya tienes. El material viene en rollos —el más común mide 3.20 metros de ancho— y se paga lo que se consume del rollo, no lo que mide el arte: ajustar la pieza a ese ancho evita pagar recorte. Si la pieza es más ancha que el rollo, se imprime en partes que se unen, y conviene saberlo antes de diseñar.",
         foto: foto("gira-conduce-tu-rumbo", 4, "Roll-up impreso con código QR y ruleta de premios de una campaña", "Roll-up de campaña: el gran formato también se lleva a ferias y eventos"),

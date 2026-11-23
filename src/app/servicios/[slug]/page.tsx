@@ -59,42 +59,42 @@ const SERVICE_IMG: Record<string, { src: string; alt: string; w?: number; h?: nu
  */
 const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> = {
   imprenta: [
-    { src: fotoPortafolio("changan-cs15-presentacion", 2), alt: "Ficha impresa sobre el techo de un vehículo con las características del modelo y un código QR", cap: "Ficha de techo con QR, para que la unidad se explique sola cuando no hay asesor al lado" },
-    { src: fotoPortafolio("gira-conduce-tu-rumbo", 4), alt: "Roll-up impreso con código QR y ruleta de premios de una campaña", cap: "Roll-up con el QR de la dinámica: el registro deja de ser un formulario" },
-    { src: fotoPortafolio("ahorra-o-nunca-despliegue", 2), alt: "Colgantes y banderolas impresos instalados en la sala de ventas", cap: "El mismo arte en varios formatos: cada soporte se rearma, no se reescala" },
+    { src: fotoPortafolio("changan-cs15-presentacion", 2), alt: "Ficha impresa sobre el techo de un vehículo con las características del modelo y un código QR", cap: "Ficha de techo con QR" },
+    { src: fotoPortafolio("gira-conduce-tu-rumbo", 4), alt: "Roll-up impreso con código QR y ruleta de premios de una campaña", cap: "Roll-up con el QR de la dinámica" },
+    { src: fotoPortafolio("ahorra-o-nunca-despliegue", 2), alt: "Colgantes y banderolas impresos instalados en la sala de ventas", cap: "El mismo arte adaptado a cada formato" },
   ],
   "material-pop": [
     { src: fotoPortafolio("mercado-santo-domingo-dfsk", 2), alt: "Módulo de marca con cajas de oferta en la calle del mercado de Santo Domingo", cap: "Módulo y cajas de oferta a pie de puesto: 167 datos en tres horas" },
-    { src: fotoPortafolio("aniversario-paracas-gwm", 5), alt: "Módulo de marca con ruleta de premios atendido por un promotor", cap: "La ruleta no es adorno: es lo que hace que el visitante acepte dejar su dato" },
-    { src: fotoPortafolio("gala-oficiales-la-reserva", 7), alt: "Fondo fotográfico impreso de una marca inmobiliaria en un evento", cap: "Fondo fotográfico: el punto donde la gente se hace la foto y la marca viaja sola" },
-    { src: "/assets/servicios/pop-totem-ficha-sala.webp", alt: "Tótem con la ficha del Renault Arkana junto a la unidad en la sala de Pacífico Motors", cap: "Tótem de ficha al lado del auto: el cliente revisa versión y equipamiento sin esperar al asesor" },
-    { src: "/assets/servicios/pop-colgante-sala.webp", alt: "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", cap: "Colgante sobre la exhibición: se ve desde la puerta y marca dónde está cada modelo" },
+    { src: fotoPortafolio("aniversario-paracas-gwm", 5), alt: "Módulo de marca con ruleta de premios atendido por un promotor", cap: "Ruleta de premios: a cambio de girarla, el visitante deja su dato" },
+    { src: fotoPortafolio("gala-oficiales-la-reserva", 7), alt: "Fondo fotográfico impreso de una marca inmobiliaria en un evento", cap: "Fondo fotográfico: la gente se toma la foto con la marca y la comparte" },
+    { src: "/assets/servicios/pop-totem-ficha-sala.webp", alt: "Tótem con la ficha del Renault Arkana junto a la unidad en la sala de Pacífico Motors", cap: "Tótem con la ficha del modelo al lado del auto" },
+    { src: "/assets/servicios/pop-colgante-sala.webp", alt: "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", cap: "Colgante sobre los autos de la exhibición" },
   ],
   "eventos-corporativos": [
-    { src: "/assets/servicios/eventos-lanzamiento-cusco-1.webp", alt: "Invitados con carteles del nuevo Renault Arkana en su lanzamiento en Pacífico Motors Cusco", cap: "Lanzamiento del Renault Arkana en Pacífico Motors Cusco: lista de invitados, mesas y anfitrionas" },
-    { src: "/assets/servicios/eventos-lanzamiento-cusco-2.webp", alt: "Invitadas junto a la anfitriona del lanzamiento del Renault Arkana en Cusco", cap: "El cartel con el nombre del modelo pone la marca en cada foto que se toma esa noche" },
+    { src: "/assets/servicios/eventos-lanzamiento-cusco-1.webp", alt: "Invitados con carteles del nuevo Renault Arkana en su lanzamiento en Pacífico Motors Cusco", cap: "Lanzamiento del Renault Arkana en Pacífico Motors Cusco" },
+    { src: "/assets/servicios/eventos-lanzamiento-cusco-2.webp", alt: "Invitadas junto a la anfitriona del lanzamiento del Renault Arkana en Cusco", cap: "Invitadas con el cartel del nuevo modelo" },
   ],
   "estructuras-publicitarias": [
-    { src: fotoPortafolio("subaru-plaza-barranca", 1), alt: "Arco inflable de marca montado en una plaza durante una activación nocturna", cap: "Arco inflable en plaza: se monta en una hora y se ve desde la otra esquina" },
-    { src: fotoPortafolio("enduro-yancay-subaru", 2), alt: "Arco de meta de una competencia montado en terreno desrtico", cap: "Arco de meta en terreno sin servicios: todo lo que se instala resiste viento y arena" },
-    { src: fotoPortafolio("caballos-de-paso-2025", 1), alt: "Banderolas y estructuras de marca montadas en el circuito de un campeonato", cap: "Banderolas en circuito: la marca entra en el ambiente sin interrumpirlo" },
+    { src: fotoPortafolio("subaru-plaza-barranca", 1), alt: "Arco inflable de marca montado en una plaza durante una activación nocturna", cap: "Arco inflable en plaza: se monta en una hora" },
+    { src: fotoPortafolio("enduro-yancay-subaru", 2), alt: "Arco de meta de una competencia montado en terreno desértico", cap: "Arco de meta en terreno sin servicios, montado para resistir viento y arena" },
+    { src: fotoPortafolio("caballos-de-paso-2025", 1), alt: "Banderolas y estructuras de marca montadas en el circuito de un campeonato", cap: "Banderolas de marca en el circuito del campeonato" },
   ],
   // Bicivallas de Little Caesars: cuatro días de octubre de 2026 por la
   // inauguración de su local en Ica (registro fotográfico entregado al cliente).
   "publicidad-movil": [
-    { src: "/assets/servicios/bicivalla-little-caesars-noche.webp", alt: "Bicivalla de Little Caesars estacionada de noche en una esquina de Ica", cap: "Little Caesars, de noche: la ruta corría de 5:30 a 9:30 p. m. y el panel se seguía viendo desde la otra cuadra" },
-    { src: "/assets/servicios/bicivalla-little-caesars-inauguracion.webp", alt: "Bicivalla junto a la entrada del local nuevo de Little Caesars el día de la inauguración", cap: "El día de la inauguración, la bicivalla acompañó la apertura del local y siguió recorriendo los alrededores" },
+    { src: "/assets/servicios/bicivalla-little-caesars-noche.webp", alt: "Bicivalla de Little Caesars estacionada de noche en una esquina de Ica", cap: "Little Caesars, de noche: la ruta corría de 5:30 a 9:30 p. m. con el panel LED encendido" },
+    { src: "/assets/servicios/bicivalla-little-caesars-inauguracion.webp", alt: "Bicivalla junto a la entrada del local nuevo de Little Caesars el día de la inauguración", cap: "La bicivalla en la apertura del local" },
     { src: "/assets/servicios/bicivalla-little-caesars-ruta-1.webp", alt: "Mapa de la ruta 1 de la bicivalla por el centro de Ica, con sus paradas numeradas", cap: "Ruta 1, diseñada para la campaña: 2.3 km por vuelta, unos 25 minutos con paradas frente a 8 locales de comida" },
-    { src: fotoPortafolio("xcmg-linea-amarilla-nazca", 5), alt: "Volquete rotulado con banderola de marca exhibido en la vía pública de Nazca", cap: "Unidad rotulada en calle: la marca se mueve a donde está el cliente" },
+    { src: fotoPortafolio("xcmg-linea-amarilla-nazca", 5), alt: "Volquete rotulado con banderola de marca exhibido en la vía pública de Nazca", cap: "Volquete rotulado con banderola, en una calle de Nazca" },
   ],
   "produccion-audiovisual": [
-    { src: "/assets/servicios/audiovisual-sesion-dunas.webp", alt: "Camioneta de test drive rotulada, fotografiada en lo alto de una duna en Ica al atardecer", cap: "Sesión en las dunas de Ica con la unidad de test drive, a la hora en que la luz baja y la arena se pone dorada" },
-    { src: "/assets/servicios/audiovisual-making-of-restaurante.webp", alt: "Rodaje dentro de Al Toque Venezolano: la presentadora con micrófono de solapa y un camarógrafo junto a la cámara en trípode", cap: "Making of en Al Toque Venezolano: micrófono de solapa, luz LED y cámara en trípode para grabar dentro del local" },
+    { src: "/assets/servicios/audiovisual-sesion-dunas.webp", alt: "Camioneta de test drive rotulada, fotografiada en lo alto de una duna en Ica al atardecer", cap: "Sesión en las dunas de Ica con la unidad de test drive, al atardecer" },
+    { src: "/assets/servicios/audiovisual-making-of-restaurante.webp", alt: "Rodaje dentro de Al Toque Venezolano: la presentadora con micrófono de solapa y un camarógrafo junto a la cámara en trípode", cap: "Grabación dentro de Al Toque Venezolano" },
   ],
   btl: [
     { src: fotoPortafolio("mercado-santo-domingo-dfsk", 1), alt: "Módulo de activación montado en la calle del mercado de Santo Domingo, en Ica", cap: "Mercado de Santo Domingo: cuatro promotores y un supervisor, tres horas, 167 datos" },
     { src: fotoPortafolio("dia-del-maestro-derco", 1), alt: "Marco fotográfico de marca con asistentes en una celebración gremial", cap: "Día del Maestro: 238 datos de unas mil personas, sin abordar a nadie" },
-    { src: fotoPortafolio("test-drive-changan-ica", 4), alt: "Comensales probando un vehículo a la salida de un restaurante en Ica", cap: "Pruebas de manejo a la salida del restaurante: en muchos casos terminó llevando al cliente a su casa" },
+    { src: fotoPortafolio("test-drive-changan-ica", 4), alt: "Comensales probando un vehículo a la salida de un restaurante en Ica", cap: "Pruebas de manejo a la salida del restaurante; muchas terminaban llevando al cliente a su casa" },
   ],
 };
 

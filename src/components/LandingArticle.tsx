@@ -28,7 +28,7 @@ import type { Seccion, Faq as FaqType, Cierre, ItemTT, Paso, PlanPrecio } from "
 
 /** Cobertura de una página de producción sin párrafo propio (imprenta, gigantografías…). */
 const COBERTURA_PRODUCCION =
-  "Producimos en Ica y entregamos en la ciudad y sus distritos —Parcona, Subtanjalla, La Tinguiña, Los Aquijes y Salas Guadalupe—; a Chincha, Pisco, Nazca y Palpa enviamos con fecha comprometida, y fuera de la región coordinamos el envío. Todo con factura.";
+  "Producimos en Ica y entregamos en la ciudad y sus distritos (Parcona, Subtanjalla, La Tinguiña, Los Aquijes y Salas Guadalupe). A Chincha, Pisco, Nazca y Palpa enviamos con fecha acordada, y fuera de la región coordinamos el envío. Todo con factura.";
 
 /** Última línea del «En corto» en producción: lo que pregunta quien compra para su empresa. */
 const EN_CORTO_FACTURA = "Todo con factura: somos una empresa formal con RUC 20615266753.";
@@ -364,7 +364,7 @@ export default function LandingArticle({
           <div style={{ maxWidth: 760, marginBottom: "var(--space-6)" }}>
             <Label dot>El trabajo, en foto</Label>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", margin: "14px 0 0", maxWidth: "58ch" }}>
-              Todas son nuestras, tomadas en el montaje. Ninguna viene de un banco de imágenes.
+              Fotos tomadas por nuestro equipo.
             </p>
           </div>
           <div className="hk-serv-gal">
@@ -437,7 +437,7 @@ export default function LandingArticle({
             {cobertura ??
               COBERTURA[breadcrumbs[breadcrumbs.length - 1]?.href ?? ""] ??
               (cotiza ? COBERTURA_PRODUCCION : null) ??
-              "Somos una agencia de marketing y publicidad con base en Ica: atendemos negocios de Ica, Chincha, Pisco y Nazca, y operamos campañas a nivel nacional — Lima incluida — con la misma medición: leads, citas y ventas."}
+              "Somos una agencia de marketing y publicidad de Ica. Atendemos negocios de Ica, Chincha, Pisco y Nazca, y llevamos campañas en todo el Perú, Lima incluida."}
           </p>
         </div>
       </Section>

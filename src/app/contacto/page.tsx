@@ -39,7 +39,7 @@ export default function Contacto() {
               Hablemos de tu negocio.
             </h1>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 20, maxWidth: "42ch" }}>
-              Déjanos tus datos y agendamos tu consultoría cero: 30 minutos gratis en los que nos cuentas tu problema o lo que quieres mejorar, y te proponemos el camino que mejor encaja con tu objetivo.
+              Déjanos tus datos y agendamos tu consultoría cero: 30 minutos gratis para ver qué quieres resolver y por dónde empezar.
             </p>
             <div style={{ display: "grid", gap: 16, marginTop: 30 }}>
               <a href={`tel:${site.phoneE164}`} style={{ display: "inline-flex", alignItems: "center", gap: 12, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>

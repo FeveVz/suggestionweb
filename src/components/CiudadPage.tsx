@@ -31,10 +31,10 @@ const FOTOS_CIUDAD: Record<
     },
     // Galería con la variante de 440 px: el marco es cuadrado y de 240-400 px.
     galeria: [
-      { src: fotoPortafolio(ENTEL, 3, true), alt: "Cortatráfico con banner de Entel en el paso peatonal de un cruce de Nazca, con un auto rojo detenido", cap: "Dos personas, un banner y el semáforo en rojo: el mensaje se ve desde cada auto que para" },
+      { src: fotoPortafolio(ENTEL, 3, true), alt: "Cortatráfico con banner de Entel en el paso peatonal de un cruce de Nazca, con un auto rojo detenido", cap: "Cortatráfico en Nazca: dos personas con el banner mientras el semáforo está en rojo" },
       { src: fotoPortafolio(ENTEL, 4, true), alt: "Cortatráfico con banner de Entel frente a la iglesia, en un cruce del centro de Nazca", cap: "Siete días rotando por los cruces del centro, del 12 al 18 de noviembre de 2026" },
       { src: fotoPortafolio(XCMG, 8, true), alt: "Anfitriona presentando la maquinaria XCMG en la exhibición de Nazca", cap: "XCMG · Dercomaq, febrero 2025: anfitriona en una exhibición de tres días para contratistas y empresarios" },
-      { src: fotoPortafolio(XCMG, 6, true), alt: "Publimán con cartel de la campaña de XCMG en la plaza de armas de Nazca", cap: "Publimanes en la plaza de armas. A esa exhibición llegaron empresarios del sector minero y salió una venta" },
+      { src: fotoPortafolio(XCMG, 6, true), alt: "Publimán con cartel de la campaña de XCMG en la plaza de armas de Nazca", cap: "Publimanes en la plaza de armas. A la exhibición llegaron empresarios del sector minero y salió una venta" },
     ],
   },
 };

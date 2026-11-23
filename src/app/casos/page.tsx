@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
     // Sin las cifras de los cortes de Ceinys: en 155 caracteres no cabe su
     // etiqueta ni su fecha de corte (docs-fuente/21), y «18 lotes» junto a
     // «S/350K» invitaba a comparar dos casos medidos con criterios distintos.
-    "Resultados de negocio, no likes: S/350K en ventas, 75 reservas, 15 contratos y autos vendidos en dos eventos. Los recientes, con período y fecha de corte.",
+    "S/350K en ventas, 75 reservas, 15 contratos y autos vendidos en dos eventos. Los casos recientes, con período y fecha de corte.",
   path: "/casos",
   ogImage: "/assets/og/casos.png",
 });
@@ -168,10 +168,10 @@ export default function Casos() {
           <div style={{ marginTop: "clamp(1.5rem,3vw,2.5rem)", maxWidth: 760 }}>
             <Label dot>Casos de éxito</Label>
             <h1 className="hk-enter-2" style={{ font: "var(--fw-bold) var(--fs-4xl)/1.04 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 0", maxWidth: "16ch" }}>
-              Resultados de negocio, no capturas de likes
+              Resultados medidos en ventas
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "48ch" }}>
-              Esto es lo que pasa cuando el marketing se mide en ventas, no en alcance.
+              Lotes, reservas, contratos y autos vendidos, con su período y su fecha de corte.
             </p>
           </div>
         </div>

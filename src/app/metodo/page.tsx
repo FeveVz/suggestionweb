@@ -47,7 +47,7 @@ const SECCIONES: Seccion[] = [
       "Casi todas las cuentas que recibimos tienen nombres de campaña escritos para que los entienda quien los creó. El problema aparece tres meses después, cuando hay que decir qué venta vino de qué campaña y nadie puede reconstruirlo. Nosotros nombramos las campañas con una estructura fija, y el mismo campo existe en el CRM: proyecto, mes y, si hace falta, responsable.",
     bullets: [
       { titulo: "Una estructura compartida", texto: "la campaña se llama PROYECTO | MES | RESPONSABLE y el CRM guarda ese mismo campo en el lead. El origen se escribe al crear el lead, no se deduce al cerrar la venta." },
-      { titulo: "Se decide antes de gastar", texto: "la nomenclatura se fija al armar la cuenta, no cuando llega la hora de reportar. Reconstruir el origen después nunca sale bien." },
+      { titulo: "Se decide antes de gastar", texto: "la nomenclatura se fija al armar la cuenta. Reconstruir el origen después nunca sale bien." },
       { titulo: "Sirve para dos lados", texto: "la agencia sabe qué campaña funcionó y el equipo comercial sabe de dónde salió la persona que tiene al teléfono." },
     ],
   },
@@ -70,17 +70,17 @@ const SECCIONES: Seccion[] = [
   {
     h2: "Reportamos también qué tan bien estamos midiendo",
     parrafo:
-      "Un reporte que solo trae buenas noticias no es un reporte, es una presentación. Además de los resultados, cada mes informamos el estado de la propia medición: cuántas conversaciones pagadas llegaron a convertirse en leads registrados, cuántas ventas quedaron atadas a una campaña concreta y qué parte del embudo no se puede explicar. Cuando ese número se deteriora, aparece en la primera página aunque incomode.",
+      "Además de los resultados, cada mes informamos el estado de la propia medición: cuántas conversaciones pagadas llegaron a convertirse en leads registrados, cuántas ventas quedaron atadas a una campaña concreta y qué parte del embudo no se puede explicar. Cuando ese número se deteriora, aparece en la primera página aunque incomode.",
     bullets: [
       { titulo: "Porque es accionable", texto: "una caída en el registro se arregla en días y devuelve leads sin gastar un sol más de pauta." },
       { titulo: "Porque es honesto", texto: "si no decimos qué parte no podemos explicar, el resto del reporte vale menos." },
-      { titulo: "Porque es del cliente", texto: "ese diagnóstico se discute en la reunión, no se publica. Lo que sale a una página web son resultados, nunca el expediente interno de nadie." },
+      { titulo: "Porque es del cliente", texto: "ese diagnóstico se discute en la reunión y no se publica." },
     ],
   },
   {
     h2: "Lo que no publicamos nunca",
     parrafo:
-      "Publicamos resultados de clientes con su autorización escrita y con la lista exacta de cifras aprobadas. Fuera de eso hay una línea que no cruzamos, y conviene decirla antes de que alguien nos confíe su cuenta.",
+      "Los resultados de clientes salen con su autorización escrita y solo con las cifras aprobadas.",
     bullets: [
       { titulo: "Nombres de los compradores de nuestros clientes", texto: "son personas que le compraron a otro, no material nuestro." },
       { titulo: "Desempeño individual del equipo comercial", texto: "quién vende más y quién menos es una conversación interna del cliente." },

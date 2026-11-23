@@ -29,9 +29,9 @@ export const SECTORES: Sector[] = [
     nombre: "Inmobiliario",
     metaTitle: "Agencia de Marketing Inmobiliario en Perú | Suggestion",
     metaDescription:
-      "Agencia de marketing inmobiliario en Perú: citas calificadas, no curiosos. Performance, drone y CRM con el origen de cada lead escrito. Consultoría gratis.",
+      "Agencia de marketing inmobiliario en Perú: citas calificadas con performance, drone y CRM con el origen de cada lead escrito. Consultoría gratis.",
     h1: "Marketing inmobiliario que llena tu pipeline de citas",
-    hero: "Tu problema no es la falta de interesados; es la falta de citas que cierran. Generamos leads calificados, los filtramos y los llevamos a tu sala de ventas listos para decidir.",
+    hero: "Interesados hay. Lo que faltan son citas que cierren. Generamos leads calificados, los filtramos y los llevamos a tu sala de ventas listos para decidir.",
     cta: "Agenda tu consultoría cero",
     proof:
       "Caso Inmobiliaria Ceinys: S/350K en ventas, 350 leads y 8 lotes vendidos con S/3,000 en Meta Ads.",
@@ -47,19 +47,19 @@ export const SECTORES: Sector[] = [
           "Hemos trabajado para 24 marcas inmobiliarias. Llevamos el recorrido completo de un proyecto, del lanzamiento a la separación, con material que vende la valorización antes que el ladrillo.",
       },
       {
-        h2: "Dónde se pierde de verdad una venta inmobiliaria",
+        h2: "Dónde se pierde una venta inmobiliaria",
         parrafo:
           "Casi todos los proyectos que llegan a nosotros creen que su problema es la cantidad de leads. Casi nunca lo es. El punto donde se cae el dinero está después: entre que alguien deja sus datos y alguien lo llama. En una decisión donde el comprador consulta tres o cuatro proyectos la misma tarde, llegar segundo equivale a no llegar. Y no es una intuición de vendedores: el estudio de referencia sobre tiempo de respuesta analizó más de quince mil contactos y encontró que las probabilidades de calificar un lead se desploman al pasar de cinco a treinta minutos.",
         dato: {
           cifra: "21×",
-          texto: "menos probabilidades de calificar un lead si lo contactas a los 30 minutos en vez de a los 5. Por eso lo primero que montamos no es la campaña: es quién responde y en cuánto.",
+          texto: "menos probabilidades de calificar un lead si lo contactas a los 30 minutos en vez de a los 5. Por eso, antes que la campaña, definimos quién responde y en cuánto tiempo.",
           fuente: "Lead Response Management Study (MIT / InsideSales.com)",
         },
       },
       {
         h2: "El embudo completo, con números reales",
         parrafo:
-          "Esta es la cadena de un proyecto que trabajamos en Ica. La incluimos porque el dato que más sorprende no es el resultado final, sino lo poco que llega a la visita: de cada diecisiete leads, uno pisó el terreno. Un proyecto que juzgue su marketing por esa cifra apagaría una campaña rentable.",
+          "Esta es la cadena de un proyecto que trabajamos en Ica. La incluimos por un dato que sorprende: de cada diecisiete leads, uno pisó el terreno. Un proyecto que juzgue su marketing por esa cifra apagaría una campaña rentable.",
         tabla: {
           cabeceras: ["Etapa", "Resultado", "Costo por unidad"],
           filas: [
@@ -68,7 +68,7 @@ export const SECTORES: Sector[] = [
             ["Visitas a sala de ventas", "20", "S/150"],
             ["Lotes vendidos", "8", "S/375"],
           ],
-          nota: "Caso Inmobiliaria Ceinys. Lo que sostiene el resultado no es la tasa de visita, sino el 40% de cierre EN la visita: eso lo hace el equipo comercial.",
+          nota: "Caso Inmobiliaria Ceinys. El resultado lo sostiene el 40% de cierre en la visita, y eso lo hace el equipo comercial.",
         },
       },
       {
@@ -76,10 +76,10 @@ export const SECTORES: Sector[] = [
         parrafo:
           "La publicidad inmobiliaria funciona por fases, no encendiendo todo el presupuesto en captación desde el día uno. Ese error agota el público de la zona en semanas y hace que el costo por lead suba sin que nadie entienda por qué.",
         pasos: [
-          { titulo: "Definimos a quién le hablamos", texto: "el comprador de primera vivienda y el inversor que busca plusvalía no responden al mismo anuncio. Salen de tus propias ventas anteriores, no de una plantilla." },
-          { titulo: "Construimos el argumento", texto: "para la venta de lotes en etapa inicial manda la valorización; con entrega inmediata manda la comparación con lo que hay en la zona. No es el mismo anuncio." },
+          { titulo: "Definimos a quién le hablamos", texto: "el comprador de primera vivienda y el inversor que busca plusvalía no responden al mismo anuncio. Salen de tus propias ventas anteriores." },
+          { titulo: "Construimos el argumento", texto: "para la venta de lotes en etapa inicial manda la valorización; con entrega inmediata manda la comparación con lo que hay en la zona." },
           { titulo: "Montamos la captura y la respuesta", texto: "formulario o landing según dónde tengas el cuello de botella, WhatsApp conectado y una regla clara de quién contesta y en cuánto." },
-          { titulo: "Calificamos antes de pasar a ventas", texto: "plazo, forma de pago y si hay un inmueble de por medio. Tu equipo recibe personas con contexto, no una lista de nombres." },
+          { titulo: "Calificamos antes de pasar a ventas", texto: "plazo, forma de pago y si hay un inmueble de por medio. Tu equipo recibe a cada persona con su contexto." },
           { titulo: "Sostenemos el seguimiento", texto: "una parte importante de las ventas ocurre semanas después. Sin un registro ordenado, esos interesados se pierden por olvido y no por falta de interés." },
         ],
       },
@@ -94,8 +94,8 @@ export const SECTORES: Sector[] = [
         ],
         nota: {
           tipo: "aviso",
-          titulo: "Si el proyecto no se vende, no es marketing",
-          texto: "Cuando el precio está por encima de lo que paga la zona, la habilitación no avanza o la ubicación no encaja con el público al que se le habla, la publicidad solo consigue que más gente lo descubra antes. Si en el diagnóstico vemos eso, lo decimos: es más útil que vender una campaña que no iba a funcionar.",
+          titulo: "Cuando el problema no es el marketing",
+          texto: "Cuando el precio está por encima de lo que paga la zona, la habilitación no avanza o la ubicación no encaja con el público al que se le habla, la publicidad solo consigue que más gente lo descubra antes. Si en el diagnóstico vemos eso, te lo decimos.",
         },
       },
       {
@@ -145,7 +145,7 @@ export const SECTORES: Sector[] = [
       },
       {
         q: "¿Hacen tomas con drone?",
-        a: "Sí, y en proyectos de terreno suele ser lo que más convence: el recorrido aéreo responde de una vez las preguntas de ubicación, accesos y entorno que ninguna foto resuelve. Lo producimos nosotros, no lo subcontratamos.",
+        a: "Sí, y en proyectos de terreno suele ser lo que más convence: el recorrido aéreo responde de una vez las preguntas de ubicación, accesos y entorno que ninguna foto resuelve. Lo producimos nosotros.",
       },
       {
         q: "¿Y si ya tengo un equipo de marketing interno?",
@@ -188,10 +188,10 @@ export const SECTORES: Sector[] = [
       {
         h2: "El comprador no decide por el auto: decide por la cuota",
         parrafo:
-          "En Perú la conversación de venta arranca en el financiamiento. Por eso ponemos adelante lo que de verdad mueve: cuota inicial, bono, mantenimiento incluido, modelo del mes. Un anuncio que solo muestra el vehículo compite contra todos los demás; uno que muestra la condición atrae solo a quien puede tomarla. La oferta la trabajamos contigo antes de diseñar nada: una pieza bonita sobre una oferta débil no vende.",
+          "En Perú la conversación de venta arranca en el financiamiento. Por eso ponemos adelante lo que mueve la decisión: cuota inicial, bono, mantenimiento incluido, modelo del mes. Un anuncio que solo muestra el vehículo compite contra todos los demás; uno que muestra la condición atrae solo a quien puede tomarla. La oferta la trabajamos contigo antes de diseñar nada: una pieza bonita sobre una oferta débil no vende.",
       },
       {
-        h2: "Tu asesor recibe el prospecto en el celular, no en un Excel al día siguiente",
+        h2: "Tu asesor recibe el prospecto en el celular, al momento",
         parrafo:
           "El interesado en un auto se enfría rápido: quien consulta hoy visita otros dos concesionarios esta semana. Conectamos la campaña con tu CRM (el sistema donde queda registrado cada prospecto y su seguimiento) y el contacto llega al asesor al instante, con el modelo que pidió y la campaña de la que salió. Encima corren recordatorios para que nadie se quede sin segundo ni tercer intento. Tú ves quién llamó, quién no y cuánto demoró.",
       },
@@ -206,7 +206,7 @@ export const SECTORES: Sector[] = [
           "Alquilar el local, colgar banderolas y esperar que caiga gente es la forma más cara de no vender. Con Autoniza invertimos el orden: primero llenamos la lista de asistentes con perfiles que califican, después montamos la activación con captura de datos y dejamos a los asesores con la oferta del día en la mano. Salieron 3 autos vendidos el 22 de mayo y 5 el 25 de junio: ocho unidades en dos fechas.",
       },
       {
-        h2: "¿Cómo se mide el marketing automotriz? En pruebas de manejo, no en clics",
+        h2: "¿Cómo se mide el marketing automotriz? En pruebas de manejo",
         parrafo:
           "El alcance y los clics no dicen nada de tu negocio. Reportamos cuántos prospectos entraron, cuántos fueron contactados, cuántas pruebas de manejo se agendaron, cuántas se cumplieron y cuántas unidades se entregaron. De ahí sale el número que importa: cuánto costó cada prueba de manejo y cuánto costó cada venta. Si ese costo sube, se ve en la semana y se corrige. Y si una campaña no funciona te lo decimos, aunque incomode.",
       },
@@ -239,7 +239,7 @@ export const SECTORES: Sector[] = [
       {
         h2: "Qué incluye trabajar con nosotros",
         parrafo:
-          "Un responsable de cuenta que conoce tu operación y te contesta. Estrategia y calendario de campañas por modelo y por mes. Producción de las piezas: foto y video de tus unidades en tu propio piso, no imágenes de catálogo. Puesta en marcha del CRM y del seguimiento comercial junto a tu equipo. Y un reporte mensual con prospectos, pruebas de manejo, cierres y costo por unidad, revisado contigo en reunión.",
+          "Un responsable de cuenta que conoce tu operación y te contesta. Estrategia y calendario de campañas por modelo y por mes. Producción de las piezas: foto y video de tus unidades en tu propio piso. Puesta en marcha del CRM y del seguimiento comercial junto a tu equipo. Y un reporte mensual con prospectos, pruebas de manejo, cierres y costo por unidad, revisado contigo en reunión.",
       },
       {
         h2: "Concesionarios fuera de Ica",
@@ -310,7 +310,7 @@ export const SECTORES: Sector[] = [
     metaDescription:
       "Agencia de marketing para hoteles, restaurantes y agencias de viaje: reservas reales en temporada y fuera de ella, y la ficha de Google trabajando.",
     h1: "Marketing turístico que genera reservas reales",
-    hero: "El reto del turismo no es solo llenar en temporada alta: es no vaciarse en la baja. Diseñamos campañas que generan reservas todo el año, con costo medido.",
+    hero: "En turismo, el reto es no vaciarse en temporada baja. Diseñamos campañas que generan reservas todo el año, con costo medido.",
     cta: "Agenda tu consultoría cero",
     proof:
       "Caso Hoteles Señor de Luren: 75 reservas generadas en una sola campaña, dentro y fuera de temporada.",
@@ -323,15 +323,15 @@ export const SECTORES: Sector[] = [
       {
         h2: "Marketing para restaurantes",
         parrafo:
-          "Llena mesas en los días flojos con promociones y contenido que de verdad mueven al comensal.",
+          "Llena mesas en los días flojos con promociones y contenido que traen comensales.",
       },
       {
-        h2: "Lo primero no es la campaña: es que te encuentren",
+        h2: "Antes de la campaña, que te encuentren",
         parrafo:
           "En turismo, buena parte de la decisión se toma en el mapa. Alguien que ya está en Ica y busca dónde dormir, dónde comer o qué hacer mañana no abre Instagram: abre el buscador y mira lo que hay cerca. Esa búsqueda tiene la conversión más rápida que existe, y no cuesta un sol de publicidad. Por eso, antes de proponerte una campaña, revisamos que tu ficha esté verificada, con horarios reales, ubicación exacta, fotos actuales y reseñas recientes.",
         dato: {
           cifra: "76%",
-          texto: "de quienes buscan en el celular algo cercano visita un negocio relacionado en menos de un día. En turismo eso no es una estadística lejana: es el turista que ya está en la ciudad decidiendo dónde cenar.",
+          texto: "de quienes buscan en el celular algo cercano visita un negocio relacionado en menos de un día. En turismo, ese es el turista que ya está en la ciudad decidiendo dónde cenar.",
           fuente: "Think with Google, estudio de 2016 en Estados Unidos",
         },
       },
@@ -363,7 +363,7 @@ export const SECTORES: Sector[] = [
       {
         h2: "Las reseñas deciden la reserva",
         parrafo:
-          "En hotelería y restaurantes, la reseña no es una métrica de reputación: es parte del producto. La persona que está eligiendo entre tú y el de al lado abre las reseñas antes que la web, y lo que decide no es solo la nota promedio.",
+          "En hotelería y restaurantes, la reseña es parte del producto. La persona que está eligiendo entre tú y el de al lado abre las reseñas antes que la web, y lo que decide no es solo la nota promedio.",
         bullets: [
           { titulo: "La frecuencia pesa más que el total", texto: "veinte reseñas recientes transmiten un negocio vivo; doscientas de hace tres años transmiten uno que fue bueno alguna vez." },
           { titulo: "Las respuestas se leen", texto: "sobre todo las de las reseñas malas. Una respuesta serena y concreta a una queja convence más que diez elogios, porque enseña cómo tratas un problema." },
@@ -442,7 +442,7 @@ export const SECTORES: Sector[] = [
       },
       {
         q: "¿Cómo se mide una campaña de turismo?",
-        a: "Por reservas y su costo, no por alcance. Y con dos matices que suelen olvidarse: cuántas noches trae cada reserva y qué porcentaje de huéspedes repite, que es el canal más barato que existe.",
+        a: "Por reservas y su costo, con dos matices que suelen olvidarse: cuántas noches trae cada reserva y qué porcentaje de huéspedes repite, que es el canal más barato que existe.",
       },
       {
         q: "¿Son una agencia de marketing turístico?",
@@ -461,7 +461,7 @@ export const SECTORES: Sector[] = [
     nombre: "Marcas y consumo",
     metaTitle: "Agencia de Marketing para Marcas de Consumo | Suggestion",
     metaDescription:
-      "Marketing para marcas y consumo: demanda que se convierte en venta, no en likes. Posicionamiento, performance y activación. Consultoría gratis.",
+      "Marketing para marcas y consumo: demanda que se convierte en venta. Posicionamiento, performance y activación. Consultoría gratis.",
     h1: "Marcas y consumo: demanda que se vuelve venta",
     hero: "Construir marca y vender no son cosas opuestas. Generamos demanda que se convierte en venta —no likes prestados— combinando posicionamiento, performance y presencia física.",
     cta: "Agenda tu consultoría cero",
@@ -481,7 +481,7 @@ export const SECTORES: Sector[] = [
       {
         h2: "Construir marca y vender no son la misma inversión",
         parrafo:
-          "La confusión más cara de este sector es esperar contratos de una estrategia diseñada para que te recuerden. Ninguna de las dos es mejor: resuelven problemas distintos y se notan en plazos distintos. Lo sano es saber cuál tienes delante antes de decidir dónde va el presupuesto, y por eso es lo primero que ponemos sobre la mesa.",
+          "La confusión más cara de este sector es esperar contratos de una estrategia diseñada para que te recuerden. Las dos sirven: resuelven problemas distintos y se notan en plazos distintos. Lo sano es saber cuál tienes delante antes de decidir dónde va el presupuesto, y por eso es lo primero que ponemos sobre la mesa.",
         tabla: {
           cabeceras: ["", "Contenido de marca", "Campaña de demanda directa"],
           filas: [
@@ -532,7 +532,7 @@ export const SECTORES: Sector[] = [
       {
         h2: "Qué medimos en una marca de consumo",
         parrafo:
-          "Seguidores y alcance describen la conversación, no el negocio. Estos cuatro números sí permiten decidir, y ninguno necesita un panel complicado.",
+          "Estos cuatro números permiten decidir, y ninguno necesita un panel complicado.",
         tabla: {
           cabeceras: ["Número", "Qué te dice"],
           filas: [
@@ -627,7 +627,7 @@ export const SECTORES: Sector[] = [
           "Desde un consultorio independiente hasta un policlínico: presencia profesional y un flujo constante de pacientes.",
       },
       {
-        h2: "Lo que de verdad cuesta caro es la hora vacía",
+        h2: "Lo que más cuesta es la hora vacía",
         parrafo:
           "En salud, la conversación sobre el precio del paciente suele estar mal planteada. Una hora de agenda que no se ocupa ya está pagada: el local, el equipo y el profesional siguen ahí. Por eso, antes de proponerte subir la inversión en captación, miramos cuántas de las citas que ya agendas terminan en consulta efectiva. En muchos consultorios, recuperar ese porcentaje llena la agenda sin gastar un sol más en publicidad, y es lo primero que revisamos.",
         bullets: [
@@ -654,7 +654,7 @@ export const SECTORES: Sector[] = [
           { titulo: "Ordenamos tu presencia local", texto: "ficha verificada, especialidad clara, fotos reales del consultorio y un sistema para pedir reseñas después de cada consulta que fue bien." },
           { titulo: "Revisamos la agenda", texto: "cuántas citas se agendan, cuántas se cumplen y dónde se caen. Aquí suele haber más consultas disponibles que en una campaña nueva." },
           { titulo: "Abrimos el canal de contacto", texto: "WhatsApp con respuesta rápida, porque un paciente que escribe y no recibe respuesta el mismo día busca en otro sitio." },
-          { titulo: "Encendemos campañas por especialidad y zona", texto: "segmentadas por lo que la gente busca de verdad, no por «salud» en general." },
+          { titulo: "Encendemos campañas por especialidad y zona", texto: "segmentadas por lo que la gente busca, no por «salud» en general." },
           { titulo: "Medimos hasta la consulta", texto: "no hasta el clic ni hasta el lead: hasta el paciente que se sentó en el sillón." },
         ],
       },
@@ -929,12 +929,12 @@ export const SECTORES: Sector[] = [
       {
         h2: "Qué construimos primero, y por qué en ese orden",
         parrafo:
-          "El orden no es un detalle de gestión: es lo que decide si el dinero de publicidad trabaja o se evapora. En una bodega empezamos siempre por lo que sostiene el precio, seguimos por lo que quita dudas al comprador y solo al final abrimos el grifo del tráfico. Traer visitas a una tienda que no explica cómo llega la botella es la forma más cara de aprender esto.",
+          "Ese orden decide si el dinero de publicidad rinde o se pierde. En una bodega empezamos siempre por lo que sostiene el precio, seguimos por lo que quita dudas al comprador y solo al final abrimos el grifo del tráfico. Traer visitas a una tienda que no explica cómo llega la botella es la forma más cara de aprender esto.",
         pasos: [
           { titulo: "Marca y etiqueta", texto: "la etiqueta es lo único de tu producto que alguien ve antes de probarlo, y es lo que sostiene el precio en un estante donde todas las botellas prometen tradición. De aquí sale el resto." },
           { titulo: "La ficha que resuelve dudas", texto: "cobertura real por provincia, cómo va embalado el vidrio y verificación de mayoría de edad. Escrito en la propia ficha del producto, no en una página de ayuda que nadie abre." },
           { titulo: "Tienda y campañas por ocasión", texto: "el pisco y el vino se compran por motivo —regalo, fecha, pedido corporativo—, así que las campañas se arman por ocasión y no por producto." },
-          { titulo: "Enoturismo y recurrencia", texto: "la visita se convierte en cliente que recompra si al salir de la bodega tiene por dónde volver a comprar. Ese puente se construye, no aparece solo." },
+          { titulo: "Enoturismo y recurrencia", texto: "la visita se convierte en cliente que recompra si al salir de la bodega tiene por dónde volver a comprar. Ese puente hay que construirlo." },
         ],
         nota: {
           tipo: "aviso",
@@ -955,7 +955,7 @@ export const SECTORES: Sector[] = [
       {
         h2: "Qué medimos en una bodega",
         parrafo:
-          "Ninguna de estas cifras es el alcance de una publicación. Son las que dicen si la bodega vendió más este mes que el anterior, y son las que reportamos.",
+          "Las cifras que dicen si la bodega vendió más este mes que el anterior. Son las que reportamos.",
         tabla: {
           cabeceras: ["Indicador", "Qué responde", "Cada cuánto"],
           filas: [
@@ -965,7 +965,7 @@ export const SECTORES: Sector[] = [
             ["Recompra a 90 días", "Si el cliente vuelve, que es donde está el margen", "Trimestral"],
             ["Costo por venta", "Cuánto cuesta cada botella vendida con pauta", "Mensual"],
           ],
-          nota: "El primer mes de una tienda nueva es calibración: hay poco historial y las cifras se mueven mucho. Lo decimos antes, no cuando llega el reporte.",
+          nota: "El primer mes de una tienda nueva es calibración: hay poco historial y las cifras se mueven mucho. Lo decimos antes de empezar.",
         },
       },
       {
@@ -1036,7 +1036,7 @@ export const allSectorSlugs = (): string[] => SECTORES.map((s) => s.slug);
 export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] }> = {
   "marketing-inmobiliario": {
     beneficios: [
-      { titulo: "Citas, no curiosos", texto: "Filtramos al interesado real y lo llevamos a tu sala de ventas listo para decidir." },
+      { titulo: "Citas calificadas", texto: "Filtramos al interesado real y lo llevamos a tu sala de ventas listo para decidir." },
       { titulo: "Embudo completo del proyecto", texto: "Del lanzamiento a la separación, con pauta, landing, drone y CRM conectados." },
       { titulo: "Valorización que vende", texto: "Mensajes de plusvalía y etapa inicial que activan al inversor." },
       { titulo: "Seguimiento que no enfría", texto: "CRM y respuesta rápida para que ningún lead de alto valor se pierda." },
@@ -1078,7 +1078,7 @@ export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] 
   },
   "marketing-marcas-consumo": {
     beneficios: [
-      { titulo: "Demanda que vende", texto: "Branding atado a métricas de negocio, no a likes." },
+      { titulo: "Demanda que vende", texto: "Branding medido en ventas." },
       { titulo: "Punto de venta ganado", texto: "Material POP y merchandising que mueven el lineal." },
       { titulo: "Marca que justifica el precio", texto: "Posicionamiento que reduce la objeción de precio." },
       { titulo: "Contenido que vende producto", texto: "Audiovisual que despierta la compra." },
@@ -1121,7 +1121,7 @@ export const SECTOR_AST: Record<string, { beneficios: ItemTT[]; proceso: Paso[] 
   "marketing-pisco-vino": {
     beneficios: [
       { titulo: "Marca que se paga", texto: "Branding premium que justifica el precio frente al consumidor." },
-      { titulo: "Vende en línea", texto: "E-commerce que abre la venta a todo el país, no solo a tu puerta." },
+      { titulo: "Vende en línea", texto: "Una tienda en línea para vender en todo el país." },
       { titulo: "Enoturismo lleno", texto: "Visitas, catas y experiencias con reservas durante todo el año." },
       { titulo: "Tu historia, contada", texto: "Contenido que convierte tu tradición en deseo de compra." },
     ],

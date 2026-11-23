@@ -41,9 +41,9 @@ export const CIUDADES: Ciudad[] = [
           "Es la particularidad comercial de Chincha: tu cliente puede resolver la compra en Lima el mismo día. Eso obliga a competir con argumentos que no sean solo el precio —cercanía, atención, entrega, postventa— y a que tu negocio aparezca antes de que la búsqueda derive a la capital. La otra cara es la oportunidad: hay demanda limeña que baja los fines de semana y en feriados largos, y casi nadie le habla.",
       },
       {
-        h2: "Agroindustria y avícolas: venta B2B, no likes",
+        h2: "Agroindustria y avícolas: venta B2B",
         parrafo:
-          "El agro y la producción avícola de la zona venden a otras empresas, no al consumidor de la calle. Ahí el marketing no es postear: es una web que sostiene una ficha técnica, contenido que genera confianza en el comprador industrial y un seguimiento ordenado de cada cotización. En consumo directo ya nos pasó con Granjas Bonanza: 15 contratos cerrados con S/2,500 en campañas de demanda directa.",
+          "El agro y la producción avícola de la zona venden a otras empresas, no al consumidor de la calle. Ahí el marketing útil es una web que sostiene una ficha técnica, contenido que genera confianza en el comprador industrial y un seguimiento ordenado de cada cotización. En consumo directo ya nos pasó con Granjas Bonanza: 15 contratos cerrados con S/2,500 en campañas de demanda directa.",
         enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
       },
       {
@@ -72,7 +72,7 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Cuánto debo invertir al mes en publicidad?",
-        a: "Depende del margen de tu producto y de cuántos clientes puedes atender. Como referencia, con S/3,000 en Meta Ads una inmobiliaria que asesoramos generó S/350K en ventas. Lo honesto es empezar con un monto que puedas sostener tres meses y ajustar con datos reales, no adivinar.",
+        a: "Depende del margen de tu producto y de cuántos clientes puedes atender. Como referencia, con S/3,000 en Meta Ads una inmobiliaria que asesoramos generó S/350K en ventas. Lo honesto es empezar con un monto que puedas sostener tres meses y ajustar con datos reales.",
       },
       {
         q: "¿En cuánto tiempo veo resultados?",
@@ -106,7 +106,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Turismo en Paracas: llenar también fuera de temporada",
         parrafo:
-          "El reto de un hotel, una agencia o un restaurante en la zona no es la temporada alta, es marzo. La solución no es bajar el precio: es tener una oferta distinta para cada momento del año y un canal de reserva propio que no dependa solo de las plataformas y su comisión. Con Hoteles Señor de Luren logramos 75 reservas en una sola campaña que cubrió alta y baja temporada.",
+          "Para un hotel, una agencia o un restaurante de la zona, el mes difícil es marzo. La salida es tener una oferta distinta para cada momento del año y un canal de reserva propio que no dependa solo de las plataformas y su comisión. Con Hoteles Señor de Luren logramos 75 reservas en una sola campaña que cubrió alta y baja temporada.",
         enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
@@ -123,7 +123,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Pesca y agroexportación",
         parrafo:
-          "Para quien exporta, el marketing es institucional: presencia digital que resista la mirada de un importador extranjero, catálogo claro, contenido que demuestre estándares y trazabilidad, y material para ferias. No se trata de vender por Instagram, sino de que cuando el comprador te busque, encuentre a una empresa que da confianza.",
+          "Para quien exporta, el marketing es institucional: presencia digital que resista la mirada de un importador extranjero, catálogo claro, contenido que demuestre estándares y trazabilidad, y material para ferias. Lo que importa es que, cuando el comprador te busque, encuentre una empresa que da confianza.",
         enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
       },
       {
@@ -249,7 +249,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Comercio, servicios y proveedores",
         parrafo:
-          "No todo en Nazca es turismo. Hay comercio, transporte y empresas que proveen a la actividad minera de la zona. Ese negocio es B2B: se gana con credibilidad, presencia ordenada en buscadores y un seguimiento serio de cada cotización, no con publicaciones diarias. Así se pensó la exhibición de maquinaria de XCMG en Nazca: tres días para contratistas y empresarios, no para público general.",
+          "No todo en Nazca es turismo. Hay comercio, transporte y empresas que proveen a la actividad minera de la zona. Ese negocio es B2B: se gana con credibilidad, presencia ordenada en buscadores y un seguimiento serio de cada cotización. Así se pensó la exhibición de maquinaria de XCMG en Nazca: tres días para contratistas y empresarios.",
         enlaces: [
           { label: "La exhibición de XCMG en Nazca, en el portafolio", href: "/portafolio#xcmg-linea-amarilla-nazca" },
           { label: "Cómo vender maquinaria pesada", href: "/blog/automotriz/como-vender-maquinaria-pesada" },
@@ -258,7 +258,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Captar al turista antes de que llegue",
         parrafo:
-          "La diferencia entre un hotel lleno y uno a media capacidad no suele estar en el servicio, sino en el momento de la captación. El viajero decide dónde dormir y qué tour tomar días o semanas antes de subir al bus. Si tu negocio solo existe para quien ya está caminando por la plaza, dependes del azar y de la comisión de las plataformas.",
+          "Entre un hotel lleno y uno a media capacidad, la diferencia suele estar en cuándo y cómo capta a sus huéspedes. El viajero decide dónde dormir y qué tour tomar días o semanas antes de subir al bus. Si tu negocio solo existe para quien ya está caminando por la plaza, dependes del azar y de la comisión de las plataformas.",
         enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
@@ -269,7 +269,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Turismo internacional: el idioma importa",
         parrafo:
-          "Buena parte de quien visita Nazca no busca en español. Una web que solo existe en un idioma pierde a ese visitante antes de empezar. Trabajamos presencia y contenido pensando en quién busca de verdad y desde dónde, no en lo que a nosotros nos resulta cómodo.",
+          "Buena parte de quien visita Nazca no busca en español. Una web que solo existe en un idioma pierde a ese visitante antes de empezar. Trabajamos presencia y contenido pensando en quién busca y desde dónde.",
       },
       {
         h2: "Qué medimos",
@@ -289,7 +289,7 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Llegan a Marcona, Palpa y Puquio?",
-        a: "Sí: desde Nazca cubrimos Marcona, Palpa y Puquio. El traslado del equipo a cada ciudad va detallado en la cotización, no aparece después.",
+        a: "Sí: desde Nazca cubrimos Marcona, Palpa y Puquio. El traslado del equipo a cada ciudad va detallado en la cotización.",
       },
       {
         q: "¿Trabajan con agencias de Lima que necesitan personal en Nazca?",
@@ -297,7 +297,7 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Cómo consigo más reservas directas y menos por plataformas?",
-        a: "Con una web que permita reservar sin fricción, respuesta inmediata por WhatsApp y campañas dirigidas a quien está planificando el viaje. No se trata de salir de las plataformas, sino de que dejen de ser tu único canal.",
+        a: "Con una web que permita reservar sin fricción, respuesta inmediata por WhatsApp y campañas dirigidas a quien está planificando el viaje. Las plataformas pueden quedarse; conviene que dejen de ser tu único canal.",
       },
       {
         q: "¿Sirve la publicidad para captar turistas extranjeros?",
@@ -313,7 +313,7 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Trabajan con negocios que no son de turismo?",
-        a: "Sí. Tenemos siete sectores con estrategia propia: inmobiliario, automotriz, turismo, marcas y consumo, salud, agroexportación y pisco y vino. Y si tu rubro no está en la lista, la primera llamada sirve para ver si podemos aportar de verdad.",
+        a: "Sí. Tenemos siete sectores con estrategia propia: inmobiliario, automotriz, turismo, marcas y consumo, salud, agroexportación y pisco y vino. Y si tu rubro no está en la lista, la primera llamada sirve para ver si podemos ayudarte.",
       },
     ],
     cierre: { h2: "Activemos tu marca en Nazca", cta: "Cotiza tu activación" },
@@ -323,9 +323,9 @@ export const CIUDADES: Ciudad[] = [
     nombre: "Arequipa",
     metaTitle: "Marketing para Empresas de Arequipa | Suggestion",
     metaDescription:
-      "Agencia de marketing para empresas de Arequipa: automotriz, inmobiliario, salud y comercio. Campañas que se miden en ventas, no en likes. Agenda hoy.",
+      "Agencia de marketing para empresas de Arequipa: automotriz, inmobiliario, salud y comercio. Campañas medidas en ventas. Agenda hoy.",
     h1: "Marketing para empresas de Arequipa",
-    hero: "Arequipa es la plaza más competida del sur. Con más oferta, ganar no es gritar más fuerte: es tener un embudo que convierta mejor que el del vecino, y medirlo hasta el cierre.",
+    hero: "Arequipa es la plaza más competida del sur. Con más oferta, gana quien tiene un embudo que convierte mejor y lo mide hasta el cierre.",
     cta: "Agenda tu consultoría cero",
     proof:
       "Atendemos 19 marcas de vehículos y operamos planes de marketing para una red de concesionarios presente en Ica y Cusco.",
@@ -335,17 +335,17 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Competir en una plaza con mucha oferta",
         parrafo:
-          "En una ciudad grande hay más competencia pagando por el mismo cliente, así que el costo por contacto sube. La ventaja no está en tener más presupuesto, sino en perder menos: responder rápido, calificar bien y darle seguimiento a cada oportunidad. La mayoría de negocios pierde más ventas por desorden interno que por falta de publicidad. En marketing digital, perder menos también es aparecer en Google cuando alguien busca tu servicio en Arequipa: con un buen SEO, parte de los contactos llega sin pagar un anuncio.",
+          "En una ciudad grande hay más competencia pagando por el mismo cliente, así que el costo por contacto sube. La ventaja está en perder menos oportunidades: responder rápido, calificar bien y dar seguimiento. La mayoría de negocios pierde más ventas por desorden interno que por falta de publicidad. En marketing digital, perder menos también es aparecer en Google cuando alguien busca tu servicio en Arequipa: con un buen SEO, parte de los contactos llega sin pagar un anuncio.",
         enlaces: [{ label: "Posicionamiento SEO para empresas", href: "/servicios/seo" }],
       },
       {
         h2: "Automotriz: del clic a la prueba de manejo",
         parrafo:
-          "Es donde tenemos más kilómetros recorridos: 19 marcas de vehículos atendidas entre livianos, camiones y línea amarilla, incluida XCMG. Un lead de auto que no llega al piso no vale nada, así que las campañas se diseñan alrededor de la prueba de manejo y del argumento que mueve la decisión —financiamiento, cuota inicial, modelo del mes—, no alrededor del clic barato.",
+          "Es donde tenemos más kilómetros recorridos: 19 marcas de vehículos atendidas entre livianos, camiones y línea amarilla, incluida XCMG. Un lead de auto que no llega al piso no vale nada, así que las campañas se diseñan alrededor de la prueba de manejo y del argumento que mueve la decisión: financiamiento, cuota inicial o modelo del mes.",
         enlaces: [{ label: "Marketing automotriz", href: "/marketing-automotriz" }],
       },
       {
-        h2: "Inmobiliario: citas calificadas, no curiosos",
+        h2: "Inmobiliario: citas calificadas",
         parrafo:
           "Un proyecto se vende en preventa, cuando la valorización todavía es un argumento. El trabajo es separar al comprador que busca vivienda del inversionista, hablarle distinto a cada uno y sostener el seguimiento hasta la visita a sala de ventas. Con Inmobiliaria Ceinys, S/3,000 en Meta Ads generaron 350 leads, 20 visitas y 8 lotes vendidos: S/350K en ventas.",
         enlaces: [{ label: "Marketing inmobiliario", href: "/marketing-inmobiliario" }],
@@ -400,14 +400,14 @@ export const CIUDADES: Ciudad[] = [
     nombre: "Tacna",
     metaTitle: "Marketing para Empresas de Tacna | Suggestion",
     metaDescription:
-      "Marketing para negocios de Tacna: turismo médico, comercio fronterizo, automotriz y agro. Campañas que traen clientes, no likes. Consultoría gratis.",
+      "Marketing para negocios de Tacna: turismo médico, comercio fronterizo, automotriz y agro. Campañas que traen clientes. Consultoría gratis.",
     h1: "Marketing para empresas de Tacna",
     hero: "En Tacna una parte del cliente llega desde el otro lado de la frontera. Eso cambia todo: el idioma del anuncio, la moneda de la comparación y el momento en que se toma la decisión.",
     cta: "Agenda tu consultoría cero",
     proof:
       "Desde 2019 hemos trabajado con más de 50 marcas, en siete sectores con estrategia propia para cada uno.",
     cobertura:
-      "Tacna la trabajamos en remoto desde Ica. La operación diaria —campañas, seguimiento, reportes— es digital, y cuando el proyecto necesita presencia física se coordina con anticipación. La ventaja de trabajar con nosotros no es la cercanía: es el método y los números.",
+      "Tacna la trabajamos en remoto desde Ica. La operación diaria —campañas, seguimiento, reportes— es digital, y cuando el proyecto necesita presencia física se coordina con anticipación. Lo que aportamos es el método y los números.",
     secciones: [
       {
         h2: "El cliente chileno: un público que hay que trabajar aparte",
@@ -442,7 +442,7 @@ export const CIUDADES: Ciudad[] = [
     faq: [
       {
         q: "¿Pueden segmentar campañas para público de Chile?",
-        a: "Sí, la segmentación por ubicación e idioma es estándar en las plataformas. Lo que hace la diferencia no es la segmentación, sino el mensaje: ese público compara en otra moneda y necesita certezas de horario, garantía y atención antes de decidir el viaje.",
+        a: "Sí, la segmentación por ubicación e idioma es estándar en las plataformas. Lo que más pesa es el mensaje: ese público compara en otra moneda y necesita certezas de horario, garantía y atención antes de decidir el viaje.",
       },
       {
         q: "¿Trabajan con clínicas y consultorios?",
@@ -502,7 +502,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Qué medimos",
         parrafo:
-          "Reservas, pedidos o clientes según tu rubro, y el costo de conseguir cada uno. En turismo además comparamos temporada alta contra baja: si la baja mejora, la estrategia está funcionando de verdad.",
+          "Reservas, pedidos o clientes según tu rubro, y el costo de conseguir cada uno. En turismo además comparamos temporada alta contra baja: si la baja mejora, la estrategia está funcionando.",
       },
     ],
     serviciosQueUsa: ["publicidad-digital", "redes-sociales", "branding", "produccion-audiovisual"],
@@ -563,7 +563,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Agencias, restaurantes y proveedores",
         parrafo:
-          "Una agencia de tours vive de la confianza —seguridad, guías, equipamiento— y eso se comunica con contenido real, no con fotos de banco de imágenes. Los restaurantes se juegan la mesa en las reseñas y en aparecer bien en el mapa. Y las empresas que proveen a la actividad minera de la región juegan otro partido, el B2B, donde vale la credibilidad y el orden en el seguimiento de cotizaciones.",
+          "Una agencia de tours vive de la confianza —seguridad, guías, equipamiento— y eso se comunica con fotos y videos propios. Los restaurantes se juegan la mesa en las reseñas y en aparecer bien en el mapa. Y las empresas que proveen a la actividad minera de la región juegan otro partido, el B2B, donde vale la credibilidad y el orden en el seguimiento de cotizaciones.",
       },
       {
         h2: "Qué medimos",
@@ -575,7 +575,7 @@ export const CIUDADES: Ciudad[] = [
     faq: [
       {
         q: "¿Cómo consigo reservas directas y dependo menos de las plataformas?",
-        a: "Con una web donde se pueda reservar sin fricción, respuesta rápida por WhatsApp y campañas dirigidas a quien está planificando el viaje. El objetivo no es abandonar las plataformas, sino que dejen de ser el único canal y recuperar parte de esa comisión.",
+        a: "Con una web donde se pueda reservar sin fricción, respuesta rápida por WhatsApp y campañas dirigidas a quien está planificando el viaje. El objetivo es que las plataformas dejen de ser el único canal y recuperar parte de esa comisión.",
       },
       {
         q: "¿Se puede hacer algo con la temporada baja?",
@@ -613,7 +613,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Un mercado pequeño se trabaja distinto",
         parrafo:
-          "Con pocos habitantes, el error clásico es copiar la receta de una ciudad grande: mucha pauta apuntando a un público que no existe en ese volumen. En Palpa la ecuación es otra. La recomendación pesa más que el anuncio, el mismo cliente vuelve varias veces al año y buena parte de la venta importante no está en el distrito, sino fuera: el comprador de Lima, el turista que baja por la Panamericana, el acopiador que compra la cosecha. Por eso lo que rinde no es gritar más fuerte adentro, es hacerse visible afuera.",
+          "Con pocos habitantes, el error clásico es copiar la receta de una ciudad grande: mucha pauta apuntando a un público que no existe en ese volumen. En Palpa la ecuación es otra. La recomendación pesa más que el anuncio, el mismo cliente vuelve varias veces al año y buena parte de la venta importante no está en el distrito, sino fuera: el comprador de Lima, el turista que baja por la Panamericana, el acopiador que compra la cosecha. Por eso rinde más hacerse visible afuera.",
         enlaces: [{ label: "BTL en Palpa con nuestro equipo de Nazca", href: "/agencia-de-marketing-en-nazca" }],
       },
       {
@@ -624,13 +624,13 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Turismo: los geoglifos que casi nadie visita",
         parrafo:
-          "Los geoglifos de Palpa son anteriores a las líneas de Nazca y están a un lado de la ruta que miles de viajeros recorren cada año camino al sur. La mayoría pasa de largo, no porque no le interese, sino porque no se entera. Para un hospedaje, un restaurante o una agencia de la zona, el trabajo no es competir con Nazca: es aparecer en la planificación del viaje, que ocurre semanas antes y en internet, con una propuesta concreta de por qué vale la pena parar.",
+          "Los geoglifos de Palpa son anteriores a las líneas de Nazca y están a un lado de la ruta que miles de viajeros recorren cada año camino al sur. La mayoría pasa de largo, no porque no le interese, sino porque no se entera. Para un hospedaje, un restaurante o una agencia de la zona, el trabajo es aparecer en la planificación del viaje, que ocurre semanas antes y en internet, con una propuesta concreta de por qué vale la pena parar.",
         enlaces: [{ label: "Marketing turístico y para hoteles", href: "/marketing-turismo" }],
       },
       {
-        h2: "Agro: vender al comprador, no al vecino",
+        h2: "Agro: vender al comprador mayorista",
         parrafo:
-          "Para el productor de cítricos, uva o pecana, el marketing útil no es publicar en redes: es que cuando un acopiador, un exportador o un comprador mayorista te busque, encuentre una empresa que da confianza. Eso significa una web sencilla pero seria, fichas de producto con datos reales de calibre y campaña, fotografías que muestren el estado del cultivo y una forma ordenada de responder cada consulta. Es el mismo trabajo que hacemos en agroexportación, uno de nuestros siete sectores.",
+          "Para el productor de cítricos, uva o pecana, el marketing útil es que, cuando un acopiador, un exportador o un comprador mayorista te busque, encuentre una empresa que da confianza. Eso significa una web sencilla pero seria, fichas de producto con datos reales de calibre y campaña, fotografías que muestren el estado del cultivo y una forma ordenada de responder cada consulta. Es el mismo trabajo que hacemos en agroexportación, uno de nuestros siete sectores.",
         enlaces: [{ label: "Marketing para agroexportadoras", href: "/marketing-agroexportacion" }],
       },
       {
@@ -641,7 +641,7 @@ export const CIUDADES: Ciudad[] = [
       {
         h2: "Qué medimos",
         parrafo:
-          "Consultas, pedidos o reservas según tu rubro, y cuánto costó conseguir cada uno. En un mercado chico los números son pequeños y por eso mismo se pueden seguir uno a uno: sabes de dónde vino cada cliente. Esa trazabilidad es una ventaja, no una limitación.",
+          "Consultas, pedidos o reservas según tu rubro, y cuánto costó conseguir cada uno. En un mercado chico los números son pequeños y por eso mismo se pueden seguir uno a uno: sabes de dónde vino cada cliente. Esa trazabilidad es una ventaja.",
       },
     ],
     serviciosQueUsa: ["branding", "desarrollo-web", "redes-sociales", "produccion-audiovisual"],

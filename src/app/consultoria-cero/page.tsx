@@ -38,16 +38,16 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const COMO = [
-  { Icon: MessageCircle, t: "Nos cuentas tu caso", d: "Tu problema o lo que quieres mejorar, con tus palabras. No hace falta que sepas de marketing: para eso estamos nosotros." },
-  { Icon: Compass, t: "Entendemos lo que necesitas", d: "Preguntamos lo justo para entender tu negocio, tu cliente y tu objetivo. Cada caso es distinto y lo tratamos así." },
-  { Icon: Route, t: "Te proponemos el camino", d: "Los caminos y los servicios de Suggestion que mejor encajan con tu objetivo, adaptados a ti, no sacados de un paquete." },
+  { Icon: MessageCircle, t: "Nos cuentas tu caso", d: "Tu problema o lo que quieres mejorar, con tus palabras. No hace falta saber de marketing." },
+  { Icon: Compass, t: "Entendemos lo que necesitas", d: "Preguntamos lo justo para entender tu negocio, tu cliente y tu objetivo." },
+  { Icon: Route, t: "Te proponemos el camino", d: "Qué conviene hacer y con qué servicios, según tu objetivo." },
 ];
 
 const FAQ = [
   { q: "¿Cuánto cuesta?", a: "Nada. La consultoría cero es gratis y no te compromete a contratar nada." },
-  { q: "¿Cuánto dura?", a: "30 minutos. Es tiempo suficiente para que nos cuentes tu caso y para proponerte por dónde ir." },
-  { q: "¿Necesito saber de marketing?", a: "No. Basta con que nos cuentes qué te pasa o qué quieres lograr, con tus palabras. Entender eso y traducirlo en un plan es nuestro trabajo." },
-  { q: "¿Qué me llevo?", a: "Un camino claro para tu objetivo: qué conviene hacer, en qué orden y qué servicios de Suggestion encajan con tu caso. Si decides seguir con nosotros, preparamos la propuesta; si no, te quedas con la orientación." },
+  { q: "¿Cuánto dura?", a: "30 minutos." },
+  { q: "¿Necesito saber de marketing?", a: "No. Basta con que nos cuentes qué te pasa o qué quieres lograr." },
+  { q: "¿Qué me llevo?", a: "Qué conviene hacer, en qué orden y con qué servicios. Si decides seguir con nosotros, preparamos la propuesta; si no, te quedas con la orientación." },
   { q: "¿Cómo la agendo?", a: "Por WhatsApp o con el formulario de esta página. Nuestro agente de IA te responde al momento, y una persona te confirma el día y la hora de lunes a sábado, de 8:30 a 18:30." },
 ];
 
@@ -64,7 +64,7 @@ export default function ConsultoriaCero() {
                 30 minutos para entender tu negocio y proponerte el camino.
               </h1>
               <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "54ch" }}>
-                Nos cuentas tu problema o lo que quieres mejorar. Con eso entendemos lo que necesitas y te proponemos los caminos y los servicios de Suggestion que mejor encajan con tu objetivo. Sin costo y sin compromiso.
+                Nos cuentas tu problema o lo que quieres mejorar y te decimos qué hacer y con qué servicios. Gratis y sin compromiso.
               </p>
               <div className="hk-enter-4" style={{ marginTop: 26 }}>
                 <WaConsultoria>Agenda tu consultoría cero <ArrowRight size={18} /></WaConsultoria>

@@ -46,7 +46,7 @@ export default function WorkWall() {
             marcas confiaron. Esto es lo que hicimos.
           </h2>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-on-inverse-mut)", margin: "18px 0 0", maxWidth: "40ch" }}>
-            Campañas, proyectos, activaciones y rodajes reales — de Ica para todo el Perú. Sin banco de imágenes: todo lo que ves aquí lo hicimos nosotros.
+            Campañas, activaciones y rodajes de nuestro equipo, en Ica y en otras ciudades del Perú.
           </p>
           <div style={{ display: "flex", gap: 14, marginTop: 30, flexWrap: "wrap" }}>
             <Btn as="a" href="/casos" variant="onDark" size="lg">

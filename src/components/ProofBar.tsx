@@ -71,7 +71,7 @@ export default function ProofBar({
               </span>
             ))}
             <span style={{ marginLeft: "auto", font: "var(--fw-light) var(--fs-sm)/1.4 var(--font-body)", color: "var(--text-on-inverse-mut)", maxWidth: "34ch" }}>
-              Medimos cada etapa del embudo. Reportamos lo que mueve el negocio.
+              Medimos cada etapa del embudo, hasta la venta.
             </span>
           </div>
         )}

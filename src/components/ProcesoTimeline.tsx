@@ -98,7 +98,7 @@ export default function ProcesoTimeline({ pasos }: { pasos: Paso[] }) {
     <section style={{ background: "var(--black)", color: "var(--white)" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>
         <SectionHeading level={2} kicker="Nuestro proceso" tone="dark" maxWidth="22ch" style={{ marginBottom: 48 }}>
-          Una metodología que entrega resultados.
+          Cómo trabajamos.
         </SectionHeading>
 
         <div ref={lineRef} className="hk-proc-timeline">

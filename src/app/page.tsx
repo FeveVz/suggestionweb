@@ -77,8 +77,8 @@ const PROBLEMAS: { problema: string; causa: string; Icono: typeof Car; lleva: { 
  *  aquí no hay revisión previa ni "tres mejoras", y no se promete. */
 const PASOS_CONSULTORIA = [
   { Icono: MessageCircle, t: "Nos escribes", d: "Por WhatsApp o con un formulario de dos minutos. Nuestro agente de IA te responde al momento, y una persona te confirma el día y la hora de lunes a sábado, de 8:30 a 18:30." },
-  { Icono: Video, t: "Nos cuentas tu caso en 30 minutos", d: "Tu problema o lo que quieres mejorar, con tus palabras. Escuchamos y preguntamos hasta entender lo que necesitas." },
-  { Icono: ClipboardCheck, t: "Te proponemos el camino", d: "Los caminos y los servicios de Suggestion que mejor encajan con tu objetivo, adaptados a tu negocio y no sacados de un paquete." },
+  { Icono: Video, t: "Nos cuentas tu caso en 30 minutos", d: "Tu problema o lo que quieres mejorar, con tus palabras." },
+  { Icono: ClipboardCheck, t: "Te proponemos el camino", d: "Qué conviene hacer y con qué servicios, según tu objetivo." },
 ];
 
 export const metadata: Metadata = buildMetadata({
@@ -93,10 +93,10 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const SECTORES = [
-  { title: "Inmobiliario", result: "Llenamos tu sala de ventas de citas calificadas, no de curiosos.", href: "/marketing-inmobiliario", icon: Building2, shape: 1 },
-  { title: "Automotriz", result: "Del clic a la prueba de manejo: leads listos para cerrar en piso.", href: "/marketing-automotriz", icon: Car, shape: 2 },
-  { title: "Turismo", result: "Reservas reales, en temporada y fuera de ella, con costo medido.", href: "/marketing-turismo", icon: Luggage, shape: 6 },
-  { title: "Marcas y consumo", result: "Demanda que se vuelve venta, no likes prestados.", href: "/marketing-marcas-consumo", icon: ShoppingBag, shape: 5 },
+  { title: "Inmobiliario", result: "Citas calificadas en tu sala de ventas.", href: "/marketing-inmobiliario", icon: Building2, shape: 1 },
+  { title: "Automotriz", result: "Leads que llegan a la prueba de manejo.", href: "/marketing-automotriz", icon: Car, shape: 2 },
+  { title: "Turismo", result: "Reservas en temporada y fuera de ella.", href: "/marketing-turismo", icon: Luggage, shape: 6 },
+  { title: "Marcas y consumo", result: "Demanda que termina en venta.", href: "/marketing-marcas-consumo", icon: ShoppingBag, shape: 5 },
   { title: "Salud", result: "Agenda llena de pacientes sin quemar tu presupuesto.", href: "/marketing-salud", icon: Stethoscope, shape: 4 },
   { title: "Agroexportación", result: "Presencia B2B que te pone frente al importador correcto.", href: "/marketing-agroexportacion", icon: Sprout, shape: 3 },
   { title: "Pisco y vino", result: "Tu tradición, contada para vender dentro y fuera de Ica.", href: "/marketing-pisco-vino", icon: Wine, shape: 7 },
@@ -118,7 +118,7 @@ const FAQ = [
   // consultoría y cuánto cuesta. Van arriba por eso.
   {
     q: "¿Qué es la consultoría cero y cuánto cuesta?",
-    a: "No cuesta nada. Es una conversación de 30 minutos en la que nos cuentas tu problema o lo que quieres mejorar. Con eso entendemos lo que necesitas y te proponemos los caminos y los servicios de Suggestion que mejor encajan con tu objetivo. No te compromete a contratar nada.",
+    a: "Es gratis. Son 30 minutos en los que nos cuentas tu problema o lo que quieres mejorar, y te decimos qué hacer y con qué servicios. No te compromete a contratar nada.",
   },
   {
     q: "¿Cuánto cuesta trabajar con ustedes?",
@@ -126,19 +126,19 @@ const FAQ = [
   },
   {
     q: "¿Qué hace una agencia de marketing y publicidad?",
-    a: "Atrae a las personas correctas, las convierte en contactos y acompaña hasta el cierre. Suggestion es a la vez agencia digital y agencia de publicidad: en Ica hacemos marketing digital y publicidad física —impresos, paneles y activaciones— con el mismo equipo. Y no nos quedamos en el alcance: medimos cuántos leads, citas y ventas genera cada sol invertido.",
+    a: "Atrae a las personas correctas, las convierte en contactos y acompaña hasta el cierre. Suggestion es a la vez agencia digital y agencia de publicidad: en Ica hacemos marketing digital y publicidad física —impresos, paneles y activaciones— con el mismo equipo. Y medimos cuántos leads, citas y ventas genera cada sol invertido.",
   },
   {
     q: "¿Por qué elegir una agencia de marketing en Ica y no una de Lima?",
-    a: "Porque conocemos este mercado de primera mano: cómo compra la gente en Ica, qué medios funcionan y qué precios se manejan. Una agencia de marketing en Ica te da esa lectura local con el mismo nivel técnico que una de Lima — y con resultados medibles en ventas, no en promesas.",
+    a: "Porque conocemos este mercado de primera mano: cómo compra la gente en Ica, qué medios funcionan y qué precios se manejan. Esa lectura local viene con el mismo nivel técnico que una agencia de Lima.",
   },
   {
     q: "¿Atienden en todo el Perú desde Ica?",
-    a: "Sí. Operamos desde Ica y manejamos campañas a nivel nacional. La distancia no cambia los resultados; los números, sí.",
+    a: "Sí. Operamos desde Ica y manejamos campañas en todo el Perú.",
   },
   {
     q: "¿Cómo miden los resultados?",
-    a: "Medimos hasta la venta, no hasta el clic: cuánto te cuesta cada persona interesada, cuántas citas salen de ahí y cuántas ventas se cierran. Recibes un reporte claro con esos números, no un tablero de “me gusta”.",
+    a: "Medimos hasta la venta: cuánto te cuesta cada persona interesada, cuántas citas salen y cuántas ventas se cierran. Recibes un reporte mensual con esos números.",
   },
 ];
 
@@ -315,7 +315,7 @@ export default function Home() {
               Empieza por una conversación de 30 minutos.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.6 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "44ch" }}>
-              Antes de proponerte nada, te escuchamos: nos cuentas tu problema o lo que quieres mejorar, y con eso te proponemos el camino que encaja con tu objetivo.
+              Nos cuentas tu problema o lo que quieres mejorar, y te decimos por dónde empezar.
             </p>
             <ul className="hk-cons-gar">
               <li>Sin costo</li>
@@ -372,7 +372,7 @@ export default function Home() {
               Todo lo que hace falta para vender, en un solo equipo.
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-body)", marginTop: 18, maxWidth: "36ch" }}>
-              No vendemos piezas sueltas: de la estrategia a los anuncios, la web y el material en la calle. Cada servicio tiene sus precios publicados.
+              De la estrategia a los anuncios, la web y el material en la calle. Cada servicio tiene sus precios publicados.
             </p>
             {/* Para el que llega hasta aquí sin saber qué elegir, que es lo
                 normal: el catálogo no tiene por qué entenderlo el cliente. */}
@@ -452,7 +452,7 @@ export default function Home() {
               ¿Hablamos 30 minutos?
             </SectionHeading>
             <p style={{ font: "var(--fw-light) var(--fs-md)/1.55 var(--font-body)", color: "var(--text-on-inverse-mut)", marginTop: 20, maxWidth: "40ch" }}>
-              Agenda tu consultoría cero: nos cuentas tu problema o lo que quieres mejorar, entendemos lo que necesitas y te proponemos el camino que mejor encaja con tu objetivo. Sin costo y sin compromiso.
+              Agenda tu consultoría cero: 30 minutos para contarnos qué quieres resolver. Gratis y sin compromiso.
             </p>
             <div style={{ display: "flex", gap: 26, marginTop: 30, flexWrap: "wrap" }}>
               <a href={WA_CONSULTORIA} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--white)" }}>

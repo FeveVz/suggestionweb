@@ -19,7 +19,7 @@ export default function PricingSection({ planes, nombre, nota }: { planes?: Plan
         Precios claros, sin sorpresas.
       </SectionHeading>
       <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginBottom: 40, maxWidth: "54ch" }}>
-        Planes referenciales para que tengas una idea. El alcance final lo ajustamos a tu caso en la consultoría cero.{nota ? ` ${nota}` : ""}
+        Precios referenciales. El alcance final se ajusta en la consultoría cero.{nota ? ` ${nota}` : ""}
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)", alignItems: "stretch" }}>
         {planes.map((p) => {

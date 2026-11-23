@@ -117,7 +117,7 @@ export default function PortafolioPage() {
               El trabajo de calle, montado y documentado
             </h1>
             <p className="hk-enter-3" style={{ font: "var(--fw-light) var(--fs-md)/1.62 var(--font-body)", color: "var(--text-body)", margin: "22px 0 0", maxWidth: "58ch" }}>
-              Activaciones, lanzamientos, auspicios y producción gráfica entre 2024 y 2026. Cada pieza dice qué problema resolvía, cómo se montó y el dato de oficio que solo sabe quien estuvo ahí: promotores, horas de montaje, aforo, datos recogidos.
+              Activaciones, lanzamientos, auspicios y producción gráfica entre 2024 y 2026. En cada pieza: qué resolvía, cómo se montó, cuántos promotores, horas de montaje, aforo y datos recogidos.
             </p>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default function PortafolioPage() {
             Producir un evento y vender con él no son el mismo trabajo.
           </SectionHeading>
           <p style={{ font: "var(--fw-light) var(--fs-md)/1.65 var(--font-body)", color: "var(--text-body)", maxWidth: "64ch" }}>
-            Esta página enseña cómo se montan las cosas: la convocatoria, el protocolo, la logística y el criterio para que una marca entre en un espacio sin que la echen. Lo que esas activaciones vendieron, cuando hay una cifra medida y autorizada, está en los casos — con su inversión, su período y su fecha de corte al lado.
+            Aquí está cómo se montó cada activación: convocatoria, protocolo y logística. Lo que vendieron, cuando hay una cifra medida y autorizada, está en los casos, con su inversión, su período y su fecha de corte.
           </p>
         </div>
         <RelatedLinks
