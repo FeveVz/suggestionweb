@@ -16,6 +16,17 @@ const RAZONES_PRODUCCION: [string, string][] = [
   ["Todo con factura", "Cada pedido sale con factura. RUC 20615266753."],
 ];
 
+/**
+ * Producción con envío a otra región (Ayacucho): igual que producción, pero
+ * sin prometer instalación, que allá no hacemos (owner, 23-nov-2026).
+ */
+const RAZONES_ENVIO: [string, string][] = [
+  ["Por pedido y con fecha", "Cotizamos con tus especificaciones y te decimos la fecha de entrega en tu ciudad antes de empezar."],
+  ["Material según dónde va", "Elegimos el material según el sol, la lluvia y cuánto tiempo va a estar puesto."],
+  ["Diseño incluido si lo necesitas", "Si no tienes el arte lo hacemos, y no producimos sin tu aprobación."],
+  ["Todo con factura", "Cada pedido sale con factura. RUC 20615266753."],
+];
+
 /** BTL: personal en la calle, con lo pactado y su informe (no producción física). */
 const RAZONES_BTL: [string, string][] = [
   ["Se pacta qué cuenta como resultado", "Volantes repartidos, datos captados o ventas del día: lo decidimos antes de salir a la calle."],
@@ -39,17 +50,12 @@ export default function PorQueSection({
   tone?: "light" | "raised";
   produccion?: boolean;
   /** Fuerza el juego de razones; si no, sale de `produccion`. */
-  tipo?: "digital" | "produccion" | "btl";
+  tipo?: "digital" | "produccion" | "btl" | "envio";
 }) {
   const bg = tone === "raised" ? "var(--surface-raised)" : "var(--white)";
   const t = tipo ?? (produccion ? "produccion" : "digital");
-  const razones = t === "btl" ? RAZONES_BTL : t === "produccion" ? RAZONES_PRODUCCION : RAZONES;
-  const titulo =
-    t === "btl"
-      ? "Por qué trabajar con nosotros."
-      : t === "produccion"
-        ? "Por qué trabajar con nosotros."
-        : "Por qué trabajar con nosotros.";
+  const razones = t === "btl" ? RAZONES_BTL : t === "envio" ? RAZONES_ENVIO : t === "produccion" ? RAZONES_PRODUCCION : RAZONES;
+  const titulo = "Por qué trabajar con nosotros.";
   return (
     <section style={{ background: bg }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "var(--section-y) var(--gutter)" }}>

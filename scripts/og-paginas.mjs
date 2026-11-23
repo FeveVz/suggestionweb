@@ -48,6 +48,11 @@ const PAGINAS = [
   ["equipo-yurayma", "Yurayma Vásquez", "Diseño"],
   ["equipo-jose-carlos", "José Carlos Muñoz", "Audiovisual y edición"],
   ["equipo-nicolas", "Nicolás Montoya", "Logística y eventos"],
+  // Producción con envío a Ayacucho (23-nov-2026).
+  ["imprenta-en-ayacucho", "Imprenta en Ayacucho", "con envío desde Ica"],
+  ["gigantografias-en-ayacucho", "Gigantografías", "en Ayacucho"],
+  ["merchandising-en-ayacucho", "Merchandising", "en Ayacucho"],
+  ["material-pop-en-ayacucho", "Material POP", "en Ayacucho"],
 ];
 
 const CHROME = [

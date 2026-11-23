@@ -6,6 +6,7 @@ import HubLanding from "@/components/HubLanding";
 import type { RelatedLink } from "@/components/RelatedLinks";
 import { buildMetadata } from "@/lib/seo";
 import { paginaDeServicio, collectionPageSchema } from "@/lib/schema";
+import { SERVICIOS_CIUDAD } from "@/content/servicios-ciudad";
 import {
   getServicio,
   getServiciosByCategoria,
@@ -189,6 +190,12 @@ export default async function ServicioPage({ params }: Params) {
   const lecturas = [...(s.lecturas ?? []), ...guias].slice(0, 8);
   if (lecturas.length) {
     related.push({ title: "Para decidir mejor", links: lecturas, columns: 2 });
+  }
+
+  // Páginas del mismo servicio con envío a otra ciudad (p. ej. Imprenta en Ayacucho).
+  const enOtrasCiudades: RelatedLink[] = SERVICIOS_CIUDAD.filter((p) => p.servicio === s.slug).map((p) => ({ label: p.nombre, href: `/${p.slug}` }));
+  if (enOtrasCiudades.length) {
+    related.push({ title: "Con envío a otras ciudades", links: enOtrasCiudades, columns: 2 });
   }
 
   const serviceLinks: RelatedLink[] = s.enlazaA.flatMap((sl) => {

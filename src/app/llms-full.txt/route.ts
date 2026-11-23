@@ -3,6 +3,7 @@ import type { Faq, Seccion } from "@/content/types";
 import { soloServicios } from "@/content/servicios";
 import { SECTORES } from "@/content/sectores";
 import { CIUDADES, ciudadHref } from "@/content/ciudades";
+import { SERVICIOS_CIUDAD } from "@/content/servicios-ciudad";
 import { CASOS_DETALLE } from "@/content/casos";
 import { BLOG_POSTS } from "@/content/blog";
 
@@ -64,6 +65,9 @@ export function GET() {
   const ciudades = CIUDADES.map((c) =>
     bloque(c.h1, u(ciudadHref(c.slug)), c.hero, c.cobertura, secciones(c.secciones), preguntas(c.faq)),
   );
+  const produccionCiudad = SERVICIOS_CIUDAD.map((p) =>
+    bloque(p.h1, u(`/${p.slug}`), p.hero, p.enCorto.map((x) => `- ${x}`).join("\n"), secciones(p.secciones), preguntas(p.faq)),
+  );
   const casos = CASOS_DETALLE.map((c) =>
     bloque(
       c.h1,
@@ -95,6 +99,10 @@ ${sectores.join("\n\n")}
 # Ciudades
 
 ${ciudades.join("\n\n")}
+
+# Producción con envío a otras ciudades
+
+${produccionCiudad.join("\n\n")}
 
 # Casos
 

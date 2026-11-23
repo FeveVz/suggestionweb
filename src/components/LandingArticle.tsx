@@ -136,7 +136,7 @@ export default function LandingArticle({
   /** Título de la sección de cobertura; si no, sale de si es producción o no. */
   coberturaTitulo?: string;
   /** Juego de razones del «Por qué Suggestion»; si no, sale del CTA. */
-  porQue?: "digital" | "produccion" | "btl";
+  porQue?: "digital" | "produccion" | "btl" | "envio";
   shape?: number;
   extraSchema?: Json | Json[];
   /** Herramienta para armar el pedido (p. ej. CotizadorGigantografia), tras el «En corto». */

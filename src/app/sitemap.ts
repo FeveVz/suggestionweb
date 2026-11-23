@@ -6,6 +6,7 @@ import { CASOS_DETALLE } from "@/content/casos";
 import { PORTAFOLIO, fotosDe } from "@/content/portafolio";
 import { EQUIPO } from "@/content/equipo";
 import { allCiudadSlugs, ciudadHref } from "@/content/ciudades";
+import { SERVICIOS_CIUDAD } from "@/content/servicios-ciudad";
 
 /**
  * Sitemap dinámico: raíz + servicios (pilar/5 categorías/16 hijas) + sectores
@@ -178,6 +179,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Producción con envío a otra ciudad (/imprenta-en-ayacucho…): su fecha va en el propio contenido.
+  const serviciosCiudad: MetadataRoute.Sitemap = SERVICIOS_CIUDAD.map((s) => ({
+    url: u(`/${s.slug}`),
+    lastModified: dia(s.actualizado),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   const sectores: MetadataRoute.Sitemap = SECTORS.map((s) => ({
     url: u(s.href),
     lastModified: fecha(s.href),
@@ -221,5 +230,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...root, ...servicios, ...sectores, ...ciudades, ...casos, ...blogCategorias, ...blogPosts, ...equipo];
+  return [...root, ...servicios, ...sectores, ...ciudades, ...serviciosCiudad, ...casos, ...blogCategorias, ...blogPosts, ...equipo];
 }

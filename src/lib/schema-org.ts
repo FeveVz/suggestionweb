@@ -14,6 +14,7 @@ import { soloServicios, soloCategorias } from "@/content/servicios";
 import { SECTORES } from "@/content/sectores";
 import { CIUDADES } from "@/content/ciudades";
 import { EQUIPO } from "@/content/equipo";
+import { SERVICIOS_CIUDAD } from "@/content/servicios-ciudad";
 
 type Json = Record<string, unknown>;
 
@@ -26,6 +27,7 @@ const RUTAS_CON_SERVICIO = new Set<string>([
   ...soloServicios().map((s) => `/servicios/${s.slug}`),
   ...SECTORES.map((s) => `/${s.slug}`),
   ...CIUDADES.map((c) => `/agencia-de-marketing-en-${c.slug}`),
+  ...SERVICIOS_CIUDAD.map((s) => `/${s.slug}`),
 ]);
 export const tieneServicio = (href: string) => RUTAS_CON_SERVICIO.has(href.split("#")[0]);
 

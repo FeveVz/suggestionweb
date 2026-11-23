@@ -138,6 +138,10 @@ export const COTIZA_PRODUCCION: Record<string, string> = {
   "/servicios/letreros-luminosos": "letreros luminosos",
   "/servicios/publicidad-movil": "publicidad móvil",
   "/servicios/btl": "una activación BTL",
+  "/imprenta-en-ayacucho": "impresiones con envío a Ayacucho",
+  "/gigantografias-en-ayacucho": "una gigantografía con envío a Ayacucho",
+  "/merchandising-en-ayacucho": "merchandising con envío a Ayacucho",
+  "/material-pop-en-ayacucho": "material POP con envío a Ayacucho",
 };
 export const mensajeCotiza = (tema: string) => `Hola Suggestion, quiero cotizar ${tema}.`;
 

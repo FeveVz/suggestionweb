@@ -493,19 +493,19 @@ export const CIUDADES: Ciudad[] = [
     enCorto: [
       "En Ayacucho, el trabajo es convertir la identidad de la ciudad en marca, para no competir solo por precio.",
       "Frentes en Ayacucho: turismo fuera de Semana Santa, artesanía, hotelería y restaurantes, y comercio local.",
-      "Atendemos en remoto desde Ica y coordinamos viajes para producción audiovisual.",
+      "Ya trabajamos con empresas de Ayacucho. Las campañas se operan desde Ica, y los impresos, gigantografías, merchandising y material POP se producen en Ica y viajan por agencia de carga.",
     ],
     nombre: "Ayacucho",
-    metaTitle: "Agencia de Marketing en Ayacucho | Suggestion",
+    metaTitle: "Agencia de Publicidad y Marketing Digital en Ayacucho",
     metaDescription:
-      "Marketing para negocios de Ayacucho: turismo, artesanía, hotelería y comercio. Campañas medibles en reservas y ventas. Consultoría gratis.",
-    h1: "Agencia de marketing en Ayacucho",
+      "Marketing digital y publicidad para empresas de Ayacucho: campañas medibles en reservas y ventas, e imprenta con envío desde Ica. Consultoría gratis.",
+    h1: "Agencia de publicidad y marketing digital en Ayacucho",
     hero: "Ayacucho tiene un activo que pocas ciudades pueden comprar: identidad. El problema es que la identidad no se vende sola, y muchos negocios de la zona compiten por precio cuando podrían competir por lo que son.",
     cta: "Agenda tu consultoría cero",
     proof:
       "En turismo generamos 75 reservas para un hotel en una sola campaña, dentro y fuera de temporada.",
     cobertura:
-      "Ayacucho la atendemos en remoto desde Ica. Reuniones por videollamada, campañas operadas a diario y reportes mensuales con números reales. Cuando un proyecto necesita producción audiovisual en el lugar, se planifica el viaje aparte.",
+      "Ayacucho la atendemos desde Ica, donde ya trabajamos con empresas de la región. Las campañas se operan a diario en remoto, con reuniones por videollamada y reportes mensuales. Los impresos y el material de punto de venta se producen en Ica y viajan por agencia de carga, con el flete aparte. Cuando un proyecto necesita producción audiovisual en el lugar, se planifica el viaje aparte.",
     secciones: [
       {
         h2: "Turismo más allá de Semana Santa",
@@ -523,6 +523,17 @@ export const CIUDADES: Ciudad[] = [
         h2: "Hotelería y restaurantes",
         parrafo:
           "El reto es idéntico al que ya resolvimos en turismo: llenar cuando no es temporada y depender menos de la comisión de las plataformas. Con Hoteles Señor de Luren fueron 75 reservas en una sola campaña, cubriendo alta y baja temporada. La receta es oferta distinta por momento del año y un canal propio de reserva.",
+      },
+      {
+        h2: "Imprenta, gigantografías y merchandising con envío a Ayacucho",
+        parrafo:
+          "Muchas empresas de Ayacucho mandan a imprimir a Lima o a Ica. Producimos en Ica y despachamos por agencia de carga, con el flete cotizado aparte y la fecha de entrega acordada al cotizar. No instalamos allá: el pedido llega listo para usar o colocar.",
+        enlaces: [
+          { label: "Imprenta en Ayacucho", href: "/imprenta-en-ayacucho" },
+          { label: "Gigantografías en Ayacucho", href: "/gigantografias-en-ayacucho" },
+          { label: "Merchandising en Ayacucho", href: "/merchandising-en-ayacucho" },
+          { label: "Material POP en Ayacucho", href: "/material-pop-en-ayacucho" },
+        ],
       },
       {
         h2: "Comercio y servicios locales",
@@ -547,7 +558,7 @@ export const CIUDADES: Ciudad[] = [
       },
       {
         q: "¿Atienden Ayacucho desde Ica?",
-        a: "Sí, en remoto. La operación diaria de campañas es digital y funciona igual a distancia. Para producción audiovisual en el lugar coordinamos un viaje específico.",
+        a: "Sí, y ya trabajamos con empresas de Ayacucho. La operación diaria de campañas es digital y funciona igual a distancia. Los impresos, gigantografías y merchandising se producen en Ica y se envían por agencia de carga. Para producción audiovisual en el lugar coordinamos un viaje específico.",
       },
       {
         q: "¿Vale la pena invertir en Google si mi negocio es local?",

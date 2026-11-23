@@ -3,6 +3,7 @@ import { SERVICE_CATEGORIES, SECTORS } from "@/content/navegacion";
 import { BLOG_CATEGORIAS, BLOG_POSTS } from "@/content/blog";
 import { CASOS_DETALLE } from "@/content/casos";
 import { CIUDADES, ciudadHref } from "@/content/ciudades";
+import { SERVICIOS_CIUDAD } from "@/content/servicios-ciudad";
 import { PORTAFOLIO } from "@/content/portafolio";
 
 /**
@@ -38,6 +39,8 @@ export function GET() {
       ? `- [Agencia BTL y de marketing en ${c.nombre}](${u(ciudadHref(c.slug))}): equipo propio de cortatráfico, volanteo, anfitrionas, impulsadoras, animación y perifoneo${c.alrededores?.length ? `, que cubre también ${c.alrededores.join(", ").replace(/, ([^,]*)$/, " y $1")}` : ""}.`
       : `- [Agencia de marketing en ${c.nombre}](${u(ciudadHref(c.slug))})`,
   ).join("\n");
+
+  const produccionCiudad = SERVICIOS_CIUDAD.map((s) => `- [${s.nombre}](${u(`/${s.slug}`)}): ${s.metaDescription}`).join("\n");
 
   // Un caso por línea, con su titular y su período. El archivo enumeraba los
   // 52 artículos del blog —zona informativa— y de los casos solo daba el
@@ -100,6 +103,12 @@ ${sectores}
 ## Cobertura por ciudad
 
 ${ciudades}
+
+## Producción con envío a otras ciudades
+
+Producimos en Ica y despachamos por agencia de carga (flete aparte). No tenemos local en esas ciudades ni instalamos allá.
+
+${produccionCiudad}
 
 ## Casos y equipo
 

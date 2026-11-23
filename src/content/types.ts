@@ -199,3 +199,36 @@ export type Sector = {
   faq: Faq[];
   cierre: Cierre;
 };
+
+/**
+ * Producción con envío a otra región (p. ej. «Imprenta en Ayacucho»): página
+ * propia por servicio y ciudad, en la raíz (/imprenta-en-ayacucho). Ver
+ * content/servicios-ciudad.ts para los hechos que puede prometer.
+ */
+export type ServicioCiudad = {
+  slug: string;
+  /** Slug de la ciudad en ciudades.ts (su página de agencia es la miga intermedia). */
+  ciudad: string;
+  ciudadNombre: string;
+  /** Slug del servicio base en servicios.ts. */
+  servicio: string;
+  nombre: string;
+  /** Fecha del último cambio de texto (sitemap y dateModified). */
+  actualizado: string;
+  metaTitle: string;
+  metaDescription: string;
+  h1: string;
+  hero: string;
+  enCorto: string[];
+  /** Debe contener «cotiz»: lleva a WhatsApp con el pedido (lib/cta). */
+  cta: string;
+  /** Lo que va en el mensaje: «Hola Suggestion, quiero cotizar <tema>». */
+  tema: string;
+  especificaciones: string[];
+  incluye: ItemTT[];
+  cotizador?: "gigantografias";
+  secciones: Seccion[];
+  faq: Faq[];
+  cierre: Cierre;
+  lecturas: { label: string; href: string }[];
+};
