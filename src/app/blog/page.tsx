@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   title: BLOG_PILAR.metaTitle,
   description: BLOG_PILAR.metaDescription,
   path: "/blog",
-  ogImage: "/assets/og/blog.png",
+  ogImage: "/assets/og2/blog.png",
 });
 
 export default function BlogPilar() {

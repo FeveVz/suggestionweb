@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   title: p.metaTitle,
   description: p.metaDescription,
   path: `/${SLUG}`,
-  ogImage: `/assets/og/${SLUG}.png`,
+  ogImage: `/assets/og2/${SLUG}.png`,
 });
 
 export default function Page() {

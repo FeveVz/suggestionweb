@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const c = getCaso(slug);
   if (!c) return {};
-  return buildMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/casos/${c.slug}`, type: "article", ogImage: `/assets/og/caso-${c.slug}.png` });
+  return buildMetadata({ title: c.metaTitle, description: c.metaDescription, path: `/casos/${c.slug}`, type: "article", ogImage: `/assets/og2/caso-${c.slug}.png` });
 }
 
 export default async function CasoPage({ params }: Params) {

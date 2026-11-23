@@ -26,7 +26,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Cómo contamos los resultados de una campaña: medimos contra el CRM, no contra Meta. La venta se cuenta cuando cierra y se dice de dónde venía el lead.",
   path: "/metodo",
-  ogImage: "/assets/og/metodo.png",
+  ogImage: "/assets/og2/metodo.png",
 });
 
 const SECCIONES: Seccion[] = [

@@ -37,7 +37,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     `${PORTAFOLIO.length} activaciones y piezas de gran formato, de 2024 a 2026, para marcas automotrices, inmobiliarias y de telecomunicaciones: qué resolvía cada una y cómo se hizo.`,
   path: "/portafolio",
-  ogImage: "/assets/og/portafolio.png",
+  ogImage: "/assets/og2/portafolio.png",
 });
 
 const MARCAS = 12; // 11 del Notion + la tienda Entel de Nazca (nov-2026)

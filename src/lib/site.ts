@@ -48,7 +48,7 @@ export const site = {
   logoWhite: "/assets/logos/suggestion-logo-white.png",
   logoImg: "/assets/logos/suggestion-logo-black.webp",
   logoWhiteImg: "/assets/logos/suggestion-logo-white.webp",
-  ogImage: "/og-image.png",
+  ogImage: "/assets/og2/inicio.png",
 
   social: {
     instagram: "https://www.instagram.com/suggestion.mkt/",

@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Somos Suggestion, agencia de performance en Ica. Convertimos atención en ventas con una estrategia propia por sector. Conoce cómo trabajamos.",
   path: "/nosotros",
-  ogImage: "/assets/og/nosotros.png",
+  ogImage: "/assets/og2/nosotros.png",
 });
 
 /**

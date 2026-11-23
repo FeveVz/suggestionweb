@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
     // «S/350K» invitaba a comparar dos casos medidos con criterios distintos.
     "S/350K en ventas, 75 reservas, 15 contratos y autos vendidos en dos eventos. Los casos recientes, con período y fecha de corte.",
   path: "/casos",
-  ogImage: "/assets/og/casos.png",
+  ogImage: "/assets/og2/casos.png",
 });
 
 // Cada tarjeta lleva su período. Son campañas distintas, medidas con criterios

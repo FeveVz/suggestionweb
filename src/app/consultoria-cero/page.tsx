@@ -37,7 +37,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "30 minutos para contarnos tu problema o lo que quieres mejorar. Entendemos tu caso y te proponemos el camino y los servicios que encajan contigo. Gratis.",
   path: "/consultoria-cero",
-  ogImage: "/assets/og/consultoria-cero.png",
+  ogImage: "/assets/og2/consultoria-cero.png",
 });
 
 const COMO = [

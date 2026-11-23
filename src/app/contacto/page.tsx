@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Agenda tu consultoría cero: 30 minutos gratis para contarnos tu problema o lo que quieres mejorar. Escríbenos por WhatsApp, llámanos o déjanos tus datos.",
   path: "/contacto",
-  ogImage: "/assets/og/consultoria-cero.png",
+  ogImage: "/assets/og2/consultoria-cero.png",
 });
 
 export default function Contacto() {

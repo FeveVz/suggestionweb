@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Auditoría de Marketing Gratis en Ica (48 h) | Suggestion",
   description: "Te auditamos gratis el embudo de ventas: pauta, web y seguimiento. Recibes 3 mejoras accionables en 48 horas hábiles, sin compromiso. Para negocios en Perú.",
   path: "/auditoria-gratis",
-  ogImage: "/assets/og/auditoria-gratis.png",
+  ogImage: "/assets/og2/auditoria-gratis.png",
 });
 
 /**

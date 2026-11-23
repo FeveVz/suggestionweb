@@ -21,14 +21,14 @@ type Params = { params: Promise<{ categoria: string; slug: string }> };
 
 /**
  * OG del post. Si el artículo tiene foto propia en alguna sección, su imagen
- * compuesta desde esa foto (scripts/og-posts.mjs → /assets/og/blog-<slug>.jpg):
+ * compuesta desde esa foto (scripts/og-posts.mjs → /assets/og2/blog-<slug>.jpg):
  * antes hasta 8 posts compartían la misma (auditoría TEC-13). Si no, la de su
  * money page (marca en cada compartida + thumbnail elegible).
  */
 function ogDelPost(post: { slug: string; moneyPage: { href: string }; secciones: { foto?: unknown }[] }): string {
-  if (post.secciones.some((s) => s.foto)) return `/assets/og/blog-${post.slug}.jpg`;
+  if (post.secciones.some((s) => s.foto)) return `/assets/og2/blog-${post.slug}.jpg`;
   const slug = post.moneyPage.href.replace(/^\/servicios\//, "").replace(/^\//, "").split("/")[0];
-  return slug ? `/assets/og/${slug}.png` : "/og-image.png";
+  return slug ? `/assets/og2/${slug}.png` : "/assets/og2/inicio.png";
 }
 
 /**
