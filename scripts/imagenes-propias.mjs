@@ -24,6 +24,7 @@ import sharp from "sharp";
 
 const D = "D:/PORTAFOLIO SUGGESTION";
 const C = "C:/Users/Victus";
+const LC = "C:/Users/Victus/AppData/Local/Temp/claude/1232e14afee08bac/e7d2874f-1730-4eac-bb57-e8c2abcdc7e2/scratchpad/img/lc";
 const CABECERA = 1600;
 const GALERIA = 1000;
 const ARTICULO = 1100;
@@ -56,6 +57,17 @@ const IMAGENES = [
   { destino: "servicios/pop-colgante-sala.webp", lado: GALERIA, origen: `${C}/Downloads/FOTOS RENAULT 2/WhatsApp Image 2025-04-19 at 10.27.39.jpeg` },
   { destino: "servicios/eventos-lanzamiento-cusco-1.webp", lado: GALERIA, origen: `${C}/Downloads/LANZAMIENTO ARKANA CUSCO/FOTOS EDITADAS/IMG_6759.png` },
   { destino: "servicios/eventos-lanzamiento-cusco-2.webp", lado: GALERIA, origen: `${C}/Downloads/LANZAMIENTO ARKANA CUSCO/FOTOS EDITADAS/IMG_6761.png` },
+
+  // Bicivallas de Little Caesars («¡Hola Ica!», inauguración del local, 4 días
+  // de octubre de 2026). Las fotos vienen dentro del PDF del registro
+  // fotográfico entregado al cliente; se extrajeron a su tamaño original con
+  // PyMuPDF (pXX_YY = página y orden de la imagen en el PDF):
+  //   Desktop/FEVE/SUGGESTION/LITTLE CAESAR PIZZA/LITTLE CAESARS PIZZA REGISTRO FOTOGRAFICO.pdf
+  // Si la carpeta temporal ya no existe, se vuelven a extraer de ese PDF.
+  { destino: "servicios/bicivalla-little-caesars-en-ruta.webp", lado: CABECERA, origen: `${LC}/p04_02_1404x1050.png`, placas: [[1190, 895, 125, 90]] },
+  { destino: "servicios/bicivalla-little-caesars-noche.webp", lado: GALERIA, origen: `${LC}/p04_07_1448x1086.png`, placas: [[1275, 575, 75, 40]] },
+  { destino: "servicios/bicivalla-little-caesars-inauguracion.webp", lado: GALERIA, origen: `${LC}/p07_06_1087x822.png` },
+  { destino: "servicios/bicivalla-little-caesars-ruta-1.webp", lado: GALERIA, origen: `${LC}/p02_01_439x483.png` },
 
   // Caso Granjas Bonanza (los originales ya vienen chicos, de WhatsApp)
   { destino: "casos/bonanza-operario-bioseguridad.webp", lado: GALERIA, origen: `${C}/Desktop/FEVE/SUGGESTION/CLIENTES/BONANZA/FOTOS/GRANJA BONANZA 2.jpeg` },

@@ -44,7 +44,9 @@ const SERVICE_IMG: Record<string, { src: string; alt: string; w?: number; h?: nu
   "redes-sociales": { src: "/assets/servicios/redes-sociales-post-al-toque.webp", alt: "Publicación para redes de Al Toque Venezolano: un plato de parrilla con salsa verde", w: 1080, h: 1350 },
   branding: { src: "/assets/servicios/branding-empaque-aura-andina.webp", alt: "Empaque negro con detalles cobre del suplemento Black Maca Reserve de Aura Andina", w: 1254, h: 1254 },
   merchandising: { src: "/assets/servicios/merchandising-gorra-bordada.webp", alt: "Gorra azul bordada con los logos de Renault y Alpine", w: 1600, h: 1200 },
-  "publicidad-movil": delPortafolio("test-drive-changan-ica", 1, "Vehículo rotulado circulando por la vía pública durante una campaña en Ica"),
+  // La página habla sobre todo de bicivallas y tenía la foto de un auto de
+  // test drive (owner, 22-nov-2026). Ahora, la campaña de Little Caesars.
+  "publicidad-movil": { src: "/assets/servicios/bicivalla-little-caesars-en-ruta.webp", alt: "Bicivalla de Little Caesars con el mensaje «¡Hola Ica!» circulando entre mototaxis por una avenida de Ica", w: 1404, h: 1050 },
   gigantografias: delPortafolio("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada en la fachada de vidrio de un concesionario en Ica"),
   "letreros-luminosos": delPortafolio("relanzamiento-mitsubishi-autoniza", 4, "Letras corpóreas iluminadas y estructura de marca montadas en la fachada de una tienda en Ica"),
   "eventos-corporativos": delPortafolio("inauguracion-autoplan", 2, "Exhibición vehicular protocolar en la inauguración del local de Autoplan"),
@@ -76,9 +78,13 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
     { src: fotoPortafolio("enduro-yancay-subaru", 2), alt: "Arco de meta de una competencia montado en terreno desrtico", cap: "Arco de meta en terreno sin servicios: todo lo que se instala resiste viento y arena" },
     { src: fotoPortafolio("caballos-de-paso-2025", 1), alt: "Banderolas y estructuras de marca montadas en el circuito de un campeonato", cap: "Banderolas en circuito: la marca entra en el ambiente sin interrumpirlo" },
   ],
+  // Bicivallas de Little Caesars: cuatro días de octubre de 2026 por la
+  // inauguración de su local en Ica (registro fotográfico entregado al cliente).
   "publicidad-movil": [
+    { src: "/assets/servicios/bicivalla-little-caesars-noche.webp", alt: "Bicivalla de Little Caesars estacionada de noche en una esquina de Ica", cap: "Little Caesars, de noche: la ruta corría de 5:30 a 9:30 p. m. y el panel se seguía viendo desde la otra cuadra" },
+    { src: "/assets/servicios/bicivalla-little-caesars-inauguracion.webp", alt: "Bicivalla junto a la entrada del local nuevo de Little Caesars el día de la inauguración", cap: "El día de la inauguración, la bicivalla acompañó la apertura del local y siguió recorriendo los alrededores" },
+    { src: "/assets/servicios/bicivalla-little-caesars-ruta-1.webp", alt: "Mapa de la ruta 1 de la bicivalla por el centro de Ica, con sus paradas numeradas", cap: "Ruta 1, diseñada para la campaña: 2.3 km por vuelta, unos 25 minutos con paradas frente a 8 locales de comida" },
     { src: fotoPortafolio("xcmg-linea-amarilla-nazca", 5), alt: "Volquete rotulado con banderola de marca exhibido en la vía pública de Nazca", cap: "Unidad rotulada en calle: la marca se mueve a donde está el cliente" },
-    { src: fotoPortafolio("grifo-repsol-jac", 3), alt: "Banderolas de marca junto a una unidad exhibida en la vía pública", cap: "Banderolas en punto de tránsito: el conductor que espera está quieto y aburrido" },
   ],
   btl: [
     { src: fotoPortafolio("mercado-santo-domingo-dfsk", 1), alt: "Módulo de activación montado en la calle del mercado de Santo Domingo, en Ica", cap: "Mercado de Santo Domingo: cuatro promotores y un supervisor, tres horas, 167 datos" },
