@@ -16,6 +16,14 @@ const foto = (slug: string, n: number, alt: string, cap: string) => {
   return { src: fotoPortafolio(slug, n), alt, cap, w: m?.[0], h: m?.[1] };
 };
 
+/**
+ * Foto o diseño propio que no es de una pieza del portafolio. Los archivos
+ * salen de scripts/imagenes-propias.mjs (ahí están el original de cada uno y
+ * sus medidas); `w` y `h` tienen que ser las del archivo publicado.
+ * scripts/og-posts.mjs también lee esta forma para la imagen de compartir.
+ */
+const propia = (src: string, w: number, h: number, alt: string, cap: string) => ({ src, alt, cap, w, h });
+
 export type BlogCategoria = {
   slug: string;
   nombre: string;
@@ -613,6 +621,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "De un logo a una marca que vende",
+        foto: propia("/assets/blog/logo-aura-andina.webp", 1080, 1080, "Logo de Aura Andina: una cordillera dibujada con líneas sobre el nombre de la marca", "Logo que diseñamos para Aura Andina, una marca de suplementos andinos. Fue la primera pieza: después vinieron los empaques de cada producto, con la misma identidad."),
         parrafo:
           "Un logo es la punta del iceberg. Lo que hace que te elijan y paguen más es la marca completa: nombre, identidad visual, tono y coherencia. Eso no lo da una plantilla ni la IA.",
       },
@@ -2883,6 +2892,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Posicionamiento, identidad y rebranding no son lo mismo",
+        foto: propia("/assets/blog/empaque-aura-andina-turmeric.webp", 1254, 1254, "Empaque negro con detalles cobre del suplemento Turmeric Reserva de Aura Andina", "Empaque de Aura Andina. En inglés y con el apellido «Reserva», dice a quién le habla antes de que se lea la etiqueta. Eso es la identidad haciendo visible una decisión de posicionamiento."),
         parrafo:
           "Se confunden a diario y la confusión sale cara. El posicionamiento es la decisión estratégica: qué lugar quieres ocupar y para quién. La identidad visual es la consecuencia: cómo se ve y se oye esa decisión. Y el rebranding es el cambio de una o de las dos, normalmente porque el negocio cambió. Rediseñar el logo sin haber decidido el posicionamiento es la forma más cara de no cambiar nada: la marca se ve distinta y el cliente sigue pensando exactamente lo mismo de ella.",
       },
@@ -3516,6 +3526,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Cómo se ve un anuncio que trae compradores y no curiosos",
+        foto: propia("/assets/servicios/pop-colgante-sala.webp", 750, 1000, "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", "Colgante del Renault Duster en la sala de Pacífico Motors: el modelo real, su argumento y la web en una pieza que sigue vendiendo cuando el cliente ya entró."),
         parrafo:
           "La diferencia no está en la creatividad, está en el filtro. Un anuncio que le habla a todos junta clics baratos y quema al equipo comercial. Uno que filtra dice la cuota, nombra el modelo y pide una cita.",
         sub: [
@@ -4973,6 +4984,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Un logo no es una identidad de marca",
+        foto: propia("/assets/blog/logo-aura-andina.webp", 1080, 1080, "Logo de Aura Andina: una cordillera dibujada con líneas sobre el nombre de la marca", "El logo de Aura Andina. Una cotización de logo suelto entrega esto y sus archivos; los empaques y el resto de piezas de la marca son otro trabajo, y otro presupuesto."),
         parrafo:
           "Se piden como si fueran lo mismo y son cosas distintas, y de ahí vienen la mitad de las sorpresas al cotizar. El logo es una pieza; la identidad es el sistema que hace que todo lo demás se vea como tú.",
         tabla: {
@@ -5088,6 +5100,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "El costo que nadie suma: repartirlos",
+        foto: propia("/assets/blog/volanteo-en-calle.webp", 825, 1100, "Promotor entregando un volante a una transeúnte en una vereda de Ica", "Volanteo a pie de calle en Ica. La impresión es la mitad de la cuenta: la otra mitad es quién entrega, en qué esquina y a qué hora."),
         parrafo:
           "Aquí está el error de presupuesto más común con los volantes. Imprimir mil cuesta poco; repartirlos bien cuesta más, y es lo que decide si la campaña sirve de algo. Mil volantes en una caja debajo del mostrador no han hecho publicidad: han hecho inventario.",
         bullets: [
@@ -6112,6 +6125,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "De dónde salen los compradores",
+        foto: propia("/assets/blog/fondo-de-marca-inmobiliaria-evento.webp", 825, 1100, "Fondo fotográfico de la urbanización La Reserva en un concurso de caballos de paso", "El fondo de marca de La Reserva en un concurso de caballos de paso. Estar donde ya se reúne el público del proyecto es un canal de compradores que no depende de la pauta."),
         parrafo:
           "Casi todos los proyectos de lotes gastan en un solo canal y culpan al canal cuando no vende. Estos son los cuatro que funcionan en Perú, con lo que cada uno hace bien y lo que no.",
         tabla: {
@@ -6281,6 +6295,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Dónde publicarlo y cómo se ve un anuncio que funciona",
+        foto: propia("/assets/blog/lotizacion-desierto-dron.webp", 1100, 619, "Vista aérea de una lotización trazada en terreno desértico", "Una lotización vista desde el dron. La foto aérea responde de un vistazo lo que el comprador pregunta primero: dónde está el terreno, cómo se llega y cómo queda dentro del trazado."),
         parrafo:
           "Publicar en diez sitios con un anuncio malo rinde menos que publicar en tres con uno bueno. Esto es lo que mira quien está comparando terrenos, en el orden en que lo mira.",
         bullets: [

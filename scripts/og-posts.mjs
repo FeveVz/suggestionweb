@@ -39,8 +39,15 @@ const posts = [];
 for (const b of bloques) {
   const slug = b.match(/^"([^"]+)"/)?.[1];
   const foto = b.match(/foto: foto\("([^"]+)", (\d+),/);
+  // Fotos propias fuera del portafolio: foto: propia("/assets/...", w, h, ...)
+  const propia = b.match(/foto: propia\("(\/assets\/[^"]+)"/);
   const h1 = b.match(/\n    h1: "([^"]+)"/)?.[1];
-  if (!slug || !foto || !h1) continue;
+  if (!slug || !h1 || (!foto && !propia)) continue;
+  // Si el artículo tiene de las dos, manda la que aparece primero.
+  if (propia && (!foto || propia.index < foto.index)) {
+    posts.push({ slug, h1, archivo: `public${propia[1]}` });
+    continue;
+  }
   const hash = hashFoto(foto[1], Number(foto[2]));
   if (!hash) throw new Error(`Sin hash para ${foto[1]} ${foto[2]}`);
   posts.push({ slug, h1, archivo: `public/assets/portafolio/${foto[1]}-${foto[2]}.${hash}.webp` });

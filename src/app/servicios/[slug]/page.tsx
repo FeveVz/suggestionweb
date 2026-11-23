@@ -37,7 +37,13 @@ const SERVICE_IMG: Record<string, { src: string; alt: string; w?: number; h?: nu
   "produccion-audiovisual": { src: "/assets/servicios/produccion-audiovisual.webp", alt: "Rodaje audiovisual con cámara e iluminación profesional", w: 828, h: 1100 },
   imprenta: delPortafolio("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada en la fachada de vidrio de un concesionario en Ica"),
   "material-pop": delPortafolio("ahorra-o-nunca-despliegue", 2, "Colgantes, banderolas y roll-ups de campaña instalados en una sala de ventas"),
-  "estructuras-publicitarias": delPortafolio("relanzamiento-mitsubishi-autoniza", 4, "Letras corpóreas iluminadas y estructura de marca montadas en la fachada de una tienda en Ica"),
+  // Antes usaba la misma foto que Letreros luminosos (las letras corpóreas de
+  // Autoniza). Cambiada el 22-nov-2026 por elección del owner.
+  "estructuras-publicitarias": { src: "/assets/servicios/estructuras-panel-instalacion-nocturna.webp", alt: "Elevador de tijera junto a un panel publicitario durante su instalación nocturna", w: 900, h: 1125 },
+  // Fotos y diseños propios elegidos el 22-nov-2026 (ver scripts/imagenes-propias.mjs).
+  "redes-sociales": { src: "/assets/servicios/redes-sociales-post-al-toque.webp", alt: "Publicación para redes de Al Toque Venezolano: un plato de parrilla con salsa verde", w: 1080, h: 1350 },
+  branding: { src: "/assets/servicios/branding-empaque-aura-andina.webp", alt: "Empaque negro con detalles cobre del suplemento Black Maca Reserve de Aura Andina", w: 1254, h: 1254 },
+  merchandising: { src: "/assets/servicios/merchandising-gorra-bordada.webp", alt: "Gorra azul bordada con los logos de Renault y Alpine", w: 1600, h: 1200 },
   "publicidad-movil": delPortafolio("test-drive-changan-ica", 1, "Vehículo rotulado circulando por la vía pública durante una campaña en Ica"),
   gigantografias: delPortafolio("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada en la fachada de vidrio de un concesionario en Ica"),
   "letreros-luminosos": delPortafolio("relanzamiento-mitsubishi-autoniza", 4, "Letras corpóreas iluminadas y estructura de marca montadas en la fachada de una tienda en Ica"),
@@ -45,9 +51,8 @@ const SERVICE_IMG: Record<string, { src: string; alt: string; w?: number; h?: nu
 };
 
 /**
- * Fotos del trabajo real por servicio. Solo las seis de producción: el
- * portafolio es BTL y ATL, y poner estas fotos en una página de SEO o de CRM
- * sería relleno.
+ * Fotos del trabajo real por servicio. Solo en los servicios de producción y
+ * eventos: poner estas fotos en una página de SEO o de CRM sería relleno.
  */
 const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> = {
   imprenta: [
@@ -59,6 +64,12 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
     { src: fotoPortafolio("mercado-santo-domingo-dfsk", 2), alt: "Módulo de marca con cajas de oferta en la calle del mercado de Santo Domingo", cap: "Módulo y cajas de oferta a pie de puesto: 167 datos en tres horas" },
     { src: fotoPortafolio("aniversario-paracas-gwm", 5), alt: "Módulo de marca con ruleta de premios atendido por un promotor", cap: "La ruleta no es adorno: es lo que hace que el visitante acepte dejar su dato" },
     { src: fotoPortafolio("gala-oficiales-la-reserva", 7), alt: "Fondo fotográfico impreso de una marca inmobiliaria en un evento", cap: "Fondo fotográfico: el punto donde la gente se hace la foto y la marca viaja sola" },
+    { src: "/assets/servicios/pop-totem-ficha-sala.webp", alt: "Tótem con la ficha del Renault Arkana junto a la unidad en la sala de Pacífico Motors", cap: "Tótem de ficha al lado del auto: el cliente revisa versión y equipamiento sin esperar al asesor" },
+    { src: "/assets/servicios/pop-colgante-sala.webp", alt: "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", cap: "Colgante sobre la exhibición: se ve desde la puerta y marca dónde está cada modelo" },
+  ],
+  "eventos-corporativos": [
+    { src: "/assets/servicios/eventos-lanzamiento-cusco-1.webp", alt: "Invitados con carteles del nuevo Renault Arkana en su lanzamiento en Pacífico Motors Cusco", cap: "Lanzamiento del Renault Arkana en Pacífico Motors Cusco: lista de invitados, mesas y anfitrionas" },
+    { src: "/assets/servicios/eventos-lanzamiento-cusco-2.webp", alt: "Invitadas junto a la anfitriona del lanzamiento del Renault Arkana en Cusco", cap: "El cartel con el nombre del modelo pone la marca en cada foto que se toma esa noche" },
   ],
   "estructuras-publicitarias": [
     { src: fotoPortafolio("subaru-plaza-barranca", 1), alt: "Arco inflable de marca montado en una plaza durante una activación nocturna", cap: "Arco inflable en plaza: se monta en una hora y se ve desde la otra esquina" },

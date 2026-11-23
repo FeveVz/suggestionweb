@@ -499,6 +499,12 @@ export const CASOS_DETALLE: Caso[] = [
       { label: "Marketing y publicidad digital", href: "/servicios/marketing-digital-publicidad" },
       { label: "Gestión de Redes Sociales", href: "/servicios/redes-sociales" },
     ],
+    // Fotos tomadas por nosotros en la granja (owner, 22-nov-2026). Los
+    // originales vienen de WhatsApp: sirven para galería, no para cabecera.
+    imagenes: [
+      { src: "/assets/casos/bonanza-operario-bioseguridad.webp", alt: "Operario de Granjas Bonanza con traje y máscara de bioseguridad", cap: "Fotografía nuestra en la granja: un operario con el equipo de bioseguridad completo" },
+      { src: "/assets/casos/bonanza-galpon-desinfeccion.webp", alt: "Galpón de Granjas Bonanza durante la desinfección", cap: "Un galpón de Granjas Bonanza durante la desinfección" },
+    ],
   },
   {
     slug: "hoteles-senor-de-luren",
