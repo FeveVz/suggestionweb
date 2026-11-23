@@ -10,11 +10,13 @@ import { getServicio } from "@/content/servicios";
 // w/h: medidas reales del archivo. Sin ellas la imagen no puede servirse en
 // tamaños adaptados (ver LandingArticle) y el móvil descarga el original.
 const SECTOR_IMG: Record<string, { src: string; alt: string; w: number; h: number }> = {
-  "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario.webp", alt: "Render del proyecto inmobiliario de Inmobiliaria Ceinys", w: 1000, h: 562 },
-  "marketing-automotriz": { src: "/assets/sectores/automotriz.webp", alt: "Campaña de marketing para el concesionario Pacífico Motors", w: 1000, h: 1778 },
-  // Turismo va sin foto hasta tener una propia: la anterior era una captura de
-  // otra web, con la flecha de su carrusel (auditoría CON-18, 20-nov-2026).
   // Fotos propias elegidas por el owner el 22-nov-2026 (scripts/imagenes-propias.mjs).
+  // Inmobiliario tenía un render; un proyecto ya construido convence más a quien
+  // compra un lote. Automotriz tenía un arte vertical. Turismo no tenía foto desde
+  // que se quitó la captura de otra web (auditoría CON-18).
+  "marketing-inmobiliario": { src: "/assets/sectores/inmobiliario-paso-alto-dron.webp", alt: "Vista de dron de las áreas comunes de Paso Alto: losa deportiva techada, veredas y áreas verdes", w: 1600, h: 1200 },
+  "marketing-automotriz": { src: "/assets/sectores/automotriz-exhibicion-plaza-de-armas-ica.webp", alt: "Exhibición nocturna de una camioneta Mitsubishi en la Plaza de Armas de Ica, con visitantes pidiendo información", w: 1600, h: 1200 },
+  "marketing-turismo": { src: "/assets/sectores/turismo-beach-club-atardecer.webp", alt: "Terraza de un beach club frente al mar, al atardecer", w: 1600, h: 1200 },
   "marketing-marcas-consumo": { src: "/assets/sectores/marcas-el-charcutero-gorra-pack.webp", alt: "Gorra de El Charcutero junto a un pack de cerveza y una caja de chorizo artesanal", w: 1600, h: 1200 },
   "marketing-pisco-vino": { src: "/assets/sectores/pisco-vino-festival-vendimia-ica.webp", alt: "Stand de Pacífico Motors con una camioneta y visitantes en el Festival de la Vendimia de Ica 2024", w: 1100, h: 1375 },
 };

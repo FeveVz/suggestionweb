@@ -44,6 +44,7 @@ const SERVICE_IMG: Record<string, { src: string; alt: string; w?: number; h?: nu
   "redes-sociales": { src: "/assets/servicios/redes-sociales-post-al-toque.webp", alt: "Publicación para redes de Al Toque Venezolano: un plato de parrilla con salsa verde", w: 1080, h: 1350 },
   branding: { src: "/assets/servicios/branding-empaque-aura-andina.webp", alt: "Empaque negro con detalles cobre del suplemento Black Maca Reserve de Aura Andina", w: 1254, h: 1254 },
   merchandising: { src: "/assets/servicios/merchandising-gorra-bordada.webp", alt: "Gorra azul bordada con los logos de Renault y Alpine", w: 1600, h: 1200 },
+  consultoria: { src: "/assets/servicios/consultoria-taller-plan-de-negocios.webp", alt: "Presentación del plan de negocios 2025 de Pacífico Motors ante su equipo, en una sala de reuniones", w: 1600, h: 1200 },
   // La página habla sobre todo de bicivallas y tenía la foto de un auto de
   // test drive (owner, 22-nov-2026). Ahora, la campaña de Little Caesars.
   "publicidad-movil": { src: "/assets/servicios/bicivalla-little-caesars-en-ruta.webp", alt: "Bicivalla de Little Caesars con el mensaje «¡Hola Ica!» circulando entre mototaxis por una avenida de Ica", w: 1404, h: 1050 },
@@ -85,6 +86,10 @@ const SERVICE_GAL: Record<string, { src: string; alt: string; cap: string }[]> =
     { src: "/assets/servicios/bicivalla-little-caesars-inauguracion.webp", alt: "Bicivalla junto a la entrada del local nuevo de Little Caesars el día de la inauguración", cap: "El día de la inauguración, la bicivalla acompañó la apertura del local y siguió recorriendo los alrededores" },
     { src: "/assets/servicios/bicivalla-little-caesars-ruta-1.webp", alt: "Mapa de la ruta 1 de la bicivalla por el centro de Ica, con sus paradas numeradas", cap: "Ruta 1, diseñada para la campaña: 2.3 km por vuelta, unos 25 minutos con paradas frente a 8 locales de comida" },
     { src: fotoPortafolio("xcmg-linea-amarilla-nazca", 5), alt: "Volquete rotulado con banderola de marca exhibido en la vía pública de Nazca", cap: "Unidad rotulada en calle: la marca se mueve a donde está el cliente" },
+  ],
+  "produccion-audiovisual": [
+    { src: "/assets/servicios/audiovisual-sesion-dunas.webp", alt: "Camioneta de test drive rotulada, fotografiada en lo alto de una duna en Ica al atardecer", cap: "Sesión en las dunas de Ica con la unidad de test drive, a la hora en que la luz baja y la arena se pone dorada" },
+    { src: "/assets/servicios/audiovisual-making-of-restaurante.webp", alt: "Rodaje dentro de Al Toque Venezolano: la presentadora con micrófono de solapa y un camarógrafo junto a la cámara en trípode", cap: "Making of en Al Toque Venezolano: micrófono de solapa, luz LED y cámara en trípode para grabar dentro del local" },
   ],
   btl: [
     { src: fotoPortafolio("mercado-santo-domingo-dfsk", 1), alt: "Módulo de activación montado en la calle del mercado de Santo Domingo, en Ica", cap: "Mercado de Santo Domingo: cuatro promotores y un supervisor, tres horas, 167 datos" },

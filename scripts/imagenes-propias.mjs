@@ -35,10 +35,10 @@ const ARTICULO = 1100;
  */
 const IMAGENES = [
   // Cabeceras de sector
-  { destino: "sectores/automotriz-exhibicion-plaza-de-armas-ica.webp", lado: CABECERA, origen: `${D}/_LISTO PARA USAR/06 PARA WEB/candidato-drone-DJI_20260613193617_0050_D.JPG`, placas: [] },
+  { destino: "sectores/automotriz-exhibicion-plaza-de-armas-ica.webp", lado: CABECERA, origen: `${D}/_LISTO PARA USAR/06 PARA WEB/candidato-drone-DJI_20260613193617_0050_D.JPG` },
   { destino: "sectores/inmobiliario-paso-alto-dron.webp", lado: CABECERA, origen: `${D}/CLIENTES SUGGESTION/PASO ALTO/FOTOS Y VIDEOS 2025/DJI_20251201130405_0037_D.jpg` },
   { destino: "sectores/marcas-el-charcutero-gorra-pack.webp", lado: CABECERA, origen: `${C}/Desktop/FEVE/CHARCUTERO/FOTOS ANTIGUAS/IMG20211227130646.jpg` },
-  { destino: "sectores/turismo-beach-club-paracas.webp", lado: CABECERA, origen: `${D}/ALBUM GOOGLE FOTOS/Portafolio trabajo/FOTOS/2021-01/IMG_20210123_182107.jpg` },
+  { destino: "sectores/turismo-beach-club-atardecer.webp", lado: CABECERA, origen: `${D}/ALBUM GOOGLE FOTOS/Portafolio trabajo/FOTOS/2021-01/IMG_20210123_182107.jpg` },
   // Vertical: se quita el suelo de abajo para dejarla en 4:5.
   { destino: "sectores/pisco-vino-festival-vendimia-ica.webp", lado: 1375, origen: `${C}/Desktop/FEVE/SUGGESTION/FOTOS EVENTOS/FESTIVAL DE LA VENDIMIA 2024/IMG_20240308_174410.jpg`, recorte: [0, 136, 3072, 3840] },
 
@@ -51,7 +51,7 @@ const IMAGENES = [
   { destino: "servicios/estructuras-panel-instalacion-nocturna.webp", lado: 1125, origen: `${C}/Desktop/FEVE/SUGGESTION/CLIENTES/CABLE VISION/WhatsApp Image 2026-11-14 at 12.03.47 PM.jpeg`, recorte: [0, 60, 900, 1125] },
 
   // Galerías de servicio
-  { destino: "servicios/audiovisual-sesion-dunas.webp", lado: GALERIA, origen: `${D}/ALBUM GOOGLE FOTOS/Portafolio trabajo/FOTOS/2024-10/IMG_20241028_173847.jpg`, placas: [] },
+  { destino: "servicios/audiovisual-sesion-dunas.webp", lado: GALERIA, origen: `${D}/ALBUM GOOGLE FOTOS/Portafolio trabajo/FOTOS/2024-10/IMG_20241028_173847.jpg`, placas: [[1070, 1335, 62, 72], [2203, 1104, 40, 38]] },
   { destino: "servicios/audiovisual-making-of-restaurante.webp", lado: GALERIA, origen: `${C}/Desktop/FEVE/SUGGESTION/CLIENTES/AL TOQUE VENEZOLANO/MAKING OF AUDIOVISUALES/WhatsApp Image 2026-05-02 at 9.40.15 AM (3).jpeg` },
   { destino: "servicios/pop-totem-ficha-sala.webp", lado: GALERIA, origen: `${C}/Downloads/FOTOS RENAULT 2/WhatsApp Image 2025-04-19 at 10.25.25 (2).jpeg` },
   { destino: "servicios/pop-colgante-sala.webp", lado: GALERIA, origen: `${C}/Downloads/FOTOS RENAULT 2/WhatsApp Image 2025-04-19 at 10.27.39.jpeg` },
@@ -74,14 +74,14 @@ const IMAGENES = [
   { destino: "casos/bonanza-galpon-desinfeccion.webp", lado: GALERIA, origen: `${C}/Desktop/FEVE/SUGGESTION/CLIENTES/BONANZA/FOTOS/GRANJA BONANZA 1.jpeg` },
 
   // Fotos dentro de artículos del blog
-  { destino: "blog/exhibicion-camioneta-plaza-ica.webp", lado: ARTICULO, origen: `${D}/_LISTO PARA USAR/06 PARA WEB/candidato-drone-DJI_20260613194041_0059_D.JPG`, placas: [] },
+  { destino: "blog/exhibicion-camioneta-plaza-ica.webp", lado: ARTICULO, origen: `${D}/_LISTO PARA USAR/06 PARA WEB/candidato-drone-DJI_20260613194041_0059_D.JPG`, placas: [[1975, 2060, 260, 125]] },
   { destino: "blog/registro-de-datos-en-exhibicion.webp", lado: ARTICULO, origen: `${D}/_LISTO PARA USAR/06 PARA WEB/candidato-drone-DJI_20260613192919_0042_D.JPG` },
   { destino: "blog/avance-de-obra-la-reserva-dron.webp", lado: ARTICULO, origen: `${D}/CLIENTES SUGGESTION/IIPB/LA RESERVA/IMAGENES ANTIGUAS/FOTOS/AVANCES 18.04.25/DJI_20250415160628_0017_D.png` },
   { destino: "blog/lotizacion-desierto-dron.webp", lado: ARTICULO, origen: `${C}/Downloads/_Organizado/Imagenes/2026-01/DJI_0769.JPG` },
   { destino: "blog/post-inmobiliario-mirador.webp", lado: 1000, origen: `${D}/CLIENTES SUGGESTION/IIPB/LA RESERVA/IMAGENES ANTIGUAS/GRILLA AGOSTO/5_IMG20240805_182203.png` },
   { destino: "blog/fondo-de-marca-inmobiliaria-evento.webp", lado: ARTICULO, origen: `${C}/Desktop/FEVE/SUGGESTION/FOTOS EVENTOS/CONCURSO DE CABALLOS DE PASO 2024/IMG_20240609_102150.jpg` },
   { destino: "blog/salon-restaurante-al-toque.webp", lado: ARTICULO, origen: `${D}/CLIENTES SUGGESTION/VIDEOS/DJI_20260326182518_0041_D.JPG` },
-  { destino: "blog/salon-beach-club-paracas.webp", lado: ARTICULO, origen: `${D}/ALBUM GOOGLE FOTOS/Portafolio trabajo/FOTOS/2021-01/IMG_20210123_192425.jpg` },
+  { destino: "blog/salon-beach-club-noche.webp", lado: ARTICULO, origen: `${D}/ALBUM GOOGLE FOTOS/Portafolio trabajo/FOTOS/2021-01/IMG_20210123_192425.jpg` },
   { destino: "blog/volanteo-en-calle.webp", lado: ARTICULO, origen: `${C}/Desktop/FEVE/SUGGESTION/FOTOS EVENTOS/BTL CALLE/IMG_20240720_150920.jpg` },
   { destino: "blog/logo-aura-andina.webp", lado: 1080, origen: `${C}/Desktop/FEVE/SUGGESTION/CLIENTES/AURA ANDINA/PROPUESTA DE LOGOS/propuesta-aura-andina-1.jpg.jpeg` },
   { destino: "blog/empaque-aura-andina-turmeric.webp", lado: 1254, origen: `${C}/Desktop/FEVE/SUGGESTION/CLIENTES/AURA ANDINA/PACKAGIN/CURCUMA B.jpeg` },
