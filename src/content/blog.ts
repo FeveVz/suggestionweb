@@ -92,7 +92,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
       {
         h2: "Qué encontrarás en esta sección",
         parrafo:
-          "Artículos sobre la parte del marketing que se mide en dinero: cuánto invertir, qué significan las siglas que aparecen en los informes y cómo saber si una campaña rinde o solo gasta. Está pensada para quien pone su propio dinero en publicidad y quiere entender qué está comprando, no para especialistas.",
+          "Artículos sobre la parte del marketing que se mide en dinero: cuánto invertir, qué significan las siglas que aparecen en los informes y cómo saber si una campaña rinde o solo gasta. Está pensada para quien pone su propio dinero en publicidad y quiere entender qué está comprando.",
       },
       {
         h2: "Los tres números que deciden si una campaña funciona",
@@ -101,7 +101,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
         bullets: [
           { titulo: "CPL (costo por lead)", texto: "lo que te cuesta conseguir un contacto interesado. Útil, pero engañoso si lo miras aislado: un contacto barato que nunca compra sale caro." },
           { titulo: "ROAS (retorno de la inversión publicitaria)", texto: "cuántos soles vendiste por cada sol invertido. Solo es fiable cuando la venta ocurre rápido y puedes atribuirla." },
-          { titulo: "Costo por venta cerrada", texto: "el que de verdad manda. Es el único que compara contra tu margen y te dice si el negocio se sostiene." },
+          { titulo: "Costo por venta cerrada", texto: "el que manda. Es el único que compara contra tu margen y te dice si el negocio se sostiene." },
         ],
       },
       {
@@ -118,11 +118,11 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
     faq: [
       {
         q: "¿Qué es el marketing de performance?",
-        a: "Es el enfoque que mide cada sol invertido contra un resultado de negocio concreto —un contacto, una cita, una venta— en lugar de contra alcance o seguidores. No es un canal, es una forma de decidir dónde poner el presupuesto.",
+        a: "Es el enfoque que mide cada sol invertido contra un resultado de negocio concreto —un contacto, una cita, una venta— en lugar de contra alcance o seguidores. Es una forma de decidir dónde poner el presupuesto.",
       },
       {
         q: "¿Cuál es un buen CPL?",
-        a: "Depende por completo del margen de tu producto. Un CPL de S/50 es excelente para vender un auto y ruinoso para vender un producto de S/80. La comparación útil no es contra el promedio del mercado, sino contra lo que tú puedes pagar y seguir ganando.",
+        a: "Depende por completo del margen de tu producto. Un CPL de S/50 es excelente para vender un auto y ruinoso para vender un producto de S/80. Compáralo con lo que puedes pagar y seguir ganando.",
       },
       {
         q: "¿En cuánto tiempo se estabiliza una campaña?",
@@ -166,7 +166,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
         ],
       },
       {
-        h2: "Prueba, no opines",
+        h2: "Prueba antes de opinar",
         parrafo:
           "La discusión de oficina sobre qué color de botón funciona mejor se resuelve en un día probando las dos versiones con gente real. Es más barato y más honesto que la opinión del que habla más fuerte. Y aplica a casi todo: el titular, la foto, el orden de las secciones, el texto del botón.",
       },
@@ -178,11 +178,11 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
       },
       {
         q: "¿Cuál es una buena tasa de conversión?",
-        a: "Varía muchísimo por rubro y por tipo de tráfico: quien llega buscando tu servicio convierte mucho más que quien vio un anuncio sin buscarte. Por eso el punto de comparación útil eres tú mismo el mes pasado, no un promedio de internet.",
+        a: "Varía muchísimo por rubro y por tipo de tráfico: quien llega buscando tu servicio convierte mucho más que quien vio un anuncio sin buscarte. Por eso compárate con tu propio mes anterior.",
       },
       {
         q: "¿Cuántos campos debe tener mi formulario?",
-        a: "Los mínimos para poder contactar y calificar: normalmente nombre y un medio de contacto. Cada campo adicional reduce el número de personas que lo completan, así que pídelo solo si de verdad vas a usar ese dato.",
+        a: "Los mínimos para poder contactar y calificar: normalmente nombre y un medio de contacto. Cada campo adicional reduce el número de personas que lo completan, así que pídelo solo si vas a usar ese dato.",
       },
       {
         q: "¿Sirve el chat en vivo o el WhatsApp flotante?",
@@ -492,7 +492,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
             ["Bodega de pisco o vino", "Cómo vender pisco y vino por internet"],
             ["Agroexportadora", "Marketing para agroexportadoras: cómo abrir mercados"],
           ],
-          nota: "Aunque tu rubro no esté en la lista, el artículo del sector más parecido suele servir: lo que cambia es el calendario y el canal, no la lógica.",
+          nota: "Aunque tu rubro no esté en la lista, el artículo del sector más parecido suele servir: cambian el calendario y el canal, pero la lógica es la misma.",
         },
       },
       {
@@ -511,7 +511,7 @@ export const BLOG_CATEGORIAS: BlogCategoria[] = [
         ],
       },
       {
-        h2: "La estacionalidad se trabaja, no se sufre",
+        h2: "Cómo trabajar la estacionalidad",
         parrafo:
           "Turismo, gastronomía y agro viven de temporadas, y el error clásico es invertir solo cuando la demanda ya está alta. Los meses flojos no se arreglan bajando el precio: se trabajan con una oferta distinta, dirigida a otro público —normalmente más cercano y de escapada corta— y preparada con anticipación.",
       },
@@ -596,7 +596,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Buscar “crear logo” devuelve mil herramientas que prometen un logo en cinco minutos. Algunas sirven; otras te dan un dibujo bonito que no aguanta el primer mes de tu negocio. Antes de elegir, entiende los tres caminos y qué pierdes (o ganas) en cada uno.",
     enCorto: [
       "Hay tres caminos: herramientas gratis, inteligencia artificial o un profesional. Lo gratis o la IA sirven para un proyecto temporal, un evento o una prueba; un negocio que quiere crecer y verse serio necesita un profesional.",
-      "Un logo no se juzga por bonito, sino por si funciona: legible a 16 píxeles, a una sola tinta, bordado en un polo o visto de lejos.",
+      "Un logo se juzga por si funciona: legible a 16 píxeles, a una sola tinta, bordado en un polo o visto de lejos.",
       "Exige los archivos: el vectorial editable (SVG, AI o EPS), un PDF vectorial para imprenta, PNG con fondo transparente, la versión para fondo oscuro y el ícono cuadrado.",
     ],
     date: "2026-01-14",
@@ -607,7 +607,7 @@ export const BLOG_POSTS: BlogPost[] = [
         sub: [
           { h3: "1. Crear un logo gratis (editores online)", texto: "Herramientas tipo editor con plantillas. A favor: cero costo, inmediato. En contra: plantillas que comparten miles de marcas, baja resolución para imprenta, sin archivos vectoriales ni versiones, y casi siempre te cobran al descargar en buena calidad. Sirve para una idea rápida o un proyecto temporal, no para una marca que quiere durar." },
           { h3: "2. Crear un logo con IA", texto: "La IA genera opciones en segundos a partir de tu nombre y rubro. A favor: rápido, barato, buen punto de partida para explorar ideas. En contra: no entiende tu estrategia, repite estilos, y suele fallar en versiones, tipografía y aplicaciones reales." },
-          { h3: "3. Diseño de logo profesional", texto: "Un proceso que parte de tu estrategia de marca, no de una plantilla. A favor: logo único, archivos vectoriales, versiones (principal, secundaria, isotipo), manual de marca y coherencia en todo. En contra: cuesta más y toma más tiempo. Es la opción cuando el logo va a representar tu negocio por años." },
+          { h3: "3. Diseño de logo profesional", texto: "Un proceso que parte de tu estrategia de marca. A favor: logo único, archivos vectoriales, versiones (principal, secundaria, isotipo), manual de marca y coherencia en todo. En contra: cuesta más y toma más tiempo. Es la opción cuando el logo va a representar tu negocio por años." },
         ],
       },
       {
@@ -617,7 +617,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Negocio que quiere crecer y verse serio", texto: "profesional. Un logo barato que tienes que rehacer en seis meses termina costando más." },
         ],
         parrafo:
-          "La pregunta real no es “¿cuánto cuesta un logo?”, sino “¿cuánto te cuesta una marca que no te diferencia?”.",
+          "También conviene preguntarse cuánto te cuesta una marca que no te diferencia.",
       },
       {
         h2: "De un logo a una marca que vende",
@@ -645,7 +645,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Define qué debe transmitir y a quién", texto: "tres adjetivos, el cliente al que le hablas y con quién te comparan. Sin esto, aprobar un logo es cuestión de gusto personal." },
           { titulo: "Mira a la competencia antes de dibujar", texto: "no para copiar, para saber qué está ocupado. Si en tu rubro todos usan verde y una hoja, ahí no hay diferenciación posible." },
           { titulo: "Explora en blanco y negro", texto: "sin color, la forma tiene que sostenerse sola. El color se decide después y se equivoca menos." },
-          { titulo: "Reduce a dos o tres direcciones", texto: "presentar veinte opciones no es generosidad, es no haber decidido. Pocas propuestas bien argumentadas valen más." },
+          { titulo: "Reduce a dos o tres direcciones", texto: "presentar veinte opciones es no haber decidido. Pocas propuestas bien argumentadas valen más." },
           { titulo: "Pruébalo donde va a vivir", texto: "en una tarjeta, en el ícono de WhatsApp, en un polo, en un banner. Si sobrevive a las cuatro, está listo." },
           { titulo: "Cierra las versiones y los archivos", texto: "principal, horizontal, ícono, en negativo. Y los formatos, que es donde más proyectos quedan cojos." },
           { titulo: "Escribe las reglas de uso", texto: "colores exactos, tipografías, área de respeto y qué no se puede hacer. Sin esto, cada proveedor lo aplicará a su manera." },
@@ -689,7 +689,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Mi logo tiene que decir a qué me dedico?",
-        a: "No necesariamente, y la mayoría de marcas grandes no lo hace. Lo literal ayuda al principio, cuando nadie te conoce, pero encierra al negocio si algún día amplías lo que vendes. Es una decisión estratégica, no estética.",
+        a: "No necesariamente, y la mayoría de marcas grandes no lo hace. Lo literal ayuda al principio, cuando nadie te conoce, pero encierra al negocio si algún día amplías lo que vendes. Es una decisión estratégica.",
       },
       {
         q: "¿Cada cuánto se debe cambiar un logo?",
@@ -709,7 +709,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "La IA crea logos en segundos y, bien usada, ahorra semanas de exploración. Este es el paso a paso para hacerlo con ChatGPT, Gemini o Canva, con prompts de ejemplo, y las dos cosas que casi nadie cuenta: el formato y el registro.",
     enCorto: [
       "Antes de abrir la IA, define en tres líneas qué debe transmitir el logo, a quién le hablas y si quieres símbolo o solo tipografía.",
-      "Pide en blanco y negro, fondo blanco y estilo plano; genera varias rondas cambiando una cosa a la vez y quédate con dos o tres rumbos, no con un archivo.",
+      "Pide en blanco y negro, fondo blanco y estilo plano; genera varias rondas cambiando una cosa a la vez y quédate con dos o tres rumbos.",
       "La IA entrega PNG: para imprimir hay que pasarlo a vector. Y en Perú el INDECOPI rechazó en 2024 registrar por derecho de autor obras hechas solo con IA; registrar la marca es otro trámite.",
     ],
     date: "2026-01-21",
@@ -755,7 +755,7 @@ export const BLOG_POSTS: BlogPost[] = [
             texto: "si te gusta el ícono pero no la letra, pide solo ese cambio. Cambiar todo a la vez te hace perder lo que sí funcionaba.",
           },
           {
-            titulo: "Quédate con dos o tres rumbos, no con un archivo",
+            titulo: "Quédate con dos o tres rumbos",
             texto: "lo que sale de esta etapa es una dirección visual. Compárala con tu brief, no con tu gusto del día.",
           },
           {
@@ -815,7 +815,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "El problema del formato que descubres tarde",
         parrafo:
-          "Hay un detalle técnico que arruina más proyectos que el debate legal, y aparece el día que necesitas imprimir. Los generadores de imagen con IA entregan mapas de bits —PNG o JPG—, es decir, una rejilla de píxeles. Un logo necesita ser vectorial: una descripción matemática de las formas que se puede agrandar a cualquier tamaño sin perder nitidez. Cuando llevas un PNG a una imprenta para una gigantografía, el resultado sale borroso, y no hay ajuste que lo salve. Convertirlo a vector después no es un botón: es redibujarlo, y a menudo cuesta más que haberlo diseñado bien desde el principio.",
+          "Hay un detalle técnico que arruina más proyectos que el debate legal, y aparece el día que necesitas imprimir. Los generadores de imagen con IA entregan mapas de bits —PNG o JPG—, es decir, una rejilla de píxeles. Un logo necesita ser vectorial: una descripción matemática de las formas que se puede agrandar a cualquier tamaño sin perder nitidez. Cuando llevas un PNG a una imprenta para una gigantografía, el resultado sale borroso, y no hay ajuste que lo salve. Convertirlo a vector después significa redibujarlo, y a menudo cuesta más que haberlo diseñado bien desde el principio.",
         tabla: {
           cabeceras: ["", "Lo que entrega la IA", "Lo que necesita un logo"],
           filas: [
@@ -935,7 +935,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Qué NO es un rebranding",
         parrafo:
-          "No es solo un logo nuevo. Si cambias la cara pero no la estrategia detrás, en seis meses estás igual. El rebranding empieza en el posicionamiento, no en el color.",
+          "No es solo un logo nuevo. Si cambias la cara pero no la estrategia detrás, en seis meses estás igual. El rebranding empieza en el posicionamiento.",
       },
       {
         h2: "Refresh o cambio total: no cuestan lo mismo",
@@ -996,14 +996,14 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cómo le explico el cambio a mis clientes?",
-        a: "Contando el porqué, no el resultado. A nadie le interesa que estrenaste tipografía; sí le interesa saber que ampliaste servicios o cambiaste de enfoque. El cambio visual es la consecuencia de esa noticia, no la noticia.",
+        a: "Contando el porqué, no el resultado. A nadie le interesa que estrenaste tipografía; sí le interesa saber que ampliaste servicios o cambiaste de enfoque. El cambio visual es solo la consecuencia.",
       },
       {
         q: "¿Cuánto dura la transición?",
         a: "Lo digital cambia en días; lo físico y el recuerdo del cliente, meses. Conviene planificar una convivencia de varios meses entre la identidad antigua y la nueva, sobre todo si tu marca tiene años de reconocimiento local.",
       },
     ],
-    cierre: "¿Tu marca ya no te representa? En Suggestion hacemos rebranding con estrategia, no por moda.",
+    cierre: "¿Tu marca ya no te representa? En Suggestion hacemos rebranding con estrategia.",
     moneyPage: { label: "Evaluemos tu marca", href: "/servicios/branding" },
     relacionados: ["posicionamiento-de-marca", "como-crear-un-logo", "cuanto-cuesta-registrar-una-marca-en-indecopi"],
   },
@@ -1012,14 +1012,14 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "performance",
     title: "Qué es el Marketing Digital y Cómo Funciona | Suggestion",
     description:
-      "Qué es el marketing digital, cómo funciona de verdad y qué canales lo componen. Guía 2026 para que dejes de medir likes y empieces a medir ventas.",
+      "Qué es el marketing digital, cómo funciona y qué canales lo componen. Guía 2026 para que dejes de medir likes y empieces a medir ventas.",
     h1: "Qué es el marketing digital y cómo funciona",
     excerpt:
-      "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para atraer clientes, convertirlos y fidelizarlos. Suena simple, pero la mayoría lo hace mal por una razón: mide likes en vez de ventas. Esta es la versión sin humo, con lo que cuesta empezar en Perú y lo que puedes esperar de verdad.",
+      "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para atraer clientes, convertirlos y fidelizarlos. Suena simple, pero la mayoría lo hace mal por una razón: mide likes en vez de ventas. Aquí va lo que cuesta empezar en Perú y lo que puedes esperar.",
     enCorto: [
       "El marketing digital es usar canales digitales (buscador, redes, web, WhatsApp, correo) para que la persona correcta te encuentre, te deje un dato y termine comprando.",
       "Funciona en tres etapas: atraer, convertir y fidelizar. Si una falla, se cae la cadena entera.",
-      "Se mide en leads, citas, cierres y costo por lead, no en likes. Los primeros leads pueden llegar en la primera semana de pauta; saber si el canal es rentable toma unos 90 días, y el SEO, de 6 a 12 meses.",
+      "Se mide en leads, citas, cierres y costo por lead. Los primeros leads pueden llegar en la primera semana de pauta; saber si el canal es rentable toma unos 90 días, y el SEO, de 6 a 12 meses.",
     ],
     date: "2026-02-04",
     actualizado: "2026-11-22",
@@ -1027,14 +1027,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "¿Qué es el marketing digital, en una frase?",
         parrafo:
-          "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para que la persona correcta te encuentre, te deje un dato y termine comprando. No es una tecnología ni una moda: es el trabajo comercial de siempre, hecho donde tu cliente ya pasa el día. La diferencia con un volante o un panel es que aquí cada paso deja rastro: sabes cuántos vieron el anuncio, cuántos escribieron y cuántos compraron. Ese rastro lo vuelve útil, y también incómodo para quien vende humo.",
+          "El marketing digital es usar canales digitales —buscador, redes, web, WhatsApp, correo— para que la persona correcta te encuentre, te deje un dato y termine comprando. Es el trabajo comercial de siempre, hecho donde tu cliente ya pasa el día. La diferencia con un volante o un panel es que aquí cada paso deja rastro: sabes cuántos vieron el anuncio, cuántos escribieron y cuántos compraron. Ese rastro lo vuelve útil, y también incómodo para quien vende humo.",
       },
       {
         h2: "Qué NO es marketing digital (aunque te lo vendan así)",
         parrafo:
-          "Postear tres veces por semana no es una estrategia. Es producción de contenido: una pieza del juego, no el juego.",
+          "Postear tres veces por semana no es una estrategia. Es producción de contenido, una parte del trabajo.",
         bullets: [
-          { titulo: "No es solo redes", texto: "Instagram y TikTok son un canal más. Si toda tu venta depende de un algoritmo ajeno, tienes un riesgo, no una estrategia." },
+          { titulo: "No es solo redes", texto: "Instagram y TikTok son un canal más. Si toda tu venta depende de un algoritmo ajeno, corres un riesgo." },
           { titulo: "No es suerte", texto: "Una campaña que funciona se puede explicar: a quién le habló y qué le ofreció." },
           { titulo: "No arregla un mal producto", texto: "La pauta acelera lo que ya funciona. Si tu precio o tu atención fallan, solo logra que más gente se entere." },
         ],
@@ -1067,9 +1067,9 @@ export const BLOG_POSTS: BlogPost[] = [
           "No compiten, se turnan. El contenido —artículos, videos, fichas de producto— acumula: lo que publicas hoy puede seguir trayendo gente en un año, pero tarda meses en despegar. La pauta se enciende y se apaga: el día que dejas de pagar, deja de llegar. Si necesitas ventas este mes, empieza por pauta. Si además quieres dejar de depender de ella, construye contenido en paralelo desde el primer día.",
       },
       {
-        h2: "¿Cómo se mide de verdad el marketing digital?",
+        h2: "¿Cómo se mide el marketing digital?",
         parrafo:
-          "Alcance, likes y seguidores describen el ruido, no el negocio. Los números que deciden si sigues invirtiendo se leen en cadena. Si no puedes seguir un contacto desde el anuncio hasta la boleta, estás adivinando.",
+          "Los números que deciden si sigues invirtiendo se leen en cadena. Si no puedes seguir un contacto desde el anuncio hasta la boleta, estás adivinando.",
         bullets: [
           { titulo: "Leads", texto: "contactos con nombre y teléfono, no visitas." },
           { titulo: "Citas o visitas", texto: "cuántos de esos leads llegaron a la sala, al local o a la llamada." },
@@ -1096,7 +1096,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Los errores que más plata le cuestan a una pyme",
         bullets: [
           { titulo: "Mandar el tráfico al perfil de Instagram", texto: "sin un lugar donde dejar el dato, pagas por visitas que se evaporan." },
-          { titulo: "Responder tarde", texto: "buena parte del resultado se decide en la velocidad de respuesta, no en el anuncio." },
+          { titulo: "Responder tarde", texto: "buena parte del resultado se decide en la velocidad de respuesta." },
           { titulo: "Cambiar de rumbo cada dos semanas", texto: "apagar una campaña a los 10 días es pagar el aprendizaje y no cobrarlo." },
           { titulo: "No medir el cierre", texto: "sin saber cuántos leads compraron, optimizas por el lead más barato, que casi nunca es el mejor." },
           { titulo: "Competir solo por precio", texto: "si tu único argumento es el descuento, atraes a quien se irá con el siguiente." },
@@ -1105,7 +1105,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "¿Lo haces tú o contratas una agencia?",
         parrafo:
-          "Hacerlo tú tiene sentido si tienes tiempo real —no “los ratos libres”—, ticket bajo y un solo canal. Tu primer mes de pauta será el curso pagado. Contratar tiene sentido cuando equivocarte cuesta más que el honorario: tickets altos, varios canales o un equipo comercial esperando leads que no llegan. Lo que compras no es saber usar el administrador de anuncios; es criterio para decidir dónde no gastar. Si alguien te promete el primer puesto en Google o retorno garantizado, ya sabes qué te está vendiendo.",
+          "Hacerlo tú tiene sentido si tienes tiempo real —no “los ratos libres”—, ticket bajo y un solo canal. Tu primer mes de pauta será el curso pagado. Contratar tiene sentido cuando equivocarte cuesta más que el honorario: tickets altos, varios canales o un equipo comercial esperando leads que no llegan. Lo que pagas es criterio para decidir dónde no gastar. Si alguien te promete el primer puesto en Google o retorno garantizado, ya sabes qué te está vendiendo.",
       },
     ],
     faq: [
@@ -1146,7 +1146,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cómo calcular tu presupuesto de Google Ads y Meta Ads en Perú a partir de tu meta de ventas, no de una cifra mágica: el método, la tabla y los errores. 2026.",
     h1: "¿Cuánto invertir en Google Ads y Meta Ads en Perú?",
     excerpt:
-      "La respuesta honesta no es una cifra: es “depende, y aquí está de qué depende”. Cualquiera que te dé un número sin conocer tu negocio te está vendiendo humo. Esto es lo que sí determina tu presupuesto.",
+      "La respuesta honesta es «depende», y aquí está de qué. Cualquiera que te dé un número sin conocer tu negocio te está vendiendo humo. Esto es lo que sí determina tu presupuesto.",
     enCorto: [
       "No hay una cifra que sirva para todos: el presupuesto se calcula al revés, desde tu meta de ventas.",
       "La cuenta es ventas que quieres, entre tu tasa de cierre, por tu costo por lead. Con 10 ventas al mes, 1 cierre de cada 5 leads y S/15 por lead, la pauta base es S/750.",
@@ -1176,7 +1176,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Google Ads captura demanda existente (gente que ya busca lo que vendes): ideal para servicios e intención alta. Meta Ads genera demanda (interrumpe con una oferta atractiva): ideal para productos y captación masiva. La mayoría de negocios necesita ambos, en proporciones según su caso.",
       },
       {
-        h2: "La métrica que importa: ROAS, no gasto",
+        h2: "La métrica que importa: el ROAS",
         parrafo:
           "No preguntes “¿cuánto gasto?” sino “¿cuánto me devuelve cada sol?”. Como referencia, una inmobiliaria de Ica llegó a S/350K en ventas con S/3,000 bien invertidos. El monto importa menos que la estrategia detrás.",
       },
@@ -1189,7 +1189,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Aplica tu tasa de cierre real", texto: "si cierras 1 de cada 5, esas 10 ventas necesitan 50 leads. Usa tu número, no el que te gustaría tener." },
           { titulo: "Multiplica por tu costo por lead", texto: "si tu CPL histórico es S/15, la pauta base son S/750. Si nunca lo has medido, este es el dato que te falta." },
           { titulo: "Comprueba que el volumen da para aprender", texto: "las plataformas necesitan un mínimo de conversiones semanales para optimizar. Si tu presupuesto no llega, sube el objetivo de conversión a algo más frecuente." },
-          { titulo: "Contrasta con tu margen", texto: "si cada venta te deja S/300 y captarla cuesta S/375, el problema no es el presupuesto: es la oferta o el proceso de cierre." },
+          { titulo: "Contrasta con tu margen", texto: "si cada venta te deja S/300 y captarla cuesta S/375, el problema está en la oferta o en el proceso de cierre." },
         ],
       },
       {
@@ -1221,7 +1221,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Techo", "El número de personas que buscan al mes", "Prácticamente el tamaño del público"],
             ["Se nota en", "Semanas", "Días para leads, semanas para ventas"],
           ],
-          nota: "La mayoría de negocios necesita los dos; lo que cambia es el reparto, no la elección.",
+          nota: "La mayoría de negocios necesita los dos; lo que cambia es el reparto.",
         },
       },
       {
@@ -1243,7 +1243,7 @@ export const BLOG_POSTS: BlogPost[] = [
         nota: {
           tipo: "aviso",
           titulo: "El costo por lead del panel no es tu costo por lead",
-          texto: "Esas cifras cuentan lo que la plataforma registra. Tu costo real sale de dividir la inversión entre los leads que tu equipo pudo trabajar de verdad, y casi siempre es más alto. Es la diferencia que decide si una campaña rentable lo parece o no.",
+          texto: "Esas cifras cuentan lo que la plataforma registra. Tu costo real sale de dividir la inversión entre los leads que tu equipo pudo trabajar, y casi siempre es más alto. Es la diferencia que decide si una campaña rentable lo parece o no.",
         },
       },
       {
@@ -1273,11 +1273,11 @@ export const BLOG_POSTS: BlogPost[] = [
     faq: [
       {
         q: "¿Cuál es el presupuesto mínimo para hacer publicidad en Perú?",
-        a: "No hay un mínimo oficial, pero sí uno práctico: el que permita conseguir suficientes conversiones semanales para que la plataforma aprenda. Si tu presupuesto no llega a ese volumen con el evento que te importa —una compra, un lead—, la salida no es gastar más, es optimizar por un evento más frecuente, como un inicio de conversación.",
+        a: "No hay un mínimo oficial, pero sí uno práctico: el que permita conseguir suficientes conversiones semanales para que la plataforma aprenda. Si tu presupuesto no llega a ese volumen con el evento que te importa —una compra, un lead—, conviene optimizar por un evento más frecuente, como un inicio de conversación.",
       },
       {
         q: "¿Cuánto cuesta un clic en Google Ads en Perú?",
-        a: "Varía muchísimo según el rubro y la competencia, y por eso desconfía de cualquiera que te dé una cifra sin conocer tu sector. Lo que sí es constante es la lógica: cuanto más cara sea la venta que hay detrás de una búsqueda, más gente puja por ella y más sube el clic. La pregunta útil no es cuánto cuesta el clic, sino cuántos clics necesitas para una venta.",
+        a: "Varía muchísimo según el rubro y la competencia, y por eso desconfía de cualquiera que te dé una cifra sin conocer tu sector. Lo que sí es constante es la lógica: cuanto más cara sea la venta que hay detrás de una búsqueda, más gente puja por ella y más sube el clic. Más que el costo del clic, importa cuántos clics necesitas para una venta.",
       },
       {
         q: "¿Es mejor invertir todo en una plataforma o repartir?",
@@ -1304,7 +1304,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Los 7 pasos para crear una página web que traiga clientes: dominio a tu nombre, estructura, contenido, velocidad y medición. Qué hacer y en qué orden.",
     h1: "Cómo crear una página web paso a paso",
     excerpt:
-      "Crear una página web nunca fue tan fácil… ni tan fácil de hacer mal. Hoy puedes armar una en una tarde con Wix, o invertir en una hecha para vender. La diferencia no es la estética: es si trae clientes o solo “se ve bonita”.",
+      "Crear una página web nunca fue tan fácil… ni tan fácil de hacer mal. Hoy puedes armar una en una tarde con Wix, o invertir en una hecha para vender. La diferencia está en si trae clientes o solo “se ve bonita”.",
     enCorto: [
       "Hay dos caminos: hacerla tú con Wix o WordPress, barato y rápido, que sirve para empezar o para un negocio muy simple; o contratar desarrollo profesional, la opción cuando la web es un canal de ventas.",
       "El orden correcto empieza por definir una sola acción principal y registrar el dominio a tu nombre. El diseño es la última capa.",
@@ -1321,7 +1321,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Opción 2: contratar desarrollo profesional",
         parrafo:
-          "A favor: diseño a medida, rápida, optimizada para SEO y pensada para convertir (UX, copy, CTAs). En contra: mayor inversión y plazo. Es la opción cuando tu web es un canal de ventas, no un folleto.",
+          "A favor: diseño a medida, rápida, optimizada para SEO y pensada para convertir (UX, copy, CTAs). En contra: mayor inversión y plazo. Es la opción cuando tu web es un canal de ventas.",
       },
       {
         h2: "Las 4 cosas que toda web debería tener",
@@ -1343,7 +1343,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Redacta pensando en la pregunta del cliente", texto: "cada página responde a una duda concreta. El texto se escribe antes del diseño, no se rellena después." },
           { titulo: "Diseña sobre el móvil primero", texto: "porque es donde va a entrar la mayoría. Lo que funciona en 375 px funciona en escritorio; al revés casi nunca." },
           { titulo: "Monta la medición desde el día uno", texto: "analítica y eventos de contacto. Una web sin medir es una web sobre la que solo puedes opinar." },
-          { titulo: "Publica y corrige con datos", texto: "ninguna web nace terminada. Lo que la mejora es ver dónde abandona la gente, no rediseñarla entera cada año." },
+          { titulo: "Publica y corrige con datos", texto: "ninguna web nace terminada. Lo que la mejora es ver dónde abandona la gente." },
         ],
       },
       {
@@ -1373,7 +1373,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "El dominio no está a tu nombre", texto: "si la relación con quien te la hizo se rompe, pierdes la dirección, el correo y el posicionamiento de golpe. Comprueba a nombre de quién está registrado." },
           { titulo: "No tienes acceso al hosting ni al gestor", texto: "una web que solo puede tocar otra persona es una web que no controlas. Pide los accesos aunque no vayas a usarlos." },
           { titulo: "Las URLs cambian sin redirección", texto: "cada dirección antigua que muere sin un redirect 301 se lleva su posicionamiento. Es la forma más común de perder tráfico al estrenar web." },
-          { titulo: "No hay forma de contactar en cada página", texto: "el visitante decide cuando decide, no cuando llega al final. Si tiene que buscar cómo escribirte, no escribe." },
+          { titulo: "No hay forma de contactar en cada página", texto: "el visitante puede decidirse en cualquier punto de la página. Si tiene que buscar cómo escribirte, no escribe." },
         ],
         nota: {
           tipo: "aviso",
@@ -1437,7 +1437,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Estar indexado tampoco es estar posicionado",
         parrafo:
-          "Que Google tenga tu página significa que puede mostrarla, no que vaya a hacerlo. Para que la muestre tiene que considerar que responde mejor que las demás a lo que alguien escribió. Y ahí entran tres cosas, en este orden: que la página trate de verdad del tema, que el sitio tenga algo de credibilidad en ese tema, y que la experiencia no espante —velocidad, móvil, que se lea—.",
+          "Que Google tenga tu página significa que puede mostrarla, no que vaya a hacerlo. Para que la muestre tiene que considerar que responde mejor que las demás a lo que alguien escribió. Y ahí entran tres cosas, en este orden: que la página trate a fondo el tema, que el sitio tenga algo de credibilidad en ese tema, y que la experiencia no espante —velocidad, móvil, que se lea—.",
         bullets: [
           { titulo: "Una página por intención", texto: "una sola página intentando posicionar para diez cosas distintas no posiciona para ninguna. Es el error más repetido en webs de servicios." },
           { titulo: "El texto que nadie lee sí cuenta", texto: "el título que sale en el buscador y la descripción deciden si te hacen clic. Dos páginas con el mismo título compiten entre ellas." },
@@ -1605,7 +1605,7 @@ export const BLOG_POSTS: BlogPost[] = [
           },
           {
             h3: "Recraft",
-            texto: "Es de las pocas que generan vectores de verdad (SVG), no una imagen que después hay que redibujar. El matiz está en los términos: en el plan gratis, lo que creas es público, queda a nombre de Recraft y no se puede usar comercialmente. Para el logo de un negocio hace falta un plan de pago.",
+            texto: "Es de las pocas que generan vectores reales (SVG), que no hay que redibujar. El matiz está en los términos: en el plan gratis, lo que creas es público, queda a nombre de Recraft y no se puede usar comercialmente. Para el logo de un negocio hace falta un plan de pago.",
           },
           {
             h3: "Adobe Illustrator",
@@ -1623,7 +1623,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Cuál elegir según lo que necesitas",
-        parrafo: "La pregunta no es cuál es la mejor en abstracto, sino para qué la vas a usar. Lo normal es combinar dos: una para explorar y otra para el archivo final.",
+        parrafo: "Depende de para qué la vas a usar. Lo normal es combinar dos: una para explorar y otra para el archivo final.",
         tabla: {
           cabeceras: ["Tu situación", "Qué usar"],
           filas: [
@@ -1640,7 +1640,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Antes de pagar una descarga, revisa esto",
-        parrafo: "Lo que separa un logo usable de una imagen bonita no se ve en la pantalla donde lo generaste. Son cinco preguntas, y conviene hacerlas antes de pagar, no después.",
+        parrafo: "Lo que separa un logo usable de una imagen bonita no se ve en la pantalla donde lo generaste. Son cinco preguntas para hacer antes de pagar.",
         bullets: [
           {
             titulo: "¿Incluye el archivo vectorial?",
@@ -1720,10 +1720,10 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "¿Qué es un lead, en palabras simples?",
         parrafo:
-          "Un lead es un contacto interesado: alguien que levantó la mano y te dejó una forma de ubicarlo —su número, su correo o un mensaje por WhatsApp—. Esa es la diferencia con una visita. Quien entra a tu web y se va sin dejar rastro no es un lead: es tráfico. El lead empieza a existir en el momento en que puedes iniciar una conversación con esa persona.",
+          "Un lead es un contacto interesado: alguien que levantó la mano y te dejó una forma de ubicarlo —su número, su correo o un mensaje por WhatsApp—. Esa es la diferencia con una visita. Quien entra a tu web y se va sin dejar rastro es solo tráfico. El lead empieza a existir en el momento en que puedes iniciar una conversación con esa persona.",
       },
       {
-        h2: "Visita, lead, prospecto y cliente: no son lo mismo",
+        h2: "Visita, lead, prospecto y cliente",
         parrafo:
           "Se usan como sinónimos y eso genera desorden en el equipo comercial. Vale la pena separarlos, porque cada etapa se trabaja distinto.",
         bullets: [
@@ -1771,15 +1771,15 @@ export const BLOG_POSTS: BlogPost[] = [
           "Calificar es hacerle cuatro preguntas al contacto —a veces sin preguntárselas directamente— para saber cuánto esfuerzo merece. No es filtrar por filtrar: es dejar de gastar tu mejor hora en quien nunca iba a comprar.",
         sub: [
           { h3: "¿Tiene una necesidad real?", texto: "Busca resolver algo concreto o solo estaba mirando. La forma en que pregunta suele delatarlo." },
-          { h3: "¿Puede pagarlo?", texto: "No se trata de juzgar a nadie, sino de ubicar tu oferta. Si tu producto no está a su alcance hoy, quizá lo esté en seis meses." },
+          { h3: "¿Puede pagarlo?", texto: "Sirve para ubicar tu oferta. Si tu producto no está a su alcance hoy, quizá lo esté en seis meses." },
           { h3: "¿Decide él?", texto: "En ventas a empresas casi nunca decide quien escribe. Saber quién firma cambia toda la conversación." },
-          { h3: "¿Para cuándo?", texto: "El que compra este mes y el que compra el año que viene necesitan seguimientos distintos, no el mismo mensaje repetido." },
+          { h3: "¿Para cuándo?", texto: "El que compra este mes y el que compra el año que viene necesitan seguimientos distintos." },
         ],
       },
       {
         h2: "¿Necesito un CRM si vendo por WhatsApp?",
         parrafo:
-          "Un CRM es simplemente el lugar donde vive cada contacto con su historial: qué pidió, qué se le respondió y cuándo toca volver a escribirle. No es un software caro para empresas grandes; puede empezar siendo una hoja de cálculo bien llevada. La pregunta correcta no es si lo necesitas, sino esta: si mañana tu vendedor renuncia y se va con su celular, ¿pierdes las conversaciones? Si la respuesta es sí, ya lo necesitas.",
+          "Un CRM es simplemente el lugar donde vive cada contacto con su historial: qué pidió, qué se le respondió y cuándo toca volver a escribirle. Puede empezar siendo una hoja de cálculo bien llevada. Hazte esta pregunta: si mañana tu vendedor renuncia y se va con su celular, ¿pierdes las conversaciones? Si la respuesta es sí, ya lo necesitas.",
       },
       {
         h2: "¿Cuánto cuesta un lead y por qué el barato puede salir caro?",
@@ -1813,7 +1813,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuántos leads necesito para lograr una venta?",
-        a: "Depende del rubro y del precio. En productos de ticket bajo pueden bastar unos pocos; en inmobiliario o vehículos hacen falta bastantes más, porque la decisión es larga. Lo importante no es el promedio de otros: es medir el tuyo durante un par de meses y trabajar con ese número.",
+        a: "Depende del rubro y del precio. En productos de ticket bajo pueden bastar unos pocos; en inmobiliario o vehículos hacen falta bastantes más, porque la decisión es larga. Lo importante es medir el tuyo durante un par de meses y trabajar con ese número.",
       },
       {
         q: "¿Sirve un CRM si soy un negocio pequeño?",
@@ -1821,10 +1821,10 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Es mejor tener muchos leads baratos o pocos caros?",
-        a: "Ninguno de los dos por sí solo. Lo que importa es cuántos terminan comprando. Un lead más caro que cierra con frecuencia sale más barato que diez que solo consumen el tiempo de tu equipo. Mide el costo por venta, no el costo por contacto.",
+        a: "Ninguno de los dos por sí solo. Lo que importa es cuántos terminan comprando. Un lead más caro que cierra con frecuencia sale más barato que diez que solo consumen el tiempo de tu equipo. Mide el costo por venta.",
       },
     ],
-    cierre: "Si tus leads se están enfriando entre WhatsApp, correos y cuadernos, el problema no es la publicidad: es el proceso. Eso se ordena.",
+    cierre: "Si tus leads se están enfriando entre WhatsApp, correos y cuadernos, el problema está en el proceso. Eso se ordena.",
     moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
     relacionados: ["que-es-un-embudo-de-ventas", "como-automatizar-whatsapp", "que-es-el-marketing-digital"],
   },
@@ -1894,7 +1894,7 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "El neuromarketing de manual usa seguimiento ocular o lectura de actividad cerebral, cosas fuera del alcance de casi cualquier negocio. La buena noticia es que el 90% del beneficio se consigue con herramientas simples.",
         bullets: [
-          { titulo: "Pruebas comparativas", texto: "dos versiones del mismo anuncio o de la misma página, y que decida el comportamiento real de la gente, no la opinión de la oficina." },
+          { titulo: "Pruebas comparativas", texto: "dos versiones del mismo anuncio o de la misma página, y que decida lo que hace la gente." },
           { titulo: "Mapas de calor", texto: "muestran dónde miran y dónde hacen clic los visitantes. Suelen revelar que nadie ve eso que tanto discutieron." },
           { titulo: "Grabaciones de sesión", texto: "ver a cinco personas usar tu web enseña más que cualquier informe." },
           { titulo: "Preguntar bien", texto: "no preguntes si comprarían: pregunta qué hicieron la última vez que compraron algo parecido. La memoria de lo hecho miente menos que la intención declarada." },
@@ -1908,13 +1908,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "El límite ético (que además es comercial)",
         parrafo:
-          "El neuromarketing potencia un mensaje verdadero; no salva uno falso. Manipular consigue una venta y mata la recompra, que es donde está el negocio de verdad. La prueba es sencilla: si tu cliente supiera exactamente por qué le comunicaste así, ¿se sentiría bien atendido o engañado? Si es lo segundo, no lo hagas. Además del daño reputacional, en Perú la publicidad engañosa tiene consecuencias ante Indecopi.",
+          "El neuromarketing potencia un mensaje verdadero; no salva uno falso. Manipular consigue una venta y mata la recompra, que es donde está el negocio. La prueba es sencilla: si tu cliente supiera exactamente por qué le comunicaste así, ¿se sentiría bien atendido o engañado? Si es lo segundo, no lo hagas. Además del daño reputacional, en Perú la publicidad engañosa tiene consecuencias ante Indecopi.",
       },
     ],
     faq: [
       {
         q: "¿El neuromarketing manipula a las personas?",
-        a: "No, si se usa bien. Comunicar de forma clara y en el orden en que el cerebro procesa la información no es manipular: es hacer más fácil una decisión que la persona ya quería tomar. La manipulación empieza cuando la afirmación es falsa, la urgencia es inventada o se oculta información importante.",
+        a: "No, si se usa bien. Comunicar claro y en el orden en que el cerebro procesa la información facilita una decisión que la persona ya quería tomar. La manipulación empieza cuando la afirmación es falsa, la urgencia es inventada o se oculta información importante.",
       },
       {
         q: "¿Necesito equipos caros para aplicarlo?",
@@ -1975,7 +1975,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "El error que cuesta caro",
         parrafo:
-          "Optimizar por clics o alcance baratos. Un lead barato que no cierra es más caro que un lead caro que sí compra. La métrica final siempre es la venta, no el clic.",
+          "Optimizar por clics o alcance baratos. Un lead barato que no cierra es más caro que un lead caro que sí compra. La métrica final siempre es la venta.",
       },
       {
         h2: "Antes del CPL: qué cuenta como lead y qué no",
@@ -1990,7 +1990,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Del CPL al costo por venta: la cuenta que casi nadie hace",
         parrafo:
-          "El CPL es el primer eslabón, no el último. Lo que decide si la campaña es rentable es cuánto te cuesta cada venta cerrada, y eso depende de lo que pasa después del formulario. Un ejemplo con números redondos: inviertes S/2,000 y consigues 100 leads, así que tu CPL es S/20. De esos 100 contestan 60, de los 60 agendan 20 y de los 20 cierran 5. Tu costo por venta real es S/400, no S/20. Si tu margen por venta es S/1,200, la campaña funciona. Si es S/300, estás perdiendo dinero con un CPL que parecía excelente.",
+          "El CPL es solo el primer eslabón. Lo que decide si la campaña es rentable es cuánto te cuesta cada venta cerrada, y eso depende de lo que pasa después del formulario. Un ejemplo con números redondos: inviertes S/2,000 y consigues 100 leads, así que tu CPL es S/20. De esos 100 contestan 60, de los 60 agendan 20 y de los 20 cierran 5. Tu costo por venta real es S/400, no S/20. Si tu margen por venta es S/1,200, la campaña funciona. Si es S/300, estás perdiendo dinero con un CPL que parecía excelente.",
         bullets: [
           { titulo: "Tasa de contacto", texto: "cuántos leads logras que te respondan. Es la que más sube si contestas en minutos en vez de en días." },
           { titulo: "Tasa de cita", texto: "cuántos de los contactados aceptan una reunión, visita o prueba." },
@@ -1999,14 +1999,14 @@ export const BLOG_POSTS: BlogPost[] = [
         enlaces: [{ label: "Caso Granjas Bonanza: 15 contratos con S/2,500 de pauta", href: "/casos/granjas-bonanza" }],
       },
       {
-        h2: "Cómo saber qué ROAS necesitas de verdad",
+        h2: "Cómo saber qué ROAS necesitas",
         parrafo:
           "«Un ROAS de 3» no quiere decir nada sin conocer tu margen. Lo que importa es el punto de equilibrio: divide 1 entre tu margen bruto y sabrás por debajo de qué ROAS pierdes dinero. Con un margen del 50%, el equilibrio está en 2: por cada sol invertido necesitas vender dos para no perder. Con un margen del 20%, el equilibrio sube a 5, y un ROAS de 4 —que suena bien— te está costando dinero. Este cálculo cambia por completo la conversación sobre si una campaña «va bien».",
       },
       {
         h2: "Por qué tus números no cuadran con los de la plataforma",
         parrafo:
-          "Es normal que Meta o Google reporten más conversiones que tu sistema interno, y no siempre es que mientan. Cada plataforma se atribuye las ventas de personas que vieron o tocaron su anuncio dentro de una ventana de tiempo, así que si alguien ve un anuncio en Instagram y luego busca tu marca en Google, las dos se apuntan la misma venta. A eso se suman los bloqueadores de anuncios, que impiden que parte de los datos vuelva, y las conversiones contadas dos veces cuando hay más de una etiqueta midiendo lo mismo. La salida no es elegir a quién creerle: es tener una fuente propia —el CRM o la hoja donde registras las ventas reales— y usar las plataformas para decidir dónde mover el presupuesto, no para saber cuánto vendiste.",
+          "Es normal que Meta o Google reporten más conversiones que tu sistema interno, y no siempre es que mientan. Cada plataforma se atribuye las ventas de personas que vieron o tocaron su anuncio dentro de una ventana de tiempo, así que si alguien ve un anuncio en Instagram y luego busca tu marca en Google, las dos se apuntan la misma venta. A eso se suman los bloqueadores de anuncios, que impiden que parte de los datos vuelva, y las conversiones contadas dos veces cuando hay más de una etiqueta midiendo lo mismo. La salida es tener una fuente propia (el CRM o la hoja donde registras las ventas reales) y usar las plataformas para decidir dónde mover el presupuesto.",
       },
     ],
     faq: [
@@ -2016,11 +2016,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuál es un CPL bueno?",
-        a: "No existe un número universal. Un CPL de S/10 puede ser malo si esos leads no cierran nunca, y uno de S/80 puede ser excelente si cada venta te deja miles de soles. La referencia útil no es el promedio del sector, sino tu propio costo por venta comparado con tu margen.",
+        a: "No existe un número universal. Un CPL de S/10 puede ser malo si esos leads no cierran nunca, y uno de S/80 puede ser excelente si cada venta te deja miles de soles. La referencia útil es tu propio costo por venta comparado con tu margen.",
       },
       {
         q: "¿Cuál es la diferencia entre CPL y CPA?",
-        a: "El CPL mide lo que cuesta conseguir un contacto interesado. El CPA mide lo que cuesta conseguir la acción que de verdad te importa, que normalmente es la venta. Entre uno y otro está todo tu proceso comercial: velocidad de respuesta, calidad de la atención y capacidad de cierre.",
+        a: "El CPL mide lo que cuesta conseguir un contacto interesado. El CPA mide lo que cuesta conseguir la acción que te importa, que normalmente es la venta. Entre uno y otro está todo tu proceso comercial: velocidad de respuesta, calidad de la atención y capacidad de cierre.",
       },
       {
         q: "¿Se pueden mirar CPL y ROAS a la vez?",
@@ -2129,11 +2129,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Puedo empezar con Wix y migrar después?",
-        a: "Puedes, pero cuenta con que migrar es rehacer. El contenido no se exporta de forma que sirva en otra plataforma y las URLs cambian, así que hay que redirigir una por una para no perder posicionamiento. Es una opción razonable si de verdad estás validando; es cara si ya sabes hacia dónde vas.",
+        a: "Puedes, pero cuenta con que migrar es rehacer. El contenido no se exporta de forma que sirva en otra plataforma y las URLs cambian, así que hay que redirigir una por una para no perder posicionamiento. Es una opción razonable si estás validando; es cara si ya sabes hacia dónde vas.",
       },
       {
         q: "¿Una web profesional es siempre más rápida?",
-        a: "No por definición: una web a medida mal hecha puede ser lentísima. Lo que da el desarrollo profesional es la posibilidad de optimizarla, que en un constructor simplemente no existe. Pide siempre ver las Core Web Vitals medidas con usuarios reales, no una promesa.",
+        a: "No por definición: una web a medida mal hecha puede ser lentísima. Lo que da el desarrollo profesional es la posibilidad de optimizarla, que en un constructor simplemente no existe. Pide siempre ver las Core Web Vitals medidas con usuarios reales.",
       },
       {
         q: "¿Qué pasa si dejo de pagar la suscripción del constructor?",
@@ -2144,7 +2144,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "No, si te la entregan con un gestor de contenidos y te enseñan a usarlo. Es una condición razonable que pedir antes de contratar: que puedas cambiar textos, fotos y precios sin depender de nadie.",
       },
     ],
-    cierre: "En Suggestion hacemos webs rápidas y pensadas para convertir, no solo para verse bien.",
+    cierre: "En Suggestion hacemos webs rápidas y pensadas para convertir.",
     moneyPage: { label: "Quiero una web que venda", href: "/servicios/desarrollo-web" },
     relacionados: ["como-crear-una-pagina-web", "que-es-un-lead"],
   },
@@ -2221,7 +2221,7 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "El orden importa: casi todos los proyectos que fracasan empezaron por el chatbot y dejaron para el final quién contesta cuando el bot no sabe. Hazlo al revés.",
         pasos: [
-          { titulo: "Escribe las 10 preguntas que más te hacen", texto: "sácalas de tus conversaciones reales de los últimos meses, no de lo que crees que preguntan. Ese listado es el 80% de la automatización." },
+          { titulo: "Escribe las 10 preguntas que más te hacen", texto: "sácalas de tus conversaciones reales de los últimos meses. Ese listado es el 80% de la automatización." },
           { titulo: "Define qué es un lead caliente para ti", texto: "sin ese criterio, el bot no sabe a quién derivar y acaba pasándolo todo o nada. Suelen bastar dos o tres condiciones." },
           { titulo: "Decide el punto de traspaso a una persona", texto: "y quién es esa persona, con horario. La automatización aguanta hasta que hay que negociar; ahí empieza el trabajo humano." },
           { titulo: "Conecta la conversación al CRM", texto: "si el chat no deja registro, no hay seguimiento posible y vuelves al punto de partida con más tecnología." },
@@ -2305,12 +2305,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cómo aplicarlo a tu marketing",
         parrafo:
-          "Define a quién le vendes de verdad, qué teme y qué aspira, y construye el mensaje desde ahí. No le hables a “todos”: háblale a tu cliente real, en su idioma.",
+          "Define a quién le vendes, qué teme y qué aspira, y construye el mensaje desde ahí. No le hables a “todos”: háblale a tu cliente real, en su idioma.",
       },
       {
         h2: "El terreno real: un país conectado",
         parrafo:
-          "Conviene empezar por descartar una idea vieja: que el cliente peruano «todavía no está online». Lo está, de forma masiva y sobre todo desde el móvil. Eso cambia la conversación: la ventaja ya no está en llegar antes que nadie a internet, sino en hacerlo mejor que el competidor que también está ahí. Y también significa que un negocio sin presencia digital ordenada no es invisible: es sospechoso.",
+          "Conviene empezar por descartar una idea vieja: que el cliente peruano «todavía no está online». Lo está, de forma masiva y sobre todo desde el móvil. Eso cambia la conversación: la ventaja está en hacerlo mejor que el competidor que también está ahí. Y un negocio sin presencia digital ordenada genera sospecha.",
         dato: {
           cifra: "82%",
           texto: "de la población peruana usa internet —28,4 millones de personas—, y el 99,5% de quienes usan internet está en al menos una red social. TikTok ya es la segunda plataforma del país.",
@@ -2333,9 +2333,9 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "WhatsApp no es un canal más: es el canal",
+        h2: "WhatsApp es el canal principal",
         parrafo:
-          "En Perú, la conversación comercial ocurre en WhatsApp. Un formulario que promete respuesta «en 24 a 48 horas» compite contra un chat que responde en minutos, y pierde. Esto tiene una consecuencia incómoda para muchas webs: el botón más importante no es «enviar formulario», es el que abre una conversación. Y la contraparte es que si abres ese canal tienes que atenderlo: un WhatsApp que no responde hace más daño que no tenerlo.",
+          "En Perú, la conversación comercial ocurre en WhatsApp. Un formulario que promete respuesta «en 24 a 48 horas» compite contra un chat que responde en minutos, y pierde. Esto tiene una consecuencia incómoda para muchas webs: el botón más importante es el que abre una conversación. Y la contraparte es que si abres ese canal tienes que atenderlo: un WhatsApp que no responde hace más daño que no tenerlo.",
         nota: {
           titulo: "Un detalle que cambia la tasa de respuesta",
           texto: "Una llamada de un número desconocido a menudo no se contesta; un mensaje escrito, casi siempre se lee. Si tu proceso comercial arranca llamando, prueba a arrancar escribiendo y llamar después de la primera respuesta.",
@@ -2359,7 +2359,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Es cierto que en Perú todo se decide por precio?",
-        a: "Es cierto cuando el cliente no percibe ninguna otra diferencia. Cuando dos opciones parecen iguales, el precio es el único criterio disponible. La salida no es bajarlo, es dar razones visibles para elegirte: prueba social, garantías, velocidad de respuesta o una especialización clara.",
+        a: "Es cierto cuando el cliente no percibe ninguna otra diferencia. Cuando dos opciones parecen iguales, el precio es el único criterio disponible. La salida es dar razones visibles para elegirte: prueba social, garantías, velocidad de respuesta o una especialización clara.",
       },
       {
         q: "¿Cómo genero confianza si mi negocio es nuevo?",
@@ -2374,7 +2374,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Los frenos de fondo —desconfianza, aversión al riesgo, preferencia por la conversación directa— son bastante estables. Lo que cambia rápido son las plataformas donde ocurre: la migración de atención hacia el video corto de los últimos años es el ejemplo más claro.",
       },
     ],
-    cierre: "En Suggestion construimos estrategias con el consumidor peruano en el centro, no plantillas importadas.",
+    cierre: "En Suggestion construimos estrategias con el consumidor peruano en el centro.",
     moneyPage: { label: "Marketing digital para tu negocio", href: "/servicios/marketing-digital" },
     relacionados: ["psicologia-de-ventas", "que-es-neuromarketing"],
   },
@@ -2386,11 +2386,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "6 gatillos de la psicología de ventas para vender más sin manipular ni quemar tu marca. Principios reales aplicados al marketing peruano.",
     h1: "6 gatillos de la psicología de ventas (sin trucos baratos)",
     excerpt:
-      "Los gatillos mentales funcionan porque así decide el cerebro, no porque “engañen”. Usados con honestidad, aceleran la venta. Usados con humo, queman tu marca. Aquí los 6 que sí valen.",
+      "Los gatillos mentales funcionan porque así decide el cerebro. Usados con honestidad, aceleran la venta. Usados con humo, queman tu marca. Aquí los 6 que sí valen.",
     enCorto: [
       "Los 6 gatillos que funcionan son reciprocidad, prueba social, autoridad, escasez, compromiso y coherencia, y aversión a la pérdida.",
-      "Funcionan porque el cerebro decide por atajos, no porque engañen. Cada uno tiene que apoyarse en algo verdadero: la escasez falsa y los testimonios inventados funcionan una vez y destruyen la confianza.",
-      "Se prueban cambiando una sola cosa a la vez y mirando citas o ventas, no clics.",
+      "Funcionan porque el cerebro decide por atajos. Cada uno tiene que apoyarse en algo verdadero: la escasez falsa y los testimonios inventados funcionan una vez y destruyen la confianza.",
+      "Se prueban cambiando una sola cosa a la vez y mirando citas o ventas.",
     ],
     date: "2026-04-15",
     actualizado: "2026-11-22",
@@ -2419,7 +2419,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Por qué funcionan: cómo decide realmente el cerebro",
         parrafo:
-          "Los gatillos no son trucos de vendedor, son atajos que el cerebro usa porque no puede analizar todo con calma. Decidir a fondo cuesta energía y tiempo, así que la mayoría de decisiones cotidianas se toman por vía rápida —intuición, contexto, lo que hacen los demás— y solo después buscamos razones para justificarlas. Por eso una persona puede explicarte con argumentos impecables una compra que hizo en tres segundos. Entender esto cambia cómo se escribe: no se trata de convencer a un juez imparcial, sino de que la vía rápida no encuentre motivos para frenar.",
+          "Son atajos que el cerebro usa porque no puede analizar todo con calma. Decidir a fondo cuesta energía y tiempo, así que la mayoría de decisiones cotidianas se toman por vía rápida —intuición, contexto, lo que hacen los demás— y solo después buscamos razones para justificarlas. Por eso una persona puede explicarte con argumentos impecables una compra que hizo en tres segundos. Por eso se escribe para que la vía rápida no encuentre motivos para frenar.",
         bullets: [
           { titulo: "El esfuerzo es un costo", texto: "un formulario largo, un precio confuso o un proceso poco claro no solo molestan: se leen como riesgo, y ante el riesgo la respuesta por defecto es no hacer nada." },
           { titulo: "Lo familiar se percibe como más seguro", texto: "por eso la repetición coherente funciona, y por eso cambiar de mensaje cada mes cuesta caro." },
@@ -2429,7 +2429,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cómo se ve cada gatillo en un anuncio real",
         parrafo:
-          "El error habitual no es elegir mal el gatillo, es dejarlo en abstracto. Estos son los mismos seis, escritos como aparecerían en una pieza concreta.",
+          "El error habitual es dejar el gatillo en abstracto. Estos son los mismos seis, escritos como aparecerían en una pieza concreta.",
         bullets: [
           { titulo: "Reciprocidad", texto: "en vez de «contáctanos», entregar algo aprovechable sin condiciones: un diagnóstico, una plantilla, una respuesta útil. La deuda de gratitud es real y no hace falta forzarla." },
           { titulo: "Prueba social", texto: "«8 lotes vendidos con S/3,000» dice más que «somos líderes». Un número verificable pesa más que cualquier adjetivo." },
@@ -2456,7 +2456,7 @@ export const BLOG_POSTS: BlogPost[] = [
         nota: {
           tipo: "aviso",
           titulo: "La prueba de los cinco segundos",
-          texto: "Si te incomodaría que el cliente supiera exactamente cómo montaste ese mensaje, no lo uses. Es una regla más útil que cualquier debate teórico sobre ética publicitaria, y se responde sola.",
+          texto: "Si te incomodaría que el cliente supiera exactamente cómo montaste ese mensaje, no lo uses.",
         },
       },
       {
@@ -2492,7 +2492,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Sirven, pero cambia el peso. En B2B la decisión es más lenta, hay más de una persona implicada y el riesgo personal de equivocarse pesa mucho: la autoridad y la prueba social —casos de empresas parecidas— rinden bastante más que la urgencia.",
       },
     ],
-    cierre: "En Suggestion escribimos campañas que persuaden con principios reales, no con trucos.",
+    cierre: "En Suggestion escribimos campañas que persuaden con argumentos verdaderos.",
     moneyPage: { label: "Publicidad en Google Ads", href: "/servicios/publicidad-digital" },
     relacionados: ["que-es-neuromarketing", "comportamiento-del-consumidor-peruano"],
   },
@@ -2501,7 +2501,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "inmobiliario",
     title: "Publicidad Inmobiliaria en Redes: Qué Funciona | Suggestion",
     description:
-      "Cómo hacer publicidad inmobiliaria en redes que genera citas, no curiosos. Formatos, mensajes y errores a evitar en Meta Ads para proyectos. 2026.",
+      "Cómo hacer publicidad inmobiliaria en redes que genera citas. Formatos, mensajes y errores a evitar en Meta Ads para proyectos. 2026.",
     h1: "Publicidad inmobiliaria en redes: qué funciona en Perú",
     excerpt:
       "Vender un lote o departamento por redes no es subir fotos bonitas y esperar. Es atraer al comprador correcto, filtrar curiosos y llevarlo a una cita. Esto es lo que funciona.",
@@ -2519,7 +2519,7 @@ export const BLOG_POSTS: BlogPost[] = [
         bullets: [
           { titulo: "Video y recorridos (incluido drone)", texto: "el inmueble se vende mostrándolo bien; la toma aérea vende ubicación y avance de obra." },
           { titulo: "Mensajes de valorización", texto: "“precio de lanzamiento”, “etapa inicial”, “antes que suba” mueven al inversor." },
-          { titulo: "Segmentación por intención y zona", texto: "llegar a quien sí puede comprar, no a todos." },
+          { titulo: "Segmentación por intención y zona", texto: "llegar a quien puede comprar." },
           { titulo: "Formularios + WhatsApp", texto: "captura el dato y responde al instante." },
         ],
       },
@@ -2539,9 +2539,9 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cómo segmentar sin tirar el presupuesto",
         parrafo:
-          "El error más caro en inmobiliario no es el anuncio, es a quién se lo enseñas. Segmentar por «interesados en bienes raíces» suena lógico y es de lo peor que puedes hacer: ese interés lo tiene también quien mira propiedades por entretenimiento. Lo que sirve es acotar por señales que se parezcan a las de tus compradores reales, y para eso tienes que mirar quiénes te compraron el año pasado antes de tocar el administrador de anuncios.",
+          "En inmobiliario, el error más caro es enseñarle el anuncio a quien no puede comprar. Segmentar por «interesados en bienes raíces» suena lógico y es de lo peor que puedes hacer: ese interés lo tiene también quien mira propiedades por entretenimiento. Lo que sirve es acotar por señales que se parezcan a las de tus compradores reales, y para eso tienes que mirar quiénes te compraron el año pasado antes de tocar el administrador de anuncios.",
         bullets: [
-          { titulo: "Radio geográfico realista", texto: "no es donde está el proyecto, es de dónde vienen los que compran. En proyectos de segunda vivienda, el comprador suele vivir a horas de distancia." },
+          { titulo: "Radio geográfico realista", texto: "el radio se define por de dónde vienen los que compran. En proyectos de segunda vivienda, el comprador suele vivir a horas de distancia." },
           { titulo: "Públicos similares a tus clientes", texto: "cargar la lista de quienes ya compraron y pedir a la plataforma gente parecida rinde más que cualquier interés predefinido." },
           { titulo: "Quien ya interactuó", texto: "los que vieron el 75% de tu video o entraron a la landing valen mucho más que un público frío, y cuestan menos por resultado." },
           { titulo: "Excluir a los que ya compraron", texto: "obvio y casi nadie lo hace: sigues pagando por mostrarle el proyecto a quien ya firmó." },
@@ -2550,7 +2550,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Formulario instantáneo o landing: cuál conviene",
         parrafo:
-          "Es la decisión que más cambia la calidad del lead y casi siempre se toma sin pensar. El formulario instantáneo de la plataforma se rellena solo con los datos de la cuenta: consigue muchísimos más contactos y bastante más baratos, pero también más gente que dio un toque sin querer. La landing obliga a salir de la red y escribir los datos, así que trae menos leads, más caros y mucho mejor informados. Ninguna es mejor en abstracto: depende de dónde tengas el cuello de botella. Si tu equipo comercial está ocioso, formulario instantáneo. Si está saturado llamando a gente que no contesta, landing.",
+          "Es la decisión que más cambia la calidad del lead y casi siempre se toma sin pensar. El formulario instantáneo de la plataforma se rellena solo con los datos de la cuenta: consigue muchísimos más contactos y bastante más baratos, pero también más gente que dio un toque sin querer. La landing obliga a salir de la red y escribir los datos, así que trae menos leads, más caros y mucho mejor informados. Depende de dónde tengas el cuello de botella. Si tu equipo comercial está ocioso, formulario instantáneo. Si está saturado llamando a gente que no contesta, landing.",
         bullets: [
           { titulo: "Formulario instantáneo", texto: "volumen y bajo costo por lead, a cambio de más ruido. Añadir una pregunta abierta reduce el relleno accidental." },
           { titulo: "Landing propia", texto: "menos volumen, mejor intención, y te deja medir todo lo que pasa después con tus propias herramientas." },
@@ -2581,7 +2581,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Por qué sube tu costo por lead con el tiempo",
         parrafo:
-          "Casi todas las campañas inmobiliarias empiezan bien y se van encareciendo, y la explicación rara vez es que «el algoritmo cambió». En un mercado local el público disponible es finito: cuando llevas semanas mostrando el mismo anuncio a la misma gente, los que iban a responder ya respondieron y el resto lo ignora. Eso se ve en la frecuencia —cuántas veces ve tu anuncio la misma persona— antes de que se note en el costo. La solución no es subir el presupuesto sobre el mismo creativo, es cambiar el creativo o abrir público nuevo. Subir el presupuesto sin cambiar nada solo acelera el desgaste.",
+          "Casi todas las campañas inmobiliarias empiezan bien y se van encareciendo, y la explicación rara vez es que «el algoritmo cambió». En un mercado local el público disponible es finito: cuando llevas semanas mostrando el mismo anuncio a la misma gente, los que iban a responder ya respondieron y el resto lo ignora. Eso se ve en la frecuencia —cuántas veces ve tu anuncio la misma persona— antes de que se note en el costo. La solución es cambiar el creativo o abrir público nuevo. Subir el presupuesto sin cambiar nada solo acelera el desgaste.",
       },
     ],
     faq: [
@@ -2620,9 +2620,9 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Un buen restaurante con mesas vacías un martes no tiene un problema de comida: tiene un problema de marketing. Estas estrategias llenan los días flojos y suben el ticket.",
     enCorto: [
-      "Lo primero no es Instagram: es que te encuentren en el mapa, con ficha verificada, horarios reales, fotos actuales y reseñas recientes.",
+      "Lo primero es que te encuentren en el mapa, con ficha verificada, horarios reales, fotos actuales y reseñas recientes.",
       "Las reseñas se piden en el momento: al pagar, con un QR en la cuenta o en la mesa que lleve directo a escribirla.",
-      "Para llenar los días flojos, mueve el día y no el precio: una propuesta que solo existe de martes a jueves. Mide reservas, pedidos y ticket promedio, no seguidores.",
+      "Para llenar los días flojos, mueve el día y no el precio: una propuesta que solo existe de martes a jueves. Mide reservas, pedidos y ticket promedio.",
     ],
     date: "2026-04-29",
     actualizado: "2026-11-22",
@@ -2647,10 +2647,10 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo: "Reservas, pedidos y ticket promedio. No seguidores.",
       },
       {
-        h2: "Lo primero no es Instagram, es que te encuentren",
+        h2: "Antes que Instagram, que te encuentren en el mapa",
         foto: propia("/assets/blog/salon-restaurante-al-toque.webp", 1100, 825, "Salón de Al Toque Venezolano con sus mesas, la pared con el nombre del local y un árbol decorativo de flores amarillas", "Salón de Al Toque Venezolano. Fotos así, del local como es hoy, son las que van en la ficha de Google."),
         parrafo:
-          "La mayoría de restaurantes invierte su energía en redes y descuida el sitio donde se toma la decisión de verdad: la búsqueda local. Cuando alguien tiene hambre y busca dónde comer cerca, no abre Instagram, abre el mapa. Y esa búsqueda no es curiosidad: es una decisión a punto de tomarse. Un perfil de empresa completo —horarios correctos, fotos reales del local y de los platos, carta actualizada y reseñas recientes— convierte mejor que cualquier campaña, y no tiene costo por clic.",
+          "La mayoría de restaurantes invierte su energía en redes y descuida el sitio donde se decide: la búsqueda local. Cuando alguien tiene hambre y busca dónde comer cerca, no abre Instagram, abre el mapa. Quien busca así está a punto de decidir. Un perfil de empresa completo —horarios correctos, fotos reales del local y de los platos, carta actualizada y reseñas recientes— convierte mejor que cualquier campaña, y no tiene costo por clic.",
         dato: {
           cifra: "76%",
           texto: "de quienes buscan en el celular algo cercano visita un negocio relacionado en menos de un día. Es el tipo de búsqueda que menos tarda en convertirse en una visita real.",
@@ -2662,14 +2662,14 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "Las reseñas se piden, no se esperan",
+        h2: "Las reseñas se piden",
         parrafo:
           "Casi ningún cliente contento escribe una reseña por iniciativa propia; el que sí escribe sin que se lo pidan suele ser el que se fue molesto. Por eso un restaurante con buena comida puede acabar con una nota mediocre: no es que tenga muchos detractores, es que solo ellos hablan. Pedirlas de forma sistemática corrige ese sesgo, y no requiere ninguna herramienta.",
         pasos: [
           { titulo: "Elige el momento", texto: "justo después de una experiencia buena, cuando pagan y todavía están en la mesa. Un mensaje al día siguiente rinde una fracción." },
           { titulo: "Hazlo fácil", texto: "un QR en la cuenta o en la mesa que lleve directo a escribir la reseña. Cada paso extra pierde a la mitad." },
           { titulo: "Que lo pida una persona", texto: "el mesero que atendió, en una frase. Convierte mucho más que un cartel." },
-          { titulo: "Responde a todas", texto: "sobre todo a las malas, sin discutir y ofreciendo solucionarlo. Quien lee la respuesta no es quien se quejó, es el próximo cliente." },
+          { titulo: "Responde a todas", texto: "sobre todo a las malas, sin discutir y ofreciendo solucionarlo. La respuesta la lee el próximo cliente." },
           { titulo: "Nunca las compres", texto: "las plataformas las detectan y penalizan la ficha completa. El daño dura más que el beneficio." },
         ],
       },
@@ -2707,7 +2707,7 @@ export const BLOG_POSTS: BlogPost[] = [
         tabla: {
           cabeceras: ["Número", "Qué te dice", "Dónde sale"],
           filas: [
-            ["Reservas y pedidos por día", "Qué días están flojos de verdad", "Tu propio registro"],
+            ["Reservas y pedidos por día", "Qué días están flojos", "Tu propio registro"],
             ["Ticket promedio", "Si las promociones suman o restan margen", "Caja"],
             ["Reseñas nuevas y nota media", "Si el sistema de pedirlas funciona", "Tu perfil de empresa"],
             ["Clientes que vuelven", "Si el problema es atraer o retener", "Reservas o programa de fidelización"],
@@ -2737,7 +2737,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Publicar por publicar, no. Lo que mueve la aguja es el contenido que provoca una acción concreta —reservar, pedir, venir hoy— y que muestre comida real bien grabada. Tres publicaciones que dan hambre valen más que treinta de relleno.",
       },
     ],
-    cierre: "En Suggestion hacemos marketing para restaurantes y turismo enfocado en llenar, no en likes.",
+    cierre: "En Suggestion hacemos marketing para restaurantes y turismo enfocado en llenar mesas y habitaciones.",
     moneyPage: { label: "Llena tus mesas", href: "/marketing-turismo" },
     relacionados: ["como-conseguir-mas-pacientes", "como-promocionar-un-hotel"],
   },
@@ -2749,7 +2749,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cómo conseguir más pacientes para tu clínica o consultorio sin quemar presupuesto: publicidad segmentada, web de confianza y seguimiento. 2026.",
     h1: "Cómo conseguir más pacientes para tu clínica o consultorio",
     excerpt:
-      "Más pacientes no es cuestión de gastar más en publicidad, sino de captar al correcto y no perderlo en el camino. Esto es lo que funciona en salud.",
+      "Conseguir más pacientes depende de captar al correcto y no perderlo en el camino. Esto es lo que funciona en salud.",
     enCorto: [
       "Para captar pacientes: publicidad segmentada por especialidad y zona, una web que transmita confianza, reseñas reales y respuesta rápida.",
       "La cita perdida cuesta más que el lead caro: una confirmación por WhatsApp el día anterior reduce las ausencias y cuesta prácticamente nada.",
@@ -2844,7 +2844,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "El posicionamiento es el lugar que tu marca ocupa en la mente de tu cliente. No es tu logo ni tu eslogan: es lo que la gente piensa y siente cuando te nombran. Y define cuánto puedes cobrar.",
     enCorto: [
-      "El posicionamiento de marca es el lugar que ocupas en la mente del cliente frente a la competencia. No es el logo ni el eslogan, y define cuánto puedes cobrar.",
+      "El posicionamiento de marca es el lugar que ocupas en la mente del cliente frente a la competencia. Va más allá del logo y el eslogan, y define cuánto puedes cobrar.",
       "Se logra eligiendo a quién le hablas, tu diferencial real y una idea simple y propia, y sosteniéndola en todo. Querer ser todo para todos es el error más caro.",
       "Funciona cuando los clientes repiten tus palabras, te buscan por nombre y el precio deja de ser la discusión principal. Se construye en meses, no en semanas.",
     ],
@@ -2901,13 +2901,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cuánto tarda en notarse",
         parrafo:
-          "Más de lo que casi nadie está dispuesto a esperar. Un posicionamiento se construye por repetición coherente, y la repetición necesita tiempo: los mismos mensajes, el mismo tono y las mismas decisiones sostenidos durante meses, no semanas. El error habitual no es elegir mal el territorio, es cambiarlo cada trimestre porque «no está funcionando» justo cuando empezaba a calar. Si algo tiene que cambiar rápido son las campañas; el posicionamiento es lo que las mantiene apuntando al mismo sitio.",
+          "Más de lo que casi nadie está dispuesto a esperar. Un posicionamiento se construye por repetición coherente, y la repetición necesita tiempo: los mismos mensajes, el mismo tono y las mismas decisiones sostenidos durante meses. El error habitual es cambiar de territorio cada trimestre porque «no está funcionando», justo cuando empezaba a calar. Si algo tiene que cambiar rápido son las campañas; el posicionamiento es lo que las mantiene apuntando al mismo sitio.",
       },
     ],
     faq: [
       {
         q: "¿Qué es el posicionamiento de marca en palabras simples?",
-        a: "Es el lugar que tu marca ocupa en la cabeza del cliente cuando piensa en tu categoría. No es lo que tú dices que eres: es lo que la otra persona recuerda y siente cuando te nombran, comparado con las alternativas que conoce.",
+        a: "Es el lugar que tu marca ocupa en la cabeza del cliente cuando piensa en tu categoría. Es lo que la otra persona recuerda y siente cuando te nombran, comparado con las alternativas que conoce.",
       },
       {
         q: "¿En qué se diferencia del branding?",
@@ -2915,7 +2915,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cómo elijo el territorio que quiero ocupar?",
-        a: "Buscando el cruce entre tres cosas: algo que a tu cliente le importe de verdad, algo que tú puedas sostener mejor que la competencia y algo que nadie esté ocupando ya con fuerza. Si falta cualquiera de las tres, el territorio no se sostiene.",
+        a: "Buscando el cruce entre tres cosas: algo que a tu cliente le importe, algo que tú puedas sostener mejor que la competencia y algo que nadie esté ocupando ya con fuerza. Si falta cualquiera de las tres, el territorio no se sostiene.",
       },
       {
         q: "¿Puede una empresa pequeña posicionarse frente a una grande?",
@@ -2938,11 +2938,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "Qué usos de la IA en marketing dan resultados reales y cuáles son ruido, por dónde empezar y qué cuidar con los datos de tus clientes. Guía honesta 2026.",
     h1: "IA en el marketing: qué sí funciona en 2026 (y qué es ruido)",
     excerpt:
-      "La IA está en todos los discursos de marketing, pero no todo lo que brilla vende. Separemos lo que de verdad mueve resultados de lo que solo suena moderno.",
+      "La IA está en todos los discursos de marketing, pero no todo lo que brilla vende. Aquí separamos lo que mueve resultados de lo que solo suena moderno.",
     enCorto: [
       "La IA sí funciona para producir borradores y variantes más rápido, automatizar respuestas y seguimiento, analizar datos y optimizar campañas.",
       "Es ruido creer que reemplaza la estrategia, o publicar contenido 100 % automático sin edición: se nota y daña la marca.",
-      "Empieza por una sola tarea repetitiva y medible, anota cuánto te toma hoy y comprueba si de verdad ahorra tiempo.",
+      "Empieza por una sola tarea repetitiva y medible, anota cuánto te toma hoy y comprueba si ahorra tiempo.",
     ],
     date: "2026-05-20",
     actualizado: "2026-11-22",
@@ -2970,9 +2970,9 @@ export const BLOG_POSTS: BlogPost[] = [
           "La IA es un multiplicador: potencia a un buen equipo y expone a uno malo. Úsala para ganar velocidad, no para apagar el criterio.",
       },
       {
-        h2: "Dónde ayuda de verdad y dónde no",
+        h2: "Dónde ayuda y dónde no",
         parrafo:
-          "La diferencia no está en la tarea sino en quién asume el costo del error. Cuando equivocarse es barato y se detecta al instante —un borrador flojo se reescribe—, la IA rinde. Cuando el error es caro o pasa desapercibido —un dato inventado en una propuesta, una decisión de rumbo—, sale mucho más cara de lo que ahorra.",
+          "Lo que cambia es quién asume el costo del error. Cuando equivocarse es barato y se detecta al instante —un borrador flojo se reescribe—, la IA rinde. Cuando el error es caro o pasa desapercibido —un dato inventado en una propuesta, una decisión de rumbo—, sale mucho más cara de lo que ahorra.",
         tabla: {
           cabeceras: ["Tarea", "¿Ayuda la IA?", "Por qué"],
           filas: [
@@ -2989,7 +2989,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Por dónde empezar sin quemar el intento",
         parrafo:
-          "El fracaso típico es comprar una herramienta cara, usarla dos semanas y abandonarla. Suele funcionar mejor al revés: empezar por una tarea concreta que te robe tiempo cada semana y medir si de verdad lo ahorra.",
+          "El fracaso típico es comprar una herramienta cara, usarla dos semanas y abandonarla. Suele funcionar mejor al revés: empezar por una tarea concreta que te robe tiempo cada semana y medir si lo ahorra.",
         pasos: [
           { titulo: "Elige una tarea repetitiva y medible", texto: "responder las mismas cinco preguntas, redactar la primera versión de los anuncios, ordenar los leads del mes. Una sola, no cinco." },
           { titulo: "Mide cuánto te toma hoy", texto: "sin ese número de partida, después no vas a saber si mejoró o solo lo parece." },
@@ -3016,7 +3016,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Se nota cuando un contenido lo hizo una IA?",
-        a: "Cuando se publica sin editar, se nota: suena correcto y no dice nada, y no contiene nada que solo tú puedas saber. Lo que delata a un texto automático no es la gramática, es la ausencia de experiencia propia, ejemplos concretos y datos de primera mano.",
+        a: "Cuando se publica sin editar, se nota: suena correcto y no dice nada, y no contiene nada que solo tú puedas saber. A un texto automático lo delata la falta de experiencia propia, ejemplos concretos y datos de primera mano.",
       },
       {
         q: "¿Google penaliza el contenido hecho con IA?",
@@ -3043,7 +3043,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Ejemplos reales de marketing inmobiliario que generan citas y ventas: mensajes, formatos y un caso de 8 lotes vendidos con S/3,000. 2026.",
     h1: "Marketing inmobiliario: ejemplos de campañas que sí venden lotes",
     excerpt:
-      "Los mejores ejemplos de marketing inmobiliario tienen algo en común: no venden “metros y precio”, venden valorización, oportunidad y futuro. Aquí ejemplos que funcionan y uno real.",
+      "Los mejores ejemplos de marketing inmobiliario tienen algo en común: venden valorización, oportunidad y futuro. Aquí ejemplos que funcionan y uno real.",
     enCorto: [
       "Los ejemplos de marketing inmobiliario que venden no hablan de metros y precio: venden valorización, oportunidad con fecha y proyección de vida.",
       "El formato decide si te creen: un recorrido en video vertical por el terreno real trae menos leads que un anuncio bonito, pero mejor informados.",
@@ -3101,13 +3101,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cómo saber si tu marketing inmobiliario funciona",
         parrafo:
-          "El número de leads es la métrica más fácil de conseguir y la que menos dice. En proyectos con ticket alto y ciclo largo, un mes puede cerrarse con pocos leads y mucha venta, o al revés. Las señales que de verdad indican salud son cuántos de esos contactos llegan a pisar el terreno, cuántas visitas terminan en separación y cuánto tarda el proceso completo desde el primer mensaje. Si el costo por visita baja y la tasa de cierre se mantiene, la campaña está mejorando aunque el costo por lead haya subido.",
+          "El número de leads es la métrica más fácil de conseguir y la que menos dice. En proyectos con ticket alto y ciclo largo, un mes puede cerrarse con pocos leads y mucha venta, o al revés. Las señales de salud son cuántos de esos contactos llegan a pisar el terreno, cuántas visitas terminan en separación y cuánto tarda el proceso completo desde el primer mensaje. Si el costo por visita baja y la tasa de cierre se mantiene, la campaña está mejorando aunque el costo por lead haya subido.",
       },
     ],
     faq: [
       {
         q: "¿Cuáles son los mejores ejemplos de marketing inmobiliario?",
-        a: "Los que no venden metros y precio, sino una razón para decidir: valorización con evidencia, proyección de vida, o una comparación honesta con las alternativas de la zona. El formato que mejor acompaña esos ángulos suele ser el video de recorrido real, porque muestra lo que una foto retocada no puede.",
+        a: "Los que dan una razón para decidir: valorización con evidencia, proyección de vida, o una comparación honesta con las alternativas de la zona. El formato que mejor acompaña esos ángulos suele ser el video de recorrido real, porque muestra lo que una foto retocada no puede.",
       },
       {
         q: "¿Cómo promocionar terrenos en venta sin bajar el precio?",
@@ -3115,7 +3115,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuántos leads hacen falta para vender un lote?",
-        a: "Varía enormemente según el proyecto y el precio. Lo útil no es el promedio de nadie, sino tu propia cadena: cuántos leads llegan a visita y cuántas visitas cierran. Con esos dos porcentajes puedes calcular exactamente cuántos contactos necesitas para la meta del mes.",
+        a: "Varía enormemente según el proyecto y el precio. Lo útil es tu propia cadena: cuántos leads llegan a visita y cuántas visitas cierran. Con esos dos porcentajes puedes calcular exactamente cuántos contactos necesitas para la meta del mes.",
       },
       {
         q: "¿Sirve el video con drone en marketing inmobiliario?",
@@ -3126,7 +3126,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Depende de qué problema tengas. Ponerlo reduce el número de leads y sube su calidad, porque filtra a quien no puede pagarlo. No ponerlo genera más volumen y más trabajo de calificación. Si tu equipo comercial está saturado de contactos que no califican, ponerlo suele ser la mejor decisión.",
       },
     ],
-    cierre: "En Suggestion hacemos marketing inmobiliario que llena salas de ventas, no que junta curiosos.",
+    cierre: "En Suggestion hacemos marketing inmobiliario que llena salas de ventas.",
     moneyPage: { label: "Llenemos tu sala de ventas", href: "/marketing-inmobiliario" },
     relacionados: ["publicidad-inmobiliaria-en-redes", "vender-proyecto-en-preventa"],
   },
@@ -3138,7 +3138,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cómo vender un proyecto inmobiliario en preventa: estrategia de valorización, captación de citas y seguimiento para cerrar antes de construir.",
     h1: "Cómo vender un proyecto inmobiliario en preventa",
     excerpt:
-      "La preventa es la etapa más rentable y la más difícil: vendes algo que aún no existe. Se vende con percepción de valorización y confianza, no con planos. Así se hace.",
+      "La preventa es la etapa más rentable y la más difícil: vendes algo que aún no existe. Se vende con percepción de valorización y confianza. Así se hace.",
     enCorto: [
       "La preventa funciona porque el comprador entra al precio más bajo de toda la vida del proyecto: el argumento es que el precio sube cuando avance la obra, y se muestra con una escalera de precios por etapa.",
       "Antes del primer sol en pauta necesitas render y recorrido del terreno, precio de lanzamiento por etapas, plan de pagos y alguien que responda rápido.",
@@ -3193,14 +3193,14 @@ export const BLOG_POSTS: BlogPost[] = [
         bullets: [
           { titulo: "Condiciones en la pieza", texto: "precio desde, inicial y forma de pago filtran mejor que cualquier pregunta posterior." },
           { titulo: "Pregunta poco, pero pregunta", texto: "zona, forma de pago y cuándo piensa comprar separan al interesado real del que solo mira." },
-          { titulo: "Agenda en el primer contacto", texto: "la conversación no es para informar: es para poner día y hora." },
+          { titulo: "Agenda en el primer contacto", texto: "el objetivo de la conversación es poner día y hora." },
           { titulo: "Responde en minutos", texto: "el interesado escribe a varios proyectos; el primero en contestar se queda con la cita." },
         ],
       },
       {
         h2: "El seguimiento hasta la visita: ahí se pierde la mayoría de ventas",
         parrafo:
-          "Entre el “sí, quiero ir” y llegar al terreno hay una semana de vida real: trabajo, familia, imprevistos. Ahí se cae la mayoría de ventas, no en el anuncio. Confirmar por escrito, mandar la ubicación y recordar el día anterior sube las visitas efectivas —las citas que sí llegan— sin gastar un sol más. Esperar que el interesado decida solo es el error que hace perder lotes.",
+          "Entre el “sí, quiero ir” y llegar al terreno hay una semana de vida real: trabajo, familia, imprevistos. Ahí se cae la mayoría de ventas. Confirmar por escrito, mandar la ubicación y recordar el día anterior sube las visitas efectivas —las citas que sí llegan— sin gastar un sol más. Esperar que el interesado decida solo es el error que hace perder lotes.",
         bullets: [
           { titulo: "Todo en un CRM", texto: "el CRM es el sistema donde queda registrado cada interesado y cuándo toca volver a buscarlo. En el chat del celular, se pierde." },
           { titulo: "Tres o cuatro contactos, no uno", texto: "casi nadie decide un lote en la primera llamada." },
@@ -3222,7 +3222,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Caso real: 8 lotes vendidos con S/3,000 de pauta",
         parrafo:
-          "Inmobiliaria Ceinys tenía buen producto y un proceso desordenado: interesados sí, citas pocas. La campaña separó los dos públicos, con piezas centradas en la etapa inicial y el precio de lanzamiento, captura por formulario y WhatsApp con respuesta inmediata, y seguimiento hasta la visita. Con S/3,000 en Meta Ads: 350 leads, 20 visitas a sala de ventas y 8 lotes vendidos, equivalentes a S/350K. De 350 interesados, solo 20 se sentaron: esto no se gana por volumen de contactos, sino por lo que haces con ellos.",
+          "Inmobiliaria Ceinys tenía buen producto y un proceso desordenado: interesados sí, citas pocas. La campaña separó los dos públicos, con piezas centradas en la etapa inicial y el precio de lanzamiento, captura por formulario y WhatsApp con respuesta inmediata, y seguimiento hasta la visita. Con S/3,000 en Meta Ads: 350 leads, 20 visitas a sala de ventas y 8 lotes vendidos, equivalentes a S/350K. De 350 interesados, solo 20 se sentaron: lo que cuenta es lo que haces con los contactos.",
       },
       {
         h2: "¿Cambia algo vender en preventa en un mercado como Ica?",
@@ -3266,7 +3266,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Pedir “ejemplos de marketing automotriz” y recibir piezas bonitas no le sirve a nadie. Acá tienes siete acciones concretas, del modelo del mes al taller, con qué se hace, por qué funciona y qué número mirar para saber si valió la pena.",
     enCorto: [
-      "Los ejemplos de marketing automotriz que venden piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas, no en impresiones.",
+      "Los ejemplos de marketing automotriz que venden piden una sola acción, filtran al que no puede comprar y se miden en unidades vendidas.",
       "Son siete acciones: el modelo del mes, la cuota al frente, el evento con convocatoria previa, la posventa, el auto en uso, volver a quien cotizó y la venta de línea amarilla a empresas.",
       "Si solo puedes hacer una cosa, ordena tu base y activa posventa y remarketing antes de invertir en captación nueva.",
     ],
@@ -3322,7 +3322,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "Ejemplo 5: contenido que muestra el auto en uso, no la ficha técnica",
+        h2: "Ejemplo 5: contenido que muestra el auto en uso",
         parrafo:
           "El error típico es publicar la ficha técnica. Al comprador peruano le importa cómo se porta el vehículo en su realidad: la trocha, la carga, el consumo en carretera, cuántas maletas entran de verdad.",
         bullets: [
@@ -3445,7 +3445,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Qué preguntar para calificar sin espantar",
         parrafo:
-          "Calificar no es interrogar. Tres preguntas bien puestas separan al comprador real del que está mirando, y ninguna necesita sonar a filtro: se pueden hacer dentro de una conversación normal. La clave es que respondan a lo que de verdad cambia la venta —cuándo, cómo lo paga y qué maneja hoy— y no a datos que a nadie le sirven.",
+          "Calificar no es interrogar. Tres preguntas bien puestas separan al comprador real del que está mirando, y ninguna necesita sonar a filtro: se pueden hacer dentro de una conversación normal. Que respondan a lo que cambia la venta: cuándo compra, cómo paga y qué maneja hoy.",
         bullets: [
           { titulo: "Plazo", texto: "«¿para cuándo lo necesitas?» ordena la agenda mejor que cualquier puntaje. Quien responde «este mes» va primero." },
           { titulo: "Forma de pago", texto: "contado o financiado cambia el proceso completo. Si es financiado, saberlo temprano evita ilusionar a quien no va a calificar." },
@@ -3455,7 +3455,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Por qué el seguimiento vale más que el volumen",
         parrafo:
-          "La mayoría de ventas de vehículo no se cierra en el primer contacto, y sin embargo la mayoría de los equipos comerciales abandona ahí. Un lead que dijo «lo voy a pensar» en marzo puede comprar en mayo, y comprará donde alguien se acordó de él. Ese seguimiento no es insistencia: es aparecer con algo útil —una unidad que encaja mejor, un cambio de condiciones, la llegada de un modelo— en vez de preguntar «¿ya decidiste?». Un CRM ayuda, pero antes que la herramienta está la regla: ningún lead se cierra sin una fecha de próximo contacto.",
+          "La mayoría de ventas de vehículo no se cierra en el primer contacto, y sin embargo la mayoría de los equipos comerciales abandona ahí. Un lead que dijo «lo voy a pensar» en marzo puede comprar en mayo, y comprará donde alguien se acordó de él. Ese seguimiento consiste en aparecer con algo útil (una unidad que encaja mejor, un cambio de condiciones, la llegada de un modelo) en vez de preguntar «¿ya decidiste?». Un CRM ayuda, pero antes que la herramienta está la regla: ningún lead se cierra sin una fecha de próximo contacto.",
       },
       {
         h2: "Camiones y línea amarilla no se venden como un auto",
@@ -3483,7 +3483,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuántas veces conviene insistir con un lead que no responde?",
-        a: "Más de lo que la mayoría hace y de forma más espaciada. Varios intentos repartidos en semanas, por canales distintos y con un motivo nuevo cada vez, rinden mucho más que tres llamadas el mismo día. Lo que quema al contacto no es el número de intentos, es repetir el mismo mensaje.",
+        a: "Más de lo que la mayoría hace y de forma más espaciada. Varios intentos repartidos en semanas, por canales distintos y con un motivo nuevo cada vez, rinden mucho más que tres llamadas el mismo día. Lo que quema al contacto es repetir el mismo mensaje.",
       },
     ],
     cierre: "En Suggestion generamos y calificamos leads conectados a tu equipo comercial, para que ninguno se pierda.",
@@ -3495,10 +3495,10 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "automotriz",
     title: "Publicidad para Venta de Autos: Ideas y Medios | Suggestion",
     description:
-      "Qué mensaje mueve al comprador, dónde pautar y cómo medir si tu publicidad para venta de autos trajo pruebas de manejo y ventas, no solo curiosos.",
+      "Qué mensaje mueve al comprador, dónde pautar y cómo medir si tu publicidad para venta de autos trajo pruebas de manejo y ventas.",
     h1: "Publicidad para venta de autos: ideas que funcionan",
     excerpt:
-      "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que sí mueve al comprador a actuar.",
+      "La publicidad de autos compite por atención en un mercado saturado. Lo que separa un anuncio que llena el piso de uno que solo junta comentarios es el mensaje, el filtro y lo que pasa en los cinco minutos siguientes al formulario. Esto es lo que mueve al comprador a actuar.",
     enCorto: [
       "El anuncio que vende autos habla de condiciones, no de adjetivos: cuota mensual, cuota inicial, un bono, un modelo del mes y entrega inmediata.",
       "Meta Ads genera deseo y capta interesados; Google Ads captura a quien ya busca la marca o el modelo. Juntos cubren todo el recorrido del comprador.",
@@ -3508,7 +3508,7 @@ export const BLOG_POSTS: BlogPost[] = [
     actualizado: "2026-11-22",
     secciones: [
       {
-        h2: "¿Qué mensaje mueve de verdad la decisión de comprar un auto?",
+        h2: "¿Qué mensaje mueve la decisión de comprar un auto?",
         parrafo:
           "Nadie compra un auto por un adjetivo. La publicidad para venta de autos que funciona no habla de “diseño imponente”: habla de condiciones. El comprador ya sabe qué modelo le gusta; lo que no sabe es si puede pagarlo este mes. Tu anuncio tiene que responder eso antes que nada.",
         bullets: [
@@ -3522,7 +3522,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Ideas de publicidad que funcionan",
         bullets: [
-          { titulo: "El auto en movimiento, no estático", texto: "video corto mostrando manejo, diseño y detalles que enamoran." },
+          { titulo: "El auto en movimiento", texto: "video corto mostrando manejo, diseño y detalles que enamoran." },
           { titulo: "La oferta clara y al frente", texto: "cuota, bono o beneficio visible en los primeros segundos." },
           { titulo: "Comparación de valor", texto: "por qué este modelo conviene frente a la alternativa." },
           { titulo: "Prueba social", texto: "clientes reales recibiendo su auto generan confianza." },
@@ -3533,7 +3533,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Cómo se ve un anuncio que trae compradores y no curiosos",
         foto: propia("/assets/servicios/pop-colgante-sala.webp", 750, 1000, "Colgante impreso del Renault Duster sobre los autos exhibidos en la sala de Pacífico Motors", "Colgante del Renault Duster en la sala de Pacífico Motors."),
         parrafo:
-          "La diferencia no está en la creatividad, está en el filtro. Un anuncio que le habla a todos junta clics baratos y quema al equipo comercial. Uno que filtra dice la cuota, nombra el modelo y pide una cita.",
+          "La diferencia está en el filtro. Un anuncio que le habla a todos junta clics baratos y quema al equipo comercial. Uno que filtra dice la cuota, nombra el modelo y pide una cita.",
         sub: [
           { h3: "Menciona la condición, aunque descarte gente", texto: "Si el financiamiento exige un inicial del 20%, dilo. El que no califica te ahorra dos llamadas." },
           { h3: "Pide una cita, no un “me interesa”", texto: "“Agenda tu prueba” trae menos leads que “más información”, pero una parte real de ellos aparece." },
@@ -3546,7 +3546,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "No, y confundirlos sale caro. Desde Ica hemos atendido 19 marcas de vehículos —livianos, camiones y línea amarilla (maquinaria pesada de construcción y movimiento de tierra)— y el comprador no se parece en nada.",
         sub: [
           { h3: "Liviano: decisión personal y rápida", texto: "Semanas, a veces días. Decide una familia, pesa la cuota y la emoción cuenta." },
-          { h3: "Camión y línea amarilla: decisión empresarial y larga", texto: "Meses, y no decide una sola persona. El argumento no es el diseño: es el costo de operación, los repuestos, el respaldo del taller y el leasing (arrendamiento con opción de compra)." },
+          { h3: "Camión y línea amarilla: decisión empresarial y larga", texto: "Meses, y no decide una sola persona. El argumento es el costo de operación, los repuestos, el respaldo del taller y el leasing (arrendamiento con opción de compra)." },
           { h3: "Cambia el canal, no solo el mensaje", texto: "Pesa más la búsqueda en Google y el contenido técnico que el video emocional. Pocos leads es lo normal: un cierre justifica meses de inversión." },
         ],
         enlaces: [{ label: "Cómo vender maquinaria pesada: del primer contacto a la demostración", href: "/blog/automotriz/como-vender-maquinaria-pesada" }],
@@ -3596,7 +3596,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuántos leads necesito para vender un auto?",
-        a: "Depende de tu tasa de cierre, y ese dato lo mides tú, no lo copias de un blog. Durante un mes anota cuántos leads llegaron, cuántos agendaron prueba, cuántos se presentaron y cuántos firmaron. Ahí ves en qué escalón se te cae la venta.",
+        a: "Depende de tu tasa de cierre, y ese dato lo mides tú. Durante un mes anota cuántos leads llegaron, cuántos agendaron prueba, cuántos se presentaron y cuántos firmaron. Ahí ves en qué escalón se te cae la venta.",
       },
       {
         q: "¿Meta Ads o Google Ads para un concesionario?",
@@ -3623,7 +3623,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cómo vender pisco y vino por internet desde tu bodega de Ica: marca, tienda, campañas por ocasión y enoturismo, con las cifras reales del sector. 2026.",
     h1: "Cómo vender pisco y vino por internet (sin perder la tradición)",
     excerpt:
-      "Tu pisco gana medallas pero se vende casi solo en la puerta de la bodega. Internet puede llevarlo a todo el Perú —si lo haces con marca y estrategia, no improvisando con un par de fotos. Esto es lo que funciona.",
+      "Tu pisco gana medallas pero se vende casi solo en la puerta de la bodega. Internet puede llevarlo a todo el Perú si lo haces con marca y estrategia. Esto es lo que funciona.",
     enCorto: [
       "Primero la marca, después el carrito: tu valle, tu uva, tu proceso y tus premios son lo que te diferencia del pisco industrial barato.",
       "La denominación de origen no te distingue por sí sola: en Ica hay 235 productores autorizados, de 533 en todo el país (registro de la DO Pisco, julio de 2025).",
@@ -3652,7 +3652,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "En Ica, la visita a la bodega es un producto en sí: catas, recorridos y experiencias que dejan margen alto y fidelizan. Promociónalas con contenido y pauta, y monta un sistema de reservas para no depender solo de la temporada. La web vende la botella; la experiencia crea al cliente que vuelve.",
       },
       {
-        h2: "Con quién compites de verdad",
+        h2: "Con quién compites",
         parrafo:
           "Antes de decidir el mensaje conviene mirar el tamaño del vecindario. La denominación de origen no es un club pequeño: hay cientos de productores autorizados, y casi la mitad están en Ica. Eso significa que «pisco de Ica con DO» no te diferencia de nada —lo dice también el de al lado—. Lo que diferencia es todo lo que viene después: el valle concreto, la uva, el método, la familia, el premio verificable.",
         dato: {
@@ -3664,7 +3664,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "La tendencia que decide tu estrategia",
         parrafo:
-          "Hay dos curvas que van en direcciones opuestas y que casi nadie cruza al planificar: las exportaciones de pisco vienen creciendo, mientras el consumo interno lleva tiempo bajando. Para una bodega esto no es un dato de prensa, es una decisión estratégica. Si tu apuesta es el mercado nacional, estás peleando por una porción que se encoge y necesitas quitarle clientes a alguien: ahí manda la marca. Si tu apuesta es afuera, el terreno crece pero el juego es otro —etiqueta en inglés, certificaciones, capacidad de despacho y un comprador que evalúa proveedores, no una botella.",
+          "Hay dos curvas que van en direcciones opuestas y que casi nadie cruza al planificar: las exportaciones de pisco vienen creciendo, mientras el consumo interno lleva tiempo bajando. Para una bodega, esto es una decisión estratégica. Si tu apuesta es el mercado nacional, estás peleando por una porción que se encoge y necesitas quitarle clientes a alguien: ahí manda la marca. Si tu apuesta es afuera, el terreno crece pero el juego es otro —etiqueta en inglés, certificaciones, capacidad de despacho y un comprador que evalúa proveedores, no una botella.",
         tabla: {
           cabeceras: ["", "Vender en Perú", "Vender al exterior"],
           filas: [
@@ -3687,7 +3687,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         nota: {
           titulo: "Antes de abrir la tienda online",
-          texto: "Resuelve el envío de bebidas alcohólicas —embalaje, transportista y a qué provincias llegas de verdad— y déjalo escrito en la web. Es la primera duda de quien compra desde fuera de Ica, y no responderla en la página del producto cuesta más ventas que cualquier detalle de diseño.",
+          texto: "Resuelve el envío de bebidas alcohólicas —embalaje, transportista y a qué provincias llegas— y déjalo escrito en la web. Es la primera duda de quien compra desde fuera de Ica, y no responderla en la página del producto cuesta más ventas que cualquier detalle de diseño.",
         },
       },
     ],
@@ -3706,7 +3706,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Vale la pena apostar por la exportación?",
-        a: "Depende de tu capacidad, no de tu voluntad. El mercado externo crece, pero el importador no compra una botella: compra un proveedor que pueda sostener volumen y consistencia campaña tras campaña. Si eso todavía no es tu caso, rinde más consolidar la marca en el mercado nacional y el enoturismo.",
+        a: "Depende de tu capacidad, no de tu voluntad. El mercado externo crece, pero el importador compra un proveedor que pueda sostener volumen y consistencia campaña tras campaña. Si eso todavía no es tu caso, rinde más consolidar la marca en el mercado nacional y el enoturismo.",
       },
       {
         q: "¿Qué contenido funciona mejor para una bodega?",
@@ -3725,7 +3725,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Marketing B2B para agroexportadoras de Ica: web en inglés, certificaciones a la vista, material de feria y seguimiento. Con las cifras reales de la región.",
     h1: "Marketing para agroexportadoras: cómo abrir mercados internacionales",
     excerpt:
-      "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que sí mueve la aguja.",
+      "En agroexportación, la calidad te mantiene; la confianza te abre puertas. El importador investiga antes de escribir, y lo que encuentra (o no encuentra) define si te considera. Esto es lo que mueve la aguja.",
     enCorto: [
       "El importador revisa tu web antes de escribirte: tiene que encontrarla en inglés y español, con certificaciones, fichas técnicas, capacidad y trazabilidad.",
       "Ica es la segunda región agroexportadora del país, detrás de La Libertad, y la uva pesa el 32,8 % de su valor agroexportado (referencia de 2024).",
@@ -3756,10 +3756,10 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "El dato que define tu marketing",
         parrafo:
-          "Hay un dato que ordena todas las decisiones de comunicación de una agroexportadora iqueña, y es a dónde va la producción. Cuando prácticamente todo se va afuera, tu público no es el consumidor que compra en el mercado: es un comprador profesional al otro lado del mundo que evalúa proveedores. Eso descarta de golpe media estrategia habitual —contenido de recetas, promociones, campañas de temporada local— y pone el foco en otra cosa: credibilidad verificable.",
+          "Hay un dato que ordena todas las decisiones de comunicación de una agroexportadora iqueña, y es a dónde va la producción. Cuando prácticamente todo se va afuera, tu público es un comprador profesional al otro lado del mundo que evalúa proveedores. Eso descarta de golpe media estrategia habitual —contenido de recetas, promociones, campañas de temporada local— y pone el foco en otra cosa: credibilidad verificable.",
       },
       {
-        h2: "Dónde está Ica de verdad",
+        h2: "Dónde está Ica hoy",
         parrafo:
           "Conviene tener el mapa claro, aunque no siempre halague. Ica es la segunda región agroexportadora del país —por detrás de La Libertad— y concentra alrededor de la quinta parte de las exportaciones agrícolas peruanas, con más de setecientas mil toneladas colocadas en unos setenta y cinco mercados. Ser el segundo en un país que lidera varias categorías a nivel mundial sigue siendo una posición muy fuerte, y es un argumento mucho más creíble frente a un importador que cualquier superlativo sin respaldo.",
         tabla: {
@@ -3792,7 +3792,7 @@ export const BLOG_POSTS: BlogPost[] = [
         nota: {
           tipo: "aviso",
           titulo: "El error más caro tras una feria",
-          texto: "Volver con tarjetas y no escribir en las 48 horas siguientes. El importador vio decenas de proveedores esa semana; pasado ese plazo ya no recuerda cuál eras. El correo de seguimiento se prepara ANTES de viajar, no al volver.",
+          texto: "Volver con tarjetas y no escribir en las 48 horas siguientes. El importador vio decenas de proveedores esa semana; pasado ese plazo ya no recuerda cuál eras. El correo de seguimiento se prepara antes de viajar.",
         },
       },
     ],
@@ -3815,7 +3815,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuánto tarda en dar resultado el marketing B2B agro?",
-        a: "Se mide en campañas, no en semanas. El ciclo va de la feria a la muestra, de la muestra a la auditoría y de ahí a la primera orden, y puede ocupar más de una temporada. Por eso el indicador útil no son los leads del mes, sino cuántas oportunidades avanzan de etapa.",
+        a: "Se mide en campañas, no en semanas. El ciclo va de la feria a la muestra, de la muestra a la auditoría y de ahí a la primera orden, y puede ocupar más de una temporada. Por eso el indicador útil es cuántas oportunidades avanzan de etapa.",
       },
     ],
     cierre: "En Suggestion construimos tu presencia B2B —web, contenido y marca— para abrir mercados desde Ica al mundo.",
@@ -3848,7 +3848,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Gigantografía, banner y lona: la misma pieza con tres nombres",
         foto: foto("ahorra-o-nunca-despliegue", 1, "Gigantografía impresa instalada sobre la fachada de vidrio de un local comercial en Ica", "Una gigantografía de fachada, impresa en una sola pieza y montada sobre la estructura de vidrio. A ese tamaño el material importa más que la resolución: se mira de lejos y aguanta sol todo el día."),
         parrafo:
-          "En Perú los tres términos se usan casi como sinónimos, y eso provoca malentendidos al cotizar. Gigantografía es la impresión de gran formato, sin importar sobre qué. Banner es el material más común para hacerla —una lona de PVC que se mide en onzas— y lona es el nombre genérico de ese material. Cuando pidas precio, lo que define el costo no es la palabra que uses: es el material, el gramaje y los metros cuadrados.",
+          "En Perú los tres términos se usan casi como sinónimos, y eso provoca malentendidos al cotizar. Gigantografía es la impresión de gran formato, sin importar sobre qué. Banner es el material más común para hacerla —una lona de PVC que se mide en onzas— y lona es el nombre genérico de ese material. Cuando pidas precio, lo que define el costo es el material, el gramaje y los metros cuadrados.",
       },
       {
         h2: "Los materiales, y cuál aguanta la calle",
@@ -4024,7 +4024,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Plastificado mate", texto: "el más elegido. Se ve sobrio, no deja huellas y se puede escribir encima con bolígrafo." },
           { titulo: "Plastificado brillante", texto: "satura más los colores y aguanta mejor el manoseo, pero marca huellas y no admite escritura." },
           { titulo: "UV sectorizado", texto: "barniz brillante solo sobre una zona —el logo, normalmente— con el resto mate. Es el truco de acabado con mejor relación entre costo y efecto." },
-          { titulo: "Stamping o letterpress", texto: "lámina metálica o relieve hundido. Se nota de verdad y multiplica el precio. Tiene sentido en perfiles donde la tarjeta es parte del servicio." },
+          { titulo: "Stamping o letterpress", texto: "lámina metálica o relieve hundido. Se nota mucho y multiplica el precio. Tiene sentido en perfiles donde la tarjeta es parte del servicio." },
         ],
       },
       {
@@ -4048,7 +4048,7 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Una tarjeta tiene espacio para unos pocos datos y la tentación es llenarla. El criterio es simple: si alguien no va a usar ese dato para contactarte, le está quitando sitio al que sí.",
         bullets: [
-          { titulo: "Un solo canal preferente", texto: "el número por el que de verdad contestas, destacado. Tres teléfonos y dos correos obligan a elegir, y quien duda no llama." },
+          { titulo: "Un solo canal preferente", texto: "el número por el que contestas, destacado. Tres teléfonos y dos correos obligan a elegir, y quien duda no llama." },
           { titulo: "Qué haces, en pocas palabras", texto: "si tu marca no dice sola a qué te dedicas, una línea bajo el nombre vale más que el logo grande." },
           { titulo: "El reverso no tiene que estar vacío ni lleno", texto: "funciona bien con una sola idea: la lista de servicios, un código QR a tu web o simplemente el logo sobre color plano." },
           { titulo: "Cuidado con el QR", texto: "si lo pones, que lleve a algo útil y que siga funcionando dentro de dos años. Un QR roto es peor que ninguno." },
@@ -4107,7 +4107,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Qué tipo de letrero necesita tu local",
         foto: foto("xcmg-linea-amarilla-ica", 12, "Letras corpóreas iluminadas montadas sobre la fachada de un local comercial", "Letras corpóreas retroiluminadas sobre fachada. Es el formato que se sigue leyendo de noche sin depender del alumbrado de la calle, y el que más encarece el mantenimiento."),
         parrafo:
-          "La decisión no es de presupuesto, es de situación: desde dónde te van a ver, a qué velocidad pasa quien te mira y si necesitas que te vean de noche. Un local de avenida y uno de galería no tienen el mismo problema.",
+          "Lo decide la situación: desde dónde te van a ver, a qué velocidad pasa quien te mira y si necesitas que te vean de noche. Un local de avenida y uno de galería no tienen el mismo problema.",
         tabla: {
           cabeceras: ["Tipo", "Para qué local", "Qué resuelve"],
           filas: [
@@ -4201,7 +4201,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Bordado, serigrafía, DTF o sublimado: cuál conviene según tu cantidad. Precios del mercado peruano desde S/8 por prenda y las cantidades mínimas reales.",
     h1: "Polos personalizados para empresa: qué técnica pedir y cuánto cuesta",
     excerpt:
-      "La técnica correcta no es la más bonita: es la que corresponde a tu cantidad. Pedir serigrafía para doce polos o bordado para quinientos son dos formas distintas de pagar de más.",
+      "La técnica correcta es la que corresponde a tu cantidad. Pedir serigrafía para doce polos o bordado para quinientos son dos formas distintas de pagar de más.",
     enCorto: [
       "La técnica depende de la cantidad: DTF o vinil textil desde una unidad, bordado desde 12 y serigrafía cuando pasas de unas 50 prendas del mismo diseño.",
       "En octubre de 2026, el bordado en pecho va desde unos S/8 por prenda a partir de 12 unidades, y el DTF baja de unos S/25 por una sola prenda a unos S/12 por prenda en 50 (rangos de mercado).",
@@ -4294,7 +4294,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Un pedido corto con DTF puede salir en días; bordado y serigrafía en volumen se miden en semanas, sobre todo si hay que conseguir la prenda en todas las tallas. Si tienes una fecha de evento, cuéntala hacia atrás e incluye tiempo para aprobar una muestra.",
       },
     ],
-    cierre: "En Suggestion producimos uniformes y merchandising con la técnica que corresponde a tu cantidad, no a la que deja mejor margen.",
+    cierre: "En Suggestion producimos uniformes y merchandising con la técnica que corresponde a tu cantidad.",
     moneyPage: { label: "Merchandising y uniformes", href: "/servicios/merchandising" },
     relacionados: ["merchandising-corporativo-que-regalar", "material-pop-punto-de-venta"],
   },
@@ -4306,7 +4306,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Qué artículos promocionales se quedan en el escritorio y cuáles acaban en un cajón. Precios del mercado peruano desde S/0.60 y cantidades mínimas reales.",
     h1: "Merchandising corporativo: qué regalar para que no acabe en un cajón",
     excerpt:
-      "El objetivo de un regalo corporativo no es que guste al recibirlo: es que siga encima del escritorio dentro de seis meses. Son dos cosas muy distintas.",
+      "Un buen regalo corporativo sigue encima del escritorio seis meses después. Son dos cosas muy distintas.",
     enCorto: [
       "Un regalo corporativo funciona cuando se queda a la vista donde tu cliente trabaja o vive: un objeto de uso diario supera a uno espectacular que se guarda.",
       "La cantidad mínima decide si una pieza es viable para un negocio pequeño: la mayoría arranca en 50 unidades y los lapiceros suelen pedir 100.",
@@ -4366,12 +4366,12 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Poner el logo demasiado grande", texto: "cuanto más discreta la marca, más se usa el objeto. Un logo que ocupa media taza convierte el regalo en un cartel que nadie quiere llevar." },
           { titulo: "Pedir mucho de algo que caduca", texto: "agendas y calendarios tienen fecha de vencimiento. Lo que sobra el 15 de enero no sirve para nada." },
           { titulo: "Comprar sin ver una muestra", texto: "la foto del catálogo y el objeto real pueden parecerse poco. En volumen, una muestra física es barata comparada con equivocarse." },
-          { titulo: "No planear la entrega", texto: "quinientas unidades en una caja en el almacén no son marketing, son inventario. Antes de comprar hay que saber quién las reparte, cuándo y a quién." },
+          { titulo: "No planear la entrega", texto: "quinientas unidades en una caja del almacén son solo inventario. Antes de comprar hay que saber quién las reparte, cuándo y a quién." },
         ],
         nota: {
           tipo: "aviso",
           titulo: "El cálculo que conviene hacer antes",
-          texto: "Divide el presupuesto entre la cantidad de personas a las que de verdad vas a llegar, no entre la cantidad de unidades que puedes comprar. Si el número por persona es ridículo, es mejor regalar menos cosas y mejores.",
+          texto: "Divide el presupuesto entre las personas a las que vas a llegar, no entre las unidades que puedes comprar. Si el número por persona es ridículo, es mejor regalar menos cosas y mejores.",
         },
       },
     ],
@@ -4397,7 +4397,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Para campañas de fin de año, con meses. Es la temporada en la que todos los proveedores están saturados, los plazos se estiran y el stock de los artículos más pedidos se agota. Pedir en noviembre para diciembre es cómo se termina regalando lo que quedaba.",
       },
     ],
-    cierre: "En Suggestion producimos merchandising elegido por dónde va a terminar, no por lo que sobraba en catálogo.",
+    cierre: "En Suggestion producimos merchandising elegido según dónde va a terminar.",
     moneyPage: { label: "Merchandising corporativo", href: "/servicios/merchandising" },
     relacionados: ["regalos-corporativos-de-navidad", "polos-personalizados-para-empresa", "material-pop-punto-de-venta"],
   },
@@ -4417,7 +4417,7 @@ export const BLOG_POSTS: BlogPost[] = [
     enCorto: [
       "Reparte el presupuesto en dos niveles: pocos regalos buenos para los clientes que más pesan y uno útil y sencillo para el resto.",
       "A mediados de noviembre conviene elegir artículos que el proveedor ya tiene en stock y personalizarlos con grabado o impresión, no fabricar desde cero ni importar.",
-      "Lo que más se recuerda no es el precio: es un objeto de uso diario con la marca discreta, una tarjeta escrita a mano y una entrega antes de la última semana del año.",
+      "Lo que más se recuerda es un objeto de uso diario con la marca discreta, una tarjeta escrita a mano y una entrega antes de la última semana del año.",
     ],
     date: "2026-11-14",
     actualizado: "2026-11-21",
@@ -4468,7 +4468,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cuánto presupuestar",
         parrafo:
-          "No hay una cifra correcta: hay una forma correcta de calcularla. Divide el presupuesto entre las personas a las que de verdad vas a llegar, no entre las unidades que alcanzas a comprar. Si el número por persona sale ridículo, es mejor regalar a menos gente y mejor.",
+          "No hay una cifra correcta: hay una forma correcta de calcularla. Divide el presupuesto entre las personas a las que vas a llegar, no entre las unidades que alcanzas a comprar. Si el número por persona sale ridículo, es mejor regalar a menos gente y mejor.",
         tabla: {
           cabeceras: ["Artículo", "Precio por unidad", "Mínimo habitual"],
           filas: [
@@ -4539,7 +4539,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Material POP en Punto de Venta: Qué Es, Tipos y Precios",
     description:
       "Jalavistas, rompetráficos, exhibidores y tótems: qué hace cada pieza, cuál conviene a tu producto y cuánto cuesta en Perú desde S/0.60 por unidad.",
-    h1: "Material POP: qué piezas funcionan de verdad en punto de venta",
+    h1: "Material POP: qué piezas funcionan en el punto de venta",
     excerpt:
       "La decisión de compra se toma frente al estante, en segundos y casi sin pensar. El material POP existe para ganar esos segundos, y la mayoría está diseñado como si hubiera minutos.",
     enCorto: [
@@ -4590,7 +4590,7 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "La diferencia entre una pieza que vende y una decorativa está en cuánto se entiende sin detenerse. Quien camina por un pasillo de supermercado no está leyendo: está escaneando.",
         bullets: [
-          { titulo: "Una sola idea por pieza", texto: "precio, beneficio o novedad. Las tres cosas juntas no comunican tres veces más: no comunican nada." },
+          { titulo: "Una sola idea por pieza", texto: "precio, beneficio o novedad. Las tres juntas se estorban." },
           { titulo: "El número grande, si hay número", texto: "en promoción, la cifra es el mensaje. Si hay que buscarla, la promoción no existe." },
           { titulo: "El producto reconocible", texto: "la pieza tiene que parecerse al empaque que el cliente va a buscar en el estante. Una creatividad preciosa que no se parece al producto obliga a traducir." },
           { titulo: "Pensada para su altura real", texto: "un jalavista se mira de lado y a la altura del hombro; un display de piso, desde arriba. Diseñar todo de frente es diseñar para un ángulo que nadie tiene." },
@@ -4660,7 +4660,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Qué hace cada formato",
         foto: foto("xcmg-linea-amarilla-nazca", 3, "Banderolas de marca instaladas junto a maquinaria en una demostración al aire libre", "Banderolas en el perímetro de una demostración al aire libre. Es el exterior más barato de la lista y el único que se monta y se retira el mismo día."),
         parrafo:
-          "La publicidad exterior se compra de dos maneras distintas: alquilando un espacio que ya existe o fabricando algo que se mueve. La diferencia no es solo de precio, es de qué tipo de atención consigues.",
+          "La publicidad exterior se compra de dos maneras distintas: alquilando un espacio que ya existe o fabricando algo que se mueve. Cambia el precio y también el tipo de atención que consigues.",
         tabla: {
           cabeceras: ["Formato", "Cómo se contrata", "Qué consigue"],
           filas: [
@@ -4697,7 +4697,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Es la regla de oficio que más presupuesto salva en publicidad exterior y la que más se ignora. Quien pasa en auto dispone de un par de segundos, y la mitad de ellos mirando la pista. En ese tiempo no se lee un párrafo: se reconoce una marca y se retiene una idea.",
         bullets: [
           { titulo: "Pocas palabras, muy grandes", texto: "el mensaje tiene que entenderse sin detenerse. Si hay que leerlo dos veces, ya se pasó de largo." },
-          { titulo: "Una sola cosa que hacer", texto: "un panel con teléfono, dirección, web, redes y tres servicios no comunica cinco cosas: no comunica ninguna." },
+          { titulo: "Una sola cosa que hacer", texto: "un panel con teléfono, dirección, web, redes y tres servicios no se llega a leer." },
           { titulo: "Contraste alto", texto: "lo que se lee de lejos es la diferencia de luminosidad entre texto y fondo, no el color de moda." },
           { titulo: "El ángulo cambia cuánto texto admite", texto: "un panel perpendicular a la marcha se ve durante más tiempo que uno de frente, y eso permite algo más de mensaje." },
         ],
@@ -4710,7 +4710,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "¿Está incluida la impresión y el cambio de lona?", texto: "muchas veces no, y es una partida que se suma cada vez que cambias la campaña." },
           { titulo: "¿Tiene iluminación y hasta qué hora?", texto: "un panel sin luz desaparece la mitad de las horas en las que hay gente en la calle." },
           { titulo: "¿Qué autorización municipal tiene?", texto: "la estructura debe estar en regla. Los operativos de retiro de paneles sin autorización existen y en Ica se han hecho." },
-          { titulo: "¿Desde dónde se ve de verdad?", texto: "ve al punto y mira. Un panel tapado por un árbol o por un puente se ve perfecto en la foto del catálogo y en ninguna otra parte." },
+          { titulo: "¿Desde dónde se ve?", texto: "ve al punto y mira. Un panel tapado por un árbol o por un puente se ve perfecto en la foto del catálogo y en ninguna otra parte." },
         ],
         nota: {
           titulo: "La alternativa que casi nadie evalúa",
@@ -4740,7 +4740,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Sirve para que te reconozcan, no para que te compren en ese momento. Funciona bien combinada con pauta digital: la gente que vio tu marca en la calle responde mejor al anuncio que le aparece después. Medirla sola y esperar ventas directas es pedirle algo que no hace.",
       },
     ],
-    cierre: "En Suggestion producimos publicidad exterior y la elegimos según a quién tienes que llegar, no según lo que haya disponible.",
+    cierre: "En Suggestion producimos publicidad exterior y la elegimos según a quién tienes que llegar.",
     moneyPage: { label: "Estructuras y publicidad exterior", href: "/servicios/estructuras-publicitarias" },
     relacionados: ["letreros-para-negocio-cual-elegir", "gigantografias-medidas-materiales-precios"],
   },
@@ -4755,7 +4755,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La respuesta honesta es que depende, pero eso no sirve de nada. Estos son los rangos del mercado peruano, qué entra en cada uno y qué se paga aparte aunque nadie te lo diga al cotizar.",
     enCorto: [
       "En octubre de 2026, una landing de una sola página va desde unos S/300 y una web informativa desde S/800; una corporativa llega a S/10,000 o más y una tienda virtual a S/15,000 (rangos de mercado).",
-      "Lo que mueve el precio no es el número de páginas, sino las integraciones (pagos, CRM, reservas) y quién hace los textos y las fotos.",
+      "Lo que mueve el precio son las integraciones (pagos, CRM, reservas) y quién hace los textos y las fotos.",
       "Construir no es lo mismo que tener: el dominio y el hosting se pagan cada año, y tienen que quedar a nombre de tu empresa.",
     ],
     date: "2026-10-05",
@@ -4764,7 +4764,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Los rangos del mercado peruano",
         parrafo:
-          "El precio no se mueve por el tamaño de la empresa que te cotiza, sino por lo que la web tiene que hacer. Una página que solo informa y una que vende y cobra son dos proyectos distintos aunque las dos se llamen «página web».",
+          "El precio depende de lo que la web tiene que hacer. Una página que solo informa y una que vende y cobra son dos proyectos distintos aunque las dos se llamen «página web».",
         tabla: {
           cabeceras: ["Tipo de web", "Precio referencial", "Para qué sirve"],
           filas: [
@@ -4792,7 +4792,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Lo que se paga aparte aunque no te lo digan",
         parrafo:
-          "Aquí está la sorpresa más común: el precio de construir no es el precio de tener. Hay costos que se repiten todos los años y conviene conocerlos antes de firmar, no después.",
+          "Aquí está la sorpresa más común: el precio de construir no es el precio de tener. Hay costos que se repiten todos los años y conviene conocerlos antes de firmar.",
         tabla: {
           cabeceras: ["Concepto", "Cuándo se paga", "Qué pasa si no lo pagas"],
           filas: [
@@ -4814,7 +4814,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "¿Quién escribe los textos y consigue las fotos?", texto: "es la pregunta que más diferencias explica entre dos presupuestos que parecen iguales." },
           { titulo: "¿Qué pasa cuando quiera cambiar algo?", texto: "pregunta si puedes editar tú, cuánto cuesta un cambio y con qué plazo. Una web que depende del proveedor para cada coma se vuelve cara con el tiempo." },
           { titulo: "¿Está incluida la medición?", texto: "sin analítica instalada no vas a saber si la web funciona, y entonces la discusión del precio era la discusión equivocada." },
-          { titulo: "¿Cuánto cuesta mantenerla al año?", texto: "pide ese número por escrito junto con el de construcción. Es el que de verdad compara dos propuestas." },
+          { titulo: "¿Cuánto cuesta mantenerla al año?", texto: "pide ese número por escrito junto con el de construcción. Es el que permite comparar dos propuestas." },
         ],
         nota: {
           tipo: "aviso",
@@ -4826,7 +4826,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faq: [
       {
         q: "¿Cuánto cuesta una página web en Perú?",
-        a: "En octubre de 2026 el mercado va desde unos S/300 por una landing de una sola página y desde S/800 por una web informativa, hasta S/10,000 o más en una corporativa y S/15,000 en una tienda virtual. Los portales a medida pueden llegar a S/50,000. El rango es amplio porque lo que mueve el precio son las integraciones y el contenido, no la cantidad de páginas.",
+        a: "En octubre de 2026 el mercado va desde unos S/300 por una landing de una sola página y desde S/800 por una web informativa, hasta S/10,000 o más en una corporativa y S/15,000 en una tienda virtual. Los portales a medida pueden llegar a S/50,000. El rango es amplio por las integraciones y el contenido.",
       },
       {
         q: "¿El precio incluye el dominio y el hosting?",
@@ -4877,7 +4877,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Porcentaje sobre la inversión", "La agencia cobra un porcentaje de lo que se gasta en pauta", "Cuentas con inversión alta y estable"],
             ["Por proyecto", "Un monto cerrado por un entregable concreto", "Trabajos acotados: una web, una campaña, un plan"],
           ],
-          nota: "El porcentaje sobre inversión tiene un problema que conviene mirar de frente: premia que gastes más, no que vendas más. Si eliges ese modelo, acuerda también qué resultado se espera, no solo cuánto se va a invertir.",
+          nota: "El porcentaje sobre inversión tiene un problema que conviene mirar de frente: premia que gastes más, no que vendas más. Si eliges ese modelo, acuerda también qué resultado se espera.",
         },
         enlaces: [{ label: "Cuánto cobra un community manager en Perú", href: "/blog/marca/cuanto-cobra-un-community-manager-en-peru" }],
       },
@@ -4926,7 +4926,7 @@ export const BLOG_POSTS: BlogPost[] = [
         nota: {
           tipo: "aviso",
           titulo: "Una cuenta que ordena la decisión",
-          texto: "Divide el fee mensual entre lo que vale un cliente nuevo para ti. Si la agencia necesita traerte quince clientes al mes solo para pagarse, y tu negocio nunca ha cerrado quince al mes, el problema no es el precio: es que ese nivel de servicio todavía no te corresponde.",
+          texto: "Divide el fee mensual entre lo que vale un cliente nuevo para ti. Si la agencia necesita traerte quince clientes al mes solo para pagarse, y tu negocio nunca ha cerrado quince al mes, ese nivel de servicio todavía no te corresponde.",
         },
       },
     ],
@@ -4952,7 +4952,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Lo suficiente para que haya datos: en pauta, unas semanas para salir del aprendizaje de la plataforma y un par de meses para optimizar con fundamento. Lo que sí se puede exigir desde el primer mes es orden: medición instalada, campañas bien nombradas y un reporte que diga qué se cambia el mes siguiente.",
       },
     ],
-    cierre: "En Suggestion separamos siempre el fee de la inversión en medios, y el reporte mensual termina en qué se cambia, no en cuánto alcance hubo.",
+    cierre: "En Suggestion separamos siempre el fee de la inversión en medios, y el reporte mensual termina en qué se cambia.",
     moneyPage: { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
     relacionados: ["cuanto-invertir-en-ads-peru", "que-es-el-marketing-digital", "cpl-vs-roas"],
   },
@@ -5006,7 +5006,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Por qué hay tanta diferencia de precio",
         parrafo:
-          "Cuando pides tres cotizaciones vuelven montos que no se parecen, y es tentador pensar que el caro te está viendo la cara. Esto es lo que de verdad separa un presupuesto de otro.",
+          "Cuando pides tres cotizaciones vuelven montos que no se parecen, y es tentador pensar que el caro te está viendo la cara. Esto es lo que separa un presupuesto de otro.",
         bullets: [
           { titulo: "Cuánto se investiga antes de dibujar", texto: "mirar a la competencia, entender a quién le hablas y decidir qué quieres parecer es trabajo que no se ve en el resultado pero lo determina." },
           { titulo: "Cuántas rutas distintas te muestran", texto: "una propuesta única es una apuesta; tres rutas conceptuales son un proceso. Cuestan distinto porque son horas distintas." },
@@ -5020,7 +5020,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Da igual el rango que elijas: hay cuatro cosas que tienen que quedar en tu poder. Si no están, no compraste una marca, compraste una imagen.",
         bullets: [
           { titulo: "El archivo vectorial", texto: "en formato editable, no solo un PNG o un JPG. Sin el vector, cada vez que necesites el logo en grande habrá que redibujarlo." },
-          { titulo: "Las versiones que vas a necesitar", texto: "horizontal, vertical, en un solo color y en negativo para fondos oscuros. Son las que de verdad se usan en la vida real." },
+          { titulo: "Las versiones que vas a necesitar", texto: "horizontal, vertical, en un solo color y en negativo para fondos oscuros. Son las que se usan en la práctica." },
           { titulo: "Los derechos por escrito", texto: "que la marca es tuya y puedes usarla donde quieras, incluso para registrarla. Parece obvio y no siempre está en el acuerdo." },
           { titulo: "Las tipografías y sus licencias", texto: "si tu logo usa una fuente de pago, necesitas saber cuál es y si tienes derecho a usarla. Es un problema que aparece un año después, cuando otro diseñador toma el relevo." },
         ],
@@ -5034,7 +5034,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faq: [
       {
         q: "¿Cuánto cuesta un logotipo en Perú?",
-        a: "En octubre de 2026 el mercado va desde unos S/800 con un freelance o estudio pequeño, pasa por un rango de S/3,500 a S/9,000 en estudios y agencias pequeñas con investigación y manual básico, y llega hasta S/25,000 en agencias con equipo estratégico. Lo que cambia entre un extremo y otro no es el dibujo: es cuánto criterio y cuánto sistema vienen con él.",
+        a: "En octubre de 2026 el mercado va desde unos S/800 con un freelance o estudio pequeño, pasa por un rango de S/3,500 a S/9,000 en estudios y agencias pequeñas con investigación y manual básico, y llega hasta S/25,000 en agencias con equipo estratégico. Entre un extremo y otro cambia cuánto criterio y cuánto sistema vienen con el dibujo.",
       },
       {
         q: "¿Cuál es la diferencia entre un logo y una identidad de marca?",
@@ -5042,7 +5042,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Conviene un logo hecho con inteligencia artificial?",
-        a: "Sirve para explorar ideas rápido y es un buen acelerador al inicio. No resuelve lo que de verdad decide un buen logo: qué quieres parecer frente a tu competencia y si la marca es registrable. Para eso hace falta criterio y una verificación, no una generación más.",
+        a: "Sirve para explorar ideas rápido y es un buen acelerador al inicio. No resuelve lo que decide un buen logo: qué quieres parecer frente a tu competencia y si la marca es registrable. Para eso hace falta criterio y una verificación.",
       },
       {
         q: "¿Qué archivos me tienen que entregar?",
@@ -5050,7 +5050,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cada cuánto conviene cambiar el logo?",
-        a: "Casi nunca por aburrimiento. Un rebranding tiene sentido cuando el negocio cambió de verdad —otro público, otra oferta, una fusión— o cuando la marca arrastra un problema real. Cambiarlo cada pocos años destruye el reconocimiento que tanto cuesta construir.",
+        a: "Casi nunca por aburrimiento. Un rebranding tiene sentido cuando el negocio cambió —otro público, otra oferta, una fusión— o cuando la marca arrastra un problema real. Cambiarlo cada pocos años destruye el reconocimiento que tanto cuesta construir.",
       },
     ],
     cierre: "En Suggestion trabajamos la marca como sistema, no como un dibujo: lo que te llevas es el criterio para aplicarla en todo lo demás.",
@@ -5151,7 +5151,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Sirven todavía los volantes?",
-        a: "Funcionan donde hay tránsito peatonal y una oferta clara y local: un restaurante, una promoción de apertura, un servicio de barrio. Dejan de funcionar cuando se reparten sin criterio o cuando el mensaje intenta explicar todo el negocio. Como todo, lo que decide es la medición, no la opinión.",
+        a: "Funcionan donde hay tránsito peatonal y una oferta clara y local: un restaurante, una promoción de apertura, un servicio de barrio. Dejan de funcionar cuando se reparten sin criterio o cuando el mensaje intenta explicar todo el negocio. Lo que decide es la medición.",
       },
     ],
     cierre: "En Suggestion imprimimos volantes y además ayudamos a decidir dónde repartirlos, que es la parte donde se gana o se pierde la campaña.",
@@ -5166,7 +5166,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "La tasa publicada de Indecopi es S/534.90 por la primera clase y S/401.20 para MYPE que califican. La búsqueda previa y por qué no se devuelve si te la niegan.",
     h1: "Cuánto cuesta registrar una marca en Indecopi",
     excerpt:
-      "La tasa no se devuelve aunque te rechacen la solicitud. Por eso lo que decide cuánto te va a costar registrar tu marca no es la tasa: es lo que hagas antes de pagarla.",
+      "La tasa no se devuelve aunque te rechacen la solicitud. Por eso, lo que más pesa en el costo de registrar tu marca es lo que hagas antes de pagar la tasa.",
     enCorto: [
       "La tasa publicada de Indecopi es S/534.90 por la primera clase, S/533.30 por cada clase adicional y S/401.20 para las MYPE que califican (fuentes consultadas en octubre de 2026).",
       "Se paga por clase: registra solo las clases en las que vendes o vas a vender pronto. Registrar «por si acaso» multiplica el costo sin darte más protección.",
@@ -5202,7 +5202,7 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Las marcas no se registran «para todo»: se registran para categorías concretas de productos o servicios, agrupadas en 45 clases de la Clasificación de Niza. Registrar tu nombre para la clase de restaurantes no te protege si alguien lo usa para ropa. Y cada clase adicional se paga casi completa.",
         bullets: [
-          { titulo: "Elige las clases que de verdad usas", texto: "no las que te gustaría usar algún día. Registrar cinco clases por si acaso multiplica el costo por cinco y no te da más protección donde sí vendes." },
+          { titulo: "Elige las clases que usas", texto: "no las que te gustaría usar algún día. Registrar cinco clases por si acaso multiplica el costo por cinco y no te da más protección donde sí vendes." },
           { titulo: "Piensa en los dos o tres años siguientes", texto: "si el plan real es abrir una línea nueva pronto, puede tener sentido incluir esa clase ahora. Si es una idea vaga, no." },
           { titulo: "La clasificación se actualiza", texto: "la 13.ª edición de la Clasificación de Niza entró en vigor en enero de 2026, así que conviene confirmar en qué clase cae tu actividad hoy, no según lo que te dijeron hace años." },
           { titulo: "El nombre comercial y la marca no son lo mismo", texto: "tener el nombre inscrito en Sunarp o en tu licencia municipal no equivale a tener la marca registrada. Son trámites y protecciones distintas." },
@@ -5231,7 +5231,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         nota: {
           titulo: "El orden que ahorra dinero",
-          texto: "Verifica la disponibilidad antes de mandar a hacer el logo, no después. Diseñar una marca que después no se puede registrar es la secuencia que obliga a tirar todo lo impreso, y pasa más de lo que parece.",
+          texto: "Verifica la disponibilidad antes de mandar a hacer el logo. Diseñar una marca que después no se puede registrar es la secuencia que obliga a tirar todo lo impreso, y pasa más de lo que parece.",
         },
       },
     ],
@@ -5273,7 +5273,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Desde S/300 una sesión estratégica hasta S/15,000 un plan completo. Qué estás comprando en cada rango y cómo saber si el plan vale lo que cuesta.",
     h1: "Cuánto cuesta un plan de marketing en Perú",
     excerpt:
-      "Un plan de marketing puede costar S/300 o S/15,000, y los dos pueden ser precios justos. La diferencia no está en el documento: está en quién lo ejecuta después.",
+      "Un plan de marketing puede costar S/300 o S/15,000, y los dos pueden ser precios justos. La diferencia está en quién lo ejecuta después.",
     enCorto: [
       "«Plan de marketing» se usa para cuatro cosas distintas: sesión estratégica, diagnóstico, plan como proyecto y acompañamiento mensual. Por eso las cotizaciones no se parecen.",
       "En octubre de 2026, una sesión estratégica de unas dos horas va desde unos S/300 y un plan estratégico completo, entre S/5,000 y S/15,000 (rangos de mercado).",
@@ -5294,7 +5294,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Plan estratégico", "El documento completo: objetivos, público, canales, presupuesto y calendario", "Vas a invertir en serio y necesitas una hoja de ruta"],
             ["Acompañamiento mensual", "Alguien que dirige y corrige sobre la marcha", "Tienes equipo o proveedores, pero nadie que los ordene"],
           ],
-          nota: "La diferencia más importante no es de contenido, es de responsabilidad: en los tres primeros te entregan algo y se van; en el cuarto se quedan a responder por el resultado.",
+          nota: "La diferencia más importante es de responsabilidad: en los tres primeros te entregan algo y se van; en el cuarto se quedan a responder por el resultado.",
         },
       },
       {
@@ -5317,7 +5317,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Qué tiene que traer para que valga lo que cuesta",
         foto: propia("/assets/blog/taller-plan-de-negocios.webp", 1100, 825, "Presentación del plan de negocios 2025 de Pacífico Motors ante su equipo, en una sala de reuniones", "Presentación del plan de negocios 2025 de Pacífico Motors a su equipo."),
         parrafo:
-          "Un plan de marketing no es un documento bonito con gráficos: es un conjunto de decisiones tomadas. Si al terminar de leerlo no sabes qué hacer el lunes, no era un plan.",
+          "Un plan de marketing es un conjunto de decisiones tomadas. Al terminar de leerlo tienes que saber qué hacer el lunes.",
         bullets: [
           { titulo: "Un objetivo en número y con fecha", texto: "«crecer en redes» no es un objetivo. «Treinta citas al mes para diciembre» sí, porque se puede cumplir o no cumplir." },
           { titulo: "A quién le vas a hablar, con nombre y apellido", texto: "no «hombres y mujeres de 25 a 55 años», que no excluye a nadie. Un público que no excluye a nadie no sirve para decidir nada." },
@@ -5362,7 +5362,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Y si el plan no funciona?",
-        a: "Ningún plan sobrevive intacto al contacto con el mercado, y eso no es un fracaso: es la razón por la que se revisa. Lo que sí es un fracaso es descubrirlo en diciembre. Un plan serio incluye desde el inicio cuándo se revisa y qué señales obligan a cambiar de rumbo.",
+        a: "Ningún plan sobrevive intacto al contacto con el mercado; por eso se revisa. Lo que sí es un fracaso es descubrirlo en diciembre. Un plan serio incluye desde el inicio cuándo se revisa y qué señales obligan a cambiar de rumbo.",
       },
     ],
     cierre: "En Suggestion el plan no termina en un documento: incluye quién ejecuta, qué se mide y cuándo se corrige.",
@@ -5389,10 +5389,10 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Lo que se evalúa no es la presentación",
         parrafo:
-          "Casi todas las agencias llegan con un portafolio bonito y casos de clientes conocidos. Eso no dice nada: dice que alguien les pagó, no que les haya funcionado. Lo que hay que mirar es si pueden explicar cómo midieron un resultado y qué hicieron cuando algo no funcionó.",
+          "Casi todas las agencias llegan con un portafolio bonito y casos de clientes conocidos. Eso solo dice que alguien les pagó. Lo que hay que mirar es si pueden explicar cómo midieron un resultado y qué hicieron cuando algo no funcionó.",
         bullets: [
           { titulo: "Pide un caso con números y con fecha", texto: "cuánto se invirtió, qué período, qué resultado comercial. Si la respuesta son impresiones y alcance, están midiendo lo que se ve bonito, no lo que vende." },
-          { titulo: "Pregunta por una campaña que salió mal", texto: "es la pregunta más reveladora de todas. Quien trabaja de verdad tiene una y la cuenta sin problema; quien no, cambia de tema." },
+          { titulo: "Pregunta por una campaña que salió mal", texto: "es la pregunta más reveladora de todas. Quien trabaja bien tiene una y la cuenta sin problema; quien no, cambia de tema." },
           { titulo: "Pide hablar con un cliente actual", texto: "no con una referencia elegida de hace tres años. Un cliente de hoy te va a contar cómo es trabajar con ellos el martes por la tarde." },
           { titulo: "Mira si te preguntan de tu negocio", texto: "si en la primera reunión hablaron más de ellos que de ti, la propuesta que te van a mandar es la misma que le mandaron al anterior." },
         ],
@@ -5400,7 +5400,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cómo leer una propuesta",
         parrafo:
-          "Las propuestas están escritas para que compares mal. Esta tabla ordena lo que de verdad hay que buscar, y la columna de la derecha es la que te dice si vas a poder exigir algo dentro de tres meses.",
+          "Las propuestas están escritas para que compares mal. Esta tabla ordena lo que hay que buscar, y la columna de la derecha es la que te dice si vas a poder exigir algo dentro de tres meses.",
         tabla: {
           cabeceras: ["Lo que suele decir", "Lo que tienes que pedir"],
           filas: [
@@ -5445,7 +5445,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faq: [
       {
         q: "¿Cómo sé si una agencia de marketing es buena?",
-        a: "Por cómo responde a lo incómodo, no por su portafolio. Pide un caso con inversión, período y resultado comercial; pregunta por una campaña que salió mal; pide hablar con un cliente actual. Una agencia que trabaja de verdad contesta esas tres cosas sin incomodarse.",
+        a: "Por cómo responde a lo incómodo, no por su portafolio. Pide un caso con inversión, período y resultado comercial; pregunta por una campaña que salió mal; pide hablar con un cliente actual. Una agencia seria contesta esas tres cosas sin incomodarse.",
       },
       {
         q: "¿Qué debo pedir en la primera reunión?",
@@ -5464,7 +5464,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Si están a nombre de tu empresa, no pasa nada: quitas un acceso y sigues. Si están a nombre de la agencia, puedes perder el histórico, los públicos y hasta el perfil de tu negocio. Por eso se acuerda al empezar y no al terminar.",
       },
     ],
-    cierre: "En Suggestion las cuentas quedan siempre a tu nombre y el reporte mensual termina en qué se cambia, no en cuánto alcance hubo.",
+    cierre: "En Suggestion las cuentas quedan siempre a tu nombre y el reporte mensual termina en qué se cambia.",
     moneyPage: { label: "Agencia de marketing digital en Perú", href: "/servicios/marketing-digital" },
     relacionados: ["cuanto-cobra-una-agencia-de-marketing-digital-en-peru", "cuanto-cuesta-un-plan-de-marketing-en-peru", "que-es-el-marketing-digital"],
   },
@@ -5575,9 +5575,9 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cómo crear el perfil de empresa en Google, los cinco métodos de verificación y qué hacer si alguien ya reclamó tu negocio o si te suspenden la ficha.",
     h1: "Ficha de empresa en Google: cómo crearla y verificarla",
     excerpt:
-      "Un perfil sin verificar es un perfil que no compite: no aparece en el mapa y los cambios que hagas pueden no publicarse nunca. La verificación no es un trámite, es el requisito.",
+      "Sin verificar, la ficha no aparece en el mapa y los cambios que hagas pueden no publicarse nunca.",
     enCorto: [
-      "La ficha de empresa en Google es gratis y es la que te pone en el mapa. Sin verificar no compite: no aparece y los cambios que hagas pueden no publicarse.",
+      "La ficha de empresa en Google es gratis y es la que te pone en el mapa. Hay que verificarla para que aparezca.",
       "Busca primero si tu negocio ya existe: Google crea fichas solo, a partir de información pública. Si existe, se reclama; si no, se crea.",
       "Google decide qué métodos de verificación te ofrece, como teléfono, correo, video o postal. Ya verificada, completa primero la categoría principal y el nombre, la dirección y el teléfono escritos igual que en tu web.",
     ],
@@ -5592,7 +5592,7 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Es gratis", texto: "crear y mantener el perfil no cuesta nada. Si alguien te cobra por «aparecer en Google Maps», te está cobrando por el trabajo, no por el espacio." },
           { titulo: "Ya puede existir sin que lo hayas creado tú", texto: "Google genera fichas automáticamente a partir de información pública. Es habitual descubrir que tu negocio ya está ahí, con datos incompletos o equivocados." },
           { titulo: "Cualquiera puede sugerir cambios", texto: "incluidos tus competidores y clientes. Un perfil que nadie administra es un perfil que alguien más puede editar." },
-          { titulo: "Sin verificar, no compite", texto: "es la diferencia entre existir y aparecer." },
+          { titulo: "Hay que verificarla", texto: "sin verificación, la ficha no aparece en el mapa." },
         ],
       },
       {
@@ -5688,16 +5688,16 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "Un embudo de ventas es el recorrido que hace una persona desde que descubre que existes hasta que te compra, dividido en etapas que puedes contar. Se llama embudo porque en cada paso quedan menos: eso es normal y no es el problema. El problema es no saber en cuál de los pasos se van, porque entonces se invierte a ciegas en el escalón equivocado.",
         bullets: [
-          { titulo: "No es una teoría, es un conteo", texto: "si no puedes poner un número en cada etapa, no tienes un embudo: tienes un dibujo." },
+          { titulo: "Es un conteo", texto: "cada etapa tiene que tener su número." },
           { titulo: "Las etapas son las tuyas", texto: "las de un consultorio no son las de una inmobiliaria. Copiar un embudo genérico de internet es el error de arranque más común." },
-          { titulo: "Se mide hacia abajo, no hacia arriba", texto: "la métrica que importa no es cuánta gente entra, sino qué porcentaje pasa de cada escalón al siguiente." },
+          { titulo: "Se mide hacia abajo, no hacia arriba", texto: "la métrica que importa es qué porcentaje pasa de cada escalón al siguiente." },
           { titulo: "Sirve para decidir dónde gastar", texto: "si la caída está en la respuesta a los mensajes, invertir más en publicidad solo compra más gente a la que no vas a contestar." },
         ],
       },
       {
         h2: "Un embudo real, con sus caídas",
         parrafo:
-          "Este es un ejemplo con números inventados, pero con la forma que suelen tener los embudos de verdad. Lo interesante no son las cifras: es dónde está el escalón que más se encoge.",
+          "Este es un ejemplo con números inventados, pero con la forma que suelen tener los embudos reales. Lo interesante no son las cifras: es dónde está el escalón que más se encoge.",
         tabla: {
           cabeceras: ["Etapa", "Personas", "Pasa a la siguiente"],
           filas: [
@@ -5716,7 +5716,7 @@ export const BLOG_POSTS: BlogPost[] = [
         parrafo:
           "No hace falta software ni consultoría para empezar. Hace falta decidir las etapas y conseguir un número para cada una, aunque el primer mes sea aproximado.",
         pasos: [
-          { titulo: "Escribe las etapas de tu venta real", texto: "las que de verdad ocurren en tu negocio, con el nombre que usa tu equipo. Entre cuatro y seis suelen bastar." },
+          { titulo: "Escribe las etapas de tu venta real", texto: "las que ocurren en tu negocio, con el nombre que usa tu equipo. Entre cuatro y seis suelen bastar." },
           { titulo: "Define cuándo alguien pasa de una a otra", texto: "es la parte que más discusiones evita. ¿«Interesado» es que respondió o que preguntó el precio? Que esté escrito." },
           { titulo: "Consigue el número de cada etapa", texto: "del último mes. Si no lo tienes, cuenta a mano una semana: es suficiente para ver la forma." },
           { titulo: "Calcula el paso entre escalones", texto: "en porcentaje. Ahí aparece solo el escalón que está estrangulando todo lo demás." },
@@ -5736,18 +5736,18 @@ export const BLOG_POSTS: BlogPost[] = [
           { titulo: "Contar impresiones como primera etapa", texto: "las impresiones no son personas: la misma persona puede ver el anuncio quince veces. Empieza a contar desde donde hay alguien identificable." },
           { titulo: "Mezclar períodos", texto: "si cuentas las ventas de este mes contra los contactos de este mes, estás comparando gente distinta. En ventas que tardan semanas, hay que seguir a la misma cohorte." },
           { titulo: "No registrar de dónde vino cada quien", texto: "sin el origen anotado al entrar, en tres meses no vas a poder decir qué campaña trajo qué venta." },
-          { titulo: "Medir solo lo que sale bien", texto: "el valor del embudo está en las caídas. Un reporte que solo muestra el total de ventas no es un embudo, es un marcador." },
+          { titulo: "Medir solo lo que sale bien", texto: "el valor del embudo está en las caídas. Un reporte con solo el total de ventas no muestra dónde se pierde gente." },
         ],
       },
     ],
     faq: [
       {
         q: "¿Qué es un embudo de ventas?",
-        a: "Es el recorrido que hace una persona desde que te descubre hasta que te compra, dividido en etapas que puedes contar. Su utilidad no es explicar el proceso, sino mostrar en qué escalón concreto estás perdiendo gente, para arreglar ese en lugar de gastar más arriba.",
+        a: "Es el recorrido que hace una persona desde que te descubre hasta que te compra, dividido en etapas que puedes contar. Sirve para ver en qué escalón estás perdiendo gente y arreglar ese en lugar de gastar más arriba.",
       },
       {
         q: "¿Cuántas etapas debe tener?",
-        a: "Entre cuatro y seis suele ser suficiente para un negocio pequeño o mediano. Más etapas no dan más precisión: dan más campos que nadie llena. Lo importante no es la cantidad, sino que esté escrito cuándo alguien pasa de una a la siguiente.",
+        a: "Entre cuatro y seis suele ser suficiente para un negocio pequeño o mediano. Más etapas no dan más precisión: dan más campos que nadie llena. Lo importante es que esté escrito cuándo alguien pasa de una a la siguiente.",
       },
       {
         q: "¿Necesito un software para tener un embudo?",
@@ -5772,7 +5772,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Qué es un CRM y Cuándo lo Necesitas | Suggestion",
     description:
       "Qué es un CRM, para qué sirve en ventas y marketing, cuándo deja de alcanzar la hoja de cálculo y los cuatro campos que deciden si va a servir de algo.",
-    h1: "Qué es un CRM y cuándo lo necesitas de verdad",
+    h1: "Qué es un CRM y cuándo lo necesitas",
     excerpt:
       "La mayoría de negocios no necesita un CRM más potente: necesita que alguien llene el que ya tiene. Esa diferencia explica casi todas las implementaciones que no sirvieron para nada.",
     enCorto: [
@@ -5817,7 +5817,7 @@ export const BLOG_POSTS: BlogPost[] = [
         pasos: [
           { titulo: "Origen", texto: "de dónde vino la persona, escrito al crear el registro y no después. Sin este campo no hay forma de saber qué campaña funcionó." },
           { titulo: "Fecha de entrada", texto: "porque una venta que cierra hoy con un contacto de hace dos meses no la pagó la campaña de este mes. Sin la fecha, los números se inflan solos." },
-          { titulo: "Etapa", texto: "con una lista corta y cerrada, no un texto libre. Si cada vendedor escribe la etapa a su manera, no hay embudo que valga." },
+          { titulo: "Etapa", texto: "con una lista corta y cerrada. Si cada vendedor escribe la etapa a su manera, no se puede medir el embudo." },
           { titulo: "Responsable", texto: "una persona con nombre. Un contacto sin dueño es un contacto que nadie va a llamar." },
         ],
         nota: {
@@ -5858,7 +5858,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuánto tarda en implementarse?",
-        a: "Una configuración básica con los campos esenciales y un pipeline simple puede estar en semanas. Lo que toma tiempo no es la herramienta: es acordar las etapas, decidir qué se registra y conseguir que el equipo lo haga todos los días. Esa parte se mide en meses de hábito, no en días de configuración.",
+        a: "Una configuración básica con los campos esenciales y un pipeline simple puede estar en semanas. Lo que toma tiempo es acordar las etapas, decidir qué se registra y conseguir que el equipo lo haga todos los días. Eso toma meses.",
       },
       {
         q: "¿Qué significa CRM?",
@@ -5873,7 +5873,7 @@ export const BLOG_POSTS: BlogPost[] = [
         a: "Que ningún contacto se pierda, que cada uno tenga una próxima acción con fecha y que puedas medir cuántos pasan de interesado a venta y de qué canal vienen. Además, la información queda en la empresa aunque el asesor se vaya.",
       },
     ],
-    cierre: "En Suggestion implementamos el CRM con los campos mínimos que de verdad se llenan, y conectado a WhatsApp, que es por donde entra casi todo.",
+    cierre: "En Suggestion implementamos el CRM con los campos mínimos que el equipo sí llena, y conectado a WhatsApp, que es por donde entra casi todo.",
     moneyPage: { label: "CRM para ventas y WhatsApp", href: "/servicios/crm-automatizacion" },
     relacionados: ["crm-inmobiliario", "que-es-un-lead", "como-automatizar-whatsapp"],
   },
@@ -5897,7 +5897,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Qué es y por qué rinde tanto",
         parrafo:
-          "El remarketing —también llamado retargeting— consiste en mostrar anuncios a personas que ya tuvieron contacto contigo: visitaron tu web, vieron un video, escribieron por mensaje o están en tu lista de clientes. La diferencia con una campaña normal es enorme: no estás pagando por presentarte, estás pagando por volver a aparecer frente a alguien que ya sabe quién eres.",
+          "El remarketing —también llamado retargeting— consiste en mostrar anuncios a personas que ya tuvieron contacto contigo: visitaron tu web, vieron un video, escribieron por mensaje o están en tu lista de clientes. Aquí pagas por volver a aparecer frente a alguien que ya sabe quién eres.",
         bullets: [
           { titulo: "El público es pequeño y caliente", texto: "son menos personas, pero cada una vale mucho más. Por eso el costo por venta suele ser el más bajo de la cuenta." },
           { titulo: "Resuelve el problema real de la mayoría de webs", texto: "casi nadie compra en la primera visita. El remarketing existe para las otras visitas." },
@@ -5935,7 +5935,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Los errores que lo convierten en acoso",
         parrafo:
-          "Todo el mundo ha tenido la experiencia de ver el mismo anuncio durante tres semanas después de una visita. Eso no es remarketing bien hecho: es una campaña a la que nadie le puso límites.",
+          "Todo el mundo ha tenido la experiencia de ver el mismo anuncio durante tres semanas después de una visita. Eso pasa cuando nadie le pone límites a la campaña.",
         bullets: [
           { titulo: "No poner tope de frecuencia", texto: "si la misma persona ve tu anuncio diez veces al día, no la estás convenciendo: la estás agotando, y además pagas por cada impresión." },
           { titulo: "No poner fecha de caducidad a la audiencia", texto: "alguien que visitó hace seis meses ya no está decidiendo. Ventanas de días o pocas semanas suelen rendir mucho mejor que una de un año." },
@@ -5999,7 +5999,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "En odontología, la persona casi nunca busca «dentista»: busca el tratamiento que necesita, y llega con un precio en la cabeza antes de escribirte. Eso cambia todo el planteamiento. No estás compitiendo por atención como una marca de consumo: estás compitiendo por confianza contra tres consultorios que ya le dieron un número por WhatsApp. Quien gana no suele ser el más barato, sino el que responde antes y explica mejor en qué se diferencia lo que cobra.",
         bullets: [
           { titulo: "Busca por tratamiento, no por profesional", texto: "«cuánto cuesta una ortodoncia», «implante dental precio», «muela del juicio». La campaña se arma por tratamiento o no se entera de nada." },
-          { titulo: "Compara en paralelo", texto: "escribe a varios el mismo día. El tiempo de respuesta no es un detalle de servicio: es el filtro." },
+          { titulo: "Compara en paralelo", texto: "escribe a varios el mismo día. El tiempo de respuesta decide quién se queda con el paciente." },
           { titulo: "El precio es la primera pregunta, no la última", texto: "esconderlo no sube la conversión, la baja: el que pregunta y no recibe respuesta se va con el que sí la dio." },
           { titulo: "La decisión es a plazos", texto: "en tratamientos de monto alto, la facilidad de pago decide más que el descuento. Es información que debería estar visible antes de que pregunten." },
         ],
@@ -6026,14 +6026,14 @@ export const BLOG_POSTS: BlogPost[] = [
           "Es la parte que más clínicas descuidan y la que más pacientes trae. Cuando alguien tiene dolor o quiere una consulta cerca, no abre Instagram: abre el mapa. Y ahí el orden lo deciden factores que Google documenta —relevancia, distancia y prominencia— y que se trabajan sin pagar un sol de publicidad.",
         bullets: [
           { titulo: "Categoría correcta y servicios listados uno por uno", texto: "si no está «ortodoncista» o «implantes dentales» entre tus servicios, no apareces cuando alguien lo busca." },
-          { titulo: "Reseñas pedidas con rutina, no por suerte", texto: "al terminar la consulta, con el enlace directo y de parte de quien atendió. Un paciente contento rara vez reseña solo." },
+          { titulo: "Reseñas pedidas con rutina", texto: "al terminar la consulta, con el enlace directo y de parte de quien atendió. Un paciente contento rara vez reseña solo." },
           { titulo: "Fotos del consultorio real", texto: "la sala, el equipo, el equipamiento. En salud, ver el lugar baja la ansiedad de la primera visita más que cualquier texto." },
           { titulo: "Horario exacto, incluidos feriados", texto: "el paciente con dolor que llega y encuentra cerrado deja una reseña de una estrella que cuesta meses compensar." },
           { titulo: "Responder todas las reseñas", texto: "sobre todo las malas, y sin entrar en detalles clínicos. Lo que el siguiente paciente evalúa es cómo tratas un problema." },
         ],
       },
       {
-        h2: "El problema real no es captar: es la silla vacía",
+        h2: "El problema real es la silla vacía",
         parrafo:
           "Casi todas las clínicas que nos escriben piden más pacientes, y en la mayoría la primera auditoría encuentra el dinero en otro lado: citas que se agendan y no se cumplen, presupuestos entregados que nadie volvió a tocar y pacientes antiguos que no regresan. Esas tres fugas se arreglan sin gastar un sol más en publicidad, y ninguna necesita una campaña.",
         tabla: {
@@ -6048,7 +6048,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
         dato: {
           cifra: "La hora vacía",
-          texto: "es lo que de verdad cuesta caro en una clínica: el alquiler, el equipo y el personal se pagan igual. Cada hueco en la agenda es costo fijo sin ingreso, y por eso recuperar citas perdidas rinde más que captar pacientes nuevos.",
+          texto: "es lo que más cuesta en una clínica: el alquiler, el equipo y el personal se pagan igual. Cada hueco en la agenda es costo fijo sin ingreso, y por eso recuperar citas perdidas rinde más que captar pacientes nuevos.",
         },
       },
       {
@@ -6075,7 +6075,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Debo poner los precios en la publicidad dental?",
-        a: "Un precio de referencia o la cuota mensual sí, sobre todo en tratamientos de monto alto. Esconderlo no sube la conversión: la baja, porque el paciente escribe a tres consultorios y se queda con el que respondió con un número. Lo que no conviene es competir solo por precio, sino explicar qué incluye el tuyo.",
+        a: "Un precio de referencia o la cuota mensual sí, sobre todo en tratamientos de monto alto. Esconderlo no sube la conversión: la baja, porque el paciente escribe a tres consultorios y se queda con el que respondió con un número. No conviene competir solo por precio: explica qué incluye el tuyo.",
       },
       {
         q: "¿Qué funciona mejor para una clínica dental, Google o redes sociales?",
@@ -6087,7 +6087,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuánto tarda en notarse el marketing en una clínica dental?",
-        a: "Lo que depende de la ficha de Google y del tiempo de respuesta se nota en semanas, porque son arreglos operativos. Las campañas por tratamiento dan señales en semanas y se estabilizan en un par de meses. Lo que tarda de verdad es la reputación local, que se construye reseña a reseña durante meses.",
+        a: "Lo que depende de la ficha de Google y del tiempo de respuesta se nota en semanas, porque son arreglos operativos. Las campañas por tratamiento dan señales en semanas y se estabilizan en un par de meses. Lo que más tarda es la reputación local, que se construye reseña a reseña durante meses.",
       },
       {
         q: "¿Sirve tener Instagram para un consultorio dental?",
@@ -6151,7 +6151,7 @@ export const BLOG_POSTS: BlogPost[] = [
         // Caso Ceinys con sus salvaguardas de docs-fuente/21.
         h2: "Publicidad para vender lotes: cómo armar la campaña",
         parrafo:
-          "En lotes, la publicidad que funciona no es la que más gente alcanza, sino la que llena la agenda de visitas con personas que pueden pagar. Eso se decide en cuatro piezas de la campaña.",
+          "En lotes, la publicidad que funciona es la que llena la agenda de visitas con personas que pueden pagar. Eso se decide en cuatro piezas de la campaña.",
         pasos: [
           { titulo: "Un anuncio que muestre el lugar", texto: "video recorriendo el terreno, el plano de la lotización y lo que hay alrededor. El precio desde y la inicial, escritos en la pieza." },
           { titulo: "Un formulario que califique", texto: "dos o tres preguntas antes de enviar: para cuándo lo necesita, si paga al contado o en cuotas, desde qué ciudad escribe. Llegan menos contactos y mejores." },
@@ -6244,7 +6244,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "La mayoría de terrenos que llevan meses sin venderse no tienen un problema de publicidad: tienen un problema de papeles o de precio. Y los dos se arreglan antes de publicar nada.",
     enCorto: [
-      "Lo que suele frenar la venta de un terreno no es la publicidad, sino los papeles o el precio: partida registral clara, propietarios de acuerdo, cargas declaradas y linderos que coincidan.",
+      "Lo que suele frenar la venta de un terreno son los papeles o el precio: partida registral clara, propietarios de acuerdo, cargas declaradas y linderos que coincidan.",
       "Ten listo el expediente antes de publicar: partida registral actualizada, documento del propietario, planos con área y linderos, y tributos municipales al día.",
       "El precio lo fija lo que se vende hoy en la zona, comparado por metro cuadrado. Tres semanas sin consultas serias con un buen anuncio indican que está fuera de mercado.",
     ],
@@ -6252,7 +6252,7 @@ export const BLOG_POSTS: BlogPost[] = [
     actualizado: "2026-11-22",
     secciones: [
       {
-        h2: "Lo que de verdad frena una venta",
+        h2: "Lo que frena una venta",
         parrafo:
           "Cuando un terreno lleva meses publicado y no se vende, la reacción habitual es cambiar la foto o bajar el precio. Antes de eso conviene revisar lo que un comprador serio va a mirar en los primeros diez minutos, porque si algo de eso falla el interesado desaparece sin decirte por qué.",
         bullets: [
@@ -6306,7 +6306,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Publicar en diez sitios con un anuncio malo rinde menos que publicar en tres con uno bueno. Esto es lo que mira quien está comparando terrenos, en el orden en que lo mira.",
         bullets: [
           { titulo: "Fotos con luz de día y del terreno completo", texto: "incluida la calle de acceso y el entorno. Un terreno fotografiado solo de cerca parece algo que se esconde." },
-          { titulo: "La ubicación, de verdad", texto: "distrito, referencia reconocible y, si puedes, el punto en el mapa. «Zona en crecimiento» no es una dirección." },
+          { titulo: "La ubicación exacta", texto: "distrito, referencia reconocible y, si puedes, el punto en el mapa. «Zona en crecimiento» no es una dirección." },
           { titulo: "El área exacta y los linderos", texto: "en metros cuadrados, con el frente y el fondo. Es el primer dato que busca quien va a construir." },
           { titulo: "Di que los papeles están en orden", texto: "si es cierto, es tu mejor argumento de venta y casi nadie lo pone. «Partida registral en regla» filtra y tranquiliza a la vez." },
           { titulo: "Un número que alguien conteste", texto: "la mayoría de ventas se pierden en mensajes sin responder. Si no puedes atender, pon a alguien que lo haga." },
@@ -6332,7 +6332,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faq: [
       {
         q: "¿Cómo vender un terreno rápido en Perú?",
-        a: "Con los papeles en orden antes de publicar, un precio alineado con lo que se vende hoy en la zona y un anuncio que diga ubicación real, área exacta y que la documentación está al día. En la práctica, los dos motivos por los que un terreno no se vende son casi siempre el precio y la documentación, no la publicidad.",
+        a: "Con los papeles en orden antes de publicar, un precio alineado con lo que se vende hoy en la zona y un anuncio que diga ubicación real, área exacta y que la documentación está al día. En la práctica, los dos motivos por los que un terreno no se vende son casi siempre el precio y la documentación.",
       },
       {
         q: "¿Qué documentos necesito para vender un terreno?",
@@ -6340,7 +6340,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Puedo vender un terreno que no está inscrito?",
-        a: "Es mucho más difícil y reduce de forma drástica el número de compradores, porque quien compra no puede verificar la titularidad ni acceder a financiamiento. Si ese es tu caso, el primer paso no es publicar: es consultar cómo regularizar la situación registral.",
+        a: "Es mucho más difícil y reduce de forma drástica el número de compradores, porque quien compra no puede verificar la titularidad ni acceder a financiamiento. Si ese es tu caso, el primer paso es consultar cómo regularizar la situación registral.",
       },
       {
         q: "¿Cómo sé cuánto vale mi terreno?",
@@ -6352,7 +6352,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Cuánto cobra un corredor inmobiliario en Perú?",
-        a: "Se trabaja con una comisión sobre el precio de venta que se acuerda caso por caso. Lo importante no es solo el porcentaje: es dejar por escrito si el encargo es exclusivo, por cuánto tiempo y qué pasa si el comprador lo consigues tú. Esos tres puntos son los que generan discusiones después.",
+        a: "Se trabaja con una comisión sobre el precio de venta que se acuerda caso por caso. Además del porcentaje, deja por escrito si el encargo es exclusivo, por cuánto tiempo y qué pasa si el comprador lo consigues tú. Esos tres puntos son los que generan discusiones después.",
       },
     ],
     cierre: "En Suggestion trabajamos con proyectos e inmobiliarias que necesitan vender lotes con el expediente y la medición en orden desde el primer día.",
@@ -6392,7 +6392,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "Booking no es el enemigo: es un escaparate caro",
+        h2: "Booking es un escaparate caro",
         parrafo:
           "El error de muchos hoteles pequeños es plantearlo como una guerra. Las agencias en línea hacen algo que tú no puedes hacer solo: ponerte delante de alguien en Lima, en Santiago o en Madrid que no sabe que existes. Lo que no tiene sentido es pagar esa comisión por el huésped que ya te conocía y que habría reservado igual.",
         bullets: [
@@ -6424,7 +6424,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Las reseñas y la ficha deciden más que la campaña",
         foto: propia("/assets/blog/salon-beach-club-noche.webp", 1100, 825, "Salón de un beach club de noche, con techo de caña, sillones y mesas junto a los ventanales", "Salón de un beach club, de noche."),
         parrafo:
-          "Quien está eligiendo entre tu hotel y el de al lado abre las reseñas antes que tu web. En hotelería, la reputación en línea no es una métrica de marketing: es parte del producto, y se gestiona todos los días.",
+          "Quien está eligiendo entre tu hotel y el de al lado abre las reseñas antes que tu web. En hotelería, la reputación en línea es parte del producto y se gestiona todos los días.",
         bullets: [
           { titulo: "La frecuencia pesa más que el total", texto: "veinte reseñas de los últimos meses transmiten un hotel vivo; doscientas de hace tres años, uno que fue bueno alguna vez." },
           { titulo: "Responde todas, sobre todo las malas", texto: "una respuesta serena y concreta a una queja convence al siguiente huésped más que diez elogios." },
@@ -6619,7 +6619,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Tu cliente no te busca como un consumidor",
         parrafo:
-          "Esta es la confusión que más presupuesto desperdicia en el rubro. Un importador europeo o asiático no entra a Instagram a descubrir proveedores de uva. Llega a ti por tres vías —una feria, una institución que lo conecta o una búsqueda muy específica— y en las tres evalúa lo mismo: si puedes cumplir, con qué volumen y con qué respaldo. Todo el esfuerzo de marketing debería servir a esa evaluación, no a generar simpatía.",
+          "Esta es la confusión que más presupuesto desperdicia en el rubro. Un importador europeo o asiático no entra a Instagram a descubrir proveedores de uva. Llega a ti por tres vías —una feria, una institución que lo conecta o una búsqueda muy específica— y en las tres evalúa lo mismo: si puedes cumplir, con qué volumen y con qué respaldo. Todo el marketing debería servir a esa evaluación.",
         bullets: [
           { titulo: "Compra contra una ventana y un volumen", texto: "necesita tantas toneladas, en tales semanas, con tal calibre. Si no puedes cumplirlo, el resto de la conversación no existe." },
           { titulo: "Evalúa el riesgo antes que el precio", texto: "lo que más teme es un embarque que no llega o que llega fuera de especificación. El precio se negocia después de descartar ese miedo." },
@@ -6659,13 +6659,13 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Capacidad de planta y proceso", "Para evaluar el riesgo de incumplimiento", "Fotos reales, no renders ni fotos de archivo"],
             ["Referencias de otros destinos", "Para confiar en que ya exportaste", "Mercados y años, sin romper confidencialidad"],
           ],
-          nota: "La respuesta más potente a «¿pueden cumplir?» no es decir que sí: es mandar el expediente completo en el mismo día. La velocidad de respuesta documenta seriedad mejor que cualquier presentación.",
+          nota: "La mejor respuesta a «¿pueden cumplir?» es mandar el expediente completo el mismo día. La velocidad de respuesta documenta seriedad mejor que cualquier presentación.",
         },
       },
       {
-        h2: "La web y el material que de verdad se usan",
+        h2: "La web y el material que se usan",
         parrafo:
-          "La web de una agroexportadora no se parece a la de un negocio de consumo, porque su trabajo es otro: no tiene que emocionar, tiene que permitir verificar. Un comprador la abre después de conocerte y antes de responderte, y lo que busca es confirmar que eres quien dijiste ser.",
+          "La web de una agroexportadora no se parece a la de un negocio de consumo, porque su trabajo es otro: permitir que el comprador verifique. Un comprador la abre después de conocerte y antes de responderte, y lo que busca es confirmar que eres quien dijiste ser.",
         bullets: [
           { titulo: "En inglés, completa, no traducida a medias", texto: "una web mitad en español es una señal de que la operación de exportación también está a medias." },
           { titulo: "Fichas de producto descargables", texto: "una por producto, con especificaciones. Es lo que el comprador reenvía dentro de su empresa, y esa es la pieza que decide." },
@@ -6775,7 +6775,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Las etapas que conviene usar",
         parrafo:
-          "Las etapas tienen que describir lo que pasa de verdad en una venta inmobiliaria, no lo que trae el sistema por defecto. Estas seis alcanzan para casi cualquier proyecto de lotes o departamentos.",
+          "Las etapas tienen que describir lo que pasa en una venta inmobiliaria, no lo que trae el sistema por defecto. Estas seis alcanzan para casi cualquier proyecto de lotes o departamentos.",
         pasos: [
           { titulo: "Lead", texto: "dejó sus datos o escribió. Todavía nadie habló con él." },
           { titulo: "Contactado", texto: "un asesor habló con la persona y sabe para cuándo lo necesita y cómo piensa pagar." },
@@ -6848,7 +6848,7 @@ export const BLOG_POSTS: BlogPost[] = [
     categoria: "marca",
     title: "Cuánto Cobra un Community Manager en Perú 2026 | Suggestion",
     description:
-      "Rangos del mercado peruano por nivel, cuánto cuesta de verdad tenerlo en planilla y qué debe incluir un plan de community manager para comparar bien.",
+      "Rangos del mercado peruano por nivel, cuánto cuesta tenerlo en planilla y qué debe incluir un plan de community manager para comparar bien.",
     h1: "Cuánto cobra un community manager en Perú",
     excerpt:
       "Hay avisos que piden planificar, diseñar, grabar y editar video por S/600 al mes, y hay equipos que cobran diez veces más. Las dos cosas se llaman community manager, y no son el mismo trabajo.",
@@ -6918,7 +6918,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["En planilla", "Empresas con mucho volumen de contenido y de mensajes diarios", "El costo real y quién lo supervisa"],
             ["Agencia", "Quien necesita estrategia, diseño, video y pauta juntos", "Que el fee no se coma lo que queda para anuncios"],
           ],
-          nota: "La pregunta útil no es cuál es más barata, sino cuánto te cuesta cada cliente que llega por redes con cada opción.",
+          nota: "Compara cuánto te cuesta cada cliente que llega por redes con cada opción.",
         },
       },
     ],
@@ -6961,7 +6961,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Cuánto cuesta anunciar en Facebook e Instagram en Perú: costos de referencia por mil impresiones, clic y lead, el presupuesto mínimo que funciona y el IGV.",
     h1: "Cuánto cuesta la publicidad en Facebook e Instagram en Perú",
     excerpt:
-      "Meta no tiene una lista de precios. Tú decides cuánto gastar y una subasta decide cuánto te cuesta cada resultado. Por eso la pregunta útil no es cuánto cuesta un anuncio, sino cuánto necesitas invertir para que funcione.",
+      "Meta no tiene una lista de precios. Tú decides cuánto gastar y una subasta decide cuánto te cuesta cada resultado. Por eso conviene preguntar cuánto necesitas invertir para que funcione.",
     enCorto: [
       "No hay tarifa fija: cada anuncio entra en una subasta. En octubre de 2026 el costo de referencia en Perú iba de S/8 a S/25 por mil impresiones y de S/3 a S/40 por lead, según el rubro.",
       "El presupuesto mínimo útil sale de multiplicar tu costo por resultado por 50, que son los resultados semanales que Meta necesita para aprender: con un lead de S/10, unos S/500 por semana.",
@@ -6997,7 +6997,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
       },
       {
-        h2: "El presupuesto mínimo que de verdad funciona",
+        h2: "El presupuesto mínimo que funciona",
         parrafo:
           "Con muy poco se puede encender una campaña, pero no aprender. Meta necesita unos 50 resultados por semana en cada conjunto de anuncios para salir de la fase de aprendizaje y estabilizar el costo. De ahí sale la cuenta: tu costo por resultado por 50 es el presupuesto semanal mínimo de cada conjunto.",
         tabla: {
@@ -7043,7 +7043,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         h2: "Los errores que encarecen la publicidad",
-        parrafo: "La mayoría de campañas caras no lo son por la plataforma, sino por cómo se armaron.",
+        parrafo: "La mayoría de campañas caras lo son por cómo se armaron.",
         bullets: [
           { titulo: "Usar el botón «Promocionar»", texto: "suele optimizar para interacciones, no para contactos. Es la forma más rápida de pagar por «me gusta»." },
           { titulo: "Dividir poco dinero en muchos conjuntos", texto: "ninguno llega a los resultados que necesita para aprender y todos se quedan caros." },
@@ -7071,7 +7071,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: "¿Conviene usar el botón «Promocionar publicación»?",
-        a: "Para que más gente vea una publicación, puede servir. Para conseguir clientes, no es lo ideal: suele optimizar para interacciones. Una campaña creada desde el Administrador de anuncios, con objetivo de clientes potenciales o mensajes, mide y optimiza lo que de verdad te interesa.",
+        a: "Para que más gente vea una publicación, puede servir. Para conseguir clientes, no es lo ideal: suele optimizar para interacciones. Una campaña creada desde el Administrador de anuncios, con objetivo de clientes potenciales o mensajes, mide y optimiza lo que te interesa.",
       },
     ],
     cierre:
@@ -7204,7 +7204,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Quien compra una excavadora no compra un vehículo: compra horas de trabajo, repuestos disponibles y un servicio técnico que conteste. El marketing que vende maquinaria habla de eso, no de la pintura.",
     enCorto: [
-      "La compra de maquinaria pesada la decide una empresa, casi siempre en comité, y toma meses. El marketing tiene que acompañar todo ese tiempo, no solo el primer contacto.",
+      "La compra de maquinaria pesada la decide una empresa, casi siempre en comité, y toma meses. El marketing tiene que acompañar todo ese tiempo.",
       "Los compradores buscan ficha técnica, consumo, repuestos, servicio técnico y financiamiento. El contenido que responde eso vende más que la foto de la máquina.",
       "La demostración o el evento con la máquina presente es donde se decide la compra: todo lo anterior existe para llevar ahí a quien puede comprar.",
     ],
