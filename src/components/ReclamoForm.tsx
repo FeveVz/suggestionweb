@@ -5,6 +5,7 @@ import { Btn } from "@/components/brand/parts";
 import { RECLAMOS_EN_BASE } from "@/lib/cta";
 import { site } from "@/lib/site";
 import { DEF_QUEJA, DEF_RECLAMO, LEYENDA_INDECOPI, LEYENDA_PLAZO } from "@/lib/reclamos";
+import ConstanciaReclamo, { imprimirConstancia, type DatosReclamo } from "@/components/ConstanciaReclamo";
 
 /**
  * Formulario del Libro de Reclamaciones virtual (Ley 29571; reglamento
@@ -59,6 +60,9 @@ export default function ReclamoForm() {
   const [error, setError] = useState(false);
   const [enviando, setEnviando] = useState(false);
   const [copiado, setCopiado] = useState(false);
+  // Lo que se imprime como constancia (ConstanciaReclamo) en cualquiera de los dos caminos.
+  const [datos, setDatos] = useState<DatosReclamo | null>(null);
+  const [fecha, setFecha] = useState("");
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -66,6 +70,13 @@ export default function ReclamoForm() {
     const f = new FormData(e.currentTarget);
     if (f.get("website")) return; // honeypot
     const g = (k: string) => String(f.get(k) ?? "").trim();
+    const capturados: DatosReclamo = {
+      nombre: g("nombre"), documento: g("documento"), direccion: g("direccion"), telefono: g("telefono"), email: g("email"),
+      menor, apoderado: menor ? g("apoderado") : "", apoderadoDoc: menor ? g("apoderadoDoc") : "",
+      tipoBien: g("tipoBien"), bien: g("bien"), monto: g("monto"), clase: g("clase"), detalle: g("detalle"), pedido: g("pedido"),
+    };
+    const ahoraLima = () =>
+      new Date().toLocaleString("es-PE", { timeZone: "America/Lima", day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", hour12: false }).replace(",", "");
 
     // Hoja por correo: el camino de siempre, y el respaldo si el registro falla.
     const porCorreo = () => {
@@ -103,6 +114,8 @@ export default function ReclamoForm() {
       ].filter((l) => l !== null).join("\n");
       const mail = `mailto:${site.email}?subject=${encodeURIComponent(`Libro de Reclamaciones · ${g("clase")} · ${referencia}`)}&body=${encodeURIComponent(texto)}`;
       setHoja({ referencia, fecha: `${fecha}, ${hora}`, texto, mail });
+      setDatos(capturados);
+      setFecha(ahoraLima());
       // Abre el correo de la persona con la hoja escrita. Si no tiene uno
       // configurado, queda el botón y la opción de copiar el texto.
       window.location.href = mail;
@@ -138,7 +151,11 @@ export default function ReclamoForm() {
         }),
       });
       const data = await r.json().catch(() => ({}));
-      if (data?.ok && data?.numero) setRegistro({ numero: String(data.numero), limite: data.limite, email: g("email") });
+      if (data?.ok && data?.numero) {
+        setDatos(capturados);
+        setFecha(ahoraLima());
+        setRegistro({ numero: String(data.numero), limite: data.limite, email: g("email") });
+      }
       else if (r.status === 503) porCorreo(); // registro apagado o sin hoja: por correo
       else setError(true);
     } catch {
@@ -171,17 +188,12 @@ export default function ReclamoForm() {
         <div className="hk-hoja-acciones" style={{ display: "flex", gap: 12, marginTop: 20, flexWrap: "wrap" }}>
           <Btn as="a" href={hoja.mail} size="lg">Abrir el correo otra vez</Btn>
           <Btn type="button" variant="secondary" size="lg" onClick={copiar}>{copiado ? "Texto copiado" : "Copiar el texto"}</Btn>
-          <Btn type="button" variant="secondary" size="lg" onClick={() => window.print()}>Imprimir o guardar en PDF</Btn>
+          <Btn type="button" variant="secondary" size="lg" onClick={() => imprimirConstancia(`Hoja de reclamación ${hoja.referencia} - Suggestion`)}>Imprimir o guardar en PDF</Btn>
         </div>
         <pre style={{ marginTop: 24, padding: "var(--space-4)", background: "var(--white)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-sm)", whiteSpace: "pre-wrap", wordBreak: "break-word", font: "var(--fw-light) var(--fs-sm)/1.55 var(--font-body)", color: "var(--text-strong)" }}>
           {hoja.texto}
         </pre>
-        <style>{`
-          @media print {
-            header, footer, .hk-fab-wrap, .hk-hoja-acciones { display: none !important; }
-            .hk-hoja { border: none !important; padding: 0 !important; background: none !important; }
-          }
-        `}</style>
+        {datos && <ConstanciaReclamo datos={datos} referencia={hoja.referencia} fecha={fecha} />}
       </div>
     );
   }
@@ -197,8 +209,9 @@ export default function ReclamoForm() {
           Si no ves el correo, revisa la carpeta de spam o escríbenos a {site.email} con tu número de hoja.
         </p>
         <div style={{ marginTop: 16 }}>
-          <Btn type="button" variant="secondary" size="lg" onClick={() => window.print()}>Imprimir o guardar en PDF</Btn>
+          <Btn type="button" variant="secondary" size="lg" onClick={() => imprimirConstancia(`Hoja de reclamación ${registro.numero} - Suggestion`)}>Imprimir o guardar en PDF</Btn>
         </div>
+        {datos && <ConstanciaReclamo datos={datos} numero={registro.numero} fecha={fecha} limite={registro.limite} />}
       </div>
     );
   }
