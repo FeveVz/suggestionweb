@@ -164,17 +164,14 @@ export function serviceSchema(opts: {
         price,
         priceCurrency: "PEN",
         url,
-        ...(mensual
-          ? {
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price,
-                priceCurrency: "PEN",
-                unitCode: "MON",
-                unitText: "mes",
-              },
-            }
-          : {}),
+        // Los precios publicados son más IGV (owner, 24-nov-2026).
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price,
+          priceCurrency: "PEN",
+          valueAddedTaxIncluded: false,
+          ...(mensual ? { unitCode: "MON", unitText: "mes" } : {}),
+        },
       },
     ];
   });

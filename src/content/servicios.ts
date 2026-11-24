@@ -525,7 +525,7 @@ const SERVICIOS_BASE: Servicio[] = [
     hero: "Invertir más en marketing sin estrategia es acelerar en la dirección equivocada. Primero ordenamos: dónde estás, a dónde vas y qué te está frenando. Después, ejecutas con foco.",
     enCorto: [
       "La consultoría ordena antes de invertir: dónde estás, a dónde vas y qué te está frenando, con un plan atado a metas de venta.",
-      "Hay tres formatos: Diagnóstico por S/1,500 en pago único, Plan Completo por S/3,500 con 2 meses de seguimiento y Retainer de S/2,000 al mes con un consultor dedicado.",
+      "Hay tres formatos: Diagnóstico por S/1,500 en pago único, Plan Completo por S/3,500 con 2 meses de seguimiento y Retainer de S/2,000 al mes con un consultor dedicado. Precios más IGV.",
       "Una consultoría puntual dura de 2 a 4 horas; un proyecto completo de auditoría y plan estratégico, de 2 a 4 semanas.",
       "Para empezar necesitamos acceso a tus cuentas de marketing, a la analítica y a tus datos de ventas.",
     ],
@@ -624,7 +624,7 @@ const SERVICIOS_BASE: Servicio[] = [
     hero: "Decidir por intuición es caro. Te damos datos e insights reales sobre tu demanda, tu competencia y tu consumidor, para que inviertas donde sí hay oportunidad.",
     enCorto: [
       "Un estudio de mercado responde una pregunta de negocio concreta: si hay demanda, a qué precio, qué hace tu competencia y qué quiere tu cliente.",
-      "Hay tres planes por proyecto: S/1,500 con 50 encuestas, S/3,000 con 150 y S/6,000 con 300 encuestas más 10 a 15 entrevistas a clientes reales.",
+      "Hay tres planes por proyecto: S/1,500 con 50 encuestas, S/3,000 con 150 y S/6,000 con 300 encuestas más 10 a 15 entrevistas a clientes reales. Precios más IGV.",
       "Combinamos encuestas y análisis de datos con entrevistas y focus groups, según lo que necesites responder.",
       "Entregamos un informe ejecutivo con hallazgos y recomendaciones que puedes ejecutar.",
     ],
@@ -722,7 +722,7 @@ const SERVICIOS_BASE: Servicio[] = [
     hero: "La mayoría de marcas invierte en marketing digital y mide likes. Nosotros medimos lo que importa: leads, citas y cierres. Una sola estrategia, todo el embudo conectado.",
     enCorto: [
       "Una sola estrategia con todo el embudo conectado, medida en leads, citas y cierres.",
-      "Planes mensuales: Starter S/1,500 con 2 redes y 8 publicaciones, Pro S/2,500 con 4 redes, 15 publicaciones y una campaña, y Enterprise S/4,500 con redes ilimitadas, varias campañas y SEO avanzado.",
+      "Planes mensuales: Starter S/1,500 con 2 redes y 8 publicaciones, Pro S/2,500 con 4 redes, 15 publicaciones y una campaña, y Enterprise S/4,500 con redes ilimitadas, varias campañas y SEO avanzado. Precios más IGV.",
       "La pauta puede traer leads en días; el posicionamiento y la marca, en meses.",
       "No hace falta contratar todo junto: se empieza por lo esencial y se escala con resultados.",
     ],
@@ -831,12 +831,12 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Google Ads",
     metaTitle: "Agencia de Google Ads (AdWords) en Perú | Suggestion",
     metaDescription:
-      "Agencia de Google Ads (antes AdWords) en Perú: búsqueda, display y YouTube medidos en leads y ventas. Desde S/800 al mes. Consultoría gratis.",
+      "Agencia de Google Ads (antes AdWords) en Perú: búsqueda, display y YouTube medidos en leads y ventas. Desde S/800 al mes + IGV. Consultoría gratis.",
     h1: "Agencia de Google Ads en Perú: campañas que se miden en ventas",
     hero: "Google Ads te pone delante de quien ya está buscando lo que vendes. Gestionamos tus campañas para que cada sol invertido vuelva en leads y ventas.",
     enCorto: [
       "Google Ads (antes Google AdWords) te muestra a quien ya está buscando lo que vendes, en la Búsqueda de Google, en Display y en YouTube.",
-      "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas.",
+      "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas. Precios más IGV.",
       "Medimos hasta la venta, con costo por lead y ROAS.",
       "Si te buscan por nombre o por servicio, empieza por Google; si primero tienen que conocerte, por Meta.",
     ],
@@ -920,7 +920,7 @@ const SERVICIOS_BASE: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto cuesta una agencia de Google Ads?",
-        a: "Nuestra gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas. El detalle de cada plan está en la tabla de precios de esta página.",
+        a: "Nuestra gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y landing page, y S/3,000 con todas. El detalle de cada plan está en la tabla de precios de esta página. Precios más IGV.",
       },
       {
         q: "¿La inversión en anuncios está incluida en el precio?",
@@ -969,11 +969,11 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Redes Sociales",
     metaTitle: "Community Manager y Gestión de Redes Sociales | Suggestion",
     metaDescription:
-      "Community manager y gestión de redes sociales para empresas en Perú: contenido, respuesta a tiempo y reportes que terminan en una decisión. Desde S/800 al mes.",
+      "Community manager y gestión de redes para empresas en Perú: contenido, respuesta a tiempo y reportes que terminan en una decisión. Desde S/800 al mes + IGV.",
     h1: "Community manager para empresas: redes que traen clientes",
     hero: "Tus redes son un canal de venta. Creamos contenido que conecta con tu audiencia y la mueve hacia la acción.",
     enCorto: [
-      "La gestión de redes cuesta S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias.",
+      "La gestión de redes cuesta S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias. Precios más IGV.",
       "Medimos conversaciones iniciadas y clics al WhatsApp.",
       "El contenido orgánico construye confianza con quien ya te sigue; el volumen de clientes nuevos llega con pauta.",
       "Si el presupuesto obliga a elegir: primero pauta con una oferta clara y alguien que responda rápido, y el orgánico después.",
@@ -1095,7 +1095,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánto cuesta un servicio de community manager?",
-        a: "S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias. Lo que inviertas en anuncios va aparte.",
+        a: "S/800 al mes con 2 redes y 12 publicaciones, S/1,500 con 3 redes, 24 publicaciones y 4 reels, y S/2,800 con 4 redes o más y publicaciones diarias. Lo que inviertas en anuncios va aparte. Precios más IGV.",
       },
       {
         q: "¿Tienen community manager en Ica?",
@@ -1113,11 +1113,11 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "Desarrollo Web",
     metaTitle: "Diseño de Páginas Web para Empresas en Perú | Suggestion",
     metaDescription:
-      "Diseño de páginas web para empresas en Perú: rápidas, con SEO básico y pensadas para convertir visitas en clientes. Landing desde S/1,500. Consultoría gratis.",
+      "Diseño de páginas web para empresas en Perú: rápidas, con SEO básico y pensadas para convertir visitas en clientes. Landing desde S/1,500 + IGV.",
     h1: "Diseño de páginas web para empresas que convierten visitas en clientes",
     hero: "Una web bonita que no vende es un gasto. Diseñamos páginas web rápidas, claras y pensadas para una sola cosa: que el visitante haga lo que tú necesitas —comprar, escribir o agendar.",
     enCorto: [
-      "Tres formatos por proyecto: landing page por S/1,500, web corporativa por S/4,000 y tienda virtual por S/8,000.",
+      "Tres formatos por proyecto: landing page por S/1,500, web corporativa por S/4,000 y tienda virtual por S/8,000. Precios más IGV.",
       "Si vendes un producto o cierras por WhatsApp, muchas veces basta una landing page: una sola página pensada para una sola acción.",
       "Una landing está en pocos días; una web corporativa o una tienda, en algunas semanas.",
       "Después del lanzamiento hay planes de mantenimiento mensual: actualizaciones, copias de seguridad y soporte.",
@@ -1157,7 +1157,7 @@ const SERVICIOS_BASE: Servicio[] = [
       {
         h2: "Landing page: cuando basta una sola página",
         parrafo:
-          "Si vendes un producto o un servicio, o cierras por WhatsApp, muchas veces no necesitas una web completa: necesitas una landing page, una sola página pensada para que el visitante haga una cosa. Es la que mejor rinde con publicidad, porque no distrae con menús ni secciones. Nuestro plan Landing cuesta S/1,500 por proyecto; si después necesitas más, la web crece desde ahí. Y si vendes muchos productos con pago en línea, lo tuyo es una tienda virtual.",
+          "Si vendes un producto o un servicio, o cierras por WhatsApp, muchas veces no necesitas una web completa: necesitas una landing page, una sola página pensada para que el visitante haga una cosa. Es la que mejor rinde con publicidad, porque no distrae con menús ni secciones. Nuestro plan Landing cuesta S/1,500 por proyecto + IGV; si después necesitas más, la web crece desde ahí. Y si vendes muchos productos con pago en línea, lo tuyo es una tienda virtual.",
       },
       {
         h2: "Tipos de web que desarrollamos",
@@ -1200,7 +1200,7 @@ const SERVICIOS_BASE: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto cuesta una página web?",
-        a: "La landing page cuesta S/1,500, la web corporativa S/4,000 y la tienda virtual S/8,000, por proyecto. El precio final depende del alcance y te lo confirmamos en la consultoría cero.",
+        a: "La landing page cuesta S/1,500, la web corporativa S/4,000 y la tienda virtual S/8,000, por proyecto. El precio final depende del alcance y te lo confirmamos en la consultoría cero. Precios más IGV.",
       },
       {
         q: "¿En cuánto tiempo está lista?",
@@ -1216,11 +1216,11 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánto cuesta una landing page?",
-        a: "S/1,500 por proyecto: una sola página con un objetivo, diseño responsive, formulario de contacto, optimización SEO básica y una revisión incluida. Es la opción para una campaña o para empezar.",
+        a: "S/1,500 por proyecto + IGV: una sola página con un objetivo, diseño responsive, formulario de contacto, optimización SEO básica y una revisión incluida. Es la opción para una campaña o para empezar.",
       },
       {
         q: "¿Hacen páginas web económicas?",
-        a: "La opción más económica es la landing page de S/1,500, una sola página pensada para que te escriban. Si necesitas varias secciones y administrar tu contenido, la web corporativa cuesta S/4,000. Las dos se diseñan primero para el celular.",
+        a: "La opción más económica es la landing page de S/1,500, una sola página pensada para que te escriban. Si necesitas varias secciones y administrar tu contenido, la web corporativa cuesta S/4,000. Las dos se diseñan primero para el celular. Precios más IGV.",
       },
       {
         q: "¿Son una empresa de desarrollo web en Ica?",
@@ -1241,11 +1241,11 @@ const SERVICIOS_BASE: Servicio[] = [
     nombre: "SEO",
     metaTitle: "Servicio SEO y Posicionamiento Web en Perú | Suggestion",
     metaDescription:
-      "Servicio SEO mensual en Perú: auditoría, SEO técnico, contenidos y SEO local para que te encuentren en Google. Planes desde S/1,200 al mes. Consultoría gratis.",
+      "Servicio SEO mensual en Perú: auditoría, SEO técnico, contenidos y SEO local para que te encuentren en Google. Planes desde S/1,200 al mes + IGV.",
     h1: "Agencia SEO que te hace visible cuando te buscan",
     hero: "El mejor lugar para esconder un cadáver es la segunda página de Google. Te llevamos a la primera, justo cuando tu cliente busca lo que ofreces —sin pagar por cada clic.",
     enCorto: [
-      "Planes mensuales: Básico S/1,200 con 5 palabras clave, Profesional S/2,500 con 15 y contenido mensual, y Enterprise S/5,000 sin límite de palabras clave.",
+      "Planes mensuales: Básico S/1,200 con 5 palabras clave, Profesional S/2,500 con 15 y contenido mensual, y Enterprise S/5,000 sin límite de palabras clave. Precios más IGV.",
       "Los primeros movimientos se ven en semanas y los resultados sólidos en meses. Nadie honesto puede garantizar el primer puesto.",
       "Empezamos por una auditoría: qué tienes indexado de verdad, qué te frena en lo técnico y para qué búsquedas te encuentran hoy.",
       "Si tu equipo ya escribe y edita la web, también trabajamos como consultor SEO: auditamos, priorizamos y revisamos lo que publica.",
@@ -1367,7 +1367,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánto cuesta contratar posicionamiento SEO?",
-        a: "El servicio de SEO mensual cuesta S/1,200 en el plan Básico, S/2,500 en el Profesional y S/5,000 en el Enterprise. El detalle de cada plan está en la tabla de precios de esta página.",
+        a: "El servicio de SEO mensual cuesta S/1,200 en el plan Básico, S/2,500 en el Profesional y S/5,000 en el Enterprise. El detalle de cada plan está en la tabla de precios de esta página. Precios más IGV.",
       },
     ],
     enlazaA: ["desarrollo-web", "marketing-digital", "crm-automatizacion"],
@@ -1394,7 +1394,7 @@ const SERVICIOS_BASE: Servicio[] = [
     h1: "CRM para pequeñas empresas que no deja caer ningún lead",
     hero: "¿Cuántos leads se te enfrían por no responder a tiempo? Automatizamos la captura, el seguimiento y la calificación para que ningún cliente potencial se pierda —y tu equipo cierre más.",
     enCorto: [
-      "La implementación es en pago único: Starter S/1,800, Business S/3,500 con integración de WhatsApp y correo, y Enterprise S/6,500 con automatizaciones multicanal y lead scoring.",
+      "La implementación es en pago único: Starter S/1,800, Business S/3,500 con integración de WhatsApp y correo, y Enterprise S/6,500 con automatizaciones multicanal y lead scoring. Precios más IGV.",
       "La campaña queda guardada en cada lead desde el primer contacto, para saber qué publicidad trajo cada venta.",
       "Un proyecto típico de CRM con automatizaciones básicas toma de 4 a 8 semanas.",
       "Un CRM ordena y recuerda, pero no vende: si nadie contesta los leads, solo documenta cuántos se enfriaron.",
@@ -1514,7 +1514,7 @@ const SERVICIOS_BASE: Servicio[] = [
     h1: "Branding que deja huella y vende",
     hero: "Una marca no es un logo bonito. Es la razón por la que alguien te elige y paga más. Construimos branding estratégico que se queda en la mente de tu cliente y empuja la decisión de compra.",
     enCorto: [
-      "Tres alcances en pago único: Starter S/1,800 con logotipo, paleta, tipografías y manual básico; Business S/3,500 con sistema visual completo y aplicaciones; Enterprise S/6,500 con la estrategia de marca completa.",
+      "Tres alcances en pago único: Starter S/1,800 con logotipo, paleta, tipografías y manual básico; Business S/3,500 con sistema visual completo y aplicaciones; Enterprise S/6,500 con la estrategia de marca completa. Precios más IGV.",
       "Primero definimos qué debe sentir y pensar tu cliente; el diseño viene después.",
       "Un proyecto completo de identidad toma de 4 a 8 semanas.",
       "Entregamos archivos vectoriales y en PNG y JPG de todas las versiones, el manual de marca y una sesión de presentación.",
@@ -1590,7 +1590,7 @@ const SERVICIOS_BASE: Servicio[] = [
       },
       {
         q: "¿Cuánto cuesta un manual de marca?",
-        a: "El manual básico va incluido desde el plan Starter, de S/1,800 en pago único; Business (S/3,500) y Enterprise (S/6,500) suman el sistema visual completo y la estrategia de marca. En la consultoría cero definimos qué necesitas realmente, sin venderte de más.",
+        a: "El manual básico va incluido desde el plan Starter, de S/1,800 en pago único; Business (S/3,500) y Enterprise (S/6,500) suman el sistema visual completo y la estrategia de marca. En la consultoría cero definimos qué necesitas realmente, sin venderte de más. Precios más IGV.",
       },
       {
         q: "¿Cuánto tiempo toma un proyecto de branding?",
@@ -1623,7 +1623,7 @@ const SERVICIOS_BASE: Servicio[] = [
     h1: "Productora audiovisual: videos corporativos que cuentan y venden",
     hero: "El video es lo que más se ve y lo que más vende —si está bien hecho. Producimos contenido audiovisual de alto impacto que cuenta tu historia y mueve a la acción.",
     enCorto: [
-      "Planes mensuales: Starter S/1,200 con 1 jornada de grabación y 8 piezas, Business S/2,500 con 3 jornadas y 16 piezas, y Enterprise S/4,500 con 5 jornadas y 31 piezas.",
+      "Planes mensuales: Starter S/1,200 con 1 jornada de grabación y 8 piezas, Business S/2,500 con 3 jornadas y 16 piezas, y Enterprise S/4,500 con 5 jornadas y 31 piezas. Precios más IGV.",
       "De un solo rodaje salen el video principal, los cortes verticales para redes, fotos y material de recurso para meses.",
       "Como productora audiovisual hacemos videos de empresas, spots y comerciales, fotografía publicitaria y postproducción, en Ica y en todo el país.",
       "Si ya tienes material grabado, podemos encargarnos solo de la postproducción.",

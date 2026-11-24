@@ -410,7 +410,7 @@ export default function Home() {
                     {cat.children.length} servicios
                     {(() => {
                       const desde = desdeCategoria(cat.children.map((c) => c.href.replace("/servicios/", "")));
-                      return desde ? <> · desde <strong>{desde}</strong></> : <> · a cotizar</>;
+                      return desde ? <> · desde <strong>{desde}</strong> + IGV</> : <> · a cotizar</>;
                     })()}
                   </p>
                   <div className="hk-serv-chips">

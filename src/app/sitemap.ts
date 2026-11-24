@@ -92,7 +92,7 @@ const ACTUALIZADA: Record<string, string> = {
   "/agencia-de-marketing-en-tacna": "2026-11-23",
   "/agencia-de-marketing-en-palpa": "2026-11-23",
   "/libro-de-reclamaciones": "2026-11-20",
-  "/privacidad": "2026-11-23",
+  "/privacidad": "2026-11-24",
   "/terminos": "2026-11-21",
   "/agencia-de-marketing-en-arequipa": "2026-11-23",
   // 2026-11-23: textos sin relleno y datos estructurados conectados.

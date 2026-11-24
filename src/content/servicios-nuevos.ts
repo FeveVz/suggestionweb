@@ -66,7 +66,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     hero: "En Facebook e Instagram tu cliente no está buscando comprar: hay que interrumpirlo con una oferta que valga la pena. Armamos tus campañas y las medimos hasta la venta.",
     enCorto: [
       "Meta Ads, lo que antes se llamaba Facebook Ads, son los anuncios de Facebook, Instagram y Messenger, incluidos los que abren una conversación de WhatsApp. Se compran todos desde el mismo administrador.",
-      "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y S/3,000 con todas.",
+      "La gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y S/3,000 con todas. Precios más IGV.",
       "Medimos el costo por venta: cruzamos los contactos que llegan con lo que cierra tu equipo.",
       "Meta necesita unos 50 resultados por semana en cada conjunto de anuncios para salir de la fase de aprendizaje. Si el presupuesto no llega, se optimiza por algo más frecuente, como iniciar una conversación.",
     ],
@@ -144,7 +144,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto cuesta una agencia de Meta Ads?",
-        a: "Nuestra gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y S/3,000 con todas. El detalle de cada plan está en la tabla de precios de esta página.",
+        a: "Nuestra gestión cuesta S/800 al mes con una plataforma, S/1,500 con dos y S/3,000 con todas. El detalle de cada plan está en la tabla de precios de esta página. Precios más IGV.",
       },
       {
         q: "¿Cuánto debo invertir en anuncios de Facebook e Instagram?",
@@ -184,12 +184,12 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     ],
     metaTitle: "Diseño de Tienda Virtual para Empresas en Perú | Suggestion",
     metaDescription:
-      "Diseño de tienda virtual en Perú con catálogo, pasarela de pagos e inventario, lista para vender. Plan E-commerce de S/8,000 por proyecto. Consultoría gratis.",
+      "Diseño de tienda virtual en Perú con catálogo, pasarela de pagos e inventario, lista para vender. Plan E-commerce de S/8,000 por proyecto + IGV.",
     h1: "Diseño de tienda virtual lista para vender",
     hero: "Una tienda virtual necesita tráfico, confianza y un proceso de pago que no se caiga en el último paso. La diseñamos con catálogo, pasarela de pagos e inventario, y la conectamos con tu publicidad.",
     enCorto: [
-      "El plan E-commerce cuesta S/8,000 por proyecto e incluye catálogo ilimitado, pasarela de pagos, gestión de inventario, SEO avanzado y 3 meses de soporte.",
-      "Si vendes pocos productos o cierras por WhatsApp, una landing page de S/1,500 puede bastar antes que una tienda completa.",
+      "El plan E-commerce cuesta S/8,000 por proyecto + IGV e incluye catálogo ilimitado, pasarela de pagos, gestión de inventario, SEO avanzado y 3 meses de soporte.",
+      "Si vendes pocos productos o cierras por WhatsApp, una landing page de S/1,500 + IGV puede bastar antes que una tienda completa.",
       "Una tienda sin visitas no vende: la conectamos con Meta Ads y Google Ads desde el lanzamiento.",
     ],
     cta: "Agenda tu consultoría cero",
@@ -203,8 +203,8 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
           cabeceras: ["Opción", "Cuándo conviene", "Inversión"],
           filas: [
             ["Catálogo de WhatsApp", "Pocos productos y venta conversada", "Gratis, dentro de WhatsApp Business"],
-            ["Landing page", "Un producto o servicio, captar contactos o vender por WhatsApp", "Plan Landing: S/1,500 por proyecto"],
-            ["Tienda virtual", "Muchos productos, pago en línea y control de stock", "Plan E-commerce: S/8,000 por proyecto"],
+            ["Landing page", "Un producto o servicio, captar contactos o vender por WhatsApp", "Plan Landing: S/1,500 por proyecto + IGV"],
+            ["Tienda virtual", "Muchos productos, pago en línea y control de stock", "Plan E-commerce: S/8,000 por proyecto + IGV"],
           ],
           nota: "Los precios son los planes publicados en nuestra página de diseño web. Un proyecto con integraciones especiales se cotiza aparte.",
         },
@@ -257,7 +257,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
     faq: [
       {
         q: "¿Cuánto cuesta una tienda virtual?",
-        a: "Nuestro plan E-commerce cuesta S/8,000 por proyecto e incluye catálogo ilimitado, pasarela de pagos, inventario, SEO avanzado y 3 meses de soporte. Si necesitas integraciones especiales, las cotizamos aparte.",
+        a: "Nuestro plan E-commerce cuesta S/8,000 por proyecto + IGV e incluye catálogo ilimitado, pasarela de pagos, inventario, SEO avanzado y 3 meses de soporte. Si necesitas integraciones especiales, las cotizamos aparte.",
       },
       {
         q: "¿Cuánto demora hacer una tienda virtual?",
@@ -269,7 +269,7 @@ export const SERVICIOS_NUEVOS: Servicio[] = [
       },
       {
         q: "¿Una tienda virtual o una landing page?",
-        a: "Si vendes muchos productos y quieres cobrar en línea, tienda. Si vendes uno o pocos, o cierras conversando, una landing page de S/1,500 suele bastar para empezar.",
+        a: "Si vendes muchos productos y quieres cobrar en línea, tienda. Si vendes uno o pocos, o cierras conversando, una landing page de S/1,500 + IGV suele bastar para empezar.",
       },
       {
         q: "¿Me ayudan a conseguir ventas?",

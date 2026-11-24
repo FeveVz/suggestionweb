@@ -39,6 +39,24 @@
  * implementa el script; si esa cuenta es personal, el consumidor verá esa
  * dirección como remitente (responder va a COPIA_RECLAMOS). Conviene
  * implementarlo desde una cuenta de la empresa.
+ *
+ * VENTAS → META (24-nov-2026). Pestaña «Ventas»: el equipo anota cada venta
+ * cerrada (fecha, cliente, teléfono, monto, servicio) y el script la manda a
+ * https://suggestion.pe/api/venta, que la pasa a Meta como compra (teléfono y
+ * correo en hash). Así los informes de Meta muestran qué anuncios trajeron
+ * clientes y la campaña aprende de quienes compran. Si el teléfono coincide
+ * con una fila de «Contactos», el script completa correo, fbclid y fecha del
+ * clic solo.
+ * Se instala una vez; al recargar la hoja aparece el menú «Suggestion»:
+ *   1. Suggestion → Crear clave de ventas. Copiar la clave que muestra.
+ *   2. Vercel → suggestionweb → Settings → Environment Variables: nombre
+ *      VENTAS_CLAVE, valor la clave, entorno Production, marcar «Sensitive».
+ *      Guardar y volver a desplegar.
+ *   3. Suggestion → Enviar ventas a Meta, o «Activar envío diario» (lo hace
+ *      solo a las 8 p. m.). Meta solo acepta ventas de los últimos 7 días:
+ *      las más antiguas quedan «Fuera de plazo».
+ * Permisos nuevos que pide Google: conectarse a un servicio externo
+ * (UrlFetchApp) y ejecutarse en segundo plano (envío diario).
  */
 
 const HOJA_RECLAMOS = "Reclamaciones";
@@ -209,4 +227,202 @@ function crearHoja_(libro) {
 
 function json_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
+}
+
+// ───────────────────────── Ventas → Meta ─────────────────────────
+
+const HOJA_VENTAS = "Ventas";
+const URL_VENTAS = "https://suggestion.pe/api/venta";
+const COLUMNAS_VENTAS = [
+  "Fecha de cierre", "Cliente", "Teléfono (WhatsApp)", "Correo", "Monto (S/)", "Servicio",
+  "Origen", "fbclid", "Fecha del clic", "ID", "Enviado a Meta", "Resultado",
+];
+// Posición (1 = A) de cada columna, para no depender del orden al leer.
+const V = {};
+COLUMNAS_VENTAS.forEach(function (c, i) { V[c] = i + 1; });
+
+function onOpen() {
+  SpreadsheetApp.getUi().createMenu("Suggestion")
+    .addItem("Enviar ventas a Meta", "enviarVentas")
+    .addItem("Probar envío (código de Events Manager)", "probarVentas")
+    .addSeparator()
+    .addItem("Activar envío diario (8 p. m.)", "activarEnvioDiario")
+    .addItem("Crear clave de ventas", "crearClaveVentas")
+    .addToUi();
+  const libro = SpreadsheetApp.getActiveSpreadsheet();
+  if (!libro.getSheetByName(HOJA_VENTAS)) crearHojaVentas_(libro);
+}
+
+/** Genera la clave que comparten esta hoja y la web. Se muestra una sola vez. */
+function crearClaveVentas() {
+  const ui = SpreadsheetApp.getUi();
+  const props = PropertiesService.getScriptProperties();
+  if (props.getProperty("VENTAS_CLAVE")) {
+    const r = ui.alert("Ya existe una clave", "Si creas otra, la de Vercel deja de servir hasta que pegues la nueva. ¿Crear otra?", ui.ButtonSet.YES_NO);
+    if (r !== ui.Button.YES) return;
+  }
+  const clave = (Utilities.getUuid() + Utilities.getUuid()).replace(/-/g, "");
+  props.setProperty("VENTAS_CLAVE", clave);
+  ui.alert("Clave de ventas",
+    "Pégala en Vercel como VENTAS_CLAVE (Production, Sensitive) y vuelve a desplegar:\n\n" + clave +
+    "\n\nNo la compartas por chat ni correo.", ui.ButtonSet.OK);
+}
+
+function activarEnvioDiario() {
+  ScriptApp.getProjectTriggers().forEach(function (tr) {
+    if (tr.getHandlerFunction() === "enviarVentasAuto_") ScriptApp.deleteTrigger(tr);
+  });
+  ScriptApp.newTrigger("enviarVentasAuto_").timeBased().everyDays(1).atHour(20).inTimezone("America/Lima").create();
+  SpreadsheetApp.getUi().alert("Listo: cada día a las 8 p. m. se envían las ventas nuevas.");
+}
+
+function enviarVentas() {
+  SpreadsheetApp.getUi().alert(enviarVentas_(""));
+}
+
+function probarVentas() {
+  const ui = SpreadsheetApp.getUi();
+  const r = ui.prompt("Probar envío", "Código de «Probar eventos» de Events Manager (empieza con TEST). Las ventas se verán ahí, no contarán en los informes y no quedarán marcadas como enviadas.", ui.ButtonSet.OK_CANCEL);
+  if (r.getSelectedButton() !== ui.Button.OK) return;
+  const codigo = r.getResponseText().trim();
+  if (!/^TEST\w+$/.test(codigo)) { ui.alert("El código debe empezar con TEST."); return; }
+  ui.alert(enviarVentas_(codigo));
+}
+
+function enviarVentasAuto_() {
+  enviarVentas_("");
+}
+
+/** Manda las filas con fecha, monto y teléfono o correo que aún no se enviaron. */
+function enviarVentas_(prueba) {
+  const clave = PropertiesService.getScriptProperties().getProperty("VENTAS_CLAVE");
+  if (!clave) return "Primero: Suggestion → Crear clave de ventas, y pégala en Vercel.";
+  const libro = SpreadsheetApp.getActiveSpreadsheet();
+  const hoja = libro.getSheetByName(HOJA_VENTAS) || crearHojaVentas_(libro);
+  const n = hoja.getLastRow() - 1;
+  if (n < 1) return "La pestaña «Ventas» está vacía.";
+  const filas = hoja.getRange(2, 1, n, COLUMNAS_VENTAS.length).getValues();
+  const contactos = indiceContactos_(libro);
+
+  const lote = [];
+  filas.forEach(function (f, i) {
+    const get = function (c) { return f[V[c] - 1]; };
+    if (get("Enviado a Meta") || !get("Fecha de cierre") || !get("Monto (S/)")) return;
+    const fila = i + 2;
+    const tel = String(get("Teléfono (WhatsApp)") || "");
+    // Completa con lo que la web guardó de ese mismo teléfono.
+    const c = contactos[ultimos9_(tel)];
+    if (c) {
+      if (!get("Correo") && c.correo) hoja.getRange(fila, V["Correo"]).setValue(c.correo);
+      if (!get("fbclid") && c.fbclid) hoja.getRange(fila, V["fbclid"]).setValue(c.fbclid);
+      if (!get("Fecha del clic") && c.fbclid && c.fecha) hoja.getRange(fila, V["Fecha del clic"]).setValue(c.fecha);
+      if (!get("Origen")) hoja.getRange(fila, V["Origen"]).setValue("Formulario web");
+    }
+    let id = String(get("ID") || "");
+    if (!id) {
+      id = "V" + Utilities.getUuid().replace(/-/g, "").slice(0, 16);
+      hoja.getRange(fila, V["ID"]).setValue(id);
+    }
+    const fecha = get("Fecha de cierre");
+    const clic = get("Fecha del clic") || (c && c.fbclid ? c.fecha : "");
+    lote.push({
+      fila: fila,
+      venta: {
+        id: id,
+        fecha: fecha instanceof Date ? Utilities.formatDate(fecha, "America/Lima", "yyyy-MM-dd") : String(fecha),
+        nombre: String(get("Cliente") || ""),
+        telefono: tel,
+        correo: String(get("Correo") || (c && c.correo) || ""),
+        monto: Number(String(get("Monto (S/)")).replace(/[^\d.]/g, "")),
+        servicio: String(get("Servicio") || ""),
+        fbclid: String(get("fbclid") || (c && c.fbclid) || ""),
+        clic: clic instanceof Date ? clic.toISOString() : String(clic || ""),
+      },
+    });
+  });
+  if (!lote.length) return "No hay ventas nuevas por enviar.";
+
+  let enviadas = 0;
+  let observadas = 0;
+  for (let k = 0; k < lote.length; k += 50) {
+    const parte = lote.slice(k, k + 50);
+    let r;
+    try {
+      const resp = UrlFetchApp.fetch(URL_VENTAS, {
+        method: "post",
+        contentType: "application/json",
+        headers: { Authorization: "Bearer " + clave },
+        payload: JSON.stringify({ ventas: parte.map(function (p) { return p.venta; }), prueba: prueba || undefined }),
+        muteHttpExceptions: true,
+      });
+      try { r = JSON.parse(resp.getContentText() || "{}"); } catch (e) { r = {}; }
+      if (resp.getResponseCode() === 503) r = { ok: false, error: "la web aún no tiene VENTAS_CLAVE" };
+      if (resp.getResponseCode() === 401) r = { ok: false, error: "la clave no coincide con la de Vercel" };
+    } catch (err) {
+      r = { ok: false, error: String(err) };
+    }
+    const motivo = {};
+    (r.rechazadas || []).forEach(function (x) { motivo[x.id] = x.motivo; });
+    const ahora = new Date();
+    parte.forEach(function (p) {
+      const m = motivo[p.venta.id];
+      if (m) {
+        hoja.getRange(p.fila, V["Resultado"]).setValue(m === "fuera de plazo" ? "Fuera de plazo (más de 7 días)" : "Revisar: " + m);
+        if (m === "fuera de plazo" && !prueba) hoja.getRange(p.fila, V["Enviado a Meta"]).setValue("No");
+        observadas++;
+      } else if (r.ok) {
+        hoja.getRange(p.fila, V["Resultado"]).setValue(prueba ? "Prueba OK (" + prueba + ")" : "Recibida por Meta");
+        if (!prueba) hoja.getRange(p.fila, V["Enviado a Meta"]).setValue(ahora);
+        enviadas++;
+      } else {
+        hoja.getRange(p.fila, V["Resultado"]).setValue("Error: " + (r.error || "sin respuesta"));
+        observadas++;
+      }
+    });
+  }
+  return enviadas + " venta(s) " + (prueba ? "de prueba " : "") + "enviadas a Meta" +
+    (observadas ? "; " + observadas + " con observación (ver columna Resultado)." : ".");
+}
+
+/** Teléfono (últimos 9 dígitos) → correo, fbclid y fecha del contacto en «Contactos». */
+function indiceContactos_(libro) {
+  const h = libro.getSheetByName(HOJA);
+  const idx = {};
+  if (!h || h.getLastRow() < 2) return idx;
+  const col = function (nombre) { return COLUMNAS.indexOf(nombre); };
+  h.getRange(2, 1, h.getLastRow() - 1, COLUMNAS.length).getValues().forEach(function (f) {
+    const k = ultimos9_(f[col("Teléfono")]);
+    if (!k) return;
+    const previo = idx[k] || {};
+    idx[k] = {
+      correo: f[col("Correo")] || previo.correo || "",
+      fbclid: f[col("fbclid")] || previo.fbclid || "",
+      fecha: f[col("fbclid")] ? f[col("Fecha (Lima)")] : previo.fecha || "",
+    };
+  });
+  return idx;
+}
+
+function ultimos9_(tel) {
+  const d = String(tel || "").replace(/\D/g, "");
+  return d.length >= 9 ? d.slice(-9) : "";
+}
+
+function crearHojaVentas_(libro) {
+  const h = libro.insertSheet(HOJA_VENTAS);
+  h.appendRow(COLUMNAS_VENTAS);
+  h.setFrozenRows(1);
+  h.getRange(1, 1, 1, COLUMNAS_VENTAS.length).setFontWeight("bold");
+  h.getRange("A:A").setNumberFormat("dd/mm/yyyy");
+  h.getRange("C:C").setNumberFormat("@");
+  h.getRange("E:E").setNumberFormat("#,##0.00");
+  h.getRange("I:I").setNumberFormat("dd/mm/yyyy hh:mm");
+  h.getRange("K:K").setNumberFormat("dd/mm/yyyy hh:mm");
+  h.getRange("A2:A").setDataValidation(SpreadsheetApp.newDataValidation().requireDate().setAllowInvalid(false).build());
+  h.getRange("G2:G").setDataValidation(SpreadsheetApp.newDataValidation()
+    .requireValueInList(["Formulario web", "WhatsApp directo", "Anuncio de Meta", "Google", "Referido", "Otro"], true).build());
+  h.getRange(1, V["Monto (S/)"]).setNote("Monto de la venta en soles, sin IGV. Si es mensual, el primer mes.");
+  h.getRange(1, V["Teléfono (WhatsApp)"]).setNote("Con código de país si es extranjero. Meta lo usa (en hash) para reconocer a la persona.");
+  h.getRange(1, V["ID"]).setNote("Lo llena el script. No lo cambies: evita que Meta cuente dos veces la misma venta.");
+  return h;
 }

@@ -19,11 +19,11 @@ export default function PricingSection({ planes, nombre, nota }: { planes?: Plan
         Precios claros, sin sorpresas.
       </SectionHeading>
       <p style={{ font: "var(--fw-light) var(--fs-sm)/1.5 var(--font-body)", color: "var(--text-muted)", marginBottom: 40, maxWidth: "54ch" }}>
-        Precios referenciales. El alcance final se ajusta en la consultoría cero.{nota ? ` ${nota}` : ""}
+        Precios referenciales, más IGV. El alcance final se ajusta en la consultoría cero.{nota ? ` ${nota}` : ""}
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "var(--space-4)", alignItems: "stretch" }}>
         {planes.map((p) => {
-          const waMsg = `Hola Suggestion, me interesa el plan ${p.nombre}${nombre ? ` de ${nombre}` : ""} (${p.precio} ${p.periodo}).`;
+          const waMsg = `Hola Suggestion, me interesa el plan ${p.nombre}${nombre ? ` de ${nombre}` : ""} (${p.precio} ${p.periodo} + IGV).`;
           return (
             <div
               key={p.nombre}
@@ -59,7 +59,7 @@ export default function PricingSection({ planes, nombre, nota }: { planes?: Plan
               <h3 style={{ font: "var(--fw-medium) var(--fs-lg)/1.2 var(--font-display)", color: "var(--text-strong)" }}>{p.nombre}</h3>
               <div style={{ display: "flex", alignItems: "baseline", gap: 6, margin: "14px 0 20px" }}>
                 <span style={{ font: "var(--fw-bold) var(--fs-3xl)/1 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)" }}>{p.precio}</span>
-                <span style={{ font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--text-muted)" }}>{p.periodo}</span>
+                <span style={{ font: "var(--fw-light) var(--fs-sm) var(--font-body)", color: "var(--text-muted)" }}>{p.periodo} + IGV</span>
               </div>
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 11, flex: 1 }}>
                 {p.incluye.map((f) => (

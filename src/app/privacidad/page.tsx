@@ -38,7 +38,7 @@ export default function Privacidad() {
         <h1 style={{ font: "var(--fw-bold) var(--fs-3xl)/1.08 var(--font-display)", letterSpacing: "var(--tracking-tight)", color: "var(--text-strong)", margin: "16px 0 8px" }}>
           Política de Privacidad
         </h1>
-        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: 23 de noviembre de 2026</p>
+        <p style={{ font: "var(--fw-light) var(--fs-xs)/1.4 var(--font-body)", color: "var(--text-muted)" }}>Última actualización: 24 de noviembre de 2026</p>
 
         <h2 style={H2}>1. Quién trata tus datos</h2>
         <p style={P}>
@@ -87,6 +87,9 @@ export default function Privacidad() {
         <h2 style={H2}>5. Cómo medimos los anuncios</h2>
         <p style={P}>
           Para saber qué anuncios nos traen contactos, el Píxel de Meta guarda en tu navegador un identificador aleatorio (la cookie «_fbp») que no incluye tu nombre ni tu teléfono. Cuando envías un formulario, mandamos a Meta, por su API de Conversiones, tu nombre y tu teléfono transformados con una función hash (SHA-256): Meta no recibe el dato escrito, solo lo compara con el de sus propios usuarios para saber si llegaste desde un anuncio.
+        </p>
+        <p style={P}>
+          Si nos contratas, enviamos a Meta del mismo modo, en hash, tu nombre, teléfono y correo junto con la fecha y el monto de la contratación, para saber qué anuncios terminan en clientes. Si prefieres que no lo hagamos, escríbenos a <a href="mailto:hola@suggestion.pe" style={A}>hola@suggestion.pe</a>.
         </p>
         <p style={P}>
           Google Analytics cuenta visitas y recorridos de forma estadística. Microsoft Clarity registra cómo se usa el sitio —desplazamiento, clics y recorrido entre páginas— y enmascara por defecto lo que escribes en los formularios, así que lo que teclees en ellos no queda grabado. Metricool cuenta las visitas: recibe la página que ves, la página desde la que llegaste y el tamaño de la ventana de tu navegador, además de la dirección IP y el tipo de navegador que recibe cualquier servidor. No guarda cookies ni identificadores en tu navegador.
