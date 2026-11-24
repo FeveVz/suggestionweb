@@ -56,7 +56,12 @@
  *      solo a las 8 p. m.). Meta solo acepta ventas de los últimos 7 días:
  *      las más antiguas quedan «Fuera de plazo».
  * Permisos nuevos que pide Google: conectarse a un servicio externo
- * (UrlFetchApp) y ejecutarse en segundo plano (envío diario).
+ * (UrlFetchApp) y ejecutarse en segundo plano (envío diario). Google deja
+ * marcarlos uno por uno: hay que aceptarlos TODOS. Si alguno quedó sin
+ * marcar, Suggestion → Revisar permisos los vuelve a pedir (24-nov-2026: la
+ * primera prueba falló por eso).
+ * Cambios solo en las funciones del menú: basta pegar y guardar; la
+ * aplicación web (doPost) no cambia y no hace falta una versión nueva.
  */
 
 const HOJA_RECLAMOS = "Reclamaciones";
@@ -248,13 +253,30 @@ function onOpen() {
     .addSeparator()
     .addItem("Activar envío diario (8 p. m.)", "activarEnvioDiario")
     .addItem("Crear clave de ventas", "crearClaveVentas")
+    .addItem("Revisar permisos", "revisarPermisos")
     .addToUi();
   const libro = SpreadsheetApp.getActiveSpreadsheet();
   if (!libro.getSheetByName(HOJA_VENTAS)) crearHojaVentas_(libro);
 }
 
+/**
+ * Google deja aceptar los permisos uno por uno. Si alguno quedó sin marcar
+ * (p. ej. «conectarse a un servicio externo»), esto vuelve a pedirlo antes
+ * de seguir. El mismo permiso lo usa la aplicación web (Libro de
+ * Reclamaciones: enviar correo), porque se ejecuta como quien la implementó.
+ */
+function permisos_() {
+  if (ScriptApp.requireAllScopes) ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
+}
+
+function revisarPermisos() {
+  permisos_();
+  SpreadsheetApp.getUi().alert("Permisos completos: la hoja puede enviar ventas a Meta y correos del Libro de Reclamaciones.");
+}
+
 /** Genera la clave que comparten esta hoja y la web. Se muestra una sola vez. */
 function crearClaveVentas() {
+  permisos_();
   const ui = SpreadsheetApp.getUi();
   const props = PropertiesService.getScriptProperties();
   if (props.getProperty("VENTAS_CLAVE")) {
@@ -269,6 +291,7 @@ function crearClaveVentas() {
 }
 
 function activarEnvioDiario() {
+  permisos_();
   ScriptApp.getProjectTriggers().forEach(function (tr) {
     if (tr.getHandlerFunction() === "enviarVentasAuto_") ScriptApp.deleteTrigger(tr);
   });
@@ -277,12 +300,14 @@ function activarEnvioDiario() {
 }
 
 function enviarVentas() {
+  permisos_();
   SpreadsheetApp.getUi().alert(enviarVentas_(""));
 }
 
 function probarVentas() {
+  permisos_();
   const ui = SpreadsheetApp.getUi();
-  const r = ui.prompt("Probar envío", "Código de «Probar eventos» de Events Manager (empieza con TEST). Las ventas se verán ahí, no contarán en los informes y no quedarán marcadas como enviadas.", ui.ButtonSet.OK_CANCEL);
+  const r = ui.prompt("Probar envío", "Código de «Probar eventos» de Events Manager (empieza con TEST). Las ventas se verán ahí y no contarán en los informes. Quedan marcadas «Prueba» para que nunca salgan como venta real: bórralas después.", ui.ButtonSet.OK_CANCEL);
   if (r.getSelectedButton() !== ui.Button.OK) return;
   const codigo = r.getResponseText().trim();
   if (!/^TEST\w+$/.test(codigo)) { ui.alert("El código debe empezar con TEST."); return; }
@@ -359,7 +384,7 @@ function enviarVentas_(prueba) {
       if (resp.getResponseCode() === 503) r = { ok: false, error: "la web aún no tiene VENTAS_CLAVE" };
       if (resp.getResponseCode() === 401) r = { ok: false, error: "la clave no coincide con la de Vercel" };
     } catch (err) {
-      r = { ok: false, error: String(err) };
+      r = { ok: false, error: /permiso|permission/i.test(String(err)) ? "faltan permisos de Google (menú Suggestion → Revisar permisos)" : String(err) };
     }
     const motivo = {};
     (r.rechazadas || []).forEach(function (x) { motivo[x.id] = x.motivo; });
@@ -372,7 +397,8 @@ function enviarVentas_(prueba) {
         observadas++;
       } else if (r.ok) {
         hoja.getRange(p.fila, V["Resultado"]).setValue(prueba ? "Prueba OK (" + prueba + ")" : "Recibida por Meta");
-        if (!prueba) hoja.getRange(p.fila, V["Enviado a Meta"]).setValue(ahora);
+        // Una fila de prueba nunca debe salir después como venta real.
+        hoja.getRange(p.fila, V["Enviado a Meta"]).setValue(prueba ? "Prueba" : ahora);
         enviadas++;
       } else {
         hoja.getRange(p.fila, V["Resultado"]).setValue("Error: " + (r.error || "sin respuesta"));
